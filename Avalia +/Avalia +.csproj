@@ -46,16 +46,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Controles\CorDeFundo.cs" />
+    <Compile Include="Controles\PlaceholderTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormularioCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormularioCadastro.Designer.cs">
+      <DependentUpon>FormularioCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormularioLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioLogin.Designer.cs">
+      <DependentUpon>FormularioLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Controles\RadiusButton.cs" />
+    <EmbeddedResource Include="FormularioCadastro.resx">
+      <DependentUpon>FormularioCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioLogin.resx">
+      <DependentUpon>FormularioLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
