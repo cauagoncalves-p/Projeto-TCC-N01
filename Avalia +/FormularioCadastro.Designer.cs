@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioCadastro));
             this.panelCadastro = new System.Windows.Forms.Panel();
             this.lblCPF = new System.Windows.Forms.Label();
             this.mktCPF = new System.Windows.Forms.MaskedTextBox();
@@ -55,12 +56,16 @@
             this.lblDataNascimento = new System.Windows.Forms.Label();
             this.lblSobrenome = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
+            this.btnSair = new System.Windows.Forms.Button();
             this.panelCadastro.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelCadastro
             // 
             this.panelCadastro.AutoScroll = true;
+            this.panelCadastro.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelCadastro.Controls.Add(this.txtNome);
+            this.panelCadastro.Controls.Add(this.btnSair);
             this.panelCadastro.Controls.Add(this.lblCPF);
             this.panelCadastro.Controls.Add(this.mktCPF);
             this.panelCadastro.Controls.Add(this.btnFinalizarCadastro);
@@ -83,14 +88,13 @@
             this.panelCadastro.Controls.Add(this.rdbOutro);
             this.panelCadastro.Controls.Add(this.rdbMasculino);
             this.panelCadastro.Controls.Add(this.dtpDataNascimento);
-            this.panelCadastro.Controls.Add(this.txtNome);
             this.panelCadastro.Controls.Add(this.lblDataNascimento);
             this.panelCadastro.Controls.Add(this.lblSobrenome);
             this.panelCadastro.Controls.Add(this.lblNome);
             this.panelCadastro.Location = new System.Drawing.Point(160, 61);
             this.panelCadastro.Name = "panelCadastro";
             this.panelCadastro.Padding = new System.Windows.Forms.Padding(0, 0, 20, 20);
-            this.panelCadastro.Size = new System.Drawing.Size(688, 600);
+            this.panelCadastro.Size = new System.Drawing.Size(697, 600);
             this.panelCadastro.TabIndex = 0;
             // 
             // lblCPF
@@ -105,6 +109,7 @@
             // 
             // mktCPF
             // 
+            this.mktCPF.BackColor = System.Drawing.Color.FloralWhite;
             this.mktCPF.Location = new System.Drawing.Point(344, 224);
             this.mktCPF.Mask = "000,000,000-00";
             this.mktCPF.Name = "mktCPF";
@@ -140,6 +145,7 @@
             // 
             // cbxEstado
             // 
+            this.cbxEstado.BackColor = System.Drawing.Color.FloralWhite;
             this.cbxEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxEstado.FormattingEnabled = true;
             this.cbxEstado.Items.AddRange(new object[] {
@@ -177,6 +183,7 @@
             // 
             // txtCidade
             // 
+            this.txtCidade.BackColor = System.Drawing.Color.FloralWhite;
             this.txtCidade.Location = new System.Drawing.Point(30, 557);
             this.txtCidade.Multiline = true;
             this.txtCidade.Name = "txtCidade";
@@ -205,6 +212,7 @@
             // 
             // txtEndereco
             // 
+            this.txtEndereco.BackColor = System.Drawing.Color.FloralWhite;
             this.txtEndereco.Location = new System.Drawing.Point(30, 475);
             this.txtEndereco.Multiline = true;
             this.txtEndereco.Name = "txtEndereco";
@@ -234,6 +242,7 @@
             // 
             // cbxGenero
             // 
+            this.cbxGenero.BackColor = System.Drawing.Color.FloralWhite;
             this.cbxGenero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxGenero.FormattingEnabled = true;
             this.cbxGenero.Items.AddRange(new object[] {
@@ -271,6 +280,7 @@
             // 
             // mktTelefone
             // 
+            this.mktTelefone.BackColor = System.Drawing.Color.FloralWhite;
             this.mktTelefone.Location = new System.Drawing.Point(344, 299);
             this.mktTelefone.Mask = "(00)  00000-0000";
             this.mktTelefone.Name = "mktTelefone";
@@ -289,6 +299,7 @@
             // 
             // txtSobrenome
             // 
+            this.txtSobrenome.BackColor = System.Drawing.Color.FloralWhite;
             this.txtSobrenome.Location = new System.Drawing.Point(341, 136);
             this.txtSobrenome.Multiline = true;
             this.txtSobrenome.Name = "txtSobrenome";
@@ -308,6 +319,7 @@
             // rdbFeminino
             // 
             this.rdbFeminino.AutoSize = true;
+            this.rdbFeminino.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
             this.rdbFeminino.Location = new System.Drawing.Point(123, 302);
             this.rdbFeminino.Name = "rdbFeminino";
             this.rdbFeminino.Size = new System.Drawing.Size(67, 17);
@@ -319,6 +331,7 @@
             // rdbOutro
             // 
             this.rdbOutro.AutoSize = true;
+            this.rdbOutro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
             this.rdbOutro.Location = new System.Drawing.Point(210, 302);
             this.rdbOutro.Name = "rdbOutro";
             this.rdbOutro.Size = new System.Drawing.Size(51, 17);
@@ -330,6 +343,7 @@
             // rdbMasculino
             // 
             this.rdbMasculino.AutoSize = true;
+            this.rdbMasculino.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
             this.rdbMasculino.Location = new System.Drawing.Point(30, 302);
             this.rdbMasculino.Name = "rdbMasculino";
             this.rdbMasculino.Size = new System.Drawing.Size(73, 17);
@@ -340,6 +354,7 @@
             // 
             // dtpDataNascimento
             // 
+            this.dtpDataNascimento.CalendarMonthBackground = System.Drawing.Color.FloralWhite;
             this.dtpDataNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDataNascimento.Location = new System.Drawing.Point(30, 224);
             this.dtpDataNascimento.Name = "dtpDataNascimento";
@@ -349,10 +364,11 @@
             // 
             // txtNome
             // 
+            this.txtNome.BackColor = System.Drawing.Color.FloralWhite;
             this.txtNome.Location = new System.Drawing.Point(30, 136);
             this.txtNome.Multiline = true;
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(305, 32);
+            this.txtNome.Size = new System.Drawing.Size(302, 32);
             this.txtNome.TabIndex = 5;
             // 
             // lblDataNascimento
@@ -384,6 +400,21 @@
             this.lblNome.Size = new System.Drawing.Size(35, 13);
             this.lblNome.TabIndex = 2;
             this.lblNome.Text = "Nome";
+            // 
+            // btnSair
+            // 
+            this.btnSair.BackColor = System.Drawing.Color.White;
+            this.btnSair.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSair.FlatAppearance.BorderSize = 0;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
+            this.btnSair.Location = new System.Drawing.Point(593, 18);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(50, 43);
+            this.btnSair.TabIndex = 11;
+            this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // FormularioCadastro
             // 
@@ -432,5 +463,6 @@
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Label lblCPF;
         private System.Windows.Forms.MaskedTextBox mktCPF;
+        private System.Windows.Forms.Button btnSair;
     }
 }

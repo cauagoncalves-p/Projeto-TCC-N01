@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioLogin));
             this.panelLogin = new System.Windows.Forms.Panel();
             this.lblLinkCriarConta = new System.Windows.Forms.LinkLabel();
             this.lblCriarConta = new System.Windows.Forms.Label();
@@ -39,11 +40,13 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblLogin = new System.Windows.Forms.Label();
             this.lblAvalia = new System.Windows.Forms.Label();
+            this.btnSair = new System.Windows.Forms.Button();
             this.panelLogin.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelLogin
             // 
+            this.panelLogin.Controls.Add(this.btnSair);
             this.panelLogin.Controls.Add(this.lblLinkCriarConta);
             this.panelLogin.Controls.Add(this.lblCriarConta);
             this.panelLogin.Controls.Add(this.btnEntrar);
@@ -167,6 +170,21 @@
             this.lblAvalia.TabIndex = 0;
             this.lblAvalia.Text = "Áuerea+";
             // 
+            // btnSair
+            // 
+            this.btnSair.BackColor = System.Drawing.Color.White;
+            this.btnSair.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSair.FlatAppearance.BorderSize = 0;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
+            this.btnSair.Location = new System.Drawing.Point(271, 12);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(50, 43);
+            this.btnSair.TabIndex = 10;
+            this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
             // FormularioLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,6 +218,7 @@
         private System.Windows.Forms.Button btnEntrar;
         private System.Windows.Forms.Label lblCriarConta;
         private System.Windows.Forms.LinkLabel lblLinkCriarConta;
+        private System.Windows.Forms.Button btnSair;
     }
 }
 

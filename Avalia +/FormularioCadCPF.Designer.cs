@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioCadCPF));
             this.panelVerificaCPF = new System.Windows.Forms.Panel();
             this.lblLinkFazerLogin = new System.Windows.Forms.LinkLabel();
             this.lblVerificaCPF = new System.Windows.Forms.Label();
@@ -38,11 +39,13 @@
             this.lblCPF = new System.Windows.Forms.Label();
             this.lblVerifica = new System.Windows.Forms.Label();
             this.lblAvalia = new System.Windows.Forms.Label();
+            this.btnSair = new System.Windows.Forms.Button();
             this.panelVerificaCPF.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelVerificaCPF
             // 
+            this.panelVerificaCPF.Controls.Add(this.btnSair);
             this.panelVerificaCPF.Controls.Add(this.lblLinkFazerLogin);
             this.panelVerificaCPF.Controls.Add(this.lblVerificaCPF);
             this.panelVerificaCPF.Controls.Add(this.btnContinuar);
@@ -153,6 +156,21 @@
             this.lblAvalia.TabIndex = 0;
             this.lblAvalia.Text = "Áuerea+";
             // 
+            // btnSair
+            // 
+            this.btnSair.BackColor = System.Drawing.Color.White;
+            this.btnSair.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSair.FlatAppearance.BorderSize = 0;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
+            this.btnSair.Location = new System.Drawing.Point(267, 12);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(50, 43);
+            this.btnSair.TabIndex = 11;
+            this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
             // FormularioCadCPF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -184,5 +202,6 @@
         private System.Windows.Forms.Label lblCPF;
         private System.Windows.Forms.Label lblVerifica;
         private System.Windows.Forms.Label lblAvalia;
+        private System.Windows.Forms.Button btnSair;
     }
 }

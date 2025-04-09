@@ -37,6 +37,37 @@ namespace Avalia__
             path.CloseFigure();
             panel.Region = new Region(path);
         }
+
+        public void ConfigInicial(Form form, Panel panel, Button botao, int tamanhoBorda)
+        {
+            // Associa eventos ao Form passado
+            form.Paint += (sender, e) => AplicarGradiente(form, e);
+            form.Resize += (sender, e) => form.Invalidate();
+
+            // Aplica borda arredondada no painel
+            RadiusButton arredondar = new RadiusButton();
+            arredondar.ArredondarBordas(panel, tamanhoBorda);
+            panel.BackColor = Color.White;
+
+            // Configura botão
+            botao.FlatStyle = FlatStyle.Flat;
+            botao.FlatAppearance.BorderSize = 0;
+        }
+
+        private void AplicarGradiente(Form form, PaintEventArgs e)
+        {
+            Color corInicial = ColorTranslator.FromHtml("#f5e6d3");
+            Color corFinal = ColorTranslator.FromHtml("#fdf6f0");
+
+            Point pontoInicial = new Point(form.ClientRectangle.Right, form.ClientRectangle.Top);
+            Point pontoFinal = new Point(form.ClientRectangle.Left, form.ClientRectangle.Bottom);
+
+            using (LinearGradientBrush brush = new LinearGradientBrush(pontoInicial, pontoFinal, corInicial, corFinal))
+            {
+                e.Graphics.FillRectangle(brush, form.ClientRectangle);
+            }
+        }
+
     }
 }
 

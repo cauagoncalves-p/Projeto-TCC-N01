@@ -13,8 +13,27 @@ namespace Avalia__
 {
     public partial class FormularioCadastro : Form
     {
-       
 
+        private bool VerificaIdade()
+        {
+            DateTime dataNascimento = dtpDataNascimento.Value;
+            DateTime hoje = DateTime.Today;
+
+            int idade = hoje.Year - dataNascimento.Year;
+            if (dataNascimento > hoje.AddYears(-idade))
+            {
+                idade--;
+            }
+
+            if (idade < 18)
+            {
+                Mensagem_do_sistema mensagem_ = new Mensagem_do_sistema();
+                mensagem_.MensagemInformation("Necessário ter 18 anos para se cadastrar!");
+                return false;
+            }
+
+            return true;
+        }
         private void MudarFonte() 
         {
             dtpDataNascimento.Font = new Font("Segoe UI", 12); // Aumenta a fonte → aumenta a altura
@@ -43,12 +62,8 @@ namespace Avalia__
         {
             InitializeComponent();
             MudarFonte();
-            this.Paint += new PaintEventHandler(FormularioCadastro_Paint);
-            this.Resize += (s, e) => this.Invalidate(); // Redesenha ao redimensionar
-
-            RadiusButton arredondarBordas = new RadiusButton();
-            arredondarBordas.ArredondarBordas(panelCadastro, 25);
-            panelCadastro.BackColor = Color.White; // Cor do painel
+            RadiusButton controlador = new RadiusButton();
+            controlador.ConfigInicial(this, panelCadastro, btnSair, 25);
         }
 
         private void FormularioCadastro_Paint(object sender, PaintEventArgs e)
@@ -77,7 +92,9 @@ namespace Avalia__
                 MessageBox.Show("Preencha todos os campos obrigatórios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
+            // Verifica a idade antes de continuar
+            if (!VerificaIdade())
+                return;
 
             FormularioCadCPF formularioCadCPF = new FormularioCadCPF();
             formularioCadCPF.ShowDialog();
@@ -86,6 +103,15 @@ namespace Avalia__
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            DialogResult sair = MessageBox.Show("Deseja fechar a tela de cadastro?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (sair == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }

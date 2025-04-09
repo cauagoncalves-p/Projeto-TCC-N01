@@ -1,5 +1,4 @@
-﻿using Avalia__.Controles;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,17 +29,13 @@ namespace Avalia__
             lblLinkCriarConta.Font = new Font("Segoe UI", 10, FontStyle.Bold);
             lblCriarConta.Font = new Font("Segoe UI", 10, FontStyle.Bold);
         }
-
+       
         public FormularioLogin()
         {
             InitializeComponent();
             MudarFonte();
-            this.Paint += new PaintEventHandler(Form1_Paint);
-            this.Resize += (s, e) => this.Invalidate(); // Redesenha ao redimensionar
-
-            RadiusButton arredondarBordas = new RadiusButton();
-            arredondarBordas.ArredondarBordas(panelLogin, 25);
-            panelLogin.BackColor = Color.White; // Cor do painel
+            RadiusButton controlador = new RadiusButton();
+            controlador.ConfigInicial(this, panelLogin, btnSair, 25);
         }
         
         private void Form1_Paint(object sender, PaintEventArgs e)
@@ -60,6 +55,13 @@ namespace Avalia__
             formularioCadastro.ShowDialog();
         }
 
-      
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            DialogResult sair = MessageBox.Show("Deseja fechar a tela de login?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (sair == DialogResult.Yes) 
+            {
+                this.Close();
+            }
+        }
     }
 }

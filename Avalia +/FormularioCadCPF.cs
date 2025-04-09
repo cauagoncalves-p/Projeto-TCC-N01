@@ -28,13 +28,8 @@ namespace Avalia__
         {
             InitializeComponent();
             MudarFonte();
-
-            this.Paint += new PaintEventHandler(FormularioCadCPF_Load);
-            this.Resize += (s, e) => this.Invalidate(); // Redesenha ao redimensionar
-
-            RadiusButton arredondarBordas = new RadiusButton();
-            arredondarBordas.ArredondarBordas(panelVerificaCPF, 25);
-            panelVerificaCPF.BackColor = Color.White; // Cor do painel
+            RadiusButton controlador = new RadiusButton();
+            controlador.ConfigInicial(this, panelVerificaCPF, btnSair, 25);
         }
         
         private void FormularioCadCPF_Load(object sender, EventArgs e)
@@ -52,6 +47,15 @@ namespace Avalia__
         {
             FormularioLogin formularioLogin = new FormularioLogin();
             formularioLogin.ShowDialog();
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            DialogResult sair = MessageBox.Show("Deseja fechar essa tela?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (sair == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }
