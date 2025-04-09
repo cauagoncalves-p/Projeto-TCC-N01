@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,6 +57,12 @@
     <Compile Include="FormularioCadastro.Designer.cs">
       <DependentUpon>FormularioCadastro.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormularioCadCPF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioCadCPF.Designer.cs">
+      <DependentUpon>FormularioCadCPF.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormularioLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +74,9 @@
     <Compile Include="Controles\RadiusButton.cs" />
     <EmbeddedResource Include="FormularioCadastro.resx">
       <DependentUpon>FormularioCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioCadCPF.resx">
+      <DependentUpon>FormularioCadCPF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioLogin.resx">
       <DependentUpon>FormularioLogin.cs</DependentUpon>

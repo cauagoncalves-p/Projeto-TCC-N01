@@ -49,7 +49,7 @@ namespace Avalia__
             CorDeFundo.PintarGradiente(this, e, "#f5e6d3", "#fdf6f0");
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void FormularioLogin_Load(object sender, EventArgs e)
         {
             UIHelper.ArredondarBotao(btnEntrar, 25);
         }
@@ -59,5 +59,7 @@ namespace Avalia__
             FormularioCadastro formularioCadastro = new FormularioCadastro();
             formularioCadastro.ShowDialog();
         }
+
+      
     }
 }

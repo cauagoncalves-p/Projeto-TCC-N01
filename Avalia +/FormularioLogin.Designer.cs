@@ -163,9 +163,9 @@
             this.lblAvalia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAvalia.Location = new System.Drawing.Point(127, 31);
             this.lblAvalia.Name = "lblAvalia";
-            this.lblAvalia.Size = new System.Drawing.Size(78, 24);
+            this.lblAvalia.Size = new System.Drawing.Size(90, 24);
             this.lblAvalia.TabIndex = 0;
-            this.lblAvalia.Text = "Avalia+";
+            this.lblAvalia.Text = "Áuerea+";
             // 
             // FormularioLogin
             // 
@@ -179,6 +179,7 @@
             this.Name = "FormularioLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.FormularioLogin_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.panelLogin.ResumeLayout(false);
             this.panelLogin.PerformLayout();
