@@ -66,11 +66,23 @@
     <Compile Include="FormularioCadCPF.Designer.cs">
       <DependentUpon>FormularioCadCPF.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormularioConfirmeTrocarSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioConfirmeTrocarSenha.Designer.cs">
+      <DependentUpon>FormularioConfirmeTrocarSenha.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormularioDeEnvioCodigo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormularioDeEnvioCodigo.Designer.cs">
       <DependentUpon>FormularioDeEnvioCodigo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormularioEnvioDeEmailTrocarSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioEnvioDeEmailTrocarSenha.Designer.cs">
+      <DependentUpon>FormularioEnvioDeEmailTrocarSenha.cs</DependentUpon>
     </Compile>
     <Compile Include="FormularioLogin.cs">
       <SubType>Form</SubType>
@@ -99,8 +111,14 @@
     <EmbeddedResource Include="FormularioCadCPF.resx">
       <DependentUpon>FormularioCadCPF.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormularioConfirmeTrocarSenha.resx">
+      <DependentUpon>FormularioConfirmeTrocarSenha.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormularioDeEnvioCodigo.resx">
       <DependentUpon>FormularioDeEnvioCodigo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioEnvioDeEmailTrocarSenha.resx">
+      <DependentUpon>FormularioEnvioDeEmailTrocarSenha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioLogin.resx">
       <DependentUpon>FormularioLogin.cs</DependentUpon>

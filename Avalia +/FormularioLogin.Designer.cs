@@ -128,6 +128,7 @@
             this.lblEsqueceuSenha.TabIndex = 6;
             this.lblEsqueceuSenha.TabStop = true;
             this.lblEsqueceuSenha.Text = "Esqueceu sua senha ?";
+            this.lblEsqueceuSenha.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblEsqueceuSenha_LinkClicked);
             // 
             // txtSenhaLogin
             // 
@@ -200,7 +201,6 @@
             this.Name = "FormularioLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-          
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.panelLogin.ResumeLayout(false);
             this.panelLogin.PerformLayout();

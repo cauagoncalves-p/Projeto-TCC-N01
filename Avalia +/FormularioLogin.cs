@@ -59,5 +59,11 @@ namespace Avalia__
                 this.Close();
             }
         }
+
+        private void lblEsqueceuSenha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FormularioTrocarSenha formularioTrocarSenha = new FormularioTrocarSenha();
+            formularioTrocarSenha.ShowDialog();
+        }
     }
 }

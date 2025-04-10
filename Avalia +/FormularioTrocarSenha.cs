@@ -57,7 +57,7 @@ namespace Avalia__
             }
             string emaildigitado = txtEmail.Text;
             // Consulta no banco
-            tbUsuarioTableAdapter tbUsuarioTableAdapter = new tbUsuarioTableAdapter();
+            tbUsuarioTableAdapter tbUsuarioTableAdapter = new tbUsuarioTableAdapter(); 
             var resultado = tbUsuarioTableAdapter.GetData().FirstOrDefault(u => u.Email == emaildigitado);
 
             if (resultado != null)
@@ -65,7 +65,7 @@ namespace Avalia__
                 mensagem_Do_Sistema.MensagemInformation("E-mail encontrado!...");
 
                 // Abre a próxima tela, passando o e-mail se quiser
-                FormularioDeEnvioCodigo envio = new FormularioDeEnvioCodigo(emaildigitado);
+                FormularioEnvioDeEmailTrocarSenha envio = new FormularioEnvioDeEmailTrocarSenha(emaildigitado);
                 envio.ShowDialog();
             }
             else

@@ -1,6 +1,6 @@
 ﻿namespace Avalia__
 {
-    partial class FormularioDeEnvioCodigo
+    partial class FormularioEnvioDeEmailTrocarSenha
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioDeEnvioCodigo));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioEnvioDeEmailTrocarSenha));
             this.panelConfirmeEmail = new System.Windows.Forms.Panel();
             this.linkLblReenviarCodigo = new System.Windows.Forms.LinkLabel();
             this.txt2 = new System.Windows.Forms.TextBox();
@@ -63,10 +63,10 @@
             this.panelConfirmeEmail.Controls.Add(this.btnEntrar);
             this.panelConfirmeEmail.Controls.Add(this.lblConfirmeEmail);
             this.panelConfirmeEmail.Controls.Add(this.lblAvalia);
-            this.panelConfirmeEmail.Location = new System.Drawing.Point(326, 45);
+            this.panelConfirmeEmail.Location = new System.Drawing.Point(325, 45);
             this.panelConfirmeEmail.Name = "panelConfirmeEmail";
             this.panelConfirmeEmail.Size = new System.Drawing.Size(335, 471);
-            this.panelConfirmeEmail.TabIndex = 1;
+            this.panelConfirmeEmail.TabIndex = 2;
             // 
             // linkLblReenviarCodigo
             // 
@@ -155,9 +155,9 @@
             this.lblDescritivo1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(138)))), ((int)(((byte)(122)))));
             this.lblDescritivo1.Location = new System.Drawing.Point(41, 171);
             this.lblDescritivo1.Name = "lblDescritivo1";
-            this.lblDescritivo1.Size = new System.Drawing.Size(229, 13);
+            this.lblDescritivo1.Size = new System.Drawing.Size(218, 13);
             this.lblDescritivo1.TabIndex = 13;
-            this.lblDescritivo1.Text = "Digite o código abaixo para verificar sua conta.";
+            this.lblDescritivo1.Text = "Digite o código abaixo paratrocar sua senha ";
             this.lblDescritivo1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblEmailInformado
@@ -209,7 +209,7 @@
             this.btnEntrar.TabIndex = 7;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = false;
-            this.btnEntrar.Click += new System.EventHandler(this.btnEnviarCodigo_Click);
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // lblConfirmeEmail
             // 
@@ -232,15 +232,18 @@
             this.lblAvalia.TabIndex = 0;
             this.lblAvalia.Text = "Áuerea+";
             // 
-            // FormularioDeEnvioCodigo
+            // FormularioEnvioDeEmailTrocarSenha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.panelConfirmeEmail);
-            this.Name = "FormularioDeEnvioCodigo";
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "FormularioEnvioDeEmailTrocarSenha";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Confirme o código enviado para o seu email ";
+            this.Text = "Código para torcar senha ";
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FormularioEnvioDeEmailTrocarSenha_KeyUp);
             this.panelConfirmeEmail.ResumeLayout(false);
             this.panelConfirmeEmail.PerformLayout();
             this.ResumeLayout(false);
@@ -250,19 +253,19 @@
         #endregion
 
         private System.Windows.Forms.Panel panelConfirmeEmail;
-        private System.Windows.Forms.Button btnSair;
-        private System.Windows.Forms.Button btnEntrar;
-        private System.Windows.Forms.Label lblConfirmeEmail;
-        private System.Windows.Forms.Label lblAvalia;
-        private System.Windows.Forms.Label lblDescritivo1;
-        private System.Windows.Forms.Label lblEmailInformado;
-        private System.Windows.Forms.Label lblDescritivo;
+        private System.Windows.Forms.LinkLabel linkLblReenviarCodigo;
         private System.Windows.Forms.TextBox txt2;
         private System.Windows.Forms.TextBox txt6;
         private System.Windows.Forms.TextBox txt5;
         private System.Windows.Forms.TextBox txt4;
         private System.Windows.Forms.TextBox txt3;
         private System.Windows.Forms.TextBox txt1;
-        private System.Windows.Forms.LinkLabel linkLblReenviarCodigo;
+        private System.Windows.Forms.Label lblDescritivo1;
+        private System.Windows.Forms.Label lblEmailInformado;
+        private System.Windows.Forms.Label lblDescritivo;
+        private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Button btnEntrar;
+        private System.Windows.Forms.Label lblConfirmeEmail;
+        private System.Windows.Forms.Label lblAvalia;
     }
 }

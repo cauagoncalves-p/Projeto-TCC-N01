@@ -232,6 +232,7 @@ namespace Avalia__
             MudarFonte();
             RadiusButton controlador = new RadiusButton();
             controlador.ConfigInicial(this, panelCadastro, btnSair, 25);
+            AtualizarBanco();
         }
 
         private void FormularioCadastro_Paint(object sender, PaintEventArgs e)
@@ -310,11 +311,12 @@ namespace Avalia__
             if (!VerificaIdade())
                 return;
 
-            //Envia os dados
             EnviarDado();
 
+            mensagem_.MensagemInformation("Cadastro realizado com sucesso!\nConfirme seu email na próxima tela!");
             FormularioCadCPF formularioCadCPF = new FormularioCadCPF();
             formularioCadCPF.ShowDialog();
+
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
