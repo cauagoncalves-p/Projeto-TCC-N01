@@ -6,7 +6,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -14,24 +16,69 @@ namespace Avalia__
 {
     public partial class FormularioCadastro : Form
     {
+        Mensagem_do_sistema mensagem_ = new Mensagem_do_sistema();
         private void AtualizarBanco() 
         {
             tbUsuarioTableAdapter tbUsuarioTableAdapter = new tbUsuarioTableAdapter();
-
-            // Cria um DataTable e preenche com os dados do banco
             AureaDataSet.tbUsuarioDataTable tabelaUsuarios = tbUsuarioTableAdapter.GetData();
-
-            // Agora você pode usar LINQ com os dados
             var usuarios = from linha in tabelaUsuarios select linha;
-
-
-            // Exemplo: mostrar no console todos os nomes
-            foreach (var usuario in usuarios)
-            {
-                Console.WriteLine(usuario);
-            }
         }
 
+        private void AvaliarForcaSenha(string senha)
+        {
+            int forca = 0;
+
+            // Tamanho
+            if (senha.Length >= 10)
+                forca++;
+
+            // Contém letra
+            if (Regex.IsMatch(senha, @"[a-zA-Z]"))
+                forca++;
+
+            // Contém número
+            if (Regex.IsMatch(senha, @"\d"))
+                forca++;
+
+            // Contém caractere especial
+            if (Regex.IsMatch(senha, @"[\W_]"))
+                forca++;
+
+            // Atualiza o label conforme a força
+            switch (forca)
+            {
+                case 0:
+                case 1:
+                    lblError.Text = "Senha fraca";
+                    lblError.ForeColor = Color.Red;
+                    break;
+                case 2:
+                case 3:
+                    lblError.Text = "Senha média";
+                    lblError.ForeColor = Color.DarkOrange;
+                    break;
+                case 4:
+                    lblError.Text = "Senha forte";
+                    lblError.ForeColor = Color.Green;
+                    break;
+            }
+        }
+        private void EmailValido() 
+        {
+            string email = txtEmail.Text.Trim();
+
+            Regex regexEmail = new Regex(@"^[^@\s]+@[^@\s]+\.[^@\s]+$");
+
+            if (!regexEmail.IsMatch(email))
+            {
+                mensagem_.MensagemError("Digite um e-mail válido, como exemplo@dominio.com");
+                lblError.Text = "Formato de e-mail inválido.";
+                lblError.ForeColor = Color.Red;
+                txtEmail.Focus();
+                return;
+            }
+
+        }
         private void EnviarDado() 
         {
             tbUsuarioTableAdapter novosdados = new tbUsuarioTableAdapter();
@@ -100,13 +147,19 @@ namespace Avalia__
                 case 26: Estado = "TO"; break; // Tocantins
                 default: Estado = ""; break;  // Nenhum selecionado
             }
+
+            string senha = txtSenha.Text;
+            byte[] hashBytes;
+            SHA256 sha256 = SHA256.Create();
+            hashBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(senha));
+            string senhaEscondida = Encoding.Unicode.GetString(hashBytes);
+
             DateTime dataCadastro = DateTime.Now;
-            novosdados.Insert(nome, sobrenome, dataNascimento, cpf, sexo, telefone, identidadeGenero, endereco, email, cidade, Estado, dataCadastro);
+
+            novosdados.Insert(nome, sobrenome, dataNascimento, cpf, sexo, telefone, identidadeGenero, endereco, email, cidade, Estado, dataCadastro, senhaEscondida);
             AtualizarBanco();
 
         }
-
-
         private bool VerificaIdade()
         {
             DateTime dataNascimento = dtpDataNascimento.Value;
@@ -120,7 +173,6 @@ namespace Avalia__
 
             if (idade < 18)
             {
-                Mensagem_do_sistema mensagem_ = new Mensagem_do_sistema();
                 mensagem_.MensagemInformation("Necessário ter 18 anos para se cadastrar!");
                 return false;
             }
@@ -151,9 +203,32 @@ namespace Avalia__
                 }
             }
         }
+
+        private bool CpfJaExiste(string cpf)
+        {
+            tbUsuarioTableAdapter tbUsuarioTableAdapter = new tbUsuarioTableAdapter();
+            var usuarios = tbUsuarioTableAdapter.GetData()
+                .Where(u => u.CPF == cpf)
+                .ToList();
+
+            return usuarios.Any();
+        }
+
+        private bool EmailJaExiste(string email)
+        {
+            tbUsuarioTableAdapter tbUsuarioTableAdapter = new tbUsuarioTableAdapter();
+            var usuarios = tbUsuarioTableAdapter.GetData()
+                             .Where(u => u.Email == email)
+                             .ToList();
+
+            return usuarios.Any();
+        }
+
+
         public FormularioCadastro()
         {
             InitializeComponent();
+            txtSenha.TextChanged += (s, e) => AvaliarForcaSenha(txtSenha.Text);
             MudarFonte();
             RadiusButton controlador = new RadiusButton();
             controlador.ConfigInicial(this, panelCadastro, btnSair, 25);
@@ -177,18 +252,65 @@ namespace Avalia__
             bool estadoNaoSelecionado = cbxEstado.SelectedIndex == -1;
             bool generoNaoSelecionado = !rdbMasculino.Checked && !rdbFeminino.Checked && !rdbOutro.Checked;
             bool generoComboNaoSelecionado = cbxGenero.SelectedIndex == -1;
+            bool senha = string.IsNullOrEmpty(txtSenha.Text);
+            bool confirmeSenha = string.IsNullOrEmpty(txtconfirmeSenha.Text);
 
             if (nomeVazio || sobrenomeVazio || cpfVazio || telefoneVazio ||
                 enderecoVazio || cidadeVazio ||
-                generoNaoSelecionado || generoComboNaoSelecionado || estadoNaoSelecionado)
+                generoNaoSelecionado || generoComboNaoSelecionado || estadoNaoSelecionado || senha || confirmeSenha)
             {
-                MessageBox.Show("Preencha todos os campos obrigatórios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                mensagem_.MensagemError("Preencha todos os campos obrigatórios.");
+             
                 return;
             }
+
+            string cpf = mktCPF.Text;
+            string email = txtEmail.Text.Trim();
+
+            if (EmailJaExiste(email))
+            {
+                mensagem_.MensagemError("Este e-mail já está em uso.");
+                return;
+            }
+
+            if (CpfJaExiste(cpf))
+            {
+                mensagem_.MensagemError("Este CPF já está cadastrado.");
+                return;
+            }
+
+            // Verifica se o email informado é valido
+            EmailValido();
+
+            Regex regexSenhaForte = new Regex(@"^(?=.*[a-zA-Z])(?=.*\d)(?=.*[\W_]).{10,}$");
+
+            if (!regexSenhaForte.IsMatch(txtSenha.Text))
+            {
+                mensagem_.MensagemError("A senha deve conter no mínimo 10 caracteres e incluir letras, números e caracteres especiais.");
+                lblError.Text = "Ex: SenhaForte@2025";
+                lblError.ForeColor = Color.Red;
+                txtSenha.Focus();
+                return;
+            }
+
+            if (txtSenha.Text == "SenhaForte@2025") 
+            {
+                mensagem_.MensagemError("Não use a senha de exemplo.");
+                return;
+            }
+
+            if (txtSenha.Text != txtconfirmeSenha.Text) 
+            {
+                lblError.Text = "Senhas não são iguais";
+                lblError.ForeColor = Color.Red;
+                return;
+            }
+
             // Verifica a idade antes de continuar
             if (!VerificaIdade())
                 return;
 
+            //Envia os dados
             EnviarDado();
 
             FormularioCadCPF formularioCadCPF = new FormularioCadCPF();
@@ -209,6 +331,9 @@ namespace Avalia__
             }
         }
 
-        
+        private void panelCadastro_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

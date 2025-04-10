@@ -41,6 +41,7 @@ namespace Avalia__
             controlador.ConfigInicial(this, panelConfirmeEmail, btnSair, 25);
         }
 
+
         private void LimparCamposCodigo()
         {
             txt1.Clear(); txt2.Clear(); txt3.Clear();

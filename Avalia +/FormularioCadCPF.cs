@@ -24,7 +24,6 @@ namespace Avalia__
             lblLinkFazerLogin.Font = new Font("Segoe UI", 10, FontStyle.Bold);
             lblVerificaCPF.Font = new Font("Segoe UI", 10, FontStyle.Bold);
         }
-
         public FormularioCadCPF()
         {
             InitializeComponent();
@@ -62,7 +61,7 @@ namespace Avalia__
         private void btnContinuar_Click(object sender, EventArgs e)
         {
             // Limpa a máscara do CPF
-            string cpfDigitado = new string(mktCPF.Text.Where(char.IsDigit).ToArray());
+            string cpfDigitado = mktCPF.Text;
             string emailDigitado = txtEmail.Text.Trim();
 
             if (string.IsNullOrWhiteSpace(cpfDigitado) || string.IsNullOrWhiteSpace(emailDigitado))
@@ -72,9 +71,8 @@ namespace Avalia__
             }
 
             // Consulta no banco
-            tbUsuarioTableAdapter adaptador = new tbUsuarioTableAdapter();
-            var resultado = adaptador.GetData()
-                .FirstOrDefault(u => u.CPF == cpfDigitado && u.Email == emailDigitado);
+            tbUsuarioTableAdapter tbUsuarioTableAdapter = new tbUsuarioTableAdapter();
+            var resultado = tbUsuarioTableAdapter.GetData().FirstOrDefault(u => u.CPF == cpfDigitado && u.Email == emailDigitado);
 
             if (resultado != null)
             {

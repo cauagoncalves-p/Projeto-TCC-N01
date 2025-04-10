@@ -59,6 +59,11 @@
             this.lblDataNascimento = new System.Windows.Forms.Label();
             this.lblSobrenome = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
+            this.txtconfirmeSenha = new System.Windows.Forms.TextBox();
+            this.txtSenha = new System.Windows.Forms.TextBox();
+            this.lblSenha = new System.Windows.Forms.Label();
+            this.lblConfirmeSenha = new System.Windows.Forms.Label();
+            this.lblError = new System.Windows.Forms.Label();
             this.panelCadastro.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,6 +71,11 @@
             // 
             this.panelCadastro.AutoScroll = true;
             this.panelCadastro.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelCadastro.Controls.Add(this.lblError);
+            this.panelCadastro.Controls.Add(this.lblConfirmeSenha);
+            this.panelCadastro.Controls.Add(this.lblSenha);
+            this.panelCadastro.Controls.Add(this.txtSenha);
+            this.panelCadastro.Controls.Add(this.txtconfirmeSenha);
             this.panelCadastro.Controls.Add(this.lblEmail);
             this.panelCadastro.Controls.Add(this.txtEmail);
             this.panelCadastro.Controls.Add(this.txtNome);
@@ -98,8 +108,9 @@
             this.panelCadastro.Location = new System.Drawing.Point(160, 12);
             this.panelCadastro.Name = "panelCadastro";
             this.panelCadastro.Padding = new System.Windows.Forms.Padding(0, 0, 20, 20);
-            this.panelCadastro.Size = new System.Drawing.Size(697, 711);
+            this.panelCadastro.Size = new System.Drawing.Size(719, 614);
             this.panelCadastro.TabIndex = 0;
+            this.panelCadastro.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCadastro_Paint);
             // 
             // lblEmail
             // 
@@ -157,7 +168,7 @@
             // mktCPF
             // 
             this.mktCPF.BackColor = System.Drawing.Color.FloralWhite;
-            this.mktCPF.Location = new System.Drawing.Point(347, 214);
+            this.mktCPF.Location = new System.Drawing.Point(346, 214);
             this.mktCPF.Mask = "000,000,000-00";
             this.mktCPF.Name = "mktCPF";
             this.mktCPF.Size = new System.Drawing.Size(319, 20);
@@ -168,7 +179,7 @@
             this.btnFinalizarCadastro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(164)))), ((int)(((byte)(143)))));
             this.btnFinalizarCadastro.FlatAppearance.BorderSize = 0;
             this.btnFinalizarCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFinalizarCadastro.Location = new System.Drawing.Point(327, 656);
+            this.btnFinalizarCadastro.Location = new System.Drawing.Point(327, 728);
             this.btnFinalizarCadastro.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
             this.btnFinalizarCadastro.Name = "btnFinalizarCadastro";
             this.btnFinalizarCadastro.Size = new System.Drawing.Size(336, 39);
@@ -182,7 +193,7 @@
             this.btnVoltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(230)))), ((int)(((byte)(221)))));
             this.btnVoltar.FlatAppearance.BorderSize = 0;
             this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVoltar.Location = new System.Drawing.Point(30, 656);
+            this.btnVoltar.Location = new System.Drawing.Point(30, 728);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(242, 39);
             this.btnVoltar.TabIndex = 27;
@@ -223,7 +234,7 @@
             "São Paulo  ",
             "Sergipe  ",
             "Tocantins"});
-            this.cbxEstado.Location = new System.Drawing.Point(377, 602);
+            this.cbxEstado.Location = new System.Drawing.Point(377, 674);
             this.cbxEstado.Name = "cbxEstado";
             this.cbxEstado.Size = new System.Drawing.Size(281, 21);
             this.cbxEstado.TabIndex = 26;
@@ -231,7 +242,7 @@
             // txtCidade
             // 
             this.txtCidade.BackColor = System.Drawing.Color.FloralWhite;
-            this.txtCidade.Location = new System.Drawing.Point(30, 603);
+            this.txtCidade.Location = new System.Drawing.Point(30, 675);
             this.txtCidade.Multiline = true;
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(311, 32);
@@ -241,7 +252,7 @@
             // 
             this.lblEstado.AutoSize = true;
             this.lblEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblEstado.Location = new System.Drawing.Point(377, 579);
+            this.lblEstado.Location = new System.Drawing.Point(377, 651);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(40, 13);
             this.lblEstado.TabIndex = 22;
@@ -251,7 +262,7 @@
             // 
             this.lblCidade.AutoSize = true;
             this.lblCidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblCidade.Location = new System.Drawing.Point(30, 579);
+            this.lblCidade.Location = new System.Drawing.Point(30, 651);
             this.lblCidade.Name = "lblCidade";
             this.lblCidade.Size = new System.Drawing.Size(40, 13);
             this.lblCidade.TabIndex = 21;
@@ -260,7 +271,7 @@
             // txtEndereco
             // 
             this.txtEndereco.BackColor = System.Drawing.Color.FloralWhite;
-            this.txtEndereco.Location = new System.Drawing.Point(30, 521);
+            this.txtEndereco.Location = new System.Drawing.Point(30, 593);
             this.txtEndereco.Multiline = true;
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(628, 32);
@@ -270,7 +281,7 @@
             // 
             this.lblEndereco.AutoSize = true;
             this.lblEndereco.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblEndereco.Location = new System.Drawing.Point(27, 482);
+            this.lblEndereco.Location = new System.Drawing.Point(27, 554);
             this.lblEndereco.Name = "lblEndereco";
             this.lblEndereco.Size = new System.Drawing.Size(53, 13);
             this.lblEndereco.TabIndex = 19;
@@ -299,7 +310,7 @@
             "Gênero fluido",
             "Outro",
             "Prefiro não dizer"});
-            this.cbxGenero.Location = new System.Drawing.Point(30, 437);
+            this.cbxGenero.Location = new System.Drawing.Point(30, 509);
             this.cbxGenero.Name = "cbxGenero";
             this.cbxGenero.Size = new System.Drawing.Size(628, 21);
             this.cbxGenero.TabIndex = 18;
@@ -319,7 +330,7 @@
             // 
             this.lblGenero.AutoSize = true;
             this.lblGenero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblGenero.Location = new System.Drawing.Point(27, 398);
+            this.lblGenero.Location = new System.Drawing.Point(27, 470);
             this.lblGenero.Name = "lblGenero";
             this.lblGenero.Size = new System.Drawing.Size(110, 13);
             this.lblGenero.TabIndex = 17;
@@ -328,7 +339,7 @@
             // mktTelefone
             // 
             this.mktTelefone.BackColor = System.Drawing.Color.FloralWhite;
-            this.mktTelefone.Location = new System.Drawing.Point(347, 291);
+            this.mktTelefone.Location = new System.Drawing.Point(346, 291);
             this.mktTelefone.Mask = "(00)  00000-0000";
             this.mktTelefone.Name = "mktTelefone";
             this.mktTelefone.Size = new System.Drawing.Size(319, 20);
@@ -357,7 +368,7 @@
             // 
             this.lblSexo.AutoSize = true;
             this.lblSexo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblSexo.Location = new System.Drawing.Point(27, 358);
+            this.lblSexo.Location = new System.Drawing.Point(27, 430);
             this.lblSexo.Name = "lblSexo";
             this.lblSexo.Size = new System.Drawing.Size(77, 13);
             this.lblSexo.TabIndex = 12;
@@ -367,7 +378,7 @@
             // 
             this.rdbFeminino.AutoSize = true;
             this.rdbFeminino.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.rdbFeminino.Location = new System.Drawing.Point(276, 362);
+            this.rdbFeminino.Location = new System.Drawing.Point(276, 434);
             this.rdbFeminino.Name = "rdbFeminino";
             this.rdbFeminino.Size = new System.Drawing.Size(67, 17);
             this.rdbFeminino.TabIndex = 11;
@@ -379,7 +390,7 @@
             // 
             this.rdbOutro.AutoSize = true;
             this.rdbOutro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.rdbOutro.Location = new System.Drawing.Point(382, 362);
+            this.rdbOutro.Location = new System.Drawing.Point(382, 434);
             this.rdbOutro.Name = "rdbOutro";
             this.rdbOutro.Size = new System.Drawing.Size(51, 17);
             this.rdbOutro.TabIndex = 10;
@@ -391,7 +402,7 @@
             // 
             this.rdbMasculino.AutoSize = true;
             this.rdbMasculino.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.rdbMasculino.Location = new System.Drawing.Point(169, 362);
+            this.rdbMasculino.Location = new System.Drawing.Point(169, 434);
             this.rdbMasculino.Name = "rdbMasculino";
             this.rdbMasculino.Size = new System.Drawing.Size(73, 17);
             this.rdbMasculino.TabIndex = 9;
@@ -439,11 +450,58 @@
             this.lblNome.TabIndex = 2;
             this.lblNome.Text = "Nome";
             // 
+            // txtconfirmeSenha
+            // 
+            this.txtconfirmeSenha.BackColor = System.Drawing.Color.FloralWhite;
+            this.txtconfirmeSenha.Location = new System.Drawing.Point(347, 369);
+            this.txtconfirmeSenha.Multiline = true;
+            this.txtconfirmeSenha.Name = "txtconfirmeSenha";
+            this.txtconfirmeSenha.Size = new System.Drawing.Size(319, 32);
+            this.txtconfirmeSenha.TabIndex = 33;
+            // 
+            // txtSenha
+            // 
+            this.txtSenha.BackColor = System.Drawing.Color.FloralWhite;
+            this.txtSenha.Location = new System.Drawing.Point(30, 369);
+            this.txtSenha.Multiline = true;
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.Size = new System.Drawing.Size(302, 32);
+            this.txtSenha.TabIndex = 34;
+            // 
+            // lblSenha
+            // 
+            this.lblSenha.AutoSize = true;
+            this.lblSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
+            this.lblSenha.Location = new System.Drawing.Point(30, 335);
+            this.lblSenha.Name = "lblSenha";
+            this.lblSenha.Size = new System.Drawing.Size(38, 13);
+            this.lblSenha.TabIndex = 35;
+            this.lblSenha.Text = "Senha";
+            // 
+            // lblConfirmeSenha
+            // 
+            this.lblConfirmeSenha.AutoSize = true;
+            this.lblConfirmeSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
+            this.lblConfirmeSenha.Location = new System.Drawing.Point(350, 335);
+            this.lblConfirmeSenha.Name = "lblConfirmeSenha";
+            this.lblConfirmeSenha.Size = new System.Drawing.Size(109, 13);
+            this.lblConfirmeSenha.TabIndex = 36;
+            this.lblConfirmeSenha.Text = "Confirme a sua senha";
+            // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.ForeColor = System.Drawing.Color.Red;
+            this.lblError.Location = new System.Drawing.Point(30, 404);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(0, 13);
+            this.lblError.TabIndex = 37;
+            // 
             // FormularioCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 735);
+            this.ClientSize = new System.Drawing.Size(984, 640);
             this.Controls.Add(this.panelCadastro);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -489,5 +547,10 @@
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblConfirmeSenha;
+        private System.Windows.Forms.Label lblSenha;
+        private System.Windows.Forms.TextBox txtSenha;
+        private System.Windows.Forms.TextBox txtconfirmeSenha;
+        private System.Windows.Forms.Label lblError;
     }
 }
