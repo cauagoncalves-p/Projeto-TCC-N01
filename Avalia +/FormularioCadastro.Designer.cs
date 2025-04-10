@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioCadastro));
             this.panelCadastro = new System.Windows.Forms.Panel();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.btnSair = new System.Windows.Forms.Button();
             this.lblCPF = new System.Windows.Forms.Label();
             this.mktCPF = new System.Windows.Forms.MaskedTextBox();
             this.btnFinalizarCadastro = new System.Windows.Forms.Button();
@@ -52,11 +56,9 @@
             this.rdbOutro = new System.Windows.Forms.RadioButton();
             this.rdbMasculino = new System.Windows.Forms.RadioButton();
             this.dtpDataNascimento = new System.Windows.Forms.DateTimePicker();
-            this.txtNome = new System.Windows.Forms.TextBox();
             this.lblDataNascimento = new System.Windows.Forms.Label();
             this.lblSobrenome = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
-            this.btnSair = new System.Windows.Forms.Button();
             this.panelCadastro.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +66,8 @@
             // 
             this.panelCadastro.AutoScroll = true;
             this.panelCadastro.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelCadastro.Controls.Add(this.lblEmail);
+            this.panelCadastro.Controls.Add(this.txtEmail);
             this.panelCadastro.Controls.Add(this.txtNome);
             this.panelCadastro.Controls.Add(this.btnSair);
             this.panelCadastro.Controls.Add(this.lblCPF);
@@ -91,17 +95,60 @@
             this.panelCadastro.Controls.Add(this.lblDataNascimento);
             this.panelCadastro.Controls.Add(this.lblSobrenome);
             this.panelCadastro.Controls.Add(this.lblNome);
-            this.panelCadastro.Location = new System.Drawing.Point(160, 61);
+            this.panelCadastro.Location = new System.Drawing.Point(160, 12);
             this.panelCadastro.Name = "panelCadastro";
             this.panelCadastro.Padding = new System.Windows.Forms.Padding(0, 0, 20, 20);
-            this.panelCadastro.Size = new System.Drawing.Size(697, 600);
+            this.panelCadastro.Size = new System.Drawing.Size(697, 711);
             this.panelCadastro.TabIndex = 0;
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
+            this.lblEmail.Location = new System.Drawing.Point(30, 184);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(32, 13);
+            this.lblEmail.TabIndex = 32;
+            this.lblEmail.Text = "Email";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.BackColor = System.Drawing.Color.FloralWhite;
+            this.txtEmail.Location = new System.Drawing.Point(30, 212);
+            this.txtEmail.Multiline = true;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(302, 32);
+            this.txtEmail.TabIndex = 31;
+            // 
+            // txtNome
+            // 
+            this.txtNome.BackColor = System.Drawing.Color.FloralWhite;
+            this.txtNome.Location = new System.Drawing.Point(30, 136);
+            this.txtNome.Multiline = true;
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(302, 32);
+            this.txtNome.TabIndex = 5;
+            // 
+            // btnSair
+            // 
+            this.btnSair.BackColor = System.Drawing.Color.White;
+            this.btnSair.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSair.FlatAppearance.BorderSize = 0;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
+            this.btnSair.Location = new System.Drawing.Point(593, 18);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(50, 43);
+            this.btnSair.TabIndex = 11;
+            this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // lblCPF
             // 
             this.lblCPF.AutoSize = true;
             this.lblCPF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblCPF.Location = new System.Drawing.Point(341, 196);
+            this.lblCPF.Location = new System.Drawing.Point(350, 184);
             this.lblCPF.Name = "lblCPF";
             this.lblCPF.Size = new System.Drawing.Size(27, 13);
             this.lblCPF.TabIndex = 30;
@@ -110,7 +157,7 @@
             // mktCPF
             // 
             this.mktCPF.BackColor = System.Drawing.Color.FloralWhite;
-            this.mktCPF.Location = new System.Drawing.Point(344, 224);
+            this.mktCPF.Location = new System.Drawing.Point(347, 214);
             this.mktCPF.Mask = "000,000,000-00";
             this.mktCPF.Name = "mktCPF";
             this.mktCPF.Size = new System.Drawing.Size(319, 20);
@@ -121,7 +168,7 @@
             this.btnFinalizarCadastro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(164)))), ((int)(((byte)(143)))));
             this.btnFinalizarCadastro.FlatAppearance.BorderSize = 0;
             this.btnFinalizarCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFinalizarCadastro.Location = new System.Drawing.Point(327, 610);
+            this.btnFinalizarCadastro.Location = new System.Drawing.Point(327, 656);
             this.btnFinalizarCadastro.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
             this.btnFinalizarCadastro.Name = "btnFinalizarCadastro";
             this.btnFinalizarCadastro.Size = new System.Drawing.Size(336, 39);
@@ -135,7 +182,7 @@
             this.btnVoltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(230)))), ((int)(((byte)(221)))));
             this.btnVoltar.FlatAppearance.BorderSize = 0;
             this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVoltar.Location = new System.Drawing.Point(30, 610);
+            this.btnVoltar.Location = new System.Drawing.Point(30, 656);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(242, 39);
             this.btnVoltar.TabIndex = 27;
@@ -176,7 +223,7 @@
             "São Paulo  ",
             "Sergipe  ",
             "Tocantins"});
-            this.cbxEstado.Location = new System.Drawing.Point(377, 556);
+            this.cbxEstado.Location = new System.Drawing.Point(377, 602);
             this.cbxEstado.Name = "cbxEstado";
             this.cbxEstado.Size = new System.Drawing.Size(281, 21);
             this.cbxEstado.TabIndex = 26;
@@ -184,7 +231,7 @@
             // txtCidade
             // 
             this.txtCidade.BackColor = System.Drawing.Color.FloralWhite;
-            this.txtCidade.Location = new System.Drawing.Point(30, 557);
+            this.txtCidade.Location = new System.Drawing.Point(30, 603);
             this.txtCidade.Multiline = true;
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(311, 32);
@@ -194,7 +241,7 @@
             // 
             this.lblEstado.AutoSize = true;
             this.lblEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblEstado.Location = new System.Drawing.Point(377, 533);
+            this.lblEstado.Location = new System.Drawing.Point(377, 579);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(40, 13);
             this.lblEstado.TabIndex = 22;
@@ -204,7 +251,7 @@
             // 
             this.lblCidade.AutoSize = true;
             this.lblCidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblCidade.Location = new System.Drawing.Point(30, 533);
+            this.lblCidade.Location = new System.Drawing.Point(30, 579);
             this.lblCidade.Name = "lblCidade";
             this.lblCidade.Size = new System.Drawing.Size(40, 13);
             this.lblCidade.TabIndex = 21;
@@ -213,7 +260,7 @@
             // txtEndereco
             // 
             this.txtEndereco.BackColor = System.Drawing.Color.FloralWhite;
-            this.txtEndereco.Location = new System.Drawing.Point(30, 475);
+            this.txtEndereco.Location = new System.Drawing.Point(30, 521);
             this.txtEndereco.Multiline = true;
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(628, 32);
@@ -223,7 +270,7 @@
             // 
             this.lblEndereco.AutoSize = true;
             this.lblEndereco.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblEndereco.Location = new System.Drawing.Point(27, 436);
+            this.lblEndereco.Location = new System.Drawing.Point(27, 482);
             this.lblEndereco.Name = "lblEndereco";
             this.lblEndereco.Size = new System.Drawing.Size(53, 13);
             this.lblEndereco.TabIndex = 19;
@@ -252,7 +299,7 @@
             "Gênero fluido",
             "Outro",
             "Prefiro não dizer"});
-            this.cbxGenero.Location = new System.Drawing.Point(30, 391);
+            this.cbxGenero.Location = new System.Drawing.Point(30, 437);
             this.cbxGenero.Name = "cbxGenero";
             this.cbxGenero.Size = new System.Drawing.Size(628, 21);
             this.cbxGenero.TabIndex = 18;
@@ -272,7 +319,7 @@
             // 
             this.lblGenero.AutoSize = true;
             this.lblGenero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblGenero.Location = new System.Drawing.Point(27, 352);
+            this.lblGenero.Location = new System.Drawing.Point(27, 398);
             this.lblGenero.Name = "lblGenero";
             this.lblGenero.Size = new System.Drawing.Size(110, 13);
             this.lblGenero.TabIndex = 17;
@@ -281,7 +328,7 @@
             // mktTelefone
             // 
             this.mktTelefone.BackColor = System.Drawing.Color.FloralWhite;
-            this.mktTelefone.Location = new System.Drawing.Point(344, 299);
+            this.mktTelefone.Location = new System.Drawing.Point(347, 291);
             this.mktTelefone.Mask = "(00)  00000-0000";
             this.mktTelefone.Name = "mktTelefone";
             this.mktTelefone.Size = new System.Drawing.Size(319, 20);
@@ -291,7 +338,7 @@
             // 
             this.lblTelefone.AutoSize = true;
             this.lblTelefone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblTelefone.Location = new System.Drawing.Point(338, 267);
+            this.lblTelefone.Location = new System.Drawing.Point(344, 260);
             this.lblTelefone.Name = "lblTelefone";
             this.lblTelefone.Size = new System.Drawing.Size(49, 13);
             this.lblTelefone.TabIndex = 15;
@@ -310,7 +357,7 @@
             // 
             this.lblSexo.AutoSize = true;
             this.lblSexo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblSexo.Location = new System.Drawing.Point(27, 267);
+            this.lblSexo.Location = new System.Drawing.Point(27, 358);
             this.lblSexo.Name = "lblSexo";
             this.lblSexo.Size = new System.Drawing.Size(77, 13);
             this.lblSexo.TabIndex = 12;
@@ -320,7 +367,7 @@
             // 
             this.rdbFeminino.AutoSize = true;
             this.rdbFeminino.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.rdbFeminino.Location = new System.Drawing.Point(123, 302);
+            this.rdbFeminino.Location = new System.Drawing.Point(276, 362);
             this.rdbFeminino.Name = "rdbFeminino";
             this.rdbFeminino.Size = new System.Drawing.Size(67, 17);
             this.rdbFeminino.TabIndex = 11;
@@ -332,7 +379,7 @@
             // 
             this.rdbOutro.AutoSize = true;
             this.rdbOutro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.rdbOutro.Location = new System.Drawing.Point(210, 302);
+            this.rdbOutro.Location = new System.Drawing.Point(382, 362);
             this.rdbOutro.Name = "rdbOutro";
             this.rdbOutro.Size = new System.Drawing.Size(51, 17);
             this.rdbOutro.TabIndex = 10;
@@ -344,7 +391,7 @@
             // 
             this.rdbMasculino.AutoSize = true;
             this.rdbMasculino.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.rdbMasculino.Location = new System.Drawing.Point(30, 302);
+            this.rdbMasculino.Location = new System.Drawing.Point(169, 362);
             this.rdbMasculino.Name = "rdbMasculino";
             this.rdbMasculino.Size = new System.Drawing.Size(73, 17);
             this.rdbMasculino.TabIndex = 9;
@@ -356,26 +403,17 @@
             // 
             this.dtpDataNascimento.CalendarMonthBackground = System.Drawing.Color.FloralWhite;
             this.dtpDataNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDataNascimento.Location = new System.Drawing.Point(30, 224);
+            this.dtpDataNascimento.Location = new System.Drawing.Point(30, 291);
             this.dtpDataNascimento.Name = "dtpDataNascimento";
             this.dtpDataNascimento.Size = new System.Drawing.Size(290, 20);
             this.dtpDataNascimento.TabIndex = 6;
             this.dtpDataNascimento.Value = new System.DateTime(2025, 4, 8, 0, 0, 0, 0);
             // 
-            // txtNome
-            // 
-            this.txtNome.BackColor = System.Drawing.Color.FloralWhite;
-            this.txtNome.Location = new System.Drawing.Point(30, 136);
-            this.txtNome.Multiline = true;
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(302, 32);
-            this.txtNome.TabIndex = 5;
-            // 
             // lblDataNascimento
             // 
             this.lblDataNascimento.AutoSize = true;
             this.lblDataNascimento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblDataNascimento.Location = new System.Drawing.Point(27, 196);
+            this.lblDataNascimento.Location = new System.Drawing.Point(30, 260);
             this.lblDataNascimento.Name = "lblDataNascimento";
             this.lblDataNascimento.Size = new System.Drawing.Size(104, 13);
             this.lblDataNascimento.TabIndex = 4;
@@ -401,26 +439,11 @@
             this.lblNome.TabIndex = 2;
             this.lblNome.Text = "Nome";
             // 
-            // btnSair
-            // 
-            this.btnSair.BackColor = System.Drawing.Color.White;
-            this.btnSair.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnSair.FlatAppearance.BorderSize = 0;
-            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
-            this.btnSair.Location = new System.Drawing.Point(593, 18);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(50, 43);
-            this.btnSair.TabIndex = 11;
-            this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSair.UseVisualStyleBackColor = false;
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
-            // 
             // FormularioCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 661);
+            this.ClientSize = new System.Drawing.Size(984, 735);
             this.Controls.Add(this.panelCadastro);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -464,5 +487,7 @@
         private System.Windows.Forms.Label lblCPF;
         private System.Windows.Forms.MaskedTextBox mktCPF;
         private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label lblEmail;
     }
 }

@@ -30,20 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioDeEnvioCodigo));
             this.panelConfirmeEmail = new System.Windows.Forms.Panel();
+            this.linkLblReenviarCodigo = new System.Windows.Forms.LinkLabel();
+            this.txt2 = new System.Windows.Forms.TextBox();
+            this.txt6 = new System.Windows.Forms.TextBox();
+            this.txt5 = new System.Windows.Forms.TextBox();
+            this.txt4 = new System.Windows.Forms.TextBox();
+            this.txt3 = new System.Windows.Forms.TextBox();
+            this.txt1 = new System.Windows.Forms.TextBox();
+            this.lblDescritivo1 = new System.Windows.Forms.Label();
+            this.lblEmailInformado = new System.Windows.Forms.Label();
+            this.lblDescritivo = new System.Windows.Forms.Label();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnEntrar = new System.Windows.Forms.Button();
             this.lblConfirmeEmail = new System.Windows.Forms.Label();
             this.lblAvalia = new System.Windows.Forms.Label();
-            this.lblDescritivo = new System.Windows.Forms.Label();
-            this.lblEmailInformado = new System.Windows.Forms.Label();
-            this.lblDescritivo1 = new System.Windows.Forms.Label();
-            this.txt1 = new System.Windows.Forms.TextBox();
-            this.txt3 = new System.Windows.Forms.TextBox();
-            this.txt4 = new System.Windows.Forms.TextBox();
-            this.txt5 = new System.Windows.Forms.TextBox();
-            this.txt6 = new System.Windows.Forms.TextBox();
-            this.txt2 = new System.Windows.Forms.TextBox();
-            this.linkLblReenviarCodigo = new System.Windows.Forms.LinkLabel();
             this.panelConfirmeEmail.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,6 +67,121 @@
             this.panelConfirmeEmail.Name = "panelConfirmeEmail";
             this.panelConfirmeEmail.Size = new System.Drawing.Size(335, 471);
             this.panelConfirmeEmail.TabIndex = 1;
+            // 
+            // linkLblReenviarCodigo
+            // 
+            this.linkLblReenviarCodigo.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.linkLblReenviarCodigo.AutoSize = true;
+            this.linkLblReenviarCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLblReenviarCodigo.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.linkLblReenviarCodigo.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.linkLblReenviarCodigo.Location = new System.Drawing.Point(99, 417);
+            this.linkLblReenviarCodigo.Name = "linkLblReenviarCodigo";
+            this.linkLblReenviarCodigo.Size = new System.Drawing.Size(118, 18);
+            this.linkLblReenviarCodigo.TabIndex = 8;
+            this.linkLblReenviarCodigo.TabStop = true;
+            this.linkLblReenviarCodigo.Text = "Reenviar Código";
+            this.linkLblReenviarCodigo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLblReenviarCodigo_LinkClicked);
+            // 
+            // txt2
+            // 
+            this.txt2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt2.Location = new System.Drawing.Point(68, 244);
+            this.txt2.MaxLength = 1;
+            this.txt2.Multiline = true;
+            this.txt2.Name = "txt2";
+            this.txt2.Size = new System.Drawing.Size(41, 64);
+            this.txt2.TabIndex = 1;
+            this.txt2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt6
+            // 
+            this.txt6.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt6.Location = new System.Drawing.Point(268, 244);
+            this.txt6.MaxLength = 1;
+            this.txt6.Multiline = true;
+            this.txt6.Name = "txt6";
+            this.txt6.Size = new System.Drawing.Size(41, 64);
+            this.txt6.TabIndex = 5;
+            this.txt6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt5
+            // 
+            this.txt5.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt5.Location = new System.Drawing.Point(217, 244);
+            this.txt5.MaxLength = 1;
+            this.txt5.Multiline = true;
+            this.txt5.Name = "txt5";
+            this.txt5.Size = new System.Drawing.Size(41, 64);
+            this.txt5.TabIndex = 4;
+            this.txt5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt4
+            // 
+            this.txt4.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt4.Location = new System.Drawing.Point(166, 244);
+            this.txt4.MaxLength = 1;
+            this.txt4.Multiline = true;
+            this.txt4.Name = "txt4";
+            this.txt4.Size = new System.Drawing.Size(41, 64);
+            this.txt4.TabIndex = 3;
+            this.txt4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt3
+            // 
+            this.txt3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt3.Location = new System.Drawing.Point(115, 244);
+            this.txt3.MaxLength = 1;
+            this.txt3.Multiline = true;
+            this.txt3.Name = "txt3";
+            this.txt3.Size = new System.Drawing.Size(41, 64);
+            this.txt3.TabIndex = 2;
+            this.txt3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt1
+            // 
+            this.txt1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt1.Location = new System.Drawing.Point(19, 244);
+            this.txt1.MaxLength = 1;
+            this.txt1.Multiline = true;
+            this.txt1.Name = "txt1";
+            this.txt1.Size = new System.Drawing.Size(41, 64);
+            this.txt1.TabIndex = 0;
+            this.txt1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblDescritivo1
+            // 
+            this.lblDescritivo1.AutoSize = true;
+            this.lblDescritivo1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(138)))), ((int)(((byte)(122)))));
+            this.lblDescritivo1.Location = new System.Drawing.Point(38, 171);
+            this.lblDescritivo1.Name = "lblDescritivo1";
+            this.lblDescritivo1.Size = new System.Drawing.Size(229, 13);
+            this.lblDescritivo1.TabIndex = 13;
+            this.lblDescritivo1.Text = "Digite o código abaixo para verificar sua conta.";
+            this.lblDescritivo1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblEmailInformado
+            // 
+            this.lblEmailInformado.AutoSize = true;
+            this.lblEmailInformado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailInformado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(124)))), ((int)(((byte)(99)))));
+            this.lblEmailInformado.Location = new System.Drawing.Point(80, 144);
+            this.lblEmailInformado.Name = "lblEmailInformado";
+            this.lblEmailInformado.Size = new System.Drawing.Size(133, 13);
+            this.lblEmailInformado.TabIndex = 12;
+            this.lblEmailInformado.Text = "usuario@exemplo.com";
+            this.lblEmailInformado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblDescritivo
+            // 
+            this.lblDescritivo.AutoSize = true;
+            this.lblDescritivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescritivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(138)))), ((int)(((byte)(122)))));
+            this.lblDescritivo.Location = new System.Drawing.Point(9, 118);
+            this.lblDescritivo.Name = "lblDescritivo";
+            this.lblDescritivo.Size = new System.Drawing.Size(283, 16);
+            this.lblDescritivo.TabIndex = 11;
+            this.lblDescritivo.Text = "Enviamos um código de 6 dígitos para o email";
             // 
             // btnSair
             // 
@@ -94,6 +209,7 @@
             this.btnEntrar.TabIndex = 7;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = false;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEnviarCodigo_Click);
             // 
             // lblConfirmeEmail
             // 
@@ -115,119 +231,6 @@
             this.lblAvalia.Size = new System.Drawing.Size(90, 24);
             this.lblAvalia.TabIndex = 0;
             this.lblAvalia.Text = "Áuerea+";
-            // 
-            // lblDescritivo
-            // 
-            this.lblDescritivo.AutoSize = true;
-            this.lblDescritivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescritivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(138)))), ((int)(((byte)(122)))));
-            this.lblDescritivo.Location = new System.Drawing.Point(9, 118);
-            this.lblDescritivo.Name = "lblDescritivo";
-            this.lblDescritivo.Size = new System.Drawing.Size(283, 16);
-            this.lblDescritivo.TabIndex = 11;
-            this.lblDescritivo.Text = "Enviamos um código de 6 dígitos para o email";
-            // 
-            // lblEmailInformado
-            // 
-            this.lblEmailInformado.AutoSize = true;
-            this.lblEmailInformado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailInformado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(124)))), ((int)(((byte)(99)))));
-            this.lblEmailInformado.Location = new System.Drawing.Point(80, 144);
-            this.lblEmailInformado.Name = "lblEmailInformado";
-            this.lblEmailInformado.Size = new System.Drawing.Size(133, 13);
-            this.lblEmailInformado.TabIndex = 12;
-            this.lblEmailInformado.Text = "usuario@exemplo.com";
-            this.lblEmailInformado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblDescritivo1
-            // 
-            this.lblDescritivo1.AutoSize = true;
-            this.lblDescritivo1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(138)))), ((int)(((byte)(122)))));
-            this.lblDescritivo1.Location = new System.Drawing.Point(38, 171);
-            this.lblDescritivo1.Name = "lblDescritivo1";
-            this.lblDescritivo1.Size = new System.Drawing.Size(229, 13);
-            this.lblDescritivo1.TabIndex = 13;
-            this.lblDescritivo1.Text = "Digite o código abaixo para verificar sua conta.";
-            this.lblDescritivo1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txt1
-            // 
-            this.txt1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt1.Location = new System.Drawing.Point(19, 244);
-            this.txt1.MaxLength = 1;
-            this.txt1.Multiline = true;
-            this.txt1.Name = "txt1";
-            this.txt1.Size = new System.Drawing.Size(41, 64);
-            this.txt1.TabIndex = 0;
-            this.txt1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txt3
-            // 
-            this.txt3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt3.Location = new System.Drawing.Point(115, 244);
-            this.txt3.MaxLength = 1;
-            this.txt3.Multiline = true;
-            this.txt3.Name = "txt3";
-            this.txt3.Size = new System.Drawing.Size(41, 64);
-            this.txt3.TabIndex = 2;
-            this.txt3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txt4
-            // 
-            this.txt4.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt4.Location = new System.Drawing.Point(166, 244);
-            this.txt4.MaxLength = 1;
-            this.txt4.Multiline = true;
-            this.txt4.Name = "txt4";
-            this.txt4.Size = new System.Drawing.Size(41, 64);
-            this.txt4.TabIndex = 3;
-            this.txt4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txt5
-            // 
-            this.txt5.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt5.Location = new System.Drawing.Point(217, 244);
-            this.txt5.MaxLength = 1;
-            this.txt5.Multiline = true;
-            this.txt5.Name = "txt5";
-            this.txt5.Size = new System.Drawing.Size(41, 64);
-            this.txt5.TabIndex = 4;
-            this.txt5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txt6
-            // 
-            this.txt6.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt6.Location = new System.Drawing.Point(268, 244);
-            this.txt6.MaxLength = 1;
-            this.txt6.Multiline = true;
-            this.txt6.Name = "txt6";
-            this.txt6.Size = new System.Drawing.Size(41, 64);
-            this.txt6.TabIndex = 5;
-            this.txt6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txt2
-            // 
-            this.txt2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt2.Location = new System.Drawing.Point(68, 244);
-            this.txt2.MaxLength = 1;
-            this.txt2.Multiline = true;
-            this.txt2.Name = "txt2";
-            this.txt2.Size = new System.Drawing.Size(41, 64);
-            this.txt2.TabIndex = 1;
-            this.txt2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // linkLblReenviarCodigo
-            // 
-            this.linkLblReenviarCodigo.AutoSize = true;
-            this.linkLblReenviarCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLblReenviarCodigo.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.linkLblReenviarCodigo.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.linkLblReenviarCodigo.Location = new System.Drawing.Point(99, 417);
-            this.linkLblReenviarCodigo.Name = "linkLblReenviarCodigo";
-            this.linkLblReenviarCodigo.Size = new System.Drawing.Size(118, 18);
-            this.linkLblReenviarCodigo.TabIndex = 8;
-            this.linkLblReenviarCodigo.TabStop = true;
-            this.linkLblReenviarCodigo.Text = "Reenviar Código";
             // 
             // FormularioDeEnvioCodigo
             // 

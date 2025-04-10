@@ -30,28 +30,29 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioCadCPF));
             this.panelVerificaCPF = new System.Windows.Forms.Panel();
+            this.btnSair = new System.Windows.Forms.Button();
             this.lblLinkFazerLogin = new System.Windows.Forms.LinkLabel();
             this.lblVerificaCPF = new System.Windows.Forms.Label();
             this.btnContinuar = new System.Windows.Forms.Button();
-            this.txtSenhaLogin = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblemail = new System.Windows.Forms.Label();
-            this.txtNomeLogin = new System.Windows.Forms.TextBox();
+            this.txtCPF = new System.Windows.Forms.TextBox();
             this.lblCPF = new System.Windows.Forms.Label();
             this.lblVerifica = new System.Windows.Forms.Label();
             this.lblAvalia = new System.Windows.Forms.Label();
-            this.btnSair = new System.Windows.Forms.Button();
+            this.mktCPF = new System.Windows.Forms.MaskedTextBox();
             this.panelVerificaCPF.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelVerificaCPF
             // 
+            this.panelVerificaCPF.Controls.Add(this.mktCPF);
             this.panelVerificaCPF.Controls.Add(this.btnSair);
             this.panelVerificaCPF.Controls.Add(this.lblLinkFazerLogin);
             this.panelVerificaCPF.Controls.Add(this.lblVerificaCPF);
             this.panelVerificaCPF.Controls.Add(this.btnContinuar);
-            this.panelVerificaCPF.Controls.Add(this.txtSenhaLogin);
+            this.panelVerificaCPF.Controls.Add(this.txtEmail);
             this.panelVerificaCPF.Controls.Add(this.lblemail);
-            this.panelVerificaCPF.Controls.Add(this.txtNomeLogin);
             this.panelVerificaCPF.Controls.Add(this.lblCPF);
             this.panelVerificaCPF.Controls.Add(this.lblVerifica);
             this.panelVerificaCPF.Controls.Add(this.lblAvalia);
@@ -60,9 +61,26 @@
             this.panelVerificaCPF.Size = new System.Drawing.Size(335, 471);
             this.panelVerificaCPF.TabIndex = 1;
             // 
+            // btnSair
+            // 
+            this.btnSair.BackColor = System.Drawing.Color.White;
+            this.btnSair.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSair.FlatAppearance.BorderSize = 0;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
+            this.btnSair.Location = new System.Drawing.Point(267, 12);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(50, 43);
+            this.btnSair.TabIndex = 11;
+            this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
             // lblLinkFazerLogin
             // 
+            this.lblLinkFazerLogin.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
             this.lblLinkFazerLogin.AutoSize = true;
+            this.lblLinkFazerLogin.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
             this.lblLinkFazerLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLinkFazerLogin.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.lblLinkFazerLogin.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
@@ -96,15 +114,16 @@
             this.btnContinuar.TabIndex = 7;
             this.btnContinuar.Text = "Continuar";
             this.btnContinuar.UseVisualStyleBackColor = false;
+            this.btnContinuar.Click += new System.EventHandler(this.btnContinuar_Click);
             // 
-            // txtSenhaLogin
+            // txtEmail
             // 
-            this.txtSenhaLogin.Location = new System.Drawing.Point(39, 277);
-            this.txtSenhaLogin.MaxLength = 50;
-            this.txtSenhaLogin.Multiline = true;
-            this.txtSenhaLogin.Name = "txtSenhaLogin";
-            this.txtSenhaLogin.Size = new System.Drawing.Size(257, 40);
-            this.txtSenhaLogin.TabIndex = 5;
+            this.txtEmail.Location = new System.Drawing.Point(39, 277);
+            this.txtEmail.MaxLength = 50;
+            this.txtEmail.Multiline = true;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(257, 40);
+            this.txtEmail.TabIndex = 5;
             // 
             // lblemail
             // 
@@ -116,14 +135,14 @@
             this.lblemail.TabIndex = 4;
             this.lblemail.Text = "Email";
             // 
-            // txtNomeLogin
+            // txtCPF
             // 
-            this.txtNomeLogin.Location = new System.Drawing.Point(39, 174);
-            this.txtNomeLogin.MaxLength = 100;
-            this.txtNomeLogin.Multiline = true;
-            this.txtNomeLogin.Name = "txtNomeLogin";
-            this.txtNomeLogin.Size = new System.Drawing.Size(257, 40);
-            this.txtNomeLogin.TabIndex = 3;
+            this.txtCPF.Location = new System.Drawing.Point(32, 173);
+            this.txtCPF.MaxLength = 100;
+            this.txtCPF.Multiline = true;
+            this.txtCPF.Name = "txtCPF";
+            this.txtCPF.Size = new System.Drawing.Size(257, 40);
+            this.txtCPF.TabIndex = 3;
             // 
             // lblCPF
             // 
@@ -156,20 +175,13 @@
             this.lblAvalia.TabIndex = 0;
             this.lblAvalia.Text = "Áuerea+";
             // 
-            // btnSair
+            // mktCPF
             // 
-            this.btnSair.BackColor = System.Drawing.Color.White;
-            this.btnSair.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnSair.FlatAppearance.BorderSize = 0;
-            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
-            this.btnSair.Location = new System.Drawing.Point(267, 12);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(50, 43);
-            this.btnSair.TabIndex = 11;
-            this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSair.UseVisualStyleBackColor = false;
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            this.mktCPF.Location = new System.Drawing.Point(39, 170);
+            this.mktCPF.Mask = "000,000,000-00";
+            this.mktCPF.Name = "mktCPF";
+            this.mktCPF.Size = new System.Drawing.Size(226, 20);
+            this.mktCPF.TabIndex = 12;
             // 
             // FormularioCadCPF
             // 
@@ -177,6 +189,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.panelVerificaCPF);
+            this.Controls.Add(this.txtCPF);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormularioCadCPF";
@@ -187,6 +200,7 @@
             this.panelVerificaCPF.ResumeLayout(false);
             this.panelVerificaCPF.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -196,12 +210,13 @@
         private System.Windows.Forms.LinkLabel lblLinkFazerLogin;
         private System.Windows.Forms.Label lblVerificaCPF;
         private System.Windows.Forms.Button btnContinuar;
-        private System.Windows.Forms.TextBox txtSenhaLogin;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblemail;
-        private System.Windows.Forms.TextBox txtNomeLogin;
+        private System.Windows.Forms.TextBox txtCPF;
         private System.Windows.Forms.Label lblCPF;
         private System.Windows.Forms.Label lblVerifica;
         private System.Windows.Forms.Label lblAvalia;
         private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.MaskedTextBox mktCPF;
     }
 }

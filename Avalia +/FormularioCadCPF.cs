@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Avalia__.AureaDataSetTableAdapters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -56,6 +57,38 @@ namespace Avalia__
             {
                 this.Close();
             }
+        }
+
+        private void btnContinuar_Click(object sender, EventArgs e)
+        {
+            // Limpa a máscara do CPF
+            string cpfDigitado = new string(mktCPF.Text.Where(char.IsDigit).ToArray());
+            string emailDigitado = txtEmail.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(cpfDigitado) || string.IsNullOrWhiteSpace(emailDigitado))
+            {
+                MessageBox.Show("Por favor, preencha o CPF e o e-mail.");
+                return;
+            }
+
+            // Consulta no banco
+            tbUsuarioTableAdapter adaptador = new tbUsuarioTableAdapter();
+            var resultado = adaptador.GetData()
+                .FirstOrDefault(u => u.CPF == cpfDigitado && u.Email == emailDigitado);
+
+            if (resultado != null)
+            {
+                MessageBox.Show("Usuário encontrado! Indo para a próxima tela...");
+
+                // Abre a próxima tela, passando o e-mail se quiser
+                FormularioDeEnvioCodigo envio = new FormularioDeEnvioCodigo(emailDigitado);
+                envio.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("CPF ou E-mail não encontrado no sistema.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+          
         }
     }
 }

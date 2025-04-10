@@ -1,4 +1,5 @@
-﻿using Avalia__.Controles;
+﻿using Avalia__.AureaDataSetTableAdapters;
+using Avalia__.Controles;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,98 @@ namespace Avalia__
 {
     public partial class FormularioCadastro : Form
     {
+        private void AtualizarBanco() 
+        {
+            tbUsuarioTableAdapter tbUsuarioTableAdapter = new tbUsuarioTableAdapter();
+
+            // Cria um DataTable e preenche com os dados do banco
+            AureaDataSet.tbUsuarioDataTable tabelaUsuarios = tbUsuarioTableAdapter.GetData();
+
+            // Agora você pode usar LINQ com os dados
+            var usuarios = from linha in tabelaUsuarios select linha;
+
+
+            // Exemplo: mostrar no console todos os nomes
+            foreach (var usuario in usuarios)
+            {
+                Console.WriteLine(usuario);
+            }
+        }
+
+        private void EnviarDado() 
+        {
+            tbUsuarioTableAdapter novosdados = new tbUsuarioTableAdapter();
+
+            string nome = txtNome.Text;
+            string sobrenome = txtSobrenome.Text;
+            string email = txtEmail.Text;
+            string cpf = mktCPF.Text;
+            DateTime dataNascimento = dtpDataNascimento.Value;
+            string telefone = new string(mktTelefone.Text.Where(char.IsDigit).ToArray());
+            string sexo = "";
+
+            if (rdbMasculino.Checked)
+                sexo = "M";
+            else if (rdbFeminino.Checked)
+                sexo = "F";
+            else if (rdbOutro.Checked)
+                sexo = "O";
+
+            string identidadeGenero = "";
+
+            switch (cbxGenero.SelectedIndex)
+            {
+                case 0: identidadeGenero = "Cisgênero"; break;
+                case 1: identidadeGenero = "Transgênero"; break;
+                case 2: identidadeGenero = "Não-binário"; break;
+                case 3: identidadeGenero = "Gênero fluido"; break;
+                case 4: identidadeGenero = "Outro"; break;
+                case 5: identidadeGenero = "Prefiro não dizer"; break;
+                default: identidadeGenero = ""; break; // Caso nada esteja selecionado
+            }
+
+            string endereco = txtEndereco.Text;
+            string cidade = txtCidade.Text;
+
+            string Estado = "";
+
+            switch (cbxEstado.SelectedIndex)
+            {
+                case 0: Estado = "AC"; break; // Acre
+                case 1: Estado = "AL"; break; // Alagoas
+                case 2: Estado = "AP"; break; // Amapá
+                case 3: Estado = "AM"; break; // Amazonas
+                case 4: Estado = "BA"; break; // Bahia
+                case 5: Estado = "CE"; break; // Ceará
+                case 6: Estado = "DF"; break; // Distrito Federal
+                case 7: Estado = "ES"; break; // Espírito Santo
+                case 8: Estado = "GO"; break; // Goiás
+                case 9: Estado = "MA"; break; // Maranhão
+                case 10: Estado = "MT"; break; // Mato Grosso
+                case 11: Estado = "MS"; break; // Mato Grosso do Sul
+                case 12: Estado = "MG"; break; // Minas Gerais
+                case 13: Estado = "PA"; break; // Pará
+                case 14: Estado = "PB"; break; // Paraíba
+                case 15: Estado = "PR"; break; // Paraná
+                case 16: Estado = "PE"; break; // Pernambuco
+                case 17: Estado = "PI"; break; // Piauí
+                case 18: Estado = "RJ"; break; // Rio de Janeiro
+                case 19: Estado = "RN"; break; // Rio Grande do Norte
+                case 20: Estado = "RS"; break; // Rio Grande do Sul
+                case 21: Estado = "RO"; break; // Rondônia
+                case 22: Estado = "RR"; break; // Roraima
+                case 23: Estado = "SC"; break; // Santa Catarina
+                case 24: Estado = "SP"; break; // São Paulo
+                case 25: Estado = "SE"; break; // Sergipe
+                case 26: Estado = "TO"; break; // Tocantins
+                default: Estado = ""; break;  // Nenhum selecionado
+            }
+            DateTime dataCadastro = DateTime.Now;
+            novosdados.Insert(nome, sobrenome, dataNascimento, cpf, sexo, telefone, identidadeGenero, endereco, email, cidade, Estado, dataCadastro);
+            AtualizarBanco();
+
+        }
+
 
         private bool VerificaIdade()
         {
@@ -96,6 +189,8 @@ namespace Avalia__
             if (!VerificaIdade())
                 return;
 
+            EnviarDado();
+
             FormularioCadCPF formularioCadCPF = new FormularioCadCPF();
             formularioCadCPF.ShowDialog();
         }
@@ -113,5 +208,7 @@ namespace Avalia__
                 this.Close();
             }
         }
+
+        
     }
 }

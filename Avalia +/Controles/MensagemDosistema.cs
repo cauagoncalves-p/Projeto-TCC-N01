@@ -13,5 +13,15 @@ namespace Avalia__.Controles
         {
             MessageBox.Show(mensagem, "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        public void MensagemError(string mensagem)
+        {
+            MessageBox.Show(mensagem, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        public void MensagemAtencao(string mensagem)
+        {
+            MessageBox.Show(mensagem, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
     }
 }
