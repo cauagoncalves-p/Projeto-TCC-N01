@@ -84,6 +84,7 @@
             this.btnConfirmar.TabIndex = 7;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.UseVisualStyleBackColor = false;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // txtNovaSenha
             // 
