@@ -30,17 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioCadCPF));
             this.panelVerificaCPF = new System.Windows.Forms.Panel();
+            this.mktCPF = new System.Windows.Forms.MaskedTextBox();
             this.btnSair = new System.Windows.Forms.Button();
             this.lblLinkFazerLogin = new System.Windows.Forms.LinkLabel();
             this.lblVerificaCPF = new System.Windows.Forms.Label();
             this.btnContinuar = new System.Windows.Forms.Button();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblemail = new System.Windows.Forms.Label();
-            this.txtCPF = new System.Windows.Forms.TextBox();
             this.lblCPF = new System.Windows.Forms.Label();
             this.lblVerifica = new System.Windows.Forms.Label();
             this.lblAvalia = new System.Windows.Forms.Label();
-            this.mktCPF = new System.Windows.Forms.MaskedTextBox();
             this.panelVerificaCPF.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,6 +59,14 @@
             this.panelVerificaCPF.Name = "panelVerificaCPF";
             this.panelVerificaCPF.Size = new System.Drawing.Size(335, 471);
             this.panelVerificaCPF.TabIndex = 1;
+            // 
+            // mktCPF
+            // 
+            this.mktCPF.Location = new System.Drawing.Point(39, 170);
+            this.mktCPF.Mask = "000,000,000-00";
+            this.mktCPF.Name = "mktCPF";
+            this.mktCPF.Size = new System.Drawing.Size(257, 20);
+            this.mktCPF.TabIndex = 12;
             // 
             // btnSair
             // 
@@ -118,6 +125,8 @@
             // 
             // txtEmail
             // 
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtEmail.Location = new System.Drawing.Point(39, 277);
             this.txtEmail.MaxLength = 50;
             this.txtEmail.Multiline = true;
@@ -134,15 +143,6 @@
             this.lblemail.Size = new System.Drawing.Size(32, 13);
             this.lblemail.TabIndex = 4;
             this.lblemail.Text = "Email";
-            // 
-            // txtCPF
-            // 
-            this.txtCPF.Location = new System.Drawing.Point(32, 173);
-            this.txtCPF.MaxLength = 100;
-            this.txtCPF.Multiline = true;
-            this.txtCPF.Name = "txtCPF";
-            this.txtCPF.Size = new System.Drawing.Size(257, 40);
-            this.txtCPF.TabIndex = 3;
             // 
             // lblCPF
             // 
@@ -175,21 +175,12 @@
             this.lblAvalia.TabIndex = 0;
             this.lblAvalia.Text = "Áuerea+";
             // 
-            // mktCPF
-            // 
-            this.mktCPF.Location = new System.Drawing.Point(39, 170);
-            this.mktCPF.Mask = "000,000,000-00";
-            this.mktCPF.Name = "mktCPF";
-            this.mktCPF.Size = new System.Drawing.Size(226, 20);
-            this.mktCPF.TabIndex = 12;
-            // 
             // FormularioCadCPF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.panelVerificaCPF);
-            this.Controls.Add(this.txtCPF);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormularioCadCPF";
@@ -200,7 +191,6 @@
             this.panelVerificaCPF.ResumeLayout(false);
             this.panelVerificaCPF.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -212,7 +202,6 @@
         private System.Windows.Forms.Button btnContinuar;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblemail;
-        private System.Windows.Forms.TextBox txtCPF;
         private System.Windows.Forms.Label lblCPF;
         private System.Windows.Forms.Label lblVerifica;
         private System.Windows.Forms.Label lblAvalia;

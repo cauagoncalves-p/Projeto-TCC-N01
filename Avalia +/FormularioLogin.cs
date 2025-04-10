@@ -36,17 +36,13 @@ namespace Avalia__
             MudarFonte();
             RadiusButton controlador = new RadiusButton();
             controlador.ConfigInicial(this, panelLogin, btnSair, 25);
+            UIHelper.ArredondarBotao(btnEntrar, 25);
         }
-        
+
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             //Cor de fundo da tela 
             CorDeFundo.PintarGradiente(this, e, "#f5e6d3", "#fdf6f0");
-        }
-
-        private void FormularioLogin_Load(object sender, EventArgs e)
-        {
-            UIHelper.ArredondarBotao(btnEntrar, 25);
         }
 
         private void lblLinkCriarConta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

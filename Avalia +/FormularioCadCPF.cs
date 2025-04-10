@@ -1,4 +1,5 @@
 ﻿using Avalia__.AureaDataSetTableAdapters;
+using Avalia__.Controles;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace Avalia__
 {
     public partial class FormularioCadCPF: Form
     {
+        Mensagem_do_sistema mensagem_ = new Mensagem_do_sistema();
         private void MudarFonte()
         {
             lblAvalia.Font = new Font("Segoe UI", 14, FontStyle.Bold);
@@ -23,6 +25,8 @@ namespace Avalia__
             btnContinuar.Font = new Font("Segoe UI", 10, FontStyle.Bold);
             lblLinkFazerLogin.Font = new Font("Segoe UI", 10, FontStyle.Bold);
             lblVerificaCPF.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            mktCPF.Font = new Font("Segoe UI", 17, FontStyle.Regular);
+            txtEmail.Font = new Font("Segoe UI", 14, FontStyle.Regular);
         }
         public FormularioCadCPF()
         {
@@ -60,13 +64,12 @@ namespace Avalia__
 
         private void btnContinuar_Click(object sender, EventArgs e)
         {
-            // Limpa a máscara do CPF
             string cpfDigitado = mktCPF.Text;
             string emailDigitado = txtEmail.Text.Trim();
 
             if (string.IsNullOrWhiteSpace(cpfDigitado) || string.IsNullOrWhiteSpace(emailDigitado))
             {
-                MessageBox.Show("Por favor, preencha o CPF e o e-mail.");
+                mensagem_.MensagemError("Por favor, preencha o CPF e o e-mail.");
                 return;
             }
 
@@ -76,7 +79,7 @@ namespace Avalia__
 
             if (resultado != null)
             {
-                MessageBox.Show("Usuário encontrado! Indo para a próxima tela...");
+                mensagem_.MensagemInformation("Usuário encontrado! Indo para a próxima tela...");
 
                 // Abre a próxima tela, passando o e-mail se quiser
                 FormularioDeEnvioCodigo envio = new FormularioDeEnvioCodigo(emailDigitado);
@@ -84,7 +87,7 @@ namespace Avalia__
             }
             else
             {
-                MessageBox.Show("CPF ou E-mail não encontrado no sistema.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                mensagem_.MensagemAtencao("CPF ou E-mail não encontrado no sistema.");
             }
           
         }

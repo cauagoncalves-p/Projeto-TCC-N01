@@ -96,6 +96,8 @@ namespace Avalia__
             if (codigoDigitado == codigoGerado)
             {
                 mensagem_Do_Sistema.MensagemInformation("✅ Código confirmado com sucesso!");
+                FormularioLogin formularioLogin = new FormularioLogin();
+                formularioLogin.ShowDialog();
             }
             else
             {

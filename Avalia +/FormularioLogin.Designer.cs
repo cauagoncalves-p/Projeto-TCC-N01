@@ -200,7 +200,7 @@
             this.Name = "FormularioLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.FormularioLogin_Load);
+          
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.panelLogin.ResumeLayout(false);
             this.panelLogin.PerformLayout();
