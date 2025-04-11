@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace Avalia__
 {
-    public class CorDeFundo
+    public class ConfiguracaoTelas
     {/// <summary>
      /// Pinta o fundo do formulário com um gradiente de 135 graus.
      /// </summary>
@@ -28,6 +28,15 @@ namespace Avalia__
                 corFinal))
             {
                 e.Graphics.FillRectangle(brush, form.ClientRectangle);
+            }
+        }
+
+        public void FecharAba(Form form)
+        {
+            DialogResult sair = MessageBox.Show("Deseja fechar essa tela?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (sair == DialogResult.Yes)
+            {
+                form.Close();
             }
         }
     }

@@ -24,6 +24,7 @@ namespace Avalia__
         {
             InitializeComponent();
             emailUsuario = email; // recebe e guarda o e-mail do usuário
+            lblEmailInformado.Text = email;
 
             // Ex: já gera e envia o código automaticamente ao abrir a tela
             codigoGerado = GerarCodigoConfirmacao();

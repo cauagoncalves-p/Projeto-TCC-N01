@@ -69,7 +69,7 @@ namespace Avalia__
         private void FormularioLoginMedico_Paint(object sender, PaintEventArgs e)
         {
             //Cor de fundo da tela 
-            CorDeFundo.PintarGradiente(this, e, "#f5e6d3", "#fdf6f0");
+            ConfiguracaoTelas.PintarGradiente(this, e, "#f5e6d3", "#fdf6f0");
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)
@@ -79,7 +79,7 @@ namespace Avalia__
             string senhaCriptografada = GerarHash(senhaDigitada);
 
             var usuario = tbMedicoTableAdapter.GetData()
-                .FirstOrDefault(u => u.CRM == txtCRMLogin.Text && u. == senhaCriptografada);
+                .FirstOrDefault(u => u.CRM == txtCRMLogin.Text && u.Senha == senhaCriptografada);
 
             if (usuario != null)
             {
@@ -89,6 +89,13 @@ namespace Avalia__
             {
                 mensagem_Do_Sistema.MensagemError("E-mail ou Senha incorretos");
             }
+        }
+
+        private void lblEsqueceuSenha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FormularioTrocarSenha formularioTrocarSenha = new FormularioTrocarSenha();
+            formularioTrocarSenha.ShowDialog();
+
         }
     }
 }

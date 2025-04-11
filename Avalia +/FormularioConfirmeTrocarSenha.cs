@@ -118,17 +118,13 @@ namespace Avalia__
         private void FormularioConfirmeTrocarSenha_Paint(object sender, PaintEventArgs e)
         {
             //Cor de fundo da tela 
-            CorDeFundo.PintarGradiente(this, e, "#f5e6d3", "#fdf6f0");
+            ConfiguracaoTelas.PintarGradiente(this, e, "#f5e6d3", "#fdf6f0");
         }
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-
-            DialogResult sair = MessageBox.Show("Deseja fechar a tela de login?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (sair == DialogResult.Yes)
-            {
-                this.Close();
-            }
+            ConfiguracaoTelas configuracaoTelas = new ConfiguracaoTelas();
+            configuracaoTelas.FecharAba(this);
         }
        
         private void btnConfirmar_Click(object sender, EventArgs e)

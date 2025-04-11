@@ -63,7 +63,7 @@ namespace Avalia__
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             //Cor de fundo da tela 
-            CorDeFundo.PintarGradiente(this, e, "#f5e6d3", "#fdf6f0");
+            ConfiguracaoTelas.PintarGradiente(this, e, "#f5e6d3", "#fdf6f0");
         }
 
         private void lblLinkCriarConta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

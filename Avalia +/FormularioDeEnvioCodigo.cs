@@ -24,6 +24,7 @@ namespace Avalia__
         {
             InitializeComponent();
             emailUsuario = email; // recebe e guarda o e-mail do usuário
+            lblEmailInformado.Text = email; 
 
             // Ex: já gera e envia o código automaticamente ao abrir a tela
             codigoGerado = GerarCodigoConfirmacao();
@@ -133,11 +134,8 @@ namespace Avalia__
         }
         private void btnSair_Click(object sender, EventArgs e)
         {
-            DialogResult sair = MessageBox.Show("Deseja fechar essa tela?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (sair == DialogResult.Yes)
-            {
-                this.Close();
-            }
+            ConfiguracaoTelas configuracaoTelas = new ConfiguracaoTelas();
+            configuracaoTelas.FecharAba(this);
         }
 
         private void linkLblReenviarCodigo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

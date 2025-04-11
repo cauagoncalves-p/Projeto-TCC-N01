@@ -37,7 +37,7 @@ namespace Avalia__
         private void FormularioTrocarSenha_Paint(object sender, PaintEventArgs e)
         {
             //Cor de fundo da tela 
-            CorDeFundo.PintarGradiente(this, e, "#f5e6d3", "#fdf6f0");
+            ConfiguracaoTelas.PintarGradiente(this, e, "#f5e6d3", "#fdf6f0");
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -58,7 +58,11 @@ namespace Avalia__
             string emaildigitado = txtEmail.Text;
             // Consulta no banco
             tbUsuarioTableAdapter tbUsuarioTableAdapter = new tbUsuarioTableAdapter(); 
-            var resultado = tbUsuarioTableAdapter.GetData().FirstOrDefault(u => u.Email == emaildigitado);
+            tbMedicoTableAdapter tbMedicoTableAdapter = new tbMedicoTableAdapter();
+            var usuario = tbUsuarioTableAdapter.GetData().FirstOrDefault(u => u.Email == emaildigitado);
+            var medico = tbMedicoTableAdapter.GetData().FirstOrDefault(m => m.Email == emaildigitado);
+
+            var resultado = usuario ?? (object)medico;
 
             if (resultado != null)
             {

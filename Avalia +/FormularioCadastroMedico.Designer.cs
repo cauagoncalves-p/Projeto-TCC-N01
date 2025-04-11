@@ -1,6 +1,6 @@
 ﻿namespace Avalia__
 {
-    partial class FormularioCadastro
+    partial class FormularioCadastroMedico
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioCadastro));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioCadastroMedico));
             this.panelCadastro = new System.Windows.Forms.Panel();
             this.lblError = new System.Windows.Forms.Label();
             this.lblConfirmeSenha = new System.Windows.Forms.Label();
@@ -64,13 +64,24 @@
             this.lblDataNascimento = new System.Windows.Forms.Label();
             this.lblSobrenome = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
+            this.lblCRM = new System.Windows.Forms.Label();
+            this.txtCRM = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.lblEspecialidade = new System.Windows.Forms.Label();
+            this.lblInstituicao = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panelCadastro.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelCadastro
             // 
             this.panelCadastro.AutoScroll = true;
-            this.panelCadastro.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelCadastro.Controls.Add(this.lblInstituicao);
+            this.panelCadastro.Controls.Add(this.comboBox2);
+            this.panelCadastro.Controls.Add(this.lblEspecialidade);
+            this.panelCadastro.Controls.Add(this.comboBox1);
+            this.panelCadastro.Controls.Add(this.lblCRM);
+            this.panelCadastro.Controls.Add(this.txtCRM);
             this.panelCadastro.Controls.Add(this.lblError);
             this.panelCadastro.Controls.Add(this.lblConfirmeSenha);
             this.panelCadastro.Controls.Add(this.lblSenha);
@@ -105,18 +116,17 @@
             this.panelCadastro.Controls.Add(this.lblDataNascimento);
             this.panelCadastro.Controls.Add(this.lblSobrenome);
             this.panelCadastro.Controls.Add(this.lblNome);
-            this.panelCadastro.Location = new System.Drawing.Point(160, 12);
+            this.panelCadastro.Location = new System.Drawing.Point(133, 12);
             this.panelCadastro.Name = "panelCadastro";
             this.panelCadastro.Padding = new System.Windows.Forms.Padding(0, 0, 20, 20);
-            this.panelCadastro.Size = new System.Drawing.Size(719, 788);
-            this.panelCadastro.TabIndex = 0;
-            this.panelCadastro.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCadastro_Paint);
+            this.panelCadastro.Size = new System.Drawing.Size(719, 899);
+            this.panelCadastro.TabIndex = 1;
             // 
             // lblError
             // 
             this.lblError.AutoSize = true;
             this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(30, 404);
+            this.lblError.Location = new System.Drawing.Point(30, 582);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(0, 13);
             this.lblError.TabIndex = 37;
@@ -125,7 +135,7 @@
             // 
             this.lblConfirmeSenha.AutoSize = true;
             this.lblConfirmeSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblConfirmeSenha.Location = new System.Drawing.Point(350, 335);
+            this.lblConfirmeSenha.Location = new System.Drawing.Point(350, 513);
             this.lblConfirmeSenha.Name = "lblConfirmeSenha";
             this.lblConfirmeSenha.Size = new System.Drawing.Size(109, 13);
             this.lblConfirmeSenha.TabIndex = 36;
@@ -135,7 +145,7 @@
             // 
             this.lblSenha.AutoSize = true;
             this.lblSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblSenha.Location = new System.Drawing.Point(30, 335);
+            this.lblSenha.Location = new System.Drawing.Point(30, 513);
             this.lblSenha.Name = "lblSenha";
             this.lblSenha.Size = new System.Drawing.Size(38, 13);
             this.lblSenha.TabIndex = 35;
@@ -144,7 +154,7 @@
             // txtSenha
             // 
             this.txtSenha.BackColor = System.Drawing.Color.FloralWhite;
-            this.txtSenha.Location = new System.Drawing.Point(30, 369);
+            this.txtSenha.Location = new System.Drawing.Point(30, 547);
             this.txtSenha.Multiline = true;
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
@@ -154,7 +164,7 @@
             // txtconfirmeSenha
             // 
             this.txtconfirmeSenha.BackColor = System.Drawing.Color.FloralWhite;
-            this.txtconfirmeSenha.Location = new System.Drawing.Point(347, 369);
+            this.txtconfirmeSenha.Location = new System.Drawing.Point(347, 547);
             this.txtconfirmeSenha.Multiline = true;
             this.txtconfirmeSenha.Name = "txtconfirmeSenha";
             this.txtconfirmeSenha.PasswordChar = '*';
@@ -165,7 +175,7 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblEmail.Location = new System.Drawing.Point(30, 184);
+            this.lblEmail.Location = new System.Drawing.Point(30, 410);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(32, 13);
             this.lblEmail.TabIndex = 32;
@@ -174,7 +184,7 @@
             // txtEmail
             // 
             this.txtEmail.BackColor = System.Drawing.Color.FloralWhite;
-            this.txtEmail.Location = new System.Drawing.Point(30, 212);
+            this.txtEmail.Location = new System.Drawing.Point(30, 446);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(302, 32);
@@ -228,27 +238,25 @@
             this.btnFinalizarCadastro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(164)))), ((int)(((byte)(143)))));
             this.btnFinalizarCadastro.FlatAppearance.BorderSize = 0;
             this.btnFinalizarCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFinalizarCadastro.Location = new System.Drawing.Point(327, 728);
+            this.btnFinalizarCadastro.Location = new System.Drawing.Point(325, 834);
             this.btnFinalizarCadastro.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
             this.btnFinalizarCadastro.Name = "btnFinalizarCadastro";
             this.btnFinalizarCadastro.Size = new System.Drawing.Size(336, 39);
             this.btnFinalizarCadastro.TabIndex = 28;
             this.btnFinalizarCadastro.Text = "Finalizar Cadastro";
             this.btnFinalizarCadastro.UseVisualStyleBackColor = false;
-            this.btnFinalizarCadastro.Click += new System.EventHandler(this.btnFinalizarCadastro_Click);
             // 
             // btnVoltar
             // 
             this.btnVoltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(230)))), ((int)(((byte)(221)))));
             this.btnVoltar.FlatAppearance.BorderSize = 0;
             this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVoltar.Location = new System.Drawing.Point(30, 728);
+            this.btnVoltar.Location = new System.Drawing.Point(28, 834);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(242, 39);
             this.btnVoltar.TabIndex = 27;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = false;
-            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // cbxEstado
             // 
@@ -283,7 +291,7 @@
             "São Paulo  ",
             "Sergipe  ",
             "Tocantins"});
-            this.cbxEstado.Location = new System.Drawing.Point(377, 674);
+            this.cbxEstado.Location = new System.Drawing.Point(375, 780);
             this.cbxEstado.Name = "cbxEstado";
             this.cbxEstado.Size = new System.Drawing.Size(281, 21);
             this.cbxEstado.TabIndex = 26;
@@ -291,7 +299,7 @@
             // txtCidade
             // 
             this.txtCidade.BackColor = System.Drawing.Color.FloralWhite;
-            this.txtCidade.Location = new System.Drawing.Point(30, 675);
+            this.txtCidade.Location = new System.Drawing.Point(28, 781);
             this.txtCidade.Multiline = true;
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(311, 32);
@@ -301,7 +309,7 @@
             // 
             this.lblEstado.AutoSize = true;
             this.lblEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblEstado.Location = new System.Drawing.Point(377, 651);
+            this.lblEstado.Location = new System.Drawing.Point(375, 757);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(40, 13);
             this.lblEstado.TabIndex = 22;
@@ -311,7 +319,7 @@
             // 
             this.lblCidade.AutoSize = true;
             this.lblCidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblCidade.Location = new System.Drawing.Point(30, 651);
+            this.lblCidade.Location = new System.Drawing.Point(28, 757);
             this.lblCidade.Name = "lblCidade";
             this.lblCidade.Size = new System.Drawing.Size(40, 13);
             this.lblCidade.TabIndex = 21;
@@ -320,7 +328,7 @@
             // txtEndereco
             // 
             this.txtEndereco.BackColor = System.Drawing.Color.FloralWhite;
-            this.txtEndereco.Location = new System.Drawing.Point(30, 593);
+            this.txtEndereco.Location = new System.Drawing.Point(28, 699);
             this.txtEndereco.Multiline = true;
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(628, 37);
@@ -330,7 +338,7 @@
             // 
             this.lblEndereco.AutoSize = true;
             this.lblEndereco.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblEndereco.Location = new System.Drawing.Point(27, 554);
+            this.lblEndereco.Location = new System.Drawing.Point(25, 660);
             this.lblEndereco.Name = "lblEndereco";
             this.lblEndereco.Size = new System.Drawing.Size(53, 13);
             this.lblEndereco.TabIndex = 19;
@@ -343,9 +351,9 @@
             this.lblCompletecadastro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
             this.lblCompletecadastro.Location = new System.Drawing.Point(255, 54);
             this.lblCompletecadastro.Name = "lblCompletecadastro";
-            this.lblCompletecadastro.Size = new System.Drawing.Size(194, 20);
+            this.lblCompletecadastro.Size = new System.Drawing.Size(172, 20);
             this.lblCompletecadastro.TabIndex = 1;
-            this.lblCompletecadastro.Text = "Complete seu cadastro";
+            this.lblCompletecadastro.Text = "Complete de Medico";
             // 
             // cbxGenero
             // 
@@ -359,9 +367,9 @@
             "Gênero fluido",
             "Outro",
             "Prefiro não dizer"});
-            this.cbxGenero.Location = new System.Drawing.Point(30, 509);
+            this.cbxGenero.Location = new System.Drawing.Point(353, 457);
             this.cbxGenero.Name = "cbxGenero";
-            this.cbxGenero.Size = new System.Drawing.Size(628, 21);
+            this.cbxGenero.Size = new System.Drawing.Size(319, 21);
             this.cbxGenero.TabIndex = 18;
             // 
             // lblAvaliaCadastro
@@ -379,7 +387,7 @@
             // 
             this.lblGenero.AutoSize = true;
             this.lblGenero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblGenero.Location = new System.Drawing.Point(27, 470);
+            this.lblGenero.Location = new System.Drawing.Point(350, 418);
             this.lblGenero.Name = "lblGenero";
             this.lblGenero.Size = new System.Drawing.Size(110, 13);
             this.lblGenero.TabIndex = 17;
@@ -388,7 +396,7 @@
             // mktTelefone
             // 
             this.mktTelefone.BackColor = System.Drawing.Color.FloralWhite;
-            this.mktTelefone.Location = new System.Drawing.Point(346, 291);
+            this.mktTelefone.Location = new System.Drawing.Point(353, 367);
             this.mktTelefone.Mask = "(00)  00000-0000";
             this.mktTelefone.Name = "mktTelefone";
             this.mktTelefone.Size = new System.Drawing.Size(319, 20);
@@ -398,7 +406,7 @@
             // 
             this.lblTelefone.AutoSize = true;
             this.lblTelefone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblTelefone.Location = new System.Drawing.Point(344, 260);
+            this.lblTelefone.Location = new System.Drawing.Point(350, 330);
             this.lblTelefone.Name = "lblTelefone";
             this.lblTelefone.Size = new System.Drawing.Size(49, 13);
             this.lblTelefone.TabIndex = 15;
@@ -417,7 +425,7 @@
             // 
             this.lblSexo.AutoSize = true;
             this.lblSexo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblSexo.Location = new System.Drawing.Point(27, 430);
+            this.lblSexo.Location = new System.Drawing.Point(25, 619);
             this.lblSexo.Name = "lblSexo";
             this.lblSexo.Size = new System.Drawing.Size(77, 13);
             this.lblSexo.TabIndex = 12;
@@ -427,7 +435,7 @@
             // 
             this.rdbFeminino.AutoSize = true;
             this.rdbFeminino.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.rdbFeminino.Location = new System.Drawing.Point(276, 434);
+            this.rdbFeminino.Location = new System.Drawing.Point(274, 615);
             this.rdbFeminino.Name = "rdbFeminino";
             this.rdbFeminino.Size = new System.Drawing.Size(67, 17);
             this.rdbFeminino.TabIndex = 11;
@@ -439,7 +447,7 @@
             // 
             this.rdbOutro.AutoSize = true;
             this.rdbOutro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.rdbOutro.Location = new System.Drawing.Point(382, 434);
+            this.rdbOutro.Location = new System.Drawing.Point(380, 615);
             this.rdbOutro.Name = "rdbOutro";
             this.rdbOutro.Size = new System.Drawing.Size(51, 17);
             this.rdbOutro.TabIndex = 10;
@@ -451,7 +459,7 @@
             // 
             this.rdbMasculino.AutoSize = true;
             this.rdbMasculino.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.rdbMasculino.Location = new System.Drawing.Point(169, 434);
+            this.rdbMasculino.Location = new System.Drawing.Point(167, 615);
             this.rdbMasculino.Name = "rdbMasculino";
             this.rdbMasculino.Size = new System.Drawing.Size(73, 17);
             this.rdbMasculino.TabIndex = 9;
@@ -463,7 +471,7 @@
             // 
             this.dtpDataNascimento.CalendarMonthBackground = System.Drawing.Color.FloralWhite;
             this.dtpDataNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDataNascimento.Location = new System.Drawing.Point(30, 291);
+            this.dtpDataNascimento.Location = new System.Drawing.Point(30, 214);
             this.dtpDataNascimento.Name = "dtpDataNascimento";
             this.dtpDataNascimento.Size = new System.Drawing.Size(290, 20);
             this.dtpDataNascimento.TabIndex = 6;
@@ -473,7 +481,7 @@
             // 
             this.lblDataNascimento.AutoSize = true;
             this.lblDataNascimento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblDataNascimento.Location = new System.Drawing.Point(30, 260);
+            this.lblDataNascimento.Location = new System.Drawing.Point(30, 183);
             this.lblDataNascimento.Name = "lblDataNascimento";
             this.lblDataNascimento.Size = new System.Drawing.Size(104, 13);
             this.lblDataNascimento.TabIndex = 4;
@@ -499,18 +507,119 @@
             this.lblNome.TabIndex = 2;
             this.lblNome.Text = "Nome";
             // 
-            // FormularioCadastro
+            // lblCRM
+            // 
+            this.lblCRM.AutoSize = true;
+            this.lblCRM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
+            this.lblCRM.Location = new System.Drawing.Point(30, 251);
+            this.lblCRM.Name = "lblCRM";
+            this.lblCRM.Size = new System.Drawing.Size(31, 13);
+            this.lblCRM.TabIndex = 39;
+            this.lblCRM.Text = "CRM";
+            // 
+            // txtCRM
+            // 
+            this.txtCRM.BackColor = System.Drawing.Color.FloralWhite;
+            this.txtCRM.Location = new System.Drawing.Point(30, 279);
+            this.txtCRM.Multiline = true;
+            this.txtCRM.Name = "txtCRM";
+            this.txtCRM.Size = new System.Drawing.Size(302, 32);
+            this.txtCRM.TabIndex = 38;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.FloralWhite;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Clínico Geral",
+            "Pediatria",
+            "Ginecologia",
+            "Obstetrícia",
+            "Urologia",
+            "Dermatologia",
+            "Cardiologia",
+            "Endocrinologia",
+            "Ortopedia",
+            "Neurologia",
+            "Psiquiatria",
+            "Oftalmologia",
+            "Otorrinolaringologia",
+            "Reumatologia",
+            "Gastroenterologia",
+            "Nefrologia",
+            "Oncologia",
+            "Nutrologia",
+            "Medicina do Trabalho",
+            "Medicina da Família"});
+            this.comboBox1.Location = new System.Drawing.Point(347, 279);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(320, 21);
+            this.comboBox1.TabIndex = 40;
+            // 
+            // lblEspecialidade
+            // 
+            this.lblEspecialidade.AutoSize = true;
+            this.lblEspecialidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
+            this.lblEspecialidade.Location = new System.Drawing.Point(350, 251);
+            this.lblEspecialidade.Name = "lblEspecialidade";
+            this.lblEspecialidade.Size = new System.Drawing.Size(73, 13);
+            this.lblEspecialidade.TabIndex = 41;
+            this.lblEspecialidade.Text = "Especialidade";
+            // 
+            // lblInstituicao
+            // 
+            this.lblInstituicao.AutoSize = true;
+            this.lblInstituicao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
+            this.lblInstituicao.Location = new System.Drawing.Point(30, 330);
+            this.lblInstituicao.Name = "lblInstituicao";
+            this.lblInstituicao.Size = new System.Drawing.Size(105, 13);
+            this.lblInstituicao.TabIndex = 43;
+            this.lblInstituicao.Text = "Instituição Vinculada";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.BackColor = System.Drawing.Color.FloralWhite;
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Clínico Geral",
+            "Pediatria",
+            "Ginecologia",
+            "Obstetrícia",
+            "Urologia",
+            "Dermatologia",
+            "Cardiologia",
+            "Endocrinologia",
+            "Ortopedia",
+            "Neurologia",
+            "Psiquiatria",
+            "Oftalmologia",
+            "Otorrinolaringologia",
+            "Reumatologia",
+            "Gastroenterologia",
+            "Nefrologia",
+            "Oncologia",
+            "Nutrologia",
+            "Medicina do Trabalho",
+            "Medicina da Família"});
+            this.comboBox2.Location = new System.Drawing.Point(30, 366);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(302, 21);
+            this.comboBox2.TabIndex = 42;
+            // 
+            // FormularioCadastroMedico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 811);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(984, 541);
             this.Controls.Add(this.panelCadastro);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FormularioCadastro";
+            this.Name = "FormularioCadastroMedico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Formulario de cadastro";
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormularioCadastro_Paint);
+            this.Text = "Cdastro de medico ";
             this.panelCadastro.ResumeLayout(false);
             this.panelCadastro.PerformLayout();
             this.ResumeLayout(false);
@@ -520,39 +629,45 @@
         #endregion
 
         private System.Windows.Forms.Panel panelCadastro;
-        private System.Windows.Forms.Label lblCompletecadastro;
-        private System.Windows.Forms.Label lblAvaliaCadastro;
-        private System.Windows.Forms.Label lblSobrenome;
-        private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.RadioButton rdbMasculino;
-        private System.Windows.Forms.DateTimePicker dtpDataNascimento;
-        private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.Label lblDataNascimento;
-        private System.Windows.Forms.Label lblSexo;
-        private System.Windows.Forms.RadioButton rdbFeminino;
-        private System.Windows.Forms.RadioButton rdbOutro;
-        private System.Windows.Forms.TextBox txtSobrenome;
-        private System.Windows.Forms.Label lblTelefone;
-        private System.Windows.Forms.MaskedTextBox mktTelefone;
-        private System.Windows.Forms.ComboBox cbxGenero;
-        private System.Windows.Forms.Label lblGenero;
-        private System.Windows.Forms.Label lblEndereco;
-        private System.Windows.Forms.TextBox txtEndereco;
-        private System.Windows.Forms.ComboBox cbxEstado;
-        private System.Windows.Forms.TextBox txtCidade;
-        private System.Windows.Forms.Label lblEstado;
-        private System.Windows.Forms.Label lblCidade;
-        private System.Windows.Forms.Button btnFinalizarCadastro;
-        private System.Windows.Forms.Button btnVoltar;
-        private System.Windows.Forms.Label lblCPF;
-        private System.Windows.Forms.MaskedTextBox mktCPF;
-        private System.Windows.Forms.Button btnSair;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblError;
         private System.Windows.Forms.Label lblConfirmeSenha;
         private System.Windows.Forms.Label lblSenha;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.TextBox txtconfirmeSenha;
-        private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Label lblCPF;
+        private System.Windows.Forms.MaskedTextBox mktCPF;
+        private System.Windows.Forms.Button btnFinalizarCadastro;
+        private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.ComboBox cbxEstado;
+        private System.Windows.Forms.TextBox txtCidade;
+        private System.Windows.Forms.Label lblEstado;
+        private System.Windows.Forms.Label lblCidade;
+        private System.Windows.Forms.TextBox txtEndereco;
+        private System.Windows.Forms.Label lblEndereco;
+        private System.Windows.Forms.Label lblCompletecadastro;
+        private System.Windows.Forms.ComboBox cbxGenero;
+        private System.Windows.Forms.Label lblAvaliaCadastro;
+        private System.Windows.Forms.Label lblGenero;
+        private System.Windows.Forms.MaskedTextBox mktTelefone;
+        private System.Windows.Forms.Label lblTelefone;
+        private System.Windows.Forms.TextBox txtSobrenome;
+        private System.Windows.Forms.Label lblSexo;
+        private System.Windows.Forms.RadioButton rdbFeminino;
+        private System.Windows.Forms.RadioButton rdbOutro;
+        private System.Windows.Forms.RadioButton rdbMasculino;
+        private System.Windows.Forms.DateTimePicker dtpDataNascimento;
+        private System.Windows.Forms.Label lblDataNascimento;
+        private System.Windows.Forms.Label lblSobrenome;
+        private System.Windows.Forms.Label lblNome;
+        private System.Windows.Forms.Label lblEspecialidade;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label lblCRM;
+        private System.Windows.Forms.TextBox txtCRM;
+        private System.Windows.Forms.Label lblInstituicao;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }

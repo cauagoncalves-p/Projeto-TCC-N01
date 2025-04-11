@@ -52,7 +52,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AureaDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Controles\CorDeFundo.cs" />
+    <Compile Include="Controles\ConfiguracaoTelas.cs" />
     <Compile Include="Controles\MensagemDosistema.cs" />
     <Compile Include="FormInicial.cs">
       <SubType>Form</SubType>
@@ -65,6 +65,12 @@
     </Compile>
     <Compile Include="FormularioCadastro.Designer.cs">
       <DependentUpon>FormularioCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormularioCadastroMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioCadastroMedico.Designer.cs">
+      <DependentUpon>FormularioCadastroMedico.cs</DependentUpon>
     </Compile>
     <Compile Include="FormularioCadCPF.cs">
       <SubType>Form</SubType>
@@ -116,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioCadastro.resx">
       <DependentUpon>FormularioCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioCadastroMedico.resx">
+      <DependentUpon>FormularioCadastroMedico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioCadCPF.resx">
       <DependentUpon>FormularioCadCPF.cs</DependentUpon>

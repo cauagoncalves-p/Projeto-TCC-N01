@@ -4,12 +4,12 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="AureaConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="AureaConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Avalia__.Properties.Settings.GlobalReference.Default.AureaConnectionString1" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="AureaConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="AureaConnectionString2 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Avalia__.Properties.Settings.GlobalReference.Default.AureaConnectionString2" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbInstituicaoTableAdapter" GeneratorDataComponentClassName="tbInstituicaoTableAdapter" Name="tbInstituicao" UserDataComponentName="tbInstituicaoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="AureaConnectionString1 (Settings)" DbObjectName="Aurea.dbo.tbInstituicao" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="AureaConnectionString2 (Settings)" DbObjectName="Aurea.dbo.tbInstituicao" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[tbInstituicao] WHERE (([IdInstituicao] = @Original_IdInstituicao) AND ([NomeInstituicao] = @Original_NomeInstituicao) AND ([CNPJ] = @Original_CNPJ) AND ((@IsNull_TipoInstituicao = 1 AND [TipoInstituicao] IS NULL) OR ([TipoInstituicao] = @Original_TipoInstituicao)) AND ((@IsNull_Telefone = 1 AND [Telefone] IS NULL) OR ([Telefone] = @Original_Telefone)) AND ((@IsNull_Email = 1 AND [Email] IS NULL) OR ([Email] = @Original_Email)) AND ((@IsNull_Endereco = 1 AND [Endereco] IS NULL) OR ([Endereco] = @Original_Endereco)) AND ((@IsNull_Cidade = 1 AND [Cidade] IS NULL) OR ([Cidade] = @Original_Cidade)) AND ((@IsNull_Estado = 1 AND [Estado] IS NULL) OR ([Estado] = @Original_Estado)))</CommandText>
@@ -103,10 +103,10 @@ SELECT IdInstituicao, NomeInstituicao, CNPJ, TipoInstituicao, Telefone, Email, E
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbMedicoTableAdapter" GeneratorDataComponentClassName="tbMedicoTableAdapter" Name="tbMedico" UserDataComponentName="tbMedicoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="AureaConnectionString1 (Settings)" DbObjectName="Aurea.dbo.tbMedico" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="AureaConnectionString2 (Settings)" DbObjectName="Aurea.dbo.tbMedico" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM [dbo].[tbMedico] WHERE (([IdMedico] = @Original_IdMedico) AND ([Nome] = @Original_Nome) AND ([Sobrenome] = @Original_Sobrenome) AND ([CRM] = @Original_CRM) AND ([Sexo] = @Original_Sexo) AND ([Especialidade] = @Original_Especialidade) AND ((@IsNull_Cidade = 1 AND [Cidade] IS NULL) OR ([Cidade] = @Original_Cidade)) AND ((@IsNull_Estado = 1 AND [Estado] IS NULL) OR ([Estado] = @Original_Estado)) AND ((@IsNull_Endereco = 1 AND [Endereco] IS NULL) OR ([Endereco] = @Original_Endereco)) AND ((@IsNull_Telefone = 1 AND [Telefone] IS NULL) OR ([Telefone] = @Original_Telefone)) AND ([IdInstituicao] = @Original_IdInstituicao))</CommandText>
+                    <CommandText>DELETE FROM [dbo].[tbMedico] WHERE (([IdMedico] = @Original_IdMedico) AND ([Nome] = @Original_Nome) AND ([Sobrenome] = @Original_Sobrenome) AND ([CRM] = @Original_CRM) AND ([Sexo] = @Original_Sexo) AND ([Especialidade] = @Original_Especialidade) AND ((@IsNull_Cidade = 1 AND [Cidade] IS NULL) OR ([Cidade] = @Original_Cidade)) AND ((@IsNull_Estado = 1 AND [Estado] IS NULL) OR ([Estado] = @Original_Estado)) AND ((@IsNull_Endereco = 1 AND [Endereco] IS NULL) OR ([Endereco] = @Original_Endereco)) AND ((@IsNull_Telefone = 1 AND [Telefone] IS NULL) OR ([Telefone] = @Original_Telefone)) AND ([Senha] = @Original_Senha) AND ([IdInstituicao] = @Original_IdInstituicao) AND ([Email] = @Original_Email))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IdMedico" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IdMedico" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Nome" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Nome" SourceColumnNullMapping="false" SourceVersion="Original" />
@@ -122,14 +122,16 @@ SELECT IdInstituicao, NomeInstituicao, CNPJ, TipoInstituicao, Telefone, Email, E
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Endereco" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Endereco" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Telefone" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Telefone" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Telefone" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Telefone" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Senha" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Senha" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IdInstituicao" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IdInstituicao" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Email" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO [dbo].[tbMedico] ([Nome], [Sobrenome], [CRM], [Sexo], [Especialidade], [Cidade], [Estado], [Endereco], [Telefone], [IdInstituicao]) VALUES (@Nome, @Sobrenome, @CRM, @Sexo, @Especialidade, @Cidade, @Estado, @Endereco, @Telefone, @IdInstituicao);
-SELECT IdMedico, Nome, Sobrenome, CRM, Sexo, Especialidade, Cidade, Estado, Endereco, Telefone, IdInstituicao FROM tbMedico WHERE (IdMedico = SCOPE_IDENTITY())</CommandText>
+                    <CommandText>INSERT INTO [dbo].[tbMedico] ([Nome], [Sobrenome], [CRM], [Sexo], [Especialidade], [Cidade], [Estado], [Endereco], [Telefone], [Senha], [IdInstituicao], [Email]) VALUES (@Nome, @Sobrenome, @CRM, @Sexo, @Especialidade, @Cidade, @Estado, @Endereco, @Telefone, @Senha, @IdInstituicao, @Email);
+SELECT IdMedico, Nome, Sobrenome, CRM, Sexo, Especialidade, Cidade, Estado, Endereco, Telefone, Senha, IdInstituicao, Email FROM tbMedico WHERE (IdMedico = SCOPE_IDENTITY())</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Nome" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Nome" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Sobrenome" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Sobrenome" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -140,20 +142,22 @@ SELECT IdMedico, Nome, Sobrenome, CRM, Sexo, Especialidade, Cidade, Estado, Ende
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Estado" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="Estado" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Endereco" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Endereco" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Telefone" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Telefone" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Senha" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Senha" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IdInstituicao" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IdInstituicao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Email" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT IdMedico, Nome, Sobrenome, CRM, Sexo, Especialidade, Cidade, Estado, Endereco, Telefone, IdInstituicao FROM dbo.tbMedico</CommandText>
+                    <CommandText>SELECT IdMedico, Nome, Sobrenome, CRM, Sexo, Especialidade, Cidade, Estado, Endereco, Telefone, Senha, IdInstituicao, Email FROM dbo.tbMedico</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE [dbo].[tbMedico] SET [Nome] = @Nome, [Sobrenome] = @Sobrenome, [CRM] = @CRM, [Sexo] = @Sexo, [Especialidade] = @Especialidade, [Cidade] = @Cidade, [Estado] = @Estado, [Endereco] = @Endereco, [Telefone] = @Telefone, [IdInstituicao] = @IdInstituicao WHERE (([IdMedico] = @Original_IdMedico) AND ([Nome] = @Original_Nome) AND ([Sobrenome] = @Original_Sobrenome) AND ([CRM] = @Original_CRM) AND ([Sexo] = @Original_Sexo) AND ([Especialidade] = @Original_Especialidade) AND ((@IsNull_Cidade = 1 AND [Cidade] IS NULL) OR ([Cidade] = @Original_Cidade)) AND ((@IsNull_Estado = 1 AND [Estado] IS NULL) OR ([Estado] = @Original_Estado)) AND ((@IsNull_Endereco = 1 AND [Endereco] IS NULL) OR ([Endereco] = @Original_Endereco)) AND ((@IsNull_Telefone = 1 AND [Telefone] IS NULL) OR ([Telefone] = @Original_Telefone)) AND ([IdInstituicao] = @Original_IdInstituicao));
-SELECT IdMedico, Nome, Sobrenome, CRM, Sexo, Especialidade, Cidade, Estado, Endereco, Telefone, IdInstituicao FROM tbMedico WHERE (IdMedico = @IdMedico)</CommandText>
+                    <CommandText>UPDATE [dbo].[tbMedico] SET [Nome] = @Nome, [Sobrenome] = @Sobrenome, [CRM] = @CRM, [Sexo] = @Sexo, [Especialidade] = @Especialidade, [Cidade] = @Cidade, [Estado] = @Estado, [Endereco] = @Endereco, [Telefone] = @Telefone, [Senha] = @Senha, [IdInstituicao] = @IdInstituicao, [Email] = @Email WHERE (([IdMedico] = @Original_IdMedico) AND ([Nome] = @Original_Nome) AND ([Sobrenome] = @Original_Sobrenome) AND ([CRM] = @Original_CRM) AND ([Sexo] = @Original_Sexo) AND ([Especialidade] = @Original_Especialidade) AND ((@IsNull_Cidade = 1 AND [Cidade] IS NULL) OR ([Cidade] = @Original_Cidade)) AND ((@IsNull_Estado = 1 AND [Estado] IS NULL) OR ([Estado] = @Original_Estado)) AND ((@IsNull_Endereco = 1 AND [Endereco] IS NULL) OR ([Endereco] = @Original_Endereco)) AND ((@IsNull_Telefone = 1 AND [Telefone] IS NULL) OR ([Telefone] = @Original_Telefone)) AND ([Senha] = @Original_Senha) AND ([IdInstituicao] = @Original_IdInstituicao) AND ([Email] = @Original_Email));
+SELECT IdMedico, Nome, Sobrenome, CRM, Sexo, Especialidade, Cidade, Estado, Endereco, Telefone, Senha, IdInstituicao, Email FROM tbMedico WHERE (IdMedico = @IdMedico)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Nome" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Nome" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Sobrenome" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Sobrenome" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -164,7 +168,9 @@ SELECT IdMedico, Nome, Sobrenome, CRM, Sexo, Especialidade, Cidade, Estado, Ende
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Estado" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="Estado" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Endereco" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Endereco" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Telefone" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Telefone" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Senha" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Senha" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IdInstituicao" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IdInstituicao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Email" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IdMedico" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IdMedico" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Nome" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Nome" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Sobrenome" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Sobrenome" SourceColumnNullMapping="false" SourceVersion="Original" />
@@ -179,7 +185,9 @@ SELECT IdMedico, Nome, Sobrenome, CRM, Sexo, Especialidade, Cidade, Estado, Ende
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Endereco" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Endereco" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Telefone" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Telefone" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Telefone" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Telefone" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Senha" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Senha" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IdInstituicao" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IdInstituicao" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Email" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="IdMedico" ColumnName="IdMedico" DataSourceName="Aurea.dbo.tbMedico" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdMedico" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IdMedico" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
@@ -197,13 +205,29 @@ SELECT IdMedico, Nome, Sobrenome, CRM, Sexo, Especialidade, Cidade, Estado, Ende
               <Mapping SourceColumn="Estado" DataSetColumn="Estado" />
               <Mapping SourceColumn="Endereco" DataSetColumn="Endereco" />
               <Mapping SourceColumn="Telefone" DataSetColumn="Telefone" />
+              <Mapping SourceColumn="Senha" DataSetColumn="Senha" />
               <Mapping SourceColumn="IdInstituicao" DataSetColumn="IdInstituicao" />
+              <Mapping SourceColumn="Email" DataSetColumn="Email" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="AureaConnectionString2 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="AtualizarSenhaPorEmail" Modifier="Public" Name="AtualizarSenhaPorEmail" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="AtualizarSenhaPorEmail">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE tbMedico
+SET Senha = @Senha
+WHERE Email = @Email;</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Senha" ColumnName="Senha" DataSourceName="Aurea.dbo.tbMedico" DataTypeServer="varchar(100)" DbType="AnsiString" Direction="Input" ParameterName="@Senha" Precision="0" ProviderType="VarChar" Scale="0" Size="100" SourceColumn="Senha" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Email" ColumnName="Email" DataSourceName="Aurea.dbo.tbMedico" DataTypeServer="varchar(100)" DbType="AnsiString" Direction="Input" ParameterName="@Email" Precision="0" ProviderType="VarChar" Scale="0" Size="100" SourceColumn="Email" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbUsuarioTableAdapter" GeneratorDataComponentClassName="tbUsuarioTableAdapter" Name="tbUsuario" UserDataComponentName="tbUsuarioTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="AureaConnectionString1 (Settings)" DbObjectName="Aurea.dbo.tbUsuario" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="AureaConnectionString2 (Settings)" DbObjectName="Aurea.dbo.tbUsuario" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[tbUsuario] WHERE (([Id_usuario] = @Original_Id_usuario) AND ([Nome] = @Original_Nome) AND ([Sobrenome] = @Original_Sobrenome) AND ([Data_Nascimento] = @Original_Data_Nascimento) AND ([CPF] = @Original_CPF) AND ([Sexo] = @Original_Sexo) AND ([Telefone] = @Original_Telefone) AND ([Genero] = @Original_Genero) AND ([Endereco] = @Original_Endereco) AND ([Email] = @Original_Email) AND ([Cidade] = @Original_Cidade) AND ([Estado] = @Original_Estado) AND ([Data_Cadastro] = @Original_Data_Cadastro) AND ([Senha] = @Original_Senha))</CommandText>
@@ -307,13 +331,12 @@ SELECT Id_usuario, Nome, Sobrenome, Data_Nascimento, CPF, Sexo, Telefone, Genero
               <Mapping SourceColumn="Senha" DataSetColumn="Senha" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="AureaConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="AtualizarSenhaPorEmail" Modifier="Public" Name="AtualizarSenhaPorEmail" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="AtualizarSenhaPorEmail">
+              <DbSource ConnectionRef="AureaConnectionString2 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="AtualizarSenhaPorEmail" Modifier="Public" Name="AtualizarSenhaPorEmail" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="AtualizarSenhaPorEmail">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE tbUsuario
 SET Senha = @Senha
-WHERE Email = @Email;
-</CommandText>
+WHERE Email = @Email;</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="Senha" ColumnName="Senha" DataSourceName="Aurea.dbo.tbUsuario" DataTypeServer="varchar(100)" DbType="AnsiString" Direction="Input" ParameterName="@Senha" Precision="0" ProviderType="VarChar" Scale="0" Size="100" SourceColumn="Senha" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="Email" ColumnName="Email" DataSourceName="Aurea.dbo.tbUsuario" DataTypeServer="varchar(200)" DbType="AnsiString" Direction="Input" ParameterName="@Email" Precision="0" ProviderType="VarChar" Scale="0" Size="200" SourceColumn="Email" SourceColumnNullMapping="false" SourceVersion="Original" />
@@ -461,7 +484,21 @@ WHERE Email = @Email;
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="Senha" msprop:Generator_UserColumnName="Senha" msprop:Generator_ColumnPropNameInTable="SenhaColumn" msprop:Generator_ColumnPropNameInRow="Senha" msprop:Generator_ColumnVarNameInTable="columnSenha">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
               <xs:element name="IdInstituicao" msprop:Generator_UserColumnName="IdInstituicao" msprop:Generator_ColumnPropNameInTable="IdInstituicaoColumn" msprop:Generator_ColumnPropNameInRow="IdInstituicao" msprop:Generator_ColumnVarNameInTable="columnIdInstituicao" type="xs:int" />
+              <xs:element name="Email" msprop:Generator_UserColumnName="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnVarNameInTable="columnEmail">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>

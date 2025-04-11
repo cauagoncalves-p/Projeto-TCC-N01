@@ -25,7 +25,6 @@ namespace Avalia__
                 botao.Region = new Region(path);
             }
         }
-
         public void ArredondarBordas(Panel panel, int raio)
         {
             GraphicsPath path = new GraphicsPath();

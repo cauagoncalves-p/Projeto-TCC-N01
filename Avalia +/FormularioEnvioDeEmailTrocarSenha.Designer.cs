@@ -155,9 +155,9 @@
             this.lblDescritivo1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(138)))), ((int)(((byte)(122)))));
             this.lblDescritivo1.Location = new System.Drawing.Point(41, 171);
             this.lblDescritivo1.Name = "lblDescritivo1";
-            this.lblDescritivo1.Size = new System.Drawing.Size(218, 13);
+            this.lblDescritivo1.Size = new System.Drawing.Size(221, 13);
             this.lblDescritivo1.TabIndex = 13;
-            this.lblDescritivo1.Text = "Digite o código abaixo paratrocar sua senha ";
+            this.lblDescritivo1.Text = "Digite o código abaixo para trocar sua senha ";
             this.lblDescritivo1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblEmailInformado
