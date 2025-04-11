@@ -52,8 +52,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AureaDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="CadastroMedicoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroMedicoForm.Designer.cs">
+      <DependentUpon>CadastroMedicoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controles\CorDeFundo.cs" />
     <Compile Include="Controles\MensagemDosistema.cs" />
+    <Compile Include="FormInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInicial.Designer.cs">
+      <DependentUpon>FormInicial.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormularioCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,15 +108,12 @@
     <Compile Include="FormularioTrocarSenha.Designer.cs">
       <DependentUpon>FormularioTrocarSenha.cs</DependentUpon>
     </Compile>
-    <Compile Include="PacienteDashboardForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PacienteDashboardForm.Designer.cs">
-      <DependentUpon>PacienteDashboardForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controles\RadiusButton.cs" />
+    <EmbeddedResource Include="FormInicial.resx">
+      <DependentUpon>FormInicial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormularioCadastro.resx">
       <DependentUpon>FormularioCadastro.cs</DependentUpon>
     </EmbeddedResource>

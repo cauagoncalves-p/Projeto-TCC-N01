@@ -1,20 +1,57 @@
-﻿using System;
+﻿using Avalia__.AureaDataSetTableAdapters;
+using Avalia__.Controles;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Avalia__.RadiusButton;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Avalia__
 {
     public partial class FormularioConfirmeTrocarSenha : Form
     {
+        Mensagem_do_sistema mensagem_Do_Sistema = new Mensagem_do_sistema();
+        private string GerarHash(string senha)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] bytes = Encoding.UTF8.GetBytes(senha);
+                byte[] hash = sha256.ComputeHash(bytes);
+
+                StringBuilder sb = new StringBuilder();
+                foreach (byte b in hash)
+                {
+                    sb.Append(b.ToString("x2"));
+                }
+
+                return sb.ToString();
+            }
+        }
+        private bool VerificarSenhaAntiga(string novaSenha, string email)
+        {
+            string novaSenhaCriptografada = GerarHash(novaSenha); // usa o mesmo método que usou no cadastro
+
+            tbUsuarioTableAdapter tbUsuarioTableAdapter = new tbUsuarioTableAdapter();
+            var usuario = tbUsuarioTableAdapter.GetData()
+                .FirstOrDefault(u => u.Email == email);
+
+            if (usuario != null)
+            {
+                return usuario.Senha == novaSenhaCriptografada;
+            }
+
+            return false;
+        }
+
         private string emailUsuario;
         private void MudarFonte()
         {
@@ -22,8 +59,8 @@ namespace Avalia__
             lblNovaSenha.Font = new Font("Segoe UI", 10, FontStyle.Bold);
             btnConfirmar.Font = new Font("Segoe UI", 10, FontStyle.Bold);
             lblConfirmeNovaSenha.Font = new Font("Inter", 10, FontStyle.Bold);
-            txtNovaSenha.Font = new Font("Segoe UI", 13, FontStyle.Regular);
-            txtConfirmeSenha.Font = new Font("Segoe UI", 13, FontStyle.Regular);
+            txtNovaSenha.Font = new Font("Segoe UI", 14, FontStyle.Bold);
+            txtConfirmeSenha.Font = new Font("Segoe UI", 14, FontStyle.Bold);
         }
 
         private void AvaliarForcaSenha(string senha)
@@ -96,6 +133,18 @@ namespace Avalia__
        
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtNovaSenha.Text) || string.IsNullOrEmpty(txtConfirmeSenha.Text)) 
+            {
+                mensagem_Do_Sistema.MensagemError("Preencha todos os campos!");
+                return;
+            }
+
+            if (txtConfirmeSenha.Text != txtNovaSenha.Text) 
+            {
+                mensagem_Do_Sistema.MensagemError("As senhas não são iguais\nTente denovo!");
+                return;
+            }
+
             string novaSenha = txtNovaSenha.Text.Trim();
 
             // Validação da nova senha (ex: pelo Regex que fizemos antes)
@@ -106,18 +155,20 @@ namespace Avalia__
                 return;
             }
 
-            // Criptografar a nova senha com SHA-256
             string senha = txtNovaSenha.Text;
-            byte[] hashBytes;
-            SHA256 sha256 = SHA256.Create();
-            hashBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(senha));
-            string senhaEscondida = Encoding.Unicode.GetString(hashBytes);
 
-            // Atualizar no banco
-            var adaptador = new AureaDataSetTableAdapters.tbUsuarioTableAdapter();
-            adaptador.AtualizarSenhaPorEmail(senhaEscondida, emailUsuario); // precisa desse método no TableAdapter
+            if (VerificarSenhaAntiga(senha, emailUsuario))
+            {
+                MessageBox.Show("A nova senha deve ser diferente da senha atual.");
+                return;
+            }
+            string novaSenhaCriptografada = GerarHash(novaSenha);
 
-            MessageBox.Show("Senha atualizada com sucesso! Você já pode fazer login.");
+            // Atualiza a senha no banco
+            tbUsuarioTableAdapter tbUsuarioTableAdapter = new tbUsuarioTableAdapter();
+            tbUsuarioTableAdapter.AtualizarSenhaPorEmail(novaSenhaCriptografada, emailUsuario);
+
+            mensagem_Do_Sistema.MensagemInformation("Senha atualizada com sucesso! Você já pode fazer login.");
             this.Close();
         }
     }

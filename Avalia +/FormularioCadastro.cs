@@ -79,6 +79,22 @@ namespace Avalia__
             }
 
         }
+        private string GerarHash(string senha)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] bytes = Encoding.UTF8.GetBytes(senha);
+                byte[] hash = sha256.ComputeHash(bytes);
+
+                StringBuilder sb = new StringBuilder();
+                foreach (byte b in hash)
+                {
+                    sb.Append(b.ToString("x2"));
+                }
+
+                return sb.ToString();
+            }
+        }
         private void EnviarDado() 
         {
             tbUsuarioTableAdapter novosdados = new tbUsuarioTableAdapter();
@@ -147,19 +163,15 @@ namespace Avalia__
                 case 26: Estado = "TO"; break; // Tocantins
                 default: Estado = ""; break;  // Nenhum selecionado
             }
-
-            string senha = txtSenha.Text;
-            byte[] hashBytes;
-            SHA256 sha256 = SHA256.Create();
-            hashBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(senha));
-            string senhaEscondida = Encoding.Unicode.GetString(hashBytes);
+            string senhaCriptografada = GerarHash(txtSenha.Text);
 
             DateTime dataCadastro = DateTime.Now;
 
-            novosdados.Insert(nome, sobrenome, dataNascimento, cpf, sexo, telefone, identidadeGenero, endereco, email, cidade, Estado, dataCadastro, senhaEscondida);
+            novosdados.Insert(nome, sobrenome, dataNascimento, cpf, sexo, telefone, identidadeGenero, endereco, email, cidade, Estado, dataCadastro, senhaCriptografada);
             AtualizarBanco();
 
         }
+
         private bool VerificaIdade()
         {
             DateTime dataNascimento = dtpDataNascimento.Value;
@@ -179,6 +191,7 @@ namespace Avalia__
 
             return true;
         }
+
         private void MudarFonte() 
         {
             dtpDataNascimento.Font = new Font("Segoe UI", 12); // Aumenta a fonte → aumenta a altura
@@ -189,6 +202,15 @@ namespace Avalia__
             lblCompletecadastro.Font = new Font("Inter", 15, FontStyle.Bold);
             lblCPF.Font = new Font("Segoe UI", 14, FontStyle.Bold);
             mktCPF.Font = new Font("Segoe UI", 12);
+            txtNome.Font = new Font("Segoe UI", 14, FontStyle.Regular);
+            txtSobrenome.Font = new Font("Segoe UI", 14, FontStyle.Regular);
+            txtEndereco.Font = new Font("Segoe UI", 14, FontStyle.Regular);
+            txtCidade.Font = new Font("Segoe UI", 14, FontStyle.Regular);
+            txtEmail.Font = new Font("Segoe UI", 14, FontStyle.Regular);
+            txtSenha.Font = new Font("Segoe UI", 16, FontStyle.Bold);
+            txtconfirmeSenha.Font = new Font("Segoe UI", 16, FontStyle.Bold);
+
+
             Font fontePadrao = new Font("Inter", 13);
 
             foreach (Control ctrl in panelCadastro.Controls)

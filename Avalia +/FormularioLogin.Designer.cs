@@ -37,7 +37,7 @@
             this.lblEsqueceuSenha = new System.Windows.Forms.LinkLabel();
             this.txtSenhaLogin = new System.Windows.Forms.TextBox();
             this.lblSenha = new System.Windows.Forms.Label();
-            this.txtNomeLogin = new System.Windows.Forms.TextBox();
+            this.txtEmailLogin = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblLogin = new System.Windows.Forms.Label();
             this.lblAvalia = new System.Windows.Forms.Label();
@@ -53,7 +53,7 @@
             this.panelLogin.Controls.Add(this.lblEsqueceuSenha);
             this.panelLogin.Controls.Add(this.txtSenhaLogin);
             this.panelLogin.Controls.Add(this.lblSenha);
-            this.panelLogin.Controls.Add(this.txtNomeLogin);
+            this.panelLogin.Controls.Add(this.txtEmailLogin);
             this.panelLogin.Controls.Add(this.lblEmail);
             this.panelLogin.Controls.Add(this.lblLogin);
             this.panelLogin.Controls.Add(this.lblAvalia);
@@ -115,6 +115,7 @@
             this.btnEntrar.TabIndex = 7;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = false;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // lblEsqueceuSenha
             // 
@@ -136,6 +137,7 @@
             this.txtSenhaLogin.MaxLength = 50;
             this.txtSenhaLogin.Multiline = true;
             this.txtSenhaLogin.Name = "txtSenhaLogin";
+            this.txtSenhaLogin.PasswordChar = '*';
             this.txtSenhaLogin.Size = new System.Drawing.Size(257, 40);
             this.txtSenhaLogin.TabIndex = 5;
             // 
@@ -149,14 +151,14 @@
             this.lblSenha.TabIndex = 4;
             this.lblSenha.Text = "Senha";
             // 
-            // txtNomeLogin
+            // txtEmailLogin
             // 
-            this.txtNomeLogin.Location = new System.Drawing.Point(39, 174);
-            this.txtNomeLogin.MaxLength = 100;
-            this.txtNomeLogin.Multiline = true;
-            this.txtNomeLogin.Name = "txtNomeLogin";
-            this.txtNomeLogin.Size = new System.Drawing.Size(257, 40);
-            this.txtNomeLogin.TabIndex = 3;
+            this.txtEmailLogin.Location = new System.Drawing.Point(39, 174);
+            this.txtEmailLogin.MaxLength = 100;
+            this.txtEmailLogin.Multiline = true;
+            this.txtEmailLogin.Name = "txtEmailLogin";
+            this.txtEmailLogin.Size = new System.Drawing.Size(257, 40);
+            this.txtEmailLogin.TabIndex = 3;
             // 
             // lblEmail
             // 
@@ -213,7 +215,7 @@
         private System.Windows.Forms.Panel panelLogin;
         private System.Windows.Forms.Label lblAvalia;
         private System.Windows.Forms.Label lblLogin;
-        private System.Windows.Forms.TextBox txtNomeLogin;
+        private System.Windows.Forms.TextBox txtEmailLogin;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.TextBox txtSenhaLogin;
         private System.Windows.Forms.Label lblSenha;

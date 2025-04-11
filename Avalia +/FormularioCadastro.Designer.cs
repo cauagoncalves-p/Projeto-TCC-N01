@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioCadastro));
             this.panelCadastro = new System.Windows.Forms.Panel();
+            this.lblError = new System.Windows.Forms.Label();
+            this.lblConfirmeSenha = new System.Windows.Forms.Label();
+            this.lblSenha = new System.Windows.Forms.Label();
+            this.txtSenha = new System.Windows.Forms.TextBox();
+            this.txtconfirmeSenha = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
@@ -59,11 +64,6 @@
             this.lblDataNascimento = new System.Windows.Forms.Label();
             this.lblSobrenome = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
-            this.txtconfirmeSenha = new System.Windows.Forms.TextBox();
-            this.txtSenha = new System.Windows.Forms.TextBox();
-            this.lblSenha = new System.Windows.Forms.Label();
-            this.lblConfirmeSenha = new System.Windows.Forms.Label();
-            this.lblError = new System.Windows.Forms.Label();
             this.panelCadastro.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -111,6 +111,55 @@
             this.panelCadastro.Size = new System.Drawing.Size(719, 614);
             this.panelCadastro.TabIndex = 0;
             this.panelCadastro.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCadastro_Paint);
+            // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.ForeColor = System.Drawing.Color.Red;
+            this.lblError.Location = new System.Drawing.Point(30, 404);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(0, 13);
+            this.lblError.TabIndex = 37;
+            // 
+            // lblConfirmeSenha
+            // 
+            this.lblConfirmeSenha.AutoSize = true;
+            this.lblConfirmeSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
+            this.lblConfirmeSenha.Location = new System.Drawing.Point(350, 335);
+            this.lblConfirmeSenha.Name = "lblConfirmeSenha";
+            this.lblConfirmeSenha.Size = new System.Drawing.Size(109, 13);
+            this.lblConfirmeSenha.TabIndex = 36;
+            this.lblConfirmeSenha.Text = "Confirme a sua senha";
+            // 
+            // lblSenha
+            // 
+            this.lblSenha.AutoSize = true;
+            this.lblSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
+            this.lblSenha.Location = new System.Drawing.Point(30, 335);
+            this.lblSenha.Name = "lblSenha";
+            this.lblSenha.Size = new System.Drawing.Size(38, 13);
+            this.lblSenha.TabIndex = 35;
+            this.lblSenha.Text = "Senha";
+            // 
+            // txtSenha
+            // 
+            this.txtSenha.BackColor = System.Drawing.Color.FloralWhite;
+            this.txtSenha.Location = new System.Drawing.Point(30, 369);
+            this.txtSenha.Multiline = true;
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '*';
+            this.txtSenha.Size = new System.Drawing.Size(302, 32);
+            this.txtSenha.TabIndex = 34;
+            // 
+            // txtconfirmeSenha
+            // 
+            this.txtconfirmeSenha.BackColor = System.Drawing.Color.FloralWhite;
+            this.txtconfirmeSenha.Location = new System.Drawing.Point(347, 369);
+            this.txtconfirmeSenha.Multiline = true;
+            this.txtconfirmeSenha.Name = "txtconfirmeSenha";
+            this.txtconfirmeSenha.PasswordChar = '*';
+            this.txtconfirmeSenha.Size = new System.Drawing.Size(319, 32);
+            this.txtconfirmeSenha.TabIndex = 33;
             // 
             // lblEmail
             // 
@@ -449,53 +498,6 @@
             this.lblNome.Size = new System.Drawing.Size(35, 13);
             this.lblNome.TabIndex = 2;
             this.lblNome.Text = "Nome";
-            // 
-            // txtconfirmeSenha
-            // 
-            this.txtconfirmeSenha.BackColor = System.Drawing.Color.FloralWhite;
-            this.txtconfirmeSenha.Location = new System.Drawing.Point(347, 369);
-            this.txtconfirmeSenha.Multiline = true;
-            this.txtconfirmeSenha.Name = "txtconfirmeSenha";
-            this.txtconfirmeSenha.Size = new System.Drawing.Size(319, 32);
-            this.txtconfirmeSenha.TabIndex = 33;
-            // 
-            // txtSenha
-            // 
-            this.txtSenha.BackColor = System.Drawing.Color.FloralWhite;
-            this.txtSenha.Location = new System.Drawing.Point(30, 369);
-            this.txtSenha.Multiline = true;
-            this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(302, 32);
-            this.txtSenha.TabIndex = 34;
-            // 
-            // lblSenha
-            // 
-            this.lblSenha.AutoSize = true;
-            this.lblSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblSenha.Location = new System.Drawing.Point(30, 335);
-            this.lblSenha.Name = "lblSenha";
-            this.lblSenha.Size = new System.Drawing.Size(38, 13);
-            this.lblSenha.TabIndex = 35;
-            this.lblSenha.Text = "Senha";
-            // 
-            // lblConfirmeSenha
-            // 
-            this.lblConfirmeSenha.AutoSize = true;
-            this.lblConfirmeSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblConfirmeSenha.Location = new System.Drawing.Point(350, 335);
-            this.lblConfirmeSenha.Name = "lblConfirmeSenha";
-            this.lblConfirmeSenha.Size = new System.Drawing.Size(109, 13);
-            this.lblConfirmeSenha.TabIndex = 36;
-            this.lblConfirmeSenha.Text = "Confirme a sua senha";
-            // 
-            // lblError
-            // 
-            this.lblError.AutoSize = true;
-            this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(30, 404);
-            this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(0, 13);
-            this.lblError.TabIndex = 37;
             // 
             // FormularioCadastro
             // 

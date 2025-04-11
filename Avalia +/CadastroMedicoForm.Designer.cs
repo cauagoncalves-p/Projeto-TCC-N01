@@ -1,6 +1,6 @@
 ﻿namespace Avalia__
 {
-    partial class PacienteDashboardForm
+    partial class CadastroMedicoForm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "PacienteDashboardForm";
+            this.Text = "CadastroMedicoForm";
         }
 
         #endregion

@@ -160,7 +160,7 @@ namespace Avalia__
             if (codigoDigitado == codigoGerado)
             {
                 mensagem_Do_Sistema.MensagemInformation("✅ Código confirmado com sucesso!");
-                FormularioConfirmeTrocarSenha formularioLogin = new FormularioConfirmeTrocarSenha();
+                FormularioConfirmeTrocarSenha formularioLogin = new FormularioConfirmeTrocarSenha(emailUsuario);
                 formularioLogin.ShowDialog();
             }
             else
