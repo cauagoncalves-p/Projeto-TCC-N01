@@ -21,22 +21,7 @@ namespace Avalia__
     public partial class FormularioLogin : Form
     {
         Mensagem_do_sistema mensagem_Do_Sistema = new Mensagem_do_sistema();
-        private string GerarHash(string senha)
-        {
-            using (SHA256 sha256 = SHA256.Create())
-            {
-                byte[] bytes = Encoding.UTF8.GetBytes(senha);
-                byte[] hash = sha256.ComputeHash(bytes);
-
-                StringBuilder sb = new StringBuilder();
-                foreach (byte b in hash)
-                {
-                    sb.Append(b.ToString("x2"));
-                }
-
-                return sb.ToString();
-            }
-        }
+        ConfiguracaoTelas configuracaoTelas = new ConfiguracaoTelas();
         private void MudarFonte() 
         {
             lblAvalia.Font = new Font("Segoe UI", 14, FontStyle.Bold);
@@ -91,7 +76,7 @@ namespace Avalia__
         {
             tbUsuarioTableAdapter tbUsuarioTableAdapter = new tbUsuarioTableAdapter();
             string senhaDigitada = txtSenhaLogin.Text;
-            string senhaCriptografada = GerarHash(senhaDigitada);
+            string senhaCriptografada = configuracaoTelas.GerarHash(senhaDigitada);
 
             var usuario = tbUsuarioTableAdapter.GetData()
                 .FirstOrDefault(u => u.Email == txtEmailLogin.Text && u.Senha == senhaCriptografada);

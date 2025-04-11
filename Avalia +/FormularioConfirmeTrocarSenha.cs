@@ -20,25 +20,10 @@ namespace Avalia__
     public partial class FormularioConfirmeTrocarSenha : Form
     {
         Mensagem_do_sistema mensagem_Do_Sistema = new Mensagem_do_sistema();
-        private string GerarHash(string senha)
-        {
-            using (SHA256 sha256 = SHA256.Create())
-            {
-                byte[] bytes = Encoding.UTF8.GetBytes(senha);
-                byte[] hash = sha256.ComputeHash(bytes);
-
-                StringBuilder sb = new StringBuilder();
-                foreach (byte b in hash)
-                {
-                    sb.Append(b.ToString("x2"));
-                }
-
-                return sb.ToString();
-            }
-        }
+        ConfiguracaoTelas configuracaoTelas = new ConfiguracaoTelas();
         private bool VerificarSenhaAntiga(string novaSenha, string email)
         {
-            string novaSenhaCriptografada = GerarHash(novaSenha); // usa o mesmo método que usou no cadastro
+            string novaSenhaCriptografada = configuracaoTelas.GerarHash(novaSenha); // usa o mesmo método que usou no cadastro
 
             tbUsuarioTableAdapter tbUsuarioTableAdapter = new tbUsuarioTableAdapter();
             var usuario = tbUsuarioTableAdapter.GetData()
@@ -158,7 +143,7 @@ namespace Avalia__
                 MessageBox.Show("A nova senha deve ser diferente da senha atual.");
                 return;
             }
-            string novaSenhaCriptografada = GerarHash(novaSenha);
+            string novaSenhaCriptografada = configuracaoTelas.GerarHash(novaSenha);
 
             // Atualiza a senha no banco
             tbUsuarioTableAdapter tbUsuarioTableAdapter = new tbUsuarioTableAdapter();

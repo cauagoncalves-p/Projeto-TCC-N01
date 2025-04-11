@@ -17,22 +17,7 @@ namespace Avalia__
     public partial class FormularioLoginMedico : Form
     {
         Mensagem_do_sistema mensagem_Do_Sistema = new Mensagem_do_sistema();
-        private string GerarHash(string senha)
-        {
-            using (SHA256 sha256 = SHA256.Create())
-            {
-                byte[] bytes = Encoding.UTF8.GetBytes(senha);
-                byte[] hash = sha256.ComputeHash(bytes);
-
-                StringBuilder sb = new StringBuilder();
-                foreach (byte b in hash)
-                {
-                    sb.Append(b.ToString("x2"));
-                }
-
-                return sb.ToString();
-            }
-        }
+        ConfiguracaoTelas configuracaoTelas = new ConfiguracaoTelas();
 
         private void MudarFonte()
         {
@@ -76,10 +61,10 @@ namespace Avalia__
         {
             tbMedicoTableAdapter tbMedicoTableAdapter = new tbMedicoTableAdapter();
             string senhaDigitada = txtSenhaLogin.Text;
-            string senhaCriptografada = GerarHash(senhaDigitada);
+            string senhaCriptografada = configuracaoTelas.GerarHash(senhaDigitada);
 
             var usuario = tbMedicoTableAdapter.GetData()
-                .FirstOrDefault(u => u.CRM == txtCRMLogin.Text && u.Senha == senhaCriptografada);
+                .FirstOrDefault(u => u.CRM == txtCRMLogin.Text && u.senha == senhaCriptografada);
 
             if (usuario != null)
             {
@@ -95,7 +80,6 @@ namespace Avalia__
         {
             FormularioTrocarSenha formularioTrocarSenha = new FormularioTrocarSenha();
             formularioTrocarSenha.ShowDialog();
-
         }
     }
 }

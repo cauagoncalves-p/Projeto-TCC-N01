@@ -30,6 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioCadastroMedico));
             this.panelCadastro = new System.Windows.Forms.Panel();
+            this.lblInstituicao = new System.Windows.Forms.Label();
+            this.cbxInstituicao = new System.Windows.Forms.ComboBox();
+            this.lblEspecialidade = new System.Windows.Forms.Label();
+            this.cbxEspecialidade = new System.Windows.Forms.ComboBox();
+            this.lblCRM = new System.Windows.Forms.Label();
+            this.txtCRM = new System.Windows.Forms.TextBox();
             this.lblError = new System.Windows.Forms.Label();
             this.lblConfirmeSenha = new System.Windows.Forms.Label();
             this.lblSenha = new System.Windows.Forms.Label();
@@ -64,12 +70,6 @@
             this.lblDataNascimento = new System.Windows.Forms.Label();
             this.lblSobrenome = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
-            this.lblCRM = new System.Windows.Forms.Label();
-            this.txtCRM = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.lblEspecialidade = new System.Windows.Forms.Label();
-            this.lblInstituicao = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panelCadastro.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,9 +77,9 @@
             // 
             this.panelCadastro.AutoScroll = true;
             this.panelCadastro.Controls.Add(this.lblInstituicao);
-            this.panelCadastro.Controls.Add(this.comboBox2);
+            this.panelCadastro.Controls.Add(this.cbxInstituicao);
             this.panelCadastro.Controls.Add(this.lblEspecialidade);
-            this.panelCadastro.Controls.Add(this.comboBox1);
+            this.panelCadastro.Controls.Add(this.cbxEspecialidade);
             this.panelCadastro.Controls.Add(this.lblCRM);
             this.panelCadastro.Controls.Add(this.txtCRM);
             this.panelCadastro.Controls.Add(this.lblError);
@@ -121,6 +121,87 @@
             this.panelCadastro.Padding = new System.Windows.Forms.Padding(0, 0, 20, 20);
             this.panelCadastro.Size = new System.Drawing.Size(719, 899);
             this.panelCadastro.TabIndex = 1;
+            // 
+            // lblInstituicao
+            // 
+            this.lblInstituicao.AutoSize = true;
+            this.lblInstituicao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
+            this.lblInstituicao.Location = new System.Drawing.Point(30, 330);
+            this.lblInstituicao.Name = "lblInstituicao";
+            this.lblInstituicao.Size = new System.Drawing.Size(105, 13);
+            this.lblInstituicao.TabIndex = 43;
+            this.lblInstituicao.Text = "Instituição Vinculada";
+            // 
+            // cbxInstituicao
+            // 
+            this.cbxInstituicao.BackColor = System.Drawing.Color.FloralWhite;
+            this.cbxInstituicao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxInstituicao.FormattingEnabled = true;
+            this.cbxInstituicao.Location = new System.Drawing.Point(30, 366);
+            this.cbxInstituicao.Name = "cbxInstituicao";
+            this.cbxInstituicao.Size = new System.Drawing.Size(302, 21);
+            this.cbxInstituicao.TabIndex = 42;
+            this.cbxInstituicao.SelectedValueChanged += new System.EventHandler(this.cbxInstituicao_SelectedValueChanged);
+            // 
+            // lblEspecialidade
+            // 
+            this.lblEspecialidade.AutoSize = true;
+            this.lblEspecialidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
+            this.lblEspecialidade.Location = new System.Drawing.Point(350, 251);
+            this.lblEspecialidade.Name = "lblEspecialidade";
+            this.lblEspecialidade.Size = new System.Drawing.Size(73, 13);
+            this.lblEspecialidade.TabIndex = 41;
+            this.lblEspecialidade.Text = "Especialidade";
+            // 
+            // cbxEspecialidade
+            // 
+            this.cbxEspecialidade.BackColor = System.Drawing.Color.FloralWhite;
+            this.cbxEspecialidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxEspecialidade.FormattingEnabled = true;
+            this.cbxEspecialidade.Items.AddRange(new object[] {
+            "Clínico Geral",
+            "Pediatria",
+            "Ginecologia",
+            "Obstetrícia",
+            "Urologia",
+            "Dermatologia",
+            "Cardiologia",
+            "Endocrinologia",
+            "Ortopedia",
+            "Neurologia",
+            "Psiquiatria",
+            "Oftalmologia",
+            "Otorrinolaringologia",
+            "Reumatologia",
+            "Gastroenterologia",
+            "Nefrologia",
+            "Oncologia",
+            "Nutrologia",
+            "Medicina do Trabalho",
+            "Medicina da Família"});
+            this.cbxEspecialidade.Location = new System.Drawing.Point(347, 279);
+            this.cbxEspecialidade.Name = "cbxEspecialidade";
+            this.cbxEspecialidade.Size = new System.Drawing.Size(320, 21);
+            this.cbxEspecialidade.TabIndex = 40;
+            // 
+            // lblCRM
+            // 
+            this.lblCRM.AutoSize = true;
+            this.lblCRM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
+            this.lblCRM.Location = new System.Drawing.Point(30, 251);
+            this.lblCRM.Name = "lblCRM";
+            this.lblCRM.Size = new System.Drawing.Size(31, 13);
+            this.lblCRM.TabIndex = 39;
+            this.lblCRM.Text = "CRM";
+            // 
+            // txtCRM
+            // 
+            this.txtCRM.BackColor = System.Drawing.Color.FloralWhite;
+            this.txtCRM.Location = new System.Drawing.Point(30, 279);
+            this.txtCRM.Multiline = true;
+            this.txtCRM.Name = "txtCRM";
+            this.txtCRM.Size = new System.Drawing.Size(302, 32);
+            this.txtCRM.TabIndex = 38;
             // 
             // lblError
             // 
@@ -168,7 +249,7 @@
             this.txtconfirmeSenha.Multiline = true;
             this.txtconfirmeSenha.Name = "txtconfirmeSenha";
             this.txtconfirmeSenha.PasswordChar = '*';
-            this.txtconfirmeSenha.Size = new System.Drawing.Size(319, 32);
+            this.txtconfirmeSenha.Size = new System.Drawing.Size(325, 32);
             this.txtconfirmeSenha.TabIndex = 33;
             // 
             // lblEmail
@@ -245,6 +326,7 @@
             this.btnFinalizarCadastro.TabIndex = 28;
             this.btnFinalizarCadastro.Text = "Finalizar Cadastro";
             this.btnFinalizarCadastro.UseVisualStyleBackColor = false;
+            this.btnFinalizarCadastro.Click += new System.EventHandler(this.btnFinalizarCadastro_Click);
             // 
             // btnVoltar
             // 
@@ -425,7 +507,7 @@
             // 
             this.lblSexo.AutoSize = true;
             this.lblSexo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblSexo.Location = new System.Drawing.Point(25, 619);
+            this.lblSexo.Location = new System.Drawing.Point(25, 611);
             this.lblSexo.Name = "lblSexo";
             this.lblSexo.Size = new System.Drawing.Size(77, 13);
             this.lblSexo.TabIndex = 12;
@@ -473,7 +555,7 @@
             this.dtpDataNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDataNascimento.Location = new System.Drawing.Point(30, 214);
             this.dtpDataNascimento.Name = "dtpDataNascimento";
-            this.dtpDataNascimento.Size = new System.Drawing.Size(290, 20);
+            this.dtpDataNascimento.Size = new System.Drawing.Size(302, 20);
             this.dtpDataNascimento.TabIndex = 6;
             this.dtpDataNascimento.Value = new System.DateTime(2025, 4, 8, 0, 0, 0, 0);
             // 
@@ -507,107 +589,6 @@
             this.lblNome.TabIndex = 2;
             this.lblNome.Text = "Nome";
             // 
-            // lblCRM
-            // 
-            this.lblCRM.AutoSize = true;
-            this.lblCRM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblCRM.Location = new System.Drawing.Point(30, 251);
-            this.lblCRM.Name = "lblCRM";
-            this.lblCRM.Size = new System.Drawing.Size(31, 13);
-            this.lblCRM.TabIndex = 39;
-            this.lblCRM.Text = "CRM";
-            // 
-            // txtCRM
-            // 
-            this.txtCRM.BackColor = System.Drawing.Color.FloralWhite;
-            this.txtCRM.Location = new System.Drawing.Point(30, 279);
-            this.txtCRM.Multiline = true;
-            this.txtCRM.Name = "txtCRM";
-            this.txtCRM.Size = new System.Drawing.Size(302, 32);
-            this.txtCRM.TabIndex = 38;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.FloralWhite;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Clínico Geral",
-            "Pediatria",
-            "Ginecologia",
-            "Obstetrícia",
-            "Urologia",
-            "Dermatologia",
-            "Cardiologia",
-            "Endocrinologia",
-            "Ortopedia",
-            "Neurologia",
-            "Psiquiatria",
-            "Oftalmologia",
-            "Otorrinolaringologia",
-            "Reumatologia",
-            "Gastroenterologia",
-            "Nefrologia",
-            "Oncologia",
-            "Nutrologia",
-            "Medicina do Trabalho",
-            "Medicina da Família"});
-            this.comboBox1.Location = new System.Drawing.Point(347, 279);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(320, 21);
-            this.comboBox1.TabIndex = 40;
-            // 
-            // lblEspecialidade
-            // 
-            this.lblEspecialidade.AutoSize = true;
-            this.lblEspecialidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblEspecialidade.Location = new System.Drawing.Point(350, 251);
-            this.lblEspecialidade.Name = "lblEspecialidade";
-            this.lblEspecialidade.Size = new System.Drawing.Size(73, 13);
-            this.lblEspecialidade.TabIndex = 41;
-            this.lblEspecialidade.Text = "Especialidade";
-            // 
-            // lblInstituicao
-            // 
-            this.lblInstituicao.AutoSize = true;
-            this.lblInstituicao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblInstituicao.Location = new System.Drawing.Point(30, 330);
-            this.lblInstituicao.Name = "lblInstituicao";
-            this.lblInstituicao.Size = new System.Drawing.Size(105, 13);
-            this.lblInstituicao.TabIndex = 43;
-            this.lblInstituicao.Text = "Instituição Vinculada";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.BackColor = System.Drawing.Color.FloralWhite;
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Clínico Geral",
-            "Pediatria",
-            "Ginecologia",
-            "Obstetrícia",
-            "Urologia",
-            "Dermatologia",
-            "Cardiologia",
-            "Endocrinologia",
-            "Ortopedia",
-            "Neurologia",
-            "Psiquiatria",
-            "Oftalmologia",
-            "Otorrinolaringologia",
-            "Reumatologia",
-            "Gastroenterologia",
-            "Nefrologia",
-            "Oncologia",
-            "Nutrologia",
-            "Medicina do Trabalho",
-            "Medicina da Família"});
-            this.comboBox2.Location = new System.Drawing.Point(30, 366);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(302, 21);
-            this.comboBox2.TabIndex = 42;
-            // 
             // FormularioCadastroMedico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -620,6 +601,7 @@
             this.Name = "FormularioCadastroMedico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cdastro de medico ";
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormularioCadastroMedico_Paint);
             this.panelCadastro.ResumeLayout(false);
             this.panelCadastro.PerformLayout();
             this.ResumeLayout(false);
@@ -664,10 +646,10 @@
         private System.Windows.Forms.Label lblSobrenome;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Label lblEspecialidade;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbxEspecialidade;
         private System.Windows.Forms.Label lblCRM;
         private System.Windows.Forms.TextBox txtCRM;
         private System.Windows.Forms.Label lblInstituicao;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbxInstituicao;
     }
 }

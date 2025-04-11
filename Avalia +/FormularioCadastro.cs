@@ -17,13 +17,7 @@ namespace Avalia__
     public partial class FormularioCadastro : Form
     {
         Mensagem_do_sistema mensagem_ = new Mensagem_do_sistema();
-        private void AtualizarBanco() 
-        {
-            tbUsuarioTableAdapter tbUsuarioTableAdapter = new tbUsuarioTableAdapter();
-            AureaDataSet.tbUsuarioDataTable tabelaUsuarios = tbUsuarioTableAdapter.GetData();
-            var usuarios = from linha in tabelaUsuarios select linha;
-        }
-
+        ConfiguracaoTelas configuracaoTelas = new ConfiguracaoTelas();
         private void AvaliarForcaSenha(string senha)
         {
             int forca = 0;
@@ -76,23 +70,6 @@ namespace Avalia__
                 lblError.ForeColor = Color.Red;
                 txtEmail.Focus();
                 return;
-            }
-
-        }
-        private string GerarHash(string senha)
-        {
-            using (SHA256 sha256 = SHA256.Create())
-            {
-                byte[] bytes = Encoding.UTF8.GetBytes(senha);
-                byte[] hash = sha256.ComputeHash(bytes);
-
-                StringBuilder sb = new StringBuilder();
-                foreach (byte b in hash)
-                {
-                    sb.Append(b.ToString("x2"));
-                }
-
-                return sb.ToString();
             }
         }
         private void EnviarDado() 
@@ -163,13 +140,12 @@ namespace Avalia__
                 case 26: Estado = "TO"; break; // Tocantins
                 default: Estado = ""; break;  // Nenhum selecionado
             }
-            string senhaCriptografada = GerarHash(txtSenha.Text);
+
+            string senhaCriptografada = configuracaoTelas.GerarHash(txtSenha.Text);
 
             DateTime dataCadastro = DateTime.Now;
 
             novosdados.Insert(nome, sobrenome, dataNascimento, cpf, sexo, telefone, identidadeGenero, endereco, email, cidade, Estado, dataCadastro, senhaCriptografada);
-            AtualizarBanco();
-
         }
 
         private bool VerificaIdade()
@@ -188,7 +164,6 @@ namespace Avalia__
                 mensagem_.MensagemInformation("Necessário ter 18 anos para se cadastrar!");
                 return false;
             }
-
             return true;
         }
 
@@ -235,7 +210,6 @@ namespace Avalia__
 
             return usuarios.Any();
         }
-
         private bool EmailJaExiste(string email)
         {
             tbUsuarioTableAdapter tbUsuarioTableAdapter = new tbUsuarioTableAdapter();
@@ -245,8 +219,6 @@ namespace Avalia__
 
             return usuarios.Any();
         }
-
-
         public FormularioCadastro()
         {
             InitializeComponent();
@@ -254,7 +226,6 @@ namespace Avalia__
             MudarFonte();
             RadiusButton controlador = new RadiusButton();
             controlador.ConfigInicial(this, panelCadastro, btnSair, 25);
-            AtualizarBanco();
         }
 
         private void FormularioCadastro_Paint(object sender, PaintEventArgs e)
@@ -264,7 +235,6 @@ namespace Avalia__
         }
         private void btnFinalizarCadastro_Click(object sender, EventArgs e)
         {
-
             //Verifica campos vazios 
             bool nomeVazio = string.IsNullOrEmpty(txtNome.Text);
             bool sobrenomeVazio = string.IsNullOrEmpty(txtSobrenome.Text);
@@ -338,7 +308,6 @@ namespace Avalia__
             mensagem_.MensagemInformation("Cadastro realizado com sucesso!\nConfirme seu email na próxima tela!");
             FormularioCadCPF formularioCadCPF = new FormularioCadCPF();
             formularioCadCPF.ShowDialog();
-
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -352,9 +321,5 @@ namespace Avalia__
             configuracaoTelas.FecharAba(this);
         }
 
-        private void panelCadastro_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

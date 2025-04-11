@@ -47,6 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AureaDataSet.cs">
+      <DependentUpon>AureaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="AureaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

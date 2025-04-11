@@ -28,6 +28,7 @@ namespace Avalia__
             mktCPF.Font = new Font("Segoe UI", 17, FontStyle.Regular);
             txtEmail.Font = new Font("Segoe UI", 14, FontStyle.Regular);
         }
+
         public FormularioCadCPF()
         {
             InitializeComponent();
