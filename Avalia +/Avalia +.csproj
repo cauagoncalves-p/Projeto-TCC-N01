@@ -52,12 +52,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AureaDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="CadastroMedicoForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CadastroMedicoForm.Designer.cs">
-      <DependentUpon>CadastroMedicoForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Controles\CorDeFundo.cs" />
     <Compile Include="Controles\MensagemDosistema.cs" />
     <Compile Include="FormInicial.cs">
@@ -102,6 +96,12 @@
     <Compile Include="FormularioLogin.Designer.cs">
       <DependentUpon>FormularioLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormularioLoginMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioLoginMedico.Designer.cs">
+      <DependentUpon>FormularioLoginMedico.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormularioTrocarSenha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioLogin.resx">
       <DependentUpon>FormularioLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioLoginMedico.resx">
+      <DependentUpon>FormularioLoginMedico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioTrocarSenha.resx">
       <DependentUpon>FormularioTrocarSenha.cs</DependentUpon>

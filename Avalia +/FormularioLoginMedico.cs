@@ -1,0 +1,94 @@
+﻿using Avalia__.AureaDataSetTableAdapters;
+using Avalia__.Controles;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using static Avalia__.RadiusButton;
+
+namespace Avalia__
+{
+    public partial class FormularioLoginMedico : Form
+    {
+        Mensagem_do_sistema mensagem_Do_Sistema = new Mensagem_do_sistema();
+        private string GerarHash(string senha)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] bytes = Encoding.UTF8.GetBytes(senha);
+                byte[] hash = sha256.ComputeHash(bytes);
+
+                StringBuilder sb = new StringBuilder();
+                foreach (byte b in hash)
+                {
+                    sb.Append(b.ToString("x2"));
+                }
+
+                return sb.ToString();
+            }
+        }
+
+        private void MudarFonte()
+        {
+            lblAvalia.Font = new Font("Segoe UI", 14, FontStyle.Bold);
+            lblLogin.Font = new Font("Inter", 15, FontStyle.Bold);
+            lblcrm.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            lblSenha.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            lblEsqueceuSenha.Font = new Font("Segoe UI", 8, FontStyle.Bold);
+            btnEntrar.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            lblLinkCriarConta.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            lblCriarConta.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            txtCRMLogin.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+            txtSenhaLogin.Font = new Font("Segoe UI", 14, FontStyle.Bold);
+        }
+
+        public FormularioLoginMedico()
+        {
+            InitializeComponent();
+            MudarFonte();
+            RadiusButton controlador = new RadiusButton();
+            controlador.ConfigInicial(this, panelLogin, btnSair, 25);
+            UIHelper.ArredondarBotao(btnEntrar, 25);
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            DialogResult sair = MessageBox.Show("Deseja fechar a tela de login?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (sair == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void FormularioLoginMedico_Paint(object sender, PaintEventArgs e)
+        {
+            //Cor de fundo da tela 
+            CorDeFundo.PintarGradiente(this, e, "#f5e6d3", "#fdf6f0");
+        }
+
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+            tbMedicoTableAdapter tbMedicoTableAdapter = new tbMedicoTableAdapter();
+            string senhaDigitada = txtSenhaLogin.Text;
+            string senhaCriptografada = GerarHash(senhaDigitada);
+
+            var usuario = tbMedicoTableAdapter.GetData()
+                .FirstOrDefault(u => u.CRM == txtCRMLogin.Text && u. == senhaCriptografada);
+
+            if (usuario != null)
+            {
+                mensagem_Do_Sistema.MensagemInformation("Logado com sucesso");
+            }
+            else
+            {
+                mensagem_Do_Sistema.MensagemError("E-mail ou Senha incorretos");
+            }
+        }
+    }
+}

@@ -59,7 +59,7 @@
             // lblMedico
             // 
             this.lblMedico.AutoSize = true;
-            this.lblMedico.BackColor = System.Drawing.Color.Transparent;
+            this.lblMedico.BackColor = System.Drawing.Color.FloralWhite;
             this.lblMedico.Location = new System.Drawing.Point(48, 371);
             this.lblMedico.Name = "lblMedico";
             this.lblMedico.Size = new System.Drawing.Size(230, 13);
@@ -69,7 +69,7 @@
             // lblPaciente
             // 
             this.lblPaciente.AutoSize = true;
-            this.lblPaciente.BackColor = System.Drawing.Color.Transparent;
+            this.lblPaciente.BackColor = System.Drawing.Color.FloralWhite;
             this.lblPaciente.Location = new System.Drawing.Point(57, 216);
             this.lblPaciente.Name = "lblPaciente";
             this.lblPaciente.Size = new System.Drawing.Size(230, 13);
@@ -78,15 +78,24 @@
             // 
             // btnEntrar
             // 
+            this.btnEntrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(164)))), ((int)(((byte)(143)))));
+            this.btnEntrar.FlatAppearance.BorderSize = 0;
+            this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEntrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnEntrar.Location = new System.Drawing.Point(33, 414);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(265, 45);
             this.btnEntrar.TabIndex = 13;
             this.btnEntrar.Text = "Continuar";
-            this.btnEntrar.UseVisualStyleBackColor = true;
+            this.btnEntrar.UseVisualStyleBackColor = false;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // btnMedico
             // 
+            this.btnMedico.BackColor = System.Drawing.Color.FloralWhite;
+            this.btnMedico.FlatAppearance.BorderColor = System.Drawing.Color.Tan;
+            this.btnMedico.FlatAppearance.BorderSize = 2;
+            this.btnMedico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMedico.Image = ((System.Drawing.Image)(resources.GetObject("btnMedico.Image")));
             this.btnMedico.Location = new System.Drawing.Point(33, 272);
             this.btnMedico.Name = "btnMedico";
@@ -94,11 +103,15 @@
             this.btnMedico.TabIndex = 12;
             this.btnMedico.Text = "Sou Medico";
             this.btnMedico.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnMedico.UseVisualStyleBackColor = true;
+            this.btnMedico.UseVisualStyleBackColor = false;
             this.btnMedico.Click += new System.EventHandler(this.btnMedico_Click);
             // 
             // btnPaciente
             // 
+            this.btnPaciente.BackColor = System.Drawing.Color.FloralWhite;
+            this.btnPaciente.FlatAppearance.BorderColor = System.Drawing.Color.Tan;
+            this.btnPaciente.FlatAppearance.BorderSize = 2;
+            this.btnPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPaciente.Image = ((System.Drawing.Image)(resources.GetObject("btnPaciente.Image")));
             this.btnPaciente.Location = new System.Drawing.Point(33, 118);
             this.btnPaciente.Name = "btnPaciente";
@@ -106,7 +119,7 @@
             this.btnPaciente.TabIndex = 11;
             this.btnPaciente.Text = "Sou Paciente";
             this.btnPaciente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnPaciente.UseVisualStyleBackColor = true;
+            this.btnPaciente.UseVisualStyleBackColor = false;
             this.btnPaciente.Click += new System.EventHandler(this.btnPaciente_Click);
             // 
             // btnSair

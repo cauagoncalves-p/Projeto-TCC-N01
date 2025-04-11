@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Avalia__.Controles;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,31 +14,59 @@ namespace Avalia__
 {
     public partial class FormInicial: Form
     {
-        private void MudarCorBotao(object sender, EventArgs e)
+        private void MudarCorBotao(Button botaoclicado)
         {
-            Button botaoClicado = (Button)sender;
-
-            // Reseta a cor de todos os botões (menos os que você quer ignorar)
-            foreach (Control botao in this.Controls)
+            // Resetar a cor de todos os botões dentro do painel
+            foreach (Control botao in panelLogin.Controls)
             {
                 if (botao is Button btn)
                 {
                     if (btn == btnSair || btn == btnEntrar)
                         continue;
 
-                    btn.BackColor = SystemColors.Control; // ou a cor padrão: ColorTranslator.FromHtml("#F0F0F0")
-                    btn.ForeColor = Color.Black;
+                    btn.BackColor = ColorTranslator.FromHtml("#fffaf0");
                 }
             }
 
-            // Define a nova cor para o botão clicado (usando hexadecimal)
-            botaoClicado.BackColor = ColorTranslator.FromHtml("#d8a48f"); // Dodger Blue
-            botaoClicado.ForeColor = Color.White;
+            // Aplicar a cor no botão clicado
+            botaoclicado.BackColor = ColorTranslator.FromHtml("#d8a48f");
+
+            // Resetar as labels antes de aplicar a cor na correta
+            lblMedico.BackColor = ColorTranslator.FromHtml("#fffaf0");
+            lblPaciente.BackColor = ColorTranslator.FromHtml("#fffaf0");
+            lblMedico.ForeColor = ColorTranslator.FromHtml("#5a4a42");
+            btnMedico.ForeColor = ColorTranslator.FromHtml("#5a4a42");
+            lblPaciente.ForeColor = ColorTranslator.FromHtml("#5a4a42");
+            btnPaciente.ForeColor = ColorTranslator.FromHtml("#5a4a42");
+
+            // Aplicar a cor apenas na label correspondente
+            if (botaoclicado == btnMedico)
+            {
+                lblMedico.BackColor = ColorTranslator.FromHtml("#d8a48f");
+                lblMedico.ForeColor = ColorTranslator.FromHtml("#ffffff");
+                btnMedico.ForeColor = ColorTranslator.FromHtml("#ffffff");
+            }
+            else if (botaoclicado == btnPaciente)
+            {
+                lblPaciente.BackColor = ColorTranslator.FromHtml("#d8a48f");
+                lblPaciente.ForeColor = ColorTranslator.FromHtml("#ffffff");
+                btnPaciente.ForeColor = ColorTranslator.FromHtml("#ffffff");
+            }
         }
+
+
         private void MudarFonte()
         {
             lblAvalia.Font = new Font("Segoe UI", 14, FontStyle.Bold);
-            lblentrar.Font = new Font("Inter", 16, FontStyle.Bold);  
+            lblentrar.Font = new Font("Inter", 16, FontStyle.Bold); 
+            btnMedico.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+            btnPaciente.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+            btnEntrar.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            lblMedico.ForeColor = ColorTranslator.FromHtml("#5a4a42");
+            lblPaciente.ForeColor = ColorTranslator.FromHtml("#5a4a42");
+            btnMedico.ForeColor = ColorTranslator.FromHtml("#5a4a42");
+            btnPaciente.ForeColor = ColorTranslator.FromHtml("#5a4a42");
+            btnEntrar.BackColor = ColorTranslator.FromHtml("#d8a48f");
         }
 
         public FormInicial()
@@ -67,11 +96,35 @@ namespace Avalia__
         private void btnPaciente_Click(object sender, EventArgs e)
         {
             MudarCorBotao((Button)sender);
+           
         }
 
         private void btnMedico_Click(object sender, EventArgs e)
         {
             MudarCorBotao((Button)sender);
+           
+        }
+
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+            if (!(btnPaciente.BackColor == ColorTranslator.FromHtml("#d8a48f")) && !(btnMedico.BackColor == ColorTranslator.FromHtml("#d8a48f"))) 
+            {
+                Mensagem_do_sistema mensagem_Do_Sistema = new Mensagem_do_sistema();
+                mensagem_Do_Sistema.MensagemError("Selecione uma das opções acima!");
+                return;
+            }
+
+            if (btnPaciente.BackColor == ColorTranslator.FromHtml("#d8a48f")) 
+            {
+                FormularioLogin formularioLogin = new FormularioLogin();
+                formularioLogin.ShowDialog();
+            }
+            if (btnMedico.BackColor == ColorTranslator.FromHtml("#d8a48f"))
+            {
+                FormularioLoginMedico formularioLoginMedico = new FormularioLoginMedico();
+                formularioLoginMedico.ShowDialog();
+            }
+
         }
     }
 }
