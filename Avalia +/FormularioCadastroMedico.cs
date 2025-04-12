@@ -23,12 +23,10 @@ namespace Avalia__
         {
             tbInstituicaoTableAdapter tbInstituicaoTableAdapter = new tbInstituicaoTableAdapter();
             AureaDataSet.tbInstituicaoDataTable tabelaInstituicao = tbInstituicaoTableAdapter.GetData();
-            var instituicoes = from linha in tabelaInstituicao select linha;
 
-            foreach(var dado in instituicoes) 
-            {
-                cbxInstituicao.Items.Add(dado);
-            }
+            cbxInstituicao.DataSource = tabelaInstituicao;
+            cbxInstituicao.DisplayMember = "NomeInstituicao";         // Campo que aparece no ComboBox
+            cbxInstituicao.ValueMember = "IdInstituicao";  // Campo que você usa pra salvar no banco
         }
 
         private void EnviarDado()
@@ -51,16 +49,9 @@ namespace Avalia__
             else if (rdbOutro.Checked)
                 sexo = "O";
 
-
-            string instituicao = "";
-
-            switch (cbxInstituicao.SelectedIndex) 
-            {
-
-            }
+            int idInstituicao = Convert.ToInt32(cbxInstituicao.SelectedValue);
 
             string especialidade = "";
-
             switch (cbxEspecialidade.SelectedIndex)
             {
                 case 0: especialidade = "Clínico Geral"; break;
@@ -141,7 +132,7 @@ namespace Avalia__
 
             DateTime dataCadastro = DateTime.Now;
 
-            //novosdados.Insert(nome,sobrenome,crm,sexo,especialidade,cidade,Estado,telefone);
+            novosdados.Insert(nome,sobrenome,crm,sexo,especialidade,cidade,Estado,endereco,telefone,idInstituicao,senhaCriptografada,cpf,email);
             AtualizarBanco();
 
         }
@@ -342,6 +333,10 @@ namespace Avalia__
 
             // Verifica se o email informado é valido
             EmailValido();
+            EnviarDado();
+            mensagem_Do_Sistema.MensagemInformation("Cadastro realizado com sucesso!\nConfirme seu email na próxima tela!");
+            FormularioCadCPF formularioCadCPF = new FormularioCadCPF();
+            formularioCadCPF.ShowDialog();
 
         }
 

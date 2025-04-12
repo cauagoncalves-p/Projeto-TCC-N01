@@ -70,10 +70,13 @@ namespace Avalia__
                 mensagem_.MensagemError("Por favor, preencha o CPF e o e-mail.");
                 return;
             }
-
             // Consulta no banco
             tbUsuarioTableAdapter tbUsuarioTableAdapter = new tbUsuarioTableAdapter();
-            var resultado = tbUsuarioTableAdapter.GetData().FirstOrDefault(u => u.CPF == cpfDigitado && u.Email == emailDigitado);
+            tbMedicoTableAdapter tbMedicoTableAdapter = new tbMedicoTableAdapter();
+            var usuario = tbUsuarioTableAdapter.GetData().FirstOrDefault(u => u.CPF == cpfDigitado && u.Email == emailDigitado);
+            var medico = tbMedicoTableAdapter.GetData().FirstOrDefault(m => m.CPF == cpfDigitado && m.Email == emailDigitado);
+
+            var resultado = usuario ?? (object)medico;
 
             if (resultado != null)
             {

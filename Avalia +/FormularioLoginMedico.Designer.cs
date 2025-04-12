@@ -153,11 +153,12 @@
             // txtCRMLogin
             // 
             this.txtCRMLogin.Location = new System.Drawing.Point(39, 174);
-            this.txtCRMLogin.MaxLength = 100;
+            this.txtCRMLogin.MaxLength = 13;
             this.txtCRMLogin.Multiline = true;
             this.txtCRMLogin.Name = "txtCRMLogin";
             this.txtCRMLogin.Size = new System.Drawing.Size(257, 40);
             this.txtCRMLogin.TabIndex = 3;
+            this.txtCRMLogin.TextChanged += new System.EventHandler(this.txtCRMLogin_TextChanged);
             // 
             // lblcrm
             // 

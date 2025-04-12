@@ -81,5 +81,44 @@ namespace Avalia__
             FormularioTrocarSenha formularioTrocarSenha = new FormularioTrocarSenha();
             formularioTrocarSenha.ShowDialog();
         }
+
+        private void txtCRMLogin_TextChanged(object sender, EventArgs e)
+        {
+            // Se estiver apagando tudo, não faz formatação
+            if (string.IsNullOrWhiteSpace(txtCRMLogin.Text))
+                return;
+
+            // Salva a posição atual do cursor
+            int cursorPos = txtCRMLogin.SelectionStart;
+
+            // Remove qualquer caractere que não seja número ou letra
+            string textoLimpo = new string(txtCRMLogin.Text.Where(char.IsLetterOrDigit).ToArray());
+
+            string crmFormatado = textoLimpo;
+
+            if (textoLimpo.Length > 3 && textoLimpo.Length <= 9)
+            {
+                crmFormatado = textoLimpo.Insert(3, "-");
+            }
+            else if (textoLimpo.Length > 9)
+            {
+                crmFormatado = textoLimpo.Insert(3, "-").Insert(10, "/");
+            }
+
+            // Só atualiza o texto se tiver mudado
+            if (txtCRMLogin.Text != crmFormatado)
+            {
+                txtCRMLogin.TextChanged -= txtCRMLogin_TextChanged;
+                txtCRMLogin.Text = crmFormatado;
+
+                // Ajusta o cursor (impede pulo pro final)
+                if (cursorPos <= txtCRMLogin.Text.Length)
+                    txtCRMLogin.SelectionStart = cursorPos;
+                else
+                    txtCRMLogin.SelectionStart = txtCRMLogin.Text.Length;
+
+                txtCRMLogin.TextChanged += txtCRMLogin_TextChanged;
+            }
+        }
     }
 }
