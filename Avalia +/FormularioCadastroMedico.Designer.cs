@@ -198,10 +198,12 @@
             // 
             this.txtCRM.BackColor = System.Drawing.Color.FloralWhite;
             this.txtCRM.Location = new System.Drawing.Point(30, 279);
+            this.txtCRM.MaxLength = 13;
             this.txtCRM.Multiline = true;
             this.txtCRM.Name = "txtCRM";
             this.txtCRM.Size = new System.Drawing.Size(302, 32);
             this.txtCRM.TabIndex = 38;
+            this.txtCRM.TextChanged += new System.EventHandler(this.txtCRM_TextChanged);
             // 
             // lblError
             // 
@@ -594,7 +596,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(984, 541);
+            this.ClientSize = new System.Drawing.Size(1001, 541);
             this.Controls.Add(this.panelCadastro);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

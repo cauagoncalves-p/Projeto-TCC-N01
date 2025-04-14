@@ -1,4 +1,4 @@
-﻿using Avalia__.AureaDataSetTableAdapters;
+﻿using Avalia__.AureaMaxDataSetTableAdapters;
 using Avalia__.Controles;
 using System;
 using System.Collections.Generic;

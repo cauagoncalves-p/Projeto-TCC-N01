@@ -1,4 +1,4 @@
-﻿using Avalia__.AureaDataSetTableAdapters;
+﻿using Avalia__.AureaMaxDataSetTableAdapters;
 using Avalia__.Controles;
 using System;
 using System.Collections.Generic;
@@ -64,7 +64,7 @@ namespace Avalia__
             string senhaCriptografada = configuracaoTelas.GerarHash(senhaDigitada);
 
             var usuario = tbMedicoTableAdapter.GetData()
-                .FirstOrDefault(u => u.CRM == txtCRMLogin.Text && u.senha == senhaCriptografada);
+                .FirstOrDefault(u => u.CRM == txtCRMLogin.Text && u.Senha == senhaCriptografada);
 
             if (usuario != null)
             {
@@ -84,15 +84,15 @@ namespace Avalia__
 
         private void txtCRMLogin_TextChanged(object sender, EventArgs e)
         {
-            // Se estiver apagando tudo, não faz formatação
-            if (string.IsNullOrWhiteSpace(txtCRMLogin.Text))
-                return;
+            // Evita loop
+            txtCRMLogin.TextChanged -= txtCRMLogin_TextChanged;
 
-            // Salva a posição atual do cursor
+            // Salva a posição do cursor antes de alterar
             int cursorPos = txtCRMLogin.SelectionStart;
 
             // Remove qualquer caractere que não seja número ou letra
-            string textoLimpo = new string(txtCRMLogin.Text.Where(char.IsLetterOrDigit).ToArray());
+            string textoOriginal = txtCRMLogin.Text;
+            string textoLimpo = new string(textoOriginal.Where(char.IsLetterOrDigit).ToArray());
 
             string crmFormatado = textoLimpo;
 
@@ -105,20 +105,25 @@ namespace Avalia__
                 crmFormatado = textoLimpo.Insert(3, "-").Insert(10, "/");
             }
 
-            // Só atualiza o texto se tiver mudado
+            // Só atualiza o texto se mudou
             if (txtCRMLogin.Text != crmFormatado)
             {
-                txtCRMLogin.TextChanged -= txtCRMLogin_TextChanged;
+                int diff = crmFormatado.Length - textoOriginal.Length;
+
                 txtCRMLogin.Text = crmFormatado;
 
-                // Ajusta o cursor (impede pulo pro final)
-                if (cursorPos <= txtCRMLogin.Text.Length)
-                    txtCRMLogin.SelectionStart = cursorPos;
-                else
-                    txtCRMLogin.SelectionStart = txtCRMLogin.Text.Length;
-
-                txtCRMLogin.TextChanged += txtCRMLogin_TextChanged;
+                // Reposiciona o cursor corretamente após inserção dos caracteres extras
+                txtCRMLogin.SelectionStart = Math.Max(0, Math.Min(crmFormatado.Length, cursorPos + diff));
             }
+
+            // Reativa o evento
+            txtCRMLogin.TextChanged += txtCRMLogin_TextChanged;
+        }
+
+        private void lblLinkCriarConta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FormularioCadastroMedico formularioCadastroMedico = new FormularioCadastroMedico();
+            formularioCadastroMedico.ShowDialog();  
         }
     }
 }

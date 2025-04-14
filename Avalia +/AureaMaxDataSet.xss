@@ -7,19 +7,19 @@
 <DiagramLayout xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ex:showrelationlabel="False" ViewPortX="0" ViewPortY="0" xmlns:ex="urn:schemas-microsoft-com:xml-msdatasource-layout-extended" xmlns="urn:schemas-microsoft-com:xml-msdatasource-layout">
   <Shapes>
     <Shape ID="DesignTable:tbInstituicao" ZOrder="4" X="70" Y="70" Height="248" Width="218" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="197" />
-    <Shape ID="DesignTable:tbMedico" ZOrder="1" X="315" Y="64" Height="324" Width="253" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
-    <Shape ID="DesignTable:tbUsuario" ZOrder="3" X="628" Y="70" Height="324" Width="270" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
+    <Shape ID="DesignTable:tbMedico" ZOrder="1" X="359" Y="69" Height="324" Width="269" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
+    <Shape ID="DesignTable:tbUsuario" ZOrder="2" X="627" Y="68" Height="324" Width="214" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
   </Shapes>
   <Connectors>
-    <Connector ID="DesignRelation:FK_tbMedico_tbInstituicao" ZOrder="2" LineWidth="11">
+    <Connector ID="DesignRelation:FK_tbMedico_tbInstituicao" ZOrder="3" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>288</X>
-          <Y>188</Y>
+          <Y>193</Y>
         </Point>
         <Point>
-          <X>315</X>
-          <Y>188</Y>
+          <X>359</X>
+          <Y>193</Y>
         </Point>
       </RoutePoints>
     </Connector>

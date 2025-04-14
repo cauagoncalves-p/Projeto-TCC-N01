@@ -1,4 +1,4 @@
-﻿using Avalia__.AureaDataSetTableAdapters;
+﻿using Avalia__.AureaMaxDataSetTableAdapters;
 using Avalia__.Controles;
 using System;
 using System.Collections.Generic;
@@ -22,7 +22,7 @@ namespace Avalia__
         private void AtualizarBanco()
         {
             tbInstituicaoTableAdapter tbInstituicaoTableAdapter = new tbInstituicaoTableAdapter();
-            AureaDataSet.tbInstituicaoDataTable tabelaInstituicao = tbInstituicaoTableAdapter.GetData();
+            AureaMaxDataSet.tbInstituicaoDataTable tabelaInstituicao = tbInstituicaoTableAdapter.GetData();
 
             cbxInstituicao.DataSource = tabelaInstituicao;
             cbxInstituicao.DisplayMember = "NomeInstituicao";         // Campo que aparece no ComboBox
@@ -132,7 +132,7 @@ namespace Avalia__
 
             DateTime dataCadastro = DateTime.Now;
 
-            novosdados.Insert(nome,sobrenome,crm,sexo,especialidade,cidade,Estado,endereco,telefone,idInstituicao,senhaCriptografada,cpf,email);
+            novosdados.Insert(nome,sobrenome,crm,sexo,especialidade,cidade,Estado,endereco,telefone,cpf,idInstituicao,email,senhaCriptografada);
             AtualizarBanco();
 
         }
@@ -209,7 +209,7 @@ namespace Avalia__
             txtEmail.Font = new Font("Segoe UI", 14, FontStyle.Regular);
             txtSenha.Font = new Font("Segoe UI", 16, FontStyle.Bold);
             txtconfirmeSenha.Font = new Font("Segoe UI", 16, FontStyle.Bold);
-
+            txtCRM.Font = new Font("Segoe UI", 14, FontStyle.Regular);
 
             Font fontePadrao = new Font("Inter", 13);
 
@@ -345,6 +345,44 @@ namespace Avalia__
             if (cbxEspecialidade.Items == null) return;
 
 
+        }
+
+        private void txtCRM_TextChanged(object sender, EventArgs e)
+        {
+            // Evita loop
+            txtCRM.TextChanged -= txtCRM_TextChanged;
+
+            // Salva a posição do cursor antes de alterar
+            int cursorPos = txtCRM.SelectionStart;
+
+            // Remove qualquer caractere que não seja número ou letra
+            string textoOriginal = txtCRM.Text;
+            string textoLimpo = new string(textoOriginal.Where(char.IsLetterOrDigit).ToArray());
+
+            string crmFormatado = textoLimpo;
+
+            if (textoLimpo.Length > 3 && textoLimpo.Length <= 9)
+            {
+                crmFormatado = textoLimpo.Insert(3, "-");
+            }
+            else if (textoLimpo.Length > 9)
+            {
+                crmFormatado = textoLimpo.Insert(3, "-").Insert(10, "/");
+            }
+
+            // Só atualiza o texto se mudou
+            if (txtCRM.Text != crmFormatado)
+            {
+                int diff = crmFormatado.Length - textoOriginal.Length;
+
+                txtCRM.Text = crmFormatado;
+
+                // Reposiciona o cursor corretamente após inserção dos caracteres extras
+                txtCRM.SelectionStart = Math.Max(0, Math.Min(crmFormatado.Length, cursorPos + diff));
+            }
+
+            // Reativa o evento
+            txtCRM.TextChanged += txtCRM_TextChanged;
         }
     }
 }

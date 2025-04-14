@@ -91,6 +91,7 @@
             this.lblLinkCriarConta.TabIndex = 9;
             this.lblLinkCriarConta.TabStop = true;
             this.lblLinkCriarConta.Text = "Solicitar acesso";
+            this.lblLinkCriarConta.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblLinkCriarConta_LinkClicked);
             // 
             // lblCriarConta
             // 

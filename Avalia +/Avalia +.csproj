@@ -47,13 +47,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AureaDataSet.cs">
-      <DependentUpon>AureaDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="AureaDataSet.Designer.cs">
+    <Compile Include="AureaMaxDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>AureaDataSet.xsd</DependentUpon>
+      <DependentUpon>AureaMaxDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Controles\ConfiguracaoTelas.cs" />
     <Compile Include="Controles\MensagemDosistema.cs" />
@@ -159,16 +156,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="AureaDataSet.xsc">
-      <DependentUpon>AureaDataSet.xsd</DependentUpon>
+    <None Include="AureaMaxDataSet.xsc">
+      <DependentUpon>AureaMaxDataSet.xsd</DependentUpon>
     </None>
-    <None Include="AureaDataSet.xsd">
+    <None Include="AureaMaxDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>AureaDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>AureaMaxDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="AureaDataSet.xss">
-      <DependentUpon>AureaDataSet.xsd</DependentUpon>
+    <None Include="AureaMaxDataSet.xss">
+      <DependentUpon>AureaMaxDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
