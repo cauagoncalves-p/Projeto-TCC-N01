@@ -108,6 +108,12 @@
     <Compile Include="FormularioLoginMedico.Designer.cs">
       <DependentUpon>FormularioLoginMedico.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormularioPaginaPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioPaginaPaciente.Designer.cs">
+      <DependentUpon>FormularioPaginaPaciente.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormularioTrocarSenha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioLoginMedico.resx">
       <DependentUpon>FormularioLoginMedico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioPaginaPaciente.resx">
+      <DependentUpon>FormularioPaginaPaciente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioTrocarSenha.resx">
       <DependentUpon>FormularioTrocarSenha.cs</DependentUpon>

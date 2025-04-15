@@ -16,7 +16,7 @@ namespace Avalia__
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormInicial());
+            Application.Run(new FormularioPaginaPaciente());
         }
     }
 }

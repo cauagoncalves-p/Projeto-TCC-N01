@@ -109,7 +109,6 @@
             this.panelCadastro.Padding = new System.Windows.Forms.Padding(0, 0, 20, 20);
             this.panelCadastro.Size = new System.Drawing.Size(719, 788);
             this.panelCadastro.TabIndex = 0;
-          
             // 
             // lblError
             // 
