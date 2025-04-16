@@ -60,6 +60,12 @@
     <Compile Include="FormInicial.Designer.cs">
       <DependentUpon>FormInicial.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormularioAgendamentoConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioAgendamentoConsulta.Designer.cs">
+      <DependentUpon>FormularioAgendamentoConsulta.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormularioCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     <Compile Include="Controles\RadiusButton.cs" />
     <EmbeddedResource Include="FormInicial.resx">
       <DependentUpon>FormInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioAgendamentoConsulta.resx">
+      <DependentUpon>FormularioAgendamentoConsulta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioCadastro.resx">
       <DependentUpon>FormularioCadastro.cs</DependentUpon>

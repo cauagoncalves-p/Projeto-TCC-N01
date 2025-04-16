@@ -75,7 +75,6 @@
             // 
             // panelCadastro
             // 
-            this.panelCadastro.AutoScroll = true;
             this.panelCadastro.Controls.Add(this.lblInstituicao);
             this.panelCadastro.Controls.Add(this.cbxInstituicao);
             this.panelCadastro.Controls.Add(this.lblEspecialidade);
@@ -119,7 +118,7 @@
             this.panelCadastro.Location = new System.Drawing.Point(133, 12);
             this.panelCadastro.Name = "panelCadastro";
             this.panelCadastro.Padding = new System.Windows.Forms.Padding(0, 0, 20, 20);
-            this.panelCadastro.Size = new System.Drawing.Size(719, 899);
+            this.panelCadastro.Size = new System.Drawing.Size(719, 947);
             this.panelCadastro.TabIndex = 1;
             // 
             // lblInstituicao
@@ -596,7 +595,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1001, 541);
+            this.ClientSize = new System.Drawing.Size(1001, 524);
             this.Controls.Add(this.panelCadastro);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

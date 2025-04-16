@@ -53,7 +53,7 @@
             this.panelLogin.Controls.Add(this.lblAvalia);
             this.panelLogin.Location = new System.Drawing.Point(325, 45);
             this.panelLogin.Name = "panelLogin";
-            this.panelLogin.Size = new System.Drawing.Size(335, 471);
+            this.panelLogin.Size = new System.Drawing.Size(335, 488);
             this.panelLogin.TabIndex = 1;
             // 
             // lblMedico
