@@ -66,6 +66,12 @@
     <Compile Include="FormularioAgendamentoConsulta.Designer.cs">
       <DependentUpon>FormularioAgendamentoConsulta.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormularioAvaliacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioAvaliacao.Designer.cs">
+      <DependentUpon>FormularioAvaliacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormularioCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioAgendamentoConsulta.resx">
       <DependentUpon>FormularioAgendamentoConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioAvaliacao.resx">
+      <DependentUpon>FormularioAvaliacao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioCadastro.resx">
       <DependentUpon>FormularioCadastro.cs</DependentUpon>
