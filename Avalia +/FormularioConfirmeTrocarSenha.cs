@@ -95,7 +95,7 @@ namespace Avalia__
             emailUsuario = email;
 
             RadiusButton controlador = new RadiusButton();
-            controlador.ConfigInicial(this, panelConfirmeSenha, btnSair, 25);
+            controlador.ConfigInicial(this, panelConfirmeSenha, btnSair, 25, Color.White);
             UIHelper.ArredondarBotao(btnConfirmar, 25);
             txtNovaSenha.TextChanged += (s, e) => AvaliarForcaSenha(txtNovaSenha.Text);
         }

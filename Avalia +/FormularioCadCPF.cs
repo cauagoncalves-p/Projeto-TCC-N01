@@ -34,7 +34,7 @@ namespace Avalia__
             InitializeComponent();
             MudarFonte();
             RadiusButton controlador = new RadiusButton();
-            controlador.ConfigInicial(this, panelVerificaCPF, btnSair, 25);
+            controlador.ConfigInicial(this, panelVerificaCPF, btnSair, 25, Color.White);
         }
         
         private void FormularioCadCPF_Load(object sender, EventArgs e)

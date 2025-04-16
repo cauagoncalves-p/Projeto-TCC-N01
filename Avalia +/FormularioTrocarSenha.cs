@@ -31,7 +31,7 @@ namespace Avalia__
             InitializeComponent();
             MudarFonte();
             RadiusButton controlador = new RadiusButton();
-            controlador.ConfigInicial(this, panelTrocarSenha, btnSair, 25);
+            controlador.ConfigInicial(this, panelTrocarSenha, btnSair, 25, Color.White);
         }
 
         private void FormularioTrocarSenha_Paint(object sender, PaintEventArgs e)

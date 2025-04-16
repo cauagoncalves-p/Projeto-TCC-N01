@@ -12,11 +12,31 @@ namespace Avalia__
 {
     public partial class FormularioPaginaPaciente: Form
     {
+
+        private void mudarFonte() 
+        {
+            lblAvalia.Font = new Font("Ariel", 16, FontStyle.Bold);
+            lblTitulo.Font = new Font("Ariel", 14, FontStyle.Bold);
+            lblSubTitulo.Font = new Font("Ariel", 12, FontStyle.Regular);
+            //lblAgendarBtn.Font = new Font("Ariel", 10, FontStyle.Regular);
+            //lblAvaliabtn.Font = new Font("Ariel", 10, FontStyle.Regular);
+            //lblcancelabtn.Font = new Font("Ariel", 10, FontStyle.Regular);
+            //lblhistoricobtn.Font = new Font("Ariel", 10, FontStyle.Regular);
+        }
         public FormularioPaginaPaciente()
         {
             InitializeComponent();
+            mudarFonte();
+            RadiusButton controlador = new RadiusButton();
+            controlador.ConfigInicial(this, panelPaginaPaciente, btnSair, 25, Color.White);
+            controlador.ConfigInicial(this, panelHeader, btnSair, 20, ColorTranslator.FromHtml("#c97c63"));
+
         }
 
-        
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            ConfiguracaoTelas configuracaoTelas = new ConfiguracaoTelas();
+            configuracaoTelas.FecharAba(this);
+        }
     }
 }

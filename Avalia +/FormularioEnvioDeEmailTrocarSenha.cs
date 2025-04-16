@@ -39,7 +39,7 @@ namespace Avalia__
             txt6.KeyUp += TextBox_KeyUp;
             MudarFonte();
             RadiusButton controlador = new RadiusButton();
-            controlador.ConfigInicial(this, panelConfirmeEmail, btnSair, 25);
+            controlador.ConfigInicial(this, panelConfirmeEmail, btnSair, 25, Color.White);
         }
 
         private void LimparCamposCodigo()

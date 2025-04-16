@@ -269,7 +269,7 @@ namespace Avalia__
         {
             InitializeComponent();
             RadiusButton controlador = new RadiusButton();
-            controlador.ConfigInicial(this, panelCadastro, btnSair, 25);
+            controlador.ConfigInicial(this, panelCadastro, btnSair, 25, Color.White );
             txtSenha.TextChanged += (s, e) => AvaliarForcaSenha(txtSenha.Text);
             MudarFonte();
             AtualizarBanco();

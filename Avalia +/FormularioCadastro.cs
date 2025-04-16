@@ -225,7 +225,7 @@ namespace Avalia__
             txtSenha.TextChanged += (s, e) => AvaliarForcaSenha(txtSenha.Text);
             MudarFonte();
             RadiusButton controlador = new RadiusButton();
-            controlador.ConfigInicial(this, panelCadastro, btnSair, 25);
+            controlador.ConfigInicial(this, panelCadastro, btnSair, 25, Color.White);
         }
 
         private void FormularioCadastro_Paint(object sender, PaintEventArgs e)

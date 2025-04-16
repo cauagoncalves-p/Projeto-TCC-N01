@@ -37,7 +37,7 @@ namespace Avalia__
             panel.Region = new Region(path);
         }
 
-        public void ConfigInicial(Form form, Panel panel, Button botao, int tamanhoBorda)
+        public void ConfigInicial(Form form, Panel panel, Button botao, int tamanhoBorda, Color color)
         {
             // Associa eventos ao Form passado
             form.Paint += (sender, e) => AplicarGradiente(form, e);
@@ -46,7 +46,7 @@ namespace Avalia__
             // Aplica borda arredondada no painel
             RadiusButton arredondar = new RadiusButton();
             arredondar.ArredondarBordas(panel, tamanhoBorda);
-            panel.BackColor = Color.White;
+            panel.BackColor = color;
 
             // Configura botão
             botao.FlatStyle = FlatStyle.Flat;

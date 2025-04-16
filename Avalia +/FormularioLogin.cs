@@ -41,7 +41,7 @@ namespace Avalia__
             InitializeComponent();
             MudarFonte();
             RadiusButton controlador = new RadiusButton();
-            controlador.ConfigInicial(this, panelLogin, btnSair, 25);
+            controlador.ConfigInicial(this, panelLogin, btnSair, 25, Color.White);
             UIHelper.ArredondarBotao(btnEntrar, 25);
         }
 
