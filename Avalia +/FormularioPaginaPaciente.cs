@@ -28,7 +28,8 @@ namespace Avalia__
             InitializeComponent();
             mudarFonte();
             RadiusButton controlador = new RadiusButton();
-            controlador.ConfigInicial(this, panelPaginaPaciente, btnSair, 25, Color.White);
+            controlador.ConfigInicial(this, panelbackground, btnSair, 25, Color.White);
+            controlador.ConfigInicial(this, panelConsultas, btnSair, 25, ColorTranslator.FromHtml("#F0E4DC"));
             controlador.ConfigInicial(this, panelHeader, btnSair, 20, ColorTranslator.FromHtml("#c97c63"));
 
         }
