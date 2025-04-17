@@ -584,7 +584,7 @@
             this.MinimizeBox = false;
             this.Name = "FormularioAvaliacao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormularioAvaliacao";
+            this.Text = "Formulário de avaliação";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormularioAvaliacao_Paint);
             this.comentarioPanel.ResumeLayout(false);
             this.comentarioPanel.PerformLayout();

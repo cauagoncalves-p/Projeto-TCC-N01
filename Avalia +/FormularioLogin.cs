@@ -18,6 +18,12 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
 
 namespace Avalia__
 {
+    public static class Sessao
+    {
+        public static int IdUsuarioLogado;
+        public static string EmailUsuarioLogado;
+    }
+
     public partial class FormularioLogin : Form
     {
         Mensagem_do_sistema mensagem_Do_Sistema = new Mensagem_do_sistema();

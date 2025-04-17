@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Avalia__.AureaMaxDataSetTableAdapters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,6 +27,15 @@ namespace Avalia__
             ConfigurarEstrelas();
             RadiusButton controlador = new RadiusButton();
             controlador.ConfigInicial(this, comentarioPanel , btnSair, 25, Color.White);
+
+            tbAvaliacaoTableAdapter avaliacao = new tbAvaliacaoTableAdapter();
+
+            //AureaMaxDataSet.tbMedicoDataTable medico = new tbMedicoTableAdapter.GetData();
+            //AureaMaxDataSet.tbInstituicaoDataTable tabelaInstituicao = tbInstituicaoTableAdapter.GetData();
+
+            //cbxInstituicao.DataSource = tabelaInstituicao;
+            //cbxInstituicao.DisplayMember = "NomeInstituicao";         // Campo que aparece no ComboBox
+            //cbxInstituicao.ValueMember = "IdInstituicao";  // Campo que você usa pra salvar no banco
 
         }
 

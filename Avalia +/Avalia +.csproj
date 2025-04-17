@@ -108,9 +108,7 @@
     <Compile Include="FormularioEnvioDeEmailTrocarSenha.Designer.cs">
       <DependentUpon>FormularioEnvioDeEmailTrocarSenha.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormularioLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="FormularioLogin.cs" />
     <Compile Include="FormularioLogin.Designer.cs">
       <DependentUpon>FormularioLogin.cs</DependentUpon>
     </Compile>
