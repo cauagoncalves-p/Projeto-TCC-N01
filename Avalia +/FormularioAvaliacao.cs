@@ -24,7 +24,9 @@ namespace Avalia__
         {
             InitializeComponent();
             ConfigurarEstrelas();
-           
+            RadiusButton controlador = new RadiusButton();
+            controlador.ConfigInicial(this, comentarioPanel , btnSair, 25, Color.White);
+
         }
 
         private void ConfigurarEstrelas()
@@ -89,5 +91,16 @@ namespace Avalia__
             }
         }
 
+        private void FormularioAvaliacao_Paint(object sender, PaintEventArgs e)
+        {
+            //Cor de fundo da tela 
+            ConfiguracaoTelas.PintarGradiente(this, e, "#f5e6d3", "#fdf6f0");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
+    
 }
