@@ -60,9 +60,10 @@
             // 
             this.lblMedico.AutoSize = true;
             this.lblMedico.BackColor = System.Drawing.Color.FloralWhite;
-            this.lblMedico.Location = new System.Drawing.Point(48, 371);
+            this.lblMedico.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMedico.Location = new System.Drawing.Point(50, 370);
             this.lblMedico.Name = "lblMedico";
-            this.lblMedico.Size = new System.Drawing.Size(230, 13);
+            this.lblMedico.Size = new System.Drawing.Size(228, 16);
             this.lblMedico.TabIndex = 15;
             this.lblMedico.Text = "Acesse seu painel profissional e agendamentos";
             // 
@@ -70,9 +71,10 @@
             // 
             this.lblPaciente.AutoSize = true;
             this.lblPaciente.BackColor = System.Drawing.Color.FloralWhite;
-            this.lblPaciente.Location = new System.Drawing.Point(57, 216);
+            this.lblPaciente.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPaciente.Location = new System.Drawing.Point(53, 222);
             this.lblPaciente.Name = "lblPaciente";
-            this.lblPaciente.Size = new System.Drawing.Size(230, 13);
+            this.lblPaciente.Size = new System.Drawing.Size(225, 16);
             this.lblPaciente.TabIndex = 14;
             this.lblPaciente.Text = "Acesse seu histórico de consultas e avaliações";
             // 
@@ -81,7 +83,8 @@
             this.btnEntrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(164)))), ((int)(((byte)(143)))));
             this.btnEntrar.FlatAppearance.BorderSize = 0;
             this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEntrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnEntrar.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntrar.ForeColor = System.Drawing.Color.White;
             this.btnEntrar.Location = new System.Drawing.Point(33, 414);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(265, 45);
@@ -113,7 +116,7 @@
             this.btnPaciente.FlatAppearance.BorderSize = 2;
             this.btnPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPaciente.Image = ((System.Drawing.Image)(resources.GetObject("btnPaciente.Image")));
-            this.btnPaciente.Location = new System.Drawing.Point(33, 118);
+            this.btnPaciente.Location = new System.Drawing.Point(33, 122);
             this.btnPaciente.Name = "btnPaciente";
             this.btnPaciente.Size = new System.Drawing.Size(265, 125);
             this.btnPaciente.TabIndex = 11;
@@ -140,11 +143,11 @@
             // lblentrar
             // 
             this.lblentrar.AutoSize = true;
-            this.lblentrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblentrar.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblentrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblentrar.Location = new System.Drawing.Point(21, 79);
+            this.lblentrar.Location = new System.Drawing.Point(74, 82);
             this.lblentrar.Name = "lblentrar";
-            this.lblentrar.Size = new System.Drawing.Size(194, 20);
+            this.lblentrar.Size = new System.Drawing.Size(171, 20);
             this.lblentrar.TabIndex = 1;
             this.lblentrar.Text = "Como você deseja entrar?";
             // 
@@ -152,7 +155,7 @@
             // 
             this.lblAvalia.AutoSize = true;
             this.lblAvalia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAvalia.Location = new System.Drawing.Point(136, 31);
+            this.lblAvalia.Location = new System.Drawing.Point(118, 31);
             this.lblAvalia.Name = "lblAvalia";
             this.lblAvalia.Size = new System.Drawing.Size(90, 24);
             this.lblAvalia.TabIndex = 0;

@@ -25,8 +25,8 @@ namespace Avalia__
             AureaMaxDataSet.tbInstituicaoDataTable tabelaInstituicao = tbInstituicaoTableAdapter.GetData();
 
             cbxInstituicao.DataSource = tabelaInstituicao;
-            cbxInstituicao.DisplayMember = "NomeInstituicao";         // Campo que aparece no ComboBox
-            cbxInstituicao.ValueMember = "IdInstituicao";  // Campo que você usa pra salvar no banco
+            cbxInstituicao.DisplayMember = "NomeInstituicao";
+            cbxInstituicao.ValueMember = "IdInstituicao";
         }
 
         private void EnviarDado()
@@ -192,38 +192,13 @@ namespace Avalia__
         }
         private void MudarFonte()
         {
-            dtpDataNascimento.Font = new Font("Segoe UI", 12); // Aumenta a fonte → aumenta a altura
-            mktTelefone.Font = new Font("Segoe UI", 12); // Aumenta a fonte → aumenta a altura
-            cbxGenero.Font = new Font("Segoe UI", 12); // Aumenta a fonte → aumenta a altura
-            cbxEstado.Font = new Font("Segoe UI", 14); // Aumenta a fonte → aumenta a altura
-            cbxEspecialidade.Font = new Font("Segoe UI", 14); // Aumenta a fonte → aumenta a altura
-            cbxInstituicao.Font = new Font("Segoe UI", 14); // Aumenta a fonte → aumenta a altura
-            lblAvaliaCadastro.Font = new Font("Segoe UI", 14, FontStyle.Bold);
-            lblCompletecadastro.Font = new Font("Inter", 15, FontStyle.Bold);
-            lblCPF.Font = new Font("Segoe UI", 14, FontStyle.Bold);
+            dtpDataNascimento.Font = new Font("Segoe UI", 12);
+            mktTelefone.Font = new Font("Segoe UI", 12); 
+            cbxGenero.Font = new Font("Segoe UI", 12); 
+            cbxEstado.Font = new Font("Segoe UI", 14); 
+            cbxEspecialidade.Font = new Font("Segoe UI", 14); 
+            cbxInstituicao.Font = new Font("Segoe UI", 14); 
             mktCPF.Font = new Font("Segoe UI", 12);
-            txtNome.Font = new Font("Segoe UI", 14, FontStyle.Regular);
-            txtSobrenome.Font = new Font("Segoe UI", 14, FontStyle.Regular);
-            txtEndereco.Font = new Font("Segoe UI", 14, FontStyle.Regular);
-            txtCidade.Font = new Font("Segoe UI", 14, FontStyle.Regular);
-            txtEmail.Font = new Font("Segoe UI", 14, FontStyle.Regular);
-            txtSenha.Font = new Font("Segoe UI", 16, FontStyle.Bold);
-            txtconfirmeSenha.Font = new Font("Segoe UI", 16, FontStyle.Bold);
-            txtCRM.Font = new Font("Segoe UI", 14, FontStyle.Regular);
-
-            Font fontePadrao = new Font("Inter", 13);
-
-            foreach (Control ctrl in panelCadastro.Controls)
-            {
-                if (ctrl is Label)
-                {
-                    if (ctrl == lblCompletecadastro && ctrl == lblAvaliaCadastro)
-                    {
-                        continue;
-                    }
-                    ctrl.Font = fontePadrao;
-                }
-            }
         }
         private bool VerificaIdade()
         {
@@ -339,14 +314,6 @@ namespace Avalia__
             formularioCadCPF.ShowDialog();
 
         }
-
-        private void cbxInstituicao_SelectedValueChanged(object sender, EventArgs e)
-        {
-            if (cbxEspecialidade.Items == null) return;
-
-
-        }
-
         private void txtCRM_TextChanged(object sender, EventArgs e)
         {
             // Evita loop

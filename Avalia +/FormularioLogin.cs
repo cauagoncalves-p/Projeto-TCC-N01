@@ -18,12 +18,6 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
 
 namespace Avalia__
 {
-    public static class Sessao
-    {
-        public static int IdUsuarioLogado;
-        public static string EmailUsuarioLogado;
-    }
-
     public partial class FormularioLogin : Form
     {
         Mensagem_do_sistema mensagem_Do_Sistema = new Mensagem_do_sistema();
@@ -46,6 +40,7 @@ namespace Avalia__
         {
             InitializeComponent();
             MudarFonte();
+            
             RadiusButton controlador = new RadiusButton();
             controlador.ConfigInicial(this, panelLogin, btnSair, 25, Color.White);
             UIHelper.ArredondarBotao(btnEntrar, 25);
@@ -90,6 +85,8 @@ namespace Avalia__
             if (usuario != null)
             {
                 mensagem_Do_Sistema.MensagemInformation("Logado com sucesso");
+                FormularioPaginaPaciente paciente = new FormularioPaginaPaciente(usuario.Id_usuario, usuario.Email);
+                paciente.ShowDialog();
             }
             else
             {

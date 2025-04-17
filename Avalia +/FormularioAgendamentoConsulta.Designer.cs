@@ -35,40 +35,44 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblObservacoes = new System.Windows.Forms.Label();
             this.lblObsevacao = new System.Windows.Forms.Label();
-            this.dtpAtendimento = new System.Windows.Forms.ComboBox();
+            this.cbxAtendimento = new System.Windows.Forms.ComboBox();
             this.lblLocal = new System.Windows.Forms.Label();
             this.dtpData = new System.Windows.Forms.DateTimePicker();
             this.lblData = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbxMedico = new System.Windows.Forms.ComboBox();
             this.lblMedicos = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbxEspecialidade = new System.Windows.Forms.ComboBox();
             this.c = new System.Windows.Forms.Label();
             this.lblinfoConsulta = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lblsubtitulo = new System.Windows.Forms.Label();
             this.btnSair = new System.Windows.Forms.Button();
+            this.txtConsultaMotivo = new System.Windows.Forms.TextBox();
+            this.lblMotivoConsulta = new System.Windows.Forms.Label();
             this.panelAgendar.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelAgendar
             // 
+            this.panelAgendar.Controls.Add(this.txtConsultaMotivo);
+            this.panelAgendar.Controls.Add(this.lblMotivoConsulta);
             this.panelAgendar.Controls.Add(this.btnCancelar);
             this.panelAgendar.Controls.Add(this.btnContinuar);
             this.panelAgendar.Controls.Add(this.textBox1);
             this.panelAgendar.Controls.Add(this.lblObservacoes);
             this.panelAgendar.Controls.Add(this.lblObsevacao);
-            this.panelAgendar.Controls.Add(this.dtpAtendimento);
+            this.panelAgendar.Controls.Add(this.cbxAtendimento);
             this.panelAgendar.Controls.Add(this.lblLocal);
             this.panelAgendar.Controls.Add(this.dtpData);
             this.panelAgendar.Controls.Add(this.lblData);
-            this.panelAgendar.Controls.Add(this.comboBox2);
+            this.panelAgendar.Controls.Add(this.cbxMedico);
             this.panelAgendar.Controls.Add(this.lblMedicos);
-            this.panelAgendar.Controls.Add(this.comboBox1);
+            this.panelAgendar.Controls.Add(this.cbxEspecialidade);
             this.panelAgendar.Controls.Add(this.c);
             this.panelAgendar.Controls.Add(this.lblinfoConsulta);
             this.panelAgendar.Location = new System.Drawing.Point(70, 135);
             this.panelAgendar.Name = "panelAgendar";
-            this.panelAgendar.Size = new System.Drawing.Size(855, 468);
+            this.panelAgendar.Size = new System.Drawing.Size(855, 668);
             this.panelAgendar.TabIndex = 0;
             // 
             // btnCancelar
@@ -76,7 +80,7 @@
             this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(164)))), ((int)(((byte)(143)))));
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Location = new System.Drawing.Point(531, 408);
+            this.btnCancelar.Location = new System.Drawing.Point(531, 577);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(129, 45);
             this.btnCancelar.TabIndex = 16;
@@ -88,7 +92,7 @@
             this.btnContinuar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(164)))), ((int)(((byte)(143)))));
             this.btnContinuar.FlatAppearance.BorderSize = 0;
             this.btnContinuar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnContinuar.Location = new System.Drawing.Point(679, 408);
+            this.btnContinuar.Location = new System.Drawing.Point(679, 577);
             this.btnContinuar.Name = "btnContinuar";
             this.btnContinuar.Size = new System.Drawing.Size(129, 45);
             this.btnContinuar.TabIndex = 15;
@@ -99,7 +103,7 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(245)))));
             this.textBox1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(33, 281);
+            this.textBox1.Location = new System.Drawing.Point(33, 450);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -111,7 +115,7 @@
             this.lblObservacoes.AutoSize = true;
             this.lblObservacoes.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblObservacoes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblObservacoes.Location = new System.Drawing.Point(30, 236);
+            this.lblObservacoes.Location = new System.Drawing.Point(30, 405);
             this.lblObservacoes.Name = "lblObservacoes";
             this.lblObservacoes.Size = new System.Drawing.Size(150, 20);
             this.lblObservacoes.TabIndex = 13;
@@ -121,21 +125,21 @@
             // 
             this.lblObsevacao.AutoSize = true;
             this.lblObsevacao.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblObsevacao.Location = new System.Drawing.Point(29, 246);
+            this.lblObsevacao.Location = new System.Drawing.Point(29, 267);
             this.lblObsevacao.Name = "lblObsevacao";
             this.lblObsevacao.Size = new System.Drawing.Size(0, 20);
             this.lblObsevacao.TabIndex = 12;
             // 
-            // dtpAtendimento
+            // cbxAtendimento
             // 
-            this.dtpAtendimento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(245)))));
-            this.dtpAtendimento.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.dtpAtendimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpAtendimento.FormattingEnabled = true;
-            this.dtpAtendimento.Location = new System.Drawing.Point(455, 181);
-            this.dtpAtendimento.Name = "dtpAtendimento";
-            this.dtpAtendimento.Size = new System.Drawing.Size(346, 33);
-            this.dtpAtendimento.TabIndex = 11;
+            this.cbxAtendimento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(245)))));
+            this.cbxAtendimento.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cbxAtendimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxAtendimento.FormattingEnabled = true;
+            this.cbxAtendimento.Location = new System.Drawing.Point(455, 181);
+            this.cbxAtendimento.Name = "cbxAtendimento";
+            this.cbxAtendimento.Size = new System.Drawing.Size(346, 33);
+            this.cbxAtendimento.TabIndex = 11;
             // 
             // lblLocal
             // 
@@ -168,16 +172,17 @@
             this.lblData.TabIndex = 8;
             this.lblData.Text = "Data";
             // 
-            // comboBox2
+            // cbxMedico
             // 
-            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(245)))));
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(455, 84);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(346, 33);
-            this.comboBox2.TabIndex = 7;
+            this.cbxMedico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(245)))));
+            this.cbxMedico.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cbxMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxMedico.FormattingEnabled = true;
+            this.cbxMedico.Location = new System.Drawing.Point(455, 84);
+            this.cbxMedico.Name = "cbxMedico";
+            this.cbxMedico.Size = new System.Drawing.Size(346, 33);
+            this.cbxMedico.TabIndex = 7;
+            this.cbxMedico.SelectedIndexChanged += new System.EventHandler(this.cbxMedico_SelectedIndexChanged);
             // 
             // lblMedicos
             // 
@@ -190,16 +195,17 @@
             this.lblMedicos.TabIndex = 6;
             this.lblMedicos.Text = "Médico(a)";
             // 
-            // comboBox1
+            // cbxEspecialidade
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(245)))));
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(33, 84);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(346, 33);
-            this.comboBox1.TabIndex = 5;
+            this.cbxEspecialidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(245)))));
+            this.cbxEspecialidade.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cbxEspecialidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxEspecialidade.FormattingEnabled = true;
+            this.cbxEspecialidade.Location = new System.Drawing.Point(33, 84);
+            this.cbxEspecialidade.Name = "cbxEspecialidade";
+            this.cbxEspecialidade.Size = new System.Drawing.Size(346, 33);
+            this.cbxEspecialidade.TabIndex = 5;
+            this.cbxEspecialidade.SelectedIndexChanged += new System.EventHandler(this.cbxEspecialidade_SelectedIndexChanged);
             // 
             // c
             // 
@@ -261,10 +267,33 @@
             this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSair.UseVisualStyleBackColor = false;
             // 
+            // txtConsultaMotivo
+            // 
+            this.txtConsultaMotivo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(245)))));
+            this.txtConsultaMotivo.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConsultaMotivo.Location = new System.Drawing.Point(34, 294);
+            this.txtConsultaMotivo.Multiline = true;
+            this.txtConsultaMotivo.Name = "txtConsultaMotivo";
+            this.txtConsultaMotivo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtConsultaMotivo.Size = new System.Drawing.Size(775, 84);
+            this.txtConsultaMotivo.TabIndex = 18;
+            // 
+            // lblMotivoConsulta
+            // 
+            this.lblMotivoConsulta.AutoSize = true;
+            this.lblMotivoConsulta.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMotivoConsulta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
+            this.lblMotivoConsulta.Location = new System.Drawing.Point(31, 249);
+            this.lblMotivoConsulta.Name = "lblMotivoConsulta";
+            this.lblMotivoConsulta.Size = new System.Drawing.Size(127, 20);
+            this.lblMotivoConsulta.TabIndex = 17;
+            this.lblMotivoConsulta.Text = "Motivo da consulta";
+            // 
             // FormularioAgendamentoConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.lblsubtitulo);
@@ -289,17 +318,19 @@
         private System.Windows.Forms.Label lblsubtitulo;
         private System.Windows.Forms.Label c;
         private System.Windows.Forms.Label lblObsevacao;
-        private System.Windows.Forms.ComboBox dtpAtendimento;
+        private System.Windows.Forms.ComboBox cbxAtendimento;
         private System.Windows.Forms.Label lblLocal;
         private System.Windows.Forms.DateTimePicker dtpData;
         private System.Windows.Forms.Label lblData;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbxMedico;
         private System.Windows.Forms.Label lblMedicos;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbxEspecialidade;
         private System.Windows.Forms.Label lblObservacoes;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnContinuar;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.TextBox txtConsultaMotivo;
+        private System.Windows.Forms.Label lblMotivoConsulta;
     }
 }

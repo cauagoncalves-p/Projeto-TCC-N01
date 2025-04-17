@@ -194,6 +194,7 @@
             this.btnAvaliarconsulta.Text = "Avaliar consulta";
             this.btnAvaliarconsulta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnAvaliarconsulta.UseVisualStyleBackColor = false;
+            this.btnAvaliarconsulta.Click += new System.EventHandler(this.btnAvaliarconsulta_Click);
             // 
             // btnAgendar
             // 

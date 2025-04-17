@@ -12,6 +12,8 @@ namespace Avalia__
 {
     public partial class FormularioPaginaPaciente: Form
     {
+        private int idUsuario;
+        private string emailUsuario;
 
         private void mudarFonte() 
         {
@@ -23,10 +25,13 @@ namespace Avalia__
             //lblcancelabtn.Font = new Font("Ariel", 10, FontStyle.Regular);
             //lblhistoricobtn.Font = new Font("Ariel", 10, FontStyle.Regular);
         }
-        public FormularioPaginaPaciente()
+        public FormularioPaginaPaciente(int idUsuario, string emailUsuario)
         {
             InitializeComponent();
             mudarFonte();
+            this.idUsuario = idUsuario;
+            this.emailUsuario = emailUsuario;
+
             RadiusButton controlador = new RadiusButton();
             controlador.ConfigInicial(this, panelbackground, btnSair, 25, Color.White);
             controlador.ConfigInicial(this, panelConsultas, btnSair, 25, ColorTranslator.FromHtml("#F0E4DC"));
@@ -45,6 +50,11 @@ namespace Avalia__
             FormularioAgendamentoConsulta form = new FormularioAgendamentoConsulta();
             form.ShowDialog();
 
+        }
+
+        private void btnAvaliarconsulta_Click(object sender, EventArgs e)
+        {
+         
         }
     }
 }

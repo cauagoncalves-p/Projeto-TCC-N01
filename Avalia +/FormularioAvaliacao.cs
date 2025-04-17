@@ -11,6 +11,7 @@ using System.Windows.Forms;
 
 namespace Avalia__
 {
+
     public partial class FormularioAvaliacao: Form
     {
         private Image estrelaVazia;
@@ -21,10 +22,17 @@ namespace Avalia__
         private PictureBox[] estrelasConhecimento = new PictureBox[5];
         private PictureBox[] estrelasRespeito = new PictureBox[5];
 
-        public FormularioAvaliacao()
+        private int idUsuario;
+        private string emailUsuario;
+
+
+        public FormularioAvaliacao(int idUsuario, string emailUsuario)
         {
             InitializeComponent();
             ConfigurarEstrelas();
+            this.emailUsuario = emailUsuario;
+            this.idUsuario = idUsuario;
+
             RadiusButton controlador = new RadiusButton();
             controlador.ConfigInicial(this, comentarioPanel , btnSair, 25, Color.White);
 
@@ -36,7 +44,6 @@ namespace Avalia__
             //cbxInstituicao.DataSource = tabelaInstituicao;
             //cbxInstituicao.DisplayMember = "NomeInstituicao";         // Campo que aparece no ComboBox
             //cbxInstituicao.ValueMember = "IdInstituicao";  // Campo que você usa pra salvar no banco
-
         }
 
         private void ConfigurarEstrelas()

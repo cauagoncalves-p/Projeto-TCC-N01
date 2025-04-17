@@ -53,26 +53,10 @@ namespace Avalia__
                 btnPaciente.ForeColor = ColorTranslator.FromHtml("#ffffff");
             }
         }
-
-
-        private void MudarFonte()
-        {
-            lblAvalia.Font = new Font("Segoe UI", 14, FontStyle.Bold);
-            lblentrar.Font = new Font("Inter", 16, FontStyle.Bold); 
-            btnMedico.Font = new Font("Segoe UI", 12, FontStyle.Bold);
-            btnPaciente.Font = new Font("Segoe UI", 12, FontStyle.Bold);
-            btnEntrar.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-            lblMedico.ForeColor = ColorTranslator.FromHtml("#5a4a42");
-            lblPaciente.ForeColor = ColorTranslator.FromHtml("#5a4a42");
-            btnMedico.ForeColor = ColorTranslator.FromHtml("#5a4a42");
-            btnPaciente.ForeColor = ColorTranslator.FromHtml("#5a4a42");
-            btnEntrar.BackColor = ColorTranslator.FromHtml("#d8a48f");
-        }
-
         public FormInicial()
         {
             InitializeComponent();
-            MudarFonte();
+          
             RadiusButton controlador = new RadiusButton();
             controlador.ConfigInicial(this, panelLogin, btnSair, 25, Color.White);
             UIHelper.ArredondarBotao(btnEntrar, 25);

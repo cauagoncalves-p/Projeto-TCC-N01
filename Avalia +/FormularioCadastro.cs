@@ -173,32 +173,8 @@ namespace Avalia__
             mktTelefone.Font = new Font("Segoe UI", 12); // Aumenta a fonte → aumenta a altura
             cbxGenero.Font = new Font("Segoe UI", 12); // Aumenta a fonte → aumenta a altura
             cbxEstado.Font = new Font("Segoe UI", 14); // Aumenta a fonte → aumenta a altura
-            lblAvaliaCadastro.Font = new Font("Segoe UI", 14, FontStyle.Bold);
-            lblCompletecadastro.Font = new Font("Inter", 15, FontStyle.Bold);
-            lblCPF.Font = new Font("Segoe UI", 14, FontStyle.Bold);
             mktCPF.Font = new Font("Segoe UI", 12);
-            txtNome.Font = new Font("Segoe UI", 14, FontStyle.Regular);
-            txtSobrenome.Font = new Font("Segoe UI", 14, FontStyle.Regular);
-            txtEndereco.Font = new Font("Segoe UI", 14, FontStyle.Regular);
-            txtCidade.Font = new Font("Segoe UI", 14, FontStyle.Regular);
-            txtEmail.Font = new Font("Segoe UI", 14, FontStyle.Regular);
-            txtSenha.Font = new Font("Segoe UI", 16, FontStyle.Bold);
-            txtconfirmeSenha.Font = new Font("Segoe UI", 16, FontStyle.Bold);
 
-
-            Font fontePadrao = new Font("Inter", 13);
-
-            foreach (Control ctrl in panelCadastro.Controls)
-            {
-                if (ctrl is Label)
-                {
-                    if (ctrl == lblCompletecadastro && ctrl == lblAvaliaCadastro)
-                    {
-                        continue;
-                    }
-                    ctrl.Font = fontePadrao;
-                }
-            }
         }
 
         private bool CpfJaExiste(string cpf)
