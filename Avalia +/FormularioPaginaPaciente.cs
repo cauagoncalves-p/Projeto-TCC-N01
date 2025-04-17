@@ -39,5 +39,12 @@ namespace Avalia__
             ConfiguracaoTelas configuracaoTelas = new ConfiguracaoTelas();
             configuracaoTelas.FecharAba(this);
         }
+
+        private void btnAgendar_Click(object sender, EventArgs e)
+        {
+            FormularioAgendamentoConsulta form = new FormularioAgendamentoConsulta();
+            form.ShowDialog();
+
+        }
     }
 }

@@ -28,15 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioAvaliacao));
             this.comentarioPanel = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.textBoxComentarioPanel = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -47,20 +44,22 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtDriConsulta = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.comentarioPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // comentarioPanel
             // 
             this.comentarioPanel.AutoScroll = true;
-            this.comentarioPanel.Controls.Add(this.label13);
+            this.comentarioPanel.Controls.Add(this.label10);
+            this.comentarioPanel.Controls.Add(this.label9);
+            this.comentarioPanel.Controls.Add(this.label8);
             this.comentarioPanel.Controls.Add(this.label12);
             this.comentarioPanel.Controls.Add(this.label11);
             this.comentarioPanel.Controls.Add(this.button2);
             this.comentarioPanel.Controls.Add(this.checkBox1);
-            this.comentarioPanel.Controls.Add(this.label10);
-            this.comentarioPanel.Controls.Add(this.label9);
-            this.comentarioPanel.Controls.Add(this.label8);
             this.comentarioPanel.Controls.Add(this.label7);
             this.comentarioPanel.Controls.Add(this.textBoxComentarioPanel);
             this.comentarioPanel.Controls.Add(this.label6);
@@ -71,20 +70,10 @@
             this.comentarioPanel.Controls.Add(this.label2);
             this.comentarioPanel.Controls.Add(this.txtDriConsulta);
             this.comentarioPanel.Controls.Add(this.button1);
-            this.comentarioPanel.Location = new System.Drawing.Point(67, 25);
+            this.comentarioPanel.Location = new System.Drawing.Point(62, 46);
             this.comentarioPanel.Name = "comentarioPanel";
-            this.comentarioPanel.Size = new System.Drawing.Size(700, 537);
+            this.comentarioPanel.Size = new System.Drawing.Size(809, 537);
             this.comentarioPanel.TabIndex = 1;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(3, 257);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(418, 13);
-            this.label13.TabIndex = 31;
-            this.label13.Text = "---------------------------------------------------------------------------------" +
-    "--------------------------------------------------------";
             // 
             // label12
             // 
@@ -99,12 +88,11 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(3, 59);
+            this.label11.Location = new System.Drawing.Point(-3, 56);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(418, 13);
+            this.label11.Size = new System.Drawing.Size(928, 13);
             this.label11.TabIndex = 29;
-            this.label11.Text = "---------------------------------------------------------------------------------" +
-    "--------------------------------------------------------";
+            this.label11.Text = resources.GetString("label11.Text");
             // 
             // button2
             // 
@@ -125,36 +113,6 @@
             this.checkBox1.TabIndex = 27;
             this.checkBox1.Text = "Manter minha avaliação anônima (Seu nome não sera divulgado) ";
             this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(3, 211);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(418, 13);
-            this.label10.TabIndex = 25;
-            this.label10.Text = "---------------------------------------------------------------------------------" +
-    "--------------------------------------------------------";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 166);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(418, 13);
-            this.label9.TabIndex = 24;
-            this.label9.Text = "---------------------------------------------------------------------------------" +
-    "--------------------------------------------------------";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(4, 124);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(418, 13);
-            this.label8.TabIndex = 23;
-            this.label8.Text = "---------------------------------------------------------------------------------" +
-    "--------------------------------------------------------";
             // 
             // label7
             // 
@@ -262,11 +220,38 @@
             this.button1.Text = "Enviar Avaliação";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(-68, 219);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(928, 13);
+            this.label8.TabIndex = 31;
+            this.label8.Text = resources.GetString("label8.Text");
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(-68, 172);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(928, 13);
+            this.label9.TabIndex = 32;
+            this.label9.Text = resources.GetString("label9.Text");
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(-35, 124);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(928, 13);
+            this.label10.TabIndex = 33;
+            this.label10.Text = resources.GetString("label10.Text");
+            // 
             // FormularioAvaliacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(829, 605);
+            this.ClientSize = new System.Drawing.Size(932, 652);
             this.Controls.Add(this.comentarioPanel);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -282,14 +267,10 @@
         #endregion
 
         private System.Windows.Forms.Panel comentarioPanel;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBoxComentarioPanel;
         private System.Windows.Forms.Label label6;
@@ -300,5 +281,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label txtDriConsulta;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
     }
 }

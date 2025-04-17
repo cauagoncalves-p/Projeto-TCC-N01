@@ -210,6 +210,7 @@
             this.btnAgendar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnAgendar.UseMnemonic = false;
             this.btnAgendar.UseVisualStyleBackColor = false;
+            this.btnAgendar.Click += new System.EventHandler(this.btnAgendar_Click);
             // 
             // panelHeader
             // 
