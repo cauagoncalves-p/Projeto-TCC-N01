@@ -15,6 +15,14 @@ namespace Avalia__
         public FormularioAgendamentoConsulta()
         {
             InitializeComponent();
+            RadiusButton controlador = new RadiusButton();
+            controlador.ConfigInicial(this, panelAgendar, btnSair, 25, Color.White);
+        }
+
+        private void FormularioAgendamentoConsulta_Paint(object sender, PaintEventArgs e)
+        {
+            //Cor de fundo da tela 
+            ConfiguracaoTelas.PintarGradiente(this, e, "#f5e6d3", "#fdf6f0");
         }
     }
 }
