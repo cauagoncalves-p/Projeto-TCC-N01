@@ -96,6 +96,12 @@
     <Compile Include="FormularioConfirmeTrocarSenha.Designer.cs">
       <DependentUpon>FormularioConfirmeTrocarSenha.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormularioConsultasAgendadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioConsultasAgendadas.Designer.cs">
+      <DependentUpon>FormularioConsultasAgendadas.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormularioDeEnvioCodigo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioConfirmeTrocarSenha.resx">
       <DependentUpon>FormularioConfirmeTrocarSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioConsultasAgendadas.resx">
+      <DependentUpon>FormularioConsultasAgendadas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioDeEnvioCodigo.resx">
       <DependentUpon>FormularioDeEnvioCodigo.cs</DependentUpon>

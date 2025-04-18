@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioAvaliacao));
             this.comentarioPanel = new System.Windows.Forms.Panel();
+            this.btnSair = new System.Windows.Forms.Button();
             this.picRespeito2 = new System.Windows.Forms.PictureBox();
             this.picRespeito3 = new System.Windows.Forms.PictureBox();
             this.picRespeito4 = new System.Windows.Forms.PictureBox();
@@ -71,7 +72,6 @@
             this.txtDriConsulta = new System.Windows.Forms.Label();
             this.btnEnviarAvaliacao = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.btnSair = new System.Windows.Forms.Button();
             this.comentarioPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picRespeito2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picRespeito3)).BeginInit();
@@ -143,6 +143,21 @@
             this.comentarioPanel.Name = "comentarioPanel";
             this.comentarioPanel.Size = new System.Drawing.Size(878, 639);
             this.comentarioPanel.TabIndex = 1;
+            // 
+            // btnSair
+            // 
+            this.btnSair.BackColor = System.Drawing.Color.White;
+            this.btnSair.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSair.FlatAppearance.BorderSize = 0;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
+            this.btnSair.Location = new System.Drawing.Point(805, 12);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(50, 43);
+            this.btnSair.TabIndex = 32;
+            this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // picRespeito2
             // 
@@ -558,20 +573,6 @@
             this.label8.Size = new System.Drawing.Size(877, 13);
             this.label8.TabIndex = 31;
             this.label8.Text = resources.GetString("label8.Text");
-            // 
-            // btnSair
-            // 
-            this.btnSair.BackColor = System.Drawing.Color.White;
-            this.btnSair.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnSair.FlatAppearance.BorderSize = 0;
-            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
-            this.btnSair.Location = new System.Drawing.Point(805, 12);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(50, 43);
-            this.btnSair.TabIndex = 32;
-            this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSair.UseVisualStyleBackColor = false;
             // 
             // FormularioAvaliacao
             // 
