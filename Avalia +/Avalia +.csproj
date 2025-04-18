@@ -60,6 +60,12 @@
     <Compile Include="FormInicial.Designer.cs">
       <DependentUpon>FormInicial.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormularioAgendamentoConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioAgendamentoConsulta.Designer.cs">
+      <DependentUpon>FormularioAgendamentoConsulta.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormularioAvaliacao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,12 @@
     </Compile>
     <Compile Include="FormularioConfirmeTrocarSenha.Designer.cs">
       <DependentUpon>FormularioConfirmeTrocarSenha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormularioConsultasAgendadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioConsultasAgendadas.Designer.cs">
+      <DependentUpon>FormularioConsultasAgendadas.cs</DependentUpon>
     </Compile>
     <Compile Include="FormularioDeEnvioCodigo.cs">
       <SubType>Form</SubType>
@@ -132,6 +144,9 @@
     <EmbeddedResource Include="FormInicial.resx">
       <DependentUpon>FormInicial.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormularioAgendamentoConsulta.resx">
+      <DependentUpon>FormularioAgendamentoConsulta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormularioAvaliacao.resx">
       <DependentUpon>FormularioAvaliacao.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioConfirmeTrocarSenha.resx">
       <DependentUpon>FormularioConfirmeTrocarSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioConsultasAgendadas.resx">
+      <DependentUpon>FormularioConsultasAgendadas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioDeEnvioCodigo.resx">
       <DependentUpon>FormularioDeEnvioCodigo.cs</DependentUpon>
@@ -167,13 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <None Include="AureaMaxDataSet.xsc">
       <DependentUpon>AureaMaxDataSet.xsd</DependentUpon>
     </None>
@@ -189,6 +203,11 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
