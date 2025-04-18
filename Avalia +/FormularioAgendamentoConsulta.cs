@@ -1,4 +1,5 @@
 ﻿using Avalia__.AureaMaxDataSetTableAdapters;
+using Avalia__.Controles;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +14,42 @@ namespace Avalia__
 {
     public partial class FormularioAgendamentoConsulta: Form
     {
+        private int IdUsuario;
+        private string emailUsuario;
+        Mensagem_do_sistema mensagem_Do_Sistema = new Mensagem_do_sistema();
+        
+        private void atualizarBanco() 
+        {
+            tbInstituicaoTableAdapter tbInstituicaoTableAdapter = new tbInstituicaoTableAdapter();
+            AureaMaxDataSet.tbInstituicaoDataTable tabelaInstituicao = tbInstituicaoTableAdapter.GetData();
 
+            tbMedicoTableAdapter tbMedicoTableAdapter = new tbMedicoTableAdapter();
+            AureaMaxDataSet.tbMedicoDataTable tbMedicos = tbMedicoTableAdapter.GetData();
+
+            cbxMedico.DataSource = tbMedicos;
+            cbxMedico.DisplayMember = "Nome";
+            cbxMedico.ValueMember = "IdMedico";
+        
+            cbxAtendimento.DataSource = tabelaInstituicao;
+            cbxAtendimento.DisplayMember = "NomeInstituicao";
+            cbxAtendimento.ValueMember = "IdInstituicao";
+        }
+        
+        private void novoDado() 
+        {
+            tbConsultaTableAdapter consulta = new tbConsultaTableAdapter();
+            int Id_medico = Convert.ToInt32(cbxMedico.SelectedValue);
+            int Id_instituicao = Convert.ToInt32(cbxAtendimento.SelectedValue);
+            DateTime data = dtpData.Value;
+            string motivo = txtConsultaMotivo.Text;
+            string observacao = txtobservacao.Text;
+            string statusconsulta = "Agendada";
+
+           
+            consulta.Insert(IdUsuario,Id_medico,data,motivo,statusconsulta,observacao);
+            atualizarBanco();
+
+        }
         private void carregaEspecialidade() 
         {
             using (var adapter = new tbMedicoTableAdapter())
@@ -39,13 +75,15 @@ namespace Avalia__
 
 
 
-        public FormularioAgendamentoConsulta()
+        public FormularioAgendamentoConsulta(int IdUsuario, string emailUsuario)
         {
             InitializeComponent();
             RadiusButton controlador = new RadiusButton();
             controlador.ConfigInicial(this, panelAgendar, btnSair, 25, Color.White);
             carregaEspecialidade();
-          
+            this.IdUsuario = IdUsuario;
+            this.emailUsuario = emailUsuario;
+
         }
 
         private void FormularioAgendamentoConsulta_Paint(object sender, PaintEventArgs e)
@@ -56,6 +94,7 @@ namespace Avalia__
 
         private void cbxEspecialidade_SelectedIndexChanged(object sender, EventArgs e)
         {
+
             string especialidadeSelecionada = cbxEspecialidade.SelectedItem?.ToString();
 
             if (!string.IsNullOrEmpty(especialidadeSelecionada))
@@ -114,6 +153,30 @@ namespace Avalia__
             {
                 cbxAtendimento.DataSource = null;
             }
+        }
+
+        private void btnContinuar_Click(object sender, EventArgs e)
+        {
+            
+            DateTime diaAtual = DateTime.Now;
+            if (dtpData.Value < diaAtual) 
+            {
+                mensagem_Do_Sistema.MensagemInformation("Selecione uma data valida!");
+                return;
+            }
+
+            try
+            {
+                novoDado();
+                MessageBox.Show("Consulta registrada com sucesso!");
+                return;
+            }
+            catch (Exception) 
+            {
+                MessageBox.Show("Houve um erro com o cadastro da consulta!");
+                return;
+            }
+
         }
     }
 }

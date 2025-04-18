@@ -47,14 +47,15 @@ namespace Avalia__
 
         private void btnAgendar_Click(object sender, EventArgs e)
         {
-            FormularioAgendamentoConsulta form = new FormularioAgendamentoConsulta();
-            form.ShowDialog();
+            FormularioAgendamentoConsulta formularioAgendamento = new FormularioAgendamentoConsulta(idUsuario,emailUsuario);
+            formularioAgendamento.ShowDialog();
 
         }
 
         private void btnAvaliarconsulta_Click(object sender, EventArgs e)
         {
-         
+            
         }
+        
     }
 }

@@ -132,7 +132,7 @@ namespace Avalia__
 
             DateTime dataCadastro = DateTime.Now;
 
-            novosdados.Insert(nome,sobrenome,crm,sexo,especialidade,cidade,Estado,endereco,telefone,cpf,idInstituicao,email,senhaCriptografada);
+            novosdados.Insert(nome,sobrenome,crm,sexo,especialidade,cidade,Estado,endereco,telefone,cpf,email,senhaCriptografada,idInstituicao);
             AtualizarBanco();
 
         }

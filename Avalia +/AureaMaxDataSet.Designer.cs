@@ -1522,11 +1522,11 @@ namespace Avalia__ {
             
             private global::System.Data.DataColumn columnCPF;
             
-            private global::System.Data.DataColumn columnIdInstituicao;
-            
             private global::System.Data.DataColumn columnEmail;
             
             private global::System.Data.DataColumn columnSenha;
+            
+            private global::System.Data.DataColumn columnIdInstituicao;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -1651,14 +1651,6 @@ namespace Avalia__ {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn IdInstituicaoColumn {
-                get {
-                    return this.columnIdInstituicao;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn EmailColumn {
                 get {
                     return this.columnEmail;
@@ -1670,6 +1662,14 @@ namespace Avalia__ {
             public global::System.Data.DataColumn SenhaColumn {
                 get {
                     return this.columnSenha;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn IdInstituicaoColumn {
+                get {
+                    return this.columnIdInstituicao;
                 }
             }
             
@@ -1710,7 +1710,7 @@ namespace Avalia__ {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public tbMedicoRow AddtbMedicoRow(string Nome, string Sobrenome, string CRM, string Sexo, string Especialidade, string Cidade, string Estado, string Endereco, string Telefone, string CPF, tbInstituicaoRow parenttbInstituicaoRowByFK_tbMedico_tbInstituicao, string Email, string Senha) {
+            public tbMedicoRow AddtbMedicoRow(string Nome, string Sobrenome, string CRM, string Sexo, string Especialidade, string Cidade, string Estado, string Endereco, string Telefone, string CPF, string Email, string Senha, tbInstituicaoRow parenttbInstituicaoRowByFK_tbMedico_tbInstituicao) {
                 tbMedicoRow rowtbMedicoRow = ((tbMedicoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1724,11 +1724,11 @@ namespace Avalia__ {
                         Endereco,
                         Telefone,
                         CPF,
-                        null,
                         Email,
-                        Senha};
+                        Senha,
+                        null};
                 if ((parenttbInstituicaoRowByFK_tbMedico_tbInstituicao != null)) {
-                    columnValuesArray[11] = parenttbInstituicaoRowByFK_tbMedico_tbInstituicao[0];
+                    columnValuesArray[13] = parenttbInstituicaoRowByFK_tbMedico_tbInstituicao[0];
                 }
                 rowtbMedicoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtbMedicoRow);
@@ -1770,9 +1770,9 @@ namespace Avalia__ {
                 this.columnEndereco = base.Columns["Endereco"];
                 this.columnTelefone = base.Columns["Telefone"];
                 this.columnCPF = base.Columns["CPF"];
-                this.columnIdInstituicao = base.Columns["IdInstituicao"];
                 this.columnEmail = base.Columns["Email"];
                 this.columnSenha = base.Columns["Senha"];
+                this.columnIdInstituicao = base.Columns["IdInstituicao"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1800,12 +1800,12 @@ namespace Avalia__ {
                 base.Columns.Add(this.columnTelefone);
                 this.columnCPF = new global::System.Data.DataColumn("CPF", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCPF);
-                this.columnIdInstituicao = new global::System.Data.DataColumn("IdInstituicao", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnIdInstituicao);
                 this.columnEmail = new global::System.Data.DataColumn("Email", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEmail);
                 this.columnSenha = new global::System.Data.DataColumn("Senha", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSenha);
+                this.columnIdInstituicao = new global::System.Data.DataColumn("IdInstituicao", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIdInstituicao);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnIdMedico}, true));
                 this.columnIdMedico.AutoIncrement = true;
@@ -1830,11 +1830,11 @@ namespace Avalia__ {
                 this.columnTelefone.MaxLength = 20;
                 this.columnCPF.AllowDBNull = false;
                 this.columnCPF.MaxLength = 14;
-                this.columnIdInstituicao.AllowDBNull = false;
                 this.columnEmail.AllowDBNull = false;
                 this.columnEmail.MaxLength = 150;
                 this.columnSenha.AllowDBNull = false;
                 this.columnSenha.MaxLength = 100;
+                this.columnIdInstituicao.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3059,17 +3059,6 @@ namespace Avalia__ {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int IdInstituicao {
-                get {
-                    return ((int)(this[this.tabletbMedico.IdInstituicaoColumn]));
-                }
-                set {
-                    this[this.tabletbMedico.IdInstituicaoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string Email {
                 get {
                     return ((string)(this[this.tabletbMedico.EmailColumn]));
@@ -3087,6 +3076,17 @@ namespace Avalia__ {
                 }
                 set {
                     this[this.tabletbMedico.SenhaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int IdInstituicao {
+                get {
+                    return ((int)(this[this.tabletbMedico.IdInstituicaoColumn]));
+                }
+                set {
+                    this[this.tabletbMedico.IdInstituicaoColumn] = value;
                 }
             }
             
@@ -3682,7 +3682,7 @@ SELECT IdAvaliacao, IdConsulta, Nota, Comentario FROM tbAvaliacao WHERE (IdAvali
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Avalia__.Properties.Settings.Default.AureaMaxConnectionString1;
+            this._connection.ConnectionString = global::Avalia__.Properties.Settings.Default.AureaMaxConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4039,7 +4039,7 @@ SELECT IdConsulta, Id_usuario, IdMedico, DataConsulta, Motivo, StatusConsulta, O
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Avalia__.Properties.Settings.Default.AureaMaxConnectionString1;
+            this._connection.ConnectionString = global::Avalia__.Properties.Settings.Default.AureaMaxConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4471,7 +4471,7 @@ SELECT IdInstituicao, NomeInstituicao, CNPJ, TipoInstituicao, Telefone, Email, E
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Avalia__.Properties.Settings.Default.AureaMaxConnectionString1;
+            this._connection.ConnectionString = global::Avalia__.Properties.Settings.Default.AureaMaxConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4996,13 +4996,13 @@ SELECT IdInstituicao, NomeInstituicao, CNPJ, TipoInstituicao, Telefone, Email, E
             tableMapping.ColumnMappings.Add("Endereco", "Endereco");
             tableMapping.ColumnMappings.Add("Telefone", "Telefone");
             tableMapping.ColumnMappings.Add("CPF", "CPF");
-            tableMapping.ColumnMappings.Add("IdInstituicao", "IdInstituicao");
             tableMapping.ColumnMappings.Add("Email", "Email");
             tableMapping.ColumnMappings.Add("Senha", "Senha");
+            tableMapping.ColumnMappings.Add("IdInstituicao", "IdInstituicao");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[tbMedico] WHERE (([IdMedico] = @Original_IdMedico) AND ([Nome] = @Original_Nome) AND ([Sobrenome] = @Original_Sobrenome) AND ([CRM] = @Original_CRM) AND ([Sexo] = @Original_Sexo) AND ([Especialidade] = @Original_Especialidade) AND ((@IsNull_Cidade = 1 AND [Cidade] IS NULL) OR ([Cidade] = @Original_Cidade)) AND ((@IsNull_Estado = 1 AND [Estado] IS NULL) OR ([Estado] = @Original_Estado)) AND ((@IsNull_Endereco = 1 AND [Endereco] IS NULL) OR ([Endereco] = @Original_Endereco)) AND ((@IsNull_Telefone = 1 AND [Telefone] IS NULL) OR ([Telefone] = @Original_Telefone)) AND ([CPF] = @Original_CPF) AND ([IdInstituicao] = @Original_IdInstituicao) AND ([Email] = @Original_Email) AND ([Senha] = @Original_Senha))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[tbMedico] WHERE (([IdMedico] = @Original_IdMedico) AND ([Nome] = @Original_Nome) AND ([Sobrenome] = @Original_Sobrenome) AND ([CRM] = @Original_CRM) AND ([Sexo] = @Original_Sexo) AND ([Especialidade] = @Original_Especialidade) AND ((@IsNull_Cidade = 1 AND [Cidade] IS NULL) OR ([Cidade] = @Original_Cidade)) AND ((@IsNull_Estado = 1 AND [Estado] IS NULL) OR ([Estado] = @Original_Estado)) AND ((@IsNull_Endereco = 1 AND [Endereco] IS NULL) OR ([Endereco] = @Original_Endereco)) AND ((@IsNull_Telefone = 1 AND [Telefone] IS NULL) OR ([Telefone] = @Original_Telefone)) AND ([CPF] = @Original_CPF) AND ([Email] = @Original_Email) AND ([Senha] = @Original_Senha) AND ([IdInstituicao] = @Original_IdInstituicao))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdMedico", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdMedico", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nome", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nome", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -5019,13 +5019,13 @@ SELECT IdInstituicao, NomeInstituicao, CNPJ, TipoInstituicao, Telefone, Email, E
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Telefone", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefone", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Telefone", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefone", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CPF", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CPF", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdInstituicao", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdInstituicao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Senha", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Senha", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdInstituicao", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdInstituicao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tbMedico] ([Nome], [Sobrenome], [CRM], [Sexo], [Especialidade], [Cidade], [Estado], [Endereco], [Telefone], [CPF], [IdInstituicao], [Email], [Senha]) VALUES (@Nome, @Sobrenome, @CRM, @Sexo, @Especialidade, @Cidade, @Estado, @Endereco, @Telefone, @CPF, @IdInstituicao, @Email, @Senha);
-SELECT IdMedico, Nome, Sobrenome, CRM, Sexo, Especialidade, Cidade, Estado, Endereco, Telefone, CPF, IdInstituicao, Email, Senha FROM tbMedico WHERE (IdMedico = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tbMedico] ([Nome], [Sobrenome], [CRM], [Sexo], [Especialidade], [Cidade], [Estado], [Endereco], [Telefone], [CPF], [Email], [Senha], [IdInstituicao]) VALUES (@Nome, @Sobrenome, @CRM, @Sexo, @Especialidade, @Cidade, @Estado, @Endereco, @Telefone, @CPF, @Email, @Senha, @IdInstituicao);
+SELECT IdMedico, Nome, Sobrenome, CRM, Sexo, Especialidade, Cidade, Estado, Endereco, Telefone, CPF, Email, Senha, IdInstituicao FROM tbMedico WHERE (IdMedico = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nome", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nome", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sobrenome", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sobrenome", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5037,13 +5037,13 @@ SELECT IdMedico, Nome, Sobrenome, CRM, Sexo, Especialidade, Cidade, Estado, Ende
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Endereco", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Endereco", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Telefone", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefone", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CPF", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CPF", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdInstituicao", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdInstituicao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Senha", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Senha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdInstituicao", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdInstituicao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tbMedico] SET [Nome] = @Nome, [Sobrenome] = @Sobrenome, [CRM] = @CRM, [Sexo] = @Sexo, [Especialidade] = @Especialidade, [Cidade] = @Cidade, [Estado] = @Estado, [Endereco] = @Endereco, [Telefone] = @Telefone, [CPF] = @CPF, [IdInstituicao] = @IdInstituicao, [Email] = @Email, [Senha] = @Senha WHERE (([IdMedico] = @Original_IdMedico) AND ([Nome] = @Original_Nome) AND ([Sobrenome] = @Original_Sobrenome) AND ([CRM] = @Original_CRM) AND ([Sexo] = @Original_Sexo) AND ([Especialidade] = @Original_Especialidade) AND ((@IsNull_Cidade = 1 AND [Cidade] IS NULL) OR ([Cidade] = @Original_Cidade)) AND ((@IsNull_Estado = 1 AND [Estado] IS NULL) OR ([Estado] = @Original_Estado)) AND ((@IsNull_Endereco = 1 AND [Endereco] IS NULL) OR ([Endereco] = @Original_Endereco)) AND ((@IsNull_Telefone = 1 AND [Telefone] IS NULL) OR ([Telefone] = @Original_Telefone)) AND ([CPF] = @Original_CPF) AND ([IdInstituicao] = @Original_IdInstituicao) AND ([Email] = @Original_Email) AND ([Senha] = @Original_Senha));
-SELECT IdMedico, Nome, Sobrenome, CRM, Sexo, Especialidade, Cidade, Estado, Endereco, Telefone, CPF, IdInstituicao, Email, Senha FROM tbMedico WHERE (IdMedico = @IdMedico)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tbMedico] SET [Nome] = @Nome, [Sobrenome] = @Sobrenome, [CRM] = @CRM, [Sexo] = @Sexo, [Especialidade] = @Especialidade, [Cidade] = @Cidade, [Estado] = @Estado, [Endereco] = @Endereco, [Telefone] = @Telefone, [CPF] = @CPF, [Email] = @Email, [Senha] = @Senha, [IdInstituicao] = @IdInstituicao WHERE (([IdMedico] = @Original_IdMedico) AND ([Nome] = @Original_Nome) AND ([Sobrenome] = @Original_Sobrenome) AND ([CRM] = @Original_CRM) AND ([Sexo] = @Original_Sexo) AND ([Especialidade] = @Original_Especialidade) AND ((@IsNull_Cidade = 1 AND [Cidade] IS NULL) OR ([Cidade] = @Original_Cidade)) AND ((@IsNull_Estado = 1 AND [Estado] IS NULL) OR ([Estado] = @Original_Estado)) AND ((@IsNull_Endereco = 1 AND [Endereco] IS NULL) OR ([Endereco] = @Original_Endereco)) AND ((@IsNull_Telefone = 1 AND [Telefone] IS NULL) OR ([Telefone] = @Original_Telefone)) AND ([CPF] = @Original_CPF) AND ([Email] = @Original_Email) AND ([Senha] = @Original_Senha) AND ([IdInstituicao] = @Original_IdInstituicao));
+SELECT IdMedico, Nome, Sobrenome, CRM, Sexo, Especialidade, Cidade, Estado, Endereco, Telefone, CPF, Email, Senha, IdInstituicao FROM tbMedico WHERE (IdMedico = @IdMedico)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nome", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nome", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sobrenome", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sobrenome", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5055,9 +5055,9 @@ SELECT IdMedico, Nome, Sobrenome, CRM, Sexo, Especialidade, Cidade, Estado, Ende
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Endereco", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Endereco", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Telefone", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefone", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CPF", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CPF", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdInstituicao", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdInstituicao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Senha", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Senha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdInstituicao", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdInstituicao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdMedico", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdMedico", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nome", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nome", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Sobrenome", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sobrenome", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -5073,9 +5073,9 @@ SELECT IdMedico, Nome, Sobrenome, CRM, Sexo, Especialidade, Cidade, Estado, Ende
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Telefone", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefone", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Telefone", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefone", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CPF", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CPF", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdInstituicao", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdInstituicao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Senha", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Senha", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdInstituicao", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdInstituicao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdMedico", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IdMedico", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -5083,7 +5083,7 @@ SELECT IdMedico, Nome, Sobrenome, CRM, Sexo, Especialidade, Cidade, Estado, Ende
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Avalia__.Properties.Settings.Default.AureaMaxConnectionString1;
+            this._connection.ConnectionString = global::Avalia__.Properties.Settings.Default.AureaMaxConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5093,11 +5093,11 @@ SELECT IdMedico, Nome, Sobrenome, CRM, Sexo, Especialidade, Cidade, Estado, Ende
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT IdMedico, Nome, Sobrenome, CRM, Sexo, Especialidade, Cidade, Estado, Ender" +
-                "eco, Telefone, CPF, IdInstituicao, Email, Senha FROM dbo.tbMedico";
+                "eco, Telefone, CPF, Email, Senha, IdInstituicao FROM dbo.tbMedico";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "UPDATE tbMedico \r\nSET Senha = @Senha\r\nWHERE Email = @Email";
+            this._commandCollection[1].CommandText = "UPDATE tbMedico \r\nSET Senha = @Senha \r\nWhere Email = @Email";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Senha", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "Senha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.VarChar, 150, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -5160,7 +5160,7 @@ SELECT IdMedico, Nome, Sobrenome, CRM, Sexo, Especialidade, Cidade, Estado, Ende
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_IdMedico, string Original_Nome, string Original_Sobrenome, string Original_CRM, string Original_Sexo, string Original_Especialidade, string Original_Cidade, string Original_Estado, string Original_Endereco, string Original_Telefone, string Original_CPF, int Original_IdInstituicao, string Original_Email, string Original_Senha) {
+        public virtual int Delete(int Original_IdMedico, string Original_Nome, string Original_Sobrenome, string Original_CRM, string Original_Sexo, string Original_Especialidade, string Original_Cidade, string Original_Estado, string Original_Endereco, string Original_Telefone, string Original_CPF, string Original_Email, string Original_Senha, int Original_IdInstituicao) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_IdMedico));
             if ((Original_Nome == null)) {
                 throw new global::System.ArgumentNullException("Original_Nome");
@@ -5230,19 +5230,19 @@ SELECT IdMedico, Nome, Sobrenome, CRM, Sexo, Especialidade, Cidade, Estado, Ende
             else {
                 this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_CPF));
             }
-            this.Adapter.DeleteCommand.Parameters[15].Value = ((int)(Original_IdInstituicao));
             if ((Original_Email == null)) {
                 throw new global::System.ArgumentNullException("Original_Email");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_Email));
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((string)(Original_Email));
             }
             if ((Original_Senha == null)) {
                 throw new global::System.ArgumentNullException("Original_Senha");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[17].Value = ((string)(Original_Senha));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_Senha));
             }
+            this.Adapter.DeleteCommand.Parameters[17].Value = ((int)(Original_IdInstituicao));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5263,7 +5263,7 @@ SELECT IdMedico, Nome, Sobrenome, CRM, Sexo, Especialidade, Cidade, Estado, Ende
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Nome, string Sobrenome, string CRM, string Sexo, string Especialidade, string Cidade, string Estado, string Endereco, string Telefone, string CPF, int IdInstituicao, string Email, string Senha) {
+        public virtual int Insert(string Nome, string Sobrenome, string CRM, string Sexo, string Especialidade, string Cidade, string Estado, string Endereco, string Telefone, string CPF, string Email, string Senha, int IdInstituicao) {
             if ((Nome == null)) {
                 throw new global::System.ArgumentNullException("Nome");
             }
@@ -5324,19 +5324,19 @@ SELECT IdMedico, Nome, Sobrenome, CRM, Sexo, Especialidade, Cidade, Estado, Ende
             else {
                 this.Adapter.InsertCommand.Parameters[9].Value = ((string)(CPF));
             }
-            this.Adapter.InsertCommand.Parameters[10].Value = ((int)(IdInstituicao));
             if ((Email == null)) {
                 throw new global::System.ArgumentNullException("Email");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(Email));
+                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(Email));
             }
             if ((Senha == null)) {
                 throw new global::System.ArgumentNullException("Senha");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(Senha));
+                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(Senha));
             }
+            this.Adapter.InsertCommand.Parameters[12].Value = ((int)(IdInstituicao));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5368,9 +5368,9 @@ SELECT IdMedico, Nome, Sobrenome, CRM, Sexo, Especialidade, Cidade, Estado, Ende
                     string Endereco, 
                     string Telefone, 
                     string CPF, 
-                    int IdInstituicao, 
                     string Email, 
                     string Senha, 
+                    int IdInstituicao, 
                     int Original_IdMedico, 
                     string Original_Nome, 
                     string Original_Sobrenome, 
@@ -5382,9 +5382,9 @@ SELECT IdMedico, Nome, Sobrenome, CRM, Sexo, Especialidade, Cidade, Estado, Ende
                     string Original_Endereco, 
                     string Original_Telefone, 
                     string Original_CPF, 
-                    int Original_IdInstituicao, 
                     string Original_Email, 
                     string Original_Senha, 
+                    int Original_IdInstituicao, 
                     int IdMedico) {
             if ((Nome == null)) {
                 throw new global::System.ArgumentNullException("Nome");
@@ -5446,19 +5446,19 @@ SELECT IdMedico, Nome, Sobrenome, CRM, Sexo, Especialidade, Cidade, Estado, Ende
             else {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(CPF));
             }
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(IdInstituicao));
             if ((Email == null)) {
                 throw new global::System.ArgumentNullException("Email");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Email));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Email));
             }
             if ((Senha == null)) {
                 throw new global::System.ArgumentNullException("Senha");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Senha));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Senha));
             }
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(IdInstituicao));
             this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_IdMedico));
             if ((Original_Nome == null)) {
                 throw new global::System.ArgumentNullException("Original_Nome");
@@ -5528,19 +5528,19 @@ SELECT IdMedico, Nome, Sobrenome, CRM, Sexo, Especialidade, Cidade, Estado, Ende
             else {
                 this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_CPF));
             }
-            this.Adapter.UpdateCommand.Parameters[28].Value = ((int)(Original_IdInstituicao));
             if ((Original_Email == null)) {
                 throw new global::System.ArgumentNullException("Original_Email");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((string)(Original_Email));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(Original_Email));
             }
             if ((Original_Senha == null)) {
                 throw new global::System.ArgumentNullException("Original_Senha");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((string)(Original_Senha));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((string)(Original_Senha));
             }
+            this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(Original_IdInstituicao));
             this.Adapter.UpdateCommand.Parameters[31].Value = ((int)(IdMedico));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -5573,9 +5573,9 @@ SELECT IdMedico, Nome, Sobrenome, CRM, Sexo, Especialidade, Cidade, Estado, Ende
                     string Endereco, 
                     string Telefone, 
                     string CPF, 
-                    int IdInstituicao, 
                     string Email, 
                     string Senha, 
+                    int IdInstituicao, 
                     int Original_IdMedico, 
                     string Original_Nome, 
                     string Original_Sobrenome, 
@@ -5587,10 +5587,10 @@ SELECT IdMedico, Nome, Sobrenome, CRM, Sexo, Especialidade, Cidade, Estado, Ende
                     string Original_Endereco, 
                     string Original_Telefone, 
                     string Original_CPF, 
-                    int Original_IdInstituicao, 
                     string Original_Email, 
-                    string Original_Senha) {
-            return this.Update(Nome, Sobrenome, CRM, Sexo, Especialidade, Cidade, Estado, Endereco, Telefone, CPF, IdInstituicao, Email, Senha, Original_IdMedico, Original_Nome, Original_Sobrenome, Original_CRM, Original_Sexo, Original_Especialidade, Original_Cidade, Original_Estado, Original_Endereco, Original_Telefone, Original_CPF, Original_IdInstituicao, Original_Email, Original_Senha, Original_IdMedico);
+                    string Original_Senha, 
+                    int Original_IdInstituicao) {
+            return this.Update(Nome, Sobrenome, CRM, Sexo, Especialidade, Cidade, Estado, Endereco, Telefone, CPF, Email, Senha, IdInstituicao, Original_IdMedico, Original_Nome, Original_Sobrenome, Original_CRM, Original_Sexo, Original_Especialidade, Original_Cidade, Original_Estado, Original_Endereco, Original_Telefone, Original_CPF, Original_Email, Original_Senha, Original_IdInstituicao, Original_IdMedico);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5840,7 +5840,7 @@ SELECT Id_usuario, Nome, Sobrenome, Data_Nascimento, CPF, Sexo, Telefone, Genero
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Avalia__.Properties.Settings.Default.AureaMaxConnectionString1;
+            this._connection.ConnectionString = global::Avalia__.Properties.Settings.Default.AureaMaxConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
