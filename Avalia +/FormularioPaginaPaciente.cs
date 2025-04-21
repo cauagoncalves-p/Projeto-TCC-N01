@@ -56,6 +56,11 @@ namespace Avalia__
         {
             
         }
-        
+
+        private void btnHistoricomedico_Click(object sender, EventArgs e)
+        {
+            FormularioConsultasAgendadas formularioConsultasAgendadas = new FormularioConsultasAgendadas(idUsuario);
+            formularioConsultasAgendadas.ShowDialog();
+        }
     }
 }

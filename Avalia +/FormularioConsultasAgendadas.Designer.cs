@@ -42,20 +42,25 @@
             // 
             // dgvConsultas
             // 
-            this.dgvConsultas.BackgroundColor = System.Drawing.Color.FloralWhite;
+            this.dgvConsultas.BackgroundColor = System.Drawing.Color.White;
+            this.dgvConsultas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvConsultas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConsultas.Location = new System.Drawing.Point(61, 232);
+            this.dgvConsultas.Location = new System.Drawing.Point(81, 286);
+            this.dgvConsultas.Margin = new System.Windows.Forms.Padding(4);
             this.dgvConsultas.Name = "dgvConsultas";
-            this.dgvConsultas.Size = new System.Drawing.Size(851, 396);
+            this.dgvConsultas.RowHeadersWidth = 51;
+            this.dgvConsultas.Size = new System.Drawing.Size(1135, 487);
             this.dgvConsultas.TabIndex = 0;
             // 
             // lblHistoricoConsulta
             // 
             this.lblHistoricoConsulta.AutoSize = true;
-            this.lblHistoricoConsulta.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHistoricoConsulta.Location = new System.Drawing.Point(57, 94);
+            this.lblHistoricoConsulta.BackColor = System.Drawing.Color.Transparent;
+            this.lblHistoricoConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHistoricoConsulta.Location = new System.Drawing.Point(76, 116);
+            this.lblHistoricoConsulta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHistoricoConsulta.Name = "lblHistoricoConsulta";
-            this.lblHistoricoConsulta.Size = new System.Drawing.Size(146, 23);
+            this.lblHistoricoConsulta.Size = new System.Drawing.Size(218, 29);
             this.lblHistoricoConsulta.TabIndex = 1;
             this.lblHistoricoConsulta.Text = "Minhas Consultas";
             // 
@@ -64,11 +69,12 @@
             this.btnConsultasTotais.BackColor = System.Drawing.Color.White;
             this.btnConsultasTotais.FlatAppearance.BorderSize = 0;
             this.btnConsultasTotais.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultasTotais.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultasTotais.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultasTotais.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.btnConsultasTotais.Location = new System.Drawing.Point(61, 138);
+            this.btnConsultasTotais.Location = new System.Drawing.Point(81, 210);
+            this.btnConsultasTotais.Margin = new System.Windows.Forms.Padding(4);
             this.btnConsultasTotais.Name = "btnConsultasTotais";
-            this.btnConsultasTotais.Size = new System.Drawing.Size(98, 34);
+            this.btnConsultasTotais.Size = new System.Drawing.Size(131, 42);
             this.btnConsultasTotais.TabIndex = 2;
             this.btnConsultasTotais.Text = "Todas";
             this.btnConsultasTotais.UseVisualStyleBackColor = false;
@@ -78,11 +84,12 @@
             this.btnRealizadas.BackColor = System.Drawing.Color.White;
             this.btnRealizadas.FlatAppearance.BorderSize = 0;
             this.btnRealizadas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRealizadas.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRealizadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRealizadas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.btnRealizadas.Location = new System.Drawing.Point(299, 138);
+            this.btnRealizadas.Location = new System.Drawing.Point(409, 210);
+            this.btnRealizadas.Margin = new System.Windows.Forms.Padding(4);
             this.btnRealizadas.Name = "btnRealizadas";
-            this.btnRealizadas.Size = new System.Drawing.Size(98, 34);
+            this.btnRealizadas.Size = new System.Drawing.Size(131, 42);
             this.btnRealizadas.TabIndex = 3;
             this.btnRealizadas.Text = "Realizadas";
             this.btnRealizadas.UseVisualStyleBackColor = false;
@@ -92,11 +99,12 @@
             this.btnAgendadas.BackColor = System.Drawing.Color.White;
             this.btnAgendadas.FlatAppearance.BorderSize = 0;
             this.btnAgendadas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgendadas.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgendadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgendadas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.btnAgendadas.Location = new System.Drawing.Point(175, 138);
+            this.btnAgendadas.Location = new System.Drawing.Point(236, 210);
+            this.btnAgendadas.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgendadas.Name = "btnAgendadas";
-            this.btnAgendadas.Size = new System.Drawing.Size(98, 34);
+            this.btnAgendadas.Size = new System.Drawing.Size(143, 42);
             this.btnAgendadas.TabIndex = 4;
             this.btnAgendadas.Text = "Agendadas";
             this.btnAgendadas.UseVisualStyleBackColor = false;
@@ -106,11 +114,12 @@
             this.btnCancelar.BackColor = System.Drawing.Color.White;
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.btnCancelar.Location = new System.Drawing.Point(423, 138);
+            this.btnCancelar.Location = new System.Drawing.Point(571, 210);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(98, 34);
+            this.btnCancelar.Size = new System.Drawing.Size(131, 42);
             this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -118,32 +127,38 @@
             // lbTitulo
             // 
             this.lbTitulo.AutoSize = true;
-            this.lbTitulo.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTitulo.Location = new System.Drawing.Point(57, 33);
+            this.lbTitulo.BackColor = System.Drawing.Color.Transparent;
+            this.lbTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitulo.Location = new System.Drawing.Point(76, 41);
+            this.lbTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbTitulo.Name = "lbTitulo";
-            this.lbTitulo.Size = new System.Drawing.Size(55, 23);
+            this.lbTitulo.Size = new System.Drawing.Size(81, 29);
             this.lbTitulo.TabIndex = 6;
             this.lbTitulo.Text = "Aurea";
             // 
             // btnSair
             // 
-            this.btnSair.BackColor = System.Drawing.Color.White;
+            this.btnSair.BackColor = System.Drawing.Color.Transparent;
             this.btnSair.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnSair.FlatAppearance.BorderSize = 0;
+            this.btnSair.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSair.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
-            this.btnSair.Location = new System.Drawing.Point(862, 33);
+            this.btnSair.Location = new System.Drawing.Point(1149, 41);
+            this.btnSair.Margin = new System.Windows.Forms.Padding(4);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(50, 43);
+            this.btnSair.Size = new System.Drawing.Size(67, 53);
             this.btnSair.TabIndex = 10;
             this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // FormularioConsultasAgendadas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 659);
+            this.ClientSize = new System.Drawing.Size(1312, 811);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.lbTitulo);
             this.Controls.Add(this.btnCancelar);
@@ -153,9 +168,10 @@
             this.Controls.Add(this.lblHistoricoConsulta);
             this.Controls.Add(this.dgvConsultas);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormularioConsultasAgendadas";
             this.Text = "FormularioConsultasAgendadas";
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormularioConsultasAgendadas_Paint);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormularioConsultasAgendadas_Paint_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

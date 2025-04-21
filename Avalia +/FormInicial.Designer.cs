@@ -61,11 +61,11 @@
             // 
             this.lblMedico.AutoSize = true;
             this.lblMedico.BackColor = System.Drawing.Color.FloralWhite;
-            this.lblMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMedico.Location = new System.Drawing.Point(67, 455);
+            this.lblMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMedico.Location = new System.Drawing.Point(59, 455);
             this.lblMedico.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMedico.Name = "lblMedico";
-            this.lblMedico.Size = new System.Drawing.Size(365, 20);
+            this.lblMedico.Size = new System.Drawing.Size(321, 18);
             this.lblMedico.TabIndex = 15;
             this.lblMedico.Text = "Acesse seu painel profissional e agendamentos";
             // 
@@ -73,11 +73,11 @@
             // 
             this.lblPaciente.AutoSize = true;
             this.lblPaciente.BackColor = System.Drawing.Color.FloralWhite;
-            this.lblPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPaciente.Location = new System.Drawing.Point(64, 271);
+            this.lblPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPaciente.Location = new System.Drawing.Point(56, 265);
             this.lblPaciente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPaciente.Name = "lblPaciente";
-            this.lblPaciente.Size = new System.Drawing.Size(364, 20);
+            this.lblPaciente.Size = new System.Drawing.Size(320, 18);
             this.lblPaciente.TabIndex = 14;
             this.lblPaciente.Text = "Acesse seu histórico de consultas e avaliações";
             // 

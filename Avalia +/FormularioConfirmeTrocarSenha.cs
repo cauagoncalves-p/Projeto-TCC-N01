@@ -147,7 +147,7 @@ namespace Avalia__
 
             // Atualiza a senha no banco
             tbUsuarioTableAdapter tbUsuarioTableAdapter = new tbUsuarioTableAdapter();
-            tbUsuarioTableAdapter.AtualizarSenhaPorEmail(novaSenhaCriptografada, emailUsuario);
+            //tbUsuarioTableAdapter.AtualizarSenhaPorEmail(novaSenhaCriptografada, emailUsuario);
 
             mensagem_Do_Sistema.MensagemInformation("Senha atualizada com sucesso! Você já pode fazer login.");
             this.Close();

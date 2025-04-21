@@ -1,4 +1,5 @@
-﻿using Avalia__.Controles;
+﻿using Avalia__.AureaMaxDataSetTableAdapters;
+using Avalia__.Controles;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Avalia__.RadiusButton;
 
 namespace Avalia__
 {
@@ -15,13 +17,181 @@ namespace Avalia__
     {
         private string codigoGerado;
         Mensagem_do_sistema mensagem_Do_Sistema = new Mensagem_do_sistema();
-        public FormularioConsultasAgendadas()
+
+        private int _idUsuario;
+        private void ConfigurarDataGridView()
         {
-            InitializeComponent();
-          
+            // Configuração básica
+            dgvConsultas.AutoGenerateColumns = false;
+            dgvConsultas.AllowUserToAddRows = false;
+            dgvConsultas.AllowUserToDeleteRows = false;
+            dgvConsultas.ReadOnly = true;
+            dgvConsultas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvConsultas.MultiSelect = false;
+            dgvConsultas.RowHeadersVisible = false;
+
+            // Paleta inspirada no seu design
+            Color fundoClaro = Color.FromArgb(250, 250, 252); // Branco muito suave
+            Color azulHeader = Color.FromArgb(70, 130, 180);  // Azul médio (como o título dos cards)
+            Color textoPadrao = Color.FromArgb(60, 60, 60);   // Cinza escuro suave
+            Color textoClaro = Color.FromArgb(100, 100, 100); // Cinza médio
+            Color borda = Color.FromArgb(230, 230, 235);      // Linha divisória suave
+
+            // Aplicando as cores
+            dgvConsultas.BackgroundColor = fundoClaro;
+            dgvConsultas.GridColor = borda;
+            dgvConsultas.BorderStyle = BorderStyle.None;
+
+            // Cabeçalho das colunas
+            dgvConsultas.ColumnHeadersDefaultCellStyle.BackColor = azulHeader;
+            dgvConsultas.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvConsultas.ColumnHeadersHeight = 40;
+            dgvConsultas.EnableHeadersVisualStyles = false;
+            dgvConsultas.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+
+            // Linhas alternadas
+            dgvConsultas.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(245, 245, 248);
+            dgvConsultas.DefaultCellStyle.BackColor = fundoClaro;
+
+            // Texto
+            dgvConsultas.DefaultCellStyle.ForeColor = textoPadrao;
+            dgvConsultas.AlternatingRowsDefaultCellStyle.ForeColor = textoPadrao;
+            dgvConsultas.DefaultCellStyle.SelectionForeColor = textoPadrao;
+
+            // Seleção (inspirado nos botões "Detalhes" da imagem)
+            dgvConsultas.DefaultCellStyle.SelectionBackColor = Color.FromArgb(220, 230, 240);
+
+            // Status específicos (como na imagem)
+            dgvConsultas.RowsDefaultCellStyle.Font = new Font("Segoe UI", 10);
+            dgvConsultas.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+
+            // Borda entre as linhas (como os divisores na imagem)
+            dgvConsultas.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvConsultas.GridColor = Color.FromArgb(240, 240, 240);
+
+            // Configuração de redimensionamento
+            dgvConsultas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvConsultas.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvConsultas.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dgvConsultas.RowTemplate.Height = 40;
+        }
+        private void AjustarColunasDataGridView()
+        {
+            if (dgvConsultas.Columns.Count == 0) return;
+
+            // Defina as larguras desejadas (sua configuração atual)
+            var larguras = new Dictionary<string, int>
+    {
+        { "Data", 200 },      // 200px
+        { "Médico", 350 },    // 350px
+        { "Motivo", 250 },    // 250px
+        { "Status", 150 },    // 150px
+        { "Observações", 100} // 100px
+    };
+
+            // Calcula o total das larguras definidas
+            int totalLarguras = larguras.Sum(x => x.Value);
+
+            // Verifica se a soma ultrapassa a largura disponível
+            if (totalLarguras > dgvConsultas.Width)
+            {
+                // Se ultrapassar, reduz proporcionalmente
+                double fatorReducao = (double)dgvConsultas.Width / totalLarguras;
+                foreach (var item in larguras.Keys.ToList())
+                {
+                    larguras[item] = (int)(larguras[item] * fatorReducao);
+                }
+            }
+            else if (totalLarguras < dgvConsultas.Width)
+            {
+                // Se sobrar espaço, distribui para a coluna Observações
+                larguras["Observações"] += dgvConsultas.Width - totalLarguras;
+            }
+
+            // Aplica as larguras
+            foreach (DataGridViewColumn coluna in dgvConsultas.Columns)
+            {
+                if (larguras.ContainsKey(coluna.Name))
+                {
+                    coluna.Width = larguras[coluna.Name];
+                }
+            }
+
+            // Garante que a última coluna preencha qualquer espaço residual
+            if (dgvConsultas.Columns.Count > 0)
+            {
+                dgvConsultas.Columns[dgvConsultas.Columns.Count - 1].AutoSizeMode =
+                    DataGridViewAutoSizeColumnMode.Fill;
+            }
+        }
+        private void CarregarConsultasDoUsuario()
+        {
+            try
+            {
+                using (var consultaAdapter = new tbConsultaTableAdapter())
+                using (var medicoAdapter = new tbMedicoTableAdapter())
+                {
+                    // Carrega todos os médicos uma única vez
+                    var todosMedicos = medicoAdapter.GetData().ToDictionary(m => m.IdMedico);
+
+                    // Carrega as consultas do usuário
+                    var consultas = consultaAdapter.GetData()
+                        .Where(c => c.Id_usuario == _idUsuario)
+                        .Select(c =>
+                        {
+                            // Verifica se encontrou o médico
+                            var medico = todosMedicos.TryGetValue(c.IdMedico, out var m)
+                                ? $"{m.Nome} {m.Sobrenome}"
+                                : "Médico não encontrado";
+
+                            // Trata observações nulas
+                            var observacoes = c.IsObservacoesNull() ? string.Empty : c.Observacoes;
+
+                            return new
+                            {
+                                Data = c.DataConsulta.ToString("dd/MM/yyyy HH:mm"),
+                                Medico = medico,
+                                Motivo = c.Motivo,
+                                Status = c.StatusConsulta,
+                                Observacoes = observacoes
+                            };
+                        })
+                        .ToList();
+
+                    dgvConsultas.DataSource = consultas;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao carregar consultas: {ex.Message}", "Erro",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dgvConsultas.DataSource = new List<object>(); // Limpa o grid em caso de erro
+            }
         }
 
-        private void FormularioConsultasAgendadas_Paint(object sender, PaintEventArgs e)
+        public FormularioConsultasAgendadas(int idUsuario)
+        {
+            InitializeComponent();
+            _idUsuario = idUsuario;
+            CarregarConsultasDoUsuario();
+            ConfigurarDataGridView();
+            AjustarColunasDataGridView();
+
+
+
+
+            UIHelper.ArredondarBotao(btnAgendadas, 25);
+            UIHelper.ArredondarBotao(btnCancelar, 25);
+            UIHelper.ArredondarBotao(btnConsultasTotais, 25);
+            UIHelper.ArredondarBotao(btnRealizadas, 25);
+        }
+        private void FormularioConsultasAgendadas_Paint_1(object sender, PaintEventArgs e)
+        {
+            //Cor de fundo da tela 
+            ConfiguracaoTelas.PintarGradiente(this, e, "#f5e6d3", "#fdf6f0");
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
         {
             ConfiguracaoTelas configuracaoTelas = new ConfiguracaoTelas();
             configuracaoTelas.FecharAba(this);
