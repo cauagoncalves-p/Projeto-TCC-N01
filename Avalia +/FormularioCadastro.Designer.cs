@@ -352,7 +352,7 @@
             this.lblCompletecadastro.AutoSize = true;
             this.lblCompletecadastro.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompletecadastro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblCompletecadastro.Location = new System.Drawing.Point(377, 58);
+            this.lblCompletecadastro.Location = new System.Drawing.Point(272, 58);
             this.lblCompletecadastro.Name = "lblCompletecadastro";
             this.lblCompletecadastro.Size = new System.Drawing.Size(208, 25);
             this.lblCompletecadastro.TabIndex = 1;
@@ -524,7 +524,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(984, 561);
+            this.ClientSize = new System.Drawing.Size(1001, 561);
             this.Controls.Add(this.panelCadastro);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
