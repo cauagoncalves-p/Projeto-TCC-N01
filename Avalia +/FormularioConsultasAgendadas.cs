@@ -81,13 +81,13 @@ namespace Avalia__
 
             // Defina as larguras desejadas (sua configuração atual)
             var larguras = new Dictionary<string, int>
-    {
-        { "Data", 200 },      // 200px
-        { "Médico", 350 },    // 350px
-        { "Motivo", 250 },    // 250px
-        { "Status", 150 },    // 150px
-        { "Observações", 100} // 100px
-    };
+                {
+                    { "Data", 200 },      // 200px
+                    { "Médico", 250 },    // 350px
+                    { "Motivo", 200 },    // 250px
+                    { "Status", 150 },    // 150px
+                    { "Observações", 150} // 100px
+                };
 
             // Calcula o total das larguras definidas
             int totalLarguras = larguras.Sum(x => x.Value);
@@ -124,28 +124,25 @@ namespace Avalia__
                     DataGridViewAutoSizeColumnMode.Fill;
             }
         }
-        private void CarregarConsultasDoUsuario()
+        private void CarregarConsultasDoUsuario(string statusFiltro = "")
         {
             try
             {
                 using (var consultaAdapter = new tbConsultaTableAdapter())
                 using (var medicoAdapter = new tbMedicoTableAdapter())
                 {
-                    // Carrega todos os médicos uma única vez
                     var todosMedicos = medicoAdapter.GetData().ToDictionary(m => m.IdMedico);
 
-                    // Carrega as consultas do usuário
                     var consultas = consultaAdapter.GetData()
                         .Where(c => c.Id_usuario == _idUsuario)
+                        .Where(c => string.IsNullOrEmpty(statusFiltro) || c.StatusConsulta == statusFiltro)
                         .Select(c =>
                         {
-                            // Verifica se encontrou o médico
                             var medico = todosMedicos.TryGetValue(c.IdMedico, out var m)
                                 ? $"{m.Nome} {m.Sobrenome}"
                                 : "Médico não encontrado";
 
-                            // Trata observações nulas
-                            var observacoes = c.IsObservacoesNull() ? string.Empty : c.Observacoes;
+                            var observacoes = c.IsObservacoesNull() ? "" : c.Observacoes;
 
                             return new
                             {
@@ -153,7 +150,7 @@ namespace Avalia__
                                 Medico = medico,
                                 Motivo = c.Motivo,
                                 Status = c.StatusConsulta,
-                                Observacoes = observacoes
+                                Observações = observacoes
                             };
                         })
                         .ToList();
@@ -165,7 +162,7 @@ namespace Avalia__
             {
                 MessageBox.Show($"Erro ao carregar consultas: {ex.Message}", "Erro",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
-                dgvConsultas.DataSource = new List<object>(); // Limpa o grid em caso de erro
+                dgvConsultas.DataSource = new List<object>();
             }
         }
 
@@ -177,7 +174,7 @@ namespace Avalia__
             ConfigurarDataGridView();
             AjustarColunasDataGridView();
 
-
+          
 
 
             UIHelper.ArredondarBotao(btnAgendadas, 25);
@@ -195,6 +192,44 @@ namespace Avalia__
         {
             ConfiguracaoTelas configuracaoTelas = new ConfiguracaoTelas();
             configuracaoTelas.FecharAba(this);
+        }
+
+        private void btnAgendadas_Click(object sender, EventArgs e)
+        {
+            MarcarBotaoSelecionado(btnAgendadas);
+            CarregarConsultasDoUsuario("Agendada");
+        }
+
+        private void btnRealizadas_Click(object sender, EventArgs e)
+        {
+            MarcarBotaoSelecionado(btnRealizadas);
+            CarregarConsultasDoUsuario("Realizada");
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            MarcarBotaoSelecionado(btnCancelar);    
+            CarregarConsultasDoUsuario("Cancelada");
+        }
+
+        private void btnConsultasTotais_Click(object sender, EventArgs e)
+        {
+            MarcarBotaoSelecionado(btnConsultasTotais);
+            CarregarConsultasDoUsuario(); // mostra todas
+        }
+
+        private void MarcarBotaoSelecionado(Button botaoSelecionado)
+        {
+            Button[] botoes = { btnAgendadas, btnRealizadas, btnCancelar, btnConsultasTotais };
+            foreach (var btn in botoes)
+            {
+                btn.BackColor = Color.White;
+                btn.ForeColor = Color.Black;
+            }
+
+            botaoSelecionado.BackColor = Color.SteelBlue;
+            botaoSelecionado.ForeColor = Color.White;
+
         }
     }
 }
