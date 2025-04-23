@@ -51,10 +51,9 @@
             this.panelLogin.Controls.Add(this.btnSair);
             this.panelLogin.Controls.Add(this.lblentrar);
             this.panelLogin.Controls.Add(this.lblAvalia);
-            this.panelLogin.Location = new System.Drawing.Point(433, 55);
-            this.panelLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelLogin.Location = new System.Drawing.Point(325, 45);
             this.panelLogin.Name = "panelLogin";
-            this.panelLogin.Size = new System.Drawing.Size(447, 601);
+            this.panelLogin.Size = new System.Drawing.Size(335, 488);
             this.panelLogin.TabIndex = 1;
             // 
             // lblMedico
@@ -62,10 +61,9 @@
             this.lblMedico.AutoSize = true;
             this.lblMedico.BackColor = System.Drawing.Color.FloralWhite;
             this.lblMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMedico.Location = new System.Drawing.Point(59, 455);
-            this.lblMedico.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMedico.Location = new System.Drawing.Point(30, 370);
             this.lblMedico.Name = "lblMedico";
-            this.lblMedico.Size = new System.Drawing.Size(321, 18);
+            this.lblMedico.Size = new System.Drawing.Size(268, 15);
             this.lblMedico.TabIndex = 15;
             this.lblMedico.Text = "Acesse seu painel profissional e agendamentos";
             // 
@@ -74,10 +72,9 @@
             this.lblPaciente.AutoSize = true;
             this.lblPaciente.BackColor = System.Drawing.Color.FloralWhite;
             this.lblPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPaciente.Location = new System.Drawing.Point(56, 265);
-            this.lblPaciente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPaciente.Location = new System.Drawing.Point(37, 209);
             this.lblPaciente.Name = "lblPaciente";
-            this.lblPaciente.Size = new System.Drawing.Size(320, 18);
+            this.lblPaciente.Size = new System.Drawing.Size(261, 15);
             this.lblPaciente.TabIndex = 14;
             this.lblPaciente.Text = "Acesse seu histórico de consultas e avaliações";
             // 
@@ -88,10 +85,9 @@
             this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEntrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntrar.ForeColor = System.Drawing.Color.White;
-            this.btnEntrar.Location = new System.Drawing.Point(44, 510);
-            this.btnEntrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEntrar.Location = new System.Drawing.Point(33, 414);
             this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(353, 55);
+            this.btnEntrar.Size = new System.Drawing.Size(265, 45);
             this.btnEntrar.TabIndex = 13;
             this.btnEntrar.Text = "Continuar";
             this.btnEntrar.UseVisualStyleBackColor = false;
@@ -104,10 +100,9 @@
             this.btnMedico.FlatAppearance.BorderSize = 2;
             this.btnMedico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMedico.Image = ((System.Drawing.Image)(resources.GetObject("btnMedico.Image")));
-            this.btnMedico.Location = new System.Drawing.Point(44, 335);
-            this.btnMedico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMedico.Location = new System.Drawing.Point(33, 272);
             this.btnMedico.Name = "btnMedico";
-            this.btnMedico.Size = new System.Drawing.Size(353, 154);
+            this.btnMedico.Size = new System.Drawing.Size(265, 125);
             this.btnMedico.TabIndex = 12;
             this.btnMedico.Text = "Sou Medico";
             this.btnMedico.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -121,10 +116,9 @@
             this.btnPaciente.FlatAppearance.BorderSize = 2;
             this.btnPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPaciente.Image = ((System.Drawing.Image)(resources.GetObject("btnPaciente.Image")));
-            this.btnPaciente.Location = new System.Drawing.Point(44, 150);
-            this.btnPaciente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPaciente.Location = new System.Drawing.Point(33, 122);
             this.btnPaciente.Name = "btnPaciente";
-            this.btnPaciente.Size = new System.Drawing.Size(353, 154);
+            this.btnPaciente.Size = new System.Drawing.Size(265, 125);
             this.btnPaciente.TabIndex = 11;
             this.btnPaciente.Text = "Sou Paciente";
             this.btnPaciente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -138,10 +132,9 @@
             this.btnSair.FlatAppearance.BorderSize = 0;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
-            this.btnSair.Location = new System.Drawing.Point(361, 15);
-            this.btnSair.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSair.Location = new System.Drawing.Point(271, 12);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(67, 53);
+            this.btnSair.Size = new System.Drawing.Size(50, 43);
             this.btnSair.TabIndex = 10;
             this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSair.UseVisualStyleBackColor = false;
@@ -152,10 +145,9 @@
             this.lblentrar.AutoSize = true;
             this.lblentrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblentrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblentrar.Location = new System.Drawing.Point(99, 101);
-            this.lblentrar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblentrar.Location = new System.Drawing.Point(74, 82);
             this.lblentrar.Name = "lblentrar";
-            this.lblentrar.Size = new System.Drawing.Size(265, 25);
+            this.lblentrar.Size = new System.Drawing.Size(218, 20);
             this.lblentrar.TabIndex = 1;
             this.lblentrar.Text = "Como você deseja entrar?";
             // 
@@ -163,20 +155,18 @@
             // 
             this.lblAvalia.AutoSize = true;
             this.lblAvalia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAvalia.Location = new System.Drawing.Point(157, 38);
-            this.lblAvalia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAvalia.Location = new System.Drawing.Point(118, 31);
             this.lblAvalia.Name = "lblAvalia";
-            this.lblAvalia.Size = new System.Drawing.Size(111, 29);
+            this.lblAvalia.Size = new System.Drawing.Size(90, 24);
             this.lblAvalia.TabIndex = 0;
             this.lblAvalia.Text = "Áuerea+";
             // 
             // FormInicial
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1312, 690);
+            this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.panelLogin);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormInicial";
