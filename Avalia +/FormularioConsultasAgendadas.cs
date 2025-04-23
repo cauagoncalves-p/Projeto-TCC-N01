@@ -15,10 +15,10 @@ namespace Avalia__
 {
     public partial class FormularioConsultasAgendadas: Form
     {
-        private string codigoGerado;
         Mensagem_do_sistema mensagem_Do_Sistema = new Mensagem_do_sistema();
 
         private int _idUsuario;
+
         private void ConfigurarDataGridView()
         {
             // Configuração básica

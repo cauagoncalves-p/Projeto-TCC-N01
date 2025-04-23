@@ -48,6 +48,7 @@
             // 
             // dgvCancelar
             // 
+            this.dgvCancelar.BackgroundColor = System.Drawing.Color.White;
             this.dgvCancelar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCancelar.Location = new System.Drawing.Point(38, 34);
             this.dgvCancelar.Name = "dgvCancelar";

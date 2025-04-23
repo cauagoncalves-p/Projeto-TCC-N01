@@ -13,13 +13,7 @@ namespace Avalia__
 {
     public partial class FormCancelarConsulta: Form
     {
-        public FormCancelarConsulta()
-        {
-            InitializeComponent();
-            RadiusButton controlador = new RadiusButton();
-            controlador.ConfigInicial(this, panelCancelarConsulta, btnSair, 25, Color.White);
-
-        }
+        private int _idUsuario;
 
         private void ConfigurarDataGridView()
         {
@@ -79,7 +73,7 @@ namespace Avalia__
         }
         private void AjustarColunasDataGridView()
         {
-            if (dgvConsultas.Columns.Count == 0) return;
+            if (dgvCancelar.Columns.Count == 0) return;
 
             // Defina as larguras desejadas (sua configuração atual)
             var larguras = new Dictionary<string, int>
@@ -95,23 +89,23 @@ namespace Avalia__
             int totalLarguras = larguras.Sum(x => x.Value);
 
             // Verifica se a soma ultrapassa a largura disponível
-            if (totalLarguras > dgvConsultas.Width)
+            if (totalLarguras > dgvCancelar.Width)
             {
                 // Se ultrapassar, reduz proporcionalmente
-                double fatorReducao = (double)dgvConsultas.Width / totalLarguras;
+                double fatorReducao = (double)dgvCancelar.Width / totalLarguras;
                 foreach (var item in larguras.Keys.ToList())
                 {
                     larguras[item] = (int)(larguras[item] * fatorReducao);
                 }
             }
-            else if (totalLarguras < dgvConsultas.Width)
+            else if (totalLarguras < dgvCancelar.Width)
             {
                 // Se sobrar espaço, distribui para a coluna Observações
-                larguras["Observações"] += dgvConsultas.Width - totalLarguras;
+                larguras["Observações"] += dgvCancelar.Width - totalLarguras;
             }
 
             // Aplica as larguras
-            foreach (DataGridViewColumn coluna in dgvConsultas.Columns)
+            foreach (DataGridViewColumn coluna in dgvCancelar.Columns)
             {
                 if (larguras.ContainsKey(coluna.Name))
                 {
@@ -120,12 +114,66 @@ namespace Avalia__
             }
 
             // Garante que a última coluna preencha qualquer espaço residual
-            if (dgvConsultas.Columns.Count > 0)
+            if (dgvCancelar.Columns.Count > 0)
             {
-                dgvConsultas.Columns[dgvConsultas.Columns.Count - 1].AutoSizeMode =
+                dgvCancelar.Columns[dgvCancelar.Columns.Count - 1].AutoSizeMode =
                     DataGridViewAutoSizeColumnMode.Fill;
             }
         }
+        private void CarregarConsultasDoUsuario(string statusFiltro = "Agendada")
+        {
+            try
+            {
+                using (var consultaAdapter = new tbConsultaTableAdapter())
+                using (var medicoAdapter = new tbMedicoTableAdapter())
+                {
+                    var todosMedicos = medicoAdapter.GetData().ToDictionary(m => m.IdMedico);
+
+                    var consultas = consultaAdapter.GetData()
+                        .Where(c => c.Id_usuario == _idUsuario)
+                        .Where(c => string.IsNullOrEmpty(statusFiltro) || c.StatusConsulta == statusFiltro)
+                        .Select(c =>
+                        {
+                            var medico = todosMedicos.TryGetValue(c.IdMedico, out var m)
+                                ? $"{m.Nome} {m.Sobrenome}"
+                                : "Médico não encontrado";
+
+                            var observacoes = c.IsObservacoesNull() ? "" : c.Observacoes;
+
+                            return new
+                            {
+                                Data = c.DataConsulta.ToString("dd/MM/yyyy HH:mm"),
+                                Medico = medico,
+                                Motivo = c.Motivo,
+                                Status = c.StatusConsulta,
+                                Observações = observacoes
+                            };
+                        })
+                        .ToList();
+
+                    dgvCancelar.DataSource = consultas;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao carregar consultas: {ex.Message}", "Erro",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dgvCancelar.DataSource = new List<object>();
+            }
+        }
+
+        public FormCancelarConsulta(int idUsuario)
+        {
+            InitializeComponent();
+            _idUsuario = idUsuario;
+            CarregarConsultasDoUsuario();
+            ConfigurarDataGridView();
+            AjustarColunasDataGridView();
+            RadiusButton controlador = new RadiusButton();
+            controlador.ConfigInicial(this, panelCancelarConsulta, btnSair, 25, Color.White);
+        }
+
+      
 
         private void FormCancelarConsulta_Paint(object sender, PaintEventArgs e)
         {

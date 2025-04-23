@@ -62,5 +62,11 @@ namespace Avalia__
             FormularioConsultasAgendadas formularioConsultasAgendadas = new FormularioConsultasAgendadas(idUsuario);
             formularioConsultasAgendadas.ShowDialog();
         }
+
+        private void btnCancelarConsulta_Click(object sender, EventArgs e)
+        {
+            FormCancelarConsulta formCancelarConsulta = new FormCancelarConsulta(idUsuario);
+            formCancelarConsulta.ShowDialog();
+        }
     }
 }

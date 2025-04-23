@@ -64,10 +64,9 @@
             this.panelbackground.Controls.Add(this.btnAgendar);
             this.panelbackground.Controls.Add(this.panelHeader);
             this.panelbackground.Controls.Add(this.lblAvalia);
-            this.panelbackground.Location = new System.Drawing.Point(35, 15);
-            this.panelbackground.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelbackground.Location = new System.Drawing.Point(26, 12);
             this.panelbackground.Name = "panelbackground";
-            this.panelbackground.Size = new System.Drawing.Size(1261, 966);
+            this.panelbackground.Size = new System.Drawing.Size(946, 785);
             this.panelbackground.TabIndex = 0;
             // 
             // btnSair
@@ -77,10 +76,9 @@
             this.btnSair.FlatAppearance.BorderSize = 0;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
-            this.btnSair.Location = new System.Drawing.Point(1148, 10);
-            this.btnSair.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSair.Location = new System.Drawing.Point(861, 8);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(67, 53);
+            this.btnSair.Size = new System.Drawing.Size(50, 43);
             this.btnSair.TabIndex = 36;
             this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSair.UseVisualStyleBackColor = false;
@@ -88,10 +86,9 @@
             // panelConsultas
             // 
             this.panelConsultas.Controls.Add(this.lblTituloConsultas);
-            this.panelConsultas.Location = new System.Drawing.Point(52, 766);
-            this.panelConsultas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelConsultas.Location = new System.Drawing.Point(39, 622);
             this.panelConsultas.Name = "panelConsultas";
-            this.panelConsultas.Size = new System.Drawing.Size(1163, 169);
+            this.panelConsultas.Size = new System.Drawing.Size(872, 137);
             this.panelConsultas.TabIndex = 35;
             // 
             // lblTituloConsultas
@@ -99,10 +96,9 @@
             this.lblTituloConsultas.AutoSize = true;
             this.lblTituloConsultas.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloConsultas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblTituloConsultas.Location = new System.Drawing.Point(29, 15);
-            this.lblTituloConsultas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTituloConsultas.Location = new System.Drawing.Point(22, 12);
             this.lblTituloConsultas.Name = "lblTituloConsultas";
-            this.lblTituloConsultas.Size = new System.Drawing.Size(239, 29);
+            this.lblTituloConsultas.Size = new System.Drawing.Size(194, 22);
             this.lblTituloConsultas.TabIndex = 12;
             this.lblTituloConsultas.Text = "Próximas consultas";
             // 
@@ -112,10 +108,9 @@
             this.lblhistoricobtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(228)))), ((int)(((byte)(220)))));
             this.lblhistoricobtn.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblhistoricobtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(138)))), ((int)(((byte)(122)))));
-            this.lblhistoricobtn.Location = new System.Drawing.Point(771, 673);
-            this.lblhistoricobtn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblhistoricobtn.Location = new System.Drawing.Point(578, 547);
             this.lblhistoricobtn.Name = "lblhistoricobtn";
-            this.lblhistoricobtn.Size = new System.Drawing.Size(327, 19);
+            this.lblhistoricobtn.Size = new System.Drawing.Size(265, 16);
             this.lblhistoricobtn.TabIndex = 34;
             this.lblhistoricobtn.Text = "Acesse seus exames e consultas anteriores";
             // 
@@ -125,10 +120,9 @@
             this.lblcancelabtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(228)))), ((int)(((byte)(220)))));
             this.lblcancelabtn.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblcancelabtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(138)))), ((int)(((byte)(122)))));
-            this.lblcancelabtn.Location = new System.Drawing.Point(179, 674);
-            this.lblcancelabtn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblcancelabtn.Location = new System.Drawing.Point(134, 548);
             this.lblcancelabtn.Name = "lblcancelabtn";
-            this.lblcancelabtn.Size = new System.Drawing.Size(321, 19);
+            this.lblcancelabtn.Size = new System.Drawing.Size(251, 16);
             this.lblcancelabtn.TabIndex = 33;
             this.lblcancelabtn.Text = "Reagende ou cancele um horário marcado";
             // 
@@ -138,10 +132,9 @@
             this.lblAvaliabtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(228)))), ((int)(((byte)(220)))));
             this.lblAvaliabtn.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAvaliabtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(138)))), ((int)(((byte)(122)))));
-            this.lblAvaliabtn.Location = new System.Drawing.Point(753, 444);
-            this.lblAvaliabtn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAvaliabtn.Location = new System.Drawing.Point(565, 361);
             this.lblAvaliabtn.Name = "lblAvaliabtn";
-            this.lblAvaliabtn.Size = new System.Drawing.Size(350, 19);
+            this.lblAvaliabtn.Size = new System.Drawing.Size(278, 16);
             this.lblAvaliabtn.TabIndex = 32;
             this.lblAvaliabtn.Text = "Deixe seu feedback sobre consultas anteriores";
             // 
@@ -151,10 +144,9 @@
             this.lblAgendarBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(228)))), ((int)(((byte)(220)))));
             this.lblAgendarBtn.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAgendarBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(138)))), ((int)(((byte)(122)))));
-            this.lblAgendarBtn.Location = new System.Drawing.Point(149, 444);
-            this.lblAgendarBtn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAgendarBtn.Location = new System.Drawing.Point(112, 361);
             this.lblAgendarBtn.Name = "lblAgendarBtn";
-            this.lblAgendarBtn.Size = new System.Drawing.Size(350, 19);
+            this.lblAgendarBtn.Size = new System.Drawing.Size(283, 16);
             this.lblAgendarBtn.TabIndex = 27;
             this.lblAgendarBtn.Text = "Marque sua consulta com nossos especialistas";
             // 
@@ -165,10 +157,9 @@
             this.btnHistoricomedico.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHistoricomedico.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
             this.btnHistoricomedico.Image = ((System.Drawing.Image)(resources.GetObject("btnHistoricomedico.Image")));
-            this.btnHistoricomedico.Location = new System.Drawing.Point(651, 542);
-            this.btnHistoricomedico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHistoricomedico.Location = new System.Drawing.Point(488, 440);
             this.btnHistoricomedico.Name = "btnHistoricomedico";
-            this.btnHistoricomedico.Size = new System.Drawing.Size(564, 199);
+            this.btnHistoricomedico.Size = new System.Drawing.Size(423, 162);
             this.btnHistoricomedico.TabIndex = 31;
             this.btnHistoricomedico.Text = "Histórico médico";
             this.btnHistoricomedico.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -182,14 +173,14 @@
             this.btnCancelarConsulta.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelarConsulta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
             this.btnCancelarConsulta.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelarConsulta.Image")));
-            this.btnCancelarConsulta.Location = new System.Drawing.Point(52, 542);
-            this.btnCancelarConsulta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelarConsulta.Location = new System.Drawing.Point(39, 440);
             this.btnCancelarConsulta.Name = "btnCancelarConsulta";
-            this.btnCancelarConsulta.Size = new System.Drawing.Size(564, 199);
+            this.btnCancelarConsulta.Size = new System.Drawing.Size(423, 162);
             this.btnCancelarConsulta.TabIndex = 30;
             this.btnCancelarConsulta.Text = "Cancelar consulta";
             this.btnCancelarConsulta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnCancelarConsulta.UseVisualStyleBackColor = false;
+            this.btnCancelarConsulta.Click += new System.EventHandler(this.btnCancelarConsulta_Click);
             // 
             // btnAvaliarconsulta
             // 
@@ -198,10 +189,9 @@
             this.btnAvaliarconsulta.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAvaliarconsulta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
             this.btnAvaliarconsulta.Image = ((System.Drawing.Image)(resources.GetObject("btnAvaliarconsulta.Image")));
-            this.btnAvaliarconsulta.Location = new System.Drawing.Point(651, 305);
-            this.btnAvaliarconsulta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAvaliarconsulta.Location = new System.Drawing.Point(488, 248);
             this.btnAvaliarconsulta.Name = "btnAvaliarconsulta";
-            this.btnAvaliarconsulta.Size = new System.Drawing.Size(564, 199);
+            this.btnAvaliarconsulta.Size = new System.Drawing.Size(423, 162);
             this.btnAvaliarconsulta.TabIndex = 29;
             this.btnAvaliarconsulta.Text = "Avaliar consulta";
             this.btnAvaliarconsulta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -215,10 +205,9 @@
             this.btnAgendar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgendar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
             this.btnAgendar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgendar.Image")));
-            this.btnAgendar.Location = new System.Drawing.Point(52, 305);
-            this.btnAgendar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgendar.Location = new System.Drawing.Point(39, 248);
             this.btnAgendar.Name = "btnAgendar";
-            this.btnAgendar.Size = new System.Drawing.Size(564, 199);
+            this.btnAgendar.Size = new System.Drawing.Size(423, 162);
             this.btnAgendar.TabIndex = 28;
             this.btnAgendar.Text = "Agendar consulta";
             this.btnAgendar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -230,20 +219,18 @@
             // 
             this.panelHeader.Controls.Add(this.lblSubTitulo);
             this.panelHeader.Controls.Add(this.lblTitulo);
-            this.panelHeader.Location = new System.Drawing.Point(52, 112);
-            this.panelHeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelHeader.Location = new System.Drawing.Point(39, 91);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(1163, 138);
+            this.panelHeader.Size = new System.Drawing.Size(872, 112);
             this.panelHeader.TabIndex = 26;
             // 
             // lblSubTitulo
             // 
             this.lblSubTitulo.AutoSize = true;
             this.lblSubTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblSubTitulo.Location = new System.Drawing.Point(52, 58);
-            this.lblSubTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSubTitulo.Location = new System.Drawing.Point(39, 47);
             this.lblSubTitulo.Name = "lblSubTitulo";
-            this.lblSubTitulo.Size = new System.Drawing.Size(375, 16);
+            this.lblSubTitulo.Size = new System.Drawing.Size(294, 13);
             this.lblSubTitulo.TabIndex = 2;
             this.lblSubTitulo.Text = "Encontre os melhores especialistas e cuide do seu bem-estar";
             // 
@@ -251,10 +238,9 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(52, 23);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitulo.Location = new System.Drawing.Point(39, 19);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(179, 16);
+            this.lblTitulo.Size = new System.Drawing.Size(140, 13);
             this.lblTitulo.TabIndex = 2;
             this.lblTitulo.Text = "Sua saúde em primeiro lugar";
             // 
@@ -262,21 +248,19 @@
             // 
             this.lblAvalia.AutoSize = true;
             this.lblAvalia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblAvalia.Location = new System.Drawing.Point(48, 64);
-            this.lblAvalia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAvalia.Location = new System.Drawing.Point(36, 52);
             this.lblAvalia.Name = "lblAvalia";
-            this.lblAvalia.Size = new System.Drawing.Size(43, 16);
+            this.lblAvalia.Size = new System.Drawing.Size(35, 13);
             this.lblAvalia.TabIndex = 25;
             this.lblAvalia.Text = "Aurea";
             // 
             // FormularioPaginaPaciente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1312, 690);
+            this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.panelbackground);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormularioPaginaPaciente";
