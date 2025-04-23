@@ -70,7 +70,7 @@
             this.panelAgendar.Controls.Add(this.cbxEspecialidade);
             this.panelAgendar.Controls.Add(this.c);
             this.panelAgendar.Controls.Add(this.lblinfoConsulta);
-            this.panelAgendar.Location = new System.Drawing.Point(70, 135);
+            this.panelAgendar.Location = new System.Drawing.Point(70, 80);
             this.panelAgendar.Name = "panelAgendar";
             this.panelAgendar.Size = new System.Drawing.Size(855, 668);
             this.panelAgendar.TabIndex = 0;
@@ -214,7 +214,7 @@
             this.lblMedicos.AutoSize = true;
             this.lblMedicos.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMedicos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblMedicos.Location = new System.Drawing.Point(451, 51);
+            this.lblMedicos.Location = new System.Drawing.Point(529, 61);
             this.lblMedicos.Name = "lblMedicos";
             this.lblMedicos.Size = new System.Drawing.Size(69, 20);
             this.lblMedicos.TabIndex = 6;
@@ -259,13 +259,13 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitulo.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblTitulo.Location = new System.Drawing.Point(65, 37);
+            this.lblTitulo.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblTitulo.Location = new System.Drawing.Point(128, 31);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(62, 25);
+            this.lblTitulo.Size = new System.Drawing.Size(82, 24);
             this.lblTitulo.TabIndex = 1;
-            this.lblTitulo.Text = "Aurea";
+            this.lblTitulo.Text = "Áurea+";
             // 
             // lblsubtitulo
             // 
@@ -273,7 +273,7 @@
             this.lblsubtitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblsubtitulo.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblsubtitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblsubtitulo.Location = new System.Drawing.Point(66, 85);
+            this.lblsubtitulo.Location = new System.Drawing.Point(154, 55);
             this.lblsubtitulo.Name = "lblsubtitulo";
             this.lblsubtitulo.Size = new System.Drawing.Size(157, 22);
             this.lblsubtitulo.TabIndex = 2;
@@ -286,7 +286,7 @@
             this.btnSair.FlatAppearance.BorderSize = 0;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
-            this.btnSair.Location = new System.Drawing.Point(875, 31);
+            this.btnSair.Location = new System.Drawing.Point(875, 24);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(50, 43);
             this.btnSair.TabIndex = 12;

@@ -169,11 +169,11 @@ namespace Avalia__
 
         private void MudarFonte() 
         {
-            dtpDataNascimento.Font = new Font("Segoe UI", 12); // Aumenta a fonte → aumenta a altura
-            mktTelefone.Font = new Font("Segoe UI", 12); // Aumenta a fonte → aumenta a altura
-            cbxGenero.Font = new Font("Segoe UI", 12); // Aumenta a fonte → aumenta a altura
-            cbxEstado.Font = new Font("Segoe UI", 14); // Aumenta a fonte → aumenta a altura
-            mktCPF.Font = new Font("Segoe UI", 12);
+            dtpDataNascimento.Font = new Font("Arial", 12); // Aumenta a fonte → aumenta a altura
+            mktTelefone.Font = new Font("Arial", 12); // Aumenta a fonte → aumenta a altura
+            cbxGenero.Font = new Font("Arial", 12); // Aumenta a fonte → aumenta a altura
+            cbxEstado.Font = new Font("Arial", 14); // Aumenta a fonte → aumenta a altura
+            mktCPF.Font = new Font("Arial", 12);
 
         }
 
@@ -297,5 +297,9 @@ namespace Avalia__
             configuracaoTelas.FecharAba(this);
         }
 
+        private void panelCadastro_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

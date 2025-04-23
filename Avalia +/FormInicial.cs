@@ -107,5 +107,15 @@ namespace Avalia__
             }
 
         }
+
+        private void lblPaciente_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormInicial_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

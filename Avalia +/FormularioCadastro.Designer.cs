@@ -109,6 +109,7 @@
             this.panelCadastro.Padding = new System.Windows.Forms.Padding(0, 0, 20, 20);
             this.panelCadastro.Size = new System.Drawing.Size(719, 788);
             this.panelCadastro.TabIndex = 0;
+            this.panelCadastro.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCadastro_Paint);
             // 
             // lblError
             // 
@@ -124,7 +125,7 @@
             this.lblConfirmeSenha.AutoSize = true;
             this.lblConfirmeSenha.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConfirmeSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblConfirmeSenha.Location = new System.Drawing.Point(344, 322);
+            this.lblConfirmeSenha.Location = new System.Drawing.Point(344, 327);
             this.lblConfirmeSenha.Name = "lblConfirmeSenha";
             this.lblConfirmeSenha.Size = new System.Drawing.Size(160, 18);
             this.lblConfirmeSenha.TabIndex = 36;
@@ -135,7 +136,7 @@
             this.lblSenha.AutoSize = true;
             this.lblSenha.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblSenha.Location = new System.Drawing.Point(31, 322);
+            this.lblSenha.Location = new System.Drawing.Point(31, 327);
             this.lblSenha.Name = "lblSenha";
             this.lblSenha.Size = new System.Drawing.Size(53, 18);
             this.lblSenha.TabIndex = 35;
@@ -356,7 +357,7 @@
             this.lblCompletecadastro.AutoSize = true;
             this.lblCompletecadastro.Font = new System.Drawing.Font("Arial Narrow", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompletecadastro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblCompletecadastro.Location = new System.Drawing.Point(272, 59);
+            this.lblCompletecadastro.Location = new System.Drawing.Point(267, 59);
             this.lblCompletecadastro.Name = "lblCompletecadastro";
             this.lblCompletecadastro.Size = new System.Drawing.Size(208, 25);
             this.lblCompletecadastro.TabIndex = 1;
@@ -384,7 +385,7 @@
             this.lblAvaliaCadastro.AutoSize = true;
             this.lblAvaliaCadastro.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAvaliaCadastro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblAvaliaCadastro.Location = new System.Drawing.Point(329, 31);
+            this.lblAvaliaCadastro.Location = new System.Drawing.Point(324, 31);
             this.lblAvaliaCadastro.Name = "lblAvaliaCadastro";
             this.lblAvaliaCadastro.Size = new System.Drawing.Size(82, 24);
             this.lblAvaliaCadastro.TabIndex = 0;
@@ -529,7 +530,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1001, 704);
+            this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.panelCadastro);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
