@@ -214,7 +214,7 @@
             this.lblMedicos.AutoSize = true;
             this.lblMedicos.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMedicos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblMedicos.Location = new System.Drawing.Point(529, 61);
+            this.lblMedicos.Location = new System.Drawing.Point(483, 51);
             this.lblMedicos.Name = "lblMedicos";
             this.lblMedicos.Size = new System.Drawing.Size(69, 20);
             this.lblMedicos.TabIndex = 6;
@@ -299,7 +299,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(984, 561);
+            this.ClientSize = new System.Drawing.Size(1001, 561);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.lblsubtitulo);
             this.Controls.Add(this.lblTitulo);
