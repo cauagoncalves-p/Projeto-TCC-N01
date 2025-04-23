@@ -124,6 +124,11 @@ namespace Avalia__
             ConfiguracaoTelas configuracaoTelas = new ConfiguracaoTelas();
             configuracaoTelas.FecharAba(this);
         }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

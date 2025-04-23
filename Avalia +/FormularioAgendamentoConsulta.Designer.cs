@@ -72,14 +72,14 @@
             this.panelAgendar.Controls.Add(this.lblinfoConsulta);
             this.panelAgendar.Location = new System.Drawing.Point(70, 80);
             this.panelAgendar.Name = "panelAgendar";
-            this.panelAgendar.Size = new System.Drawing.Size(855, 668);
+            this.panelAgendar.Size = new System.Drawing.Size(855, 600);
             this.panelAgendar.TabIndex = 0;
             // 
             // txtConsultaMotivo
             // 
             this.txtConsultaMotivo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(245)))));
             this.txtConsultaMotivo.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConsultaMotivo.Location = new System.Drawing.Point(34, 294);
+            this.txtConsultaMotivo.Location = new System.Drawing.Point(33, 243);
             this.txtConsultaMotivo.Multiline = true;
             this.txtConsultaMotivo.Name = "txtConsultaMotivo";
             this.txtConsultaMotivo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -89,11 +89,11 @@
             // lblMotivoConsulta
             // 
             this.lblMotivoConsulta.AutoSize = true;
-            this.lblMotivoConsulta.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMotivoConsulta.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMotivoConsulta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblMotivoConsulta.Location = new System.Drawing.Point(31, 249);
+            this.lblMotivoConsulta.Location = new System.Drawing.Point(31, 216);
             this.lblMotivoConsulta.Name = "lblMotivoConsulta";
-            this.lblMotivoConsulta.Size = new System.Drawing.Size(127, 20);
+            this.lblMotivoConsulta.Size = new System.Drawing.Size(154, 23);
             this.lblMotivoConsulta.TabIndex = 17;
             this.lblMotivoConsulta.Text = "Motivo da consulta";
             // 
@@ -102,7 +102,9 @@
             this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(164)))), ((int)(((byte)(143)))));
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Location = new System.Drawing.Point(531, 577);
+            this.btnCancelar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(485, 500);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(129, 45);
             this.btnCancelar.TabIndex = 16;
@@ -114,7 +116,9 @@
             this.btnContinuar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(164)))), ((int)(((byte)(143)))));
             this.btnContinuar.FlatAppearance.BorderSize = 0;
             this.btnContinuar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnContinuar.Location = new System.Drawing.Point(679, 577);
+            this.btnContinuar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnContinuar.ForeColor = System.Drawing.Color.White;
+            this.btnContinuar.Location = new System.Drawing.Point(679, 500);
             this.btnContinuar.Name = "btnContinuar";
             this.btnContinuar.Size = new System.Drawing.Size(129, 45);
             this.btnContinuar.TabIndex = 15;
@@ -126,7 +130,7 @@
             // 
             this.txtobservacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(245)))));
             this.txtobservacao.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtobservacao.Location = new System.Drawing.Point(33, 450);
+            this.txtobservacao.Location = new System.Drawing.Point(33, 371);
             this.txtobservacao.Multiline = true;
             this.txtobservacao.Name = "txtobservacao";
             this.txtobservacao.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -136,11 +140,11 @@
             // lblObservacoes
             // 
             this.lblObservacoes.AutoSize = true;
-            this.lblObservacoes.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblObservacoes.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblObservacoes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblObservacoes.Location = new System.Drawing.Point(30, 405);
+            this.lblObservacoes.Location = new System.Drawing.Point(31, 344);
             this.lblObservacoes.Name = "lblObservacoes";
-            this.lblObservacoes.Size = new System.Drawing.Size(150, 20);
+            this.lblObservacoes.Size = new System.Drawing.Size(184, 23);
             this.lblObservacoes.TabIndex = 13;
             this.lblObservacoes.Text = "Obervações (Opcional)";
             // 
@@ -160,7 +164,7 @@
             this.cbxAtendimento.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cbxAtendimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxAtendimento.FormattingEnabled = true;
-            this.cbxAtendimento.Location = new System.Drawing.Point(455, 181);
+            this.cbxAtendimento.Location = new System.Drawing.Point(455, 158);
             this.cbxAtendimento.Name = "cbxAtendimento";
             this.cbxAtendimento.Size = new System.Drawing.Size(346, 33);
             this.cbxAtendimento.TabIndex = 11;
@@ -170,7 +174,7 @@
             this.lblLocal.AutoSize = true;
             this.lblLocal.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLocal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblLocal.Location = new System.Drawing.Point(451, 149);
+            this.lblLocal.Location = new System.Drawing.Point(451, 135);
             this.lblLocal.Name = "lblLocal";
             this.lblLocal.Size = new System.Drawing.Size(147, 20);
             this.lblLocal.TabIndex = 10;
@@ -180,7 +184,7 @@
             // 
             this.dtpData.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpData.Location = new System.Drawing.Point(33, 183);
+            this.dtpData.Location = new System.Drawing.Point(33, 158);
             this.dtpData.Name = "dtpData";
             this.dtpData.Size = new System.Drawing.Size(346, 31);
             this.dtpData.TabIndex = 9;
@@ -190,7 +194,7 @@
             this.lblData.AutoSize = true;
             this.lblData.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblData.Location = new System.Drawing.Point(29, 149);
+            this.lblData.Location = new System.Drawing.Point(31, 135);
             this.lblData.Name = "lblData";
             this.lblData.Size = new System.Drawing.Size(36, 20);
             this.lblData.TabIndex = 8;
@@ -214,7 +218,7 @@
             this.lblMedicos.AutoSize = true;
             this.lblMedicos.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMedicos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblMedicos.Location = new System.Drawing.Point(529, 61);
+            this.lblMedicos.Location = new System.Drawing.Point(451, 55);
             this.lblMedicos.Name = "lblMedicos";
             this.lblMedicos.Size = new System.Drawing.Size(69, 20);
             this.lblMedicos.TabIndex = 6;
@@ -238,7 +242,7 @@
             this.c.AutoSize = true;
             this.c.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.c.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.c.Location = new System.Drawing.Point(29, 51);
+            this.c.Location = new System.Drawing.Point(29, 55);
             this.c.Name = "c";
             this.c.Size = new System.Drawing.Size(144, 20);
             this.c.TabIndex = 4;
@@ -247,11 +251,11 @@
             // lblinfoConsulta
             // 
             this.lblinfoConsulta.AutoSize = true;
-            this.lblinfoConsulta.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblinfoConsulta.Font = new System.Drawing.Font("Arial", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblinfoConsulta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblinfoConsulta.Location = new System.Drawing.Point(16, 15);
+            this.lblinfoConsulta.Location = new System.Drawing.Point(320, 16);
             this.lblinfoConsulta.Name = "lblinfoConsulta";
-            this.lblinfoConsulta.Size = new System.Drawing.Size(189, 18);
+            this.lblinfoConsulta.Size = new System.Drawing.Size(239, 22);
             this.lblinfoConsulta.TabIndex = 3;
             this.lblinfoConsulta.Text = "Informações da consulta";
             // 
@@ -261,7 +265,7 @@
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblTitulo.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblTitulo.Location = new System.Drawing.Point(128, 31);
+            this.lblTitulo.Location = new System.Drawing.Point(86, 23);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(82, 24);
             this.lblTitulo.TabIndex = 1;
@@ -273,11 +277,11 @@
             this.lblsubtitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblsubtitulo.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblsubtitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblsubtitulo.Location = new System.Drawing.Point(154, 55);
+            this.lblsubtitulo.Location = new System.Drawing.Point(119, 45);
             this.lblsubtitulo.Name = "lblsubtitulo";
-            this.lblsubtitulo.Size = new System.Drawing.Size(157, 22);
+            this.lblsubtitulo.Size = new System.Drawing.Size(187, 22);
             this.lblsubtitulo.TabIndex = 2;
-            this.lblsubtitulo.Text = "Agendar consulta";
+            this.lblsubtitulo.Text = "Agende sua consulta";
             // 
             // btnSair
             // 
@@ -299,7 +303,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(984, 561);
+            this.ClientSize = new System.Drawing.Size(984, 557);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.lblsubtitulo);
             this.Controls.Add(this.lblTitulo);
