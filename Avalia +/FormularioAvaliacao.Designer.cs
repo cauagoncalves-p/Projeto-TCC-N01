@@ -139,7 +139,7 @@
             this.comentarioPanel.Controls.Add(this.txtDriConsulta);
             this.comentarioPanel.Controls.Add(this.btnEnviarAvaliacao);
             this.comentarioPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.comentarioPanel.Location = new System.Drawing.Point(59, 53);
+            this.comentarioPanel.Location = new System.Drawing.Point(59, 31);
             this.comentarioPanel.Name = "comentarioPanel";
             this.comentarioPanel.Size = new System.Drawing.Size(878, 639);
             this.comentarioPanel.TabIndex = 1;
@@ -411,7 +411,7 @@
             this.lblConhecimento.AutoSize = true;
             this.lblConhecimento.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConhecimento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblConhecimento.Location = new System.Drawing.Point(28, 247);
+            this.lblConhecimento.Location = new System.Drawing.Point(28, 251);
             this.lblConhecimento.Name = "lblConhecimento";
             this.lblConhecimento.Size = new System.Drawing.Size(148, 20);
             this.lblConhecimento.TabIndex = 37;
@@ -447,30 +447,35 @@
             // label12
             // 
             this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Gray;
-            this.label12.Location = new System.Drawing.Point(226, 49);
+            this.label12.Location = new System.Drawing.Point(331, 41);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(221, 13);
+            this.label12.Size = new System.Drawing.Size(257, 20);
             this.label12.TabIndex = 30;
             this.label12.Text = "Ginecologista e Obstetra ● CRM/SP 123456 ";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // btnCancelarAvaliacao
             // 
-            this.btnCancelarAvaliacao.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCancelarAvaliacao.Location = new System.Drawing.Point(597, 588);
+            this.btnCancelarAvaliacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(164)))), ((int)(((byte)(143)))));
+            this.btnCancelarAvaliacao.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelarAvaliacao.ForeColor = System.Drawing.Color.White;
+            this.btnCancelarAvaliacao.Location = new System.Drawing.Point(572, 575);
             this.btnCancelarAvaliacao.Name = "btnCancelarAvaliacao";
-            this.btnCancelarAvaliacao.Size = new System.Drawing.Size(102, 32);
+            this.btnCancelarAvaliacao.Size = new System.Drawing.Size(121, 45);
             this.btnCancelarAvaliacao.TabIndex = 28;
             this.btnCancelarAvaliacao.Text = "Cancelar";
-            this.btnCancelarAvaliacao.UseVisualStyleBackColor = true;
+            this.btnCancelarAvaliacao.UseVisualStyleBackColor = false;
             this.btnCancelarAvaliacao.Click += new System.EventHandler(this.button2_Click);
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(28, 553);
+            this.checkBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(29, 520);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(335, 17);
+            this.checkBox1.Size = new System.Drawing.Size(401, 20);
             this.checkBox1.TabIndex = 27;
             this.checkBox1.Text = "Manter minha avaliação anônima (Seu nome não sera divulgado) ";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -479,11 +484,11 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.label7.Location = new System.Drawing.Point(224, 18);
+            this.label7.Location = new System.Drawing.Point(351, 18);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(204, 25);
+            this.label7.Size = new System.Drawing.Size(221, 22);
             this.label7.TabIndex = 22;
             this.label7.Text = "Dra. Ana Carolina Silva";
             // 
@@ -491,21 +496,21 @@
             // 
             this.textBoxComentarioPanel.BackColor = System.Drawing.Color.FloralWhite;
             this.textBoxComentarioPanel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxComentarioPanel.Location = new System.Drawing.Point(29, 423);
+            this.textBoxComentarioPanel.Location = new System.Drawing.Point(29, 406);
             this.textBoxComentarioPanel.Multiline = true;
             this.textBoxComentarioPanel.Name = "textBoxComentarioPanel";
             this.textBoxComentarioPanel.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxComentarioPanel.Size = new System.Drawing.Size(826, 105);
+            this.textBoxComentarioPanel.Size = new System.Drawing.Size(822, 105);
             this.textBoxComentarioPanel.TabIndex = 21;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.label6.Location = new System.Drawing.Point(28, 377);
+            this.label6.Location = new System.Drawing.Point(28, 372);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(208, 20);
+            this.label6.Size = new System.Drawing.Size(232, 18);
             this.label6.TabIndex = 20;
             this.label6.Text = "Deixe um comentário (Opcional)";
             // 
@@ -514,7 +519,7 @@
             this.lblTempoEspera.AutoSize = true;
             this.lblTempoEspera.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTempoEspera.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblTempoEspera.Location = new System.Drawing.Point(28, 195);
+            this.lblTempoEspera.Location = new System.Drawing.Point(28, 196);
             this.lblTempoEspera.Name = "lblTempoEspera";
             this.lblTempoEspera.Size = new System.Drawing.Size(116, 20);
             this.lblTempoEspera.TabIndex = 18;
@@ -525,7 +530,7 @@
             this.lblAtendimentoComunicacao.AutoSize = true;
             this.lblAtendimentoComunicacao.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAtendimentoComunicacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblAtendimentoComunicacao.Location = new System.Drawing.Point(28, 137);
+            this.lblAtendimentoComunicacao.Location = new System.Drawing.Point(28, 140);
             this.lblAtendimentoComunicacao.Name = "lblAtendimentoComunicacao";
             this.lblAtendimentoComunicacao.Size = new System.Drawing.Size(186, 20);
             this.lblAtendimentoComunicacao.TabIndex = 17;
@@ -535,11 +540,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Arial", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.label2.Location = new System.Drawing.Point(24, 85);
+            this.label2.Location = new System.Drawing.Point(27, 92);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(158, 23);
+            this.label2.Size = new System.Drawing.Size(189, 22);
             this.label2.TabIndex = 15;
             this.label2.Text = "Avalie sua consulta";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -547,23 +552,25 @@
             // txtDriConsulta
             // 
             this.txtDriConsulta.AutoSize = true;
-            this.txtDriConsulta.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDriConsulta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.txtDriConsulta.Location = new System.Drawing.Point(20, 31);
+            this.txtDriConsulta.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDriConsulta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtDriConsulta.Location = new System.Drawing.Point(26, 27);
             this.txtDriConsulta.Name = "txtDriConsulta";
-            this.txtDriConsulta.Size = new System.Drawing.Size(112, 25);
+            this.txtDriConsulta.Size = new System.Drawing.Size(82, 24);
             this.txtDriConsulta.TabIndex = 14;
-            this.txtDriConsulta.Text = "DriConsulta";
+            this.txtDriConsulta.Text = "Áurea+";
             // 
             // btnEnviarAvaliacao
             // 
-            this.btnEnviarAvaliacao.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnEnviarAvaliacao.Location = new System.Drawing.Point(749, 588);
+            this.btnEnviarAvaliacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(164)))), ((int)(((byte)(143)))));
+            this.btnEnviarAvaliacao.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnviarAvaliacao.ForeColor = System.Drawing.Color.White;
+            this.btnEnviarAvaliacao.Location = new System.Drawing.Point(734, 575);
             this.btnEnviarAvaliacao.Name = "btnEnviarAvaliacao";
-            this.btnEnviarAvaliacao.Size = new System.Drawing.Size(102, 32);
+            this.btnEnviarAvaliacao.Size = new System.Drawing.Size(121, 45);
             this.btnEnviarAvaliacao.TabIndex = 13;
-            this.btnEnviarAvaliacao.Text = "Enviar Avaliação";
-            this.btnEnviarAvaliacao.UseVisualStyleBackColor = true;
+            this.btnEnviarAvaliacao.Text = "Enviar";
+            this.btnEnviarAvaliacao.UseVisualStyleBackColor = false;
             // 
             // label8
             // 
@@ -578,7 +585,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 767);
+            this.ClientSize = new System.Drawing.Size(984, 685);
             this.Controls.Add(this.comentarioPanel);
             this.Controls.Add(this.label8);
             this.MaximizeBox = false;
