@@ -34,25 +34,27 @@
             this.btnSair = new System.Windows.Forms.Button();
             this.lblsubtitulo = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.panelCancelarConsulta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCancelar)).BeginInit();
             this.SuspendLayout();
             // 
             // panelCancelarConsulta
             // 
+            this.panelCancelarConsulta.Controls.Add(this.btnCancelar);
             this.panelCancelarConsulta.Controls.Add(this.dgvCancelar);
             this.panelCancelarConsulta.Location = new System.Drawing.Point(63, 165);
             this.panelCancelarConsulta.Name = "panelCancelarConsulta";
-            this.panelCancelarConsulta.Size = new System.Drawing.Size(868, 493);
+            this.panelCancelarConsulta.Size = new System.Drawing.Size(868, 616);
             this.panelCancelarConsulta.TabIndex = 0;
             // 
             // dgvCancelar
             // 
             this.dgvCancelar.BackgroundColor = System.Drawing.Color.White;
             this.dgvCancelar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCancelar.Location = new System.Drawing.Point(38, 34);
+            this.dgvCancelar.Location = new System.Drawing.Point(3, 34);
             this.dgvCancelar.Name = "dgvCancelar";
-            this.dgvCancelar.Size = new System.Drawing.Size(783, 435);
+            this.dgvCancelar.Size = new System.Drawing.Size(862, 435);
             this.dgvCancelar.TabIndex = 0;
             // 
             // btnSair
@@ -93,11 +95,26 @@
             this.lblTitulo.TabIndex = 13;
             this.lblTitulo.Text = "Aurea";
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(165)))), ((int)(((byte)(166)))));
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelar.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(200, 514);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(456, 48);
+            this.btnCancelar.TabIndex = 1;
+            this.btnCancelar.Text = "Cancelar consulta selecionada";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            // 
             // FormCancelarConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 685);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.lblsubtitulo);
             this.Controls.Add(this.lblTitulo);
@@ -121,5 +138,6 @@
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Label lblsubtitulo;
         private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }
