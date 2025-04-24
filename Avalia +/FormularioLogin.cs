@@ -22,16 +22,11 @@ namespace Avalia__
     {
         Mensagem_do_sistema mensagem_Do_Sistema = new Mensagem_do_sistema();
         ConfiguracaoTelas configuracaoTelas = new ConfiguracaoTelas();
-        private void MudarFonte() 
-        {
-            txtEmailLogin.Font = new Font("Segoe UI", 12, FontStyle.Regular);
-            txtSenhaLogin.Font = new Font("Segoe UI", 14, FontStyle.Bold);
-        }
+        
        
         public FormularioLogin()
         {
             InitializeComponent();
-            MudarFonte();
             
             RadiusButton controlador = new RadiusButton();
             controlador.ConfigInicial(this, panelLogin, btnSair, 25, Color.White);

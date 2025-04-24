@@ -135,6 +135,7 @@
             // 
             // txtSenhaLogin
             // 
+            this.txtSenhaLogin.Font = new System.Drawing.Font("Arial", 14.25F);
             this.txtSenhaLogin.Location = new System.Drawing.Point(39, 235);
             this.txtSenhaLogin.MaxLength = 50;
             this.txtSenhaLogin.Multiline = true;
@@ -156,6 +157,7 @@
             // 
             // txtEmailLogin
             // 
+            this.txtEmailLogin.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmailLogin.Location = new System.Drawing.Point(39, 143);
             this.txtEmailLogin.MaxLength = 100;
             this.txtEmailLogin.Multiline = true;
