@@ -68,5 +68,7 @@ namespace Avalia__
             FormCancelarConsulta formCancelarConsulta = new FormCancelarConsulta(idUsuario);
             formCancelarConsulta.ShowDialog();
         }
+
+        
     }
 }

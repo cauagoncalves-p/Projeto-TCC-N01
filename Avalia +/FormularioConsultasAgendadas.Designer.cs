@@ -48,7 +48,7 @@
             this.dgvConsultas.Location = new System.Drawing.Point(58, 213);
             this.dgvConsultas.Name = "dgvConsultas";
             this.dgvConsultas.RowHeadersWidth = 51;
-            this.dgvConsultas.Size = new System.Drawing.Size(851, 396);
+            this.dgvConsultas.Size = new System.Drawing.Size(851, 386);
             this.dgvConsultas.TabIndex = 0;
             // 
             // lblHistoricoConsulta
@@ -155,7 +155,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(984, 555);
+            this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.lbTitulo);
             this.Controls.Add(this.btnCancelar);

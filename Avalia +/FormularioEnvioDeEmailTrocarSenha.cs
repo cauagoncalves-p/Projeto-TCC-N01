@@ -89,11 +89,8 @@ namespace Avalia__
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            DialogResult sair = MessageBox.Show("Deseja fechar essa tela?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (sair == DialogResult.Yes)
-            {
-                this.Close();
-            }
+            ConfiguracaoTelas configuracaoTelas = new ConfiguracaoTelas();
+            configuracaoTelas.FecharAba(this);
         }
         private void TextBox_KeyUp(object sender, KeyEventArgs e)
         {

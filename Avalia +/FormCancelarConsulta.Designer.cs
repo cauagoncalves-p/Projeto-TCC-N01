@@ -45,7 +45,7 @@
             this.panelCancelarConsulta.Controls.Add(this.dgvCancelar);
             this.panelCancelarConsulta.Location = new System.Drawing.Point(63, 165);
             this.panelCancelarConsulta.Name = "panelCancelarConsulta";
-            this.panelCancelarConsulta.Size = new System.Drawing.Size(868, 616);
+            this.panelCancelarConsulta.Size = new System.Drawing.Size(868, 462);
             this.panelCancelarConsulta.TabIndex = 0;
             // 
             // btnCancelar
@@ -55,7 +55,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelar.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(200, 514);
+            this.btnCancelar.Location = new System.Drawing.Point(204, 395);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(456, 48);
             this.btnCancelar.TabIndex = 1;
@@ -69,10 +69,9 @@
             this.dgvCancelar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCancelar.Location = new System.Drawing.Point(3, 34);
             this.dgvCancelar.Name = "dgvCancelar";
-            this.dgvCancelar.Size = new System.Drawing.Size(862, 435);
+            this.dgvCancelar.Size = new System.Drawing.Size(862, 331);
             this.dgvCancelar.TabIndex = 0;
             this.dgvCancelar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCancelar_CellClick);
-          
             // 
             // btnSair
             // 
@@ -81,7 +80,7 @@
             this.btnSair.FlatAppearance.BorderSize = 0;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
-            this.btnSair.Location = new System.Drawing.Point(881, 36);
+            this.btnSair.Location = new System.Drawing.Point(881, 42);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(50, 43);
             this.btnSair.TabIndex = 15;
@@ -117,7 +116,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1018, 561);
+            this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.lblsubtitulo);
             this.Controls.Add(this.lblTitulo);

@@ -34,13 +34,13 @@
             this.lblLinkCriarConta = new System.Windows.Forms.LinkLabel();
             this.lblCriarConta = new System.Windows.Forms.Label();
             this.btnEntrar = new System.Windows.Forms.Button();
-            this.lblEsqueceuSenha = new System.Windows.Forms.LinkLabel();
             this.txtSenhaLogin = new System.Windows.Forms.TextBox();
             this.lblSenha = new System.Windows.Forms.Label();
             this.txtCRMLogin = new System.Windows.Forms.TextBox();
             this.lblcrm = new System.Windows.Forms.Label();
             this.lblLogin = new System.Windows.Forms.Label();
             this.lblAvalia = new System.Windows.Forms.Label();
+            this.lblEsqueceuSenha = new System.Windows.Forms.LinkLabel();
             this.panelLogin.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -118,21 +118,6 @@
             this.btnEntrar.UseVisualStyleBackColor = false;
             this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
-            // lblEsqueceuSenha
-            // 
-            this.lblEsqueceuSenha.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.lblEsqueceuSenha.AutoSize = true;
-            this.lblEsqueceuSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEsqueceuSenha.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.lblEsqueceuSenha.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.lblEsqueceuSenha.Location = new System.Drawing.Point(162, 348);
-            this.lblEsqueceuSenha.Name = "lblEsqueceuSenha";
-            this.lblEsqueceuSenha.Size = new System.Drawing.Size(132, 15);
-            this.lblEsqueceuSenha.TabIndex = 6;
-            this.lblEsqueceuSenha.TabStop = true;
-            this.lblEsqueceuSenha.Text = "Esqueceu sua senha ?";
-            this.lblEsqueceuSenha.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblEsqueceuSenha_LinkClicked);
-            // 
             // txtSenhaLogin
             // 
             this.txtSenhaLogin.Location = new System.Drawing.Point(39, 237);
@@ -197,6 +182,21 @@
             this.lblAvalia.TabIndex = 0;
             this.lblAvalia.Text = "Áurea+";
             // 
+            // lblEsqueceuSenha
+            // 
+            this.lblEsqueceuSenha.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.lblEsqueceuSenha.AutoSize = true;
+            this.lblEsqueceuSenha.Font = new System.Drawing.Font("Arial", 9F);
+            this.lblEsqueceuSenha.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.lblEsqueceuSenha.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
+            this.lblEsqueceuSenha.Location = new System.Drawing.Point(160, 354);
+            this.lblEsqueceuSenha.Name = "lblEsqueceuSenha";
+            this.lblEsqueceuSenha.Size = new System.Drawing.Size(135, 15);
+            this.lblEsqueceuSenha.TabIndex = 6;
+            this.lblEsqueceuSenha.TabStop = true;
+            this.lblEsqueceuSenha.Text = "Esqueceu sua senha ?";
+            this.lblEsqueceuSenha.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblEsqueceuSenha_LinkClicked);
+            // 
             // FormularioLoginMedico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -222,12 +222,12 @@
         private System.Windows.Forms.LinkLabel lblLinkCriarConta;
         private System.Windows.Forms.Label lblCriarConta;
         private System.Windows.Forms.Button btnEntrar;
-        private System.Windows.Forms.LinkLabel lblEsqueceuSenha;
         private System.Windows.Forms.TextBox txtSenhaLogin;
         private System.Windows.Forms.Label lblSenha;
         private System.Windows.Forms.TextBox txtCRMLogin;
         private System.Windows.Forms.Label lblcrm;
         private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.Label lblAvalia;
+        private System.Windows.Forms.LinkLabel lblEsqueceuSenha;
     }
 }

@@ -128,6 +128,7 @@ namespace Avalia__
                 using (var medicoAdapter = new tbMedicoTableAdapter())
                 {
                     var todosMedicos = medicoAdapter.GetData().ToDictionary(m => m.IdMedico);
+                    var instituicoes = new tbInstituicaoTableAdapter().GetData().ToDictionary(i => i.IdInstituicao);
 
                     var consultas = consultaAdapter.GetData()
                         .Where(c => c.Id_usuario == _idUsuario)
@@ -138,6 +139,13 @@ namespace Avalia__
                                 ? $"{m.Nome} {m.Sobrenome}"
                                 : "Médico não encontrado";
 
+                            var local = (todosMedicos.TryGetValue(c.IdMedico, out var medicoSelecionado) &&
+                                instituicoes.TryGetValue(medicoSelecionado.IdInstituicao, out var inst))
+                                ? inst.NomeInstituicao
+                                : "Local não encontrado";
+
+                          
+
                             var observacoes = c.IsObservacoesNull() ? "" : c.Observacoes;
 
                             return new
@@ -146,10 +154,15 @@ namespace Avalia__
                                 Medico = medico,
                                 Motivo = c.Motivo,
                                 Status = c.StatusConsulta,
-                                Observações = observacoes
+                                Observações = observacoes,
+                                Local = local
                             };
                         })
                         .ToList();
+
+                    
+
+                   
 
                     dgvCancelar.DataSource = consultas;
                 }
@@ -208,8 +221,12 @@ namespace Avalia__
                 string motivo = row.Cells["Motivo"].Value?.ToString() ?? "";
                 string status = row.Cells["Status"].Value?.ToString() ?? "";
                 string observacoes = row.Cells["Observações"].Value?.ToString() ?? "";
+                string local = row.Cells["Local"].Value?.ToString() ?? "";
 
-                var formConfirmarCancelamento = new frmConfirmarCancelamento(data, medico, motivo, status, observacoes);
+                var consultaSelecionada = (dynamic)row.DataBoundItem;
+                int idConsulta = consultaSelecionada.IdConsulta;
+
+                var formConfirmarCancelamento = new frmConfirmarCancelamento(idConsulta, data, medico, motivo, status, observacoes, local);
                 formConfirmarCancelamento.ShowDialog();
 
                 // Depois de cancelar, recarrega a grid e desativa o botão

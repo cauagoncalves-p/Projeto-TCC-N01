@@ -115,7 +115,7 @@
             // 
             this.lblError.AutoSize = true;
             this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(30, 404);
+            this.lblError.Location = new System.Drawing.Point(30, 412);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(0, 13);
             this.lblError.TabIndex = 37;
@@ -125,7 +125,7 @@
             this.lblConfirmeSenha.AutoSize = true;
             this.lblConfirmeSenha.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConfirmeSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblConfirmeSenha.Location = new System.Drawing.Point(344, 327);
+            this.lblConfirmeSenha.Location = new System.Drawing.Point(344, 335);
             this.lblConfirmeSenha.Name = "lblConfirmeSenha";
             this.lblConfirmeSenha.Size = new System.Drawing.Size(160, 18);
             this.lblConfirmeSenha.TabIndex = 36;
@@ -136,7 +136,7 @@
             this.lblSenha.AutoSize = true;
             this.lblSenha.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblSenha.Location = new System.Drawing.Point(31, 327);
+            this.lblSenha.Location = new System.Drawing.Point(31, 335);
             this.lblSenha.Name = "lblSenha";
             this.lblSenha.Size = new System.Drawing.Size(53, 18);
             this.lblSenha.TabIndex = 35;
@@ -146,7 +146,7 @@
             // 
             this.txtSenha.BackColor = System.Drawing.Color.FloralWhite;
             this.txtSenha.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.Location = new System.Drawing.Point(30, 352);
+            this.txtSenha.Location = new System.Drawing.Point(30, 360);
             this.txtSenha.Multiline = true;
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
@@ -157,7 +157,7 @@
             // 
             this.txtconfirmeSenha.BackColor = System.Drawing.Color.FloralWhite;
             this.txtconfirmeSenha.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtconfirmeSenha.Location = new System.Drawing.Point(347, 352);
+            this.txtconfirmeSenha.Location = new System.Drawing.Point(347, 360);
             this.txtconfirmeSenha.Multiline = true;
             this.txtconfirmeSenha.Name = "txtconfirmeSenha";
             this.txtconfirmeSenha.PasswordChar = '*';
@@ -237,7 +237,7 @@
             this.btnFinalizarCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFinalizarCadastro.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFinalizarCadastro.ForeColor = System.Drawing.Color.White;
-            this.btnFinalizarCadastro.Location = new System.Drawing.Point(362, 700);
+            this.btnFinalizarCadastro.Location = new System.Drawing.Point(362, 708);
             this.btnFinalizarCadastro.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
             this.btnFinalizarCadastro.Name = "btnFinalizarCadastro";
             this.btnFinalizarCadastro.Size = new System.Drawing.Size(298, 38);
@@ -253,7 +253,7 @@
             this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVoltar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVoltar.ForeColor = System.Drawing.Color.White;
-            this.btnVoltar.Location = new System.Drawing.Point(30, 701);
+            this.btnVoltar.Location = new System.Drawing.Point(30, 709);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(298, 39);
             this.btnVoltar.TabIndex = 27;
@@ -294,7 +294,7 @@
             "São Paulo  ",
             "Sergipe  ",
             "Tocantins"});
-            this.cbxEstado.Location = new System.Drawing.Point(378, 556);
+            this.cbxEstado.Location = new System.Drawing.Point(378, 564);
             this.cbxEstado.Name = "cbxEstado";
             this.cbxEstado.Size = new System.Drawing.Size(280, 21);
             this.cbxEstado.TabIndex = 26;
@@ -303,7 +303,7 @@
             // 
             this.txtCidade.BackColor = System.Drawing.Color.FloralWhite;
             this.txtCidade.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCidade.Location = new System.Drawing.Point(30, 553);
+            this.txtCidade.Location = new System.Drawing.Point(30, 561);
             this.txtCidade.Multiline = true;
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(311, 32);
@@ -314,7 +314,7 @@
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblEstado.Location = new System.Drawing.Point(381, 533);
+            this.lblEstado.Location = new System.Drawing.Point(381, 541);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(58, 18);
             this.lblEstado.TabIndex = 22;
@@ -325,7 +325,7 @@
             this.lblCidade.AutoSize = true;
             this.lblCidade.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblCidade.Location = new System.Drawing.Point(31, 530);
+            this.lblCidade.Location = new System.Drawing.Point(31, 538);
             this.lblCidade.Name = "lblCidade";
             this.lblCidade.Size = new System.Drawing.Size(60, 18);
             this.lblCidade.TabIndex = 21;
@@ -335,7 +335,7 @@
             // 
             this.txtEndereco.BackColor = System.Drawing.Color.FloralWhite;
             this.txtEndereco.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEndereco.Location = new System.Drawing.Point(30, 623);
+            this.txtEndereco.Location = new System.Drawing.Point(30, 631);
             this.txtEndereco.Multiline = true;
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(628, 37);
@@ -346,7 +346,7 @@
             this.lblEndereco.AutoSize = true;
             this.lblEndereco.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEndereco.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblEndereco.Location = new System.Drawing.Point(31, 602);
+            this.lblEndereco.Location = new System.Drawing.Point(31, 610);
             this.lblEndereco.Name = "lblEndereco";
             this.lblEndereco.Size = new System.Drawing.Size(76, 18);
             this.lblEndereco.TabIndex = 19;
@@ -375,7 +375,7 @@
             "Gênero fluido",
             "Outro",
             "Prefiro não dizer"});
-            this.cbxGenero.Location = new System.Drawing.Point(30, 481);
+            this.cbxGenero.Location = new System.Drawing.Point(30, 489);
             this.cbxGenero.Name = "cbxGenero";
             this.cbxGenero.Size = new System.Drawing.Size(628, 21);
             this.cbxGenero.TabIndex = 18;
@@ -396,7 +396,7 @@
             this.lblGenero.AutoSize = true;
             this.lblGenero.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGenero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblGenero.Location = new System.Drawing.Point(31, 450);
+            this.lblGenero.Location = new System.Drawing.Point(31, 458);
             this.lblGenero.Name = "lblGenero";
             this.lblGenero.Size = new System.Drawing.Size(159, 18);
             this.lblGenero.TabIndex = 17;
@@ -437,7 +437,7 @@
             this.lblSexo.AutoSize = true;
             this.lblSexo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSexo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblSexo.Location = new System.Drawing.Point(31, 413);
+            this.lblSexo.Location = new System.Drawing.Point(31, 421);
             this.lblSexo.Name = "lblSexo";
             this.lblSexo.Size = new System.Drawing.Size(114, 18);
             this.lblSexo.TabIndex = 12;
@@ -448,7 +448,7 @@
             this.rdbFeminino.AutoSize = true;
             this.rdbFeminino.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbFeminino.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.rdbFeminino.Location = new System.Drawing.Point(277, 413);
+            this.rdbFeminino.Location = new System.Drawing.Point(277, 421);
             this.rdbFeminino.Name = "rdbFeminino";
             this.rdbFeminino.Size = new System.Drawing.Size(91, 22);
             this.rdbFeminino.TabIndex = 11;
@@ -461,7 +461,7 @@
             this.rdbOutro.AutoSize = true;
             this.rdbOutro.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbOutro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.rdbOutro.Location = new System.Drawing.Point(381, 413);
+            this.rdbOutro.Location = new System.Drawing.Point(381, 421);
             this.rdbOutro.Name = "rdbOutro";
             this.rdbOutro.Size = new System.Drawing.Size(64, 22);
             this.rdbOutro.TabIndex = 10;
@@ -474,7 +474,7 @@
             this.rdbMasculino.AutoSize = true;
             this.rdbMasculino.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbMasculino.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.rdbMasculino.Location = new System.Drawing.Point(170, 413);
+            this.rdbMasculino.Location = new System.Drawing.Point(170, 421);
             this.rdbMasculino.Name = "rdbMasculino";
             this.rdbMasculino.Size = new System.Drawing.Size(96, 22);
             this.rdbMasculino.TabIndex = 9;
