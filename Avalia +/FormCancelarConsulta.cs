@@ -14,7 +14,7 @@ namespace Avalia__
     public partial class FormCancelarConsulta: Form
     {
         private int _idUsuario;
-
+       
         private void ConfigurarDataGridView()
         {
             // Configuração básica
@@ -150,6 +150,7 @@ namespace Avalia__
 
                             return new
                             {
+                                IdConsulta = c.IdConsulta, 
                                 Data = c.DataConsulta.ToString("dd/MM/yyyy HH:mm"),
                                 Medico = medico,
                                 Motivo = c.Motivo,
@@ -222,9 +223,12 @@ namespace Avalia__
                 string status = row.Cells["Status"].Value?.ToString() ?? "";
                 string observacoes = row.Cells["Observações"].Value?.ToString() ?? "";
                 string local = row.Cells["Local"].Value?.ToString() ?? "";
+            
 
+            
                 var consultaSelecionada = (dynamic)row.DataBoundItem;
                 int idConsulta = consultaSelecionada.IdConsulta;
+
 
                 var formConfirmarCancelamento = new frmConfirmarCancelamento(idConsulta, data, medico, motivo, status, observacoes, local);
                 formConfirmarCancelamento.ShowDialog();
