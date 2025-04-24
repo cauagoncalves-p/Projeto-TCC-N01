@@ -57,10 +57,9 @@
             this.panelLogin.Controls.Add(this.lblEmail);
             this.panelLogin.Controls.Add(this.lblLogin);
             this.panelLogin.Controls.Add(this.lblAvalia);
-            this.panelLogin.Location = new System.Drawing.Point(407, 71);
-            this.panelLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelLogin.Location = new System.Drawing.Point(313, 58);
             this.panelLogin.Name = "panelLogin";
-            this.panelLogin.Size = new System.Drawing.Size(447, 580);
+            this.panelLogin.Size = new System.Drawing.Size(335, 451);
             this.panelLogin.TabIndex = 0;
             // 
             // btnSair
@@ -70,10 +69,9 @@
             this.btnSair.FlatAppearance.BorderSize = 0;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
-            this.btnSair.Location = new System.Drawing.Point(361, 15);
-            this.btnSair.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSair.Location = new System.Drawing.Point(272, 12);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(67, 53);
+            this.btnSair.Size = new System.Drawing.Size(50, 43);
             this.btnSair.TabIndex = 10;
             this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSair.UseVisualStyleBackColor = false;
@@ -87,13 +85,12 @@
             this.lblLinkCriarConta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
             this.lblLinkCriarConta.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.lblLinkCriarConta.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.lblLinkCriarConta.Location = new System.Drawing.Point(268, 535);
-            this.lblLinkCriarConta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLinkCriarConta.Location = new System.Drawing.Point(182, 401);
             this.lblLinkCriarConta.Name = "lblLinkCriarConta";
-            this.lblLinkCriarConta.Size = new System.Drawing.Size(86, 24);
+            this.lblLinkCriarConta.Size = new System.Drawing.Size(114, 18);
             this.lblLinkCriarConta.TabIndex = 9;
             this.lblLinkCriarConta.TabStop = true;
-            this.lblLinkCriarConta.Text = "Crie uma";
+            this.lblLinkCriarConta.Text = "Solicitar acesso";
             this.lblLinkCriarConta.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblLinkCriarConta_LinkClicked);
             // 
             // lblCriarConta
@@ -101,10 +98,9 @@
             this.lblCriarConta.AutoSize = true;
             this.lblCriarConta.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCriarConta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.lblCriarConta.Location = new System.Drawing.Point(72, 535);
-            this.lblCriarConta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCriarConta.Location = new System.Drawing.Point(35, 401);
             this.lblCriarConta.Name = "lblCriarConta";
-            this.lblCriarConta.Size = new System.Drawing.Size(189, 24);
+            this.lblCriarConta.Size = new System.Drawing.Size(151, 18);
             this.lblCriarConta.TabIndex = 8;
             this.lblCriarConta.Text = "Não tem uma conta? ";
             // 
@@ -112,11 +108,11 @@
             // 
             this.btnEntrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(164)))), ((int)(((byte)(143)))));
             this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEntrar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntrar.ForeColor = System.Drawing.Color.White;
-            this.btnEntrar.Location = new System.Drawing.Point(52, 457);
-            this.btnEntrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEntrar.Location = new System.Drawing.Point(39, 306);
             this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(343, 54);
+            this.btnEntrar.Size = new System.Drawing.Size(257, 44);
             this.btnEntrar.TabIndex = 7;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = false;
@@ -126,12 +122,12 @@
             // 
             this.lblEsqueceuSenha.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.lblEsqueceuSenha.AutoSize = true;
+            this.lblEsqueceuSenha.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEsqueceuSenha.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.lblEsqueceuSenha.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.lblEsqueceuSenha.Location = new System.Drawing.Point(240, 411);
-            this.lblEsqueceuSenha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEsqueceuSenha.Location = new System.Drawing.Point(161, 353);
             this.lblEsqueceuSenha.Name = "lblEsqueceuSenha";
-            this.lblEsqueceuSenha.Size = new System.Drawing.Size(143, 16);
+            this.lblEsqueceuSenha.Size = new System.Drawing.Size(135, 15);
             this.lblEsqueceuSenha.TabIndex = 6;
             this.lblEsqueceuSenha.TabStop = true;
             this.lblEsqueceuSenha.Text = "Esqueceu sua senha ?";
@@ -139,78 +135,74 @@
             // 
             // txtSenhaLogin
             // 
-            this.txtSenhaLogin.Location = new System.Drawing.Point(52, 341);
-            this.txtSenhaLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSenhaLogin.Location = new System.Drawing.Point(39, 235);
             this.txtSenhaLogin.MaxLength = 50;
             this.txtSenhaLogin.Multiline = true;
             this.txtSenhaLogin.Name = "txtSenhaLogin";
             this.txtSenhaLogin.PasswordChar = '*';
-            this.txtSenhaLogin.Size = new System.Drawing.Size(341, 48);
+            this.txtSenhaLogin.Size = new System.Drawing.Size(257, 40);
             this.txtSenhaLogin.TabIndex = 5;
             // 
             // lblSenha
             // 
             this.lblSenha.AutoSize = true;
+            this.lblSenha.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.lblSenha.Location = new System.Drawing.Point(48, 293);
-            this.lblSenha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSenha.Location = new System.Drawing.Point(36, 212);
             this.lblSenha.Name = "lblSenha";
-            this.lblSenha.Size = new System.Drawing.Size(46, 16);
+            this.lblSenha.Size = new System.Drawing.Size(53, 18);
             this.lblSenha.TabIndex = 4;
             this.lblSenha.Text = "Senha";
             // 
             // txtEmailLogin
             // 
-            this.txtEmailLogin.Location = new System.Drawing.Point(52, 214);
-            this.txtEmailLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmailLogin.Location = new System.Drawing.Point(39, 143);
             this.txtEmailLogin.MaxLength = 100;
             this.txtEmailLogin.Multiline = true;
             this.txtEmailLogin.Name = "txtEmailLogin";
-            this.txtEmailLogin.Size = new System.Drawing.Size(341, 48);
+            this.txtEmailLogin.Size = new System.Drawing.Size(257, 40);
             this.txtEmailLogin.TabIndex = 3;
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.lblEmail.Location = new System.Drawing.Point(48, 166);
-            this.lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEmail.Location = new System.Drawing.Point(35, 120);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(41, 16);
+            this.lblEmail.Size = new System.Drawing.Size(48, 18);
             this.lblEmail.TabIndex = 2;
             this.lblEmail.Text = "Email";
             // 
             // lblLogin
             // 
             this.lblLogin.AutoSize = true;
-            this.lblLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogin.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblLogin.Location = new System.Drawing.Point(123, 96);
-            this.lblLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLogin.Location = new System.Drawing.Point(110, 76);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(139, 25);
+            this.lblLogin.Size = new System.Drawing.Size(120, 19);
             this.lblLogin.TabIndex = 1;
             this.lblLogin.Text = "Faça seu login";
             // 
             // lblAvalia
             // 
             this.lblAvalia.AutoSize = true;
-            this.lblAvalia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAvalia.Location = new System.Drawing.Point(169, 38);
-            this.lblAvalia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAvalia.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAvalia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblAvalia.Location = new System.Drawing.Point(127, 41);
             this.lblAvalia.Name = "lblAvalia";
-            this.lblAvalia.Size = new System.Drawing.Size(111, 29);
+            this.lblAvalia.Size = new System.Drawing.Size(94, 30);
             this.lblAvalia.TabIndex = 0;
-            this.lblAvalia.Text = "Áuerea+";
+            this.lblAvalia.Text = "Áurea+";
             // 
             // FormularioLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1312, 690);
+            this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.panelLogin);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormularioLogin";

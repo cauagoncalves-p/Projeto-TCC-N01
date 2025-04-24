@@ -66,7 +66,7 @@
             this.panelbackground.Controls.Add(this.lblAvalia);
             this.panelbackground.Location = new System.Drawing.Point(26, 12);
             this.panelbackground.Name = "panelbackground";
-            this.panelbackground.Size = new System.Drawing.Size(946, 785);
+            this.panelbackground.Size = new System.Drawing.Size(933, 775);
             this.panelbackground.TabIndex = 0;
             // 
             // btnSair
@@ -106,11 +106,11 @@
             // 
             this.lblhistoricobtn.AutoSize = true;
             this.lblhistoricobtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(228)))), ((int)(((byte)(220)))));
-            this.lblhistoricobtn.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblhistoricobtn.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblhistoricobtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(138)))), ((int)(((byte)(122)))));
-            this.lblhistoricobtn.Location = new System.Drawing.Point(578, 547);
+            this.lblhistoricobtn.Location = new System.Drawing.Point(558, 552);
             this.lblhistoricobtn.Name = "lblhistoricobtn";
-            this.lblhistoricobtn.Size = new System.Drawing.Size(265, 16);
+            this.lblhistoricobtn.Size = new System.Drawing.Size(297, 17);
             this.lblhistoricobtn.TabIndex = 34;
             this.lblhistoricobtn.Text = "Acesse seus exames e consultas anteriores";
             // 
@@ -118,11 +118,11 @@
             // 
             this.lblcancelabtn.AutoSize = true;
             this.lblcancelabtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(228)))), ((int)(((byte)(220)))));
-            this.lblcancelabtn.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcancelabtn.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblcancelabtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(138)))), ((int)(((byte)(122)))));
-            this.lblcancelabtn.Location = new System.Drawing.Point(134, 548);
+            this.lblcancelabtn.Location = new System.Drawing.Point(110, 554);
             this.lblcancelabtn.Name = "lblcancelabtn";
-            this.lblcancelabtn.Size = new System.Drawing.Size(251, 16);
+            this.lblcancelabtn.Size = new System.Drawing.Size(286, 17);
             this.lblcancelabtn.TabIndex = 33;
             this.lblcancelabtn.Text = "Reagende ou cancele um horário marcado";
             // 
@@ -130,11 +130,11 @@
             // 
             this.lblAvaliabtn.AutoSize = true;
             this.lblAvaliabtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(228)))), ((int)(((byte)(220)))));
-            this.lblAvaliabtn.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAvaliabtn.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAvaliabtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(138)))), ((int)(((byte)(122)))));
-            this.lblAvaliabtn.Location = new System.Drawing.Point(565, 361);
+            this.lblAvaliabtn.Location = new System.Drawing.Point(558, 349);
             this.lblAvaliabtn.Name = "lblAvaliabtn";
-            this.lblAvaliabtn.Size = new System.Drawing.Size(278, 16);
+            this.lblAvaliabtn.Size = new System.Drawing.Size(313, 17);
             this.lblAvaliabtn.TabIndex = 32;
             this.lblAvaliabtn.Text = "Deixe seu feedback sobre consultas anteriores";
             // 
@@ -142,11 +142,11 @@
             // 
             this.lblAgendarBtn.AutoSize = true;
             this.lblAgendarBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(228)))), ((int)(((byte)(220)))));
-            this.lblAgendarBtn.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAgendarBtn.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAgendarBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(138)))), ((int)(((byte)(122)))));
-            this.lblAgendarBtn.Location = new System.Drawing.Point(112, 361);
+            this.lblAgendarBtn.Location = new System.Drawing.Point(101, 349);
             this.lblAgendarBtn.Name = "lblAgendarBtn";
-            this.lblAgendarBtn.Size = new System.Drawing.Size(283, 16);
+            this.lblAgendarBtn.Size = new System.Drawing.Size(317, 17);
             this.lblAgendarBtn.TabIndex = 27;
             this.lblAgendarBtn.Text = "Marque sua consulta com nossos especialistas";
             // 
@@ -157,7 +157,7 @@
             this.btnHistoricomedico.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHistoricomedico.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
             this.btnHistoricomedico.Image = ((System.Drawing.Image)(resources.GetObject("btnHistoricomedico.Image")));
-            this.btnHistoricomedico.Location = new System.Drawing.Point(488, 440);
+            this.btnHistoricomedico.Location = new System.Drawing.Point(488, 435);
             this.btnHistoricomedico.Name = "btnHistoricomedico";
             this.btnHistoricomedico.Size = new System.Drawing.Size(423, 162);
             this.btnHistoricomedico.TabIndex = 31;
@@ -173,7 +173,7 @@
             this.btnCancelarConsulta.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelarConsulta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
             this.btnCancelarConsulta.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelarConsulta.Image")));
-            this.btnCancelarConsulta.Location = new System.Drawing.Point(39, 440);
+            this.btnCancelarConsulta.Location = new System.Drawing.Point(39, 436);
             this.btnCancelarConsulta.Name = "btnCancelarConsulta";
             this.btnCancelarConsulta.Size = new System.Drawing.Size(423, 162);
             this.btnCancelarConsulta.TabIndex = 30;
@@ -189,7 +189,7 @@
             this.btnAvaliarconsulta.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAvaliarconsulta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
             this.btnAvaliarconsulta.Image = ((System.Drawing.Image)(resources.GetObject("btnAvaliarconsulta.Image")));
-            this.btnAvaliarconsulta.Location = new System.Drawing.Point(488, 248);
+            this.btnAvaliarconsulta.Location = new System.Drawing.Point(488, 230);
             this.btnAvaliarconsulta.Name = "btnAvaliarconsulta";
             this.btnAvaliarconsulta.Size = new System.Drawing.Size(423, 162);
             this.btnAvaliarconsulta.TabIndex = 29;
@@ -205,7 +205,7 @@
             this.btnAgendar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgendar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
             this.btnAgendar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgendar.Image")));
-            this.btnAgendar.Location = new System.Drawing.Point(39, 248);
+            this.btnAgendar.Location = new System.Drawing.Point(39, 230);
             this.btnAgendar.Name = "btnAgendar";
             this.btnAgendar.Size = new System.Drawing.Size(423, 162);
             this.btnAgendar.TabIndex = 28;
@@ -217,9 +217,11 @@
             // 
             // panelHeader
             // 
+            this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(164)))), ((int)(((byte)(143)))));
             this.panelHeader.Controls.Add(this.lblSubTitulo);
             this.panelHeader.Controls.Add(this.lblTitulo);
-            this.panelHeader.Location = new System.Drawing.Point(39, 91);
+            this.panelHeader.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelHeader.Location = new System.Drawing.Point(39, 78);
             this.panelHeader.Name = "panelHeader";
             this.panelHeader.Size = new System.Drawing.Size(872, 112);
             this.panelHeader.TabIndex = 26;
@@ -228,9 +230,9 @@
             // 
             this.lblSubTitulo.AutoSize = true;
             this.lblSubTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblSubTitulo.Location = new System.Drawing.Point(39, 47);
+            this.lblSubTitulo.Location = new System.Drawing.Point(205, 57);
             this.lblSubTitulo.Name = "lblSubTitulo";
-            this.lblSubTitulo.Size = new System.Drawing.Size(294, 13);
+            this.lblSubTitulo.Size = new System.Drawing.Size(436, 23);
             this.lblSubTitulo.TabIndex = 2;
             this.lblSubTitulo.Text = "Encontre os melhores especialistas e cuide do seu bem-estar";
             // 
@@ -238,21 +240,22 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(39, 19);
+            this.lblTitulo.Location = new System.Drawing.Point(314, 31);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(140, 13);
+            this.lblTitulo.Size = new System.Drawing.Size(211, 23);
             this.lblTitulo.TabIndex = 2;
             this.lblTitulo.Text = "Sua saúde em primeiro lugar";
             // 
             // lblAvalia
             // 
             this.lblAvalia.AutoSize = true;
-            this.lblAvalia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblAvalia.Location = new System.Drawing.Point(36, 52);
+            this.lblAvalia.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAvalia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblAvalia.Location = new System.Drawing.Point(39, 24);
             this.lblAvalia.Name = "lblAvalia";
-            this.lblAvalia.Size = new System.Drawing.Size(35, 13);
+            this.lblAvalia.Size = new System.Drawing.Size(94, 30);
             this.lblAvalia.TabIndex = 25;
-            this.lblAvalia.Text = "Aurea";
+            this.lblAvalia.Text = "Áurea+";
             // 
             // FormularioPaginaPaciente
             // 

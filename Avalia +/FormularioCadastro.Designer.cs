@@ -240,7 +240,7 @@
             this.btnFinalizarCadastro.Location = new System.Drawing.Point(362, 700);
             this.btnFinalizarCadastro.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
             this.btnFinalizarCadastro.Name = "btnFinalizarCadastro";
-            this.btnFinalizarCadastro.Size = new System.Drawing.Size(298, 39);
+            this.btnFinalizarCadastro.Size = new System.Drawing.Size(298, 38);
             this.btnFinalizarCadastro.TabIndex = 28;
             this.btnFinalizarCadastro.Text = "Finalizar Cadastro";
             this.btnFinalizarCadastro.UseVisualStyleBackColor = false;
@@ -253,9 +253,9 @@
             this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVoltar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVoltar.ForeColor = System.Drawing.Color.White;
-            this.btnVoltar.Location = new System.Drawing.Point(34, 700);
+            this.btnVoltar.Location = new System.Drawing.Point(30, 701);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(242, 39);
+            this.btnVoltar.Size = new System.Drawing.Size(298, 39);
             this.btnVoltar.TabIndex = 27;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = false;
@@ -383,11 +383,11 @@
             // lblAvaliaCadastro
             // 
             this.lblAvaliaCadastro.AutoSize = true;
-            this.lblAvaliaCadastro.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAvaliaCadastro.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAvaliaCadastro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lblAvaliaCadastro.Location = new System.Drawing.Point(324, 31);
             this.lblAvaliaCadastro.Name = "lblAvaliaCadastro";
-            this.lblAvaliaCadastro.Size = new System.Drawing.Size(82, 24);
+            this.lblAvaliaCadastro.Size = new System.Drawing.Size(94, 30);
             this.lblAvaliaCadastro.TabIndex = 0;
             this.lblAvaliaCadastro.Text = "Áurea+";
             // 
