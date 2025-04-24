@@ -17,6 +17,12 @@ namespace Avalia__
         private string _data, _medico, _motivo, _status, _observacoes, _local;
         int _idConsulta;
 
+        /*
+         * UPDATE tbConsulta
+            SET StatusConsulta = @status
+            WHERE IdConsulta = @idConsulta
+         AtualizarStatusConsulta
+        */
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             try
