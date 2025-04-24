@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCancelarConsulta));
             this.panelCancelarConsulta = new System.Windows.Forms.Panel();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.dgvCancelar = new System.Windows.Forms.DataGridView();
             this.btnSair = new System.Windows.Forms.Button();
             this.lblsubtitulo = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.panelCancelarConsulta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCancelar)).BeginInit();
             this.SuspendLayout();
@@ -48,6 +48,21 @@
             this.panelCancelarConsulta.Size = new System.Drawing.Size(868, 616);
             this.panelCancelarConsulta.TabIndex = 0;
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(165)))), ((int)(((byte)(166)))));
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelar.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(200, 514);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(456, 48);
+            this.btnCancelar.TabIndex = 1;
+            this.btnCancelar.Text = "Cancelar consulta selecionada";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // dgvCancelar
             // 
             this.dgvCancelar.BackgroundColor = System.Drawing.Color.White;
@@ -56,6 +71,8 @@
             this.dgvCancelar.Name = "dgvCancelar";
             this.dgvCancelar.Size = new System.Drawing.Size(862, 435);
             this.dgvCancelar.TabIndex = 0;
+            this.dgvCancelar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCancelar_CellClick);
+          
             // 
             // btnSair
             // 
@@ -95,26 +112,12 @@
             this.lblTitulo.TabIndex = 13;
             this.lblTitulo.Text = "Aurea";
             // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(165)))), ((int)(((byte)(166)))));
-            this.btnCancelar.FlatAppearance.BorderSize = 0;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelar.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(200, 514);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(456, 48);
-            this.btnCancelar.TabIndex = 1;
-            this.btnCancelar.Text = "Cancelar consulta selecionada";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            // 
             // FormCancelarConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(984, 561);
+            this.ClientSize = new System.Drawing.Size(1018, 561);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.lblsubtitulo);
             this.Controls.Add(this.lblTitulo);
