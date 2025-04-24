@@ -24,14 +24,6 @@ namespace Avalia__
         ConfiguracaoTelas configuracaoTelas = new ConfiguracaoTelas();
         private void MudarFonte() 
         {
-            lblAvalia.Font = new Font("Segoe UI", 14, FontStyle.Bold);
-            lblLogin.Font = new Font("Inter", 15, FontStyle.Bold);
-            lblEmail.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-            lblSenha.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-            lblEsqueceuSenha.Font = new Font("Segoe UI", 8, FontStyle.Bold);
-            btnEntrar.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-            lblLinkCriarConta.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-            lblCriarConta.Font = new Font("Segoe UI", 10, FontStyle.Bold);
             txtEmailLogin.Font = new Font("Segoe UI", 12, FontStyle.Regular);
             txtSenhaLogin.Font = new Font("Segoe UI", 14, FontStyle.Bold);
         }
