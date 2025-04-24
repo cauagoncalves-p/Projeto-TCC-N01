@@ -119,7 +119,7 @@
             // txt4
             // 
             this.txt4.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt4.Location = new System.Drawing.Point(166, 244);
+            this.txt4.Location = new System.Drawing.Point(167, 244);
             this.txt4.MaxLength = 1;
             this.txt4.Multiline = true;
             this.txt4.Name = "txt4";
@@ -152,10 +152,11 @@
             // lblDescritivo1
             // 
             this.lblDescritivo1.AutoSize = true;
+            this.lblDescritivo1.Font = new System.Drawing.Font("Arial", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescritivo1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(138)))), ((int)(((byte)(122)))));
-            this.lblDescritivo1.Location = new System.Drawing.Point(41, 171);
+            this.lblDescritivo1.Location = new System.Drawing.Point(16, 205);
             this.lblDescritivo1.Name = "lblDescritivo1";
-            this.lblDescritivo1.Size = new System.Drawing.Size(221, 13);
+            this.lblDescritivo1.Size = new System.Drawing.Size(297, 16);
             this.lblDescritivo1.TabIndex = 13;
             this.lblDescritivo1.Text = "Digite o código abaixo para trocar sua senha ";
             this.lblDescritivo1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -163,11 +164,11 @@
             // lblEmailInformado
             // 
             this.lblEmailInformado.AutoSize = true;
-            this.lblEmailInformado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailInformado.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmailInformado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(124)))), ((int)(((byte)(99)))));
-            this.lblEmailInformado.Location = new System.Drawing.Point(84, 144);
+            this.lblEmailInformado.Location = new System.Drawing.Point(99, 157);
             this.lblEmailInformado.Name = "lblEmailInformado";
-            this.lblEmailInformado.Size = new System.Drawing.Size(133, 13);
+            this.lblEmailInformado.Size = new System.Drawing.Size(135, 15);
             this.lblEmailInformado.TabIndex = 12;
             this.lblEmailInformado.Text = "usuario@exemplo.com";
             this.lblEmailInformado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -175,11 +176,11 @@
             // lblDescritivo
             // 
             this.lblDescritivo.AutoSize = true;
-            this.lblDescritivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescritivo.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescritivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(138)))), ((int)(((byte)(122)))));
-            this.lblDescritivo.Location = new System.Drawing.Point(9, 118);
+            this.lblDescritivo.Location = new System.Drawing.Point(27, 122);
             this.lblDescritivo.Name = "lblDescritivo";
-            this.lblDescritivo.Size = new System.Drawing.Size(283, 16);
+            this.lblDescritivo.Size = new System.Drawing.Size(273, 16);
             this.lblDescritivo.TabIndex = 11;
             this.lblDescritivo.Text = "Enviamos um código de 6 dígitos para o email";
             // 
@@ -214,23 +215,24 @@
             // lblConfirmeEmail
             // 
             this.lblConfirmeEmail.AutoSize = true;
-            this.lblConfirmeEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirmeEmail.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConfirmeEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblConfirmeEmail.Location = new System.Drawing.Point(92, 78);
+            this.lblConfirmeEmail.Location = new System.Drawing.Point(82, 82);
             this.lblConfirmeEmail.Name = "lblConfirmeEmail";
-            this.lblConfirmeEmail.Size = new System.Drawing.Size(164, 20);
+            this.lblConfirmeEmail.Size = new System.Drawing.Size(176, 19);
             this.lblConfirmeEmail.TabIndex = 1;
             this.lblConfirmeEmail.Text = "Confirmação de Email";
             // 
             // lblAvalia
             // 
             this.lblAvalia.AutoSize = true;
-            this.lblAvalia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAvalia.Location = new System.Drawing.Point(127, 31);
+            this.lblAvalia.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAvalia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblAvalia.Location = new System.Drawing.Point(127, 38);
             this.lblAvalia.Name = "lblAvalia";
-            this.lblAvalia.Size = new System.Drawing.Size(90, 24);
+            this.lblAvalia.Size = new System.Drawing.Size(94, 30);
             this.lblAvalia.TabIndex = 0;
-            this.lblAvalia.Text = "Áuerea+";
+            this.lblAvalia.Text = "Áurea+";
             // 
             // FormularioEnvioDeEmailTrocarSenha
             // 
