@@ -144,6 +144,12 @@
     <Compile Include="FormularioTrocarSenha.Designer.cs">
       <DependentUpon>FormularioTrocarSenha.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmConfirmarCancelamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfirmarCancelamento.Designer.cs">
+      <DependentUpon>frmConfirmarCancelamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controles\RadiusButton.cs" />
@@ -191,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioTrocarSenha.resx">
       <DependentUpon>FormularioTrocarSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConfirmarCancelamento.resx">
+      <DependentUpon>frmConfirmarCancelamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

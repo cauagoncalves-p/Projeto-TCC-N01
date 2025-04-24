@@ -165,20 +165,62 @@ namespace Avalia__
         public FormCancelarConsulta(int idUsuario)
         {
             InitializeComponent();
+         
+            dgvCancelar.CellClick += dgvCancelar_CellClick;
             _idUsuario = idUsuario;
             CarregarConsultasDoUsuario();
             ConfigurarDataGridView();
             AjustarColunasDataGridView();
+
+            btnCancelar.Enabled = false;
+            btnCancelar.BackColor = Color.Gray; 
             RadiusButton controlador = new RadiusButton();
             controlador.ConfigInicial(this, panelCancelarConsulta, btnSair, 25, Color.White);
         }
-
-      
 
         private void FormCancelarConsulta_Paint(object sender, PaintEventArgs e)
         {
             //Cor de fundo da tela 
             ConfiguracaoTelas.PintarGradiente(this, e, "#f5e6d3", "#fdf6f0");
+        }
+
+ 
+        private void dgvCancelar_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                // Habilita o botão e muda a cor
+                btnCancelar.Enabled = true;
+                btnCancelar.BackColor = Color.FromArgb(220, 53, 69); // vermelho bootstrap
+                btnCancelar.ForeColor = Color.White;
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+
+            if (dgvCancelar.SelectedRows.Count > 0)
+            {
+                var row = dgvCancelar.SelectedRows[0];
+
+                string data = row.Cells["Data"].Value?.ToString() ?? "";
+                string medico = row.Cells["Medico"].Value?.ToString() ?? "";
+                string motivo = row.Cells["Motivo"].Value?.ToString() ?? "";
+                string status = row.Cells["Status"].Value?.ToString() ?? "";
+                string observacoes = row.Cells["Observações"].Value?.ToString() ?? "";
+
+                var formConfirmarCancelamento = new frmConfirmarCancelamento(data, medico, motivo, status, observacoes);
+                formConfirmarCancelamento.ShowDialog();
+
+                // Depois de cancelar, recarrega a grid e desativa o botão
+                CarregarConsultasDoUsuario();
+                btnCancelar.Enabled = false;
+                btnCancelar.BackColor = Color.Gray;
+            }
+            else
+            {
+                MessageBox.Show("Selecione uma consulta para cancelar.");
+            }
         }
     }
 }
