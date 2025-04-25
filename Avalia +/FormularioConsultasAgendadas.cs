@@ -18,7 +18,6 @@ namespace Avalia__
         Mensagem_do_sistema mensagem_Do_Sistema = new Mensagem_do_sistema();
 
         private int _idUsuario;
-
         private void ConfigurarDataGridView()
         {
             // Configuração básica
@@ -30,12 +29,12 @@ namespace Avalia__
             dgvConsultas.MultiSelect = false;
             dgvConsultas.RowHeadersVisible = false;
 
-            // Paleta inspirada no seu design
-            Color fundoClaro = Color.FromArgb(250, 250, 252); // Branco muito suave
-            Color azulHeader = Color.FromArgb(70, 130, 180);  // Azul médio (como o título dos cards)
-            Color textoPadrao = Color.FromArgb(60, 60, 60);   // Cinza escuro suave
-            Color textoClaro = Color.FromArgb(100, 100, 100); // Cinza médio
-            Color borda = Color.FromArgb(230, 230, 235);      // Linha divisória suave
+            // Paleta de cores terrosa (baseada no seu design)
+            Color fundoClaro = Color.FromArgb(253, 246, 240); // #fdf6f0 - marfim claro
+            Color headerColor = Color.FromArgb(139, 94, 60);   // #8b5e3c - marrom escuro
+            Color textoPadrao = Color.FromArgb(90, 74, 66);    // #5a4a42 - marrom médio
+            Color borda = Color.FromArgb(210, 180, 140);       // #d2b48c - bege (para bordas)
+            Color selColor = Color.FromArgb(216, 164, 143);    // #d8a48f - rosa terroso (seleção)
 
             // Aplicando as cores
             dgvConsultas.BackgroundColor = fundoClaro;
@@ -43,37 +42,49 @@ namespace Avalia__
             dgvConsultas.BorderStyle = BorderStyle.None;
 
             // Cabeçalho das colunas
-            dgvConsultas.ColumnHeadersDefaultCellStyle.BackColor = azulHeader;
+            dgvConsultas.ColumnHeadersDefaultCellStyle.BackColor = headerColor;
             dgvConsultas.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             dgvConsultas.ColumnHeadersHeight = 40;
             dgvConsultas.EnableHeadersVisualStyles = false;
             dgvConsultas.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dgvConsultas.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            dgvConsultas.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             // Linhas alternadas
-            dgvConsultas.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(245, 245, 248);
+            dgvConsultas.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(250, 240, 230);
             dgvConsultas.DefaultCellStyle.BackColor = fundoClaro;
 
             // Texto
             dgvConsultas.DefaultCellStyle.ForeColor = textoPadrao;
             dgvConsultas.AlternatingRowsDefaultCellStyle.ForeColor = textoPadrao;
-            dgvConsultas.DefaultCellStyle.SelectionForeColor = textoPadrao;
+            dgvConsultas.DefaultCellStyle.SelectionForeColor = Color.White;
+            dgvConsultas.DefaultCellStyle.Font = new Font("Segoe UI", 9.5f);
 
-            // Seleção (inspirado nos botões "Detalhes" da imagem)
-            dgvConsultas.DefaultCellStyle.SelectionBackColor = Color.FromArgb(220, 230, 240);
+            // Seleção
+            dgvConsultas.DefaultCellStyle.SelectionBackColor = selColor;
 
-            // Status específicos (como na imagem)
-            dgvConsultas.RowsDefaultCellStyle.Font = new Font("Segoe UI", 10);
-            dgvConsultas.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-
-            // Borda entre as linhas (como os divisores na imagem)
+            // Bordas e linhas
             dgvConsultas.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvConsultas.GridColor = Color.FromArgb(240, 240, 240);
+            dgvConsultas.GridColor = borda;
+            dgvConsultas.RowTemplate.Height = 35;
 
             // Configuração de redimensionamento
             dgvConsultas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvConsultas.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvConsultas.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
-            dgvConsultas.RowTemplate.Height = 40;
+            dgvConsultas.DefaultCellStyle.Padding = new Padding(5, 0, 5, 0);
+
+            // Configurar colunas (exemplo)
+            if (dgvConsultas.Columns.Count == 0)
+            {
+                dgvConsultas.Columns.Add("colIniciais", "Iniciais");
+                dgvConsultas.Columns.Add("colPaciente", "Paciente");
+                dgvConsultas.Columns.Add("colHorario", "Horário");
+                dgvConsultas.Columns.Add("colTipo", "Tipo");
+                dgvConsultas.Columns.Add("colStatus", "Status");
+
+                // Centralizar coluna de iniciais
+                dgvConsultas.Columns["colIniciais"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            }
         }
         private void AjustarColunasDataGridView()
         {
@@ -173,8 +184,10 @@ namespace Avalia__
             CarregarConsultasDoUsuario();
             ConfigurarDataGridView();
             AjustarColunasDataGridView();
+            RadiusButton controlador = new RadiusButton();
+            controlador.ConfigInicial(this, panelCancelarConsulta, btnSair, 25, Color.White);
 
-          
+
 
 
             UIHelper.ArredondarBotao(btnAgendadas, 25);

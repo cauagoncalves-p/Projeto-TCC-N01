@@ -14,7 +14,7 @@ namespace Avalia__
     public partial class FormCancelarConsulta: Form
     {
         private int _idUsuario;
-       
+
         private void ConfigurarDataGridView()
         {
             // Configuração básica
@@ -26,12 +26,12 @@ namespace Avalia__
             dgvCancelar.MultiSelect = false;
             dgvCancelar.RowHeadersVisible = false;
 
-            // Paleta inspirada no seu design
-            Color fundoClaro = Color.FromArgb(250, 250, 252); // Branco muito suave
-            Color azulHeader = Color.FromArgb(70, 130, 180);  // Azul médio (como o título dos cards)
-            Color textoPadrao = Color.FromArgb(60, 60, 60);   // Cinza escuro suave
-            Color textoClaro = Color.FromArgb(100, 100, 100); // Cinza médio
-            Color borda = Color.FromArgb(230, 230, 235);      // Linha divisória suave
+            // Paleta de cores terrosa (baseada no seu design)
+            Color fundoClaro = Color.FromArgb(253, 246, 240); // #fdf6f0 - marfim claro
+            Color headerColor = Color.FromArgb(139, 94, 60);   // #8b5e3c - marrom escuro
+            Color textoPadrao = Color.FromArgb(90, 74, 66);    // #5a4a42 - marrom médio
+            Color borda = Color.FromArgb(210, 180, 140);       // #d2b48c - bege (para bordas)
+            Color selColor = Color.FromArgb(216, 164, 143);    // #d8a48f - rosa terroso (seleção)
 
             // Aplicando as cores
             dgvCancelar.BackgroundColor = fundoClaro;
@@ -39,37 +39,49 @@ namespace Avalia__
             dgvCancelar.BorderStyle = BorderStyle.None;
 
             // Cabeçalho das colunas
-            dgvCancelar.ColumnHeadersDefaultCellStyle.BackColor = azulHeader;
+            dgvCancelar.ColumnHeadersDefaultCellStyle.BackColor = headerColor;
             dgvCancelar.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             dgvCancelar.ColumnHeadersHeight = 40;
             dgvCancelar.EnableHeadersVisualStyles = false;
             dgvCancelar.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dgvCancelar.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            dgvCancelar.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             // Linhas alternadas
-            dgvCancelar.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(245, 245, 248);
+            dgvCancelar.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(250, 240, 230);
             dgvCancelar.DefaultCellStyle.BackColor = fundoClaro;
 
             // Texto
             dgvCancelar.DefaultCellStyle.ForeColor = textoPadrao;
             dgvCancelar.AlternatingRowsDefaultCellStyle.ForeColor = textoPadrao;
-            dgvCancelar.DefaultCellStyle.SelectionForeColor = textoPadrao;
+            dgvCancelar.DefaultCellStyle.SelectionForeColor = Color.White;
+            dgvCancelar.DefaultCellStyle.Font = new Font("Segoe UI", 9.5f);
 
-            // Seleção (inspirado nos botões "Detalhes" da imagem)
-            dgvCancelar.DefaultCellStyle.SelectionBackColor = Color.FromArgb(220, 230, 240);
+            // Seleção
+            dgvCancelar.DefaultCellStyle.SelectionBackColor = selColor;
 
-            // Status específicos (como na imagem)
-            dgvCancelar.RowsDefaultCellStyle.Font = new Font("Segoe UI", 10);
-            dgvCancelar.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-
-            // Borda entre as linhas (como os divisores na imagem)
+            // Bordas e linhas
             dgvCancelar.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvCancelar.GridColor = Color.FromArgb(240, 240, 240);
+            dgvCancelar.GridColor = borda;
+            dgvCancelar.RowTemplate.Height = 35;
 
             // Configuração de redimensionamento
             dgvCancelar.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvCancelar.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvCancelar.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
-            dgvCancelar.RowTemplate.Height = 40;
+            dgvCancelar.DefaultCellStyle.Padding = new Padding(5, 0, 5, 0);
+
+            // Configurar colunas (exemplo)
+            if (dgvCancelar.Columns.Count == 0)
+            {
+                dgvCancelar.Columns.Add("colIniciais", "Iniciais");
+                dgvCancelar.Columns.Add("colPaciente", "Paciente");
+                dgvCancelar.Columns.Add("colHorario", "Horário");
+                dgvCancelar.Columns.Add("colTipo", "Tipo");
+                dgvCancelar.Columns.Add("colStatus", "Status");
+
+                // Centralizar coluna de iniciais
+                dgvCancelar.Columns["colIniciais"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            }
         }
         private void AjustarColunasDataGridView()
         {
@@ -195,6 +207,7 @@ namespace Avalia__
             btnCancelar.BackColor = Color.Gray; 
             RadiusButton controlador = new RadiusButton();
             controlador.ConfigInicial(this, panelCancelarConsulta, btnSair, 25, Color.White);
+            controlador.ConfigInicial(this, panelbtnCancelar, btnSair, 25, Color.FromArgb(253, 246, 240));
         }
 
         private void FormCancelarConsulta_Paint(object sender, PaintEventArgs e)

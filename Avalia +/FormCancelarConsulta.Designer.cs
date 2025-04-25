@@ -35,17 +35,18 @@
             this.btnSair = new System.Windows.Forms.Button();
             this.lblsubtitulo = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.panelbtnCancelar = new System.Windows.Forms.Panel();
             this.panelCancelarConsulta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCancelar)).BeginInit();
+            this.panelbtnCancelar.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelCancelarConsulta
             // 
-            this.panelCancelarConsulta.Controls.Add(this.btnCancelar);
             this.panelCancelarConsulta.Controls.Add(this.dgvCancelar);
             this.panelCancelarConsulta.Location = new System.Drawing.Point(63, 165);
             this.panelCancelarConsulta.Name = "panelCancelarConsulta";
-            this.panelCancelarConsulta.Size = new System.Drawing.Size(868, 462);
+            this.panelCancelarConsulta.Size = new System.Drawing.Size(868, 361);
             this.panelCancelarConsulta.TabIndex = 0;
             // 
             // btnCancelar
@@ -55,7 +56,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelar.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(204, 395);
+            this.btnCancelar.Location = new System.Drawing.Point(195, 31);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(456, 48);
             this.btnCancelar.TabIndex = 1;
@@ -67,9 +68,9 @@
             // 
             this.dgvCancelar.BackgroundColor = System.Drawing.Color.White;
             this.dgvCancelar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCancelar.Location = new System.Drawing.Point(3, 34);
+            this.dgvCancelar.Location = new System.Drawing.Point(0, 0);
             this.dgvCancelar.Name = "dgvCancelar";
-            this.dgvCancelar.Size = new System.Drawing.Size(862, 331);
+            this.dgvCancelar.Size = new System.Drawing.Size(877, 365);
             this.dgvCancelar.TabIndex = 0;
             this.dgvCancelar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCancelar_CellClick);
             // 
@@ -112,12 +113,21 @@
             this.lblTitulo.TabIndex = 13;
             this.lblTitulo.Text = "Aurea";
             // 
+            // panelbtnCancelar
+            // 
+            this.panelbtnCancelar.Controls.Add(this.btnCancelar);
+            this.panelbtnCancelar.Location = new System.Drawing.Point(63, 536);
+            this.panelbtnCancelar.Name = "panelbtnCancelar";
+            this.panelbtnCancelar.Size = new System.Drawing.Size(868, 100);
+            this.panelbtnCancelar.TabIndex = 16;
+            // 
             // FormCancelarConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1001, 561);
+            this.ClientSize = new System.Drawing.Size(1001, 712);
+            this.Controls.Add(this.panelbtnCancelar);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.lblsubtitulo);
             this.Controls.Add(this.lblTitulo);
@@ -129,6 +139,7 @@
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormCancelarConsulta_Paint);
             this.panelCancelarConsulta.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCancelar)).EndInit();
+            this.panelbtnCancelar.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,5 +153,6 @@
         private System.Windows.Forms.Label lblsubtitulo;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Panel panelbtnCancelar;
     }
 }

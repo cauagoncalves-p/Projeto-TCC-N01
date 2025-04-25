@@ -17,6 +17,7 @@ namespace Avalia__
     public partial class FormularioEnvioDeEmailTrocarSenha : Form
     {
         private string emailUsuario;
+        private string emailMedico;
         private string codigoGerado;
         Mensagem_do_sistema mensagem_Do_Sistema = new Mensagem_do_sistema();
 
@@ -37,7 +38,7 @@ namespace Avalia__
             txt4.KeyUp += TextBox_KeyUp;
             txt5.KeyUp += TextBox_KeyUp;
             txt6.KeyUp += TextBox_KeyUp;
-            MudarFonte();
+         
             RadiusButton controlador = new RadiusButton();
             controlador.ConfigInicial(this, panelConfirmeEmail, btnSair, 25, Color.White);
         }
@@ -78,15 +79,6 @@ namespace Avalia__
                 return false;
             }
         }
-        private void MudarFonte()
-        {
-            lblAvalia.Font = new Font("Segoe UI", 14, FontStyle.Bold);
-            lblDescritivo.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-            lblDescritivo1.Font = new Font("Segoe UI", 9, FontStyle.Bold);
-            lblEmailInformado.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-
-        }
-
         private void btnSair_Click(object sender, EventArgs e)
         {
             ConfiguracaoTelas configuracaoTelas = new ConfiguracaoTelas();
@@ -158,7 +150,7 @@ namespace Avalia__
             if (codigoDigitado == codigoGerado)
             {
                 mensagem_Do_Sistema.MensagemInformation("✅ Código confirmado com sucesso!");
-                FormularioConfirmeTrocarSenha formularioLogin = new FormularioConfirmeTrocarSenha(emailUsuario);
+                FormularioConfirmeTrocarSenha formularioLogin = new FormularioConfirmeTrocarSenha(emailUsuario, emailMedico);
                 formularioLogin.ShowDialog();
             }
             else

@@ -21,23 +21,28 @@ namespace Avalia__
     {
         Mensagem_do_sistema mensagem_Do_Sistema = new Mensagem_do_sistema();
         ConfiguracaoTelas configuracaoTelas = new ConfiguracaoTelas();
-        private bool VerificarSenhaAntiga(string novaSenha, string email)
+        private bool VerificarSenhaAntiga(string novaSenha)
         {
-            string novaSenhaCriptografada = configuracaoTelas.GerarHash(novaSenha); // usa o mesmo método que usou no cadastro
+            string novaSenhaCriptografada = configuracaoTelas.GerarHash(novaSenha);
 
-            tbUsuarioTableAdapter tbUsuarioTableAdapter = new tbUsuarioTableAdapter();
-            var usuario = tbUsuarioTableAdapter.GetData()
-                .FirstOrDefault(u => u.Email == email);
-
-            if (usuario != null)
+            if (!string.IsNullOrEmpty(emailUsuario))
             {
-                return usuario.Senha == novaSenhaCriptografada;
+                var usuario = new tbUsuarioTableAdapter().GetData()
+                                 .FirstOrDefault(u => u.Email == emailUsuario);
+                return usuario != null && usuario.Senha == novaSenhaCriptografada;
+            }
+            else if (!string.IsNullOrEmpty(emailMedico))
+            {
+                var medico = new tbMedicoTableAdapter().GetData()
+                                .FirstOrDefault(m => m.Email == emailMedico);
+                return medico != null && medico.Senha == novaSenhaCriptografada;
             }
 
             return false;
         }
 
         private string emailUsuario;
+        private string emailMedico;
         private void MudarFonte()
         {
             lblAvalia.Font = new Font("Segoe UI", 14, FontStyle.Bold);
@@ -88,11 +93,12 @@ namespace Avalia__
             }
         }
 
-        public FormularioConfirmeTrocarSenha(string email)
+        public FormularioConfirmeTrocarSenha(string email, string emailM)
         {
             InitializeComponent();
             MudarFonte();
             emailUsuario = email;
+            emailMedico = emailM;
 
             RadiusButton controlador = new RadiusButton();
             controlador.ConfigInicial(this, panelConfirmeSenha, btnSair, 25, Color.White);
@@ -138,19 +144,30 @@ namespace Avalia__
 
             string senha = txtNovaSenha.Text;
 
-            if (VerificarSenhaAntiga(senha, emailUsuario))
+            // Verifica se a nova senha é igual à atual
+            if (VerificarSenhaAntiga(senha))
             {
                 MessageBox.Show("A nova senha deve ser diferente da senha atual.");
                 return;
             }
-            string novaSenhaCriptografada = configuracaoTelas.GerarHash(novaSenha);
 
-            // Atualiza a senha no banco
-            tbUsuarioTableAdapter tbUsuarioTableAdapter = new tbUsuarioTableAdapter();
-            //tbUsuarioTableAdapter.AtualizarSenhaPorEmail(novaSenhaCriptografada, emailUsuario);
+            // Criptografa a nova senha
+            string novaSenhaCriptografada = configuracaoTelas.GerarHash(senha);
 
-            mensagem_Do_Sistema.MensagemInformation("Senha atualizada com sucesso! Você já pode fazer login.");
-            this.Close();
+            // Atualiza a senha no banco dependendo do tipo de usuário
+            if (!string.IsNullOrEmpty(emailUsuario))
+            {
+                //tbUsuarioTableAdapter usuarioAdapter = new tbUsuarioTableAdapter();
+                //usuarioAdapter.AtualizarSenhaPorEmail(novaSenhaCriptografada, emailUsuario);
+            }
+            else if (!string.IsNullOrEmpty(emailMedico))
+            {
+                //tbMedicoTableAdapter medicoAdapter = new tbMedicoTableAdapter();
+                //medicoAdapter.AtualizarSenhaPorEmail(novaSenhaCriptografada, emailMedico);
+            }
+
+            MessageBox.Show("Senha atualizada com sucesso!");
+            this.Close(); // Fecha a tela após atualizar, se desejar
         }
     }
 }

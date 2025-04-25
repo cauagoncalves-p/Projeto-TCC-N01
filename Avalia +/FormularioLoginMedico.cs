@@ -18,7 +18,7 @@ namespace Avalia__
     {
         Mensagem_do_sistema mensagem_Do_Sistema = new Mensagem_do_sistema();
         ConfiguracaoTelas configuracaoTelas = new ConfiguracaoTelas();
-
+     
         private void MudarFonte()
         {
             lblAvalia.Font = new Font("Segoe UI", 14, FontStyle.Bold);
@@ -37,6 +37,7 @@ namespace Avalia__
         {
             InitializeComponent();
             MudarFonte();
+            
             RadiusButton controlador = new RadiusButton();
             controlador.ConfigInicial(this, panelLogin, btnSair, 25, Color.White);
             UIHelper.ArredondarBotao(btnEntrar, 25);
@@ -66,6 +67,8 @@ namespace Avalia__
             if (usuario != null)
             {
                 mensagem_Do_Sistema.MensagemInformation("Logado com sucesso");
+                FormularioPaginaMedico formularioPaginaMedico = new FormularioPaginaMedico(usuario.IdMedico,usuario.Email);
+                formularioPaginaMedico.ShowDialog();
             }
             else
             {

@@ -118,6 +118,23 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pcbxEstrela.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wQAADsEBuJFr7QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJ9SURBVFhHzVe/
+        i9RAGF1/4I9CFBEELSy0EMFGxEbtrAStvH9ARLA8LWxj5+7OxB+NgiCop0UaWSdZDhfc7rQ43EtiRBBZ
+        EREsRETlULmN74uf7iaZu2yym8UHr9j53vfebJLJTCpFETTMPZ4tnhH9Zm03D08OCG6BIbPFw5NB0BT7
+        ENobmEDoOeZ+LpcPz67fjIWDriNucLlcdB5e2YLAb8kJeLb8HsyaW1lWHnxbXEiHM5U8z7JyEBrGagS9
+        SQX32bUsaw3Lxw/Xlic1oTG6qn6C5eMHAgaX3nJ8zPLRMd+6vNlTYq9r1476tjwN8/jS07NHWuqhXvJg
+        Oz38xtXtWFYXfSVu+Y54hKanniPewWgxYTwKFyNPeFMGZUWZyKbLOpcQT46YEE3gfaowKSrxEROQU/jx
+        K1Usn8iUU9FzgPtxDANfEoIy+RUvreNR+F/QZsIPn65hnPzgqtoBjo3jeaO6w7VFR9M0LgYvHbGL4/R4
+        1ahuwvt+VtM8EvHHntBGxjErI7CMdXgu7umMCtLqto0NbD8cwjBchcaZhFERzpAX2+YDmh8kzPJTyfts
+        lx+4b2+1pvnYZbt8oBWhMSvEBWXuZNvhwW9IrWFeukqcYtvhgUYzaVSYTl2y7fCItmWdWZyfmbpan7Tr
+        5cGcZW5E44+UUZ89XNa7tJ/TSdhV8hrGlhKaQf4kT7bPRnSa0RvRG63zolk7zNJ/8B3zIOr0qabtW1Di
+        CEuzgU1pWmPyCYfScyudeqlGGtImevEciGmWZQNfOWcGmpfoCDWvxDYuZ4K0f45dsdtylsvZaLeNtZhx
+        1Xfqd7CGD/FwblAvfG4j/NLr5vX1PPw/oVL5DakuYoJLcVPqAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="btnSair.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
@@ -137,6 +154,6 @@
 </value>
   </data>
   <data name="label3.Text" xml:space="preserve">
-    <value>-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</value>
+    <value>--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</value>
   </data>
 </root>

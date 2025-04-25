@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioConsultasAgendadas));
-            this.dgvConsultas = new System.Windows.Forms.DataGridView();
             this.lblHistoricoConsulta = new System.Windows.Forms.Label();
             this.btnConsultasTotais = new System.Windows.Forms.Button();
             this.btnRealizadas = new System.Windows.Forms.Button();
@@ -37,19 +36,11 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lbTitulo = new System.Windows.Forms.Label();
             this.btnSair = new System.Windows.Forms.Button();
+            this.panelCancelarConsulta = new System.Windows.Forms.Panel();
+            this.dgvConsultas = new System.Windows.Forms.DataGridView();
+            this.panelCancelarConsulta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultas)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgvConsultas
-            // 
-            this.dgvConsultas.BackgroundColor = System.Drawing.Color.White;
-            this.dgvConsultas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvConsultas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConsultas.Location = new System.Drawing.Point(58, 213);
-            this.dgvConsultas.Name = "dgvConsultas";
-            this.dgvConsultas.RowHeadersWidth = 51;
-            this.dgvConsultas.Size = new System.Drawing.Size(851, 386);
-            this.dgvConsultas.TabIndex = 0;
             // 
             // lblHistoricoConsulta
             // 
@@ -150,12 +141,30 @@
             this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
+            // panelCancelarConsulta
+            // 
+            this.panelCancelarConsulta.Controls.Add(this.dgvConsultas);
+            this.panelCancelarConsulta.Location = new System.Drawing.Point(61, 238);
+            this.panelCancelarConsulta.Name = "panelCancelarConsulta";
+            this.panelCancelarConsulta.Size = new System.Drawing.Size(868, 361);
+            this.panelCancelarConsulta.TabIndex = 11;
+            // 
+            // dgvConsultas
+            // 
+            this.dgvConsultas.BackgroundColor = System.Drawing.Color.White;
+            this.dgvConsultas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvConsultas.Location = new System.Drawing.Point(-3, 0);
+            this.dgvConsultas.Name = "dgvConsultas";
+            this.dgvConsultas.Size = new System.Drawing.Size(877, 365);
+            this.dgvConsultas.TabIndex = 0;
+            // 
             // FormularioConsultasAgendadas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(984, 561);
+            this.ClientSize = new System.Drawing.Size(984, 713);
+            this.Controls.Add(this.panelCancelarConsulta);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.lbTitulo);
             this.Controls.Add(this.btnCancelar);
@@ -163,7 +172,6 @@
             this.Controls.Add(this.btnRealizadas);
             this.Controls.Add(this.btnConsultasTotais);
             this.Controls.Add(this.lblHistoricoConsulta);
-            this.Controls.Add(this.dgvConsultas);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -171,6 +179,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Minha consultas";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormularioConsultasAgendadas_Paint_1);
+            this.panelCancelarConsulta.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -178,8 +187,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgvConsultas;
         private System.Windows.Forms.Label lblHistoricoConsulta;
         private System.Windows.Forms.Button btnConsultasTotais;
         private System.Windows.Forms.Button btnRealizadas;
@@ -187,5 +194,7 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label lbTitulo;
         private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Panel panelCancelarConsulta;
+        private System.Windows.Forms.DataGridView dgvConsultas;
     }
 }
