@@ -161,11 +161,16 @@ namespace Avalia__
                         })
                         .ToList();
 
-                    
 
-                   
+
+
 
                     dgvCancelar.DataSource = consultas;
+
+                    if (dgvCancelar.Columns["IdConsulta"] != null)
+                    {
+                        dgvCancelar.Columns["IdConsulta"].Visible = false;
+                    }
                 }
             }
             catch (Exception ex)
@@ -223,9 +228,10 @@ namespace Avalia__
                 string status = row.Cells["Status"].Value?.ToString() ?? "";
                 string observacoes = row.Cells["Observações"].Value?.ToString() ?? "";
                 string local = row.Cells["Local"].Value?.ToString() ?? "";
-            
+              
 
-            
+
+
                 var consultaSelecionada = (dynamic)row.DataBoundItem;
                 int idConsulta = consultaSelecionada.IdConsulta;
 
@@ -242,6 +248,12 @@ namespace Avalia__
             {
                 MessageBox.Show("Selecione uma consulta para cancelar.");
             }
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            ConfiguracaoTelas configuracaoTelas = new ConfiguracaoTelas();
+            configuracaoTelas.FecharAba(this);
         }
     }
 }
