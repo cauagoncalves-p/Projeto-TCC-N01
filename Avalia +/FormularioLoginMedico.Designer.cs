@@ -84,7 +84,7 @@
             this.lblEsqueceuSenha.Font = new System.Drawing.Font("Arial", 9F);
             this.lblEsqueceuSenha.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.lblEsqueceuSenha.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.lblEsqueceuSenha.Location = new System.Drawing.Point(160, 354);
+            this.lblEsqueceuSenha.Location = new System.Drawing.Point(164, 352);
             this.lblEsqueceuSenha.Name = "lblEsqueceuSenha";
             this.lblEsqueceuSenha.Size = new System.Drawing.Size(135, 15);
             this.lblEsqueceuSenha.TabIndex = 6;
@@ -135,7 +135,7 @@
             // 
             // txtSenhaLogin
             // 
-            this.txtSenhaLogin.Location = new System.Drawing.Point(39, 237);
+            this.txtSenhaLogin.Location = new System.Drawing.Point(39, 236);
             this.txtSenhaLogin.MaxLength = 50;
             this.txtSenhaLogin.Multiline = true;
             this.txtSenhaLogin.Name = "txtSenhaLogin";
@@ -148,7 +148,7 @@
             this.lblSenha.AutoSize = true;
             this.lblSenha.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.lblSenha.Location = new System.Drawing.Point(36, 215);
+            this.lblSenha.Location = new System.Drawing.Point(36, 214);
             this.lblSenha.Name = "lblSenha";
             this.lblSenha.Size = new System.Drawing.Size(53, 18);
             this.lblSenha.TabIndex = 4;
@@ -156,7 +156,7 @@
             // 
             // txtCRMLogin
             // 
-            this.txtCRMLogin.Location = new System.Drawing.Point(39, 146);
+            this.txtCRMLogin.Location = new System.Drawing.Point(39, 147);
             this.txtCRMLogin.MaxLength = 13;
             this.txtCRMLogin.Multiline = true;
             this.txtCRMLogin.Name = "txtCRMLogin";
@@ -178,11 +178,11 @@
             // lblLogin
             // 
             this.lblLogin.AutoSize = true;
-            this.lblLogin.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogin.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
             this.lblLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblLogin.Location = new System.Drawing.Point(108, 78);
+            this.lblLogin.Location = new System.Drawing.Point(105, 77);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(120, 19);
+            this.lblLogin.Size = new System.Drawing.Size(136, 21);
             this.lblLogin.TabIndex = 1;
             this.lblLogin.Text = "Faça seu login";
             // 
