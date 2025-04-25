@@ -15,20 +15,11 @@ namespace Avalia__
         private int idUsuario;
         private string emailUsuario;
 
-        private void mudarFonte() 
-        {
-            lblAvalia.Font = new Font("Ariel", 16, FontStyle.Bold);
-            lblTitulo.Font = new Font("Ariel", 14, FontStyle.Bold);
-            lblSubTitulo.Font = new Font("Ariel", 12, FontStyle.Regular);
-            //lblAgendarBtn.Font = new Font("Ariel", 10, FontStyle.Regular);
-            //lblAvaliabtn.Font = new Font("Ariel", 10, FontStyle.Regular);
-            //lblcancelabtn.Font = new Font("Ariel", 10, FontStyle.Regular);
-            //lblhistoricobtn.Font = new Font("Ariel", 10, FontStyle.Regular);
-        }
+        
         public FormularioPaginaPaciente(int idUsuario, string emailUsuario)
         {
             InitializeComponent();
-            mudarFonte();
+         
             this.idUsuario = idUsuario;
             this.emailUsuario = emailUsuario;
 

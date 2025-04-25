@@ -162,7 +162,7 @@
             this.lblVerifica.AutoSize = true;
             this.lblVerifica.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
             this.lblVerifica.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblVerifica.Location = new System.Drawing.Point(71, 79);
+            this.lblVerifica.Location = new System.Drawing.Point(66, 79);
             this.lblVerifica.Name = "lblVerifica";
             this.lblVerifica.Size = new System.Drawing.Size(201, 21);
             this.lblVerifica.TabIndex = 1;

@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioLoginMedico));
             this.panelLogin = new System.Windows.Forms.Panel();
             this.btnSair = new System.Windows.Forms.Button();
+            this.lblEsqueceuSenha = new System.Windows.Forms.LinkLabel();
             this.lblLinkCriarConta = new System.Windows.Forms.LinkLabel();
             this.lblCriarConta = new System.Windows.Forms.Label();
             this.btnEntrar = new System.Windows.Forms.Button();
@@ -40,7 +41,6 @@
             this.lblcrm = new System.Windows.Forms.Label();
             this.lblLogin = new System.Windows.Forms.Label();
             this.lblAvalia = new System.Windows.Forms.Label();
-            this.lblEsqueceuSenha = new System.Windows.Forms.LinkLabel();
             this.panelLogin.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,6 +76,21 @@
             this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
+            // lblEsqueceuSenha
+            // 
+            this.lblEsqueceuSenha.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.lblEsqueceuSenha.AutoSize = true;
+            this.lblEsqueceuSenha.Font = new System.Drawing.Font("Arial", 9F);
+            this.lblEsqueceuSenha.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.lblEsqueceuSenha.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
+            this.lblEsqueceuSenha.Location = new System.Drawing.Point(160, 354);
+            this.lblEsqueceuSenha.Name = "lblEsqueceuSenha";
+            this.lblEsqueceuSenha.Size = new System.Drawing.Size(135, 15);
+            this.lblEsqueceuSenha.TabIndex = 6;
+            this.lblEsqueceuSenha.TabStop = true;
+            this.lblEsqueceuSenha.Text = "Esqueceu sua senha ?";
+            this.lblEsqueceuSenha.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblEsqueceuSenha_LinkClicked);
             // 
             // lblLinkCriarConta
             // 
@@ -165,7 +180,7 @@
             this.lblLogin.AutoSize = true;
             this.lblLogin.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblLogin.Location = new System.Drawing.Point(110, 78);
+            this.lblLogin.Location = new System.Drawing.Point(108, 78);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(120, 19);
             this.lblLogin.TabIndex = 1;
@@ -176,26 +191,11 @@
             this.lblAvalia.AutoSize = true;
             this.lblAvalia.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAvalia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblAvalia.Location = new System.Drawing.Point(127, 36);
+            this.lblAvalia.Location = new System.Drawing.Point(125, 42);
             this.lblAvalia.Name = "lblAvalia";
             this.lblAvalia.Size = new System.Drawing.Size(94, 30);
             this.lblAvalia.TabIndex = 0;
             this.lblAvalia.Text = "Áurea+";
-            // 
-            // lblEsqueceuSenha
-            // 
-            this.lblEsqueceuSenha.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.lblEsqueceuSenha.AutoSize = true;
-            this.lblEsqueceuSenha.Font = new System.Drawing.Font("Arial", 9F);
-            this.lblEsqueceuSenha.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.lblEsqueceuSenha.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.lblEsqueceuSenha.Location = new System.Drawing.Point(160, 354);
-            this.lblEsqueceuSenha.Name = "lblEsqueceuSenha";
-            this.lblEsqueceuSenha.Size = new System.Drawing.Size(135, 15);
-            this.lblEsqueceuSenha.TabIndex = 6;
-            this.lblEsqueceuSenha.TabStop = true;
-            this.lblEsqueceuSenha.Text = "Esqueceu sua senha ?";
-            this.lblEsqueceuSenha.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblEsqueceuSenha_LinkClicked);
             // 
             // FormularioLoginMedico
             // 

@@ -18,15 +18,10 @@ namespace Avalia__
         Mensagem_do_sistema mensagem_ = new Mensagem_do_sistema();
         private void MudarFonte()
         {
-            lblAvalia.Font = new Font("Segoe UI", 14, FontStyle.Bold);
-            lblVerifica.Font = new Font("Inter", 15, FontStyle.Bold);
-            lblCPF.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-            lblemail.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-            btnContinuar.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-            lblLinkFazerLogin.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-            lblVerificaCPF.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-            mktCPF.Font = new Font("Segoe UI", 17, FontStyle.Regular);
-            txtEmail.Font = new Font("Segoe UI", 14, FontStyle.Regular);
+       
+            btnContinuar.Font = new Font("Arial", 10, FontStyle.Bold);
+            mktCPF.Font = new Font("Arial", 17, FontStyle.Regular);
+            txtEmail.Font = new Font("Arial", 14, FontStyle.Regular);
         }
 
         public FormularioCadCPF()

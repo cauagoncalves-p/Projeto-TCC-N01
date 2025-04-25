@@ -37,7 +37,7 @@ namespace Avalia__
             txt4.KeyUp += TextBox_KeyUp;
             txt5.KeyUp += TextBox_KeyUp;
             txt6.KeyUp += TextBox_KeyUp;
-            MudarFonte();
+          
             RadiusButton controlador = new RadiusButton();
             controlador.ConfigInicial(this, panelConfirmeEmail, btnSair, 25, Color.White);
         }
@@ -107,14 +107,7 @@ namespace Avalia__
         }
 
 
-        private void MudarFonte()
-        {
-            lblAvalia.Font = new Font("Segoe UI", 14, FontStyle.Bold);
-            lblDescritivo.Font = new Font("Segoe UI", 10, FontStyle.Bold); 
-            lblDescritivo1.Font = new Font("Segoe UI", 9, FontStyle.Bold);
-            lblEmailInformado.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-          
-        }
+       
       
         private void TextBox_KeyUp(object sender, KeyEventArgs e)
         {
