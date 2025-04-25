@@ -355,11 +355,11 @@
             // lblCompletecadastro
             // 
             this.lblCompletecadastro.AutoSize = true;
-            this.lblCompletecadastro.Font = new System.Drawing.Font("Arial Narrow", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCompletecadastro.Font = new System.Drawing.Font("Arial", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompletecadastro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblCompletecadastro.Location = new System.Drawing.Point(267, 59);
+            this.lblCompletecadastro.Location = new System.Drawing.Point(267, 60);
             this.lblCompletecadastro.Name = "lblCompletecadastro";
-            this.lblCompletecadastro.Size = new System.Drawing.Size(208, 25);
+            this.lblCompletecadastro.Size = new System.Drawing.Size(244, 24);
             this.lblCompletecadastro.TabIndex = 1;
             this.lblCompletecadastro.Text = "Complete seu cadastro";
             // 

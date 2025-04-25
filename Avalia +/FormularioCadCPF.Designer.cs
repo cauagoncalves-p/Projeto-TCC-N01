@@ -55,14 +55,14 @@
             this.panelVerificaCPF.Controls.Add(this.lblCPF);
             this.panelVerificaCPF.Controls.Add(this.lblVerifica);
             this.panelVerificaCPF.Controls.Add(this.lblAvalia);
-            this.panelVerificaCPF.Location = new System.Drawing.Point(325, 45);
+            this.panelVerificaCPF.Location = new System.Drawing.Point(333, 69);
             this.panelVerificaCPF.Name = "panelVerificaCPF";
-            this.panelVerificaCPF.Size = new System.Drawing.Size(335, 471);
+            this.panelVerificaCPF.Size = new System.Drawing.Size(335, 403);
             this.panelVerificaCPF.TabIndex = 1;
             // 
             // mktCPF
             // 
-            this.mktCPF.Location = new System.Drawing.Point(39, 170);
+            this.mktCPF.Location = new System.Drawing.Point(39, 147);
             this.mktCPF.Mask = "000,000,000-00";
             this.mktCPF.Name = "mktCPF";
             this.mktCPF.Size = new System.Drawing.Size(257, 20);
@@ -91,7 +91,7 @@
             this.lblLinkFazerLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLinkFazerLogin.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.lblLinkFazerLogin.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.lblLinkFazerLogin.Location = new System.Drawing.Point(201, 435);
+            this.lblLinkFazerLogin.Location = new System.Drawing.Point(215, 343);
             this.lblLinkFazerLogin.Name = "lblLinkFazerLogin";
             this.lblLinkFazerLogin.Size = new System.Drawing.Size(81, 18);
             this.lblLinkFazerLogin.TabIndex = 9;
@@ -104,7 +104,7 @@
             this.lblVerificaCPF.AutoSize = true;
             this.lblVerificaCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVerificaCPF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.lblVerificaCPF.Location = new System.Drawing.Point(54, 435);
+            this.lblVerificaCPF.Location = new System.Drawing.Point(36, 343);
             this.lblVerificaCPF.Name = "lblVerificaCPF";
             this.lblVerificaCPF.Size = new System.Drawing.Size(154, 18);
             this.lblVerificaCPF.TabIndex = 8;
@@ -114,8 +114,9 @@
             // 
             this.btnContinuar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(164)))), ((int)(((byte)(143)))));
             this.btnContinuar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnContinuar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnContinuar.ForeColor = System.Drawing.Color.White;
-            this.btnContinuar.Location = new System.Drawing.Point(39, 353);
+            this.btnContinuar.Location = new System.Drawing.Point(39, 291);
             this.btnContinuar.Name = "btnContinuar";
             this.btnContinuar.Size = new System.Drawing.Size(257, 44);
             this.btnContinuar.TabIndex = 7;
@@ -127,7 +128,7 @@
             // 
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtEmail.Location = new System.Drawing.Point(39, 277);
+            this.txtEmail.Location = new System.Drawing.Point(39, 214);
             this.txtEmail.MaxLength = 50;
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
@@ -137,43 +138,46 @@
             // lblemail
             // 
             this.lblemail.AutoSize = true;
+            this.lblemail.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblemail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.lblemail.Location = new System.Drawing.Point(36, 238);
+            this.lblemail.Location = new System.Drawing.Point(36, 190);
             this.lblemail.Name = "lblemail";
-            this.lblemail.Size = new System.Drawing.Size(32, 13);
+            this.lblemail.Size = new System.Drawing.Size(48, 18);
             this.lblemail.TabIndex = 4;
             this.lblemail.Text = "Email";
             // 
             // lblCPF
             // 
             this.lblCPF.AutoSize = true;
+            this.lblCPF.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCPF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.lblCPF.Location = new System.Drawing.Point(36, 135);
+            this.lblCPF.Location = new System.Drawing.Point(36, 126);
             this.lblCPF.Name = "lblCPF";
-            this.lblCPF.Size = new System.Drawing.Size(27, 13);
+            this.lblCPF.Size = new System.Drawing.Size(41, 18);
             this.lblCPF.TabIndex = 2;
             this.lblCPF.Text = "CPF";
             // 
             // lblVerifica
             // 
             this.lblVerifica.AutoSize = true;
-            this.lblVerifica.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVerifica.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
             this.lblVerifica.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblVerifica.Location = new System.Drawing.Point(54, 78);
+            this.lblVerifica.Location = new System.Drawing.Point(71, 79);
             this.lblVerifica.Name = "lblVerifica";
-            this.lblVerifica.Size = new System.Drawing.Size(173, 20);
+            this.lblVerifica.Size = new System.Drawing.Size(201, 21);
             this.lblVerifica.TabIndex = 1;
-            this.lblVerifica.Text = "Verficação de cadastro";
+            this.lblVerifica.Text = "Validação de cadastro";
             // 
             // lblAvalia
             // 
             this.lblAvalia.AutoSize = true;
-            this.lblAvalia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAvalia.Location = new System.Drawing.Point(127, 31);
+            this.lblAvalia.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAvalia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblAvalia.Location = new System.Drawing.Point(127, 44);
             this.lblAvalia.Name = "lblAvalia";
-            this.lblAvalia.Size = new System.Drawing.Size(90, 24);
+            this.lblAvalia.Size = new System.Drawing.Size(94, 30);
             this.lblAvalia.TabIndex = 0;
-            this.lblAvalia.Text = "Áuerea+";
+            this.lblAvalia.Text = "Áurea+";
             // 
             // FormularioCadCPF
             // 

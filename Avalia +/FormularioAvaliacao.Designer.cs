@@ -459,7 +459,7 @@
             // btnCancelarAvaliacao
             // 
             this.btnCancelarAvaliacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(164)))), ((int)(((byte)(143)))));
-            this.btnCancelarAvaliacao.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelarAvaliacao.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelarAvaliacao.ForeColor = System.Drawing.Color.White;
             this.btnCancelarAvaliacao.Location = new System.Drawing.Point(572, 575);
             this.btnCancelarAvaliacao.Name = "btnCancelarAvaliacao";
@@ -563,7 +563,7 @@
             // btnEnviarAvaliacao
             // 
             this.btnEnviarAvaliacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(164)))), ((int)(((byte)(143)))));
-            this.btnEnviarAvaliacao.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnviarAvaliacao.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnviarAvaliacao.ForeColor = System.Drawing.Color.White;
             this.btnEnviarAvaliacao.Location = new System.Drawing.Point(734, 575);
             this.btnEnviarAvaliacao.Name = "btnEnviarAvaliacao";

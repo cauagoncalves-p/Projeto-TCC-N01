@@ -65,7 +65,7 @@
             this.panelConfirmeEmail.Controls.Add(this.lblAvalia);
             this.panelConfirmeEmail.Location = new System.Drawing.Point(325, 45);
             this.panelConfirmeEmail.Name = "panelConfirmeEmail";
-            this.panelConfirmeEmail.Size = new System.Drawing.Size(335, 456);
+            this.panelConfirmeEmail.Size = new System.Drawing.Size(335, 449);
             this.panelConfirmeEmail.TabIndex = 2;
             // 
             // linkLblReenviarCodigo
@@ -75,7 +75,7 @@
             this.linkLblReenviarCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLblReenviarCodigo.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLblReenviarCodigo.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.linkLblReenviarCodigo.Location = new System.Drawing.Point(103, 397);
+            this.linkLblReenviarCodigo.Location = new System.Drawing.Point(112, 393);
             this.linkLblReenviarCodigo.Name = "linkLblReenviarCodigo";
             this.linkLblReenviarCodigo.Size = new System.Drawing.Size(118, 18);
             this.linkLblReenviarCodigo.TabIndex = 8;
@@ -86,7 +86,7 @@
             // txt2
             // 
             this.txt2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt2.Location = new System.Drawing.Point(68, 244);
+            this.txt2.Location = new System.Drawing.Point(68, 245);
             this.txt2.MaxLength = 1;
             this.txt2.Multiline = true;
             this.txt2.Name = "txt2";
@@ -97,7 +97,7 @@
             // txt6
             // 
             this.txt6.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt6.Location = new System.Drawing.Point(268, 244);
+            this.txt6.Location = new System.Drawing.Point(268, 245);
             this.txt6.MaxLength = 1;
             this.txt6.Multiline = true;
             this.txt6.Name = "txt6";
@@ -108,7 +108,7 @@
             // txt5
             // 
             this.txt5.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt5.Location = new System.Drawing.Point(217, 244);
+            this.txt5.Location = new System.Drawing.Point(217, 245);
             this.txt5.MaxLength = 1;
             this.txt5.Multiline = true;
             this.txt5.Name = "txt5";
@@ -119,7 +119,7 @@
             // txt4
             // 
             this.txt4.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt4.Location = new System.Drawing.Point(167, 244);
+            this.txt4.Location = new System.Drawing.Point(166, 245);
             this.txt4.MaxLength = 1;
             this.txt4.Multiline = true;
             this.txt4.Name = "txt4";
@@ -130,7 +130,7 @@
             // txt3
             // 
             this.txt3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt3.Location = new System.Drawing.Point(115, 244);
+            this.txt3.Location = new System.Drawing.Point(115, 245);
             this.txt3.MaxLength = 1;
             this.txt3.Multiline = true;
             this.txt3.Name = "txt3";
@@ -141,7 +141,7 @@
             // txt1
             // 
             this.txt1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt1.Location = new System.Drawing.Point(19, 244);
+            this.txt1.Location = new System.Drawing.Point(19, 245);
             this.txt1.MaxLength = 1;
             this.txt1.Multiline = true;
             this.txt1.Name = "txt1";
@@ -166,7 +166,7 @@
             this.lblEmailInformado.AutoSize = true;
             this.lblEmailInformado.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmailInformado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(124)))), ((int)(((byte)(99)))));
-            this.lblEmailInformado.Location = new System.Drawing.Point(99, 157);
+            this.lblEmailInformado.Location = new System.Drawing.Point(99, 161);
             this.lblEmailInformado.Name = "lblEmailInformado";
             this.lblEmailInformado.Size = new System.Drawing.Size(135, 15);
             this.lblEmailInformado.TabIndex = 12;
@@ -178,7 +178,7 @@
             this.lblDescritivo.AutoSize = true;
             this.lblDescritivo.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescritivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(138)))), ((int)(((byte)(122)))));
-            this.lblDescritivo.Location = new System.Drawing.Point(30, 122);
+            this.lblDescritivo.Location = new System.Drawing.Point(30, 121);
             this.lblDescritivo.Name = "lblDescritivo";
             this.lblDescritivo.Size = new System.Drawing.Size(273, 16);
             this.lblDescritivo.TabIndex = 11;
@@ -205,7 +205,7 @@
             this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEntrar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntrar.ForeColor = System.Drawing.Color.White;
-            this.btnEntrar.Location = new System.Drawing.Point(19, 347);
+            this.btnEntrar.Location = new System.Drawing.Point(19, 342);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(291, 44);
             this.btnEntrar.TabIndex = 7;
@@ -218,7 +218,7 @@
             this.lblConfirmeEmail.AutoSize = true;
             this.lblConfirmeEmail.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConfirmeEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblConfirmeEmail.Location = new System.Drawing.Point(82, 82);
+            this.lblConfirmeEmail.Location = new System.Drawing.Point(82, 81);
             this.lblConfirmeEmail.Name = "lblConfirmeEmail";
             this.lblConfirmeEmail.Size = new System.Drawing.Size(176, 19);
             this.lblConfirmeEmail.TabIndex = 1;
@@ -229,7 +229,7 @@
             this.lblAvalia.AutoSize = true;
             this.lblAvalia.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAvalia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblAvalia.Location = new System.Drawing.Point(126, 39);
+            this.lblAvalia.Location = new System.Drawing.Point(126, 42);
             this.lblAvalia.Name = "lblAvalia";
             this.lblAvalia.Size = new System.Drawing.Size(94, 30);
             this.lblAvalia.TabIndex = 0;
