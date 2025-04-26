@@ -15,29 +15,27 @@ namespace Avalia__
     public partial class FormularioPaginaMedico: Form
     {
         private int _idMedico;
-        private string emailMedico;
-
         private void CarregarConsultasDoMedico()
         {
             try
             {
                 using (var consultaAdapter = new tbConsultaTableAdapter())
                 using (var usuarioAdapter = new tbUsuarioTableAdapter())
+                using (var avaliacaoAdapter = new tbAvaliacaoTableAdapter())
                 {
                     // Carrega todos os usuários (pacientes)
                     var todosPacientes = usuarioAdapter.GetData().ToDictionary(u => u.Id_usuario);
 
                     // Carrega as consultas do médico atual
-                    var consultas = consultaAdapter.GetData()
-                        .Where(c => c.IdMedico == _idMedico)
+                    var todasConsultas = consultaAdapter.GetData().Where(c => c.IdMedico == _idMedico).ToList();
+
+                    var consultas = todasConsultas
                         .Select(c =>
                         {
-                            // Nome do paciente
                             var paciente = todosPacientes.TryGetValue(c.Id_usuario, out var u)
                                 ? $"{u.Nome} {u.Sobrenome}"
                                 : "Paciente não encontrado";
 
-                            // Observações (pode ser nula)
                             var observacoes = c.IsObservacoesNull() ? "" : c.Observacoes;
 
                             return new
@@ -52,29 +50,65 @@ namespace Avalia__
 
                     dgvConsultasMedico.DataSource = consultas;
 
-                    // Numero de consultas que o medico tem
-                    int totalConsultas = consultaAdapter.GetData()
-                    .Count(c => c.IdMedico == _idMedico);
-
+                    // Número de consultas que o médico tem
+                    int totalConsultas = todasConsultas.Count;
                     lblTotalConsultas.Text = totalConsultas.ToString();
 
-                    //numeros de consultas pendentes
-                    int totalAgendadas = consultaAdapter.GetData()
-                    .Count(c => c.IdMedico == _idMedico && c.StatusConsulta == "Agendada");
-
+                    // Número de consultas pendentes
+                    int totalAgendadas = todasConsultas.Count(c => c.StatusConsulta == "Agendada");
                     lblTotalPendentes.Text = totalAgendadas.ToString();
 
-                    //numeros de consultas realizadas
-                    int totalRealizadas = consultaAdapter.GetData()
-                    .Count(c => c.IdMedico == _idMedico && c.StatusConsulta == "Realizada");
-
+                    // Número de consultas realizadas
+                    int totalRealizadas = todasConsultas.Count(c => c.StatusConsulta == "Realizada");
                     lblTotalRealizadas.Text = totalRealizadas.ToString();
 
-                    //numeros de consultas urgentes
-                    int totalUrgentes = consultaAdapter.GetData()
-                    .Count(c => c.IdMedico == _idMedico && c.StatusConsulta == "Urgente");
-
+                    // Número de consultas urgentes
+                    int totalUrgentes = todasConsultas.Count(c => c.StatusConsulta == "Urgente");
                     lblTotalUrgencia.Text = totalUrgentes.ToString();
+
+                    // -------- AVALIAÇÕES E PORCENTAGENS --------
+                    var idsConsultas = todasConsultas.Select(c => c.IdConsulta).ToList();
+                    var avaliacoes = avaliacaoAdapter.GetData()
+                        .Where(a => idsConsultas.Contains(a.IdConsulta))
+                        .ToList();
+
+                    int totalAvaliacoes = avaliacoes.Count;
+
+                    if (totalAvaliacoes > 0)
+                    {
+                        int notas5 = avaliacoes.Count(a => a.Nota == 5);
+                        int notas4 = avaliacoes.Count(a => a.Nota == 4);
+                        int notas3 = avaliacoes.Count(a => a.Nota == 3);
+                        int notas2 = avaliacoes.Count(a => a.Nota == 2);
+                        int notas1 = avaliacoes.Count(a => a.Nota == 1);
+
+                        double porcentagem5 = (notas5 * 100.0) / totalAvaliacoes;
+                        double porcentagem4 = (notas4 * 100.0) / totalAvaliacoes;
+                        double porcentagem3 = (notas3 * 100.0) / totalAvaliacoes;
+                        double porcentagem2 = (notas2 * 100.0) / totalAvaliacoes;
+                        double porcentagem1 = (notas1 * 100.0) / totalAvaliacoes;
+
+                        lblNota5.Text = $"{porcentagem5:F1}%";
+                        lblNota4.Text = $"{porcentagem4:F1}%";
+                        lblNota3.Text = $"{porcentagem3:F1}%";
+                        lblNota2.Text = $"{porcentagem2:F1}%";
+                        lblNota1.Text = $"{porcentagem1:F1}%";
+                        lblTotalAvaliacao.Text = $"({totalAvaliacoes.ToString()}\navaliações)";
+
+                        // Agora calcula a média das notas!
+                        double mediaNotas = avaliacoes.Average(a => a.Nota);
+                        lblNota.Text = $"{mediaNotas:F1}"; // Mostra a média com 1 casa decimal
+                    }
+                    else
+                    {
+                        lblNota5.Text = "0%";
+                        lblNota4.Text = "0%";
+                        lblNota3.Text = "0%";
+                        lblNota2.Text = "0%";
+                        lblNota1.Text = "0%";
+                        lblTotalAvaliacao.Text = "0";
+                        lblNota.Text = "0.0";
+                    }
                 }
             }
             catch (Exception ex)
@@ -84,7 +118,7 @@ namespace Avalia__
             }
         }
 
-        public FormularioPaginaMedico(int idMedico, string emailMedico)
+        public FormularioPaginaMedico(int idMedico)
         {
             InitializeComponent();
             _idMedico = idMedico;
@@ -229,6 +263,39 @@ namespace Avalia__
                 DataGridViewAutoSizeColumnMode.Fill;
         }
 
-        
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblRealizadas_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

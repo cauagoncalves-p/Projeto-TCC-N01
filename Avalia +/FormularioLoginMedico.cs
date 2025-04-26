@@ -55,7 +55,7 @@ namespace Avalia__
             if (usuario != null)
             {
                 mensagem_Do_Sistema.MensagemInformation("Logado com sucesso");
-                FormularioPaginaMedico formularioPaginaMedico = new FormularioPaginaMedico(usuario.IdMedico,usuario.Email);
+                FormularioPaginaMedico formularioPaginaMedico = new FormularioPaginaMedico(usuario.IdMedico);
                 formularioPaginaMedico.ShowDialog();
             }
             else
