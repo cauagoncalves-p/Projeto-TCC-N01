@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioDeEnvioCodigo));
             this.panelConfirmeEmail = new System.Windows.Forms.Panel();
-            this.linkLblReenviarCodigo = new System.Windows.Forms.LinkLabel();
-            this.btnEntrar = new System.Windows.Forms.Button();
             this.txt2 = new System.Windows.Forms.TextBox();
             this.txt6 = new System.Windows.Forms.TextBox();
             this.txt5 = new System.Windows.Forms.TextBox();
@@ -44,6 +42,8 @@
             this.btnSair = new System.Windows.Forms.Button();
             this.lblConfirmeEmail = new System.Windows.Forms.Label();
             this.lblAvalia = new System.Windows.Forms.Label();
+            this.linkLblReenviarCodigo = new System.Windows.Forms.LinkLabel();
+            this.btnEntrar = new System.Windows.Forms.Button();
             this.panelConfirmeEmail.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,35 +67,6 @@
             this.panelConfirmeEmail.Name = "panelConfirmeEmail";
             this.panelConfirmeEmail.Size = new System.Drawing.Size(335, 441);
             this.panelConfirmeEmail.TabIndex = 1;
-            // 
-            // linkLblReenviarCodigo
-            // 
-            this.linkLblReenviarCodigo.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.linkLblReenviarCodigo.AutoSize = true;
-            this.linkLblReenviarCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLblReenviarCodigo.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.linkLblReenviarCodigo.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.linkLblReenviarCodigo.Location = new System.Drawing.Point(112, 394);
-            this.linkLblReenviarCodigo.Name = "linkLblReenviarCodigo";
-            this.linkLblReenviarCodigo.Size = new System.Drawing.Size(118, 18);
-            this.linkLblReenviarCodigo.TabIndex = 8;
-            this.linkLblReenviarCodigo.TabStop = true;
-            this.linkLblReenviarCodigo.Text = "Reenviar Código";
-            this.linkLblReenviarCodigo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLblReenviarCodigo_LinkClicked);
-            // 
-            // btnEntrar
-            // 
-            this.btnEntrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(164)))), ((int)(((byte)(143)))));
-            this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEntrar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEntrar.ForeColor = System.Drawing.Color.White;
-            this.btnEntrar.Location = new System.Drawing.Point(19, 344);
-            this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(291, 44);
-            this.btnEntrar.TabIndex = 7;
-            this.btnEntrar.Text = "Entrar";
-            this.btnEntrar.UseVisualStyleBackColor = false;
-            this.btnEntrar.Click += new System.EventHandler(this.btnEnviarCodigo_Click);
             // 
             // txt2
             // 
@@ -180,7 +151,7 @@
             this.lblEmailInformado.AutoSize = true;
             this.lblEmailInformado.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmailInformado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(124)))), ((int)(((byte)(99)))));
-            this.lblEmailInformado.Location = new System.Drawing.Point(98, 168);
+            this.lblEmailInformado.Location = new System.Drawing.Point(99, 168);
             this.lblEmailInformado.Name = "lblEmailInformado";
             this.lblEmailInformado.Size = new System.Drawing.Size(135, 15);
             this.lblEmailInformado.TabIndex = 24;
@@ -226,13 +197,42 @@
             // lblAvalia
             // 
             this.lblAvalia.AutoSize = true;
-            this.lblAvalia.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAvalia.Font = new System.Drawing.Font("Imprint MT Shadow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAvalia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lblAvalia.Location = new System.Drawing.Point(123, 48);
             this.lblAvalia.Name = "lblAvalia";
-            this.lblAvalia.Size = new System.Drawing.Size(94, 30);
+            this.lblAvalia.Size = new System.Drawing.Size(94, 28);
             this.lblAvalia.TabIndex = 15;
             this.lblAvalia.Text = "Áurea+";
+            // 
+            // linkLblReenviarCodigo
+            // 
+            this.linkLblReenviarCodigo.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.linkLblReenviarCodigo.AutoSize = true;
+            this.linkLblReenviarCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLblReenviarCodigo.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.linkLblReenviarCodigo.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.linkLblReenviarCodigo.Location = new System.Drawing.Point(112, 394);
+            this.linkLblReenviarCodigo.Name = "linkLblReenviarCodigo";
+            this.linkLblReenviarCodigo.Size = new System.Drawing.Size(118, 18);
+            this.linkLblReenviarCodigo.TabIndex = 8;
+            this.linkLblReenviarCodigo.TabStop = true;
+            this.linkLblReenviarCodigo.Text = "Reenviar Código";
+            this.linkLblReenviarCodigo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLblReenviarCodigo_LinkClicked);
+            // 
+            // btnEntrar
+            // 
+            this.btnEntrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(164)))), ((int)(((byte)(143)))));
+            this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEntrar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntrar.ForeColor = System.Drawing.Color.White;
+            this.btnEntrar.Location = new System.Drawing.Point(19, 344);
+            this.btnEntrar.Name = "btnEntrar";
+            this.btnEntrar.Size = new System.Drawing.Size(291, 44);
+            this.btnEntrar.TabIndex = 7;
+            this.btnEntrar.Text = "Entrar";
+            this.btnEntrar.UseVisualStyleBackColor = false;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEnviarCodigo_Click);
             // 
             // FormularioDeEnvioCodigo
             // 

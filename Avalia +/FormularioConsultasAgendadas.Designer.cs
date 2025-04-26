@@ -117,12 +117,13 @@
             // 
             this.lbTitulo.AutoSize = true;
             this.lbTitulo.BackColor = System.Drawing.Color.Transparent;
-            this.lbTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitulo.Font = new System.Drawing.Font("Imprint MT Shadow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lbTitulo.Location = new System.Drawing.Point(57, 33);
             this.lbTitulo.Name = "lbTitulo";
-            this.lbTitulo.Size = new System.Drawing.Size(66, 24);
+            this.lbTitulo.Size = new System.Drawing.Size(94, 28);
             this.lbTitulo.TabIndex = 6;
-            this.lbTitulo.Text = "Aurea";
+            this.lbTitulo.Text = "Áurea+";
             // 
             // btnSair
             // 

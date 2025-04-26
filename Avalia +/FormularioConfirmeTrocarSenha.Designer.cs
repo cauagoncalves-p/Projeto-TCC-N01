@@ -55,7 +55,7 @@
             this.panelConfirmeSenha.Controls.Add(this.lblAvalia);
             this.panelConfirmeSenha.Location = new System.Drawing.Point(325, 45);
             this.panelConfirmeSenha.Name = "panelConfirmeSenha";
-            this.panelConfirmeSenha.Size = new System.Drawing.Size(335, 471);
+            this.panelConfirmeSenha.Size = new System.Drawing.Size(335, 393);
             this.panelConfirmeSenha.TabIndex = 2;
             // 
             // lblError
@@ -69,7 +69,7 @@
             // 
             // txtConfirmeSenha
             // 
-            this.txtConfirmeSenha.Location = new System.Drawing.Point(39, 262);
+            this.txtConfirmeSenha.Location = new System.Drawing.Point(39, 240);
             this.txtConfirmeSenha.MaxLength = 100;
             this.txtConfirmeSenha.Multiline = true;
             this.txtConfirmeSenha.Name = "txtConfirmeSenha";
@@ -80,10 +80,11 @@
             // lblConfirmeNovaSenha
             // 
             this.lblConfirmeNovaSenha.AutoSize = true;
+            this.lblConfirmeNovaSenha.Font = new System.Drawing.Font("Arial", 13F);
             this.lblConfirmeNovaSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.lblConfirmeNovaSenha.Location = new System.Drawing.Point(36, 232);
+            this.lblConfirmeNovaSenha.Location = new System.Drawing.Point(35, 216);
             this.lblConfirmeNovaSenha.Name = "lblConfirmeNovaSenha";
-            this.lblConfirmeNovaSenha.Size = new System.Drawing.Size(102, 13);
+            this.lblConfirmeNovaSenha.Size = new System.Drawing.Size(173, 21);
             this.lblConfirmeNovaSenha.TabIndex = 12;
             this.lblConfirmeNovaSenha.Text = "Confirme sua Senha";
             // 
@@ -106,8 +107,9 @@
             // 
             this.btnConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(164)))), ((int)(((byte)(143)))));
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirmar.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
             this.btnConfirmar.ForeColor = System.Drawing.Color.White;
-            this.btnConfirmar.Location = new System.Drawing.Point(39, 408);
+            this.btnConfirmar.Location = new System.Drawing.Point(39, 307);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(257, 44);
             this.btnConfirmar.TabIndex = 7;
@@ -128,31 +130,33 @@
             // lblNovaSenha
             // 
             this.lblNovaSenha.AutoSize = true;
+            this.lblNovaSenha.Font = new System.Drawing.Font("Arial", 13F);
             this.lblNovaSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.lblNovaSenha.Location = new System.Drawing.Point(36, 130);
+            this.lblNovaSenha.Location = new System.Drawing.Point(39, 136);
             this.lblNovaSenha.Name = "lblNovaSenha";
-            this.lblNovaSenha.Size = new System.Drawing.Size(65, 13);
+            this.lblNovaSenha.Size = new System.Drawing.Size(106, 21);
             this.lblNovaSenha.TabIndex = 2;
             this.lblNovaSenha.Text = "Nova senha";
             // 
             // lblTrocarSenha
             // 
             this.lblTrocarSenha.AutoSize = true;
-            this.lblTrocarSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrocarSenha.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTrocarSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblTrocarSenha.Location = new System.Drawing.Point(112, 68);
+            this.lblTrocarSenha.Location = new System.Drawing.Point(104, 86);
             this.lblTrocarSenha.Name = "lblTrocarSenha";
-            this.lblTrocarSenha.Size = new System.Drawing.Size(105, 20);
+            this.lblTrocarSenha.Size = new System.Drawing.Size(136, 22);
             this.lblTrocarSenha.TabIndex = 1;
             this.lblTrocarSenha.Text = "Trocar Senha";
             // 
             // lblAvalia
             // 
             this.lblAvalia.AutoSize = true;
-            this.lblAvalia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAvalia.Location = new System.Drawing.Point(127, 31);
+            this.lblAvalia.Font = new System.Drawing.Font("Imprint MT Shadow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAvalia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblAvalia.Location = new System.Drawing.Point(128, 51);
             this.lblAvalia.Name = "lblAvalia";
-            this.lblAvalia.Size = new System.Drawing.Size(78, 24);
+            this.lblAvalia.Size = new System.Drawing.Size(94, 28);
             this.lblAvalia.TabIndex = 0;
             this.lblAvalia.Text = "Áurea+";
             // 

@@ -59,7 +59,7 @@
             this.panelLogin.Controls.Add(this.lblAvalia);
             this.panelLogin.Location = new System.Drawing.Point(313, 58);
             this.panelLogin.Name = "panelLogin";
-            this.panelLogin.Size = new System.Drawing.Size(335, 451);
+            this.panelLogin.Size = new System.Drawing.Size(335, 445);
             this.panelLogin.TabIndex = 0;
             // 
             // btnSair
@@ -85,7 +85,7 @@
             this.lblLinkCriarConta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
             this.lblLinkCriarConta.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.lblLinkCriarConta.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.lblLinkCriarConta.Location = new System.Drawing.Point(182, 401);
+            this.lblLinkCriarConta.Location = new System.Drawing.Point(182, 400);
             this.lblLinkCriarConta.Name = "lblLinkCriarConta";
             this.lblLinkCriarConta.Size = new System.Drawing.Size(114, 18);
             this.lblLinkCriarConta.TabIndex = 9;
@@ -98,7 +98,7 @@
             this.lblCriarConta.AutoSize = true;
             this.lblCriarConta.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCriarConta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.lblCriarConta.Location = new System.Drawing.Point(35, 401);
+            this.lblCriarConta.Location = new System.Drawing.Point(35, 400);
             this.lblCriarConta.Name = "lblCriarConta";
             this.lblCriarConta.Size = new System.Drawing.Size(151, 18);
             this.lblCriarConta.TabIndex = 8;
@@ -190,11 +190,11 @@
             // lblAvalia
             // 
             this.lblAvalia.AutoSize = true;
-            this.lblAvalia.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAvalia.Font = new System.Drawing.Font("Imprint MT Shadow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAvalia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblAvalia.Location = new System.Drawing.Point(127, 41);
+            this.lblAvalia.Location = new System.Drawing.Point(127, 42);
             this.lblAvalia.Name = "lblAvalia";
-            this.lblAvalia.Size = new System.Drawing.Size(94, 30);
+            this.lblAvalia.Size = new System.Drawing.Size(94, 28);
             this.lblAvalia.TabIndex = 0;
             this.lblAvalia.Text = "Áurea+";
             // 

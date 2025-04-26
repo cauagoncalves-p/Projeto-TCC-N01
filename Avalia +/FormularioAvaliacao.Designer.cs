@@ -552,11 +552,11 @@
             // txtDriConsulta
             // 
             this.txtDriConsulta.AutoSize = true;
-            this.txtDriConsulta.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDriConsulta.Font = new System.Drawing.Font("Imprint MT Shadow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDriConsulta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.txtDriConsulta.Location = new System.Drawing.Point(26, 27);
             this.txtDriConsulta.Name = "txtDriConsulta";
-            this.txtDriConsulta.Size = new System.Drawing.Size(82, 24);
+            this.txtDriConsulta.Size = new System.Drawing.Size(94, 28);
             this.txtDriConsulta.TabIndex = 14;
             this.txtDriConsulta.Text = "Áurea+";
             // 

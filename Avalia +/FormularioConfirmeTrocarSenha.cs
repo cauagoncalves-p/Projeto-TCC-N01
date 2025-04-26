@@ -43,15 +43,7 @@ namespace Avalia__
 
         private string emailUsuario;
         private string emailMedico;
-        private void MudarFonte()
-        {
-            lblAvalia.Font = new Font("Segoe UI", 14, FontStyle.Bold);
-            lblNovaSenha.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-            btnConfirmar.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-            lblConfirmeNovaSenha.Font = new Font("Inter", 10, FontStyle.Bold);
-            txtNovaSenha.Font = new Font("Segoe UI", 14, FontStyle.Bold);
-            txtConfirmeSenha.Font = new Font("Segoe UI", 14, FontStyle.Bold);
-        }
+     
 
         private void AvaliarForcaSenha(string senha)
         {
@@ -96,7 +88,6 @@ namespace Avalia__
         public FormularioConfirmeTrocarSenha(string email, string emailM)
         {
             InitializeComponent();
-            MudarFonte();
             emailUsuario = email;
             emailMedico = emailM;
 

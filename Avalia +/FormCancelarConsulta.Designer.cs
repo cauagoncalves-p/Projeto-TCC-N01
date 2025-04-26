@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCancelarConsulta));
             this.panelCancelarConsulta = new System.Windows.Forms.Panel();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.dgvCancelar = new System.Windows.Forms.DataGridView();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.lblsubtitulo = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
@@ -49,6 +49,16 @@
             this.panelCancelarConsulta.Size = new System.Drawing.Size(868, 361);
             this.panelCancelarConsulta.TabIndex = 0;
             // 
+            // dgvCancelar
+            // 
+            this.dgvCancelar.BackgroundColor = System.Drawing.Color.White;
+            this.dgvCancelar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCancelar.Location = new System.Drawing.Point(0, 0);
+            this.dgvCancelar.Name = "dgvCancelar";
+            this.dgvCancelar.Size = new System.Drawing.Size(877, 365);
+            this.dgvCancelar.TabIndex = 0;
+            this.dgvCancelar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCancelar_CellClick);
+            // 
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(165)))), ((int)(((byte)(166)))));
@@ -63,16 +73,6 @@
             this.btnCancelar.Text = "Cancelar consulta selecionada";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // dgvCancelar
-            // 
-            this.dgvCancelar.BackgroundColor = System.Drawing.Color.White;
-            this.dgvCancelar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCancelar.Location = new System.Drawing.Point(0, 0);
-            this.dgvCancelar.Name = "dgvCancelar";
-            this.dgvCancelar.Size = new System.Drawing.Size(877, 365);
-            this.dgvCancelar.TabIndex = 0;
-            this.dgvCancelar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCancelar_CellClick);
             // 
             // btnSair
             // 
@@ -105,13 +105,13 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitulo.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
+            this.lblTitulo.Font = new System.Drawing.Font("Imprint MT Shadow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lblTitulo.Location = new System.Drawing.Point(71, 42);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(62, 25);
+            this.lblTitulo.Size = new System.Drawing.Size(94, 28);
             this.lblTitulo.TabIndex = 13;
-            this.lblTitulo.Text = "Aurea";
+            this.lblTitulo.Text = "Áurea+";
             // 
             // panelbtnCancelar
             // 

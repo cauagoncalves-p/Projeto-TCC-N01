@@ -250,11 +250,11 @@
             // lblAvalia
             // 
             this.lblAvalia.AutoSize = true;
-            this.lblAvalia.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAvalia.Font = new System.Drawing.Font("Imprint MT Shadow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAvalia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lblAvalia.Location = new System.Drawing.Point(40, 25);
             this.lblAvalia.Name = "lblAvalia";
-            this.lblAvalia.Size = new System.Drawing.Size(94, 30);
+            this.lblAvalia.Size = new System.Drawing.Size(94, 28);
             this.lblAvalia.TabIndex = 25;
             this.lblAvalia.Text = "Áurea+";
             // 
@@ -263,7 +263,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1001, 561);
+            this.ClientSize = new System.Drawing.Size(1018, 561);
             this.Controls.Add(this.panelbackground);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
