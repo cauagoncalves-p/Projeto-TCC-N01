@@ -55,9 +55,9 @@
             this.panelVerificaCPF.Controls.Add(this.lblCPF);
             this.panelVerificaCPF.Controls.Add(this.lblVerifica);
             this.panelVerificaCPF.Controls.Add(this.lblAvalia);
-            this.panelVerificaCPF.Location = new System.Drawing.Point(333, 69);
+            this.panelVerificaCPF.Location = new System.Drawing.Point(333, 79);
             this.panelVerificaCPF.Name = "panelVerificaCPF";
-            this.panelVerificaCPF.Size = new System.Drawing.Size(335, 403);
+            this.panelVerificaCPF.Size = new System.Drawing.Size(335, 393);
             this.panelVerificaCPF.TabIndex = 1;
             // 
             // mktCPF
@@ -75,7 +75,7 @@
             this.btnSair.FlatAppearance.BorderSize = 0;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
-            this.btnSair.Location = new System.Drawing.Point(267, 12);
+            this.btnSair.Location = new System.Drawing.Point(267, 16);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(50, 43);
             this.btnSair.TabIndex = 11;
@@ -116,7 +116,7 @@
             this.btnContinuar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnContinuar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnContinuar.ForeColor = System.Drawing.Color.White;
-            this.btnContinuar.Location = new System.Drawing.Point(39, 291);
+            this.btnContinuar.Location = new System.Drawing.Point(39, 290);
             this.btnContinuar.Name = "btnContinuar";
             this.btnContinuar.Size = new System.Drawing.Size(257, 44);
             this.btnContinuar.TabIndex = 7;
@@ -171,11 +171,11 @@
             // lblAvalia
             // 
             this.lblAvalia.AutoSize = true;
-            this.lblAvalia.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAvalia.Font = new System.Drawing.Font("Imprint MT Shadow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAvalia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblAvalia.Location = new System.Drawing.Point(127, 44);
+            this.lblAvalia.Location = new System.Drawing.Point(122, 49);
             this.lblAvalia.Name = "lblAvalia";
-            this.lblAvalia.Size = new System.Drawing.Size(94, 30);
+            this.lblAvalia.Size = new System.Drawing.Size(94, 28);
             this.lblAvalia.TabIndex = 0;
             this.lblAvalia.Text = "Áurea+";
             // 

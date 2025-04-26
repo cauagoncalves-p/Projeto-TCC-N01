@@ -265,7 +265,7 @@
             this.lblAvaliacao1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
             this.lblAvaliacao1.Location = new System.Drawing.Point(6, 50);
             this.lblAvaliacao1.Name = "lblAvaliacao1";
-            this.lblAvaliacao1.Size = new System.Drawing.Size(111, 16);
+            this.lblAvaliacao1.Size = new System.Drawing.Size(109, 16);
             this.lblAvaliacao1.TabIndex = 14;
             this.lblAvaliacao1.Text = " dos pacientes";
             // 
@@ -321,7 +321,7 @@
             this.lblAvaliacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
             this.lblAvaliacao.Location = new System.Drawing.Point(12, 32);
             this.lblAvaliacao.Name = "lblAvaliacao";
-            this.lblAvaliacao.Size = new System.Drawing.Size(86, 16);
+            this.lblAvaliacao.Size = new System.Drawing.Size(85, 16);
             this.lblAvaliacao.TabIndex = 8;
             this.lblAvaliacao.Text = "Avaliações";
             // 
@@ -356,11 +356,11 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitulo.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Font = new System.Drawing.Font("Imprint MT Shadow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblTitulo.Location = new System.Drawing.Point(67, 39);
+            this.lblTitulo.Location = new System.Drawing.Point(61, 39);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(82, 24);
+            this.lblTitulo.Size = new System.Drawing.Size(94, 28);
             this.lblTitulo.TabIndex = 13;
             this.lblTitulo.Text = "Áurea+";
             // 
