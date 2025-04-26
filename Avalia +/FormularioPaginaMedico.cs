@@ -51,6 +51,30 @@ namespace Avalia__
                         .ToList();
 
                     dgvConsultasMedico.DataSource = consultas;
+
+                    // Numero de consultas que o medico tem
+                    int totalConsultas = consultaAdapter.GetData()
+                    .Count(c => c.IdMedico == _idMedico);
+
+                    lblTotalConsultas.Text = totalConsultas.ToString();
+
+                    //numeros de consultas pendentes
+                    int totalAgendadas = consultaAdapter.GetData()
+                    .Count(c => c.IdMedico == _idMedico && c.StatusConsulta == "Agendada");
+
+                    lblTotalPendentes.Text = totalAgendadas.ToString();
+
+                    //numeros de consultas realizadas
+                    int totalRealizadas = consultaAdapter.GetData()
+                    .Count(c => c.IdMedico == _idMedico && c.StatusConsulta == "Realizada");
+
+                    lblTotalRealizadas.Text = totalRealizadas.ToString();
+
+                    //numeros de consultas urgentes
+                    int totalUrgentes = consultaAdapter.GetData()
+                    .Count(c => c.IdMedico == _idMedico && c.StatusConsulta == "Urgente");
+
+                    lblTotalUrgencia.Text = totalUrgentes.ToString();
                 }
             }
             catch (Exception ex)
@@ -63,8 +87,9 @@ namespace Avalia__
         public FormularioPaginaMedico(int idMedico, string emailMedico)
         {
             InitializeComponent();
-            ConfigurarDataGridView();
+            _idMedico = idMedico;
             CarregarConsultasDoMedico();
+            ConfigurarDataGridView();
             AjustarColunasDataGridView();
             RadiusButton controlador = new RadiusButton();
             controlador.ConfigInicial(this, panel1, btnSair, 25, Color.White);
@@ -73,8 +98,12 @@ namespace Avalia__
             controlador.ConfigInicial(this, panel4, btnSair, 25, Color.White);
             controlador.ConfigInicial(this, panel5, btnSair, 25, Color.White);
             controlador.ConfigInicial(this, panel6, btnSair, 25, Color.White);
-            _idMedico = idMedico;
+
+           
+
         }
+
+      
 
         private void FormularioPaginaMedico_Paint(object sender, PaintEventArgs e)
         {
@@ -199,5 +228,7 @@ namespace Avalia__
             dgvConsultasMedico.Columns[dgvConsultasMedico.Columns.Count - 1].AutoSizeMode =
                 DataGridViewAutoSizeColumnMode.Fill;
         }
+
+        
     }
 }
