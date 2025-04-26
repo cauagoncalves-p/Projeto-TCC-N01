@@ -143,7 +143,7 @@
             this.lblTrocarSenha.AutoSize = true;
             this.lblTrocarSenha.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTrocarSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblTrocarSenha.Location = new System.Drawing.Point(104, 84);
+            this.lblTrocarSenha.Location = new System.Drawing.Point(104, 86);
             this.lblTrocarSenha.Name = "lblTrocarSenha";
             this.lblTrocarSenha.Size = new System.Drawing.Size(136, 22);
             this.lblTrocarSenha.TabIndex = 1;
