@@ -232,7 +232,7 @@
             this.lblRealizadas.Size = new System.Drawing.Size(88, 19);
             this.lblRealizadas.TabIndex = 4;
             this.lblRealizadas.Text = "Realizadas";
-            this.lblRealizadas.Click += new System.EventHandler(this.lblRealizadas_Click);
+         
             // 
             // panel4
             // 
@@ -334,8 +334,6 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(367, 416);
             this.panel6.TabIndex = 2;
-            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
-            // 
             // pcbxEstrela
             // 
             this.pcbxEstrela.Image = ((System.Drawing.Image)(resources.GetObject("pcbxEstrela.Image")));
@@ -682,7 +680,7 @@
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox16.TabIndex = 38;
             this.pictureBox16.TabStop = false;
-            this.pictureBox16.Click += new System.EventHandler(this.pictureBox16_Click);
+          
             // 
             // pictureBox17
             // 
@@ -694,8 +692,6 @@
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox17.TabIndex = 37;
             this.pictureBox17.TabStop = false;
-            this.pictureBox17.Click += new System.EventHandler(this.pictureBox17_Click);
-            // 
             // pictureBox18
             // 
             this.pictureBox18.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox18.Image")));
@@ -706,7 +702,7 @@
             this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox18.TabIndex = 36;
             this.pictureBox18.TabStop = false;
-            this.pictureBox18.Click += new System.EventHandler(this.pictureBox18_Click);
+            
             // 
             // pictureBox19
             // 
@@ -718,8 +714,7 @@
             this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox19.TabIndex = 35;
             this.pictureBox19.TabStop = false;
-            this.pictureBox19.Click += new System.EventHandler(this.pictureBox19_Click);
-            // 
+          
             // pictureBox20
             // 
             this.pictureBox20.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox20.Image")));
@@ -730,7 +725,7 @@
             this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox20.TabIndex = 34;
             this.pictureBox20.TabStop = false;
-            this.pictureBox20.Click += new System.EventHandler(this.pictureBox20_Click);
+           
             // 
             // pictureBox21
             // 

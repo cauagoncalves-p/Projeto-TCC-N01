@@ -136,9 +136,6 @@ namespace Avalia__
            
 
         }
-
-      
-
         private void FormularioPaginaMedico_Paint(object sender, PaintEventArgs e)
         {
             //Cor de fundo da tela 
@@ -261,41 +258,6 @@ namespace Avalia__
             // Última coluna preenchendo espaço restante
             dgvConsultasMedico.Columns[dgvConsultasMedico.Columns.Count - 1].AutoSizeMode =
                 DataGridViewAutoSizeColumnMode.Fill;
-        }
-
-        private void panel6_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox19_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox20_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox16_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox17_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox18_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblRealizadas_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

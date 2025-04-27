@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Avalia__.RadiusButton;
 
 namespace Avalia__
 {
@@ -25,8 +26,12 @@ namespace Avalia__
 
             RadiusButton controlador = new RadiusButton();
             controlador.ConfigInicial(this, panelbackground, btnSair, 25, Color.White);
+            controlador.ConfigInicial(this, panel1, btnSair, 25, Color.White);
+            controlador.ConfigInicial(this, panel2, btnSair, 25, Color.White);
             controlador.ConfigInicial(this, panelConsultas, btnSair, 25, ColorTranslator.FromHtml("#F0E4DC"));
             controlador.ConfigInicial(this, panelHeader, btnSair, 20, ColorTranslator.FromHtml("#c97c63"));
+            UIHelper.ArredondarBotao(btnDetalhes, 25);
+            UIHelper.ArredondarBotao(btnLembrar, 25);
 
         }
 
