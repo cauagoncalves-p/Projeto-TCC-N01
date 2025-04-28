@@ -18,6 +18,7 @@ namespace Avalia__
         private void CarregarConsultasDoMedico()
         {
             try
+
             {
                 using (var consultaAdapter = new tbConsultaTableAdapter())
                 using (var usuarioAdapter = new tbUsuarioTableAdapter())

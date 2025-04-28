@@ -140,6 +140,7 @@
             this.btnManterConsulta.TabIndex = 14;
             this.btnManterConsulta.Text = "Manter consulta";
             this.btnManterConsulta.UseVisualStyleBackColor = false;
+            this.btnManterConsulta.Click += new System.EventHandler(this.btnManterConsulta_Click);
             // 
             // textBox1
             // 
@@ -216,9 +217,9 @@
             this.lblInfoObservacao.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInfoObservacao.Location = new System.Drawing.Point(509, 136);
             this.lblInfoObservacao.Name = "lblInfoObservacao";
-            this.lblInfoObservacao.Size = new System.Drawing.Size(17, 18);
+            this.lblInfoObservacao.Size = new System.Drawing.Size(90, 18);
             this.lblInfoObservacao.TabIndex = 7;
-            this.lblInfoObservacao.Text = "o";
+            this.lblInfoObservacao.Text = "observação";
             // 
             // lblObservacoes
             // 
@@ -237,9 +238,9 @@
             this.lblInfoHoraData.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInfoHoraData.Location = new System.Drawing.Point(509, 63);
             this.lblInfoHoraData.Name = "lblInfoHoraData";
-            this.lblInfoHoraData.Size = new System.Drawing.Size(17, 18);
+            this.lblInfoHoraData.Size = new System.Drawing.Size(83, 18);
             this.lblInfoHoraData.TabIndex = 5;
-            this.lblInfoHoraData.Text = "o";
+            this.lblInfoHoraData.Text = "data - hora";
             // 
             // lblDataHora
             // 
@@ -258,9 +259,9 @@
             this.lblInfoLocal.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInfoLocal.Location = new System.Drawing.Point(39, 136);
             this.lblInfoLocal.Name = "lblInfoLocal";
-            this.lblInfoLocal.Size = new System.Drawing.Size(17, 18);
+            this.lblInfoLocal.Size = new System.Drawing.Size(74, 18);
             this.lblInfoLocal.TabIndex = 3;
-            this.lblInfoLocal.Text = "o";
+            this.lblInfoLocal.Text = "endereço";
             // 
             // lblLocal
             // 
@@ -279,9 +280,9 @@
             this.lblInfoMedico.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInfoMedico.Location = new System.Drawing.Point(39, 63);
             this.lblInfoMedico.Name = "lblInfoMedico";
-            this.lblInfoMedico.Size = new System.Drawing.Size(17, 18);
+            this.lblInfoMedico.Size = new System.Drawing.Size(60, 18);
             this.lblInfoMedico.TabIndex = 1;
-            this.lblInfoMedico.Text = "o";
+            this.lblInfoMedico.Text = "medico";
             // 
             // lblMedica
             // 

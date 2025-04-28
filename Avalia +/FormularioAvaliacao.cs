@@ -116,7 +116,7 @@ namespace Avalia__
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void btnSair_Click(object sender, EventArgs e)

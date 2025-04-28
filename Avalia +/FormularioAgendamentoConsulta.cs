@@ -184,5 +184,10 @@ namespace Avalia__
             ConfiguracaoTelas configuracaoTelas = new ConfiguracaoTelas();
             configuracaoTelas.FecharAba(this);
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();  
+        }
     }
 }

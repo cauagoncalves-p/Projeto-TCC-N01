@@ -1,4 +1,5 @@
 ﻿using Avalia__.AureaMaxDataSetTableAdapters;
+using Avalia__.Controles;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,13 @@ namespace Avalia__
     public partial class frmConfirmarCancelamento: Form
     {
         private string _data, _medico, _motivo, _status, _observacoes, _local;
+        Mensagem_do_sistema mensagem_Do_Sistema = new Mensagem_do_sistema();
+        private void btnManterConsulta_Click(object sender, EventArgs e)
+        {
+            mensagem_Do_Sistema.MensagemInformation("Sua consulta continuara agendada!");
+            this.Close();   
+        }
+
         int _idConsulta;
 
         /*
@@ -29,7 +37,7 @@ namespace Avalia__
             {
                 using (var consultaAdapter = new tbConsultaTableAdapter())
                 {
-                    consultaAdapter.AtualizarStatusConsulta("Cancelada", _idConsulta); // você precisa ter esse método!
+                    consultaAdapter.AtualizarStatusConsulta("Cancelada", _idConsulta); 
                 }
 
                 MessageBox.Show("Consulta cancelada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);

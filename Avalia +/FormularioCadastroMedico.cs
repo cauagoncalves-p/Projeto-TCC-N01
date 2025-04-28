@@ -351,5 +351,10 @@ namespace Avalia__
             // Reativa o evento
             txtCRM.TextChanged += txtCRM_TextChanged;
         }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -3682,7 +3682,7 @@ SELECT IdAvaliacao, IdConsulta, Nota, Comentario FROM tbAvaliacao WHERE (IdAvali
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Avalia__.Properties.Settings.Default.AureaMaxConnectionString3;
+            this._connection.ConnectionString = global::Avalia__.Properties.Settings.Default.AureaMaxConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4039,7 +4039,7 @@ SELECT IdConsulta, Id_usuario, IdMedico, DataConsulta, Motivo, StatusConsulta, O
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Avalia__.Properties.Settings.Default.AureaMaxConnectionString3;
+            this._connection.ConnectionString = global::Avalia__.Properties.Settings.Default.AureaMaxConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4508,7 +4508,7 @@ SELECT IdInstituicao, NomeInstituicao, CNPJ, TipoInstituicao, Telefone, Email, E
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Avalia__.Properties.Settings.Default.AureaMaxConnectionString3;
+            this._connection.ConnectionString = global::Avalia__.Properties.Settings.Default.AureaMaxConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5120,7 +5120,7 @@ SELECT IdMedico, Nome, Sobrenome, CRM, Sexo, Especialidade, Cidade, Estado, Ende
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Avalia__.Properties.Settings.Default.AureaMaxConnectionString3;
+            this._connection.ConnectionString = global::Avalia__.Properties.Settings.Default.AureaMaxConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5836,7 +5836,7 @@ SELECT Id_usuario, Nome, Sobrenome, Data_Nascimento, CPF, Sexo, Telefone, Genero
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Avalia__.Properties.Settings.Default.AureaMaxConnectionString3;
+            this._connection.ConnectionString = global::Avalia__.Properties.Settings.Default.AureaMaxConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
