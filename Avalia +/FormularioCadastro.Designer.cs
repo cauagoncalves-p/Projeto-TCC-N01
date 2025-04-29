@@ -125,7 +125,7 @@
             this.lblConfirmeSenha.AutoSize = true;
             this.lblConfirmeSenha.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConfirmeSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblConfirmeSenha.Location = new System.Drawing.Point(344, 335);
+            this.lblConfirmeSenha.Location = new System.Drawing.Point(347, 335);
             this.lblConfirmeSenha.Name = "lblConfirmeSenha";
             this.lblConfirmeSenha.Size = new System.Drawing.Size(160, 18);
             this.lblConfirmeSenha.TabIndex = 36;
@@ -355,11 +355,11 @@
             // lblCompletecadastro
             // 
             this.lblCompletecadastro.AutoSize = true;
-            this.lblCompletecadastro.Font = new System.Drawing.Font("Arial", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCompletecadastro.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompletecadastro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblCompletecadastro.Location = new System.Drawing.Point(267, 60);
+            this.lblCompletecadastro.Location = new System.Drawing.Point(243, 64);
             this.lblCompletecadastro.Name = "lblCompletecadastro";
-            this.lblCompletecadastro.Size = new System.Drawing.Size(244, 24);
+            this.lblCompletecadastro.Size = new System.Drawing.Size(196, 29);
             this.lblCompletecadastro.TabIndex = 1;
             this.lblCompletecadastro.Text = "Complete seu cadastro";
             // 
@@ -383,11 +383,11 @@
             // lblAvaliaCadastro
             // 
             this.lblAvaliaCadastro.AutoSize = true;
-            this.lblAvaliaCadastro.Font = new System.Drawing.Font("Imprint MT Shadow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAvaliaCadastro.Font = new System.Drawing.Font("Lucida Calligraphy", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAvaliaCadastro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblAvaliaCadastro.Location = new System.Drawing.Point(324, 31);
+            this.lblAvaliaCadastro.Location = new System.Drawing.Point(280, 33);
             this.lblAvaliaCadastro.Name = "lblAvaliaCadastro";
-            this.lblAvaliaCadastro.Size = new System.Drawing.Size(94, 28);
+            this.lblAvaliaCadastro.Size = new System.Drawing.Size(118, 31);
             this.lblAvaliaCadastro.TabIndex = 0;
             this.lblAvaliaCadastro.Text = "Áurea+";
             // 
@@ -416,7 +416,7 @@
             this.lblTelefone.AutoSize = true;
             this.lblTelefone.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTelefone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblTelefone.Location = new System.Drawing.Point(338, 260);
+            this.lblTelefone.Location = new System.Drawing.Point(343, 267);
             this.lblTelefone.Name = "lblTelefone";
             this.lblTelefone.Size = new System.Drawing.Size(66, 18);
             this.lblTelefone.TabIndex = 15;
@@ -497,7 +497,7 @@
             this.lblDataNascimento.AutoSize = true;
             this.lblDataNascimento.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDataNascimento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblDataNascimento.Location = new System.Drawing.Point(30, 260);
+            this.lblDataNascimento.Location = new System.Drawing.Point(30, 267);
             this.lblDataNascimento.Name = "lblDataNascimento";
             this.lblDataNascimento.Size = new System.Drawing.Size(151, 18);
             this.lblDataNascimento.TabIndex = 4;
@@ -508,7 +508,7 @@
             this.lblSobrenome.AutoSize = true;
             this.lblSobrenome.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSobrenome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblSobrenome.Location = new System.Drawing.Point(343, 113);
+            this.lblSobrenome.Location = new System.Drawing.Point(343, 115);
             this.lblSobrenome.Name = "lblSobrenome";
             this.lblSobrenome.Size = new System.Drawing.Size(90, 18);
             this.lblSobrenome.TabIndex = 3;
@@ -519,7 +519,7 @@
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblNome.Location = new System.Drawing.Point(31, 113);
+            this.lblNome.Location = new System.Drawing.Point(31, 114);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(50, 18);
             this.lblNome.TabIndex = 2;

@@ -461,9 +461,9 @@
             this.btnCancelarAvaliacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(164)))), ((int)(((byte)(143)))));
             this.btnCancelarAvaliacao.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelarAvaliacao.ForeColor = System.Drawing.Color.White;
-            this.btnCancelarAvaliacao.Location = new System.Drawing.Point(572, 575);
+            this.btnCancelarAvaliacao.Location = new System.Drawing.Point(532, 565);
             this.btnCancelarAvaliacao.Name = "btnCancelarAvaliacao";
-            this.btnCancelarAvaliacao.Size = new System.Drawing.Size(121, 45);
+            this.btnCancelarAvaliacao.Size = new System.Drawing.Size(139, 50);
             this.btnCancelarAvaliacao.TabIndex = 28;
             this.btnCancelarAvaliacao.Text = "Cancelar";
             this.btnCancelarAvaliacao.UseVisualStyleBackColor = false;
@@ -540,11 +540,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Arial", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.label2.Location = new System.Drawing.Point(27, 92);
+            this.label2.Location = new System.Drawing.Point(27, 91);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(189, 22);
+            this.label2.Size = new System.Drawing.Size(171, 29);
             this.label2.TabIndex = 15;
             this.label2.Text = "Avalie sua consulta";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -552,11 +552,11 @@
             // txtDriConsulta
             // 
             this.txtDriConsulta.AutoSize = true;
-            this.txtDriConsulta.Font = new System.Drawing.Font("Imprint MT Shadow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDriConsulta.Font = new System.Drawing.Font("Lucida Calligraphy", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDriConsulta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.txtDriConsulta.Location = new System.Drawing.Point(26, 27);
             this.txtDriConsulta.Name = "txtDriConsulta";
-            this.txtDriConsulta.Size = new System.Drawing.Size(94, 28);
+            this.txtDriConsulta.Size = new System.Drawing.Size(118, 31);
             this.txtDriConsulta.TabIndex = 14;
             this.txtDriConsulta.Text = "Áurea+";
             // 
@@ -565,9 +565,9 @@
             this.btnEnviarAvaliacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(164)))), ((int)(((byte)(143)))));
             this.btnEnviarAvaliacao.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnviarAvaliacao.ForeColor = System.Drawing.Color.White;
-            this.btnEnviarAvaliacao.Location = new System.Drawing.Point(734, 575);
+            this.btnEnviarAvaliacao.Location = new System.Drawing.Point(707, 565);
             this.btnEnviarAvaliacao.Name = "btnEnviarAvaliacao";
-            this.btnEnviarAvaliacao.Size = new System.Drawing.Size(121, 45);
+            this.btnEnviarAvaliacao.Size = new System.Drawing.Size(139, 50);
             this.btnEnviarAvaliacao.TabIndex = 13;
             this.btnEnviarAvaliacao.Text = "Enviar";
             this.btnEnviarAvaliacao.UseVisualStyleBackColor = false;

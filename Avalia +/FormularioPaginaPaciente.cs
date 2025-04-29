@@ -47,12 +47,10 @@ namespace Avalia__
             formularioAgendamento.ShowDialog();
 
         }
-
         private void btnAvaliarconsulta_Click(object sender, EventArgs e)
         {
             
         }
-
         private void btnHistoricomedico_Click(object sender, EventArgs e)
         {
             FormularioConsultasAgendadas formularioConsultasAgendadas = new FormularioConsultasAgendadas(idUsuario);
@@ -65,6 +63,10 @@ namespace Avalia__
             formCancelarConsulta.ShowDialog();
         }
 
-        
+        private void FormularioPaginaPaciente_Paint(object sender, PaintEventArgs e)
+        {
+            //Cor de fundo da tela 
+            ConfiguracaoTelas.PintarGradiente(this, e, "#f5e6d3", "#fdf6f0");
+        }
     }
 }
