@@ -479,11 +479,11 @@
             // lblAvaliaCadastro
             // 
             this.lblAvaliaCadastro.AutoSize = true;
-            this.lblAvaliaCadastro.Font = new System.Drawing.Font("Imprint MT Shadow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAvaliaCadastro.Font = new System.Drawing.Font("Lucida Calligraphy", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAvaliaCadastro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblAvaliaCadastro.Location = new System.Drawing.Point(309, 31);
+            this.lblAvaliaCadastro.Location = new System.Drawing.Point(310, 31);
             this.lblAvaliaCadastro.Name = "lblAvaliaCadastro";
-            this.lblAvaliaCadastro.Size = new System.Drawing.Size(94, 28);
+            this.lblAvaliaCadastro.Size = new System.Drawing.Size(118, 31);
             this.lblAvaliaCadastro.TabIndex = 0;
             this.lblAvaliaCadastro.Text = "Áurea+";
             // 

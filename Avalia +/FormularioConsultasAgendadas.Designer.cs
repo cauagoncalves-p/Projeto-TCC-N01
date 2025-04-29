@@ -46,10 +46,10 @@
             // 
             this.lblHistoricoConsulta.AutoSize = true;
             this.lblHistoricoConsulta.BackColor = System.Drawing.Color.Transparent;
-            this.lblHistoricoConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHistoricoConsulta.Location = new System.Drawing.Point(55, 76);
+            this.lblHistoricoConsulta.Font = new System.Drawing.Font("Bell MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHistoricoConsulta.Location = new System.Drawing.Point(114, 64);
             this.lblHistoricoConsulta.Name = "lblHistoricoConsulta";
-            this.lblHistoricoConsulta.Size = new System.Drawing.Size(174, 24);
+            this.lblHistoricoConsulta.Size = new System.Drawing.Size(174, 25);
             this.lblHistoricoConsulta.TabIndex = 1;
             this.lblHistoricoConsulta.Text = "Minhas Consultas";
             // 
@@ -117,11 +117,11 @@
             // 
             this.lbTitulo.AutoSize = true;
             this.lbTitulo.BackColor = System.Drawing.Color.Transparent;
-            this.lbTitulo.Font = new System.Drawing.Font("Imprint MT Shadow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitulo.Font = new System.Drawing.Font("Lucida Calligraphy", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lbTitulo.Location = new System.Drawing.Point(57, 33);
             this.lbTitulo.Name = "lbTitulo";
-            this.lbTitulo.Size = new System.Drawing.Size(94, 28);
+            this.lbTitulo.Size = new System.Drawing.Size(118, 31);
             this.lbTitulo.TabIndex = 6;
             this.lbTitulo.Text = "Áurea+";
             // 

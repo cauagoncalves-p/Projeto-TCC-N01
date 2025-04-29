@@ -75,5 +75,15 @@ namespace Avalia__
                 return;
             }
         }
+
+        private void lblAvalia_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormularioTrocarSenha_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
