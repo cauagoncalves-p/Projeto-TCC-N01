@@ -77,5 +77,10 @@ namespace Avalia__
                 mensagem_Do_Sistema.MensagemError("E-mail ou Senha incorretos");
             }
         }
+
+        private void FormularioLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

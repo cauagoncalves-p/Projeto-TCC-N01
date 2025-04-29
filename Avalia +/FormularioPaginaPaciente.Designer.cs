@@ -66,11 +66,11 @@
             // lblAvalia
             // 
             this.lblAvalia.AutoSize = true;
-            this.lblAvalia.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAvalia.Font = new System.Drawing.Font("Lucida Calligraphy", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAvalia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lblAvalia.Location = new System.Drawing.Point(40, 25);
             this.lblAvalia.Name = "lblAvalia";
-            this.lblAvalia.Size = new System.Drawing.Size(96, 29);
+            this.lblAvalia.Size = new System.Drawing.Size(118, 31);
             this.lblAvalia.TabIndex = 25;
             this.lblAvalia.Text = "Áurea+";
             // 
@@ -88,20 +88,22 @@
             // lblSubTitulo
             // 
             this.lblSubTitulo.AutoSize = true;
+            this.lblSubTitulo.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblSubTitulo.Location = new System.Drawing.Point(205, 57);
+            this.lblSubTitulo.Location = new System.Drawing.Point(219, 57);
             this.lblSubTitulo.Name = "lblSubTitulo";
-            this.lblSubTitulo.Size = new System.Drawing.Size(527, 24);
+            this.lblSubTitulo.Size = new System.Drawing.Size(443, 25);
             this.lblSubTitulo.TabIndex = 2;
             this.lblSubTitulo.Text = "Encontre os melhores especialistas e cuide do seu bem-estar";
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(314, 31);
+            this.lblTitulo.Location = new System.Drawing.Point(314, 24);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(253, 24);
+            this.lblTitulo.Size = new System.Drawing.Size(273, 33);
             this.lblTitulo.TabIndex = 2;
             this.lblTitulo.Text = "Sua saúde em primeiro lugar";
             // 

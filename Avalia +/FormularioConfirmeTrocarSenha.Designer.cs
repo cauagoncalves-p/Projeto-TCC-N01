@@ -82,7 +82,7 @@
             this.lblConfirmeNovaSenha.AutoSize = true;
             this.lblConfirmeNovaSenha.Font = new System.Drawing.Font("Arial", 13F);
             this.lblConfirmeNovaSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.lblConfirmeNovaSenha.Location = new System.Drawing.Point(35, 216);
+            this.lblConfirmeNovaSenha.Location = new System.Drawing.Point(36, 216);
             this.lblConfirmeNovaSenha.Name = "lblConfirmeNovaSenha";
             this.lblConfirmeNovaSenha.Size = new System.Drawing.Size(173, 21);
             this.lblConfirmeNovaSenha.TabIndex = 12;
@@ -132,7 +132,7 @@
             this.lblNovaSenha.AutoSize = true;
             this.lblNovaSenha.Font = new System.Drawing.Font("Arial", 13F);
             this.lblNovaSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.lblNovaSenha.Location = new System.Drawing.Point(39, 136);
+            this.lblNovaSenha.Location = new System.Drawing.Point(38, 136);
             this.lblNovaSenha.Name = "lblNovaSenha";
             this.lblNovaSenha.Size = new System.Drawing.Size(106, 21);
             this.lblNovaSenha.TabIndex = 2;
@@ -152,11 +152,11 @@
             // lblAvalia
             // 
             this.lblAvalia.AutoSize = true;
-            this.lblAvalia.Font = new System.Drawing.Font("Imprint MT Shadow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAvalia.Font = new System.Drawing.Font("Lucida Calligraphy", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAvalia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lblAvalia.Location = new System.Drawing.Point(128, 51);
             this.lblAvalia.Name = "lblAvalia";
-            this.lblAvalia.Size = new System.Drawing.Size(94, 28);
+            this.lblAvalia.Size = new System.Drawing.Size(118, 31);
             this.lblAvalia.TabIndex = 0;
             this.lblAvalia.Text = "Áurea+";
             // 

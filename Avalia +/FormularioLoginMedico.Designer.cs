@@ -57,10 +57,9 @@
             this.panelLogin.Controls.Add(this.lblcrm);
             this.panelLogin.Controls.Add(this.lblLogin);
             this.panelLogin.Controls.Add(this.lblAvalia);
-            this.panelLogin.Location = new System.Drawing.Point(433, 55);
-            this.panelLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelLogin.Location = new System.Drawing.Point(325, 45);
             this.panelLogin.Name = "panelLogin";
-            this.panelLogin.Size = new System.Drawing.Size(447, 550);
+            this.panelLogin.Size = new System.Drawing.Size(335, 447);
             this.panelLogin.TabIndex = 1;
             // 
             // btnSair
@@ -70,10 +69,9 @@
             this.btnSair.FlatAppearance.BorderSize = 0;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
-            this.btnSair.Location = new System.Drawing.Point(361, 15);
-            this.btnSair.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSair.Location = new System.Drawing.Point(271, 12);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(67, 53);
+            this.btnSair.Size = new System.Drawing.Size(50, 43);
             this.btnSair.TabIndex = 5;
             this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSair.UseVisualStyleBackColor = false;
@@ -86,10 +84,9 @@
             this.lblEsqueceuSenha.Font = new System.Drawing.Font("Arial", 9F);
             this.lblEsqueceuSenha.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.lblEsqueceuSenha.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.lblEsqueceuSenha.Location = new System.Drawing.Point(219, 433);
-            this.lblEsqueceuSenha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEsqueceuSenha.Location = new System.Drawing.Point(164, 352);
             this.lblEsqueceuSenha.Name = "lblEsqueceuSenha";
-            this.lblEsqueceuSenha.Size = new System.Drawing.Size(158, 17);
+            this.lblEsqueceuSenha.Size = new System.Drawing.Size(135, 15);
             this.lblEsqueceuSenha.TabIndex = 3;
             this.lblEsqueceuSenha.TabStop = true;
             this.lblEsqueceuSenha.Text = "Esqueceu sua senha ?";
@@ -103,10 +100,9 @@
             this.lblLinkCriarConta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
             this.lblLinkCriarConta.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.lblLinkCriarConta.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.lblLinkCriarConta.Location = new System.Drawing.Point(241, 479);
-            this.lblLinkCriarConta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLinkCriarConta.Location = new System.Drawing.Point(181, 389);
             this.lblLinkCriarConta.Name = "lblLinkCriarConta";
-            this.lblLinkCriarConta.Size = new System.Drawing.Size(144, 22);
+            this.lblLinkCriarConta.Size = new System.Drawing.Size(112, 17);
             this.lblLinkCriarConta.TabIndex = 4;
             this.lblLinkCriarConta.TabStop = true;
             this.lblLinkCriarConta.Text = "Solicitar acesso";
@@ -117,10 +113,9 @@
             this.lblCriarConta.AutoSize = true;
             this.lblCriarConta.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCriarConta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.lblCriarConta.Location = new System.Drawing.Point(48, 479);
-            this.lblCriarConta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCriarConta.Location = new System.Drawing.Point(36, 389);
             this.lblCriarConta.Name = "lblCriarConta";
-            this.lblCriarConta.Size = new System.Drawing.Size(189, 22);
+            this.lblCriarConta.Size = new System.Drawing.Size(148, 17);
             this.lblCriarConta.TabIndex = 8;
             this.lblCriarConta.Text = "Não tem uma conta? ";
             // 
@@ -130,10 +125,9 @@
             this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEntrar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntrar.ForeColor = System.Drawing.Color.White;
-            this.btnEntrar.Location = new System.Drawing.Point(49, 370);
-            this.btnEntrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEntrar.Location = new System.Drawing.Point(37, 301);
             this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(345, 54);
+            this.btnEntrar.Size = new System.Drawing.Size(259, 44);
             this.btnEntrar.TabIndex = 2;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = false;
@@ -141,13 +135,12 @@
             // 
             // txtSenhaLogin
             // 
-            this.txtSenhaLogin.Location = new System.Drawing.Point(52, 290);
-            this.txtSenhaLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSenhaLogin.Location = new System.Drawing.Point(39, 236);
             this.txtSenhaLogin.MaxLength = 50;
             this.txtSenhaLogin.Multiline = true;
             this.txtSenhaLogin.Name = "txtSenhaLogin";
             this.txtSenhaLogin.PasswordChar = '*';
-            this.txtSenhaLogin.Size = new System.Drawing.Size(341, 48);
+            this.txtSenhaLogin.Size = new System.Drawing.Size(257, 40);
             this.txtSenhaLogin.TabIndex = 1;
             // 
             // lblSenha
@@ -155,21 +148,19 @@
             this.lblSenha.AutoSize = true;
             this.lblSenha.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.lblSenha.Location = new System.Drawing.Point(48, 263);
-            this.lblSenha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSenha.Location = new System.Drawing.Point(36, 214);
             this.lblSenha.Name = "lblSenha";
-            this.lblSenha.Size = new System.Drawing.Size(65, 23);
+            this.lblSenha.Size = new System.Drawing.Size(53, 18);
             this.lblSenha.TabIndex = 4;
             this.lblSenha.Text = "Senha";
             // 
             // txtCRMLogin
             // 
-            this.txtCRMLogin.Location = new System.Drawing.Point(52, 182);
-            this.txtCRMLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCRMLogin.Location = new System.Drawing.Point(39, 148);
             this.txtCRMLogin.MaxLength = 13;
             this.txtCRMLogin.Multiline = true;
             this.txtCRMLogin.Name = "txtCRMLogin";
-            this.txtCRMLogin.Size = new System.Drawing.Size(341, 48);
+            this.txtCRMLogin.Size = new System.Drawing.Size(257, 40);
             this.txtCRMLogin.TabIndex = 0;
             this.txtCRMLogin.TextChanged += new System.EventHandler(this.txtCRMLogin_TextChanged);
             // 
@@ -178,44 +169,40 @@
             this.lblcrm.AutoSize = true;
             this.lblcrm.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblcrm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.lblcrm.Location = new System.Drawing.Point(48, 155);
-            this.lblcrm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblcrm.Location = new System.Drawing.Point(36, 126);
             this.lblcrm.Name = "lblcrm";
-            this.lblcrm.Size = new System.Drawing.Size(55, 23);
+            this.lblcrm.Size = new System.Drawing.Size(44, 18);
             this.lblcrm.TabIndex = 2;
             this.lblcrm.Text = "CRM";
             // 
             // lblLogin
             // 
             this.lblLogin.AutoSize = true;
-            this.lblLogin.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
+            this.lblLogin.Font = new System.Drawing.Font("Bell MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblLogin.Location = new System.Drawing.Point(140, 95);
-            this.lblLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLogin.Location = new System.Drawing.Point(105, 77);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(159, 26);
+            this.lblLogin.Size = new System.Drawing.Size(143, 25);
             this.lblLogin.TabIndex = 1;
             this.lblLogin.Text = "Faça seu login";
             // 
             // lblAvalia
             // 
             this.lblAvalia.AutoSize = true;
-            this.lblAvalia.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAvalia.Font = new System.Drawing.Font("Lucida Calligraphy", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAvalia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblAvalia.Location = new System.Drawing.Point(167, 58);
-            this.lblAvalia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAvalia.Location = new System.Drawing.Point(103, 46);
             this.lblAvalia.Name = "lblAvalia";
-            this.lblAvalia.Size = new System.Drawing.Size(118, 36);
+            this.lblAvalia.Size = new System.Drawing.Size(118, 31);
             this.lblAvalia.TabIndex = 0;
             this.lblAvalia.Text = "Áurea+";
             // 
             // FormularioLoginMedico
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1312, 690);
+            this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.panelLogin);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormularioLoginMedico";
