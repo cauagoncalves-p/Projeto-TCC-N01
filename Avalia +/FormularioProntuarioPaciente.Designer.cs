@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioProntuarioPaciente));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAtualizar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnFinalizarConsulta = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
@@ -57,7 +58,6 @@
             this.lblInfopaciente = new System.Windows.Forms.Label();
             this.lblPaciente = new System.Windows.Forms.Label();
             this.lblFeedback = new System.Windows.Forms.Label();
-            this.btnAtualizar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -89,6 +89,19 @@
             this.panel1.Size = new System.Drawing.Size(900, 868);
             this.panel1.TabIndex = 0;
             // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.BackColor = System.Drawing.Color.White;
+            this.btnAtualizar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(164)))), ((int)(((byte)(143)))));
+            this.btnAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtualizar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizar.Location = new System.Drawing.Point(491, 799);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(161, 48);
+            this.btnAtualizar.TabIndex = 40;
+            this.btnAtualizar.Text = "Atualizar ";
+            this.btnAtualizar.UseVisualStyleBackColor = false;
+            // 
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(215)))), ((int)(((byte)(218)))));
@@ -101,6 +114,7 @@
             this.btnCancelar.TabIndex = 39;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnFinalizarConsulta
             // 
@@ -108,7 +122,7 @@
             this.btnFinalizarConsulta.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(164)))), ((int)(((byte)(143)))));
             this.btnFinalizarConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFinalizarConsulta.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinalizarConsulta.Location = new System.Drawing.Point(680, 799);
+            this.btnFinalizarConsulta.Location = new System.Drawing.Point(677, 799);
             this.btnFinalizarConsulta.Name = "btnFinalizarConsulta";
             this.btnFinalizarConsulta.Size = new System.Drawing.Size(161, 48);
             this.btnFinalizarConsulta.TabIndex = 38;
@@ -146,6 +160,7 @@
             // 
             // txtInstrucaoReceita
             // 
+            this.txtInstrucaoReceita.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtInstrucaoReceita.Location = new System.Drawing.Point(18, 184);
             this.txtInstrucaoReceita.Multiline = true;
             this.txtInstrucaoReceita.Name = "txtInstrucaoReceita";
@@ -177,6 +192,7 @@
             // 
             // txtMedicamento
             // 
+            this.txtMedicamento.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMedicamento.Location = new System.Drawing.Point(18, 89);
             this.txtMedicamento.Multiline = true;
             this.txtMedicamento.Name = "txtMedicamento";
@@ -185,6 +201,7 @@
             // 
             // txtDosagem
             // 
+            this.txtDosagem.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDosagem.Location = new System.Drawing.Point(213, 89);
             this.txtDosagem.Multiline = true;
             this.txtDosagem.Name = "txtDosagem";
@@ -193,6 +210,7 @@
             // 
             // txtDuracao
             // 
+            this.txtDuracao.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDuracao.Location = new System.Drawing.Point(612, 89);
             this.txtDuracao.Multiline = true;
             this.txtDuracao.Name = "txtDuracao";
@@ -201,6 +219,7 @@
             // 
             // txtFrequencia
             // 
+            this.txtFrequencia.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFrequencia.Location = new System.Drawing.Point(413, 89);
             this.txtFrequencia.Multiline = true;
             this.txtFrequencia.Name = "txtFrequencia";
@@ -220,6 +239,7 @@
             // 
             // txtObservação
             // 
+            this.txtObservação.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtObservação.Location = new System.Drawing.Point(459, 315);
             this.txtObservação.Multiline = true;
             this.txtObservação.Name = "txtObservação";
@@ -234,12 +254,13 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
             this.label1.Location = new System.Drawing.Point(455, 282);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 20);
+            this.label1.Size = new System.Drawing.Size(168, 20);
             this.label1.TabIndex = 22;
-            this.label1.Text = "Observações adicionais";
+            this.label1.Text = "Tratamento recomendado";
             // 
             // txtDiagnostico
             // 
+            this.txtDiagnostico.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiagnostico.Location = new System.Drawing.Point(36, 315);
             this.txtDiagnostico.Multiline = true;
             this.txtDiagnostico.Name = "txtDiagnostico";
@@ -337,9 +358,9 @@
             this.lblStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
             this.lblStatus.Location = new System.Drawing.Point(33, 140);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(43, 20);
+            this.lblStatus.Size = new System.Drawing.Size(48, 20);
             this.lblStatus.TabIndex = 12;
-            this.lblStatus.Text = "Local";
+            this.lblStatus.Text = "Status";
             // 
             // lblInfopaciente
             // 
@@ -365,24 +386,13 @@
             // lblFeedback
             // 
             this.lblFeedback.AutoSize = true;
+            this.lblFeedback.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold);
+            this.lblFeedback.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
             this.lblFeedback.Location = new System.Drawing.Point(33, 16);
             this.lblFeedback.Name = "lblFeedback";
-            this.lblFeedback.Size = new System.Drawing.Size(113, 13);
+            this.lblFeedback.Size = new System.Drawing.Size(144, 20);
             this.lblFeedback.TabIndex = 0;
             this.lblFeedback.Text = "Feedback da consulta";
-            // 
-            // btnAtualizar
-            // 
-            this.btnAtualizar.BackColor = System.Drawing.Color.White;
-            this.btnAtualizar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(164)))), ((int)(((byte)(143)))));
-            this.btnAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAtualizar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtualizar.Location = new System.Drawing.Point(484, 799);
-            this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(161, 48);
-            this.btnAtualizar.TabIndex = 40;
-            this.btnAtualizar.Text = "Atualiar ";
-            this.btnAtualizar.UseVisualStyleBackColor = false;
             // 
             // FormularioProntuarioPaciente
             // 
