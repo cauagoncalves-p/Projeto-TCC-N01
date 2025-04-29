@@ -46,16 +46,16 @@
             this.panelConsultas = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLembrar = new System.Windows.Forms.Button();
             this.btnDetalhes = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.panelHeader.SuspendLayout();
             this.panelbackground.SuspendLayout();
             this.panelConsultas.SuspendLayout();
@@ -286,6 +286,53 @@
             this.panel2.Size = new System.Drawing.Size(819, 62);
             this.panel2.TabIndex = 37;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(704, 14);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(94, 37);
+            this.button1.TabIndex = 45;
+            this.button1.Text = "Lembrar";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
+            this.label6.Location = new System.Drawing.Point(10, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(143, 16);
+            this.label6.TabIndex = 42;
+            this.label6.Text = "Próximas consultas";
+            // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
+            this.button2.FlatAppearance.BorderSize = 2;
+            this.button2.Location = new System.Drawing.Point(597, 14);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(94, 37);
+            this.button2.TabIndex = 44;
+            this.button2.Text = "Detalhes";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
+            this.label5.Location = new System.Drawing.Point(10, 35);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(143, 16);
+            this.label5.TabIndex = 43;
+            this.label5.Text = "Próximas consultas";
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
@@ -304,7 +351,7 @@
             this.btnLembrar.FlatAppearance.BorderSize = 0;
             this.btnLembrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLembrar.Location = new System.Drawing.Point(704, 12);
-            this.btnLembrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLembrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLembrar.Name = "btnLembrar";
             this.btnLembrar.Size = new System.Drawing.Size(94, 37);
             this.btnLembrar.TabIndex = 41;
@@ -316,7 +363,7 @@
             this.btnDetalhes.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
             this.btnDetalhes.FlatAppearance.BorderSize = 2;
             this.btnDetalhes.Location = new System.Drawing.Point(597, 12);
-            this.btnDetalhes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDetalhes.Margin = new System.Windows.Forms.Padding(2);
             this.btnDetalhes.Name = "btnDetalhes";
             this.btnDetalhes.Size = new System.Drawing.Size(94, 37);
             this.btnDetalhes.TabIndex = 40;
@@ -356,53 +403,6 @@
             this.label4.TabIndex = 12;
             this.label4.Text = "Próximas consultas";
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(704, 14);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 37);
-            this.button1.TabIndex = 45;
-            this.button1.Text = "Lembrar";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.button2.FlatAppearance.BorderSize = 2;
-            this.button2.Location = new System.Drawing.Point(597, 14);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 37);
-            this.button2.TabIndex = 44;
-            this.button2.Text = "Detalhes";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.label5.Location = new System.Drawing.Point(10, 35);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(143, 16);
-            this.label5.TabIndex = 43;
-            this.label5.Text = "Próximas consultas";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.label6.Location = new System.Drawing.Point(10, 9);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(143, 16);
-            this.label6.TabIndex = 42;
-            this.label6.Text = "Próximas consultas";
-            // 
             // FormularioPaginaPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -415,6 +415,8 @@
             this.Name = "FormularioPaginaPaciente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulário pagina paciente";
+          
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormularioPaginaPaciente_Paint);
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
             this.panelbackground.ResumeLayout(false);

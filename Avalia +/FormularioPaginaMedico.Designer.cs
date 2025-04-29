@@ -309,6 +309,7 @@
             this.dgvConsultasMedico.RowHeadersWidth = 51;
             this.dgvConsultasMedico.Size = new System.Drawing.Size(643, 338);
             this.dgvConsultasMedico.TabIndex = 0;
+            this.dgvConsultasMedico.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsultasMedico_CellContentDoubleClick);
             // 
             // panel6
             // 
@@ -807,6 +808,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnSair);

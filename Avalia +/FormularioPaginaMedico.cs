@@ -260,5 +260,22 @@ namespace Avalia__
             dgvConsultasMedico.Columns[dgvConsultasMedico.Columns.Count - 1].AutoSizeMode =
                 DataGridViewAutoSizeColumnMode.Fill;
         }
+
+        private void dgvConsultasMedico_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                var row = dgvConsultasMedico.Rows[e.RowIndex];
+
+                string paciente = row.Cells["Paciente"].Value.ToString();
+                string data = row.Cells["Data"].Value.ToString();
+                string status = row.Cells["Status"].Value.ToString();
+                string observacoes = row.Cells["Observações"].Value.ToString();
+
+                // Abrir novo formulário com os dados
+                FormularioProntuarioPaciente detalhes = new FormularioProntuarioPaciente(paciente, data, status, observacoes);
+                detalhes.ShowDialog();
+            }
+        }
     }
 }
