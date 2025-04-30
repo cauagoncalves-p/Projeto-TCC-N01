@@ -47,6 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AureaMaxDataSet.cs">
+      <DependentUpon>AureaMaxDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="AureaMaxDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

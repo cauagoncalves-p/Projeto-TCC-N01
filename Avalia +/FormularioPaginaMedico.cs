@@ -15,20 +15,22 @@ namespace Avalia__
     public partial class FormularioPaginaMedico: Form
     {
         private int _idMedico;
-        private void CarregarConsultasDoMedico()
-        {
-            try
 
+        private void CarregarConsultasDoMedico(string statusFiltro = "")
+        {
+             try
             {
                 using (var consultaAdapter = new tbConsultaTableAdapter())
                 using (var usuarioAdapter = new tbUsuarioTableAdapter())
                 using (var avaliacaoAdapter = new tbAvaliacaoTableAdapter())
                 {
-                    // Carrega todos os usuários (pacientes)
                     var todosPacientes = usuarioAdapter.GetData().ToDictionary(u => u.Id_usuario);
 
-                    // Carrega as consultas do médico atual
-                    var todasConsultas = consultaAdapter.GetData().Where(c => c.IdMedico == _idMedico).ToList();
+                    // Aplica o filtro por status, se houver
+                    var todasConsultas = consultaAdapter.GetData()
+                        .Where(c => c.IdMedico == _idMedico)
+                        .Where(c => string.IsNullOrEmpty(statusFiltro) || c.StatusConsulta == statusFiltro)
+                        .ToList();
 
                     var consultas = todasConsultas
                         .Select(c =>
@@ -41,6 +43,7 @@ namespace Avalia__
 
                             return new
                             {
+                                Id_Consulta = c.IdConsulta,
                                 Paciente = paciente,
                                 Data = c.DataConsulta.ToString("dd/MM/yyyy HH:mm"),
                                 Status = c.StatusConsulta,
@@ -51,24 +54,18 @@ namespace Avalia__
 
                     dgvConsultasMedico.DataSource = consultas;
 
-                    // Número de consultas que o médico tem
-                    int totalConsultas = todasConsultas.Count;
-                    lblTotalConsultas.Text = totalConsultas.ToString();
+                    // Atualiza os contadores SEM FILTRO, sempre usando todas as consultas do médico:
+                    var todasConsultasMedico = consultaAdapter.GetData()
+                        .Where(c => c.IdMedico == _idMedico)
+                        .ToList();
 
-                    // Número de consultas pendentes
-                    int totalAgendadas = todasConsultas.Count(c => c.StatusConsulta == "Agendada");
-                    lblTotalPendentes.Text = totalAgendadas.ToString();
+                    lblTotalConsultas.Text = todasConsultasMedico.Count.ToString();
+                    lblTotalPendentes.Text = todasConsultasMedico.Count(c => c.StatusConsulta == "Agendada").ToString();
+                    lblTotalRealizadas.Text = todasConsultasMedico.Count(c => c.StatusConsulta == "Realizada").ToString();
+                    lblTotalUrgencia.Text = todasConsultasMedico.Count(c => c.StatusConsulta == "Urgente").ToString();
 
-                    // Número de consultas realizadas
-                    int totalRealizadas = todasConsultas.Count(c => c.StatusConsulta == "Realizada");
-                    lblTotalRealizadas.Text = totalRealizadas.ToString();
-
-                    // Número de consultas urgentes
-                    int totalUrgentes = todasConsultas.Count(c => c.StatusConsulta == "Urgente");
-                    lblTotalUrgencia.Text = totalUrgentes.ToString();
-
-                    // -------- AVALIAÇÕES E PORCENTAGENS --------
-                    var idsConsultas = todasConsultas.Select(c => c.IdConsulta).ToList();
+                   
+                    var idsConsultas = todasConsultasMedico.Select(c => c.IdConsulta).ToList();
                     var avaliacoes = avaliacaoAdapter.GetData()
                         .Where(a => idsConsultas.Contains(a.IdConsulta))
                         .ToList();
@@ -77,47 +74,29 @@ namespace Avalia__
 
                     if (totalAvaliacoes > 0)
                     {
-                        int notas5 = avaliacoes.Count(a => a.Nota == 5);
-                        int notas4 = avaliacoes.Count(a => a.Nota == 4);
-                        int notas3 = avaliacoes.Count(a => a.Nota == 3);
-                        int notas2 = avaliacoes.Count(a => a.Nota == 2);
-                        int notas1 = avaliacoes.Count(a => a.Nota == 1);
-
-                        double porcentagem5 = (notas5 * 100.0) / totalAvaliacoes;
-                        double porcentagem4 = (notas4 * 100.0) / totalAvaliacoes;
-                        double porcentagem3 = (notas3 * 100.0) / totalAvaliacoes;
-                        double porcentagem2 = (notas2 * 100.0) / totalAvaliacoes;
-                        double porcentagem1 = (notas1 * 100.0) / totalAvaliacoes;
-
-                        lblNota5.Text = $"{porcentagem5:F1}%";
-                        lblNota4.Text = $"{porcentagem4:F1}%";
-                        lblNota3.Text = $"{porcentagem3:F1}%";
-                        lblNota2.Text = $"{porcentagem2:F1}%";
-                        lblNota1.Text = $"{porcentagem1:F1}%";
-                        lblTotalAvaliacao.Text = $"({totalAvaliacoes.ToString()}\navaliações)";
-
-                        // Agora calcula a média das notas!
                         double mediaNotas = avaliacoes.Average(a => a.Nota);
-                        lblNota.Text = $"{mediaNotas:F1}"; // Mostra a média com 1 casa decimal
+                        lblNota.Text = $"{mediaNotas:F1}";
+                        lblNota5.Text = $"{(avaliacoes.Count(a => a.Nota == 5) * 100.0 / totalAvaliacoes):F1}%";
+                        lblNota4.Text = $"{(avaliacoes.Count(a => a.Nota == 4) * 100.0 / totalAvaliacoes):F1}%";
+                        lblNota3.Text = $"{(avaliacoes.Count(a => a.Nota == 3) * 100.0 / totalAvaliacoes):F1}%";
+                        lblNota2.Text = $"{(avaliacoes.Count(a => a.Nota == 2) * 100.0 / totalAvaliacoes):F1}%";
+                        lblNota1.Text = $"{(avaliacoes.Count(a => a.Nota == 1) * 100.0 / totalAvaliacoes):F1}%";
+                        lblTotalAvaliacao.Text = $"({totalAvaliacoes}\navaliações)";
                     }
                     else
                     {
-                        lblNota5.Text = "0%";
-                        lblNota4.Text = "0%";
-                        lblNota3.Text = "0%";
-                        lblNota2.Text = "0%";
-                        lblNota1.Text = "0%";
-                        lblTotalAvaliacao.Text = "0";
                         lblNota.Text = "0.0";
+                        lblNota1.Text = lblNota2.Text = lblNota3.Text = lblNota4.Text = lblNota5.Text = "0%";
+                        lblTotalAvaliacao.Text = "(0 avaliações)";
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Erro ao carregar consultas: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                dgvConsultasMedico.DataSource = new List<object>(); // Limpa em caso de erro
-            }
         }
+         catch (Exception ex)
+         {
+                MessageBox.Show($"Erro ao carregar consultas: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dgvConsultasMedico.DataSource = new List<object>();
+        }
+     }
 
         public FormularioPaginaMedico(int idMedico)
         {
@@ -127,10 +106,10 @@ namespace Avalia__
             ConfigurarDataGridView();
             AjustarColunasDataGridView();
             RadiusButton controlador = new RadiusButton();
-            controlador.ConfigInicial(this, panel1, btnSair, 25, Color.White);
-            controlador.ConfigInicial(this, panel2, btnSair, 25, Color.White);
-            controlador.ConfigInicial(this, panel3, btnSair, 25, Color.White);
-            controlador.ConfigInicial(this, panel4, btnSair, 25, Color.White);
+            controlador.ConfigInicial(this, panelConsultasTotais, btnSair, 25, Color.White);
+            controlador.ConfigInicial(this, panelPendentes, btnSair, 25, Color.White);
+            controlador.ConfigInicial(this, paelRealizadas, btnSair, 25, Color.White);
+            controlador.ConfigInicial(this, panelUrgente, btnSair, 25, Color.White);
             controlador.ConfigInicial(this, panel5, btnSair, 25, Color.White);
             controlador.ConfigInicial(this, panel6, btnSair, 25, Color.White);
 
@@ -147,10 +126,6 @@ namespace Avalia__
         {
             ConfiguracaoTelas configuracaoTelas = new ConfiguracaoTelas();
             configuracaoTelas.FecharAba(this);
-        }
-        private void dgvConsultasMedicoMedico_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void ConfigurarDataGridView()
@@ -266,16 +241,37 @@ namespace Avalia__
             if (e.RowIndex >= 0)
             {
                 var row = dgvConsultasMedico.Rows[e.RowIndex];
-
+                var dados = (dynamic)row.DataBoundItem;
+                int IdConsulta = dados.Id_Consulta;
                 string paciente = row.Cells["Paciente"].Value.ToString();
                 string data = row.Cells["Data"].Value.ToString();
                 string status = row.Cells["Status"].Value.ToString();
                 string observacoes = row.Cells["Observações"].Value.ToString();
 
                 // Abrir novo formulário com os dados
-                FormularioProntuarioPaciente detalhes = new FormularioProntuarioPaciente(paciente, data, status, observacoes);
+                FormularioProntuarioPaciente detalhes = new FormularioProntuarioPaciente(IdConsulta, paciente, data, status, observacoes);
                 detalhes.ShowDialog();
             }
+        }
+
+        private void panelConsultasTotais_Click(object sender, EventArgs e)
+        {
+            CarregarConsultasDoMedico();
+        }
+
+        private void panelPendentes_Click(object sender, EventArgs e)
+        {
+            CarregarConsultasDoMedico("Agendada");
+        }
+
+        private void paelRealizadas_Click(object sender, EventArgs e)
+        {
+            CarregarConsultasDoMedico("Realizada");
+        }
+
+        private void panelUrgente_Click(object sender, EventArgs e)
+        {
+            CarregarConsultasDoMedico("Urgente");
         }
     }
 }

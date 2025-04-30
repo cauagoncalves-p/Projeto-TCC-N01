@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioPaginaMedico));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelConsultasTotais = new System.Windows.Forms.Panel();
             this.pictureBox26 = new System.Windows.Forms.PictureBox();
             this.lblTotalConsultas = new System.Windows.Forms.Label();
             this.lblConsultas = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelPendentes = new System.Windows.Forms.Panel();
             this.pictureBox27 = new System.Windows.Forms.PictureBox();
             this.lblTotalPendentes = new System.Windows.Forms.Label();
             this.lblPendentes = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.paelRealizadas = new System.Windows.Forms.Panel();
             this.pictureBox28 = new System.Windows.Forms.PictureBox();
             this.lblTotalRealizadas = new System.Windows.Forms.Label();
             this.lblRealizadas = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.panelUrgente = new System.Windows.Forms.Panel();
             this.pictureBox29 = new System.Windows.Forms.PictureBox();
             this.lblTotalUrgencia = new System.Windows.Forms.Label();
             this.lblUrgencia = new System.Windows.Forms.Label();
@@ -91,13 +91,13 @@
             this.lblsubtitulo = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.panelConsultasTotais.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.panelPendentes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
-            this.panel3.SuspendLayout();
+            this.paelRealizadas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).BeginInit();
-            this.panel4.SuspendLayout();
+            this.panelUrgente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultasMedico)).BeginInit();
@@ -129,15 +129,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelConsultasTotais
             // 
-            this.panel1.Controls.Add(this.pictureBox26);
-            this.panel1.Controls.Add(this.lblTotalConsultas);
-            this.panel1.Controls.Add(this.lblConsultas);
-            this.panel1.Location = new System.Drawing.Point(48, 171);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 100);
-            this.panel1.TabIndex = 0;
+            this.panelConsultasTotais.Controls.Add(this.pictureBox26);
+            this.panelConsultasTotais.Controls.Add(this.lblTotalConsultas);
+            this.panelConsultasTotais.Controls.Add(this.lblConsultas);
+            this.panelConsultasTotais.Location = new System.Drawing.Point(48, 171);
+            this.panelConsultasTotais.Name = "panelConsultasTotais";
+            this.panelConsultasTotais.Size = new System.Drawing.Size(200, 100);
+            this.panelConsultasTotais.TabIndex = 0;
+            this.panelConsultasTotais.Click += new System.EventHandler(this.panelConsultasTotais_Click);
             // 
             // pictureBox26
             // 
@@ -154,7 +155,7 @@
             this.lblTotalConsultas.AutoSize = true;
             this.lblTotalConsultas.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalConsultas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblTotalConsultas.Location = new System.Drawing.Point(11, 44);
+            this.lblTotalConsultas.Location = new System.Drawing.Point(11, 45);
             this.lblTotalConsultas.Name = "lblTotalConsultas";
             this.lblTotalConsultas.Size = new System.Drawing.Size(46, 31);
             this.lblTotalConsultas.TabIndex = 1;
@@ -170,15 +171,16 @@
             this.lblConsultas.TabIndex = 0;
             this.lblConsultas.Text = "Consultas do mês";
             // 
-            // panel2
+            // panelPendentes
             // 
-            this.panel2.Controls.Add(this.pictureBox27);
-            this.panel2.Controls.Add(this.lblTotalPendentes);
-            this.panel2.Controls.Add(this.lblPendentes);
-            this.panel2.Location = new System.Drawing.Point(291, 171);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 100);
-            this.panel2.TabIndex = 1;
+            this.panelPendentes.Controls.Add(this.pictureBox27);
+            this.panelPendentes.Controls.Add(this.lblTotalPendentes);
+            this.panelPendentes.Controls.Add(this.lblPendentes);
+            this.panelPendentes.Location = new System.Drawing.Point(291, 171);
+            this.panelPendentes.Name = "panelPendentes";
+            this.panelPendentes.Size = new System.Drawing.Size(200, 100);
+            this.panelPendentes.TabIndex = 1;
+            this.panelPendentes.Click += new System.EventHandler(this.panelPendentes_Click);
             // 
             // pictureBox27
             // 
@@ -211,15 +213,16 @@
             this.lblPendentes.TabIndex = 2;
             this.lblPendentes.Text = "Pendentes";
             // 
-            // panel3
+            // paelRealizadas
             // 
-            this.panel3.Controls.Add(this.pictureBox28);
-            this.panel3.Controls.Add(this.lblTotalRealizadas);
-            this.panel3.Controls.Add(this.lblRealizadas);
-            this.panel3.Location = new System.Drawing.Point(532, 171);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 100);
-            this.panel3.TabIndex = 1;
+            this.paelRealizadas.Controls.Add(this.pictureBox28);
+            this.paelRealizadas.Controls.Add(this.lblTotalRealizadas);
+            this.paelRealizadas.Controls.Add(this.lblRealizadas);
+            this.paelRealizadas.Location = new System.Drawing.Point(532, 171);
+            this.paelRealizadas.Name = "paelRealizadas";
+            this.paelRealizadas.Size = new System.Drawing.Size(200, 100);
+            this.paelRealizadas.TabIndex = 1;
+            this.paelRealizadas.Click += new System.EventHandler(this.paelRealizadas_Click);
             // 
             // pictureBox28
             // 
@@ -252,15 +255,16 @@
             this.lblRealizadas.TabIndex = 4;
             this.lblRealizadas.Text = "Realizadas";
             // 
-            // panel4
+            // panelUrgente
             // 
-            this.panel4.Controls.Add(this.pictureBox29);
-            this.panel4.Controls.Add(this.lblTotalUrgencia);
-            this.panel4.Controls.Add(this.lblUrgencia);
-            this.panel4.Location = new System.Drawing.Point(772, 171);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(200, 100);
-            this.panel4.TabIndex = 1;
+            this.panelUrgente.Controls.Add(this.pictureBox29);
+            this.panelUrgente.Controls.Add(this.lblTotalUrgencia);
+            this.panelUrgente.Controls.Add(this.lblUrgencia);
+            this.panelUrgente.Location = new System.Drawing.Point(772, 171);
+            this.panelUrgente.Name = "panelUrgente";
+            this.panelUrgente.Size = new System.Drawing.Size(200, 100);
+            this.panelUrgente.TabIndex = 1;
+            this.panelUrgente.Click += new System.EventHandler(this.panelUrgente_Click);
             // 
             // pictureBox29
             // 
@@ -816,27 +820,27 @@
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelUrgente);
+            this.Controls.Add(this.paelRealizadas);
+            this.Controls.Add(this.panelPendentes);
+            this.Controls.Add(this.panelConsultasTotais);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormularioPaginaMedico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulário página de medico";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormularioPaginaMedico_Paint);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelConsultasTotais.ResumeLayout(false);
+            this.panelConsultasTotais.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panelPendentes.ResumeLayout(false);
+            this.panelPendentes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.paelRealizadas.ResumeLayout(false);
+            this.paelRealizadas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.panelUrgente.ResumeLayout(false);
+            this.panelUrgente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).EndInit();
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultasMedico)).EndInit();
@@ -874,10 +878,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panelConsultasTotais;
+        private System.Windows.Forms.Panel panelPendentes;
+        private System.Windows.Forms.Panel paelRealizadas;
+        private System.Windows.Forms.Panel panelUrgente;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button btnSair;

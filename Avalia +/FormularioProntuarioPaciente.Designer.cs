@@ -43,7 +43,7 @@
             this.txtDuracao = new System.Windows.Forms.TextBox();
             this.txtFrequencia = new System.Windows.Forms.TextBox();
             this.lblMedicacao = new System.Windows.Forms.Label();
-            this.txtObservação = new System.Windows.Forms.TextBox();
+            this.txtTratamentoRecomendado = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtDiagnostico = new System.Windows.Forms.TextBox();
             this.lblinfo2 = new System.Windows.Forms.Label();
@@ -69,7 +69,7 @@
             this.panel1.Controls.Add(this.btnFinalizarConsulta);
             this.panel1.Controls.Add(this.btnSair);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.txtObservação);
+            this.panel1.Controls.Add(this.txtTratamentoRecomendado);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtDiagnostico);
             this.panel1.Controls.Add(this.lblinfo2);
@@ -101,6 +101,7 @@
             this.btnAtualizar.TabIndex = 40;
             this.btnAtualizar.Text = "Atualizar ";
             this.btnAtualizar.UseVisualStyleBackColor = false;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // btnCancelar
             // 
@@ -128,6 +129,7 @@
             this.btnFinalizarConsulta.TabIndex = 38;
             this.btnFinalizarConsulta.Text = "Finalizar consulta";
             this.btnFinalizarConsulta.UseVisualStyleBackColor = false;
+            this.btnFinalizarConsulta.Click += new System.EventHandler(this.btnFinalizarConsulta_Click);
             // 
             // btnSair
             // 
@@ -237,15 +239,15 @@
             this.lblMedicacao.TabIndex = 26;
             this.lblMedicacao.Text = "Adicionar Medicamento";
             // 
-            // txtObservação
+            // txtTratamentoRecomendado
             // 
-            this.txtObservação.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtObservação.Location = new System.Drawing.Point(459, 315);
-            this.txtObservação.Multiline = true;
-            this.txtObservação.Name = "txtObservação";
-            this.txtObservação.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtObservação.Size = new System.Drawing.Size(380, 135);
-            this.txtObservação.TabIndex = 23;
+            this.txtTratamentoRecomendado.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTratamentoRecomendado.Location = new System.Drawing.Point(459, 315);
+            this.txtTratamentoRecomendado.Multiline = true;
+            this.txtTratamentoRecomendado.Name = "txtTratamentoRecomendado";
+            this.txtTratamentoRecomendado.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtTratamentoRecomendado.Size = new System.Drawing.Size(380, 135);
+            this.txtTratamentoRecomendado.TabIndex = 23;
             // 
             // label1
             // 
@@ -398,7 +400,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(991, 881);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.panel1);
             this.Name = "FormularioProntuarioPaciente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -426,7 +429,7 @@
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Label lblInfopaciente;
         private System.Windows.Forms.Label lblPaciente;
-        private System.Windows.Forms.TextBox txtObservação;
+        private System.Windows.Forms.TextBox txtTratamentoRecomendado;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtDiagnostico;
         private System.Windows.Forms.Label lblinfo2;
