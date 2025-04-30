@@ -244,5 +244,10 @@ namespace Avalia__
             botaoSelecionado.ForeColor = Color.White;
 
         }
+
+        private void FormularioConsultasAgendadas_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

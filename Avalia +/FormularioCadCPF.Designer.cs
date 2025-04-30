@@ -91,7 +91,7 @@
             this.lblLinkFazerLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLinkFazerLogin.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.lblLinkFazerLogin.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.lblLinkFazerLogin.Location = new System.Drawing.Point(215, 343);
+            this.lblLinkFazerLogin.Location = new System.Drawing.Point(216, 343);
             this.lblLinkFazerLogin.Name = "lblLinkFazerLogin";
             this.lblLinkFazerLogin.Size = new System.Drawing.Size(81, 18);
             this.lblLinkFazerLogin.TabIndex = 9;
@@ -173,7 +173,7 @@
             this.lblAvalia.AutoSize = true;
             this.lblAvalia.Font = new System.Drawing.Font("Lucida Calligraphy", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAvalia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblAvalia.Location = new System.Drawing.Point(122, 48);
+            this.lblAvalia.Location = new System.Drawing.Point(111, 48);
             this.lblAvalia.Name = "lblAvalia";
             this.lblAvalia.Size = new System.Drawing.Size(118, 31);
             this.lblAvalia.TabIndex = 0;
