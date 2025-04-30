@@ -252,13 +252,13 @@
             // lblinfoConsulta
             // 
             this.lblinfoConsulta.AutoSize = true;
-            this.lblinfoConsulta.Font = new System.Drawing.Font("Arial", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblinfoConsulta.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblinfoConsulta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblinfoConsulta.Location = new System.Drawing.Point(320, 16);
+            this.lblinfoConsulta.Location = new System.Drawing.Point(308, 14);
             this.lblinfoConsulta.Name = "lblinfoConsulta";
-            this.lblinfoConsulta.Size = new System.Drawing.Size(239, 22);
+            this.lblinfoConsulta.Size = new System.Drawing.Size(212, 29);
             this.lblinfoConsulta.TabIndex = 3;
-            this.lblinfoConsulta.Text = "Informações da consulta";
+            this.lblinfoConsulta.Text = "Informações da Consulta";
             // 
             // lblTitulo
             // 
@@ -266,7 +266,7 @@
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblTitulo.Font = new System.Drawing.Font("Lucida Calligraphy", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblTitulo.Location = new System.Drawing.Point(85, 27);
+            this.lblTitulo.Location = new System.Drawing.Point(75, 24);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(118, 31);
             this.lblTitulo.TabIndex = 1;
@@ -278,7 +278,7 @@
             this.lblsubtitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblsubtitulo.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblsubtitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblsubtitulo.Location = new System.Drawing.Point(149, 51);
+            this.lblsubtitulo.Location = new System.Drawing.Point(139, 48);
             this.lblsubtitulo.Name = "lblsubtitulo";
             this.lblsubtitulo.Size = new System.Drawing.Size(158, 25);
             this.lblsubtitulo.TabIndex = 2;

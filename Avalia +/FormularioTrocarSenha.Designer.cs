@@ -117,9 +117,9 @@
             // lblTrocarSenha
             // 
             this.lblTrocarSenha.AutoSize = true;
-            this.lblTrocarSenha.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrocarSenha.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTrocarSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblTrocarSenha.Location = new System.Drawing.Point(108, 106);
+            this.lblTrocarSenha.Location = new System.Drawing.Point(105, 99);
             this.lblTrocarSenha.Name = "lblTrocarSenha";
             this.lblTrocarSenha.Size = new System.Drawing.Size(105, 25);
             this.lblTrocarSenha.TabIndex = 1;
@@ -130,7 +130,7 @@
             this.lblAvalia.AutoSize = true;
             this.lblAvalia.Font = new System.Drawing.Font("Lucida Calligraphy", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAvalia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblAvalia.Location = new System.Drawing.Point(97, 52);
+            this.lblAvalia.Location = new System.Drawing.Point(100, 57);
             this.lblAvalia.Name = "lblAvalia";
             this.lblAvalia.Size = new System.Drawing.Size(118, 31);
             this.lblAvalia.TabIndex = 0;

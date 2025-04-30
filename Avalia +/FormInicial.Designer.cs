@@ -144,11 +144,11 @@
             // lblentrar
             // 
             this.lblentrar.AutoSize = true;
-            this.lblentrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblentrar.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblentrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblentrar.Location = new System.Drawing.Point(57, 66);
+            this.lblentrar.Location = new System.Drawing.Point(63, 66);
             this.lblentrar.Name = "lblentrar";
-            this.lblentrar.Size = new System.Drawing.Size(218, 20);
+            this.lblentrar.Size = new System.Drawing.Size(193, 25);
             this.lblentrar.TabIndex = 1;
             this.lblentrar.Text = "Como você deseja entrar?";
             // 
@@ -157,7 +157,7 @@
             this.lblAvalia.AutoSize = true;
             this.lblAvalia.Font = new System.Drawing.Font("Lucida Calligraphy", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAvalia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblAvalia.Location = new System.Drawing.Point(105, 35);
+            this.lblAvalia.Location = new System.Drawing.Point(101, 36);
             this.lblAvalia.Name = "lblAvalia";
             this.lblAvalia.Size = new System.Drawing.Size(118, 31);
             this.lblAvalia.TabIndex = 0;

@@ -253,5 +253,10 @@ namespace Avalia__
                 mensagem.MensagemError("Nenhum diagnóstico encontrado para esta consulta. Você precisa registrar primeiro.");
             }
         }
+
+        private void FormularioProntuarioPaciente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

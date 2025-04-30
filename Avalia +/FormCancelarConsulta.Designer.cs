@@ -64,13 +64,13 @@
             this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(165)))), ((int)(((byte)(166)))));
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelar.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.Location = new System.Drawing.Point(195, 31);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(456, 48);
             this.btnCancelar.TabIndex = 1;
-            this.btnCancelar.Text = "Cancelar consulta selecionada";
+            this.btnCancelar.Text = "Cancelar Consulta";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
@@ -81,7 +81,7 @@
             this.btnSair.FlatAppearance.BorderSize = 0;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
-            this.btnSair.Location = new System.Drawing.Point(881, 42);
+            this.btnSair.Location = new System.Drawing.Point(881, 87);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(50, 43);
             this.btnSair.TabIndex = 15;
@@ -93,13 +93,13 @@
             // 
             this.lblsubtitulo.AutoSize = true;
             this.lblsubtitulo.BackColor = System.Drawing.Color.Transparent;
-            this.lblsubtitulo.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblsubtitulo.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblsubtitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblsubtitulo.Location = new System.Drawing.Point(72, 88);
+            this.lblsubtitulo.Location = new System.Drawing.Point(132, 121);
             this.lblsubtitulo.Name = "lblsubtitulo";
-            this.lblsubtitulo.Size = new System.Drawing.Size(164, 22);
+            this.lblsubtitulo.Size = new System.Drawing.Size(225, 29);
             this.lblsubtitulo.TabIndex = 14;
-            this.lblsubtitulo.Text = "Cancelar Consulta";
+            this.lblsubtitulo.Text = "Cancelamento de Consulta";
             // 
             // lblTitulo
             // 
@@ -107,7 +107,7 @@
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblTitulo.Font = new System.Drawing.Font("Lucida Calligraphy", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblTitulo.Location = new System.Drawing.Point(71, 42);
+            this.lblTitulo.Location = new System.Drawing.Point(66, 95);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(118, 31);
             this.lblTitulo.TabIndex = 13;

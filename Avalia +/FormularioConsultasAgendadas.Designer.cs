@@ -179,6 +179,7 @@
             this.Name = "FormularioConsultasAgendadas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Minha consultas";
+            this.Load += new System.EventHandler(this.FormularioConsultasAgendadas_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormularioConsultasAgendadas_Paint_1);
             this.panelCancelarConsulta.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultas)).EndInit();

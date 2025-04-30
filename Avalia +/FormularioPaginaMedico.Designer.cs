@@ -779,7 +779,7 @@
             this.lblsubtitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblsubtitulo.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblsubtitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblsubtitulo.Location = new System.Drawing.Point(100, 66);
+            this.lblsubtitulo.Location = new System.Drawing.Point(115, 89);
             this.lblsubtitulo.Name = "lblsubtitulo";
             this.lblsubtitulo.Size = new System.Drawing.Size(187, 22);
             this.lblsubtitulo.TabIndex = 14;
@@ -789,11 +789,11 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Font = new System.Drawing.Font("Lucida Calligraphy", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblTitulo.Location = new System.Drawing.Point(61, 39);
+            this.lblTitulo.Location = new System.Drawing.Point(59, 61);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(96, 29);
+            this.lblTitulo.Size = new System.Drawing.Size(118, 31);
             this.lblTitulo.TabIndex = 13;
             this.lblTitulo.Text = "Áurea+";
             // 

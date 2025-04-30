@@ -333,7 +333,7 @@
             this.btnFinalizarCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFinalizarCadastro.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFinalizarCadastro.ForeColor = System.Drawing.Color.White;
-            this.btnFinalizarCadastro.Location = new System.Drawing.Point(414, 750);
+            this.btnFinalizarCadastro.Location = new System.Drawing.Point(414, 744);
             this.btnFinalizarCadastro.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
             this.btnFinalizarCadastro.Name = "btnFinalizarCadastro";
             this.btnFinalizarCadastro.Size = new System.Drawing.Size(246, 39);
@@ -349,7 +349,7 @@
             this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVoltar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVoltar.ForeColor = System.Drawing.Color.White;
-            this.btnVoltar.Location = new System.Drawing.Point(34, 749);
+            this.btnVoltar.Location = new System.Drawing.Point(30, 743);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(246, 39);
             this.btnVoltar.TabIndex = 27;
@@ -451,11 +451,11 @@
             // lblCompletecadastro
             // 
             this.lblCompletecadastro.AutoSize = true;
-            this.lblCompletecadastro.Font = new System.Drawing.Font("Arial", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCompletecadastro.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompletecadastro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblCompletecadastro.Location = new System.Drawing.Point(261, 61);
+            this.lblCompletecadastro.Location = new System.Drawing.Point(287, 62);
             this.lblCompletecadastro.Name = "lblCompletecadastro";
-            this.lblCompletecadastro.Size = new System.Drawing.Size(211, 24);
+            this.lblCompletecadastro.Size = new System.Drawing.Size(169, 29);
             this.lblCompletecadastro.TabIndex = 1;
             this.lblCompletecadastro.Text = "Cadastro de Médico";
             // 

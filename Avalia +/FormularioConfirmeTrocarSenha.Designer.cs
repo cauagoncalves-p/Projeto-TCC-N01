@@ -154,7 +154,7 @@
             this.lblAvalia.AutoSize = true;
             this.lblAvalia.Font = new System.Drawing.Font("Lucida Calligraphy", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAvalia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblAvalia.Location = new System.Drawing.Point(128, 51);
+            this.lblAvalia.Location = new System.Drawing.Point(112, 55);
             this.lblAvalia.Name = "lblAvalia";
             this.lblAvalia.Size = new System.Drawing.Size(118, 31);
             this.lblAvalia.TabIndex = 0;
