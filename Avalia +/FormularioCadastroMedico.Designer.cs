@@ -241,22 +241,22 @@
             // txtSenha
             // 
             this.txtSenha.BackColor = System.Drawing.Color.FloralWhite;
-            this.txtSenha.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenha.Font = new System.Drawing.Font("Wingdings", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.txtSenha.Location = new System.Drawing.Point(32, 483);
             this.txtSenha.Multiline = true;
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.PasswordChar = '*';
+            this.txtSenha.PasswordChar = 'l';
             this.txtSenha.Size = new System.Drawing.Size(302, 32);
             this.txtSenha.TabIndex = 34;
             // 
             // txtconfirmeSenha
             // 
             this.txtconfirmeSenha.BackColor = System.Drawing.Color.FloralWhite;
-            this.txtconfirmeSenha.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtconfirmeSenha.Font = new System.Drawing.Font("Wingdings", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.txtconfirmeSenha.Location = new System.Drawing.Point(347, 483);
             this.txtconfirmeSenha.Multiline = true;
             this.txtconfirmeSenha.Name = "txtconfirmeSenha";
-            this.txtconfirmeSenha.PasswordChar = '*';
+            this.txtconfirmeSenha.PasswordChar = 'l';
             this.txtconfirmeSenha.Size = new System.Drawing.Size(325, 32);
             this.txtconfirmeSenha.TabIndex = 33;
             // 

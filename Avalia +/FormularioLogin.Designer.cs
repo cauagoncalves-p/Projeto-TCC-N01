@@ -135,12 +135,12 @@
             // 
             // txtSenhaLogin
             // 
-            this.txtSenhaLogin.Font = new System.Drawing.Font("Arial", 14.25F);
+            this.txtSenhaLogin.Font = new System.Drawing.Font("Wingdings", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.txtSenhaLogin.Location = new System.Drawing.Point(35, 233);
             this.txtSenhaLogin.MaxLength = 50;
             this.txtSenhaLogin.Multiline = true;
             this.txtSenhaLogin.Name = "txtSenhaLogin";
-            this.txtSenhaLogin.PasswordChar = '*';
+            this.txtSenhaLogin.PasswordChar = 'l';
             this.txtSenhaLogin.Size = new System.Drawing.Size(257, 40);
             this.txtSenhaLogin.TabIndex = 1;
             // 

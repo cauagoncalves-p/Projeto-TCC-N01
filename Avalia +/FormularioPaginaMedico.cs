@@ -1,4 +1,5 @@
 ﻿using Avalia__.AureaMaxDataSetTableAdapters;
+using Avalia__.Controles;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,7 +16,7 @@ namespace Avalia__
     public partial class FormularioPaginaMedico: Form
     {
         private int _idMedico;
-
+        Mensagem_do_sistema mensagem = new Mensagem_do_sistema();
         private void CarregarConsultasDoMedico(string statusFiltro = "")
         {
              try
@@ -238,19 +239,34 @@ namespace Avalia__
 
         private void dgvConsultasMedico_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            var row = dgvConsultasMedico.Rows[e.RowIndex];
+            var dados = (dynamic)row.DataBoundItem;
+
+            int IdConsulta = dados.Id_Consulta;
+            string paciente = row.Cells["Paciente"].Value.ToString();
+            string data = row.Cells["Data"].Value.ToString();
+            string status = row.Cells["Status"].Value.ToString();
+            string observacoes = row.Cells["Observações"].Value.ToString();
+       
+
+            DateTime dataConsulta;
+            if (DateTime.TryParse(data, out dataConsulta))
             {
-                var row = dgvConsultasMedico.Rows[e.RowIndex];
-                var dados = (dynamic)row.DataBoundItem;
-                int IdConsulta = dados.Id_Consulta;
-                string paciente = row.Cells["Paciente"].Value.ToString();
-                string data = row.Cells["Data"].Value.ToString();
-                string status = row.Cells["Status"].Value.ToString();
-                string observacoes = row.Cells["Observações"].Value.ToString();
+                DateTime dataAtual = DateTime.Now;
+
+                if (dataAtual.Date < dataConsulta.Date)
+                {
+                    mensagem.MensagemError("Essa consulta ainda vai acontecer.\nApenas é possível dar o diagnóstico no dia da consulta ou após ela.");
+                    return;
+                }
 
                 // Abrir novo formulário com os dados
                 FormularioProntuarioPaciente detalhes = new FormularioProntuarioPaciente(IdConsulta, paciente, data, status, observacoes);
                 detalhes.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Data inválida!");
             }
         }
 

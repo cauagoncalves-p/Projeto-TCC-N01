@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,6 +20,12 @@ namespace Avalia__
         ConfiguracaoTelas configuracaoTelas = new ConfiguracaoTelas();
         Mensagem_do_sistema mensagem = new Mensagem_do_sistema();
         private int _IdConsulta;
+
+        private void banco() 
+        {
+           
+        }
+        
 
         private void CarregarDiagnosticoDaConsulta(int idConsulta)
         {
@@ -63,10 +70,6 @@ namespace Avalia__
                             configuracaoTelas.ConfigurarPlaceholder(txtDuracao, "Duração");
                             configuracaoTelas.ConfigurarPlaceholder(txtInstrucaoReceita, "Adicione instruções específicas sobre os medicamentos...");
                         }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Nenhum diagnóstico encontrado para esta consulta.");
                     }
                 }
             }
@@ -121,18 +124,32 @@ namespace Avalia__
                         return;
                     }
 
-                    string diagnostico = txtDiagnostico.Text;
-                    string tratamento = txtTratamentoRecomendado.Text;
-                    string remedio = txtMedicamento.Text;
-                    string dosagem = txtDosagem.Text;
-                    string duracao = txtDuracao.Text;
-                    string frequencia = txtFrequencia.Text;
-                    string instrucaoReceita = txtInstrucaoReceita.Text;
+                    int idConsulta = this._IdConsulta;
+                    var adapter = new DiagnosticoMedicoTableAdapter();
+                    var dados = adapter.GetData().FirstOrDefault(d => d.Id_Consulta == idConsulta);
 
-                    diagnosticoMedico.Insert(_IdConsulta, diagnostico, tratamento, remedio, dosagem, frequencia, duracao, instrucaoReceita);
+                    if (dados != null && dados.diagnostico == txtDiagnostico.Text && dados.tratamentoRecomendado == txtTratamentoRecomendado.Text &&
+                    dados.duracao == txtDuracao.Text && dados.instrucaoReceita == txtInstrucaoReceita.Text &&
+                    dados.Dosagem == txtDosagem.Text && dados.Medicamento == txtMedicamento.Text && dados.Frequencia == txtFrequencia.Text)
+                    {
+                        mensagem.MensagemAtencao("Os dados fornecidos ja se encontram no banco\nClique em atualizar para mudar os dados!");
+                        return;
+                    }
+                    else
+                    {
+                        string diagnostico = txtDiagnostico.Text;
+                        string tratamento = txtTratamentoRecomendado.Text;
+                        string remedio = txtMedicamento.Text;
+                        string dosagem = txtDosagem.Text;
+                        string duracao = txtDuracao.Text;
+                        string frequencia = txtFrequencia.Text;
+                        string instrucaoReceita = txtInstrucaoReceita.Text;
 
-                    consulta.AtualizarStatusConsulta("Realizada", _IdConsulta);
-                    mensagem.MensagemInformation("Diagnóstico enviado com sucesso!");
+                        diagnosticoMedico.Insert(_IdConsulta, diagnostico, tratamento, remedio, dosagem, frequencia, duracao, instrucaoReceita);
+
+                        consulta.AtualizarStatusConsulta("Realizada", _IdConsulta);
+                        mensagem.MensagemInformation("Diagnóstico enviado com sucesso!");
+                    }
                 }
             }
             catch (Exception ex)
@@ -143,6 +160,23 @@ namespace Avalia__
 
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
+            if (txtDiagnostico.Enabled == false)
+            {
+                DialogResult atualizar = MessageBox.Show("Quer mesmo atualizar esse status?", "ATENÇÂO", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (atualizar == DialogResult.Yes)
+                {
+                    // Desabilita todos os campos
+                    txtMedicamento.Enabled = true;
+                    txtDosagem.Enabled = true;
+                    txtFrequencia.Enabled = true;
+                    txtDuracao.Enabled = true;
+                    txtInstrucaoReceita.Enabled = true;
+                    txtDiagnostico.Enabled = true;
+                    txtTratamentoRecomendado.Enabled = true;
+                    return;
+                }
+            }
+
             int idConsulta = this._IdConsulta; // Supondo que você tenha salvo isso ao abrir o formulário
 
             var adapter = new DiagnosticoMedicoTableAdapter();
@@ -163,6 +197,15 @@ namespace Avalia__
                         txtMedicamento.Text == "Nome do medicamento")
             {
                 mensagem.MensagemAtencao("Preencha todos os campos");
+                return;
+            }
+
+
+            if (dados.diagnostico == txtDiagnostico.Text && dados.tratamentoRecomendado == txtTratamentoRecomendado.Text &&
+            dados.duracao == txtDuracao.Text && dados.instrucaoReceita == txtInstrucaoReceita.Text &&
+            dados.Dosagem == txtDosagem.Text && dados.Medicamento == txtMedicamento.Text && dados.Frequencia == txtFrequencia.Text)
+            {
+                mensagem.MensagemAtencao("Os dados ainda permancem os mesmo!\nTroque as informações ou clique em cancelar");
                 return;
             }
 
