@@ -20,13 +20,6 @@ namespace Avalia__
         ConfiguracaoTelas configuracaoTelas = new ConfiguracaoTelas();
         Mensagem_do_sistema mensagem = new Mensagem_do_sistema();
         private int _IdConsulta;
-
-        private void banco() 
-        {
-           
-        }
-        
-
         private void CarregarDiagnosticoDaConsulta(int idConsulta)
         {
             try
@@ -90,8 +83,17 @@ namespace Avalia__
             lblInfoStatus.Text = status;
             lblInfoHoraData.Text = data;
 
-            // Aqui só carregamos os dados, os placeholders serão aplicados depois se necessário
             CarregarDiagnosticoDaConsulta(_IdConsulta);
+
+            configuracaoTelas.ConfigurarPlaceholder(txtDiagnostico, "Descreva o diagnóstico do paciente...");
+            configuracaoTelas.ConfigurarPlaceholder(txtTratamentoRecomendado, "Adicione quaisquer observações relevantes...");
+            configuracaoTelas.ConfigurarPlaceholder(txtMedicamento, "Nome do medicamento");
+            configuracaoTelas.ConfigurarPlaceholder(txtDosagem, "Dosagem");
+            configuracaoTelas.ConfigurarPlaceholder(txtFrequencia, "Frequência");
+            configuracaoTelas.ConfigurarPlaceholder(txtDuracao, "Duração");
+            configuracaoTelas.ConfigurarPlaceholder(txtInstrucaoReceita, "Adicione instruções específicas sobre os medicamentos...");
+            // Aqui só carregamos os dados, os placeholders serão aplicados depois se necessário
+
             RadiusButton controlador = new RadiusButton();
             controlador.ConfigInicial(this, panel1, btnSair, 25, Color.White);
             controlador.ConfigInicial(this, panel2, btnSair, 25, ColorTranslator.FromHtml("#e8d5c4"));
@@ -148,6 +150,17 @@ namespace Avalia__
                         diagnosticoMedico.Insert(_IdConsulta, diagnostico, tratamento, remedio, dosagem, frequencia, duracao, instrucaoReceita);
 
                         consulta.AtualizarStatusConsulta("Realizada", _IdConsulta);
+
+                        // Desabilita os campos após a consulta ser realizada
+                        txtDiagnostico.Enabled = false;
+                        txtTratamentoRecomendado.Enabled = false;
+                        txtMedicamento.Enabled = false;
+                        txtDosagem.Enabled = false;
+                        txtFrequencia.Enabled = false;
+                        txtDuracao.Enabled = false;
+                        txtInstrucaoReceita.Enabled = false;
+
+                        lblInfoStatus.Text = "Realizada";
                         mensagem.MensagemInformation("Diagnóstico enviado com sucesso!");
                     }
                 }
@@ -227,8 +240,13 @@ namespace Avalia__
             {
                 // Se existir, atualiza
                 adapter.AtualizarConsulta(dianostico,tratamento,remedio,dosagem,frequencia,duracao,instrucaoReceita,dados.Id_diagnosticoMedico);
-
+                
                 mensagem.MensagemInformation("Diagnóstico atualizado com sucesso!");
+              
+
+               
+               
+;
             }
             else
             {
