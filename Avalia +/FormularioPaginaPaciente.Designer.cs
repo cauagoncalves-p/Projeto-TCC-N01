@@ -412,12 +412,12 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(984, 857);
             this.Controls.Add(this.panelbackground);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormularioPaginaPaciente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulário pagina paciente";
-          
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormularioPaginaPaciente_Paint);
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();

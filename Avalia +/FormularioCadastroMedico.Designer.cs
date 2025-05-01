@@ -628,11 +628,12 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.panelCadastro);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormularioCadastroMedico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cdastro de medico ";
+            this.Text = "Cadastro de Médico ";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormularioCadastroMedico_Paint);
             this.panelCadastro.ResumeLayout(false);
             this.panelCadastro.PerformLayout();

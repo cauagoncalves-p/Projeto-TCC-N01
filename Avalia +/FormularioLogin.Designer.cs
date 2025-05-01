@@ -205,6 +205,7 @@
             this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.panelLogin);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormularioLogin";
