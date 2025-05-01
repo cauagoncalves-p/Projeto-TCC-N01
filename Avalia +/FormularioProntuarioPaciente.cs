@@ -242,11 +242,15 @@ namespace Avalia__
                 adapter.AtualizarConsulta(dianostico,tratamento,remedio,dosagem,frequencia,duracao,instrucaoReceita,dados.Id_diagnosticoMedico);
                 
                 mensagem.MensagemInformation("Diagnóstico atualizado com sucesso!");
-              
 
-               
-               
-;
+                // Desabilita os campos após a consulta ser realizada
+                txtDiagnostico.Enabled = false;
+                txtTratamentoRecomendado.Enabled = false;
+                txtMedicamento.Enabled = false;
+                txtDosagem.Enabled = false;
+                txtFrequencia.Enabled = false;
+                txtDuracao.Enabled = false;
+                txtInstrucaoReceita.Enabled = false;
             }
             else
             {

@@ -90,6 +90,8 @@ namespace Avalia__
                         lblNota1.Text = lblNota2.Text = lblNota3.Text = lblNota4.Text = lblNota5.Text = "0%";
                         lblTotalAvaliacao.Text = "(0 avaliações)";
                     }
+
+                    dgvConsultasMedico.Columns["Id_Consulta"].Visible = false;
                 }
         }
          catch (Exception ex)
@@ -187,6 +189,7 @@ namespace Avalia__
             // Configurar colunas (exemplo)
             if (dgvConsultasMedico.Columns.Count == 0)
             {
+               
                 dgvConsultasMedico.Columns.Add("colPaciente", "Paciente");
                 dgvConsultasMedico.Columns.Add("colHorario", "Horário");
                 dgvConsultasMedico.Columns.Add("colTipo", "Tipo");
