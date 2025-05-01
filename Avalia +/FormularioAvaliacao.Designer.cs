@@ -151,7 +151,7 @@
             this.btnSair.FlatAppearance.BorderSize = 0;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
-            this.btnSair.Location = new System.Drawing.Point(805, 12);
+            this.btnSair.Location = new System.Drawing.Point(796, 10);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(50, 43);
             this.btnSair.TabIndex = 32;
