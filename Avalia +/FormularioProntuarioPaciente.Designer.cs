@@ -166,7 +166,7 @@
             // txtInstrucaoReceita
             // 
             this.txtInstrucaoReceita.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInstrucaoReceita.Location = new System.Drawing.Point(18, 184);
+            this.txtInstrucaoReceita.Location = new System.Drawing.Point(18, 173);
             this.txtInstrucaoReceita.Multiline = true;
             this.txtInstrucaoReceita.Name = "txtInstrucaoReceita";
             this.txtInstrucaoReceita.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -176,11 +176,11 @@
             // lblInstrucao
             // 
             this.lblInstrucao.AutoSize = true;
-            this.lblInstrucao.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInstrucao.Font = new System.Drawing.Font("Arial Narrow", 13F, System.Drawing.FontStyle.Bold);
             this.lblInstrucao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
             this.lblInstrucao.Location = new System.Drawing.Point(14, 148);
             this.lblInstrucao.Name = "lblInstrucao";
-            this.lblInstrucao.Size = new System.Drawing.Size(161, 20);
+            this.lblInstrucao.Size = new System.Drawing.Size(182, 22);
             this.lblInstrucao.TabIndex = 36;
             this.lblInstrucao.Text = "Instruções para a receita";
             // 
@@ -234,11 +234,11 @@
             // lblMedicacao
             // 
             this.lblMedicacao.AutoSize = true;
-            this.lblMedicacao.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMedicacao.Font = new System.Drawing.Font("Arial Narrow", 13F, System.Drawing.FontStyle.Bold);
             this.lblMedicacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblMedicacao.Location = new System.Drawing.Point(19, 53);
+            this.lblMedicacao.Location = new System.Drawing.Point(16, 62);
             this.lblMedicacao.Name = "lblMedicacao";
-            this.lblMedicacao.Size = new System.Drawing.Size(156, 20);
+            this.lblMedicacao.Size = new System.Drawing.Size(175, 22);
             this.lblMedicacao.TabIndex = 26;
             this.lblMedicacao.Text = "Adicionar Medicamento";
             // 
@@ -257,7 +257,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.label1.Location = new System.Drawing.Point(455, 282);
+            this.label1.Location = new System.Drawing.Point(457, 284);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(168, 20);
             this.label1.TabIndex = 22;
@@ -278,7 +278,7 @@
             this.lblinfo2.AutoSize = true;
             this.lblinfo2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblinfo2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblinfo2.Location = new System.Drawing.Point(32, 282);
+            this.lblinfo2.Location = new System.Drawing.Point(33, 284);
             this.lblinfo2.Name = "lblinfo2";
             this.lblinfo2.Size = new System.Drawing.Size(154, 20);
             this.lblinfo2.TabIndex = 20;
@@ -406,6 +406,7 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1001, 561);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormularioProntuarioPaciente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prontuário Medico";

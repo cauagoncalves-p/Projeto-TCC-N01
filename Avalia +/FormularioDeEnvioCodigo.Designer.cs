@@ -151,7 +151,7 @@
             this.lblEmailInformado.AutoSize = true;
             this.lblEmailInformado.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmailInformado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(124)))), ((int)(((byte)(99)))));
-            this.lblEmailInformado.Location = new System.Drawing.Point(99, 169);
+            this.lblEmailInformado.Location = new System.Drawing.Point(99, 171);
             this.lblEmailInformado.Name = "lblEmailInformado";
             this.lblEmailInformado.Size = new System.Drawing.Size(135, 15);
             this.lblEmailInformado.TabIndex = 24;
@@ -240,6 +240,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.panelConfirmeEmail);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormularioDeEnvioCodigo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Confirme o código enviado para o seu email ";

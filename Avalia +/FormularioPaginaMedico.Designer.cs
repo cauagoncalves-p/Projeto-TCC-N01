@@ -78,7 +78,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblTotalAvaliacao = new System.Windows.Forms.Label();
             this.lblNota = new System.Windows.Forms.Label();
             this.lblAvaliacao1 = new System.Windows.Forms.Label();
             this.lbl1Estrela = new System.Windows.Forms.Label();
@@ -164,10 +163,10 @@
             // lblConsultas
             // 
             this.lblConsultas.AutoSize = true;
-            this.lblConsultas.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConsultas.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConsultas.Location = new System.Drawing.Point(59, 15);
             this.lblConsultas.Name = "lblConsultas";
-            this.lblConsultas.Size = new System.Drawing.Size(120, 16);
+            this.lblConsultas.Size = new System.Drawing.Size(133, 18);
             this.lblConsultas.TabIndex = 0;
             this.lblConsultas.Text = "Consultas do mês";
             // 
@@ -206,10 +205,10 @@
             // lblPendentes
             // 
             this.lblPendentes.AutoSize = true;
-            this.lblPendentes.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPendentes.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPendentes.Location = new System.Drawing.Point(62, 15);
             this.lblPendentes.Name = "lblPendentes";
-            this.lblPendentes.Size = new System.Drawing.Size(75, 16);
+            this.lblPendentes.Size = new System.Drawing.Size(83, 18);
             this.lblPendentes.TabIndex = 2;
             this.lblPendentes.Text = "Pendentes";
             // 
@@ -248,10 +247,10 @@
             // lblRealizadas
             // 
             this.lblRealizadas.AutoSize = true;
-            this.lblRealizadas.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRealizadas.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRealizadas.Location = new System.Drawing.Point(68, 14);
             this.lblRealizadas.Name = "lblRealizadas";
-            this.lblRealizadas.Size = new System.Drawing.Size(76, 16);
+            this.lblRealizadas.Size = new System.Drawing.Size(86, 18);
             this.lblRealizadas.TabIndex = 4;
             this.lblRealizadas.Text = "Realizadas";
             // 
@@ -290,10 +289,10 @@
             // lblUrgencia
             // 
             this.lblUrgencia.AutoSize = true;
-            this.lblUrgencia.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUrgencia.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUrgencia.Location = new System.Drawing.Point(59, 12);
             this.lblUrgencia.Name = "lblUrgencia";
-            this.lblUrgencia.Size = new System.Drawing.Size(63, 16);
+            this.lblUrgencia.Size = new System.Drawing.Size(71, 18);
             this.lblUrgencia.TabIndex = 6;
             this.lblUrgencia.Text = "Urgência";
             // 
@@ -347,7 +346,6 @@
             this.panel6.Controls.Add(this.pictureBox3);
             this.panel6.Controls.Add(this.pictureBox2);
             this.panel6.Controls.Add(this.pictureBox1);
-            this.panel6.Controls.Add(this.lblTotalAvaliacao);
             this.panel6.Controls.Add(this.lblNota);
             this.panel6.Controls.Add(this.lblAvaliacao1);
             this.panel6.Controls.Add(this.lbl1Estrela);
@@ -661,15 +659,6 @@
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
             // 
-            // lblTotalAvaliacao
-            // 
-            this.lblTotalAvaliacao.AutoSize = true;
-            this.lblTotalAvaliacao.Location = new System.Drawing.Point(182, 48);
-            this.lblTotalAvaliacao.Name = "lblTotalAvaliacao";
-            this.lblTotalAvaliacao.Size = new System.Drawing.Size(13, 13);
-            this.lblTotalAvaliacao.TabIndex = 16;
-            this.lblTotalAvaliacao.Text = "0";
-            // 
             // lblNota
             // 
             this.lblNota.AutoSize = true;
@@ -824,11 +813,12 @@
             this.Controls.Add(this.paelRealizadas);
             this.Controls.Add(this.panelPendentes);
             this.Controls.Add(this.panelConsultasTotais);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormularioPaginaMedico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Formulário página de medico";
+            this.Text = "Formulário de Médico";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormularioPaginaMedico_Paint);
             this.panelConsultasTotais.ResumeLayout(false);
             this.panelConsultasTotais.PerformLayout();
@@ -905,7 +895,6 @@
         private System.Windows.Forms.Label lbl5Estrelas;
         private System.Windows.Forms.Label lblNota;
         private System.Windows.Forms.Label lblAvaliacao1;
-        private System.Windows.Forms.Label lblTotalAvaliacao;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;

@@ -174,6 +174,7 @@
             this.Controls.Add(this.btnConsultasTotais);
             this.Controls.Add(this.lblHistoricoConsulta);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormularioConsultasAgendadas";

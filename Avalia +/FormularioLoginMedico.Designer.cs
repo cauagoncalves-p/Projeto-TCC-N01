@@ -135,7 +135,7 @@
             // 
             // txtSenhaLogin
             // 
-            this.txtSenhaLogin.Font = new System.Drawing.Font("Wingdings", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.txtSenhaLogin.Font = new System.Drawing.Font("Wingdings", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.txtSenhaLogin.Location = new System.Drawing.Point(39, 236);
             this.txtSenhaLogin.MaxLength = 50;
             this.txtSenhaLogin.Multiline = true;
@@ -157,6 +157,7 @@
             // 
             // txtCRMLogin
             // 
+            this.txtCRMLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCRMLogin.Location = new System.Drawing.Point(39, 148);
             this.txtCRMLogin.MaxLength = 13;
             this.txtCRMLogin.Multiline = true;
@@ -204,6 +205,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.panelLogin);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormularioLoginMedico";

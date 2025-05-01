@@ -169,11 +169,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.panelLogin);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormInicial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormInicial";
+            this.Text = "Formulário Inicial";
             this.Load += new System.EventHandler(this.FormInicial_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormInicial_Paint);
             this.panelLogin.ResumeLayout(false);

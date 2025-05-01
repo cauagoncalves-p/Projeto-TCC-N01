@@ -120,7 +120,7 @@
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(625, 593);
+            this.btnCancelar.Location = new System.Drawing.Point(611, 534);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(173, 48);
             this.btnCancelar.TabIndex = 15;
@@ -134,7 +134,7 @@
             this.btnManterConsulta.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(164)))), ((int)(((byte)(143)))));
             this.btnManterConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManterConsulta.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManterConsulta.Location = new System.Drawing.Point(437, 593);
+            this.btnManterConsulta.Location = new System.Drawing.Point(425, 534);
             this.btnManterConsulta.Name = "btnManterConsulta";
             this.btnManterConsulta.Size = new System.Drawing.Size(161, 48);
             this.btnManterConsulta.TabIndex = 14;
@@ -146,7 +146,7 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(245)))));
             this.textBox1.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.textBox1.Location = new System.Drawing.Point(42, 415);
+            this.textBox1.Location = new System.Drawing.Point(42, 388);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -238,9 +238,9 @@
             this.lblInfoHoraData.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInfoHoraData.Location = new System.Drawing.Point(509, 63);
             this.lblInfoHoraData.Name = "lblInfoHoraData";
-            this.lblInfoHoraData.Size = new System.Drawing.Size(83, 18);
+            this.lblInfoHoraData.Size = new System.Drawing.Size(89, 18);
             this.lblInfoHoraData.TabIndex = 5;
-            this.lblInfoHoraData.Text = "data - hora";
+            this.lblInfoHoraData.Text = "Data - Hora";
             // 
             // lblDataHora
             // 
@@ -305,6 +305,7 @@
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.lblsubtitulo);
             this.Controls.Add(this.lblTitulo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmConfirmarCancelamento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cancelar consulta";
