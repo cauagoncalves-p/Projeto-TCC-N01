@@ -40,10 +40,9 @@ namespace Avalia__
                         txtDiagnostico.Text = diagnostico.diagnostico;
                         txtTratamentoRecomendado.Text = diagnostico.tratamentoRecomendado;
 
-                        // Verifica se a consulta já foi realizada
+                        // Desabilita campos se a consulta já foi realizada
                         if (lblInfoStatus.Text == "Realizada")
                         {
-                            // Desabilita todos os campos
                             txtMedicamento.Enabled = false;
                             txtDosagem.Enabled = false;
                             txtFrequencia.Enabled = false;
@@ -52,18 +51,16 @@ namespace Avalia__
                             txtDiagnostico.Enabled = false;
                             txtTratamentoRecomendado.Enabled = false;
                         }
-                        else
-                        {
-                            // Caso ainda não realizada, mostra os placeholders
-                            configuracaoTelas.ConfigurarPlaceholder(txtDiagnostico, "Descreva o diagnóstico do paciente...");
-                            configuracaoTelas.ConfigurarPlaceholder(txtTratamentoRecomendado, "Adicione quaisquer observações relevantes...");
-                            configuracaoTelas.ConfigurarPlaceholder(txtMedicamento, "Nome do medicamento");
-                            configuracaoTelas.ConfigurarPlaceholder(txtDosagem, "Dosagem");
-                            configuracaoTelas.ConfigurarPlaceholder(txtFrequencia, "Frequência");
-                            configuracaoTelas.ConfigurarPlaceholder(txtDuracao, "Duração");
-                            configuracaoTelas.ConfigurarPlaceholder(txtInstrucaoReceita, "Adicione instruções específicas sobre os medicamentos...");
-                        }
                     }
+
+                    // Aplica placeholders apenas se os campos estiverem vazios
+                    configuracaoTelas.ConfigurarPlaceholder(txtDiagnostico, "Descreva o diagnóstico do paciente...");
+                    configuracaoTelas.ConfigurarPlaceholder(txtTratamentoRecomendado, "Adicione quaisquer observações relevantes...");
+                    configuracaoTelas.ConfigurarPlaceholder(txtMedicamento, "Nome do medicamento");
+                    configuracaoTelas.ConfigurarPlaceholder(txtDosagem, "Dosagem");
+                    configuracaoTelas.ConfigurarPlaceholder(txtFrequencia, "Frequência");
+                    configuracaoTelas.ConfigurarPlaceholder(txtDuracao, "Duração");
+                    configuracaoTelas.ConfigurarPlaceholder(txtInstrucaoReceita, "Adicione instruções específicas sobre os medicamentos...");
                 }
             }
             catch (Exception ex)
@@ -77,22 +74,12 @@ namespace Avalia__
         {
             InitializeComponent();
             _IdConsulta = IdConsulta;
-            _IdConsulta = IdConsulta;
             lblInfopaciente.Text = paciente;
             lblInfoObservacao.Text = observacoes;
             lblInfoStatus.Text = status;
             lblInfoHoraData.Text = data;
 
             CarregarDiagnosticoDaConsulta(_IdConsulta);
-
-            configuracaoTelas.ConfigurarPlaceholder(txtDiagnostico, "Descreva o diagnóstico do paciente...");
-            configuracaoTelas.ConfigurarPlaceholder(txtTratamentoRecomendado, "Adicione quaisquer observações relevantes...");
-            configuracaoTelas.ConfigurarPlaceholder(txtMedicamento, "Nome do medicamento");
-            configuracaoTelas.ConfigurarPlaceholder(txtDosagem, "Dosagem");
-            configuracaoTelas.ConfigurarPlaceholder(txtFrequencia, "Frequência");
-            configuracaoTelas.ConfigurarPlaceholder(txtDuracao, "Duração");
-            configuracaoTelas.ConfigurarPlaceholder(txtInstrucaoReceita, "Adicione instruções específicas sobre os medicamentos...");
-            // Aqui só carregamos os dados, os placeholders serão aplicados depois se necessário
 
             RadiusButton controlador = new RadiusButton();
             controlador.ConfigInicial(this, panel1, btnSair, 25, Color.White);
@@ -261,6 +248,12 @@ namespace Avalia__
         private void FormularioProntuarioPaciente_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            ConfiguracaoTelas configuracaoTelas = new ConfiguracaoTelas();
+            configuracaoTelas.FecharAba(this);
         }
     }
 }

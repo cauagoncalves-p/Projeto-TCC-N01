@@ -6,10 +6,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Avalia__.RadiusButton;
+using static System.Windows.Forms.LinkLabel;
 
 namespace Avalia__
 {
@@ -157,6 +159,7 @@ namespace Avalia__
 
                             return new
                             {
+                                IdConsulta = c.IdConsulta, 
                                 Data = c.DataConsulta.ToString("dd/MM/yyyy HH:mm"),
                                 Medico = medico,
                                 Motivo = c.Motivo,
@@ -167,6 +170,7 @@ namespace Avalia__
                         .ToList();
 
                     dgvConsultas.DataSource = consultas;
+                    dgvConsultas.Columns["IdConsulta"].Visible = false;
                 }
             }
             catch (Exception ex)
@@ -248,6 +252,39 @@ namespace Avalia__
         private void FormularioConsultasAgendadas_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvConsultas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow linha = dgvConsultas.Rows[e.RowIndex];
+            string idConsulta = linha.Cells["IdConsulta"].Value.ToString();
+            int idcons = int.Parse(idConsulta);
+
+            if (e.RowIndex >= 0)
+            {
+                // Busca o diagnóstico
+                DiagnosticoMedicoTableAdapter diagnosticoAdapter = new DiagnosticoMedicoTableAdapter(); 
+                var diagnostico = diagnosticoAdapter.GetData().FirstOrDefault(d => d.Id_Consulta == idcons);
+
+                if (diagnostico == null)
+                {
+                    mensagem_Do_Sistema.MensagemAtencao("Diagnóstico não encontrado.");
+                    mensagem_Do_Sistema.MensagemAtencao("Essa consulta ainda não foi realizada ou está cancelada!");
+                    return;
+                }
+
+                // Pegando o status da consulta
+                string status = linha.Cells["Status"].Value.ToString();
+
+                if (status == "Realizada")
+                {
+                    // ajuste o nome da coluna conforme seu DataGridView
+
+                    // Abre o formulário de detalhes
+                    VerDiagnosticoMedico detalhes = new VerDiagnosticoMedico(idConsulta); 
+                    detalhes.ShowDialog();
+                }
+            }
         }
     }
 }

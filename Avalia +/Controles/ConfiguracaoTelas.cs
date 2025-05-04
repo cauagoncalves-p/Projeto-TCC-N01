@@ -58,31 +58,33 @@ namespace Avalia__
             }
         }
 
-        public void ConfigurarPlaceholder(TextBox textBox, string placeholder)
+        public void ConfigurarPlaceholder(TextBox campo, string placeholder)
         {
-            textBox.Text = placeholder;
-            textBox.ForeColor = Color.Gray;
-
-            // Evento Enter (quando clica no TextBox)
-            textBox.Enter += (sender, e) =>
+            if (string.IsNullOrWhiteSpace(campo.Text))
             {
-                if (textBox.Text == placeholder)
+                campo.Text = placeholder;
+                campo.ForeColor = Color.Gray;
+            }
+
+            campo.GotFocus += (s, e) =>
+            {
+                if (campo.Text == placeholder)
                 {
-                    textBox.Text = "";
-                    textBox.ForeColor = Color.Black;
+                    campo.Text = "";
+                    campo.ForeColor = Color.Black;
                 }
             };
 
-            // Evento Leave (quando sai do TextBox)
-            textBox.Leave += (sender, e) =>
+            campo.LostFocus += (s, e) =>
             {
-                if (string.IsNullOrWhiteSpace(textBox.Text))
+                if (string.IsNullOrWhiteSpace(campo.Text))
                 {
-                    textBox.Text = placeholder;
-                    textBox.ForeColor = Color.Gray;
+                    campo.Text = placeholder;
+                    campo.ForeColor = Color.Gray;
                 }
             };
         }
+
     }
 }
 
