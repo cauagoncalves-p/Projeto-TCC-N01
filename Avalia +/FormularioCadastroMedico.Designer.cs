@@ -70,11 +70,14 @@
             this.lblDataNascimento = new System.Windows.Forms.Label();
             this.lblSobrenome = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelCadastro.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelCadastro
             // 
+            this.panelCadastro.AutoScroll = true;
+            this.panelCadastro.Controls.Add(this.label1);
             this.panelCadastro.Controls.Add(this.lblInstituicao);
             this.panelCadastro.Controls.Add(this.cbxInstituicao);
             this.panelCadastro.Controls.Add(this.lblEspecialidade);
@@ -118,7 +121,7 @@
             this.panelCadastro.Location = new System.Drawing.Point(134, 12);
             this.panelCadastro.Name = "panelCadastro";
             this.panelCadastro.Padding = new System.Windows.Forms.Padding(0, 0, 20, 20);
-            this.panelCadastro.Size = new System.Drawing.Size(719, 823);
+            this.panelCadastro.Size = new System.Drawing.Size(719, 537);
             this.panelCadastro.TabIndex = 1;
             // 
             // lblInstituicao
@@ -333,7 +336,7 @@
             this.btnFinalizarCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFinalizarCadastro.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFinalizarCadastro.ForeColor = System.Drawing.Color.White;
-            this.btnFinalizarCadastro.Location = new System.Drawing.Point(414, 744);
+            this.btnFinalizarCadastro.Location = new System.Drawing.Point(441, 743);
             this.btnFinalizarCadastro.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
             this.btnFinalizarCadastro.Name = "btnFinalizarCadastro";
             this.btnFinalizarCadastro.Size = new System.Drawing.Size(246, 39);
@@ -390,7 +393,7 @@
             "São Paulo  ",
             "Sergipe  ",
             "Tocantins"});
-            this.cbxEstado.Location = new System.Drawing.Point(379, 682);
+            this.cbxEstado.Location = new System.Drawing.Point(382, 688);
             this.cbxEstado.Name = "cbxEstado";
             this.cbxEstado.Size = new System.Drawing.Size(281, 21);
             this.cbxEstado.TabIndex = 26;
@@ -621,11 +624,20 @@
             this.lblNome.TabIndex = 2;
             this.lblNome.Text = "Nome";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
+            this.label1.Location = new System.Drawing.Point(29, 785);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 18);
+            this.label1.TabIndex = 44;
+            // 
             // FormularioCadastroMedico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.panelCadastro);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -684,5 +696,6 @@
         private System.Windows.Forms.TextBox txtCRM;
         private System.Windows.Forms.Label lblInstituicao;
         private System.Windows.Forms.ComboBox cbxInstituicao;
+        private System.Windows.Forms.Label label1;
     }
 }

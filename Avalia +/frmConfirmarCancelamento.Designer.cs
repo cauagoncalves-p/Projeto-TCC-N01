@@ -33,6 +33,7 @@
             this.lblsubtitulo = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panelCancelarConsulta = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnManterConsulta = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -49,6 +50,7 @@
             this.lblLocal = new System.Windows.Forms.Label();
             this.lblInfoMedico = new System.Windows.Forms.Label();
             this.lblMedica = new System.Windows.Forms.Label();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.panelCancelarConsulta.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,6 +67,7 @@
             this.btnSair.TabIndex = 15;
             this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // lblsubtitulo
             // 
@@ -92,6 +95,8 @@
             // 
             // panelCancelarConsulta
             // 
+            this.panelCancelarConsulta.AutoScroll = true;
+            this.panelCancelarConsulta.Controls.Add(this.label1);
             this.panelCancelarConsulta.Controls.Add(this.btnCancelar);
             this.panelCancelarConsulta.Controls.Add(this.btnManterConsulta);
             this.panelCancelarConsulta.Controls.Add(this.textBox1);
@@ -111,8 +116,17 @@
             this.panelCancelarConsulta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
             this.panelCancelarConsulta.Location = new System.Drawing.Point(69, 162);
             this.panelCancelarConsulta.Name = "panelCancelarConsulta";
-            this.panelCancelarConsulta.Size = new System.Drawing.Size(832, 722);
+            this.panelCancelarConsulta.Size = new System.Drawing.Size(832, 400);
             this.panelCancelarConsulta.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(39, 610);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 18);
+            this.label1.TabIndex = 16;
             // 
             // btnCancelar
             // 
@@ -299,7 +313,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.panelCancelarConsulta);
             this.Controls.Add(this.btnSair);
@@ -339,5 +352,7 @@
         private System.Windows.Forms.Label lblInfo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.Label label1;
     }
 }

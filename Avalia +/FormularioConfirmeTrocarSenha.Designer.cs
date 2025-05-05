@@ -53,7 +53,7 @@
             this.panelConfirmeSenha.Controls.Add(this.lblNovaSenha);
             this.panelConfirmeSenha.Controls.Add(this.lblTrocarSenha);
             this.panelConfirmeSenha.Controls.Add(this.lblAvalia);
-            this.panelConfirmeSenha.Location = new System.Drawing.Point(325, 45);
+            this.panelConfirmeSenha.Location = new System.Drawing.Point(328, 82);
             this.panelConfirmeSenha.Name = "panelConfirmeSenha";
             this.panelConfirmeSenha.Size = new System.Drawing.Size(335, 393);
             this.panelConfirmeSenha.TabIndex = 2;

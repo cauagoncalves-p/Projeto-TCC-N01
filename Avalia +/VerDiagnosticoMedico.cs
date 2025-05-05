@@ -23,8 +23,6 @@ namespace Avalia__
             RadiusButton controlador = new RadiusButton();
           
             controlador.ConfigInicial(this, panelPaciente, btnSair, 25, ColorTranslator.FromHtml("#f0e6dd"));
-            controlador.ConfigInicial(this, panel1, btnSair, 25, ColorTranslator.FromHtml("#f0e6dd"));
-            controlador.ConfigInicial(this, panel2, btnSair, 25, ColorTranslator.FromHtml("#f0e6dd"));
             controlador.ConfigInicial(this, panel7, btnSair, 25, ColorTranslator.FromHtml("#f0e6dd"));
           
             controlador.ConfigInicial(this, panelPrincipal, btnSair, 25, Color.White);
@@ -60,12 +58,12 @@ namespace Avalia__
                 string cpf = paciente != null ? paciente.CPF : "Não informado";
                 string dataNascimento = paciente != null ? paciente.Data_Nascimento.ToString("dd/MM/yyyy") : "Não informado";
                 // Preenche os campo
-                lblInfoTratamentoRecomendado.Text = diagnostico.tratamentoRecomendado;
+                txtTratamento.Text = diagnostico.tratamentoRecomendado;
                 lblInfoPaciente.Text = nomePaciente;
                 lblInfoCPF.Text = cpf;
                 lblInfoDataNascimento.Text = dataNascimento;
                 lblInfoDataConsulta.Text = consulta.DataConsulta.ToString("dd/MM/yyyy");
-                lblObservacao.Text = diagnostico.diagnostico;
+                txtObservacaoMedico.Text = diagnostico.diagnostico;
                 lblRemedio.Text = diagnostico.Medicamento ;
                 lblInfoDuracao.Text = diagnostico.duracao;
                 lblInfoComoUsar.Text = diagnostico.instrucaoReceita;
@@ -75,14 +73,6 @@ namespace Avalia__
             }
         }
 
-        private void VerDiagnosticoMedico_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
     }
 }

@@ -65,13 +65,15 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBoxComentarioPanel = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.lblTempoEspera = new System.Windows.Forms.Label();
             this.lblAtendimentoComunicacao = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtDriConsulta = new System.Windows.Forms.Label();
             this.btnEnviarAvaliacao = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.comentarioPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picRespeito2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picRespeito3)).BeginInit();
@@ -97,6 +99,9 @@
             // 
             // comentarioPanel
             // 
+            this.comentarioPanel.AutoScroll = true;
+            this.comentarioPanel.Controls.Add(this.label13);
+            this.comentarioPanel.Controls.Add(this.label4);
             this.comentarioPanel.Controls.Add(this.btnSair);
             this.comentarioPanel.Controls.Add(this.picRespeito2);
             this.comentarioPanel.Controls.Add(this.picRespeito3);
@@ -141,7 +146,7 @@
             this.comentarioPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
             this.comentarioPanel.Location = new System.Drawing.Point(59, 31);
             this.comentarioPanel.Name = "comentarioPanel";
-            this.comentarioPanel.Size = new System.Drawing.Size(878, 639);
+            this.comentarioPanel.Size = new System.Drawing.Size(878, 500);
             this.comentarioPanel.TabIndex = 1;
             // 
             // btnSair
@@ -503,17 +508,6 @@
             this.textBoxComentarioPanel.Size = new System.Drawing.Size(822, 105);
             this.textBoxComentarioPanel.TabIndex = 21;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.label6.Location = new System.Drawing.Point(28, 372);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(232, 18);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "Deixe um comentário (Opcional)";
-            // 
             // lblTempoEspera
             // 
             this.lblTempoEspera.AutoSize = true;
@@ -581,11 +575,43 @@
             this.label8.TabIndex = 31;
             this.label8.Text = resources.GetString("label8.Text");
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
+            this.label6.Location = new System.Drawing.Point(28, 469);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(232, 18);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "Deixe um comentário (Opcional)";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
+            this.label4.Location = new System.Drawing.Point(28, 372);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(377, 20);
+            this.label4.TabIndex = 66;
+            this.label4.Text = "Deixa um comentario de como foi sua consulta (Opicional )";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
+            this.label13.Location = new System.Drawing.Point(24, 625);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(0, 20);
+            this.label13.TabIndex = 67;
+            // 
             // FormularioAvaliacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 685);
+            this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.comentarioPanel);
             this.Controls.Add(this.label8);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -630,7 +656,6 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBoxComentarioPanel;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblTempoEspera;
         private System.Windows.Forms.Label lblAtendimentoComunicacao;
         private System.Windows.Forms.Label label2;
@@ -667,5 +692,8 @@
         private System.Windows.Forms.PictureBox picTempo1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
     }
 }

@@ -57,7 +57,7 @@
             this.panelLogin.Controls.Add(this.lblcrm);
             this.panelLogin.Controls.Add(this.lblLogin);
             this.panelLogin.Controls.Add(this.lblAvalia);
-            this.panelLogin.Location = new System.Drawing.Point(325, 45);
+            this.panelLogin.Location = new System.Drawing.Point(324, 56);
             this.panelLogin.Name = "panelLogin";
             this.panelLogin.Size = new System.Drawing.Size(335, 447);
             this.panelLogin.TabIndex = 1;

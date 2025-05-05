@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioAgendamentoConsulta));
             this.panelAgendar = new System.Windows.Forms.Panel();
             this.txtConsultaMotivo = new System.Windows.Forms.TextBox();
-            this.lblMotivoConsulta = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnContinuar = new System.Windows.Forms.Button();
             this.txtobservacao = new System.Windows.Forms.TextBox();
@@ -49,11 +48,15 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lblsubtitulo = new System.Windows.Forms.Label();
             this.btnSair = new System.Windows.Forms.Button();
+            this.lblMotivoConsulta = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelAgendar.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelAgendar
             // 
+            this.panelAgendar.AutoScroll = true;
+            this.panelAgendar.Controls.Add(this.label1);
             this.panelAgendar.Controls.Add(this.txtConsultaMotivo);
             this.panelAgendar.Controls.Add(this.lblMotivoConsulta);
             this.panelAgendar.Controls.Add(this.btnCancelar);
@@ -70,9 +73,9 @@
             this.panelAgendar.Controls.Add(this.cbxEspecialidade);
             this.panelAgendar.Controls.Add(this.c);
             this.panelAgendar.Controls.Add(this.lblinfoConsulta);
-            this.panelAgendar.Location = new System.Drawing.Point(70, 80);
+            this.panelAgendar.Location = new System.Drawing.Point(70, 122);
             this.panelAgendar.Name = "panelAgendar";
-            this.panelAgendar.Size = new System.Drawing.Size(855, 600);
+            this.panelAgendar.Size = new System.Drawing.Size(855, 430);
             this.panelAgendar.TabIndex = 0;
             // 
             // txtConsultaMotivo
@@ -85,17 +88,6 @@
             this.txtConsultaMotivo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtConsultaMotivo.Size = new System.Drawing.Size(775, 84);
             this.txtConsultaMotivo.TabIndex = 18;
-            // 
-            // lblMotivoConsulta
-            // 
-            this.lblMotivoConsulta.AutoSize = true;
-            this.lblMotivoConsulta.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMotivoConsulta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblMotivoConsulta.Location = new System.Drawing.Point(31, 216);
-            this.lblMotivoConsulta.Name = "lblMotivoConsulta";
-            this.lblMotivoConsulta.Size = new System.Drawing.Size(154, 23);
-            this.lblMotivoConsulta.TabIndex = 17;
-            this.lblMotivoConsulta.Text = "Motivo da consulta";
             // 
             // btnCancelar
             // 
@@ -299,12 +291,32 @@
             this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
+            // lblMotivoConsulta
+            // 
+            this.lblMotivoConsulta.AutoSize = true;
+            this.lblMotivoConsulta.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMotivoConsulta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
+            this.lblMotivoConsulta.Location = new System.Drawing.Point(31, 216);
+            this.lblMotivoConsulta.Name = "lblMotivoConsulta";
+            this.lblMotivoConsulta.Size = new System.Drawing.Size(154, 23);
+            this.lblMotivoConsulta.TabIndex = 17;
+            this.lblMotivoConsulta.Text = "Motivo da consulta";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
+            this.label1.Location = new System.Drawing.Point(31, 549);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 23);
+            this.label1.TabIndex = 19;
+            // 
             // FormularioAgendamentoConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(984, 557);
+            this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.lblsubtitulo);
             this.Controls.Add(this.lblTitulo);
@@ -342,6 +354,7 @@
         private System.Windows.Forms.TextBox txtobservacao;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.TextBox txtConsultaMotivo;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblMotivoConsulta;
     }
 }

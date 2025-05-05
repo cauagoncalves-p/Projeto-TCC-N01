@@ -145,5 +145,11 @@ namespace Avalia__
                 mensagem_Do_Sistema.MensagemError("Falha ao reenviar o código.");
             }
         }
+
+        private void btnSair_Click_1(object sender, EventArgs e)
+        {
+            ConfiguracaoTelas configuracaoTelas = new ConfiguracaoTelas();
+            configuracaoTelas.FecharAba(this);
+        }
     }
 }

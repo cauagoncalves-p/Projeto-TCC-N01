@@ -64,12 +64,14 @@
             this.lblDataNascimento = new System.Windows.Forms.Label();
             this.lblSobrenome = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelCadastro.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelCadastro
             // 
             this.panelCadastro.AutoScroll = true;
+            this.panelCadastro.Controls.Add(this.label1);
             this.panelCadastro.Controls.Add(this.lblError);
             this.panelCadastro.Controls.Add(this.lblConfirmeSenha);
             this.panelCadastro.Controls.Add(this.lblSenha);
@@ -107,7 +109,7 @@
             this.panelCadastro.Location = new System.Drawing.Point(160, 11);
             this.panelCadastro.Name = "panelCadastro";
             this.panelCadastro.Padding = new System.Windows.Forms.Padding(0, 0, 20, 20);
-            this.panelCadastro.Size = new System.Drawing.Size(719, 788);
+            this.panelCadastro.Size = new System.Drawing.Size(707, 550);
             this.panelCadastro.TabIndex = 0;
             this.panelCadastro.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCadastro_Paint);
             // 
@@ -525,6 +527,16 @@
             this.lblNome.TabIndex = 2;
             this.lblNome.Text = "Nome";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
+            this.label1.Location = new System.Drawing.Point(30, 761);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 18);
+            this.label1.TabIndex = 38;
+            // 
             // FormularioCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -582,5 +594,6 @@
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.TextBox txtconfirmeSenha;
         private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.Label label1;
     }
 }

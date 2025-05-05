@@ -48,6 +48,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.dgvConsultasMedico = new System.Windows.Forms.DataGridView();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.lblTotalAvaliacao = new System.Windows.Forms.Label();
             this.pictureBox21 = new System.Windows.Forms.PictureBox();
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
             this.pictureBox23 = new System.Windows.Forms.PictureBox();
@@ -90,7 +91,6 @@
             this.lblsubtitulo = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.lblTotalAvaliacao = new System.Windows.Forms.Label();
             this.panelConsultasTotais.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
             this.panelPendentes.SuspendLayout();
@@ -134,20 +134,19 @@
             this.panelConsultasTotais.Controls.Add(this.pictureBox26);
             this.panelConsultasTotais.Controls.Add(this.lblTotalConsultas);
             this.panelConsultasTotais.Controls.Add(this.lblConsultas);
-            this.panelConsultasTotais.Location = new System.Drawing.Point(64, 210);
-            this.panelConsultasTotais.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelConsultasTotais.Location = new System.Drawing.Point(41, 170);
             this.panelConsultasTotais.Name = "panelConsultasTotais";
-            this.panelConsultasTotais.Size = new System.Drawing.Size(267, 123);
+            this.panelConsultasTotais.Size = new System.Drawing.Size(200, 100);
             this.panelConsultasTotais.TabIndex = 0;
             this.panelConsultasTotais.Click += new System.EventHandler(this.panelConsultasTotais_Click);
             // 
             // pictureBox26
             // 
             this.pictureBox26.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox26.Image")));
-            this.pictureBox26.Location = new System.Drawing.Point(23, 16);
-            this.pictureBox26.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox26.Location = new System.Drawing.Point(17, 13);
+            this.pictureBox26.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox26.Name = "pictureBox26";
-            this.pictureBox26.Size = new System.Drawing.Size(49, 37);
+            this.pictureBox26.Size = new System.Drawing.Size(37, 30);
             this.pictureBox26.TabIndex = 2;
             this.pictureBox26.TabStop = false;
             // 
@@ -156,10 +155,9 @@
             this.lblTotalConsultas.AutoSize = true;
             this.lblTotalConsultas.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalConsultas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblTotalConsultas.Location = new System.Drawing.Point(15, 55);
-            this.lblTotalConsultas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotalConsultas.Location = new System.Drawing.Point(11, 45);
             this.lblTotalConsultas.Name = "lblTotalConsultas";
-            this.lblTotalConsultas.Size = new System.Drawing.Size(57, 39);
+            this.lblTotalConsultas.Size = new System.Drawing.Size(46, 31);
             this.lblTotalConsultas.TabIndex = 1;
             this.lblTotalConsultas.Text = "10";
             // 
@@ -167,10 +165,9 @@
             // 
             this.lblConsultas.AutoSize = true;
             this.lblConsultas.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConsultas.Location = new System.Drawing.Point(79, 18);
-            this.lblConsultas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblConsultas.Location = new System.Drawing.Point(59, 15);
             this.lblConsultas.Name = "lblConsultas";
-            this.lblConsultas.Size = new System.Drawing.Size(167, 23);
+            this.lblConsultas.Size = new System.Drawing.Size(133, 18);
             this.lblConsultas.TabIndex = 0;
             this.lblConsultas.Text = "Consultas do mês";
             // 
@@ -179,20 +176,19 @@
             this.panelPendentes.Controls.Add(this.pictureBox27);
             this.panelPendentes.Controls.Add(this.lblTotalPendentes);
             this.panelPendentes.Controls.Add(this.lblPendentes);
-            this.panelPendentes.Location = new System.Drawing.Point(388, 210);
-            this.panelPendentes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelPendentes.Location = new System.Drawing.Point(284, 170);
             this.panelPendentes.Name = "panelPendentes";
-            this.panelPendentes.Size = new System.Drawing.Size(267, 123);
+            this.panelPendentes.Size = new System.Drawing.Size(200, 100);
             this.panelPendentes.TabIndex = 1;
             this.panelPendentes.Click += new System.EventHandler(this.panelPendentes_Click);
             // 
             // pictureBox27
             // 
             this.pictureBox27.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox27.Image")));
-            this.pictureBox27.Location = new System.Drawing.Point(29, 14);
-            this.pictureBox27.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox27.Location = new System.Drawing.Point(22, 11);
+            this.pictureBox27.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox27.Name = "pictureBox27";
-            this.pictureBox27.Size = new System.Drawing.Size(49, 37);
+            this.pictureBox27.Size = new System.Drawing.Size(37, 30);
             this.pictureBox27.TabIndex = 3;
             this.pictureBox27.TabStop = false;
             // 
@@ -201,10 +197,9 @@
             this.lblTotalPendentes.AutoSize = true;
             this.lblTotalPendentes.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalPendentes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblTotalPendentes.Location = new System.Drawing.Point(23, 54);
-            this.lblTotalPendentes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotalPendentes.Location = new System.Drawing.Point(17, 44);
             this.lblTotalPendentes.Name = "lblTotalPendentes";
-            this.lblTotalPendentes.Size = new System.Drawing.Size(37, 39);
+            this.lblTotalPendentes.Size = new System.Drawing.Size(30, 31);
             this.lblTotalPendentes.TabIndex = 3;
             this.lblTotalPendentes.Text = "5";
             // 
@@ -212,10 +207,9 @@
             // 
             this.lblPendentes.AutoSize = true;
             this.lblPendentes.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPendentes.Location = new System.Drawing.Point(83, 18);
-            this.lblPendentes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPendentes.Location = new System.Drawing.Point(62, 15);
             this.lblPendentes.Name = "lblPendentes";
-            this.lblPendentes.Size = new System.Drawing.Size(103, 23);
+            this.lblPendentes.Size = new System.Drawing.Size(83, 18);
             this.lblPendentes.TabIndex = 2;
             this.lblPendentes.Text = "Pendentes";
             // 
@@ -224,20 +218,19 @@
             this.paelRealizadas.Controls.Add(this.pictureBox28);
             this.paelRealizadas.Controls.Add(this.lblTotalRealizadas);
             this.paelRealizadas.Controls.Add(this.lblRealizadas);
-            this.paelRealizadas.Location = new System.Drawing.Point(709, 210);
-            this.paelRealizadas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.paelRealizadas.Location = new System.Drawing.Point(525, 170);
             this.paelRealizadas.Name = "paelRealizadas";
-            this.paelRealizadas.Size = new System.Drawing.Size(267, 123);
+            this.paelRealizadas.Size = new System.Drawing.Size(200, 100);
             this.paelRealizadas.TabIndex = 1;
             this.paelRealizadas.Click += new System.EventHandler(this.paelRealizadas_Click);
             // 
             // pictureBox28
             // 
             this.pictureBox28.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox28.Image")));
-            this.pictureBox28.Location = new System.Drawing.Point(35, 14);
-            this.pictureBox28.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox28.Location = new System.Drawing.Point(26, 11);
+            this.pictureBox28.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox28.Name = "pictureBox28";
-            this.pictureBox28.Size = new System.Drawing.Size(49, 37);
+            this.pictureBox28.Size = new System.Drawing.Size(37, 30);
             this.pictureBox28.TabIndex = 4;
             this.pictureBox28.TabStop = false;
             // 
@@ -246,10 +239,9 @@
             this.lblTotalRealizadas.AutoSize = true;
             this.lblTotalRealizadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalRealizadas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblTotalRealizadas.Location = new System.Drawing.Point(27, 54);
-            this.lblTotalRealizadas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotalRealizadas.Location = new System.Drawing.Point(20, 44);
             this.lblTotalRealizadas.Name = "lblTotalRealizadas";
-            this.lblTotalRealizadas.Size = new System.Drawing.Size(37, 39);
+            this.lblTotalRealizadas.Size = new System.Drawing.Size(30, 31);
             this.lblTotalRealizadas.TabIndex = 5;
             this.lblTotalRealizadas.Text = "5";
             // 
@@ -257,10 +249,9 @@
             // 
             this.lblRealizadas.AutoSize = true;
             this.lblRealizadas.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRealizadas.Location = new System.Drawing.Point(91, 17);
-            this.lblRealizadas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRealizadas.Location = new System.Drawing.Point(68, 14);
             this.lblRealizadas.Name = "lblRealizadas";
-            this.lblRealizadas.Size = new System.Drawing.Size(106, 23);
+            this.lblRealizadas.Size = new System.Drawing.Size(86, 18);
             this.lblRealizadas.TabIndex = 4;
             this.lblRealizadas.Text = "Realizadas";
             // 
@@ -269,20 +260,19 @@
             this.panelUrgente.Controls.Add(this.pictureBox29);
             this.panelUrgente.Controls.Add(this.lblTotalUrgencia);
             this.panelUrgente.Controls.Add(this.lblUrgencia);
-            this.panelUrgente.Location = new System.Drawing.Point(1029, 210);
-            this.panelUrgente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelUrgente.Location = new System.Drawing.Point(765, 170);
             this.panelUrgente.Name = "panelUrgente";
-            this.panelUrgente.Size = new System.Drawing.Size(267, 123);
+            this.panelUrgente.Size = new System.Drawing.Size(200, 100);
             this.panelUrgente.TabIndex = 1;
             this.panelUrgente.Click += new System.EventHandler(this.panelUrgente_Click);
             // 
             // pictureBox29
             // 
             this.pictureBox29.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox29.Image")));
-            this.pictureBox29.Location = new System.Drawing.Point(23, 14);
-            this.pictureBox29.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox29.Location = new System.Drawing.Point(17, 11);
+            this.pictureBox29.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox29.Name = "pictureBox29";
-            this.pictureBox29.Size = new System.Drawing.Size(49, 37);
+            this.pictureBox29.Size = new System.Drawing.Size(37, 30);
             this.pictureBox29.TabIndex = 6;
             this.pictureBox29.TabStop = false;
             // 
@@ -291,10 +281,9 @@
             this.lblTotalUrgencia.AutoSize = true;
             this.lblTotalUrgencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalUrgencia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblTotalUrgencia.Location = new System.Drawing.Point(16, 54);
-            this.lblTotalUrgencia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotalUrgencia.Location = new System.Drawing.Point(12, 44);
             this.lblTotalUrgencia.Name = "lblTotalUrgencia";
-            this.lblTotalUrgencia.Size = new System.Drawing.Size(37, 39);
+            this.lblTotalUrgencia.Size = new System.Drawing.Size(30, 31);
             this.lblTotalUrgencia.TabIndex = 7;
             this.lblTotalUrgencia.Text = "5";
             // 
@@ -302,30 +291,27 @@
             // 
             this.lblUrgencia.AutoSize = true;
             this.lblUrgencia.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUrgencia.Location = new System.Drawing.Point(79, 15);
-            this.lblUrgencia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUrgencia.Location = new System.Drawing.Point(59, 12);
             this.lblUrgencia.Name = "lblUrgencia";
-            this.lblUrgencia.Size = new System.Drawing.Size(87, 23);
+            this.lblUrgencia.Size = new System.Drawing.Size(71, 18);
             this.lblUrgencia.TabIndex = 6;
             this.lblUrgencia.Text = "Urgência";
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.dgvConsultasMedico);
-            this.panel5.Location = new System.Drawing.Point(64, 383);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Location = new System.Drawing.Point(41, 310);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(857, 416);
+            this.panel5.Size = new System.Drawing.Size(643, 338);
             this.panel5.TabIndex = 1;
             // 
             // dgvConsultasMedico
             // 
             this.dgvConsultasMedico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvConsultasMedico.Location = new System.Drawing.Point(0, 0);
-            this.dgvConsultasMedico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvConsultasMedico.Name = "dgvConsultasMedico";
             this.dgvConsultasMedico.RowHeadersWidth = 51;
-            this.dgvConsultasMedico.Size = new System.Drawing.Size(857, 416);
+            this.dgvConsultasMedico.Size = new System.Drawing.Size(643, 338);
             this.dgvConsultasMedico.TabIndex = 0;
             this.dgvConsultasMedico.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsultasMedico_CellContentDoubleClick);
             // 
@@ -370,19 +356,27 @@
             this.panel6.Controls.Add(this.lbl4Estrelas);
             this.panel6.Controls.Add(this.lbl5Estrelas);
             this.panel6.Controls.Add(this.lblAvaliacao);
-            this.panel6.Location = new System.Drawing.Point(932, 383);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Location = new System.Drawing.Point(692, 310);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(367, 318);
+            this.panel6.Size = new System.Drawing.Size(275, 258);
             this.panel6.TabIndex = 2;
+            // 
+            // lblTotalAvaliacao
+            // 
+            this.lblTotalAvaliacao.AutoSize = true;
+            this.lblTotalAvaliacao.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalAvaliacao.Location = new System.Drawing.Point(166, 47);
+            this.lblTotalAvaliacao.Name = "lblTotalAvaliacao";
+            this.lblTotalAvaliacao.Size = new System.Drawing.Size(13, 14);
+            this.lblTotalAvaliacao.TabIndex = 8;
+            this.lblTotalAvaliacao.Text = "0";
             // 
             // pictureBox21
             // 
             this.pictureBox21.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox21.Image")));
-            this.pictureBox21.Location = new System.Drawing.Point(120, 250);
-            this.pictureBox21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox21.Location = new System.Drawing.Point(90, 203);
             this.pictureBox21.Name = "pictureBox21";
-            this.pictureBox21.Size = new System.Drawing.Size(44, 34);
+            this.pictureBox21.Size = new System.Drawing.Size(33, 28);
             this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox21.TabIndex = 68;
             this.pictureBox21.TabStop = false;
@@ -390,10 +384,9 @@
             // pictureBox22
             // 
             this.pictureBox22.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox22.Image")));
-            this.pictureBox22.Location = new System.Drawing.Point(193, 250);
-            this.pictureBox22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox22.Location = new System.Drawing.Point(145, 203);
             this.pictureBox22.Name = "pictureBox22";
-            this.pictureBox22.Size = new System.Drawing.Size(44, 34);
+            this.pictureBox22.Size = new System.Drawing.Size(33, 28);
             this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox22.TabIndex = 67;
             this.pictureBox22.TabStop = false;
@@ -401,10 +394,9 @@
             // pictureBox23
             // 
             this.pictureBox23.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox23.Image")));
-            this.pictureBox23.Location = new System.Drawing.Point(156, 250);
-            this.pictureBox23.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox23.Location = new System.Drawing.Point(117, 203);
             this.pictureBox23.Name = "pictureBox23";
-            this.pictureBox23.Size = new System.Drawing.Size(44, 34);
+            this.pictureBox23.Size = new System.Drawing.Size(33, 28);
             this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox23.TabIndex = 66;
             this.pictureBox23.TabStop = false;
@@ -412,10 +404,9 @@
             // pictureBox24
             // 
             this.pictureBox24.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox24.Image")));
-            this.pictureBox24.Location = new System.Drawing.Point(231, 250);
-            this.pictureBox24.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox24.Location = new System.Drawing.Point(173, 203);
             this.pictureBox24.Name = "pictureBox24";
-            this.pictureBox24.Size = new System.Drawing.Size(44, 34);
+            this.pictureBox24.Size = new System.Drawing.Size(33, 28);
             this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox24.TabIndex = 65;
             this.pictureBox24.TabStop = false;
@@ -423,10 +414,9 @@
             // pictureBox25
             // 
             this.pictureBox25.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox25.Image")));
-            this.pictureBox25.Location = new System.Drawing.Point(84, 250);
-            this.pictureBox25.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox25.Location = new System.Drawing.Point(63, 203);
             this.pictureBox25.Name = "pictureBox25";
-            this.pictureBox25.Size = new System.Drawing.Size(44, 34);
+            this.pictureBox25.Size = new System.Drawing.Size(33, 28);
             this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox25.TabIndex = 64;
             this.pictureBox25.TabStop = false;
@@ -434,10 +424,9 @@
             // pictureBox16
             // 
             this.pictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
-            this.pictureBox16.Location = new System.Drawing.Point(120, 215);
-            this.pictureBox16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox16.Location = new System.Drawing.Point(90, 175);
             this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(44, 34);
+            this.pictureBox16.Size = new System.Drawing.Size(33, 28);
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox16.TabIndex = 63;
             this.pictureBox16.TabStop = false;
@@ -445,10 +434,9 @@
             // pictureBox17
             // 
             this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
-            this.pictureBox17.Location = new System.Drawing.Point(193, 215);
-            this.pictureBox17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox17.Location = new System.Drawing.Point(145, 175);
             this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(44, 34);
+            this.pictureBox17.Size = new System.Drawing.Size(33, 28);
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox17.TabIndex = 62;
             this.pictureBox17.TabStop = false;
@@ -456,10 +444,9 @@
             // pictureBox18
             // 
             this.pictureBox18.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox18.Image")));
-            this.pictureBox18.Location = new System.Drawing.Point(156, 215);
-            this.pictureBox18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox18.Location = new System.Drawing.Point(117, 175);
             this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(44, 34);
+            this.pictureBox18.Size = new System.Drawing.Size(33, 28);
             this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox18.TabIndex = 61;
             this.pictureBox18.TabStop = false;
@@ -467,10 +454,9 @@
             // pictureBox19
             // 
             this.pictureBox19.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox19.Image")));
-            this.pictureBox19.Location = new System.Drawing.Point(231, 215);
-            this.pictureBox19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox19.Location = new System.Drawing.Point(173, 175);
             this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(44, 34);
+            this.pictureBox19.Size = new System.Drawing.Size(33, 28);
             this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox19.TabIndex = 60;
             this.pictureBox19.TabStop = false;
@@ -478,10 +464,9 @@
             // pictureBox20
             // 
             this.pictureBox20.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox20.Image")));
-            this.pictureBox20.Location = new System.Drawing.Point(84, 215);
-            this.pictureBox20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox20.Location = new System.Drawing.Point(63, 175);
             this.pictureBox20.Name = "pictureBox20";
-            this.pictureBox20.Size = new System.Drawing.Size(44, 34);
+            this.pictureBox20.Size = new System.Drawing.Size(33, 28);
             this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox20.TabIndex = 59;
             this.pictureBox20.TabStop = false;
@@ -489,10 +474,9 @@
             // pictureBox11
             // 
             this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(120, 181);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox11.Location = new System.Drawing.Point(90, 147);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(44, 34);
+            this.pictureBox11.Size = new System.Drawing.Size(33, 28);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox11.TabIndex = 58;
             this.pictureBox11.TabStop = false;
@@ -500,10 +484,9 @@
             // pictureBox12
             // 
             this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(193, 181);
-            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox12.Location = new System.Drawing.Point(145, 147);
             this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(44, 34);
+            this.pictureBox12.Size = new System.Drawing.Size(33, 28);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox12.TabIndex = 57;
             this.pictureBox12.TabStop = false;
@@ -511,10 +494,9 @@
             // pictureBox13
             // 
             this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(156, 181);
-            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox13.Location = new System.Drawing.Point(117, 147);
             this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(44, 34);
+            this.pictureBox13.Size = new System.Drawing.Size(33, 28);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox13.TabIndex = 56;
             this.pictureBox13.TabStop = false;
@@ -522,10 +504,9 @@
             // pictureBox14
             // 
             this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
-            this.pictureBox14.Location = new System.Drawing.Point(231, 181);
-            this.pictureBox14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox14.Location = new System.Drawing.Point(173, 147);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(44, 34);
+            this.pictureBox14.Size = new System.Drawing.Size(33, 28);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox14.TabIndex = 55;
             this.pictureBox14.TabStop = false;
@@ -533,10 +514,9 @@
             // pictureBox15
             // 
             this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
-            this.pictureBox15.Location = new System.Drawing.Point(84, 181);
-            this.pictureBox15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox15.Location = new System.Drawing.Point(63, 147);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(44, 34);
+            this.pictureBox15.Size = new System.Drawing.Size(33, 28);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox15.TabIndex = 54;
             this.pictureBox15.TabStop = false;
@@ -544,10 +524,9 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(120, 146);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox6.Location = new System.Drawing.Point(90, 119);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(44, 34);
+            this.pictureBox6.Size = new System.Drawing.Size(33, 28);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox6.TabIndex = 53;
             this.pictureBox6.TabStop = false;
@@ -555,10 +534,9 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(193, 146);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox7.Location = new System.Drawing.Point(145, 119);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(44, 34);
+            this.pictureBox7.Size = new System.Drawing.Size(33, 28);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox7.TabIndex = 52;
             this.pictureBox7.TabStop = false;
@@ -566,10 +544,9 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(156, 146);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox8.Location = new System.Drawing.Point(117, 119);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(44, 34);
+            this.pictureBox8.Size = new System.Drawing.Size(33, 28);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox8.TabIndex = 51;
             this.pictureBox8.TabStop = false;
@@ -577,10 +554,9 @@
             // pictureBox9
             // 
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(231, 146);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox9.Location = new System.Drawing.Point(173, 119);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(44, 34);
+            this.pictureBox9.Size = new System.Drawing.Size(33, 28);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox9.TabIndex = 50;
             this.pictureBox9.TabStop = false;
@@ -588,10 +564,9 @@
             // pictureBox10
             // 
             this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(84, 146);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox10.Location = new System.Drawing.Point(63, 119);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(44, 34);
+            this.pictureBox10.Size = new System.Drawing.Size(33, 28);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox10.TabIndex = 49;
             this.pictureBox10.TabStop = false;
@@ -600,10 +575,9 @@
             // 
             this.lblNota1.AutoSize = true;
             this.lblNota1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNota1.Location = new System.Drawing.Point(287, 261);
-            this.lblNota1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNota1.Location = new System.Drawing.Point(215, 212);
             this.lblNota1.Name = "lblNota1";
-            this.lblNota1.Size = new System.Drawing.Size(18, 19);
+            this.lblNota1.Size = new System.Drawing.Size(14, 16);
             this.lblNota1.TabIndex = 48;
             this.lblNota1.Text = "1";
             // 
@@ -611,10 +585,9 @@
             // 
             this.lblNota2.AutoSize = true;
             this.lblNota2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNota2.Location = new System.Drawing.Point(287, 223);
-            this.lblNota2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNota2.Location = new System.Drawing.Point(215, 181);
             this.lblNota2.Name = "lblNota2";
-            this.lblNota2.Size = new System.Drawing.Size(18, 19);
+            this.lblNota2.Size = new System.Drawing.Size(14, 16);
             this.lblNota2.TabIndex = 47;
             this.lblNota2.Text = "2";
             // 
@@ -622,10 +595,9 @@
             // 
             this.lblNota3.AutoSize = true;
             this.lblNota3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNota3.Location = new System.Drawing.Point(287, 188);
-            this.lblNota3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNota3.Location = new System.Drawing.Point(215, 153);
             this.lblNota3.Name = "lblNota3";
-            this.lblNota3.Size = new System.Drawing.Size(18, 19);
+            this.lblNota3.Size = new System.Drawing.Size(14, 16);
             this.lblNota3.TabIndex = 46;
             this.lblNota3.Text = "3";
             // 
@@ -633,10 +605,9 @@
             // 
             this.lblNota4.AutoSize = true;
             this.lblNota4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNota4.Location = new System.Drawing.Point(287, 154);
-            this.lblNota4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNota4.Location = new System.Drawing.Point(215, 125);
             this.lblNota4.Name = "lblNota4";
-            this.lblNota4.Size = new System.Drawing.Size(18, 19);
+            this.lblNota4.Size = new System.Drawing.Size(14, 16);
             this.lblNota4.TabIndex = 45;
             this.lblNota4.Text = "4";
             // 
@@ -644,20 +615,18 @@
             // 
             this.lblNota5.AutoSize = true;
             this.lblNota5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNota5.Location = new System.Drawing.Point(287, 119);
-            this.lblNota5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNota5.Location = new System.Drawing.Point(215, 97);
             this.lblNota5.Name = "lblNota5";
-            this.lblNota5.Size = new System.Drawing.Size(18, 19);
+            this.lblNota5.Size = new System.Drawing.Size(14, 16);
             this.lblNota5.TabIndex = 44;
             this.lblNota5.Text = "5";
             // 
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(120, 112);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox5.Location = new System.Drawing.Point(90, 91);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(44, 34);
+            this.pictureBox5.Size = new System.Drawing.Size(33, 28);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox5.TabIndex = 23;
             this.pictureBox5.TabStop = false;
@@ -665,10 +634,9 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(193, 112);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Location = new System.Drawing.Point(145, 91);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(44, 34);
+            this.pictureBox4.Size = new System.Drawing.Size(33, 28);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox4.TabIndex = 22;
             this.pictureBox4.TabStop = false;
@@ -676,10 +644,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(156, 112);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Location = new System.Drawing.Point(117, 91);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(44, 34);
+            this.pictureBox3.Size = new System.Drawing.Size(33, 28);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox3.TabIndex = 21;
             this.pictureBox3.TabStop = false;
@@ -687,10 +654,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(231, 112);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(173, 91);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(44, 34);
+            this.pictureBox2.Size = new System.Drawing.Size(33, 28);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 20;
             this.pictureBox2.TabStop = false;
@@ -698,10 +664,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(84, 112);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(63, 91);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(44, 34);
+            this.pictureBox1.Size = new System.Drawing.Size(33, 28);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
@@ -711,10 +676,9 @@
             this.lblNota.AutoSize = true;
             this.lblNota.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
             this.lblNota.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblNota.Location = new System.Drawing.Point(223, 15);
-            this.lblNota.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNota.Location = new System.Drawing.Point(167, 12);
             this.lblNota.Name = "lblNota";
-            this.lblNota.Size = new System.Drawing.Size(57, 35);
+            this.lblNota.Size = new System.Drawing.Size(46, 29);
             this.lblNota.TabIndex = 15;
             this.lblNota.Text = "4.8";
             // 
@@ -723,10 +687,9 @@
             this.lblAvaliacao1.AutoSize = true;
             this.lblAvaliacao1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAvaliacao1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblAvaliacao1.Location = new System.Drawing.Point(9, 52);
-            this.lblAvaliacao1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAvaliacao1.Location = new System.Drawing.Point(7, 42);
             this.lblAvaliacao1.Name = "lblAvaliacao1";
-            this.lblAvaliacao1.Size = new System.Drawing.Size(148, 24);
+            this.lblAvaliacao1.Size = new System.Drawing.Size(120, 19);
             this.lblAvaliacao1.TabIndex = 14;
             this.lblAvaliacao1.Text = " dos pacientes";
             // 
@@ -735,10 +698,9 @@
             this.lbl1Estrela.AutoSize = true;
             this.lbl1Estrela.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl1Estrela.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lbl1Estrela.Location = new System.Drawing.Point(4, 258);
-            this.lbl1Estrela.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl1Estrela.Location = new System.Drawing.Point(3, 210);
             this.lbl1Estrela.Name = "lbl1Estrela";
-            this.lbl1Estrela.Size = new System.Drawing.Size(66, 17);
+            this.lbl1Estrela.Size = new System.Drawing.Size(56, 15);
             this.lbl1Estrela.TabIndex = 13;
             this.lbl1Estrela.Text = "1 Estrela";
             // 
@@ -747,10 +709,9 @@
             this.lbl2Estrelas.AutoSize = true;
             this.lbl2Estrelas.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl2Estrelas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lbl2Estrelas.Location = new System.Drawing.Point(4, 224);
-            this.lbl2Estrelas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl2Estrelas.Location = new System.Drawing.Point(3, 182);
             this.lbl2Estrelas.Name = "lbl2Estrelas";
-            this.lbl2Estrelas.Size = new System.Drawing.Size(74, 17);
+            this.lbl2Estrelas.Size = new System.Drawing.Size(63, 15);
             this.lbl2Estrelas.TabIndex = 12;
             this.lbl2Estrelas.Text = "2 Estrelas";
             // 
@@ -759,10 +720,9 @@
             this.lbl3Estrelas.AutoSize = true;
             this.lbl3Estrelas.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl3Estrelas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lbl3Estrelas.Location = new System.Drawing.Point(4, 190);
-            this.lbl3Estrelas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl3Estrelas.Location = new System.Drawing.Point(3, 154);
             this.lbl3Estrelas.Name = "lbl3Estrelas";
-            this.lbl3Estrelas.Size = new System.Drawing.Size(74, 17);
+            this.lbl3Estrelas.Size = new System.Drawing.Size(63, 15);
             this.lbl3Estrelas.TabIndex = 11;
             this.lbl3Estrelas.Text = "3 Estrelas";
             // 
@@ -771,10 +731,9 @@
             this.lbl4Estrelas.AutoSize = true;
             this.lbl4Estrelas.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl4Estrelas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lbl4Estrelas.Location = new System.Drawing.Point(4, 155);
-            this.lbl4Estrelas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl4Estrelas.Location = new System.Drawing.Point(3, 126);
             this.lbl4Estrelas.Name = "lbl4Estrelas";
-            this.lbl4Estrelas.Size = new System.Drawing.Size(74, 17);
+            this.lbl4Estrelas.Size = new System.Drawing.Size(63, 15);
             this.lbl4Estrelas.TabIndex = 10;
             this.lbl4Estrelas.Text = "4 Estrelas";
             // 
@@ -783,10 +742,9 @@
             this.lbl5Estrelas.AutoSize = true;
             this.lbl5Estrelas.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl5Estrelas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lbl5Estrelas.Location = new System.Drawing.Point(4, 121);
-            this.lbl5Estrelas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl5Estrelas.Location = new System.Drawing.Point(3, 98);
             this.lbl5Estrelas.Name = "lbl5Estrelas";
-            this.lbl5Estrelas.Size = new System.Drawing.Size(74, 17);
+            this.lbl5Estrelas.Size = new System.Drawing.Size(63, 15);
             this.lbl5Estrelas.TabIndex = 9;
             this.lbl5Estrelas.Text = "5 Estrelas";
             // 
@@ -795,10 +753,9 @@
             this.lblAvaliacao.AutoSize = true;
             this.lblAvaliacao.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAvaliacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblAvaliacao.Location = new System.Drawing.Point(21, 27);
-            this.lblAvaliacao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAvaliacao.Location = new System.Drawing.Point(16, 22);
             this.lblAvaliacao.Name = "lblAvaliacao";
-            this.lblAvaliacao.Size = new System.Drawing.Size(110, 24);
+            this.lblAvaliacao.Size = new System.Drawing.Size(91, 19);
             this.lblAvaliacao.TabIndex = 8;
             this.lblAvaliacao.Text = "Avaliações";
             // 
@@ -809,10 +766,9 @@
             this.btnSair.FlatAppearance.BorderSize = 0;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
-            this.btnSair.Location = new System.Drawing.Point(1141, 49);
-            this.btnSair.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSair.Location = new System.Drawing.Point(849, 39);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(67, 53);
+            this.btnSair.Size = new System.Drawing.Size(50, 43);
             this.btnSair.TabIndex = 15;
             this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSair.UseVisualStyleBackColor = false;
@@ -824,10 +780,9 @@
             this.lblsubtitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblsubtitulo.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblsubtitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblsubtitulo.Location = new System.Drawing.Point(153, 110);
-            this.lblsubtitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblsubtitulo.Location = new System.Drawing.Point(108, 88);
             this.lblsubtitulo.Name = "lblsubtitulo";
-            this.lblsubtitulo.Size = new System.Drawing.Size(239, 27);
+            this.lblsubtitulo.Size = new System.Drawing.Size(187, 22);
             this.lblsubtitulo.TabIndex = 14;
             this.lblsubtitulo.Text = "Agende sua consulta";
             // 
@@ -837,10 +792,9 @@
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblTitulo.Location = new System.Drawing.Point(79, 71);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitulo.Location = new System.Drawing.Point(52, 57);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(118, 36);
+            this.lblTitulo.Size = new System.Drawing.Size(96, 29);
             this.lblTitulo.TabIndex = 13;
             this.lblTitulo.Text = "Áurea+";
             // 
@@ -849,30 +803,18 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.label3.Location = new System.Drawing.Point(60, 140);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(38, 113);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(1215, 16);
+            this.label3.Size = new System.Drawing.Size(913, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = resources.GetString("label3.Text");
             // 
-            // lblTotalAvaliacao
-            // 
-            this.lblTotalAvaliacao.AutoSize = true;
-            this.lblTotalAvaliacao.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalAvaliacao.Location = new System.Drawing.Point(222, 58);
-            this.lblTotalAvaliacao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTotalAvaliacao.Name = "lblTotalAvaliacao";
-            this.lblTotalAvaliacao.Size = new System.Drawing.Size(14, 16);
-            this.lblTotalAvaliacao.TabIndex = 8;
-            this.lblTotalAvaliacao.Text = "0";
-            // 
             // FormularioPaginaMedico
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1312, 690);
+            this.ClientSize = new System.Drawing.Size(1001, 561);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.lblsubtitulo);
@@ -884,12 +826,12 @@
             this.Controls.Add(this.panelPendentes);
             this.Controls.Add(this.panelConsultasTotais);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormularioPaginaMedico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulário de Médico";
+          
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormularioPaginaMedico_Paint);
             this.panelConsultasTotais.ResumeLayout(false);
             this.panelConsultasTotais.PerformLayout();

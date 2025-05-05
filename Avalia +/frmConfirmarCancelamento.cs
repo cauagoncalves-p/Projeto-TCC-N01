@@ -17,6 +17,13 @@ namespace Avalia__
     {
         private string _data, _medico, _motivo, _status, _observacoes, _local;
         Mensagem_do_sistema mensagem_Do_Sistema = new Mensagem_do_sistema();
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            ConfiguracaoTelas configuracaoTelas = new ConfiguracaoTelas();
+            configuracaoTelas.FecharAba(this);
+        }
+
         private void btnManterConsulta_Click(object sender, EventArgs e)
         {
             mensagem_Do_Sistema.MensagemInformation("Sua consulta continuara agendada!");

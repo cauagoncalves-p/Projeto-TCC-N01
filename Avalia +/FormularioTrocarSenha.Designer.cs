@@ -49,7 +49,7 @@
             this.panelTrocarSenha.Controls.Add(this.lblEmail);
             this.panelTrocarSenha.Controls.Add(this.lblTrocarSenha);
             this.panelTrocarSenha.Controls.Add(this.lblAvalia);
-            this.panelTrocarSenha.Location = new System.Drawing.Point(336, 45);
+            this.panelTrocarSenha.Location = new System.Drawing.Point(348, 100);
             this.panelTrocarSenha.Name = "panelTrocarSenha";
             this.panelTrocarSenha.Size = new System.Drawing.Size(324, 357);
             this.panelTrocarSenha.TabIndex = 1;

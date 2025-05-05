@@ -104,57 +104,64 @@ namespace Avalia__
                 using (var consulta = new tbConsultaTableAdapter())
                 using (var diagnosticoMedico = new DiagnosticoMedicoTableAdapter())
                 {
-                    if (txtDiagnostico.Text == "Descreva o diagnóstico do paciente..." || txtDosagem.Text == "Dosagem" ||
-                        txtDuracao.Text == "Duração" || txtFrequencia.Text == "Frequência" ||
-                         txtInstrucaoReceita.Text == "Adicione instruções específicas sobre os medicamentos..." || txtTratamentoRecomendado.Text == "Adicione quaisquer observações relevantes..." ||
-                        txtMedicamento.Text == "Nome do medicamento")
+                    // Captura e normaliza os textos com Trim()
+                    string diagnostico = txtDiagnostico.Text.Trim();
+                    string tratamento = txtTratamentoRecomendado.Text.Trim();
+
+                    // Validação dos campos obrigatórios
+                    if (diagnostico == "Descreva o diagnóstico do paciente..." || string.IsNullOrWhiteSpace(diagnostico) ||
+                        tratamento == "Adicione quaisquer observações relevantes..." || string.IsNullOrWhiteSpace(tratamento))
                     {
-                        mensagem.MensagemAtencao("Preencha todos os campos");
+                        MessageBox.Show("Preencha os campos obrigatórios: Diagnóstico e Tratamento Recomendado.");
                         return;
                     }
+
+                    // Campos opcionais com operador ternário e Trim()
+                    string remedio = txtMedicamento.Text.Trim() == "Nome do medicamento" ? "Não informado" : txtMedicamento.Text.Trim();
+                    string dosagem = txtDosagem.Text.Trim() == "Dosagem" ? "Não informado" : txtDosagem.Text.Trim();
+                    string duracao = txtDuracao.Text.Trim() == "Duração" ? "Não informado" : txtDuracao.Text.Trim();
+                    string frequencia = txtFrequencia.Text.Trim() == "Frequência" ? "Não informado" : txtFrequencia.Text.Trim();
+                    string instrucaoReceita = txtInstrucaoReceita.Text.Trim() == "Adicione instruções específicas sobre os medicamentos..." ? "Não informado" : txtInstrucaoReceita.Text.Trim();
 
                     int idConsulta = this._IdConsulta;
-                    var adapter = new DiagnosticoMedicoTableAdapter();
-                    var dados = adapter.GetData().FirstOrDefault(d => d.Id_Consulta == idConsulta);
+                    var dados = diagnosticoMedico.GetData().FirstOrDefault(d => d.Id_Consulta == idConsulta);
 
-                    if (dados != null && dados.diagnostico == txtDiagnostico.Text && dados.tratamentoRecomendado == txtTratamentoRecomendado.Text &&
-                    dados.duracao == txtDuracao.Text && dados.instrucaoReceita == txtInstrucaoReceita.Text &&
-                    dados.Dosagem == txtDosagem.Text && dados.Medicamento == txtMedicamento.Text && dados.Frequencia == txtFrequencia.Text)
+                    // Verifica se os dados já existem no banco
+                    if (dados != null &&
+                        dados.diagnostico == diagnostico &&
+                        dados.tratamentoRecomendado == tratamento &&
+                        dados.duracao == duracao &&
+                        dados.instrucaoReceita == instrucaoReceita &&
+                        dados.Dosagem == dosagem &&
+                        dados.Medicamento == remedio &&
+                        dados.Frequencia == frequencia)
                     {
-                        mensagem.MensagemAtencao("Os dados fornecidos ja se encontram no banco\nClique em atualizar para mudar os dados!");
+                        mensagem.MensagemAtencao("Os dados fornecidos já se encontram no banco.\nClique em atualizar para mudar os dados!");
                         return;
                     }
-                    else
-                    {
-                        string diagnostico = txtDiagnostico.Text;
-                        string tratamento = txtTratamentoRecomendado.Text;
-                        string remedio = txtMedicamento.Text;
-                        string dosagem = txtDosagem.Text;
-                        string duracao = txtDuracao.Text;
-                        string frequencia = txtFrequencia.Text;
-                        string instrucaoReceita = txtInstrucaoReceita.Text;
 
-                        diagnosticoMedico.Insert(_IdConsulta, diagnostico, tratamento, remedio, dosagem, frequencia, duracao, instrucaoReceita);
+                    // Insere no banco
+                    diagnosticoMedico.Insert(idConsulta, diagnostico, tratamento, remedio, dosagem, frequencia, duracao, instrucaoReceita);
 
-                        consulta.AtualizarStatusConsulta("Realizada", _IdConsulta);
+                    // Atualiza o status da consulta
+                    consulta.AtualizarStatusConsulta("Realizada", idConsulta);
 
-                        // Desabilita os campos após a consulta ser realizada
-                        txtDiagnostico.Enabled = false;
-                        txtTratamentoRecomendado.Enabled = false;
-                        txtMedicamento.Enabled = false;
-                        txtDosagem.Enabled = false;
-                        txtFrequencia.Enabled = false;
-                        txtDuracao.Enabled = false;
-                        txtInstrucaoReceita.Enabled = false;
+                    // Desativa os campos após finalizar
+                    txtDiagnostico.Enabled = false;
+                    txtTratamentoRecomendado.Enabled = false;
+                    txtMedicamento.Enabled = false;
+                    txtDosagem.Enabled = false;
+                    txtFrequencia.Enabled = false;
+                    txtDuracao.Enabled = false;
+                    txtInstrucaoReceita.Enabled = false;
 
-                        lblInfoStatus.Text = "Realizada";
-                        mensagem.MensagemInformation("Diagnóstico enviado com sucesso!");
-                    }
+                    lblInfoStatus.Text = "Realizada";
+                    mensagem.MensagemInformation("Diagnóstico enviado com sucesso!");
                 }
             }
             catch (Exception ex)
             {
-                mensagem.MensagemError("Falha para enviar os dados: " + ex.Message);
+                mensagem.MensagemError("Falha ao enviar os dados: " + ex.Message);
             }
         }
 
@@ -183,20 +190,29 @@ namespace Avalia__
             // Verifica se já existe diagnóstico
             var dados = adapter.GetData().FirstOrDefault(d => d.Id_Consulta == idConsulta);
 
-            string dianostico = txtDiagnostico.Text;
-            string tratamento = txtTratamentoRecomendado.Text;
-            string remedio = txtMedicamento.Text;
-            string dosagem = txtDosagem.Text;
-            string duracao = txtDuracao.Text;
-            string frequencia = txtFrequencia.Text;
-            string instrucaoReceita = txtInstrucaoReceita.Text;
+            // Captura e normaliza os textos com Trim()
+            string diagnostico = txtDiagnostico.Text.Trim();
+            string tratamento = txtTratamentoRecomendado.Text.Trim();
 
-            if (txtDiagnostico.Text == "Descreva o diagnóstico do paciente..." || txtDosagem.Text == "Dosagem" ||
-                        txtDuracao.Text == "Duração" || txtFrequencia.Text == "Frequência" ||
-                         txtInstrucaoReceita.Text == "Adicione instruções específicas sobre os medicamentos..." || txtTratamentoRecomendado.Text == "Adicione quaisquer observações relevantes..." ||
-                        txtMedicamento.Text == "Nome do medicamento")
+            // Validação dos campos obrigatórios
+            if (diagnostico == "Descreva o diagnóstico do paciente..." || string.IsNullOrWhiteSpace(diagnostico) ||
+                tratamento == "Adicione quaisquer observações relevantes..." || string.IsNullOrWhiteSpace(tratamento))
             {
-                mensagem.MensagemAtencao("Preencha todos os campos");
+                MessageBox.Show("Preencha os campos obrigatórios: Diagnóstico e Tratamento Recomendado.");
+                return;
+            }
+
+            // Campos opcionais com operador ternário e Trim()
+            string remedio = txtMedicamento.Text.Trim() == "Nome do medicamento" ? "Não informado" : txtMedicamento.Text.Trim();
+            string dosagem = txtDosagem.Text.Trim() == "Dosagem" ? "Não informado" : txtDosagem.Text.Trim();
+            string duracao = txtDuracao.Text.Trim() == "Duração" ? "Não informado" : txtDuracao.Text.Trim();
+            string frequencia = txtFrequencia.Text.Trim() == "Frequência" ? "Não informado" : txtFrequencia.Text.Trim();
+            string instrucaoReceita = txtInstrucaoReceita.Text.Trim() == "Adicione instruções específicas sobre os medicamentos..." ? "Não informado" : txtInstrucaoReceita.Text.Trim();
+
+            if (txtDiagnostico.Text == "Descreva o diagnóstico do paciente..." || txtTratamentoRecomendado.Text == "Adicione quaisquer observações relevantes...")
+                  
+            {
+                mensagem.MensagemAtencao("Preencha o diagnóstico e a observação");
                 return;
             }
 
@@ -226,7 +242,7 @@ namespace Avalia__
             if (dados != null)
             {
                 // Se existir, atualiza
-                adapter.AtualizarConsulta(dianostico,tratamento,remedio,dosagem,frequencia,duracao,instrucaoReceita,dados.Id_diagnosticoMedico);
+                adapter.AtualizarConsulta(diagnostico,tratamento,remedio,dosagem,frequencia,duracao,instrucaoReceita,dados.Id_diagnosticoMedico);
                 
                 mensagem.MensagemInformation("Diagnóstico atualizado com sucesso!");
 
@@ -245,12 +261,9 @@ namespace Avalia__
             }
         }
 
-        private void FormularioProntuarioPaciente_Load(object sender, EventArgs e)
-        {
+   
 
-        }
-
-        private void btnSair_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             ConfiguracaoTelas configuracaoTelas = new ConfiguracaoTelas();
             configuracaoTelas.FecharAba(this);

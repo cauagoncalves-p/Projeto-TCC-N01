@@ -15,7 +15,7 @@ namespace Avalia__
     public partial class FormularioAgendamentoConsulta: Form
     {
         private int IdUsuario;
-        private string emailUsuario;
+      
         Mensagem_do_sistema mensagem_Do_Sistema = new Mensagem_do_sistema();
         
         private void atualizarBanco() 
@@ -75,14 +75,14 @@ namespace Avalia__
 
 
 
-        public FormularioAgendamentoConsulta(int IdUsuario, string emailUsuario)
+        public FormularioAgendamentoConsulta(int IdUsuario)
         {
             InitializeComponent();
             RadiusButton controlador = new RadiusButton();
             controlador.ConfigInicial(this, panelAgendar, btnSair, 25, Color.White);
             carregaEspecialidade();
             this.IdUsuario = IdUsuario;
-            this.emailUsuario = emailUsuario;
+       
 
         }
 
@@ -158,7 +158,7 @@ namespace Avalia__
         private void btnContinuar_Click(object sender, EventArgs e)
         {
             
-            DateTime diaAtual = DateTime.Now;
+            DateTime diaAtual = DateTime.Today;
             if (dtpData.Value < diaAtual) 
             {
                 mensagem_Do_Sistema.MensagemInformation("Selecione uma data valida!");
