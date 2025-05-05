@@ -145,22 +145,22 @@
             // lblVerifica
             // 
             this.lblVerifica.AutoSize = true;
-            this.lblVerifica.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
+            this.lblVerifica.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVerifica.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblVerifica.Location = new System.Drawing.Point(66, 79);
+            this.lblVerifica.Location = new System.Drawing.Point(78, 79);
             this.lblVerifica.Name = "lblVerifica";
-            this.lblVerifica.Size = new System.Drawing.Size(201, 21);
+            this.lblVerifica.Size = new System.Drawing.Size(190, 29);
             this.lblVerifica.TabIndex = 1;
             this.lblVerifica.Text = "Validação de cadastro";
             // 
             // lblAvalia
             // 
             this.lblAvalia.AutoSize = true;
-            this.lblAvalia.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAvalia.Font = new System.Drawing.Font("Lucida Calligraphy", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAvalia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblAvalia.Location = new System.Drawing.Point(127, 38);
+            this.lblAvalia.Location = new System.Drawing.Point(107, 48);
             this.lblAvalia.Name = "lblAvalia";
-            this.lblAvalia.Size = new System.Drawing.Size(96, 29);
+            this.lblAvalia.Size = new System.Drawing.Size(118, 31);
             this.lblAvalia.TabIndex = 0;
             this.lblAvalia.Text = "Áurea+";
             // 
@@ -198,7 +198,7 @@
             this.MinimizeBox = false;
             this.Name = "FormularioCadCPF";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Confirme CPF";
+            this.Text = "Confirmação CPF";
             this.Load += new System.EventHandler(this.FormularioCadCPF_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormularioCadCPF_Paint);
             this.panelVerificaCPF.ResumeLayout(false);

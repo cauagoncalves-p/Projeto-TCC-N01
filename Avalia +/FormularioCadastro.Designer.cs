@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioCadastro));
             this.panelCadastro = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblError = new System.Windows.Forms.Label();
             this.lblConfirmeSenha = new System.Windows.Forms.Label();
             this.lblSenha = new System.Windows.Forms.Label();
@@ -64,7 +65,6 @@
             this.lblDataNascimento = new System.Windows.Forms.Label();
             this.lblSobrenome = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panelCadastro.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -112,6 +112,16 @@
             this.panelCadastro.Size = new System.Drawing.Size(707, 550);
             this.panelCadastro.TabIndex = 0;
             this.panelCadastro.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCadastro_Paint);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
+            this.label1.Location = new System.Drawing.Point(30, 761);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 18);
+            this.label1.TabIndex = 38;
             // 
             // lblError
             // 
@@ -527,16 +537,6 @@
             this.lblNome.TabIndex = 2;
             this.lblNome.Text = "Nome";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.label1.Location = new System.Drawing.Point(30, 761);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 18);
-            this.label1.TabIndex = 38;
-            // 
             // FormularioCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -549,7 +549,7 @@
             this.MinimizeBox = false;
             this.Name = "FormularioCadastro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Formulario de cadastro";
+            this.Text = "Formulario de Cadastro";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormularioCadastro_Paint);
             this.panelCadastro.ResumeLayout(false);
             this.panelCadastro.PerformLayout();

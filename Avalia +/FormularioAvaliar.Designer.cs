@@ -66,7 +66,7 @@
             this.btnSair.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
-            this.btnSair.Location = new System.Drawing.Point(865, 19);
+            this.btnSair.Location = new System.Drawing.Point(865, 66);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(50, 43);
             this.btnSair.TabIndex = 15;
@@ -77,11 +77,11 @@
             // 
             this.lbTitulo.AutoSize = true;
             this.lbTitulo.BackColor = System.Drawing.Color.Transparent;
-            this.lbTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitulo.Font = new System.Drawing.Font("Lucida Calligraphy", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lbTitulo.Location = new System.Drawing.Point(60, 19);
+            this.lbTitulo.Location = new System.Drawing.Point(71, 66);
             this.lbTitulo.Name = "lbTitulo";
-            this.lbTitulo.Size = new System.Drawing.Size(96, 29);
+            this.lbTitulo.Size = new System.Drawing.Size(118, 31);
             this.lbTitulo.TabIndex = 14;
             this.lbTitulo.Text = "Áurea+";
             // 
@@ -89,10 +89,10 @@
             // 
             this.lblHistoricoConsulta.AutoSize = true;
             this.lblHistoricoConsulta.BackColor = System.Drawing.Color.Transparent;
-            this.lblHistoricoConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHistoricoConsulta.Location = new System.Drawing.Point(117, 50);
+            this.lblHistoricoConsulta.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHistoricoConsulta.Location = new System.Drawing.Point(137, 88);
             this.lblHistoricoConsulta.Name = "lblHistoricoConsulta";
-            this.lblHistoricoConsulta.Size = new System.Drawing.Size(200, 25);
+            this.lblHistoricoConsulta.Size = new System.Drawing.Size(170, 33);
             this.lblHistoricoConsulta.TabIndex = 13;
             this.lblHistoricoConsulta.Text = "Minhas Consultas";
             // 
@@ -100,10 +100,10 @@
             // 
             this.lblTitulos.AutoSize = true;
             this.lblTitulos.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulos.Location = new System.Drawing.Point(344, 146);
+            this.lblTitulos.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulos.Location = new System.Drawing.Point(399, 152);
             this.lblTitulos.Name = "lblTitulos";
-            this.lblTitulos.Size = new System.Drawing.Size(200, 25);
+            this.lblTitulos.Size = new System.Drawing.Size(170, 33);
             this.lblTitulos.TabIndex = 16;
             this.lblTitulos.Text = "Minhas Consultas";
             // 
@@ -111,7 +111,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 561);
+            this.ClientSize = new System.Drawing.Size(984, 707);
             this.Controls.Add(this.lblTitulos);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.lbTitulo);

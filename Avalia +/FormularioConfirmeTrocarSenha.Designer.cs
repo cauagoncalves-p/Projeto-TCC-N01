@@ -173,7 +173,7 @@
             this.MinimizeBox = false;
             this.Name = "FormularioConfirmeTrocarSenha";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Confirmarção de troca de senha";
+            this.Text = "Troca de senha";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormularioConfirmeTrocarSenha_Paint);
             this.panelConfirmeSenha.ResumeLayout(false);
             this.panelConfirmeSenha.PerformLayout();

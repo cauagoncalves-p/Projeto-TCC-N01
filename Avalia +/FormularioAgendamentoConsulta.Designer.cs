@@ -30,7 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioAgendamentoConsulta));
             this.panelAgendar = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtConsultaMotivo = new System.Windows.Forms.TextBox();
+            this.lblMotivoConsulta = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnContinuar = new System.Windows.Forms.Button();
             this.txtobservacao = new System.Windows.Forms.TextBox();
@@ -48,8 +50,6 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lblsubtitulo = new System.Windows.Forms.Label();
             this.btnSair = new System.Windows.Forms.Button();
-            this.lblMotivoConsulta = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panelAgendar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,6 +78,16 @@
             this.panelAgendar.Size = new System.Drawing.Size(855, 430);
             this.panelAgendar.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
+            this.label1.Location = new System.Drawing.Point(31, 549);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 23);
+            this.label1.TabIndex = 19;
+            // 
             // txtConsultaMotivo
             // 
             this.txtConsultaMotivo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(245)))));
@@ -88,6 +98,17 @@
             this.txtConsultaMotivo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtConsultaMotivo.Size = new System.Drawing.Size(775, 84);
             this.txtConsultaMotivo.TabIndex = 18;
+            // 
+            // lblMotivoConsulta
+            // 
+            this.lblMotivoConsulta.AutoSize = true;
+            this.lblMotivoConsulta.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMotivoConsulta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
+            this.lblMotivoConsulta.Location = new System.Drawing.Point(31, 216);
+            this.lblMotivoConsulta.Name = "lblMotivoConsulta";
+            this.lblMotivoConsulta.Size = new System.Drawing.Size(154, 23);
+            this.lblMotivoConsulta.TabIndex = 17;
+            this.lblMotivoConsulta.Text = "Motivo da consulta";
             // 
             // btnCancelar
             // 
@@ -258,7 +279,7 @@
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblTitulo.Font = new System.Drawing.Font("Lucida Calligraphy", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblTitulo.Location = new System.Drawing.Point(75, 24);
+            this.lblTitulo.Location = new System.Drawing.Point(64, 51);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(118, 31);
             this.lblTitulo.TabIndex = 1;
@@ -270,7 +291,7 @@
             this.lblsubtitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblsubtitulo.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblsubtitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblsubtitulo.Location = new System.Drawing.Point(139, 48);
+            this.lblsubtitulo.Location = new System.Drawing.Point(139, 77);
             this.lblsubtitulo.Name = "lblsubtitulo";
             this.lblsubtitulo.Size = new System.Drawing.Size(158, 25);
             this.lblsubtitulo.TabIndex = 2;
@@ -290,27 +311,6 @@
             this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
-            // 
-            // lblMotivoConsulta
-            // 
-            this.lblMotivoConsulta.AutoSize = true;
-            this.lblMotivoConsulta.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMotivoConsulta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblMotivoConsulta.Location = new System.Drawing.Point(31, 216);
-            this.lblMotivoConsulta.Name = "lblMotivoConsulta";
-            this.lblMotivoConsulta.Size = new System.Drawing.Size(154, 23);
-            this.lblMotivoConsulta.TabIndex = 17;
-            this.lblMotivoConsulta.Text = "Motivo da consulta";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.label1.Location = new System.Drawing.Point(31, 549);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 23);
-            this.label1.TabIndex = 19;
             // 
             // FormularioAgendamentoConsulta
             // 

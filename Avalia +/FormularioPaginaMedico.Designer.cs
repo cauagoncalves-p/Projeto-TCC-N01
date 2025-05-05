@@ -778,11 +778,11 @@
             // 
             this.lblsubtitulo.AutoSize = true;
             this.lblsubtitulo.BackColor = System.Drawing.Color.Transparent;
-            this.lblsubtitulo.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblsubtitulo.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblsubtitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblsubtitulo.Location = new System.Drawing.Point(108, 88);
+            this.lblsubtitulo.Location = new System.Drawing.Point(113, 84);
             this.lblsubtitulo.Name = "lblsubtitulo";
-            this.lblsubtitulo.Size = new System.Drawing.Size(187, 22);
+            this.lblsubtitulo.Size = new System.Drawing.Size(180, 29);
             this.lblsubtitulo.TabIndex = 14;
             this.lblsubtitulo.Text = "Agende sua consulta";
             // 
@@ -790,11 +790,11 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Font = new System.Drawing.Font("Lucida Calligraphy", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lblTitulo.Location = new System.Drawing.Point(52, 57);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(96, 29);
+            this.lblTitulo.Size = new System.Drawing.Size(118, 31);
             this.lblTitulo.TabIndex = 13;
             this.lblTitulo.Text = "Áurea+";
             // 
@@ -831,7 +831,6 @@
             this.Name = "FormularioPaginaMedico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulário de Médico";
-          
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormularioPaginaMedico_Paint);
             this.panelConsultasTotais.ResumeLayout(false);
             this.panelConsultasTotais.PerformLayout();

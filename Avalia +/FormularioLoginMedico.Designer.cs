@@ -210,7 +210,7 @@
             this.MinimizeBox = false;
             this.Name = "FormularioLoginMedico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Login Medico ";
+            this.Text = "Login Médico ";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormularioLoginMedico_Paint);
             this.panelLogin.ResumeLayout(false);
             this.panelLogin.PerformLayout();

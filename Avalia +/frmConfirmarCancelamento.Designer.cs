@@ -61,7 +61,7 @@
             this.btnSair.FlatAppearance.BorderSize = 0;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
-            this.btnSair.Location = new System.Drawing.Point(832, 41);
+            this.btnSair.Location = new System.Drawing.Point(832, 53);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(50, 43);
             this.btnSair.TabIndex = 15;
@@ -130,24 +130,26 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(215)))), ((int)(((byte)(218)))));
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(164)))), ((int)(((byte)(143)))));
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.Location = new System.Drawing.Point(611, 534);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(173, 48);
             this.btnCancelar.TabIndex = 15;
-            this.btnCancelar.Text = "Cancelar minha consulta";
+            this.btnCancelar.Text = "Cancelar Consulta";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnManterConsulta
             // 
-            this.btnManterConsulta.BackColor = System.Drawing.Color.White;
+            this.btnManterConsulta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(164)))), ((int)(((byte)(143)))));
             this.btnManterConsulta.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(164)))), ((int)(((byte)(143)))));
             this.btnManterConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManterConsulta.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManterConsulta.ForeColor = System.Drawing.Color.White;
             this.btnManterConsulta.Location = new System.Drawing.Point(425, 534);
             this.btnManterConsulta.Name = "btnManterConsulta";
             this.btnManterConsulta.Size = new System.Drawing.Size(161, 48);

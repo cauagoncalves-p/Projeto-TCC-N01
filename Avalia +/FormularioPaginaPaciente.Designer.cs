@@ -417,7 +417,7 @@
             this.MinimizeBox = false;
             this.Name = "FormularioPaginaPaciente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Formulário pagina paciente";
+            this.Text = " Pagina do paciente";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormularioPaginaPaciente_Paint);
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();

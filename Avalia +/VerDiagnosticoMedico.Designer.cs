@@ -33,8 +33,11 @@
             this.lblsubtitulo = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panelPrincipal = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.txtObservacaoMedico = new System.Windows.Forms.TextBox();
+            this.txtTratamento = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.lblInfoComoUsar = new System.Windows.Forms.Label();
@@ -44,7 +47,6 @@
             this.lblInfoDuracao = new System.Windows.Forms.Label();
             this.lblDuracao = new System.Windows.Forms.Label();
             this.lblRemedio = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblCRMResponsavel = new System.Windows.Forms.Label();
             this.lblMedicoResponsavel = new System.Windows.Forms.Label();
@@ -62,8 +64,6 @@
             this.lblTituloPaciente = new System.Windows.Forms.Label();
             this.lblPaciente = new System.Windows.Forms.Label();
             this.lblInfoConsulta = new System.Windows.Forms.Label();
-            this.txtTratamento = new System.Windows.Forms.TextBox();
-            this.txtObservacaoMedico = new System.Windows.Forms.TextBox();
             this.panelPrincipal.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panelPaciente.SuspendLayout();
@@ -89,7 +89,7 @@
             this.lblsubtitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblsubtitulo.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblsubtitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblsubtitulo.Location = new System.Drawing.Point(117, 65);
+            this.lblsubtitulo.Location = new System.Drawing.Point(163, 81);
             this.lblsubtitulo.Name = "lblsubtitulo";
             this.lblsubtitulo.Size = new System.Drawing.Size(158, 25);
             this.lblsubtitulo.TabIndex = 14;
@@ -99,11 +99,11 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Font = new System.Drawing.Font("Lucida Calligraphy", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblTitulo.Location = new System.Drawing.Point(53, 41);
+            this.lblTitulo.Location = new System.Drawing.Point(102, 53);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(96, 29);
+            this.lblTitulo.Size = new System.Drawing.Size(118, 31);
             this.lblTitulo.TabIndex = 13;
             this.lblTitulo.Text = "Áurea+";
             // 
@@ -126,19 +126,34 @@
             this.panelPrincipal.Controls.Add(this.panelPaciente);
             this.panelPrincipal.Controls.Add(this.lblInfoConsulta);
             this.panelPrincipal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.panelPrincipal.Location = new System.Drawing.Point(108, 145);
+            this.panelPrincipal.Location = new System.Drawing.Point(108, 109);
             this.panelPrincipal.Name = "panelPrincipal";
             this.panelPrincipal.Size = new System.Drawing.Size(783, 404);
             this.panelPrincipal.TabIndex = 16;
             // 
-            // label4
+            // txtObservacaoMedico
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(-13, 949);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 16);
-            this.label4.TabIndex = 41;
+            this.txtObservacaoMedico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(230)))), ((int)(((byte)(221)))));
+            this.txtObservacaoMedico.Enabled = false;
+            this.txtObservacaoMedico.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtObservacaoMedico.Location = new System.Drawing.Point(435, 373);
+            this.txtObservacaoMedico.Multiline = true;
+            this.txtObservacaoMedico.Name = "txtObservacaoMedico";
+            this.txtObservacaoMedico.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtObservacaoMedico.Size = new System.Drawing.Size(286, 172);
+            this.txtObservacaoMedico.TabIndex = 43;
+            // 
+            // txtTratamento
+            // 
+            this.txtTratamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(230)))), ((int)(((byte)(221)))));
+            this.txtTratamento.Enabled = false;
+            this.txtTratamento.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTratamento.Location = new System.Drawing.Point(40, 373);
+            this.txtTratamento.Multiline = true;
+            this.txtTratamento.Name = "txtTratamento";
+            this.txtTratamento.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtTratamento.Size = new System.Drawing.Size(286, 172);
+            this.txtTratamento.TabIndex = 42;
             // 
             // label9
             // 
@@ -150,6 +165,26 @@
             this.label9.Size = new System.Drawing.Size(219, 22);
             this.label9.TabIndex = 24;
             this.label9.Text = "Observações do medico";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
+            this.label7.Location = new System.Drawing.Point(36, 337);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(233, 22);
+            this.label7.TabIndex = 24;
+            this.label7.Text = "Tratamento recomendado ";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(-13, 949);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(0, 16);
+            this.label4.TabIndex = 41;
             // 
             // panel7
             // 
@@ -251,17 +286,6 @@
             this.lblRemedio.TabIndex = 24;
             this.lblRemedio.Text = "Remedio";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.label7.Location = new System.Drawing.Point(36, 337);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(233, 22);
-            this.label7.TabIndex = 24;
-            this.label7.Text = "Tratamento recomendado ";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -323,7 +347,6 @@
             this.label1.TabIndex = 31;
             this.label1.Text = "---------------------------------------------------------------------------------" +
     "----------------------------------------------------------------------";
-          
             // 
             // panelPaciente
             // 
@@ -436,37 +459,13 @@
             // lblInfoConsulta
             // 
             this.lblInfoConsulta.AutoSize = true;
-            this.lblInfoConsulta.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfoConsulta.Font = new System.Drawing.Font("Arial", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInfoConsulta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
             this.lblInfoConsulta.Location = new System.Drawing.Point(284, 37);
             this.lblInfoConsulta.Name = "lblInfoConsulta";
             this.lblInfoConsulta.Size = new System.Drawing.Size(186, 29);
             this.lblInfoConsulta.TabIndex = 23;
             this.lblInfoConsulta.Text = "Receita Médica";
-            // 
-            // txtTratamento
-            // 
-            this.txtTratamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(230)))), ((int)(((byte)(221)))));
-            this.txtTratamento.Enabled = false;
-            this.txtTratamento.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTratamento.Location = new System.Drawing.Point(40, 373);
-            this.txtTratamento.Multiline = true;
-            this.txtTratamento.Name = "txtTratamento";
-            this.txtTratamento.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtTratamento.Size = new System.Drawing.Size(286, 172);
-            this.txtTratamento.TabIndex = 42;
-            // 
-            // txtObservacaoMedico
-            // 
-            this.txtObservacaoMedico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(230)))), ((int)(((byte)(221)))));
-            this.txtObservacaoMedico.Enabled = false;
-            this.txtObservacaoMedico.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtObservacaoMedico.Location = new System.Drawing.Point(435, 373);
-            this.txtObservacaoMedico.Multiline = true;
-            this.txtObservacaoMedico.Name = "txtObservacaoMedico";
-            this.txtObservacaoMedico.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtObservacaoMedico.Size = new System.Drawing.Size(286, 172);
-            this.txtObservacaoMedico.TabIndex = 43;
             // 
             // VerDiagnosticoMedico
             // 
@@ -477,10 +476,10 @@
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.lblsubtitulo);
             this.Controls.Add(this.lblTitulo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "VerDiagnosticoMedico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "VerDiagnosticoMedico";
-      
+            this.Text = "Diagnostico Médico";
             this.panelPrincipal.ResumeLayout(false);
             this.panelPrincipal.PerformLayout();
             this.panel7.ResumeLayout(false);
