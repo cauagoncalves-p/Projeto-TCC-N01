@@ -38,6 +38,7 @@
             this.btnSair = new System.Windows.Forms.Button();
             this.panelCancelarConsulta = new System.Windows.Forms.Panel();
             this.dgvConsultas = new System.Windows.Forms.DataGridView();
+            this.panelCancelarConsulta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -143,6 +144,7 @@
             // 
             // panelCancelarConsulta
             // 
+            this.panelCancelarConsulta.Controls.Add(this.dgvConsultas);
             this.panelCancelarConsulta.Location = new System.Drawing.Point(61, 238);
             this.panelCancelarConsulta.Name = "panelCancelarConsulta";
             this.panelCancelarConsulta.Size = new System.Drawing.Size(868, 361);
@@ -152,7 +154,7 @@
             // 
             this.dgvConsultas.BackgroundColor = System.Drawing.Color.White;
             this.dgvConsultas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConsultas.Location = new System.Drawing.Point(58, 201);
+            this.dgvConsultas.Location = new System.Drawing.Point(-3, -4);
             this.dgvConsultas.Name = "dgvConsultas";
             this.dgvConsultas.RowHeadersWidth = 51;
             this.dgvConsultas.Size = new System.Drawing.Size(877, 365);
@@ -165,7 +167,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(984, 561);
-            this.Controls.Add(this.dgvConsultas);
             this.Controls.Add(this.panelCancelarConsulta);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.lbTitulo);
@@ -183,6 +184,7 @@
             this.Text = "Minha consultas";
             this.Load += new System.EventHandler(this.FormularioConsultasAgendadas_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormularioConsultasAgendadas_Paint_1);
+            this.panelCancelarConsulta.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

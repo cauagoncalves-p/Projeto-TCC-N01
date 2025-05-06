@@ -128,7 +128,7 @@
             this.panelPrincipal.Controls.Add(this.panelPaciente);
             this.panelPrincipal.Controls.Add(this.lblInfoConsulta);
             this.panelPrincipal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.panelPrincipal.Location = new System.Drawing.Point(108, 109);
+            this.panelPrincipal.Location = new System.Drawing.Point(108, 123);
             this.panelPrincipal.Name = "panelPrincipal";
             this.panelPrincipal.Size = new System.Drawing.Size(783, 404);
             this.panelPrincipal.TabIndex = 16;
@@ -152,7 +152,7 @@
             // 
             this.txtObservacaoMedico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(230)))), ((int)(((byte)(221)))));
             this.txtObservacaoMedico.Enabled = false;
-            this.txtObservacaoMedico.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtObservacaoMedico.Font = new System.Drawing.Font("Arial Narrow", 14.25F);
             this.txtObservacaoMedico.Location = new System.Drawing.Point(435, 373);
             this.txtObservacaoMedico.Multiline = true;
             this.txtObservacaoMedico.Name = "txtObservacaoMedico";
@@ -164,7 +164,7 @@
             // 
             this.txtTratamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(230)))), ((int)(((byte)(221)))));
             this.txtTratamento.Enabled = false;
-            this.txtTratamento.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTratamento.Font = new System.Drawing.Font("Arial Narrow", 14.25F);
             this.txtTratamento.Location = new System.Drawing.Point(40, 373);
             this.txtTratamento.Multiline = true;
             this.txtTratamento.Name = "txtTratamento";

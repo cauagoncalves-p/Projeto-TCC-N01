@@ -148,13 +148,13 @@ namespace Avalia__
             // Atualiza a senha no banco dependendo do tipo de usuário
             if (!string.IsNullOrEmpty(emailUsuario))
             {
-                //tbUsuarioTableAdapter usuarioAdapter = new tbUsuarioTableAdapter();
-                //usuarioAdapter.AtualizarSenhaPorEmail(novaSenhaCriptografada, emailUsuario);
+                tbUsuarioTableAdapter usuarioAdapter = new tbUsuarioTableAdapter();
+                usuarioAdapter.AtualizarSenhaPorEmail(novaSenhaCriptografada, emailUsuario);
             }
             else if (!string.IsNullOrEmpty(emailMedico))
             {
-                //tbMedicoTableAdapter medicoAdapter = new tbMedicoTableAdapter();
-                //medicoAdapter.AtualizarSenhaPorEmail(novaSenhaCriptografada, emailMedico);
+                tbMedicoTableAdapter medicoAdapter = new tbMedicoTableAdapter();
+                medicoAdapter.AtualizarSenhaPorEmail(novaSenhaCriptografada, emailMedico);
             }
 
             MessageBox.Show("Senha atualizada com sucesso!");

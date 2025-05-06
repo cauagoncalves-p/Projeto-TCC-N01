@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioAvaliacao));
             this.comentarioPanel = new System.Windows.Forms.Panel();
+            this.btnAtualizar = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnSair = new System.Windows.Forms.Button();
@@ -74,7 +75,6 @@
             this.txtDriConsulta = new System.Windows.Forms.Label();
             this.btnEnviarAvaliacao = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.btnAtualizar = new System.Windows.Forms.Button();
             this.comentarioPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picRespeito2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picRespeito3)).BeginInit();
@@ -150,6 +150,19 @@
             this.comentarioPanel.Name = "comentarioPanel";
             this.comentarioPanel.Size = new System.Drawing.Size(878, 500);
             this.comentarioPanel.TabIndex = 1;
+            // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(164)))), ((int)(((byte)(143)))));
+            this.btnAtualizar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizar.ForeColor = System.Drawing.Color.White;
+            this.btnAtualizar.Location = new System.Drawing.Point(554, 565);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(139, 50);
+            this.btnAtualizar.TabIndex = 68;
+            this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.UseVisualStyleBackColor = false;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // label13
             // 
@@ -494,7 +507,7 @@
             this.btnCancelarAvaliacao.TabIndex = 28;
             this.btnCancelarAvaliacao.Text = "Cancelar";
             this.btnCancelarAvaliacao.UseVisualStyleBackColor = false;
-            this.btnCancelarAvaliacao.Click += new System.EventHandler(this.button2_Click);
+            this.btnCancelarAvaliacao.Click += new System.EventHandler(this.btnCancelarAvaliacao_Click);
             // 
             // checkBox1
             // 
@@ -608,19 +621,6 @@
             this.label8.Size = new System.Drawing.Size(877, 13);
             this.label8.TabIndex = 31;
             this.label8.Text = resources.GetString("label8.Text");
-            // 
-            // btnAtualizar
-            // 
-            this.btnAtualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(164)))), ((int)(((byte)(143)))));
-            this.btnAtualizar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtualizar.ForeColor = System.Drawing.Color.White;
-            this.btnAtualizar.Location = new System.Drawing.Point(554, 565);
-            this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(139, 50);
-            this.btnAtualizar.TabIndex = 68;
-            this.btnAtualizar.Text = "Atualizar";
-            this.btnAtualizar.UseVisualStyleBackColor = false;
-            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // FormularioAvaliacao
             // 

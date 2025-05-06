@@ -114,7 +114,7 @@
             this.panelCancelarConsulta.Controls.Add(this.lblInfoMedico);
             this.panelCancelarConsulta.Controls.Add(this.lblMedica);
             this.panelCancelarConsulta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.panelCancelarConsulta.Location = new System.Drawing.Point(69, 162);
+            this.panelCancelarConsulta.Location = new System.Drawing.Point(70, 149);
             this.panelCancelarConsulta.Name = "panelCancelarConsulta";
             this.panelCancelarConsulta.Size = new System.Drawing.Size(832, 400);
             this.panelCancelarConsulta.TabIndex = 16;
@@ -161,7 +161,7 @@
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(245)))));
-            this.textBox1.Font = new System.Drawing.Font("Arial", 14.25F);
+            this.textBox1.Font = new System.Drawing.Font("Arial Narrow", 14.25F);
             this.textBox1.Location = new System.Drawing.Point(42, 388);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";

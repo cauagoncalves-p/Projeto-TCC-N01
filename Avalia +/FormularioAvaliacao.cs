@@ -5,13 +5,13 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Avalia__
 {
-
     public partial class FormularioAvaliacao: Form
     {
         private int notaAtendimento = 0;
@@ -115,10 +115,6 @@ namespace Avalia__
             ConfiguracaoTelas.PintarGradiente(this, e, "#f5e6d3", "#fdf6f0");
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
         private void btnSair_Click(object sender, EventArgs e)
         {
@@ -132,8 +128,8 @@ namespace Avalia__
             using (var consultaAdapter = new tbConsultaTableAdapter())
             using (var medicoAdapter = new tbMedicoTableAdapter())
             using (var usuarioAdapter = new tbUsuarioTableAdapter())
+            using (var avaliacaoAdapter = new tbAvaliacaoTableAdapter()) // novo
             {
-                // Busca os dados da consulta
                 var consulta = consultaAdapter.GetData().FirstOrDefault(c => c.IdConsulta == Idconsulta);
                 if (consulta == null)
                 {
@@ -141,38 +137,161 @@ namespace Avalia__
                     return;
                 }
 
-                // Busca médico
                 var medico = medicoAdapter.GetData().FirstOrDefault(m => m.IdMedico == consulta.IdMedico);
                 string nomeMedico = medico != null ? $"{medico.Nome} {medico.Sobrenome}" : "Desconhecido";
                 string especialidade = medico != null ? $"{medico.Especialidade}" : "Não informado";
                 string crm = medico != null ? $"{medico.CRM}" : "Não informado";
 
-                // Preenche os campo
                 lblNomeMedico.Text = $"Dr(a) {nomeMedico.ToUpper()}";
-                lblEspecialidadeEcrm.Text = $"{especialidade} ° {crm}"; 
+                lblEspecialidadeEcrm.Text = $"{especialidade} ° {crm}";
+
+                // Verifica se já existe uma avaliação para esta consulta
+                var avaliacao = avaliacaoAdapter.GetData().FirstOrDefault(a => a.IdConsulta == Idconsulta);
+                if (avaliacao != null)
+                {
+                    // Se já houver avaliação, preenche os dados e desabilita o botão de envio
+                    notaAtendimento = avaliacao.Atendimento_comunicacao;
+                    notaTempo = avaliacao.Tempo_de_espera;
+                    notaConhecimento = avaliacao.Conhecimento_tecnico;
+                    notaRespeito = avaliacao.Respeito_empatia;
+                    txtComentario.Text = avaliacao.Comentario;
+
+                    // Atualiza as estrelas
+                    AtualizarEstrelas(estrelasAtendimento, notaAtendimento);
+                    AtualizarEstrelas(estrelasTempo, notaTempo);
+                    AtualizarEstrelas(estrelasConhecimento, notaConhecimento);
+                    AtualizarEstrelas(estrelasRespeito, notaRespeito);
+
+                    // Desabilita o botão de enviar
+                    btnEnviarAvaliacao.Enabled = false;
+
+                    // Desabilita as estrelas e o campo de comentário
+                    DesabilitarEstrelas(estrelasAtendimento);
+                    DesabilitarEstrelas(estrelasTempo);
+                    DesabilitarEstrelas(estrelasConhecimento);
+                    DesabilitarEstrelas(estrelasRespeito);
+                    txtComentario.Enabled = false;
+                }
+                else
+                {
+                    // Se não houver avaliação, habilita o botão de envio
+                    btnEnviarAvaliacao.Enabled = true;
+                }
+            }
+        }
+
+        private void DesabilitarEstrelas(PictureBox[] grupo)
+        {
+            foreach (var pic in grupo)
+            {
+                pic.Enabled = false; 
+            }
+        }
+
+        private void AtualizarEstrelas(PictureBox[] grupo, int nota)
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                grupo[i].Image = (i < nota) ? estrelaPrenchida : estrelaVazia;
             }
         }
 
         private void btnEnviarAvaliacao_Click(object sender, EventArgs e)
         {
-            // Exemplo de envio (você vai adaptar conforme sua tabela e DAL/Adapter)
-            tbAvaliacaoTableAdapter avaliacaoAdapter = new tbAvaliacaoTableAdapter();
-            string comentario = txtComentario.Text;
-            try
+            using (var avaliacaoAdapter = new tbAvaliacaoTableAdapter())
             {
-                avaliacaoAdapter.Insert(Idconsulta,comentario,notaAtendimento, notaTempo, notaConhecimento, notaRespeito);
-                MessageBox.Show("Avaliação enviada com sucesso!");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao salvar avaliação: " + ex.Message);
+                try
+                {
+                    // Verifica se já existe uma avaliação para essa consulta
+                    var avaliacaoExistente = avaliacaoAdapter.GetData().FirstOrDefault(a => a.IdConsulta == Idconsulta);
+
+                    // Se a avaliação já existe, fazemos o UPDATE
+                    if (avaliacaoExistente != null)
+                    {
+                        // Atualiza os valores da avaliação existente
+                        avaliacaoExistente.Atendimento_comunicacao = notaAtendimento;
+                        avaliacaoExistente.Tempo_de_espera = notaTempo;
+                        avaliacaoExistente.Conhecimento_tecnico = notaConhecimento;
+                        avaliacaoExistente.Respeito_empatia = notaRespeito;
+                        avaliacaoExistente.Comentario = txtComentario.Text;
+
+                        // Atualiza no banco de dados
+                        avaliacaoAdapter.Update(avaliacaoExistente);
+                        MessageBox.Show("Avaliação atualizada com sucesso!");
+                    }
+                    else
+                    {
+                        // Caso não exista avaliação, faz o INSERT (caso nunca tenha avaliado)
+                        avaliacaoAdapter.Insert(Idconsulta, notaAtendimento, notaTempo, notaConhecimento, notaRespeito, txtComentario.Text);
+                        MessageBox.Show("Avaliação enviada com sucesso!");
+                    }
+
+                    // Desabilita o botão de envio após a avaliação
+                    btnEnviarAvaliacao.Enabled = false;
+
+                    // Desabilita as estrelas e o campo de comentário
+                    DesabilitarEstrelas(estrelasAtendimento);
+                    DesabilitarEstrelas(estrelasTempo);
+                    DesabilitarEstrelas(estrelasConhecimento);
+                    DesabilitarEstrelas(estrelasRespeito);
+                    txtComentario.Enabled = false;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao salvar avaliação: " + ex.Message);
+                }
             }
         }
 
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
+            using (var avaliacaoAdapter = new tbAvaliacaoTableAdapter())
+            {
+                // Recupera a avaliação do banco
+                var avaliacao = avaliacaoAdapter.GetData().FirstOrDefault(a => a.IdConsulta == Idconsulta);
+                if (avaliacao != null)
+                {
+                    // Recarrega as informações da avaliação
+                    notaAtendimento = avaliacao.Atendimento_comunicacao;
+                    notaTempo = avaliacao.Tempo_de_espera;
+                    notaConhecimento = avaliacao.Conhecimento_tecnico;
+                    notaRespeito = avaliacao.Respeito_empatia;
+                    txtComentario.Text = avaliacao.Comentario;
 
+                    // Atualiza visualmente as estrelas
+                    AtualizarEstrelas(estrelasAtendimento, notaAtendimento);
+                    AtualizarEstrelas(estrelasTempo, notaTempo);
+                    AtualizarEstrelas(estrelasConhecimento, notaConhecimento);
+                    AtualizarEstrelas(estrelasRespeito, notaRespeito);
+
+                    // Habilita o botão de enviar novamente
+                    btnEnviarAvaliacao.Enabled = true;
+
+                    // Habilita as estrelas e o campo de comentário
+                    HabilitarEstrelas(estrelasAtendimento);
+                    HabilitarEstrelas(estrelasTempo);
+                    HabilitarEstrelas(estrelasConhecimento);
+                    HabilitarEstrelas(estrelasRespeito);
+                    txtComentario.Enabled = true;
+                }
+                else
+                {
+                    MessageBox.Show("Avaliação não encontrada para esta consulta.");
+                }
+            }
+        }
+
+        private void HabilitarEstrelas(PictureBox[] grupo)
+        {
+            foreach (var pic in grupo)
+            {
+                pic.Enabled = true; 
+            }
+        }
+
+        private void btnCancelarAvaliacao_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
-    
 }

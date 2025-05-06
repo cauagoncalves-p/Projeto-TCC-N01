@@ -165,7 +165,7 @@
             // 
             // txtInstrucaoReceita
             // 
-            this.txtInstrucaoReceita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInstrucaoReceita.Font = new System.Drawing.Font("Arial Narrow", 14F);
             this.txtInstrucaoReceita.Location = new System.Drawing.Point(18, 173);
             this.txtInstrucaoReceita.Multiline = true;
             this.txtInstrucaoReceita.Name = "txtInstrucaoReceita";
@@ -197,7 +197,7 @@
             // 
             // txtMedicamento
             // 
-            this.txtMedicamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMedicamento.Font = new System.Drawing.Font("Arial Narrow", 11F);
             this.txtMedicamento.Location = new System.Drawing.Point(18, 89);
             this.txtMedicamento.Multiline = true;
             this.txtMedicamento.Name = "txtMedicamento";
@@ -206,7 +206,7 @@
             // 
             // txtDosagem
             // 
-            this.txtDosagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDosagem.Font = new System.Drawing.Font("Arial Narrow", 11F);
             this.txtDosagem.Location = new System.Drawing.Point(213, 89);
             this.txtDosagem.Multiline = true;
             this.txtDosagem.Name = "txtDosagem";
@@ -215,7 +215,7 @@
             // 
             // txtDuracao
             // 
-            this.txtDuracao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDuracao.Font = new System.Drawing.Font("Arial Narrow", 11F);
             this.txtDuracao.Location = new System.Drawing.Point(612, 89);
             this.txtDuracao.Multiline = true;
             this.txtDuracao.Name = "txtDuracao";
@@ -224,7 +224,7 @@
             // 
             // txtFrequencia
             // 
-            this.txtFrequencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFrequencia.Font = new System.Drawing.Font("Arial Narrow", 11F);
             this.txtFrequencia.Location = new System.Drawing.Point(413, 89);
             this.txtFrequencia.Multiline = true;
             this.txtFrequencia.Name = "txtFrequencia";
@@ -244,7 +244,7 @@
             // 
             // txtTratamentoRecomendado
             // 
-            this.txtTratamentoRecomendado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTratamentoRecomendado.Font = new System.Drawing.Font("Arial Narrow", 14.25F);
             this.txtTratamentoRecomendado.Location = new System.Drawing.Point(459, 315);
             this.txtTratamentoRecomendado.Multiline = true;
             this.txtTratamentoRecomendado.Name = "txtTratamentoRecomendado";
@@ -265,7 +265,7 @@
             // 
             // txtDiagnostico
             // 
-            this.txtDiagnostico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiagnostico.Font = new System.Drawing.Font("Arial Narrow", 14.25F);
             this.txtDiagnostico.Location = new System.Drawing.Point(36, 315);
             this.txtDiagnostico.Multiline = true;
             this.txtDiagnostico.Name = "txtDiagnostico";

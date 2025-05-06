@@ -138,7 +138,6 @@
             this.btnAvaliarconsulta.Text = "Avaliar consulta";
             this.btnAvaliarconsulta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnAvaliarconsulta.UseVisualStyleBackColor = false;
-           
             // 
             // btnCancelarConsulta
             // 
@@ -190,11 +189,11 @@
             this.lblAvaliabtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(228)))), ((int)(((byte)(220)))));
             this.lblAvaliabtn.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAvaliabtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(138)))), ((int)(((byte)(122)))));
-            this.lblAvaliabtn.Location = new System.Drawing.Point(558, 349);
+            this.lblAvaliabtn.Location = new System.Drawing.Point(581, 349);
             this.lblAvaliabtn.Name = "lblAvaliabtn";
-            this.lblAvaliabtn.Size = new System.Drawing.Size(313, 17);
+            this.lblAvaliabtn.Size = new System.Drawing.Size(234, 17);
             this.lblAvaliabtn.TabIndex = 32;
-            this.lblAvaliabtn.Text = "Deixe seu feedback sobre consultas anteriores";
+            this.lblAvaliabtn.Text = "Veja as consultas que você avaliou";
             // 
             // lblcancelabtn
             // 

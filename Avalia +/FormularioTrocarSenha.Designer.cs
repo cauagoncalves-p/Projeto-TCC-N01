@@ -96,6 +96,7 @@
             // 
             // txtEmail
             // 
+            this.txtEmail.Font = new System.Drawing.Font("Arial Narrow", 14F);
             this.txtEmail.Location = new System.Drawing.Point(37, 204);
             this.txtEmail.MaxLength = 100;
             this.txtEmail.Multiline = true;
@@ -135,7 +136,6 @@
             this.lblAvalia.Size = new System.Drawing.Size(118, 31);
             this.lblAvalia.TabIndex = 0;
             this.lblAvalia.Text = "Áurea+";
-        
             // 
             // FormularioTrocarSenha
             // 
@@ -149,7 +149,6 @@
             this.Name = "FormularioTrocarSenha";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trocar Senha";
-           
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormularioTrocarSenha_Paint);
             this.panelTrocarSenha.ResumeLayout(false);
             this.panelTrocarSenha.PerformLayout();

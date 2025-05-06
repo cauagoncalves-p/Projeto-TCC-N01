@@ -135,7 +135,7 @@
             // 
             // txtSenhaLogin
             // 
-            this.txtSenhaLogin.Font = new System.Drawing.Font("Wingdings", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.txtSenhaLogin.Font = new System.Drawing.Font("Wingdings", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.txtSenhaLogin.Location = new System.Drawing.Point(35, 233);
             this.txtSenhaLogin.MaxLength = 50;
             this.txtSenhaLogin.Multiline = true;
@@ -211,7 +211,6 @@
             this.Name = "FormularioLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-          
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.panelLogin.ResumeLayout(false);
             this.panelLogin.PerformLayout();

@@ -157,7 +157,7 @@
             // 
             // txtCRMLogin
             // 
-            this.txtCRMLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCRMLogin.Font = new System.Drawing.Font("Arial Narrow", 14.25F);
             this.txtCRMLogin.Location = new System.Drawing.Point(39, 148);
             this.txtCRMLogin.MaxLength = 13;
             this.txtCRMLogin.Multiline = true;

@@ -44,7 +44,7 @@
             // panelCancelarConsulta
             // 
             this.panelCancelarConsulta.Controls.Add(this.dgvCancelar);
-            this.panelCancelarConsulta.Location = new System.Drawing.Point(63, 165);
+            this.panelCancelarConsulta.Location = new System.Drawing.Point(57, 145);
             this.panelCancelarConsulta.Name = "panelCancelarConsulta";
             this.panelCancelarConsulta.Size = new System.Drawing.Size(868, 361);
             this.panelCancelarConsulta.TabIndex = 0;
@@ -81,7 +81,7 @@
             this.btnSair.FlatAppearance.BorderSize = 0;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
-            this.btnSair.Location = new System.Drawing.Point(881, 87);
+            this.btnSair.Location = new System.Drawing.Point(875, 46);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(50, 43);
             this.btnSair.TabIndex = 15;
@@ -95,7 +95,7 @@
             this.lblsubtitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblsubtitulo.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblsubtitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblsubtitulo.Location = new System.Drawing.Point(132, 121);
+            this.lblsubtitulo.Location = new System.Drawing.Point(126, 80);
             this.lblsubtitulo.Name = "lblsubtitulo";
             this.lblsubtitulo.Size = new System.Drawing.Size(225, 29);
             this.lblsubtitulo.TabIndex = 14;
@@ -107,7 +107,7 @@
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblTitulo.Font = new System.Drawing.Font("Lucida Calligraphy", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblTitulo.Location = new System.Drawing.Point(66, 95);
+            this.lblTitulo.Location = new System.Drawing.Point(60, 54);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(118, 31);
             this.lblTitulo.TabIndex = 13;
@@ -116,7 +116,7 @@
             // panelbtnCancelar
             // 
             this.panelbtnCancelar.Controls.Add(this.btnCancelar);
-            this.panelbtnCancelar.Location = new System.Drawing.Point(63, 536);
+            this.panelbtnCancelar.Location = new System.Drawing.Point(57, 516);
             this.panelbtnCancelar.Name = "panelbtnCancelar";
             this.panelbtnCancelar.Size = new System.Drawing.Size(868, 100);
             this.panelbtnCancelar.TabIndex = 16;

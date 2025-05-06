@@ -4,12 +4,12 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="AureaMaxConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="AureaMaxConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Avalia__.Properties.Settings.GlobalReference.Default.AureaMaxConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="AureaMaxConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="AureaMaxConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Avalia__.Properties.Settings.GlobalReference.Default.AureaMaxConnectionString1" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DiagnosticoMedicoTableAdapter" GeneratorDataComponentClassName="DiagnosticoMedicoTableAdapter" Name="DiagnosticoMedico" UserDataComponentName="DiagnosticoMedicoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="AureaMaxConnectionString (Settings)" DbObjectName="AureaMax.dbo.DiagnosticoMedico" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="AureaMaxConnectionString1 (Settings)" DbObjectName="AureaMax.dbo.DiagnosticoMedico" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[DiagnosticoMedico] WHERE (([Id_diagnosticoMedico] = @Original_Id_diagnosticoMedico) AND ((@IsNull_Id_Consulta = 1 AND [Id_Consulta] IS NULL) OR ([Id_Consulta] = @Original_Id_Consulta)) AND ((@IsNull_Medicamento = 1 AND [Medicamento] IS NULL) OR ([Medicamento] = @Original_Medicamento)) AND ((@IsNull_Dosagem = 1 AND [Dosagem] IS NULL) OR ([Dosagem] = @Original_Dosagem)) AND ((@IsNull_Frequencia = 1 AND [Frequencia] IS NULL) OR ([Frequencia] = @Original_Frequencia)) AND ((@IsNull_duracao = 1 AND [duracao] IS NULL) OR ([duracao] = @Original_duracao)))</CommandText>
@@ -92,7 +92,7 @@ SELECT Id_diagnosticoMedico, Id_Consulta, diagnostico, tratamentoRecomendado, Me
               <Mapping SourceColumn="instrucaoReceita" DataSetColumn="instrucaoReceita" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="AureaMaxConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="AtualizarConsulta" Modifier="Public" Name="AtualizarConsulta" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="AtualizarConsulta">
+              <DbSource ConnectionRef="AureaMaxConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="AtualizarConsulta" Modifier="Public" Name="AtualizarConsulta" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="AtualizarConsulta">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText> UPDATE DiagnosticoMedico
@@ -122,62 +122,61 @@ SELECT Id_diagnosticoMedico, Id_Consulta, diagnostico, tratamentoRecomendado, Me
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbAvaliacaoTableAdapter" GeneratorDataComponentClassName="tbAvaliacaoTableAdapter" Name="tbAvaliacao" UserDataComponentName="tbAvaliacaoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="AureaMaxConnectionString (Settings)" DbObjectName="AureaMax.dbo.tbAvaliacao" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="AureaMaxConnectionString1 (Settings)" DbObjectName="AureaMax.dbo.tbAvaliacao" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM [tbAvaliacao] WHERE (([IdAvaliacao] = @Original_IdAvaliacao) AND ([IdConsulta] = @Original_IdConsulta) AND ((@IsNull_Comentario = 1 AND [Comentario] IS NULL) OR ([Comentario] = @Original_Comentario)) AND ([Respeito_empatia] = @Original_Respeito_empatia) AND ([Conhecimento_tecnico] = @Original_Conhecimento_tecnico) AND ([Tempo_de_espera] = @Original_Tempo_de_espera) AND ([Atendimento_comunicacao] = @Original_Atendimento_comunicacao))</CommandText>
+                    <CommandText>DELETE FROM [dbo].[tbAvaliacao] WHERE (([IdAvaliacao] = @Original_IdAvaliacao) AND ([IdConsulta] = @Original_IdConsulta) AND ([Atendimento_comunicacao] = @Original_Atendimento_comunicacao) AND ([Tempo_de_espera] = @Original_Tempo_de_espera) AND ([Conhecimento_tecnico] = @Original_Conhecimento_tecnico) AND ([Respeito_empatia] = @Original_Respeito_empatia) AND ((@IsNull_Comentario = 1 AND [Comentario] IS NULL) OR ([Comentario] = @Original_Comentario)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IdAvaliacao" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IdAvaliacao" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IdConsulta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IdConsulta" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Atendimento_comunicacao" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Atendimento_comunicacao" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Tempo_de_espera" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Tempo_de_espera" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Conhecimento_tecnico" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Conhecimento_tecnico" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Respeito_empatia" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Respeito_empatia" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Comentario" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Comentario" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Comentario" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Comentario" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Respeito_empatia" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Respeito_empatia" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Conhecimento_tecnico" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Conhecimento_tecnico" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Tempo_de_espera" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Tempo_de_espera" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Atendimento_comunicacao" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Atendimento_comunicacao" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO [tbAvaliacao] ([IdConsulta], [Comentario], [Respeito_empatia], [Conhecimento_tecnico], [Tempo_de_espera], [Atendimento_comunicacao]) VALUES (@IdConsulta, @Comentario, @Respeito_empatia, @Conhecimento_tecnico, @Tempo_de_espera, @Atendimento_comunicacao);
-SELECT IdAvaliacao, IdConsulta, Comentario, Respeito_empatia, Conhecimento_tecnico, Tempo_de_espera, Atendimento_comunicacao FROM tbAvaliacao WHERE (IdAvaliacao = SCOPE_IDENTITY())</CommandText>
+                    <CommandText>INSERT INTO [dbo].[tbAvaliacao] ([IdConsulta], [Atendimento_comunicacao], [Tempo_de_espera], [Conhecimento_tecnico], [Respeito_empatia], [Comentario]) VALUES (@IdConsulta, @Atendimento_comunicacao, @Tempo_de_espera, @Conhecimento_tecnico, @Respeito_empatia, @Comentario);
+SELECT IdAvaliacao, IdConsulta, Atendimento_comunicacao, Tempo_de_espera, Conhecimento_tecnico, Respeito_empatia, Comentario FROM tbAvaliacao WHERE (IdAvaliacao = SCOPE_IDENTITY())</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IdConsulta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IdConsulta" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Comentario" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Comentario" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Respeito_empatia" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Respeito_empatia" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Conhecimento_tecnico" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Conhecimento_tecnico" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Tempo_de_espera" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Tempo_de_espera" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Atendimento_comunicacao" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Atendimento_comunicacao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Tempo_de_espera" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Tempo_de_espera" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Conhecimento_tecnico" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Conhecimento_tecnico" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Respeito_empatia" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Respeito_empatia" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Comentario" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Comentario" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        IdAvaliacao, IdConsulta, Comentario, Respeito_empatia, Conhecimento_tecnico, Tempo_de_espera, Atendimento_comunicacao
-FROM            tbAvaliacao</CommandText>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT IdAvaliacao, IdConsulta, Atendimento_comunicacao, Tempo_de_espera, Conhecimento_tecnico, Respeito_empatia, Comentario FROM dbo.tbAvaliacao</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE [tbAvaliacao] SET [IdConsulta] = @IdConsulta, [Comentario] = @Comentario, [Respeito_empatia] = @Respeito_empatia, [Conhecimento_tecnico] = @Conhecimento_tecnico, [Tempo_de_espera] = @Tempo_de_espera, [Atendimento_comunicacao] = @Atendimento_comunicacao WHERE (([IdAvaliacao] = @Original_IdAvaliacao) AND ([IdConsulta] = @Original_IdConsulta) AND ((@IsNull_Comentario = 1 AND [Comentario] IS NULL) OR ([Comentario] = @Original_Comentario)) AND ([Respeito_empatia] = @Original_Respeito_empatia) AND ([Conhecimento_tecnico] = @Original_Conhecimento_tecnico) AND ([Tempo_de_espera] = @Original_Tempo_de_espera) AND ([Atendimento_comunicacao] = @Original_Atendimento_comunicacao));
-SELECT IdAvaliacao, IdConsulta, Comentario, Respeito_empatia, Conhecimento_tecnico, Tempo_de_espera, Atendimento_comunicacao FROM tbAvaliacao WHERE (IdAvaliacao = @IdAvaliacao)</CommandText>
+                    <CommandText>UPDATE [dbo].[tbAvaliacao] SET [IdConsulta] = @IdConsulta, [Atendimento_comunicacao] = @Atendimento_comunicacao, [Tempo_de_espera] = @Tempo_de_espera, [Conhecimento_tecnico] = @Conhecimento_tecnico, [Respeito_empatia] = @Respeito_empatia, [Comentario] = @Comentario WHERE (([IdAvaliacao] = @Original_IdAvaliacao) AND ([IdConsulta] = @Original_IdConsulta) AND ([Atendimento_comunicacao] = @Original_Atendimento_comunicacao) AND ([Tempo_de_espera] = @Original_Tempo_de_espera) AND ([Conhecimento_tecnico] = @Original_Conhecimento_tecnico) AND ([Respeito_empatia] = @Original_Respeito_empatia) AND ((@IsNull_Comentario = 1 AND [Comentario] IS NULL) OR ([Comentario] = @Original_Comentario)));
+SELECT IdAvaliacao, IdConsulta, Atendimento_comunicacao, Tempo_de_espera, Conhecimento_tecnico, Respeito_empatia, Comentario FROM tbAvaliacao WHERE (IdAvaliacao = @IdAvaliacao)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IdConsulta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IdConsulta" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Comentario" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Comentario" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Respeito_empatia" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Respeito_empatia" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Conhecimento_tecnico" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Conhecimento_tecnico" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Tempo_de_espera" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Tempo_de_espera" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Atendimento_comunicacao" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Atendimento_comunicacao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Tempo_de_espera" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Tempo_de_espera" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Conhecimento_tecnico" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Conhecimento_tecnico" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Respeito_empatia" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Respeito_empatia" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Comentario" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Comentario" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IdAvaliacao" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IdAvaliacao" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IdConsulta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IdConsulta" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Atendimento_comunicacao" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Atendimento_comunicacao" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Tempo_de_espera" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Tempo_de_espera" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Conhecimento_tecnico" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Conhecimento_tecnico" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Respeito_empatia" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Respeito_empatia" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Comentario" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Comentario" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Comentario" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Comentario" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Respeito_empatia" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Respeito_empatia" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Conhecimento_tecnico" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Conhecimento_tecnico" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Tempo_de_espera" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Tempo_de_espera" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Atendimento_comunicacao" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Atendimento_comunicacao" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="IdAvaliacao" ColumnName="IdAvaliacao" DataSourceName="AureaMax.dbo.tbAvaliacao" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdAvaliacao" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IdAvaliacao" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
@@ -187,40 +186,17 @@ SELECT IdAvaliacao, IdConsulta, Comentario, Respeito_empatia, Conhecimento_tecni
             <Mappings>
               <Mapping SourceColumn="IdAvaliacao" DataSetColumn="IdAvaliacao" />
               <Mapping SourceColumn="IdConsulta" DataSetColumn="IdConsulta" />
-              <Mapping SourceColumn="Comentario" DataSetColumn="Comentario" />
-              <Mapping SourceColumn="Respeito_empatia" DataSetColumn="Respeito_empatia" />
-              <Mapping SourceColumn="Conhecimento_tecnico" DataSetColumn="Conhecimento_tecnico" />
-              <Mapping SourceColumn="Tempo_de_espera" DataSetColumn="Tempo_de_espera" />
               <Mapping SourceColumn="Atendimento_comunicacao" DataSetColumn="Atendimento_comunicacao" />
+              <Mapping SourceColumn="Tempo_de_espera" DataSetColumn="Tempo_de_espera" />
+              <Mapping SourceColumn="Conhecimento_tecnico" DataSetColumn="Conhecimento_tecnico" />
+              <Mapping SourceColumn="Respeito_empatia" DataSetColumn="Respeito_empatia" />
+              <Mapping SourceColumn="Comentario" DataSetColumn="Comentario" />
             </Mappings>
-            <Sources>
-              <DbSource ConnectionRef="AureaMaxConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="AtualizarAvaliacao" Modifier="Public" Name="AtualizarAvaliacao" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="AtualizarAvaliacao">
-                <UpdateCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>UPDATE tbAvaliacao
-SET 
-    Comentario = @Comentario,
-    Atendimento_comunicacao = @NotaAtendimento,
-    Tempo_de_espera = @NotaTempo,
-    Conhecimento_tecnico = @NotaConhecimento,
-    Respeito_empatia = @NotaRespeito
-WHERE IdConsulta = @IdConsulta;</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="true" AutogeneratedName="Comentario" ColumnName="Comentario" DataSourceName="AureaMax.dbo.tbAvaliacao" DataTypeServer="varchar(1000)" DbType="AnsiString" Direction="Input" ParameterName="@Comentario" Precision="0" ProviderType="VarChar" Scale="0" Size="1000" SourceColumn="Comentario" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="NotaAtendimento" ColumnName="Atendimento_comunicacao" DataSourceName="AureaMax.dbo.tbAvaliacao" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@NotaAtendimento" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Atendimento_comunicacao" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="NotaTempo" ColumnName="Tempo_de_espera" DataSourceName="AureaMax.dbo.tbAvaliacao" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@NotaTempo" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Tempo_de_espera" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="NotaConhecimento" ColumnName="Conhecimento_tecnico" DataSourceName="AureaMax.dbo.tbAvaliacao" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@NotaConhecimento" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Conhecimento_tecnico" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="NotaRespeito" ColumnName="Respeito_empatia" DataSourceName="AureaMax.dbo.tbAvaliacao" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@NotaRespeito" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Respeito_empatia" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="IdConsulta" ColumnName="IdConsulta" DataSourceName="AureaMax.dbo.tbAvaliacao" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdConsulta" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IdConsulta" SourceColumnNullMapping="false" SourceVersion="Original" />
-                    </Parameters>
-                  </DbCommand>
-                </UpdateCommand>
-              </DbSource>
-            </Sources>
+            <Sources />
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbConsultaTableAdapter" GeneratorDataComponentClassName="tbConsultaTableAdapter" Name="tbConsulta" UserDataComponentName="tbConsultaTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="AureaMaxConnectionString (Settings)" DbObjectName="AureaMax.dbo.tbConsulta" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="AureaMaxConnectionString1 (Settings)" DbObjectName="AureaMax.dbo.tbConsulta" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[tbConsulta] WHERE (([IdConsulta] = @Original_IdConsulta) AND ([Id_usuario] = @Original_Id_usuario) AND ([IdMedico] = @Original_IdMedico) AND ([DataConsulta] = @Original_DataConsulta) AND ((@IsNull_Motivo = 1 AND [Motivo] IS NULL) OR ([Motivo] = @Original_Motivo)) AND ([StatusConsulta] = @Original_StatusConsulta) AND ((@IsNull_Observacoes = 1 AND [Observacoes] IS NULL) OR ([Observacoes] = @Original_Observacoes)))</CommandText>
@@ -293,10 +269,10 @@ SELECT IdConsulta, Id_usuario, IdMedico, DataConsulta, Motivo, StatusConsulta, O
               <Mapping SourceColumn="Observacoes" DataSetColumn="Observacoes" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="AureaMaxConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="AtualizarStatusConsulta" Modifier="Public" Name="AtualizarStatusConsulta" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="AtualizarStatusConsulta">
+              <DbSource ConnectionRef="AureaMaxConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="AtualizarStatusConsulta" Modifier="Public" Name="AtualizarStatusConsulta" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="AtualizarStatusConsulta">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>UPDATE tbConsulta
+                    <CommandText> UPDATE tbConsulta
             SET StatusConsulta = @status
             WHERE IdConsulta = @idConsulta</CommandText>
                     <Parameters>
@@ -310,7 +286,7 @@ SELECT IdConsulta, Id_usuario, IdMedico, DataConsulta, Motivo, StatusConsulta, O
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbInstituicaoTableAdapter" GeneratorDataComponentClassName="tbInstituicaoTableAdapter" Name="tbInstituicao" UserDataComponentName="tbInstituicaoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="AureaMaxConnectionString (Settings)" DbObjectName="AureaMax.dbo.tbInstituicao" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="AureaMaxConnectionString1 (Settings)" DbObjectName="AureaMax.dbo.tbInstituicao" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[tbInstituicao] WHERE (([IdInstituicao] = @Original_IdInstituicao) AND ([NomeInstituicao] = @Original_NomeInstituicao) AND ([CNPJ] = @Original_CNPJ) AND ((@IsNull_TipoInstituicao = 1 AND [TipoInstituicao] IS NULL) OR ([TipoInstituicao] = @Original_TipoInstituicao)) AND ((@IsNull_Telefone = 1 AND [Telefone] IS NULL) OR ([Telefone] = @Original_Telefone)) AND ((@IsNull_Email = 1 AND [Email] IS NULL) OR ([Email] = @Original_Email)) AND ((@IsNull_Endereco = 1 AND [Endereco] IS NULL) OR ([Endereco] = @Original_Endereco)) AND ((@IsNull_Cidade = 1 AND [Cidade] IS NULL) OR ([Cidade] = @Original_Cidade)) AND ((@IsNull_Estado = 1 AND [Estado] IS NULL) OR ([Estado] = @Original_Estado)))</CommandText>
@@ -404,7 +380,7 @@ SELECT IdInstituicao, NomeInstituicao, CNPJ, TipoInstituicao, Telefone, Email, E
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbMedicoTableAdapter" GeneratorDataComponentClassName="tbMedicoTableAdapter" Name="tbMedico" UserDataComponentName="tbMedicoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="AureaMaxConnectionString (Settings)" DbObjectName="AureaMax.dbo.tbMedico" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="AureaMaxConnectionString1 (Settings)" DbObjectName="AureaMax.dbo.tbMedico" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[tbMedico] WHERE (([IdMedico] = @Original_IdMedico) AND ([Nome] = @Original_Nome) AND ([Sobrenome] = @Original_Sobrenome) AND ([CRM] = @Original_CRM) AND ([Sexo] = @Original_Sexo) AND ([Especialidade] = @Original_Especialidade) AND ((@IsNull_Cidade = 1 AND [Cidade] IS NULL) OR ([Cidade] = @Original_Cidade)) AND ((@IsNull_Estado = 1 AND [Estado] IS NULL) OR ([Estado] = @Original_Estado)) AND ((@IsNull_Endereco = 1 AND [Endereco] IS NULL) OR ([Endereco] = @Original_Endereco)) AND ((@IsNull_Telefone = 1 AND [Telefone] IS NULL) OR ([Telefone] = @Original_Telefone)) AND ([CPF] = @Original_CPF) AND ([Email] = @Original_Email) AND ([Senha] = @Original_Senha) AND ([IdInstituicao] = @Original_IdInstituicao))</CommandText>
@@ -515,11 +491,25 @@ SELECT IdMedico, Nome, Sobrenome, CRM, Sexo, Especialidade, Cidade, Estado, Ende
               <Mapping SourceColumn="Senha" DataSetColumn="Senha" />
               <Mapping SourceColumn="IdInstituicao" DataSetColumn="IdInstituicao" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="AureaMaxConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="AtualizarSenhaPorEmail" Modifier="Public" Name="AtualizarSenhaPorEmail" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="AtualizarSenhaPorEmail">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE tbMedico 
+SET Senha = @Senha 
+WHERE Email = @Email</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Senha" ColumnName="Senha" DataSourceName="AureaMax.dbo.tbMedico" DataTypeServer="varchar(100)" DbType="AnsiString" Direction="Input" ParameterName="@Senha" Precision="0" ProviderType="VarChar" Scale="0" Size="100" SourceColumn="Senha" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Email" ColumnName="Email" DataSourceName="AureaMax.dbo.tbMedico" DataTypeServer="varchar(150)" DbType="AnsiString" Direction="Input" ParameterName="@Email" Precision="0" ProviderType="VarChar" Scale="0" Size="150" SourceColumn="Email" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbUsuarioTableAdapter" GeneratorDataComponentClassName="tbUsuarioTableAdapter" Name="tbUsuario" UserDataComponentName="tbUsuarioTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="AureaMaxConnectionString (Settings)" DbObjectName="AureaMax.dbo.tbUsuario" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="AureaMaxConnectionString1 (Settings)" DbObjectName="AureaMax.dbo.tbUsuario" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[tbUsuario] WHERE (([Id_usuario] = @Original_Id_usuario) AND ([Nome] = @Original_Nome) AND ([Sobrenome] = @Original_Sobrenome) AND ([Data_Nascimento] = @Original_Data_Nascimento) AND ([CPF] = @Original_CPF) AND ([Sexo] = @Original_Sexo) AND ([Telefone] = @Original_Telefone) AND ([Genero] = @Original_Genero) AND ([Endereco] = @Original_Endereco) AND ([Email] = @Original_Email) AND ([Cidade] = @Original_Cidade) AND ([Estado] = @Original_Estado) AND ([Data_Cadastro] = @Original_Data_Cadastro) AND ([Senha] = @Original_Senha))</CommandText>
@@ -622,7 +612,21 @@ SELECT Id_usuario, Nome, Sobrenome, Data_Nascimento, CPF, Sexo, Telefone, Genero
               <Mapping SourceColumn="Data_Cadastro" DataSetColumn="Data_Cadastro" />
               <Mapping SourceColumn="Senha" DataSetColumn="Senha" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="AureaMaxConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="AtualizarSenhaPorEmail" Modifier="Public" Name="AtualizarSenhaPorEmail" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="AtualizarSenhaPorEmail">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE tbUsuario
+SET Senha = @Senha
+WHERE Email = @Email</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Senha" ColumnName="Senha" DataSourceName="AureaMax.dbo.tbUsuario" DataTypeServer="varchar(100)" DbType="AnsiString" Direction="Input" ParameterName="@Senha" Precision="0" ProviderType="VarChar" Scale="0" Size="100" SourceColumn="Senha" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Email" ColumnName="Email" DataSourceName="AureaMax.dbo.tbUsuario" DataTypeServer="varchar(200)" DbType="AnsiString" Direction="Input" ParameterName="@Email" Precision="0" ProviderType="VarChar" Scale="0" Size="200" SourceColumn="Email" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
         </Tables>
         <Sources />
@@ -632,54 +636,54 @@ SELECT Id_usuario, Nome, Sobrenome, Data_Nascimento, CPF, Sexo, Telefone, Genero
   <xs:element name="AureaMaxDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="AureaMaxDataSet" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="AureaMaxDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="DiagnosticoMedico" msprop:Generator_RowClassName="DiagnosticoMedicoRow" msprop:Generator_RowEvHandlerName="DiagnosticoMedicoRowChangeEventHandler" msprop:Generator_RowDeletedName="DiagnosticoMedicoRowDeleted" msprop:Generator_RowDeletingName="DiagnosticoMedicoRowDeleting" msprop:Generator_RowEvArgName="DiagnosticoMedicoRowChangeEvent" msprop:Generator_TablePropName="DiagnosticoMedico" msprop:Generator_RowChangedName="DiagnosticoMedicoRowChanged" msprop:Generator_UserTableName="DiagnosticoMedico" msprop:Generator_RowChangingName="DiagnosticoMedicoRowChanging" msprop:Generator_TableClassName="DiagnosticoMedicoDataTable" msprop:Generator_TableVarName="tableDiagnosticoMedico">
+        <xs:element name="DiagnosticoMedico" msprop:Generator_RowEvHandlerName="DiagnosticoMedicoRowChangeEventHandler" msprop:Generator_RowDeletedName="DiagnosticoMedicoRowDeleted" msprop:Generator_RowDeletingName="DiagnosticoMedicoRowDeleting" msprop:Generator_RowEvArgName="DiagnosticoMedicoRowChangeEvent" msprop:Generator_TablePropName="DiagnosticoMedico" msprop:Generator_RowChangedName="DiagnosticoMedicoRowChanged" msprop:Generator_UserTableName="DiagnosticoMedico" msprop:Generator_RowChangingName="DiagnosticoMedicoRowChanging" msprop:Generator_RowClassName="DiagnosticoMedicoRow" msprop:Generator_TableClassName="DiagnosticoMedicoDataTable" msprop:Generator_TableVarName="tableDiagnosticoMedico">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Id_diagnosticoMedico" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="Id_diagnosticoMedico" msprop:Generator_ColumnPropNameInTable="Id_diagnosticoMedicoColumn" msprop:Generator_ColumnPropNameInRow="Id_diagnosticoMedico" msprop:Generator_ColumnVarNameInTable="columnId_diagnosticoMedico" type="xs:int" />
-              <xs:element name="Id_Consulta" msprop:Generator_UserColumnName="Id_Consulta" msprop:Generator_ColumnPropNameInTable="Id_ConsultaColumn" msprop:Generator_ColumnPropNameInRow="Id_Consulta" msprop:Generator_ColumnVarNameInTable="columnId_Consulta" type="xs:int" minOccurs="0" />
-              <xs:element name="diagnostico" msprop:Generator_UserColumnName="diagnostico" msprop:Generator_ColumnPropNameInTable="diagnosticoColumn" msprop:Generator_ColumnPropNameInRow="diagnostico" msprop:Generator_ColumnVarNameInTable="columndiagnostico">
+              <xs:element name="Id_diagnosticoMedico" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="Id_diagnosticoMedicoColumn" msprop:Generator_ColumnPropNameInRow="Id_diagnosticoMedico" msprop:Generator_UserColumnName="Id_diagnosticoMedico" msprop:Generator_ColumnVarNameInTable="columnId_diagnosticoMedico" type="xs:int" />
+              <xs:element name="Id_Consulta" msprop:Generator_ColumnPropNameInTable="Id_ConsultaColumn" msprop:Generator_ColumnPropNameInRow="Id_Consulta" msprop:Generator_UserColumnName="Id_Consulta" msprop:Generator_ColumnVarNameInTable="columnId_Consulta" type="xs:int" minOccurs="0" />
+              <xs:element name="diagnostico" msprop:Generator_ColumnPropNameInTable="diagnosticoColumn" msprop:Generator_ColumnPropNameInRow="diagnostico" msprop:Generator_UserColumnName="diagnostico" msprop:Generator_ColumnVarNameInTable="columndiagnostico">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="tratamentoRecomendado" msprop:Generator_UserColumnName="tratamentoRecomendado" msprop:Generator_ColumnPropNameInTable="tratamentoRecomendadoColumn" msprop:Generator_ColumnPropNameInRow="tratamentoRecomendado" msprop:Generator_ColumnVarNameInTable="columntratamentoRecomendado">
+              <xs:element name="tratamentoRecomendado" msprop:Generator_ColumnPropNameInTable="tratamentoRecomendadoColumn" msprop:Generator_ColumnPropNameInRow="tratamentoRecomendado" msprop:Generator_UserColumnName="tratamentoRecomendado" msprop:Generator_ColumnVarNameInTable="columntratamentoRecomendado">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Medicamento" msprop:Generator_UserColumnName="Medicamento" msprop:Generator_ColumnPropNameInTable="MedicamentoColumn" msprop:Generator_ColumnPropNameInRow="Medicamento" msprop:Generator_ColumnVarNameInTable="columnMedicamento" minOccurs="0">
+              <xs:element name="Medicamento" msprop:Generator_ColumnPropNameInTable="MedicamentoColumn" msprop:Generator_ColumnPropNameInRow="Medicamento" msprop:Generator_UserColumnName="Medicamento" msprop:Generator_ColumnVarNameInTable="columnMedicamento" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Dosagem" msprop:Generator_UserColumnName="Dosagem" msprop:Generator_ColumnPropNameInTable="DosagemColumn" msprop:Generator_ColumnPropNameInRow="Dosagem" msprop:Generator_ColumnVarNameInTable="columnDosagem" minOccurs="0">
+              <xs:element name="Dosagem" msprop:Generator_ColumnPropNameInTable="DosagemColumn" msprop:Generator_ColumnPropNameInRow="Dosagem" msprop:Generator_UserColumnName="Dosagem" msprop:Generator_ColumnVarNameInTable="columnDosagem" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Frequencia" msprop:Generator_UserColumnName="Frequencia" msprop:Generator_ColumnPropNameInTable="FrequenciaColumn" msprop:Generator_ColumnPropNameInRow="Frequencia" msprop:Generator_ColumnVarNameInTable="columnFrequencia" minOccurs="0">
+              <xs:element name="Frequencia" msprop:Generator_ColumnPropNameInTable="FrequenciaColumn" msprop:Generator_ColumnPropNameInRow="Frequencia" msprop:Generator_UserColumnName="Frequencia" msprop:Generator_ColumnVarNameInTable="columnFrequencia" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="duracao" msprop:Generator_UserColumnName="duracao" msprop:Generator_ColumnPropNameInTable="duracaoColumn" msprop:Generator_ColumnPropNameInRow="duracao" msprop:Generator_ColumnVarNameInTable="columnduracao" minOccurs="0">
+              <xs:element name="duracao" msprop:Generator_ColumnPropNameInTable="duracaoColumn" msprop:Generator_ColumnPropNameInRow="duracao" msprop:Generator_UserColumnName="duracao" msprop:Generator_ColumnVarNameInTable="columnduracao" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="instrucaoReceita" msprop:Generator_UserColumnName="instrucaoReceita" msprop:Generator_ColumnPropNameInTable="instrucaoReceitaColumn" msprop:Generator_ColumnPropNameInRow="instrucaoReceita" msprop:Generator_ColumnVarNameInTable="columninstrucaoReceita">
+              <xs:element name="instrucaoReceita" msprop:Generator_ColumnPropNameInTable="instrucaoReceitaColumn" msprop:Generator_ColumnPropNameInRow="instrucaoReceita" msprop:Generator_UserColumnName="instrucaoReceita" msprop:Generator_ColumnVarNameInTable="columninstrucaoReceita">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
@@ -689,47 +693,47 @@ SELECT Id_usuario, Nome, Sobrenome, Data_Nascimento, CPF, Sexo, Telefone, Genero
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbAvaliacao" msprop:Generator_RowClassName="tbAvaliacaoRow" msprop:Generator_RowEvHandlerName="tbAvaliacaoRowChangeEventHandler" msprop:Generator_RowDeletedName="tbAvaliacaoRowDeleted" msprop:Generator_RowDeletingName="tbAvaliacaoRowDeleting" msprop:Generator_RowEvArgName="tbAvaliacaoRowChangeEvent" msprop:Generator_TablePropName="tbAvaliacao" msprop:Generator_RowChangedName="tbAvaliacaoRowChanged" msprop:Generator_UserTableName="tbAvaliacao" msprop:Generator_RowChangingName="tbAvaliacaoRowChanging" msprop:Generator_TableClassName="tbAvaliacaoDataTable" msprop:Generator_TableVarName="tabletbAvaliacao">
+        <xs:element name="tbAvaliacao" msprop:Generator_RowEvHandlerName="tbAvaliacaoRowChangeEventHandler" msprop:Generator_RowDeletedName="tbAvaliacaoRowDeleted" msprop:Generator_RowDeletingName="tbAvaliacaoRowDeleting" msprop:Generator_RowEvArgName="tbAvaliacaoRowChangeEvent" msprop:Generator_TablePropName="tbAvaliacao" msprop:Generator_RowChangedName="tbAvaliacaoRowChanged" msprop:Generator_UserTableName="tbAvaliacao" msprop:Generator_RowChangingName="tbAvaliacaoRowChanging" msprop:Generator_RowClassName="tbAvaliacaoRow" msprop:Generator_TableClassName="tbAvaliacaoDataTable" msprop:Generator_TableVarName="tabletbAvaliacao">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="IdAvaliacao" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="IdAvaliacao" msprop:Generator_ColumnPropNameInTable="IdAvaliacaoColumn" msprop:Generator_ColumnPropNameInRow="IdAvaliacao" msprop:Generator_ColumnVarNameInTable="columnIdAvaliacao" type="xs:int" />
-              <xs:element name="IdConsulta" msprop:Generator_UserColumnName="IdConsulta" msprop:Generator_ColumnPropNameInTable="IdConsultaColumn" msprop:Generator_ColumnPropNameInRow="IdConsulta" msprop:Generator_ColumnVarNameInTable="columnIdConsulta" type="xs:int" />
-              <xs:element name="Comentario" msprop:Generator_UserColumnName="Comentario" msprop:Generator_ColumnPropNameInTable="ComentarioColumn" msprop:Generator_ColumnPropNameInRow="Comentario" msprop:Generator_ColumnVarNameInTable="columnComentario" minOccurs="0">
+              <xs:element name="IdAvaliacao" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="IdAvaliacaoColumn" msprop:Generator_ColumnPropNameInRow="IdAvaliacao" msprop:Generator_UserColumnName="IdAvaliacao" msprop:Generator_ColumnVarNameInTable="columnIdAvaliacao" type="xs:int" />
+              <xs:element name="IdConsulta" msprop:Generator_ColumnPropNameInTable="IdConsultaColumn" msprop:Generator_ColumnPropNameInRow="IdConsulta" msprop:Generator_UserColumnName="IdConsulta" msprop:Generator_ColumnVarNameInTable="columnIdConsulta" type="xs:int" />
+              <xs:element name="Atendimento_comunicacao" msprop:Generator_ColumnPropNameInTable="Atendimento_comunicacaoColumn" msprop:Generator_ColumnPropNameInRow="Atendimento_comunicacao" msprop:Generator_UserColumnName="Atendimento_comunicacao" msprop:Generator_ColumnVarNameInTable="columnAtendimento_comunicacao" type="xs:int" />
+              <xs:element name="Tempo_de_espera" msprop:Generator_ColumnPropNameInTable="Tempo_de_esperaColumn" msprop:Generator_ColumnPropNameInRow="Tempo_de_espera" msprop:Generator_UserColumnName="Tempo_de_espera" msprop:Generator_ColumnVarNameInTable="columnTempo_de_espera" type="xs:int" />
+              <xs:element name="Conhecimento_tecnico" msprop:Generator_ColumnPropNameInTable="Conhecimento_tecnicoColumn" msprop:Generator_ColumnPropNameInRow="Conhecimento_tecnico" msprop:Generator_UserColumnName="Conhecimento_tecnico" msprop:Generator_ColumnVarNameInTable="columnConhecimento_tecnico" type="xs:int" />
+              <xs:element name="Respeito_empatia" msprop:Generator_ColumnPropNameInTable="Respeito_empatiaColumn" msprop:Generator_ColumnPropNameInRow="Respeito_empatia" msprop:Generator_UserColumnName="Respeito_empatia" msprop:Generator_ColumnVarNameInTable="columnRespeito_empatia" type="xs:int" />
+              <xs:element name="Comentario" msprop:Generator_ColumnPropNameInTable="ComentarioColumn" msprop:Generator_ColumnPropNameInRow="Comentario" msprop:Generator_UserColumnName="Comentario" msprop:Generator_ColumnVarNameInTable="columnComentario" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="1000" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Respeito_empatia" msprop:Generator_ColumnPropNameInRow="Respeito_empatia" msprop:Generator_ColumnPropNameInTable="Respeito_empatiaColumn" msprop:Generator_ColumnVarNameInTable="columnRespeito_empatia" msprop:Generator_UserColumnName="Respeito_empatia" type="xs:int" />
-              <xs:element name="Conhecimento_tecnico" msprop:Generator_ColumnPropNameInRow="Conhecimento_tecnico" msprop:Generator_ColumnPropNameInTable="Conhecimento_tecnicoColumn" msprop:Generator_ColumnVarNameInTable="columnConhecimento_tecnico" msprop:Generator_UserColumnName="Conhecimento_tecnico" type="xs:int" />
-              <xs:element name="Tempo_de_espera" msprop:Generator_ColumnPropNameInRow="Tempo_de_espera" msprop:Generator_ColumnPropNameInTable="Tempo_de_esperaColumn" msprop:Generator_ColumnVarNameInTable="columnTempo_de_espera" msprop:Generator_UserColumnName="Tempo_de_espera" type="xs:int" />
-              <xs:element name="Atendimento_comunicacao" msprop:Generator_ColumnPropNameInRow="Atendimento_comunicacao" msprop:Generator_ColumnPropNameInTable="Atendimento_comunicacaoColumn" msprop:Generator_ColumnVarNameInTable="columnAtendimento_comunicacao" msprop:Generator_UserColumnName="Atendimento_comunicacao" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbConsulta" msprop:Generator_RowClassName="tbConsultaRow" msprop:Generator_RowEvHandlerName="tbConsultaRowChangeEventHandler" msprop:Generator_RowDeletedName="tbConsultaRowDeleted" msprop:Generator_RowDeletingName="tbConsultaRowDeleting" msprop:Generator_RowEvArgName="tbConsultaRowChangeEvent" msprop:Generator_TablePropName="tbConsulta" msprop:Generator_RowChangedName="tbConsultaRowChanged" msprop:Generator_UserTableName="tbConsulta" msprop:Generator_RowChangingName="tbConsultaRowChanging" msprop:Generator_TableClassName="tbConsultaDataTable" msprop:Generator_TableVarName="tabletbConsulta">
+        <xs:element name="tbConsulta" msprop:Generator_RowEvHandlerName="tbConsultaRowChangeEventHandler" msprop:Generator_RowDeletedName="tbConsultaRowDeleted" msprop:Generator_RowDeletingName="tbConsultaRowDeleting" msprop:Generator_RowEvArgName="tbConsultaRowChangeEvent" msprop:Generator_TablePropName="tbConsulta" msprop:Generator_RowChangedName="tbConsultaRowChanged" msprop:Generator_UserTableName="tbConsulta" msprop:Generator_RowChangingName="tbConsultaRowChanging" msprop:Generator_RowClassName="tbConsultaRow" msprop:Generator_TableClassName="tbConsultaDataTable" msprop:Generator_TableVarName="tabletbConsulta">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="IdConsulta" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="IdConsulta" msprop:Generator_ColumnPropNameInTable="IdConsultaColumn" msprop:Generator_ColumnPropNameInRow="IdConsulta" msprop:Generator_ColumnVarNameInTable="columnIdConsulta" type="xs:int" />
-              <xs:element name="Id_usuario" msprop:Generator_UserColumnName="Id_usuario" msprop:Generator_ColumnPropNameInTable="Id_usuarioColumn" msprop:Generator_ColumnPropNameInRow="Id_usuario" msprop:Generator_ColumnVarNameInTable="columnId_usuario" type="xs:int" />
-              <xs:element name="IdMedico" msprop:Generator_UserColumnName="IdMedico" msprop:Generator_ColumnPropNameInTable="IdMedicoColumn" msprop:Generator_ColumnPropNameInRow="IdMedico" msprop:Generator_ColumnVarNameInTable="columnIdMedico" type="xs:int" />
-              <xs:element name="DataConsulta" msprop:Generator_UserColumnName="DataConsulta" msprop:Generator_ColumnPropNameInTable="DataConsultaColumn" msprop:Generator_ColumnPropNameInRow="DataConsulta" msprop:Generator_ColumnVarNameInTable="columnDataConsulta" type="xs:dateTime" />
-              <xs:element name="Motivo" msprop:Generator_UserColumnName="Motivo" msprop:Generator_ColumnPropNameInTable="MotivoColumn" msprop:Generator_ColumnPropNameInRow="Motivo" msprop:Generator_ColumnVarNameInTable="columnMotivo" minOccurs="0">
+              <xs:element name="IdConsulta" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="IdConsultaColumn" msprop:Generator_ColumnPropNameInRow="IdConsulta" msprop:Generator_UserColumnName="IdConsulta" msprop:Generator_ColumnVarNameInTable="columnIdConsulta" type="xs:int" />
+              <xs:element name="Id_usuario" msprop:Generator_ColumnPropNameInTable="Id_usuarioColumn" msprop:Generator_ColumnPropNameInRow="Id_usuario" msprop:Generator_UserColumnName="Id_usuario" msprop:Generator_ColumnVarNameInTable="columnId_usuario" type="xs:int" />
+              <xs:element name="IdMedico" msprop:Generator_ColumnPropNameInTable="IdMedicoColumn" msprop:Generator_ColumnPropNameInRow="IdMedico" msprop:Generator_UserColumnName="IdMedico" msprop:Generator_ColumnVarNameInTable="columnIdMedico" type="xs:int" />
+              <xs:element name="DataConsulta" msprop:Generator_ColumnPropNameInTable="DataConsultaColumn" msprop:Generator_ColumnPropNameInRow="DataConsulta" msprop:Generator_UserColumnName="DataConsulta" msprop:Generator_ColumnVarNameInTable="columnDataConsulta" type="xs:dateTime" />
+              <xs:element name="Motivo" msprop:Generator_ColumnPropNameInTable="MotivoColumn" msprop:Generator_ColumnPropNameInRow="Motivo" msprop:Generator_UserColumnName="Motivo" msprop:Generator_ColumnVarNameInTable="columnMotivo" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="500" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="StatusConsulta" msprop:Generator_UserColumnName="StatusConsulta" msprop:Generator_ColumnPropNameInTable="StatusConsultaColumn" msprop:Generator_ColumnPropNameInRow="StatusConsulta" msprop:Generator_ColumnVarNameInTable="columnStatusConsulta">
+              <xs:element name="StatusConsulta" msprop:Generator_ColumnPropNameInTable="StatusConsultaColumn" msprop:Generator_ColumnPropNameInRow="StatusConsulta" msprop:Generator_UserColumnName="StatusConsulta" msprop:Generator_ColumnVarNameInTable="columnStatusConsulta">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Observacoes" msprop:Generator_UserColumnName="Observacoes" msprop:Generator_ColumnPropNameInTable="ObservacoesColumn" msprop:Generator_ColumnPropNameInRow="Observacoes" msprop:Generator_ColumnVarNameInTable="columnObservacoes" minOccurs="0">
+              <xs:element name="Observacoes" msprop:Generator_ColumnPropNameInTable="ObservacoesColumn" msprop:Generator_ColumnPropNameInRow="Observacoes" msprop:Generator_UserColumnName="Observacoes" msprop:Generator_ColumnVarNameInTable="columnObservacoes" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="1000" />
@@ -739,60 +743,60 @@ SELECT Id_usuario, Nome, Sobrenome, Data_Nascimento, CPF, Sexo, Telefone, Genero
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbInstituicao" msprop:Generator_RowClassName="tbInstituicaoRow" msprop:Generator_RowEvHandlerName="tbInstituicaoRowChangeEventHandler" msprop:Generator_RowDeletedName="tbInstituicaoRowDeleted" msprop:Generator_RowDeletingName="tbInstituicaoRowDeleting" msprop:Generator_RowEvArgName="tbInstituicaoRowChangeEvent" msprop:Generator_TablePropName="tbInstituicao" msprop:Generator_RowChangedName="tbInstituicaoRowChanged" msprop:Generator_UserTableName="tbInstituicao" msprop:Generator_RowChangingName="tbInstituicaoRowChanging" msprop:Generator_TableClassName="tbInstituicaoDataTable" msprop:Generator_TableVarName="tabletbInstituicao">
+        <xs:element name="tbInstituicao" msprop:Generator_RowEvHandlerName="tbInstituicaoRowChangeEventHandler" msprop:Generator_RowDeletedName="tbInstituicaoRowDeleted" msprop:Generator_RowDeletingName="tbInstituicaoRowDeleting" msprop:Generator_RowEvArgName="tbInstituicaoRowChangeEvent" msprop:Generator_TablePropName="tbInstituicao" msprop:Generator_RowChangedName="tbInstituicaoRowChanged" msprop:Generator_UserTableName="tbInstituicao" msprop:Generator_RowChangingName="tbInstituicaoRowChanging" msprop:Generator_RowClassName="tbInstituicaoRow" msprop:Generator_TableClassName="tbInstituicaoDataTable" msprop:Generator_TableVarName="tabletbInstituicao">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="IdInstituicao" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="IdInstituicao" msprop:Generator_ColumnPropNameInTable="IdInstituicaoColumn" msprop:Generator_ColumnPropNameInRow="IdInstituicao" msprop:Generator_ColumnVarNameInTable="columnIdInstituicao" type="xs:int" />
-              <xs:element name="NomeInstituicao" msprop:Generator_UserColumnName="NomeInstituicao" msprop:Generator_ColumnPropNameInTable="NomeInstituicaoColumn" msprop:Generator_ColumnPropNameInRow="NomeInstituicao" msprop:Generator_ColumnVarNameInTable="columnNomeInstituicao">
+              <xs:element name="IdInstituicao" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="IdInstituicaoColumn" msprop:Generator_ColumnPropNameInRow="IdInstituicao" msprop:Generator_UserColumnName="IdInstituicao" msprop:Generator_ColumnVarNameInTable="columnIdInstituicao" type="xs:int" />
+              <xs:element name="NomeInstituicao" msprop:Generator_ColumnPropNameInTable="NomeInstituicaoColumn" msprop:Generator_ColumnPropNameInRow="NomeInstituicao" msprop:Generator_UserColumnName="NomeInstituicao" msprop:Generator_ColumnVarNameInTable="columnNomeInstituicao">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="150" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="CNPJ" msprop:Generator_UserColumnName="CNPJ" msprop:Generator_ColumnPropNameInTable="CNPJColumn" msprop:Generator_ColumnPropNameInRow="CNPJ" msprop:Generator_ColumnVarNameInTable="columnCNPJ">
+              <xs:element name="CNPJ" msprop:Generator_ColumnPropNameInTable="CNPJColumn" msprop:Generator_ColumnPropNameInRow="CNPJ" msprop:Generator_UserColumnName="CNPJ" msprop:Generator_ColumnVarNameInTable="columnCNPJ">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="18" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="TipoInstituicao" msprop:Generator_UserColumnName="TipoInstituicao" msprop:Generator_ColumnPropNameInTable="TipoInstituicaoColumn" msprop:Generator_ColumnPropNameInRow="TipoInstituicao" msprop:Generator_ColumnVarNameInTable="columnTipoInstituicao" minOccurs="0">
+              <xs:element name="TipoInstituicao" msprop:Generator_ColumnPropNameInTable="TipoInstituicaoColumn" msprop:Generator_ColumnPropNameInRow="TipoInstituicao" msprop:Generator_UserColumnName="TipoInstituicao" msprop:Generator_ColumnVarNameInTable="columnTipoInstituicao" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Telefone" msprop:Generator_UserColumnName="Telefone" msprop:Generator_ColumnPropNameInTable="TelefoneColumn" msprop:Generator_ColumnPropNameInRow="Telefone" msprop:Generator_ColumnVarNameInTable="columnTelefone" minOccurs="0">
+              <xs:element name="Telefone" msprop:Generator_ColumnPropNameInTable="TelefoneColumn" msprop:Generator_ColumnPropNameInRow="Telefone" msprop:Generator_UserColumnName="Telefone" msprop:Generator_ColumnVarNameInTable="columnTelefone" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Email" msprop:Generator_UserColumnName="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnVarNameInTable="columnEmail" minOccurs="0">
+              <xs:element name="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_UserColumnName="Email" msprop:Generator_ColumnVarNameInTable="columnEmail" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Endereco" msprop:Generator_UserColumnName="Endereco" msprop:Generator_ColumnPropNameInTable="EnderecoColumn" msprop:Generator_ColumnPropNameInRow="Endereco" msprop:Generator_ColumnVarNameInTable="columnEndereco" minOccurs="0">
+              <xs:element name="Endereco" msprop:Generator_ColumnPropNameInTable="EnderecoColumn" msprop:Generator_ColumnPropNameInRow="Endereco" msprop:Generator_UserColumnName="Endereco" msprop:Generator_ColumnVarNameInTable="columnEndereco" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="200" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Cidade" msprop:Generator_UserColumnName="Cidade" msprop:Generator_ColumnPropNameInTable="CidadeColumn" msprop:Generator_ColumnPropNameInRow="Cidade" msprop:Generator_ColumnVarNameInTable="columnCidade" minOccurs="0">
+              <xs:element name="Cidade" msprop:Generator_ColumnPropNameInTable="CidadeColumn" msprop:Generator_ColumnPropNameInRow="Cidade" msprop:Generator_UserColumnName="Cidade" msprop:Generator_ColumnVarNameInTable="columnCidade" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Estado" msprop:Generator_UserColumnName="Estado" msprop:Generator_ColumnPropNameInTable="EstadoColumn" msprop:Generator_ColumnPropNameInRow="Estado" msprop:Generator_ColumnVarNameInTable="columnEstado" minOccurs="0">
+              <xs:element name="Estado" msprop:Generator_ColumnPropNameInTable="EstadoColumn" msprop:Generator_ColumnPropNameInRow="Estado" msprop:Generator_UserColumnName="Estado" msprop:Generator_ColumnVarNameInTable="columnEstado" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2" />
@@ -802,175 +806,175 @@ SELECT Id_usuario, Nome, Sobrenome, Data_Nascimento, CPF, Sexo, Telefone, Genero
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbMedico" msprop:Generator_RowClassName="tbMedicoRow" msprop:Generator_RowEvHandlerName="tbMedicoRowChangeEventHandler" msprop:Generator_RowDeletedName="tbMedicoRowDeleted" msprop:Generator_RowDeletingName="tbMedicoRowDeleting" msprop:Generator_RowEvArgName="tbMedicoRowChangeEvent" msprop:Generator_TablePropName="tbMedico" msprop:Generator_RowChangedName="tbMedicoRowChanged" msprop:Generator_UserTableName="tbMedico" msprop:Generator_RowChangingName="tbMedicoRowChanging" msprop:Generator_TableClassName="tbMedicoDataTable" msprop:Generator_TableVarName="tabletbMedico">
+        <xs:element name="tbMedico" msprop:Generator_RowEvHandlerName="tbMedicoRowChangeEventHandler" msprop:Generator_RowDeletedName="tbMedicoRowDeleted" msprop:Generator_RowDeletingName="tbMedicoRowDeleting" msprop:Generator_RowEvArgName="tbMedicoRowChangeEvent" msprop:Generator_TablePropName="tbMedico" msprop:Generator_RowChangedName="tbMedicoRowChanged" msprop:Generator_UserTableName="tbMedico" msprop:Generator_RowChangingName="tbMedicoRowChanging" msprop:Generator_RowClassName="tbMedicoRow" msprop:Generator_TableClassName="tbMedicoDataTable" msprop:Generator_TableVarName="tabletbMedico">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="IdMedico" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="IdMedico" msprop:Generator_ColumnPropNameInTable="IdMedicoColumn" msprop:Generator_ColumnPropNameInRow="IdMedico" msprop:Generator_ColumnVarNameInTable="columnIdMedico" type="xs:int" />
-              <xs:element name="Nome" msprop:Generator_UserColumnName="Nome" msprop:Generator_ColumnPropNameInTable="NomeColumn" msprop:Generator_ColumnPropNameInRow="Nome" msprop:Generator_ColumnVarNameInTable="columnNome">
+              <xs:element name="IdMedico" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="IdMedicoColumn" msprop:Generator_ColumnPropNameInRow="IdMedico" msprop:Generator_UserColumnName="IdMedico" msprop:Generator_ColumnVarNameInTable="columnIdMedico" type="xs:int" />
+              <xs:element name="Nome" msprop:Generator_ColumnPropNameInTable="NomeColumn" msprop:Generator_ColumnPropNameInRow="Nome" msprop:Generator_UserColumnName="Nome" msprop:Generator_ColumnVarNameInTable="columnNome">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Sobrenome" msprop:Generator_UserColumnName="Sobrenome" msprop:Generator_ColumnPropNameInTable="SobrenomeColumn" msprop:Generator_ColumnPropNameInRow="Sobrenome" msprop:Generator_ColumnVarNameInTable="columnSobrenome">
+              <xs:element name="Sobrenome" msprop:Generator_ColumnPropNameInTable="SobrenomeColumn" msprop:Generator_ColumnPropNameInRow="Sobrenome" msprop:Generator_UserColumnName="Sobrenome" msprop:Generator_ColumnVarNameInTable="columnSobrenome">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="CRM" msprop:Generator_UserColumnName="CRM" msprop:Generator_ColumnPropNameInTable="CRMColumn" msprop:Generator_ColumnPropNameInRow="CRM" msprop:Generator_ColumnVarNameInTable="columnCRM">
+              <xs:element name="CRM" msprop:Generator_ColumnPropNameInTable="CRMColumn" msprop:Generator_ColumnPropNameInRow="CRM" msprop:Generator_UserColumnName="CRM" msprop:Generator_ColumnVarNameInTable="columnCRM">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Sexo" msprop:Generator_UserColumnName="Sexo" msprop:Generator_ColumnPropNameInTable="SexoColumn" msprop:Generator_ColumnPropNameInRow="Sexo" msprop:Generator_ColumnVarNameInTable="columnSexo">
+              <xs:element name="Sexo" msprop:Generator_ColumnPropNameInTable="SexoColumn" msprop:Generator_ColumnPropNameInRow="Sexo" msprop:Generator_UserColumnName="Sexo" msprop:Generator_ColumnVarNameInTable="columnSexo">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="1" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Especialidade" msprop:Generator_UserColumnName="Especialidade" msprop:Generator_ColumnPropNameInTable="EspecialidadeColumn" msprop:Generator_ColumnPropNameInRow="Especialidade" msprop:Generator_ColumnVarNameInTable="columnEspecialidade">
+              <xs:element name="Especialidade" msprop:Generator_ColumnPropNameInTable="EspecialidadeColumn" msprop:Generator_ColumnPropNameInRow="Especialidade" msprop:Generator_UserColumnName="Especialidade" msprop:Generator_ColumnVarNameInTable="columnEspecialidade">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Cidade" msprop:Generator_UserColumnName="Cidade" msprop:Generator_ColumnPropNameInTable="CidadeColumn" msprop:Generator_ColumnPropNameInRow="Cidade" msprop:Generator_ColumnVarNameInTable="columnCidade" minOccurs="0">
+              <xs:element name="Cidade" msprop:Generator_ColumnPropNameInTable="CidadeColumn" msprop:Generator_ColumnPropNameInRow="Cidade" msprop:Generator_UserColumnName="Cidade" msprop:Generator_ColumnVarNameInTable="columnCidade" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Estado" msprop:Generator_UserColumnName="Estado" msprop:Generator_ColumnPropNameInTable="EstadoColumn" msprop:Generator_ColumnPropNameInRow="Estado" msprop:Generator_ColumnVarNameInTable="columnEstado" minOccurs="0">
+              <xs:element name="Estado" msprop:Generator_ColumnPropNameInTable="EstadoColumn" msprop:Generator_ColumnPropNameInRow="Estado" msprop:Generator_UserColumnName="Estado" msprop:Generator_ColumnVarNameInTable="columnEstado" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Endereco" msprop:Generator_UserColumnName="Endereco" msprop:Generator_ColumnPropNameInTable="EnderecoColumn" msprop:Generator_ColumnPropNameInRow="Endereco" msprop:Generator_ColumnVarNameInTable="columnEndereco" minOccurs="0">
+              <xs:element name="Endereco" msprop:Generator_ColumnPropNameInTable="EnderecoColumn" msprop:Generator_ColumnPropNameInRow="Endereco" msprop:Generator_UserColumnName="Endereco" msprop:Generator_ColumnVarNameInTable="columnEndereco" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="200" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Telefone" msprop:Generator_UserColumnName="Telefone" msprop:Generator_ColumnPropNameInTable="TelefoneColumn" msprop:Generator_ColumnPropNameInRow="Telefone" msprop:Generator_ColumnVarNameInTable="columnTelefone" minOccurs="0">
+              <xs:element name="Telefone" msprop:Generator_ColumnPropNameInTable="TelefoneColumn" msprop:Generator_ColumnPropNameInRow="Telefone" msprop:Generator_UserColumnName="Telefone" msprop:Generator_ColumnVarNameInTable="columnTelefone" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="CPF" msprop:Generator_UserColumnName="CPF" msprop:Generator_ColumnPropNameInTable="CPFColumn" msprop:Generator_ColumnPropNameInRow="CPF" msprop:Generator_ColumnVarNameInTable="columnCPF">
+              <xs:element name="CPF" msprop:Generator_ColumnPropNameInTable="CPFColumn" msprop:Generator_ColumnPropNameInRow="CPF" msprop:Generator_UserColumnName="CPF" msprop:Generator_ColumnVarNameInTable="columnCPF">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="14" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Email" msprop:Generator_UserColumnName="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnVarNameInTable="columnEmail">
+              <xs:element name="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_UserColumnName="Email" msprop:Generator_ColumnVarNameInTable="columnEmail">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="150" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Senha" msprop:Generator_UserColumnName="Senha" msprop:Generator_ColumnPropNameInTable="SenhaColumn" msprop:Generator_ColumnPropNameInRow="Senha" msprop:Generator_ColumnVarNameInTable="columnSenha">
+              <xs:element name="Senha" msprop:Generator_ColumnPropNameInTable="SenhaColumn" msprop:Generator_ColumnPropNameInRow="Senha" msprop:Generator_UserColumnName="Senha" msprop:Generator_ColumnVarNameInTable="columnSenha">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="IdInstituicao" msprop:Generator_UserColumnName="IdInstituicao" msprop:Generator_ColumnPropNameInTable="IdInstituicaoColumn" msprop:Generator_ColumnPropNameInRow="IdInstituicao" msprop:Generator_ColumnVarNameInTable="columnIdInstituicao" type="xs:int" />
+              <xs:element name="IdInstituicao" msprop:Generator_ColumnPropNameInTable="IdInstituicaoColumn" msprop:Generator_ColumnPropNameInRow="IdInstituicao" msprop:Generator_UserColumnName="IdInstituicao" msprop:Generator_ColumnVarNameInTable="columnIdInstituicao" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbUsuario" msprop:Generator_RowClassName="tbUsuarioRow" msprop:Generator_RowEvHandlerName="tbUsuarioRowChangeEventHandler" msprop:Generator_RowDeletedName="tbUsuarioRowDeleted" msprop:Generator_RowDeletingName="tbUsuarioRowDeleting" msprop:Generator_RowEvArgName="tbUsuarioRowChangeEvent" msprop:Generator_TablePropName="tbUsuario" msprop:Generator_RowChangedName="tbUsuarioRowChanged" msprop:Generator_UserTableName="tbUsuario" msprop:Generator_RowChangingName="tbUsuarioRowChanging" msprop:Generator_TableClassName="tbUsuarioDataTable" msprop:Generator_TableVarName="tabletbUsuario">
+        <xs:element name="tbUsuario" msprop:Generator_RowEvHandlerName="tbUsuarioRowChangeEventHandler" msprop:Generator_RowDeletedName="tbUsuarioRowDeleted" msprop:Generator_RowDeletingName="tbUsuarioRowDeleting" msprop:Generator_RowEvArgName="tbUsuarioRowChangeEvent" msprop:Generator_TablePropName="tbUsuario" msprop:Generator_RowChangedName="tbUsuarioRowChanged" msprop:Generator_UserTableName="tbUsuario" msprop:Generator_RowChangingName="tbUsuarioRowChanging" msprop:Generator_RowClassName="tbUsuarioRow" msprop:Generator_TableClassName="tbUsuarioDataTable" msprop:Generator_TableVarName="tabletbUsuario">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Id_usuario" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="Id_usuario" msprop:Generator_ColumnPropNameInTable="Id_usuarioColumn" msprop:Generator_ColumnPropNameInRow="Id_usuario" msprop:Generator_ColumnVarNameInTable="columnId_usuario" type="xs:int" />
-              <xs:element name="Nome" msprop:Generator_UserColumnName="Nome" msprop:Generator_ColumnPropNameInTable="NomeColumn" msprop:Generator_ColumnPropNameInRow="Nome" msprop:Generator_ColumnVarNameInTable="columnNome">
+              <xs:element name="Id_usuario" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="Id_usuarioColumn" msprop:Generator_ColumnPropNameInRow="Id_usuario" msprop:Generator_UserColumnName="Id_usuario" msprop:Generator_ColumnVarNameInTable="columnId_usuario" type="xs:int" />
+              <xs:element name="Nome" msprop:Generator_ColumnPropNameInTable="NomeColumn" msprop:Generator_ColumnPropNameInRow="Nome" msprop:Generator_UserColumnName="Nome" msprop:Generator_ColumnVarNameInTable="columnNome">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Sobrenome" msprop:Generator_UserColumnName="Sobrenome" msprop:Generator_ColumnPropNameInTable="SobrenomeColumn" msprop:Generator_ColumnPropNameInRow="Sobrenome" msprop:Generator_ColumnVarNameInTable="columnSobrenome">
+              <xs:element name="Sobrenome" msprop:Generator_ColumnPropNameInTable="SobrenomeColumn" msprop:Generator_ColumnPropNameInRow="Sobrenome" msprop:Generator_UserColumnName="Sobrenome" msprop:Generator_ColumnVarNameInTable="columnSobrenome">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Data_Nascimento" msprop:Generator_UserColumnName="Data_Nascimento" msprop:Generator_ColumnPropNameInTable="Data_NascimentoColumn" msprop:Generator_ColumnPropNameInRow="Data_Nascimento" msprop:Generator_ColumnVarNameInTable="columnData_Nascimento" type="xs:dateTime" />
-              <xs:element name="CPF" msprop:Generator_UserColumnName="CPF" msprop:Generator_ColumnPropNameInTable="CPFColumn" msprop:Generator_ColumnPropNameInRow="CPF" msprop:Generator_ColumnVarNameInTable="columnCPF">
+              <xs:element name="Data_Nascimento" msprop:Generator_ColumnPropNameInTable="Data_NascimentoColumn" msprop:Generator_ColumnPropNameInRow="Data_Nascimento" msprop:Generator_UserColumnName="Data_Nascimento" msprop:Generator_ColumnVarNameInTable="columnData_Nascimento" type="xs:dateTime" />
+              <xs:element name="CPF" msprop:Generator_ColumnPropNameInTable="CPFColumn" msprop:Generator_ColumnPropNameInRow="CPF" msprop:Generator_UserColumnName="CPF" msprop:Generator_ColumnVarNameInTable="columnCPF">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="14" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Sexo" msprop:Generator_UserColumnName="Sexo" msprop:Generator_ColumnPropNameInTable="SexoColumn" msprop:Generator_ColumnPropNameInRow="Sexo" msprop:Generator_ColumnVarNameInTable="columnSexo">
+              <xs:element name="Sexo" msprop:Generator_ColumnPropNameInTable="SexoColumn" msprop:Generator_ColumnPropNameInRow="Sexo" msprop:Generator_UserColumnName="Sexo" msprop:Generator_ColumnVarNameInTable="columnSexo">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="1" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Telefone" msprop:Generator_UserColumnName="Telefone" msprop:Generator_ColumnPropNameInTable="TelefoneColumn" msprop:Generator_ColumnPropNameInRow="Telefone" msprop:Generator_ColumnVarNameInTable="columnTelefone">
+              <xs:element name="Telefone" msprop:Generator_ColumnPropNameInTable="TelefoneColumn" msprop:Generator_ColumnPropNameInRow="Telefone" msprop:Generator_UserColumnName="Telefone" msprop:Generator_ColumnVarNameInTable="columnTelefone">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="11" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Genero" msprop:Generator_UserColumnName="Genero" msprop:Generator_ColumnPropNameInTable="GeneroColumn" msprop:Generator_ColumnPropNameInRow="Genero" msprop:Generator_ColumnVarNameInTable="columnGenero">
+              <xs:element name="Genero" msprop:Generator_ColumnPropNameInTable="GeneroColumn" msprop:Generator_ColumnPropNameInRow="Genero" msprop:Generator_UserColumnName="Genero" msprop:Generator_ColumnVarNameInTable="columnGenero">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Endereco" msprop:Generator_UserColumnName="Endereco" msprop:Generator_ColumnPropNameInTable="EnderecoColumn" msprop:Generator_ColumnPropNameInRow="Endereco" msprop:Generator_ColumnVarNameInTable="columnEndereco">
+              <xs:element name="Endereco" msprop:Generator_ColumnPropNameInTable="EnderecoColumn" msprop:Generator_ColumnPropNameInRow="Endereco" msprop:Generator_UserColumnName="Endereco" msprop:Generator_ColumnVarNameInTable="columnEndereco">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="200" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Email" msprop:Generator_UserColumnName="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnVarNameInTable="columnEmail">
+              <xs:element name="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_UserColumnName="Email" msprop:Generator_ColumnVarNameInTable="columnEmail">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="200" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Cidade" msprop:Generator_UserColumnName="Cidade" msprop:Generator_ColumnPropNameInTable="CidadeColumn" msprop:Generator_ColumnPropNameInRow="Cidade" msprop:Generator_ColumnVarNameInTable="columnCidade">
+              <xs:element name="Cidade" msprop:Generator_ColumnPropNameInTable="CidadeColumn" msprop:Generator_ColumnPropNameInRow="Cidade" msprop:Generator_UserColumnName="Cidade" msprop:Generator_ColumnVarNameInTable="columnCidade">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Estado" msprop:Generator_UserColumnName="Estado" msprop:Generator_ColumnPropNameInTable="EstadoColumn" msprop:Generator_ColumnPropNameInRow="Estado" msprop:Generator_ColumnVarNameInTable="columnEstado">
+              <xs:element name="Estado" msprop:Generator_ColumnPropNameInTable="EstadoColumn" msprop:Generator_ColumnPropNameInRow="Estado" msprop:Generator_UserColumnName="Estado" msprop:Generator_ColumnVarNameInTable="columnEstado">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Data_Cadastro" msprop:Generator_UserColumnName="Data_Cadastro" msprop:Generator_ColumnPropNameInTable="Data_CadastroColumn" msprop:Generator_ColumnPropNameInRow="Data_Cadastro" msprop:Generator_ColumnVarNameInTable="columnData_Cadastro" type="xs:dateTime" />
-              <xs:element name="Senha" msprop:Generator_UserColumnName="Senha" msprop:Generator_ColumnPropNameInTable="SenhaColumn" msprop:Generator_ColumnPropNameInRow="Senha" msprop:Generator_ColumnVarNameInTable="columnSenha">
+              <xs:element name="Data_Cadastro" msprop:Generator_ColumnPropNameInTable="Data_CadastroColumn" msprop:Generator_ColumnPropNameInRow="Data_Cadastro" msprop:Generator_UserColumnName="Data_Cadastro" msprop:Generator_ColumnVarNameInTable="columnData_Cadastro" type="xs:dateTime" />
+              <xs:element name="Senha" msprop:Generator_ColumnPropNameInTable="SenhaColumn" msprop:Generator_ColumnPropNameInRow="Senha" msprop:Generator_UserColumnName="Senha" msprop:Generator_ColumnVarNameInTable="columnSenha">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
@@ -1009,11 +1013,11 @@ SELECT Id_usuario, Nome, Sobrenome, Data_Nascimento, CPF, Sexo, Telefone, Genero
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK__Diagnosti__Id_Co__3C69FB99" msdata:parent="tbConsulta" msdata:child="DiagnosticoMedico" msdata:parentkey="IdConsulta" msdata:childkey="Id_Consulta" msprop:Generator_UserParentTable="tbConsulta" msprop:Generator_UserChildTable="DiagnosticoMedico" msprop:Generator_RelationVarName="relationFK__Diagnosti__Id_Co__3C69FB99" msprop:Generator_ChildPropName="GetDiagnosticoMedicoRows" msprop:Generator_ParentPropName="tbConsultaRow" msprop:Generator_UserRelationName="FK__Diagnosti__Id_Co__3C69FB99" />
-      <msdata:Relationship name="FK_Avaliacao_Consulta" msdata:parent="tbConsulta" msdata:child="tbAvaliacao" msdata:parentkey="IdConsulta" msdata:childkey="IdConsulta" msprop:Generator_UserParentTable="tbConsulta" msprop:Generator_UserChildTable="tbAvaliacao" msprop:Generator_RelationVarName="relationFK_Avaliacao_Consulta" msprop:Generator_ChildPropName="GettbAvaliacaoRows" msprop:Generator_ParentPropName="tbConsultaRow" msprop:Generator_UserRelationName="FK_Avaliacao_Consulta" />
-      <msdata:Relationship name="FK_Consulta_Medico" msdata:parent="tbMedico" msdata:child="tbConsulta" msdata:parentkey="IdMedico" msdata:childkey="IdMedico" msprop:Generator_UserParentTable="tbMedico" msprop:Generator_UserChildTable="tbConsulta" msprop:Generator_RelationVarName="relationFK_Consulta_Medico" msprop:Generator_ChildPropName="GettbConsultaRows" msprop:Generator_ParentPropName="tbMedicoRow" msprop:Generator_UserRelationName="FK_Consulta_Medico" />
-      <msdata:Relationship name="FK_Consulta_Usuario" msdata:parent="tbUsuario" msdata:child="tbConsulta" msdata:parentkey="Id_usuario" msdata:childkey="Id_usuario" msprop:Generator_UserParentTable="tbUsuario" msprop:Generator_UserChildTable="tbConsulta" msprop:Generator_RelationVarName="relationFK_Consulta_Usuario" msprop:Generator_ChildPropName="GettbConsultaRows" msprop:Generator_ParentPropName="tbUsuarioRow" msprop:Generator_UserRelationName="FK_Consulta_Usuario" />
-      <msdata:Relationship name="FK_tbMedico_tbInstituicao" msdata:parent="tbInstituicao" msdata:child="tbMedico" msdata:parentkey="IdInstituicao" msdata:childkey="IdInstituicao" msprop:Generator_UserParentTable="tbInstituicao" msprop:Generator_UserChildTable="tbMedico" msprop:Generator_RelationVarName="relationFK_tbMedico_tbInstituicao" msprop:Generator_ChildPropName="GettbMedicoRows" msprop:Generator_UserRelationName="FK_tbMedico_tbInstituicao" msprop:Generator_ParentPropName="tbInstituicaoRow" />
+      <msdata:Relationship name="FK__Diagnosti__Id_Co__4F7CD00D" msdata:parent="tbConsulta" msdata:child="DiagnosticoMedico" msdata:parentkey="IdConsulta" msdata:childkey="Id_Consulta" msprop:Generator_UserParentTable="tbConsulta" msprop:Generator_UserChildTable="DiagnosticoMedico" msprop:Generator_RelationVarName="relationFK__Diagnosti__Id_Co__4F7CD00D" msprop:Generator_ChildPropName="GetDiagnosticoMedicoRows" msprop:Generator_UserRelationName="FK__Diagnosti__Id_Co__4F7CD00D" msprop:Generator_ParentPropName="tbConsultaRow" />
+      <msdata:Relationship name="FK_Avaliacao_Consulta" msdata:parent="tbConsulta" msdata:child="tbAvaliacao" msdata:parentkey="IdConsulta" msdata:childkey="IdConsulta" msprop:Generator_UserParentTable="tbConsulta" msprop:Generator_UserChildTable="tbAvaliacao" msprop:Generator_RelationVarName="relationFK_Avaliacao_Consulta" msprop:Generator_ChildPropName="GettbAvaliacaoRows" msprop:Generator_UserRelationName="FK_Avaliacao_Consulta" msprop:Generator_ParentPropName="tbConsultaRow" />
+      <msdata:Relationship name="FK_Consulta_Medico" msdata:parent="tbMedico" msdata:child="tbConsulta" msdata:parentkey="IdMedico" msdata:childkey="IdMedico" msprop:Generator_UserParentTable="tbMedico" msprop:Generator_UserChildTable="tbConsulta" msprop:Generator_RelationVarName="relationFK_Consulta_Medico" msprop:Generator_ChildPropName="GettbConsultaRows" msprop:Generator_UserRelationName="FK_Consulta_Medico" msprop:Generator_ParentPropName="tbMedicoRow" />
+      <msdata:Relationship name="FK_Consulta_Usuario" msdata:parent="tbUsuario" msdata:child="tbConsulta" msdata:parentkey="Id_usuario" msdata:childkey="Id_usuario" msprop:Generator_UserParentTable="tbUsuario" msprop:Generator_UserChildTable="tbConsulta" msprop:Generator_RelationVarName="relationFK_Consulta_Usuario" msprop:Generator_ChildPropName="GettbConsultaRows" msprop:Generator_UserRelationName="FK_Consulta_Usuario" msprop:Generator_ParentPropName="tbUsuarioRow" />
+      <msdata:Relationship name="FK_tbMedico_tbInstituicao" msdata:parent="tbInstituicao" msdata:child="tbMedico" msdata:parentkey="IdInstituicao" msdata:childkey="IdInstituicao" msprop:Generator_UserParentTable="tbInstituicao" msprop:Generator_UserChildTable="tbMedico" msprop:Generator_RelationVarName="relationFK_tbMedico_tbInstituicao" msprop:Generator_ChildPropName="GettbMedicoRows" msprop:Generator_ParentPropName="tbInstituicaoRow" msprop:Generator_UserRelationName="FK_tbMedico_tbInstituicao" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
