@@ -165,7 +165,7 @@
             this.lblEmailInformado.AutoSize = true;
             this.lblEmailInformado.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmailInformado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(124)))), ((int)(((byte)(99)))));
-            this.lblEmailInformado.Location = new System.Drawing.Point(95, 157);
+            this.lblEmailInformado.Location = new System.Drawing.Point(86, 157);
             this.lblEmailInformado.Name = "lblEmailInformado";
             this.lblEmailInformado.Size = new System.Drawing.Size(135, 15);
             this.lblEmailInformado.TabIndex = 12;

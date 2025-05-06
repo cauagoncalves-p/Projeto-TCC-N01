@@ -54,11 +54,11 @@ namespace Avalia__
             {
                 mensagem_Do_Sistema.MensagemInformation("E-mail encontrado!...");
 
-                this.Hide();
+                
                 // Abre a próxima tela, passando o e-mail se quiser
                 FormularioEnvioDeEmailTrocarSenha envio = new FormularioEnvioDeEmailTrocarSenha(emaildigitado);
                 envio.ShowDialog();
-                this.Show();
+                this.Close();
             }
             else
             {

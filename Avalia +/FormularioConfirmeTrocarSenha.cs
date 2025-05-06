@@ -150,15 +150,16 @@ namespace Avalia__
             {
                 tbUsuarioTableAdapter usuarioAdapter = new tbUsuarioTableAdapter();
                 usuarioAdapter.AtualizarSenhaPorEmail(novaSenhaCriptografada, emailUsuario);
+                MessageBox.Show("Senha atualizada com sucesso!");
+                this.Close();
             }
             else if (!string.IsNullOrEmpty(emailMedico))
             {
                 tbMedicoTableAdapter medicoAdapter = new tbMedicoTableAdapter();
                 medicoAdapter.AtualizarSenhaPorEmail(novaSenhaCriptografada, emailMedico);
+                MessageBox.Show("Senha atualizada com sucesso!");
+                this.Close();
             }
-
-            MessageBox.Show("Senha atualizada com sucesso!");
-            this.Close(); // Fecha a tela após atualizar, se desejar
         }
     }
 }

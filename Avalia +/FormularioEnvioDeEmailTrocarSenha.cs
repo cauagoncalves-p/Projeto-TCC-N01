@@ -150,8 +150,10 @@ namespace Avalia__
             if (codigoDigitado == codigoGerado)
             {
                 mensagem_Do_Sistema.MensagemInformation("✅ Código confirmado com sucesso!");
+             
                 FormularioConfirmeTrocarSenha formularioLogin = new FormularioConfirmeTrocarSenha(emailUsuario, emailMedico);
                 formularioLogin.ShowDialog();
+                this.Close();
             }
             else
             {
