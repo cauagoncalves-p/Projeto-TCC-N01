@@ -135,7 +135,7 @@
             this.lblAvalia.Size = new System.Drawing.Size(118, 31);
             this.lblAvalia.TabIndex = 0;
             this.lblAvalia.Text = "Áurea+";
-            this.lblAvalia.Click += new System.EventHandler(this.lblAvalia_Click);
+        
             // 
             // FormularioTrocarSenha
             // 
@@ -149,7 +149,7 @@
             this.Name = "FormularioTrocarSenha";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trocar Senha";
-            this.Load += new System.EventHandler(this.FormularioTrocarSenha_Load);
+           
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormularioTrocarSenha_Paint);
             this.panelTrocarSenha.ResumeLayout(false);
             this.panelTrocarSenha.PerformLayout();

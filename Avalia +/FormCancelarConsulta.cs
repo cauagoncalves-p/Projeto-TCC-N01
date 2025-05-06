@@ -242,15 +242,13 @@ namespace Avalia__
                 string observacoes = row.Cells["Observações"].Value?.ToString() ?? "";
                 string local = row.Cells["Local"].Value?.ToString() ?? "";
               
-
-
-
                 var consultaSelecionada = (dynamic)row.DataBoundItem;
                 int idConsulta = consultaSelecionada.IdConsulta;
 
-
+                this.Hide();
                 var formConfirmarCancelamento = new frmConfirmarCancelamento(idConsulta, data, medico, motivo, status, observacoes, local);
                 formConfirmarCancelamento.ShowDialog();
+                this.Show();
 
                 // Depois de cancelar, recarrega a grid e desativa o botão
                 CarregarConsultasDoUsuario();

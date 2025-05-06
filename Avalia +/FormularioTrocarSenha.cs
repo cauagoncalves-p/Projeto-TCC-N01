@@ -54,25 +54,17 @@ namespace Avalia__
             {
                 mensagem_Do_Sistema.MensagemInformation("E-mail encontrado!...");
 
+                this.Hide();
                 // Abre a próxima tela, passando o e-mail se quiser
                 FormularioEnvioDeEmailTrocarSenha envio = new FormularioEnvioDeEmailTrocarSenha(emaildigitado);
                 envio.ShowDialog();
+                this.Show();
             }
             else
             {
                 mensagem_Do_Sistema.MensagemError("E-mail não enontrado");
                 return;
             }
-        }
-
-        private void lblAvalia_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FormularioTrocarSenha_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

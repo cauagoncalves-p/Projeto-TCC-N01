@@ -65,7 +65,7 @@ namespace Avalia__
                     lblTotalRealizadas.Text = todasConsultasMedico.Count(c => c.StatusConsulta == "Realizada").ToString();
                     lblTotalUrgencia.Text = todasConsultasMedico.Count(c => c.StatusConsulta == "Urgente").ToString();
 
-                   
+
                     var idsConsultas = todasConsultasMedico.Select(c => c.IdConsulta).ToList();
                     var avaliacoes = avaliacaoAdapter.GetData()
                         .Where(a => idsConsultas.Contains(a.IdConsulta))
@@ -75,13 +75,20 @@ namespace Avalia__
 
                     if (totalAvaliacoes > 0)
                     {
-                        double mediaNotas = avaliacoes.Average(a => a.Nota);
+                        // Calcula a média geral considerando as 4 notas
+                        double mediaNotas = avaliacoes.Average(a =>
+                            (a.Atendimento_comunicacao + a.Conhecimento_tecnico + a.Respeito_empatia + a.Tempo_de_espera) / 4.0
+                        );
+
                         lblNota.Text = $"{mediaNotas:F1}";
-                        lblNota5.Text = $"{(avaliacoes.Count(a => a.Nota == 5) * 100.0 / totalAvaliacoes):F1}%";
-                        lblNota4.Text = $"{(avaliacoes.Count(a => a.Nota == 4) * 100.0 / totalAvaliacoes):F1}%";
-                        lblNota3.Text = $"{(avaliacoes.Count(a => a.Nota == 3) * 100.0 / totalAvaliacoes):F1}%";
-                        lblNota2.Text = $"{(avaliacoes.Count(a => a.Nota == 2) * 100.0 / totalAvaliacoes):F1}%";
-                        lblNota1.Text = $"{(avaliacoes.Count(a => a.Nota == 1) * 100.0 / totalAvaliacoes):F1}%";
+
+                        // Porcentagem de médias arredondadas para cada nota de 1 a 5
+                        lblNota5.Text = $"{(avaliacoes.Count(a => Math.Round((a.Atendimento_comunicacao + a.Conhecimento_tecnico + a.Respeito_empatia + a.Tempo_de_espera) / 4.0) == 5) * 100.0 / totalAvaliacoes):F1}%";
+                        lblNota4.Text = $"{(avaliacoes.Count(a => Math.Round((a.Atendimento_comunicacao + a.Conhecimento_tecnico + a.Respeito_empatia + a.Tempo_de_espera) / 4.0) == 4) * 100.0 / totalAvaliacoes):F1}%";
+                        lblNota3.Text = $"{(avaliacoes.Count(a => Math.Round((a.Atendimento_comunicacao + a.Conhecimento_tecnico + a.Respeito_empatia + a.Tempo_de_espera) / 4.0) == 3) * 100.0 / totalAvaliacoes):F1}%";
+                        lblNota2.Text = $"{(avaliacoes.Count(a => Math.Round((a.Atendimento_comunicacao + a.Conhecimento_tecnico + a.Respeito_empatia + a.Tempo_de_espera) / 4.0) == 2) * 100.0 / totalAvaliacoes):F1}%";
+                        lblNota1.Text = $"{(avaliacoes.Count(a => Math.Round((a.Atendimento_comunicacao + a.Conhecimento_tecnico + a.Respeito_empatia + a.Tempo_de_espera) / 4.0) == 1) * 100.0 / totalAvaliacoes):F1}%";
+
                         lblTotalAvaliacao.Text = $"({totalAvaliacoes}\navaliações)";
                     }
                     else
@@ -263,9 +270,12 @@ namespace Avalia__
                     return;
                 }
 
+                this.Hide();
                 // Abrir novo formulário com os dados
                 FormularioProntuarioPaciente detalhes = new FormularioProntuarioPaciente(IdConsulta, paciente, data, status, observacoes);
                 detalhes.ShowDialog();
+
+                this.Show();
             }
             else
             {

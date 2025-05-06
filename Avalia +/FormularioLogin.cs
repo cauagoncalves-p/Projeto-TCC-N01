@@ -41,8 +41,12 @@ namespace Avalia__
 
         private void lblLinkCriarConta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            this.Hide();
+
             FormularioCadastro formularioCadastro = new FormularioCadastro();
             formularioCadastro.ShowDialog();
+
+            this.Show();
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -53,8 +57,12 @@ namespace Avalia__
 
         private void lblEsqueceuSenha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            this.Hide(); 
+
             FormularioTrocarSenha formularioTrocarSenha = new FormularioTrocarSenha();
             formularioTrocarSenha.ShowDialog();
+
+            this.Show(); 
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)
@@ -69,8 +77,13 @@ namespace Avalia__
             if (usuario != null)
             {
                 mensagem_Do_Sistema.MensagemInformation("Logado com sucesso");
+
+                this.Hide(); 
+
                 FormularioPaginaPaciente paciente = new FormularioPaginaPaciente(usuario.Id_usuario, usuario.Email);
-                paciente.ShowDialog();
+                paciente.ShowDialog(); // Mostra a tela do paciente e espera ela ser fechada
+
+                this.Show(); 
             }
             else
             {
@@ -78,9 +91,5 @@ namespace Avalia__
             }
         }
 
-        private void FormularioLogin_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

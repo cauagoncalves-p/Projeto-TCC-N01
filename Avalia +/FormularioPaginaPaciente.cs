@@ -38,28 +38,38 @@ namespace Avalia__
         private void btnSair_Click(object sender, EventArgs e)
         {
             ConfiguracaoTelas configuracaoTelas = new ConfiguracaoTelas();
-            configuracaoTelas.FecharAba(this);
+            configuracaoTelas.FecharAba(this); // Fecha apenas a aba atual
         }
 
         private void btnAgendar_Click(object sender, EventArgs e)
         {
-            FormularioAgendamentoConsulta formularioAgendamento = new FormularioAgendamentoConsulta(idUsuario);
-            formularioAgendamento.ShowDialog();
+            this.Hide(); // Esconde o formulário atual
 
+            FormularioAgendamentoConsulta formularioAgendamento = new FormularioAgendamentoConsulta(idUsuario);
+            formularioAgendamento.ShowDialog(); // Abre o novo formulário
+
+            this.Show(); // Reexibe o formulário atual depois que o outro for fechado
         }
-       
+
         private void btnHistoricomedico_Click(object sender, EventArgs e)
         {
+            this.Hide();
+
             FormularioConsultasAgendadas formularioConsultasAgendadas = new FormularioConsultasAgendadas(idUsuario);
             formularioConsultasAgendadas.ShowDialog();
+
+            this.Show();
         }
 
         private void btnCancelarConsulta_Click(object sender, EventArgs e)
         {
+            this.Hide();
+
             FormCancelarConsulta formCancelarConsulta = new FormCancelarConsulta(idUsuario);
             formCancelarConsulta.ShowDialog();
-        }
 
+            this.Show();
+        }
         private void FormularioPaginaPaciente_Paint(object sender, PaintEventArgs e)
         {
             //Cor de fundo da tela 

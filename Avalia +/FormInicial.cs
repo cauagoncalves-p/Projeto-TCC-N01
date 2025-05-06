@@ -88,24 +88,28 @@ namespace Avalia__
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            if (!(btnPaciente.BackColor == ColorTranslator.FromHtml("#d8a48f")) && !(btnMedico.BackColor == ColorTranslator.FromHtml("#d8a48f"))) 
+            if (!(btnPaciente.BackColor == ColorTranslator.FromHtml("#d8a48f")) &&
+                !(btnMedico.BackColor == ColorTranslator.FromHtml("#d8a48f")))
             {
                 Mensagem_do_sistema mensagem_Do_Sistema = new Mensagem_do_sistema();
                 mensagem_Do_Sistema.MensagemError("Selecione uma das opções acima!");
                 return;
             }
 
-            if (btnPaciente.BackColor == ColorTranslator.FromHtml("#d8a48f")) 
+            this.Hide(); 
+
+            if (btnPaciente.BackColor == ColorTranslator.FromHtml("#d8a48f"))
             {
                 FormularioLogin formularioLogin = new FormularioLogin();
                 formularioLogin.ShowDialog();
             }
-            if (btnMedico.BackColor == ColorTranslator.FromHtml("#d8a48f"))
+            else if (btnMedico.BackColor == ColorTranslator.FromHtml("#d8a48f"))
             {
                 FormularioLoginMedico formularioLoginMedico = new FormularioLoginMedico();
                 formularioLoginMedico.ShowDialog();
             }
 
+            this.Show(); 
         }
 
         private void lblPaciente_Click(object sender, EventArgs e)

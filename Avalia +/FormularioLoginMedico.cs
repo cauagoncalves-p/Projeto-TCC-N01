@@ -53,14 +53,20 @@ namespace Avalia__
             if (usuario != null)
             {
                 mensagem_Do_Sistema.MensagemInformation("Logado com sucesso");
+
+                this.Hide(); 
+
                 FormularioPaginaMedico formularioPaginaMedico = new FormularioPaginaMedico(usuario.IdMedico);
-                formularioPaginaMedico.ShowDialog();
+                formularioPaginaMedico.ShowDialog(); // Abre a tela do médico
+
+                this.Show();
             }
             else
             {
-                mensagem_Do_Sistema.MensagemError("E-mail ou Senha incorretos");
+                mensagem_Do_Sistema.MensagemError("CRM ou Senha incorretos");
             }
         }
+
 
         private void lblEsqueceuSenha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {

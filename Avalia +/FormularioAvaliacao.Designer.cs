@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioAvaliacao));
             this.comentarioPanel = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.btnSair = new System.Windows.Forms.Button();
             this.picRespeito2 = new System.Windows.Forms.PictureBox();
             this.picRespeito3 = new System.Windows.Forms.PictureBox();
@@ -60,20 +62,19 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblEspecialidadeEcrm = new System.Windows.Forms.Label();
             this.btnCancelarAvaliacao = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBoxComentarioPanel = new System.Windows.Forms.TextBox();
+            this.lblNomeMedico = new System.Windows.Forms.Label();
+            this.txtComentario = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.lblTempoEspera = new System.Windows.Forms.Label();
             this.lblAtendimentoComunicacao = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtDriConsulta = new System.Windows.Forms.Label();
             this.btnEnviarAvaliacao = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.btnAtualizar = new System.Windows.Forms.Button();
             this.comentarioPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picRespeito2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picRespeito3)).BeginInit();
@@ -100,6 +101,7 @@
             // comentarioPanel
             // 
             this.comentarioPanel.AutoScroll = true;
+            this.comentarioPanel.Controls.Add(this.btnAtualizar);
             this.comentarioPanel.Controls.Add(this.label13);
             this.comentarioPanel.Controls.Add(this.label4);
             this.comentarioPanel.Controls.Add(this.btnSair);
@@ -132,11 +134,11 @@
             this.comentarioPanel.Controls.Add(this.label11);
             this.comentarioPanel.Controls.Add(this.label10);
             this.comentarioPanel.Controls.Add(this.label9);
-            this.comentarioPanel.Controls.Add(this.label12);
+            this.comentarioPanel.Controls.Add(this.lblEspecialidadeEcrm);
             this.comentarioPanel.Controls.Add(this.btnCancelarAvaliacao);
             this.comentarioPanel.Controls.Add(this.checkBox1);
-            this.comentarioPanel.Controls.Add(this.label7);
-            this.comentarioPanel.Controls.Add(this.textBoxComentarioPanel);
+            this.comentarioPanel.Controls.Add(this.lblNomeMedico);
+            this.comentarioPanel.Controls.Add(this.txtComentario);
             this.comentarioPanel.Controls.Add(this.label6);
             this.comentarioPanel.Controls.Add(this.lblTempoEspera);
             this.comentarioPanel.Controls.Add(this.lblAtendimentoComunicacao);
@@ -148,6 +150,27 @@
             this.comentarioPanel.Name = "comentarioPanel";
             this.comentarioPanel.Size = new System.Drawing.Size(878, 500);
             this.comentarioPanel.TabIndex = 1;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
+            this.label13.Location = new System.Drawing.Point(24, 625);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(0, 20);
+            this.label13.TabIndex = 67;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
+            this.label4.Location = new System.Drawing.Point(28, 372);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(377, 20);
+            this.label4.TabIndex = 66;
+            this.label4.Text = "Deixa um comentario de como foi sua consulta (Opicional )";
             // 
             // btnSair
             // 
@@ -449,24 +472,23 @@
             this.label9.TabIndex = 32;
             this.label9.Text = resources.GetString("label9.Text");
             // 
-            // label12
+            // lblEspecialidadeEcrm
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Gray;
-            this.label12.Location = new System.Drawing.Point(331, 41);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(257, 20);
-            this.label12.TabIndex = 30;
-            this.label12.Text = "Ginecologista e Obstetra ● CRM/SP 123456 ";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
+            this.lblEspecialidadeEcrm.AutoSize = true;
+            this.lblEspecialidadeEcrm.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEspecialidadeEcrm.ForeColor = System.Drawing.Color.Gray;
+            this.lblEspecialidadeEcrm.Location = new System.Drawing.Point(331, 41);
+            this.lblEspecialidadeEcrm.Name = "lblEspecialidadeEcrm";
+            this.lblEspecialidadeEcrm.Size = new System.Drawing.Size(257, 20);
+            this.lblEspecialidadeEcrm.TabIndex = 30;
+            this.lblEspecialidadeEcrm.Text = "Ginecologista e Obstetra ● CRM/SP 123456 ";
             // 
             // btnCancelarAvaliacao
             // 
             this.btnCancelarAvaliacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(164)))), ((int)(((byte)(143)))));
             this.btnCancelarAvaliacao.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelarAvaliacao.ForeColor = System.Drawing.Color.White;
-            this.btnCancelarAvaliacao.Location = new System.Drawing.Point(532, 565);
+            this.btnCancelarAvaliacao.Location = new System.Drawing.Point(403, 565);
             this.btnCancelarAvaliacao.Name = "btnCancelarAvaliacao";
             this.btnCancelarAvaliacao.Size = new System.Drawing.Size(139, 50);
             this.btnCancelarAvaliacao.TabIndex = 28;
@@ -485,28 +507,39 @@
             this.checkBox1.Text = "Manter minha avaliação anônima (Seu nome não sera divulgado) ";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // label7
+            // lblNomeMedico
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.label7.Location = new System.Drawing.Point(351, 18);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(221, 22);
-            this.label7.TabIndex = 22;
-            this.label7.Text = "Dra. Ana Carolina Silva";
+            this.lblNomeMedico.AutoSize = true;
+            this.lblNomeMedico.BackColor = System.Drawing.Color.Transparent;
+            this.lblNomeMedico.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeMedico.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
+            this.lblNomeMedico.Location = new System.Drawing.Point(351, 18);
+            this.lblNomeMedico.Name = "lblNomeMedico";
+            this.lblNomeMedico.Size = new System.Drawing.Size(221, 22);
+            this.lblNomeMedico.TabIndex = 22;
+            this.lblNomeMedico.Text = "Dra. Ana Carolina Silva";
             // 
-            // textBoxComentarioPanel
+            // txtComentario
             // 
-            this.textBoxComentarioPanel.BackColor = System.Drawing.Color.FloralWhite;
-            this.textBoxComentarioPanel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxComentarioPanel.Location = new System.Drawing.Point(29, 406);
-            this.textBoxComentarioPanel.Multiline = true;
-            this.textBoxComentarioPanel.Name = "textBoxComentarioPanel";
-            this.textBoxComentarioPanel.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxComentarioPanel.Size = new System.Drawing.Size(822, 105);
-            this.textBoxComentarioPanel.TabIndex = 21;
+            this.txtComentario.BackColor = System.Drawing.Color.FloralWhite;
+            this.txtComentario.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtComentario.Location = new System.Drawing.Point(29, 406);
+            this.txtComentario.Multiline = true;
+            this.txtComentario.Name = "txtComentario";
+            this.txtComentario.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtComentario.Size = new System.Drawing.Size(822, 105);
+            this.txtComentario.TabIndex = 21;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
+            this.label6.Location = new System.Drawing.Point(28, 469);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(232, 18);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "Deixe um comentário (Opcional)";
             // 
             // lblTempoEspera
             // 
@@ -565,6 +598,7 @@
             this.btnEnviarAvaliacao.TabIndex = 13;
             this.btnEnviarAvaliacao.Text = "Enviar";
             this.btnEnviarAvaliacao.UseVisualStyleBackColor = false;
+            this.btnEnviarAvaliacao.Click += new System.EventHandler(this.btnEnviarAvaliacao_Click);
             // 
             // label8
             // 
@@ -575,37 +609,18 @@
             this.label8.TabIndex = 31;
             this.label8.Text = resources.GetString("label8.Text");
             // 
-            // label6
+            // btnAtualizar
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.label6.Location = new System.Drawing.Point(28, 469);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(232, 18);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "Deixe um comentário (Opcional)";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.label4.Location = new System.Drawing.Point(28, 372);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(377, 20);
-            this.label4.TabIndex = 66;
-            this.label4.Text = "Deixa um comentario de como foi sua consulta (Opicional )";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.label13.Location = new System.Drawing.Point(24, 625);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(0, 20);
-            this.label13.TabIndex = 67;
+            this.btnAtualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(164)))), ((int)(((byte)(143)))));
+            this.btnAtualizar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizar.ForeColor = System.Drawing.Color.White;
+            this.btnAtualizar.Location = new System.Drawing.Point(554, 565);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(139, 50);
+            this.btnAtualizar.TabIndex = 68;
+            this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.UseVisualStyleBackColor = false;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // FormularioAvaliacao
             // 
@@ -651,11 +666,11 @@
         #endregion
 
         private System.Windows.Forms.Panel comentarioPanel;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblEspecialidadeEcrm;
         private System.Windows.Forms.Button btnCancelarAvaliacao;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBoxComentarioPanel;
+        private System.Windows.Forms.Label lblNomeMedico;
+        private System.Windows.Forms.TextBox txtComentario;
         private System.Windows.Forms.Label lblTempoEspera;
         private System.Windows.Forms.Label lblAtendimentoComunicacao;
         private System.Windows.Forms.Label label2;
@@ -695,5 +710,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnAtualizar;
     }
 }

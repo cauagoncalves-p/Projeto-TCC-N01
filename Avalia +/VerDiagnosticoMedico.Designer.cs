@@ -33,6 +33,7 @@
             this.lblsubtitulo = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panelPrincipal = new System.Windows.Forms.Panel();
+            this.btnAvaliar = new System.Windows.Forms.Button();
             this.txtObservacaoMedico = new System.Windows.Forms.TextBox();
             this.txtTratamento = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -64,7 +65,6 @@
             this.lblTituloPaciente = new System.Windows.Forms.Label();
             this.lblPaciente = new System.Windows.Forms.Label();
             this.lblInfoConsulta = new System.Windows.Forms.Label();
-            this.btnAvaliar = new System.Windows.Forms.Button();
             this.panelPrincipal.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panelPaciente.SuspendLayout();
@@ -132,6 +132,21 @@
             this.panelPrincipal.Name = "panelPrincipal";
             this.panelPrincipal.Size = new System.Drawing.Size(783, 404);
             this.panelPrincipal.TabIndex = 16;
+            // 
+            // btnAvaliar
+            // 
+            this.btnAvaliar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
+            this.btnAvaliar.FlatAppearance.BorderSize = 0;
+            this.btnAvaliar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAvaliar.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAvaliar.ForeColor = System.Drawing.Color.White;
+            this.btnAvaliar.Location = new System.Drawing.Point(595, 903);
+            this.btnAvaliar.Name = "btnAvaliar";
+            this.btnAvaliar.Size = new System.Drawing.Size(126, 38);
+            this.btnAvaliar.TabIndex = 44;
+            this.btnAvaliar.Text = "Avaliar consulta ";
+            this.btnAvaliar.UseVisualStyleBackColor = false;
+            this.btnAvaliar.Click += new System.EventHandler(this.btnAvaliar_Click);
             // 
             // txtObservacaoMedico
             // 
@@ -469,26 +484,11 @@
             this.lblInfoConsulta.TabIndex = 23;
             this.lblInfoConsulta.Text = "Receita Médica";
             // 
-            // btnAvaliar
-            // 
-            this.btnAvaliar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.btnAvaliar.FlatAppearance.BorderSize = 0;
-            this.btnAvaliar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAvaliar.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAvaliar.ForeColor = System.Drawing.Color.White;
-            this.btnAvaliar.Location = new System.Drawing.Point(595, 903);
-            this.btnAvaliar.Name = "btnAvaliar";
-            this.btnAvaliar.Size = new System.Drawing.Size(126, 38);
-            this.btnAvaliar.TabIndex = 44;
-            this.btnAvaliar.Text = "Avaliar consulta ";
-            this.btnAvaliar.UseVisualStyleBackColor = false;
-            this.btnAvaliar.Click += new System.EventHandler(this.btnAvaliar_Click);
-            // 
             // VerDiagnosticoMedico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 607);
+            this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.panelPrincipal);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.lblsubtitulo);

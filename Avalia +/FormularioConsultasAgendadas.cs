@@ -278,11 +278,12 @@ namespace Avalia__
 
                 if (status == "Realizada")
                 {
-                    // ajuste o nome da coluna conforme seu DataGridView
-
+                    this.Hide();
                     // Abre o formulário de detalhes
                     VerDiagnosticoMedico detalhes = new VerDiagnosticoMedico(idConsulta); 
                     detalhes.ShowDialog();
+
+                    this.Show();
                 }
             }
         }
