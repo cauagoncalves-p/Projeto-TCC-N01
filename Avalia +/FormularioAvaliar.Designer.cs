@@ -101,7 +101,7 @@
             this.lblTitulos.AutoSize = true;
             this.lblTitulos.BackColor = System.Drawing.Color.Transparent;
             this.lblTitulos.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulos.Location = new System.Drawing.Point(399, 152);
+            this.lblTitulos.Location = new System.Drawing.Point(404, 152);
             this.lblTitulos.Name = "lblTitulos";
             this.lblTitulos.Size = new System.Drawing.Size(170, 33);
             this.lblTitulos.TabIndex = 16;
