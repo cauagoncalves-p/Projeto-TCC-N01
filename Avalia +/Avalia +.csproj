@@ -78,12 +78,6 @@
     <Compile Include="FormularioAvaliacao.Designer.cs">
       <DependentUpon>FormularioAvaliacao.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormularioAvaliar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormularioAvaliar.Designer.cs">
-      <DependentUpon>FormularioAvaliar.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormularioCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,9 +182,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioAvaliacao.resx">
       <DependentUpon>FormularioAvaliacao.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormularioAvaliar.resx">
-      <DependentUpon>FormularioAvaliar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioCadastro.resx">
       <DependentUpon>FormularioCadastro.cs</DependentUpon>

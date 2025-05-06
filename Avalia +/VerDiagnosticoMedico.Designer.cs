@@ -64,6 +64,7 @@
             this.lblTituloPaciente = new System.Windows.Forms.Label();
             this.lblPaciente = new System.Windows.Forms.Label();
             this.lblInfoConsulta = new System.Windows.Forms.Label();
+            this.btnAvaliar = new System.Windows.Forms.Button();
             this.panelPrincipal.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panelPaciente.SuspendLayout();
@@ -111,6 +112,7 @@
             // 
             this.panelPrincipal.AutoScroll = true;
             this.panelPrincipal.BackColor = System.Drawing.Color.White;
+            this.panelPrincipal.Controls.Add(this.btnAvaliar);
             this.panelPrincipal.Controls.Add(this.txtObservacaoMedico);
             this.panelPrincipal.Controls.Add(this.txtTratamento);
             this.panelPrincipal.Controls.Add(this.label9);
@@ -467,6 +469,21 @@
             this.lblInfoConsulta.TabIndex = 23;
             this.lblInfoConsulta.Text = "Receita Médica";
             // 
+            // btnAvaliar
+            // 
+            this.btnAvaliar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
+            this.btnAvaliar.FlatAppearance.BorderSize = 0;
+            this.btnAvaliar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAvaliar.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAvaliar.ForeColor = System.Drawing.Color.White;
+            this.btnAvaliar.Location = new System.Drawing.Point(595, 903);
+            this.btnAvaliar.Name = "btnAvaliar";
+            this.btnAvaliar.Size = new System.Drawing.Size(126, 38);
+            this.btnAvaliar.TabIndex = 44;
+            this.btnAvaliar.Text = "Avaliar consulta ";
+            this.btnAvaliar.UseVisualStyleBackColor = false;
+            this.btnAvaliar.Click += new System.EventHandler(this.btnAvaliar_Click);
+            // 
             // VerDiagnosticoMedico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -528,5 +545,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtObservacaoMedico;
         private System.Windows.Forms.TextBox txtTratamento;
+        private System.Windows.Forms.Button btnAvaliar;
     }
 }

@@ -47,11 +47,7 @@ namespace Avalia__
             formularioAgendamento.ShowDialog();
 
         }
-        private void btnAvaliarconsulta_Click(object sender, EventArgs e)
-        {
-            FormularioAvaliar avaliar = new FormularioAvaliar(idUsuario);
-            avaliar.ShowDialog();
-        }
+       
         private void btnHistoricomedico_Click(object sender, EventArgs e)
         {
             FormularioConsultasAgendadas formularioConsultasAgendadas = new FormularioConsultasAgendadas(idUsuario);

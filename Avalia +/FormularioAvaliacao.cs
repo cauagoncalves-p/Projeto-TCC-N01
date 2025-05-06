@@ -22,28 +22,18 @@ namespace Avalia__
         private PictureBox[] estrelasConhecimento = new PictureBox[5];
         private PictureBox[] estrelasRespeito = new PictureBox[5];
 
-        private int idUsuario;
-        private string emailUsuario;
-
-
-        public FormularioAvaliacao(int idUsuario, string emailUsuario)
+        private string _idConsulta;
+       
+        public FormularioAvaliacao(string consulta)
         {
             InitializeComponent();
             ConfigurarEstrelas();
-            this.emailUsuario = emailUsuario;
-            this.idUsuario = idUsuario;
+
+            _idConsulta = consulta;
+            int Idconsulta = int.Parse (_idConsulta);
 
             RadiusButton controlador = new RadiusButton();
             controlador.ConfigInicial(this, comentarioPanel , btnSair, 25, Color.White);
-
-            tbAvaliacaoTableAdapter avaliacao = new tbAvaliacaoTableAdapter();
-
-            //AureaMaxDataSet.tbMedicoDataTable medico = new tbMedicoTableAdapter.GetData();
-            //AureaMaxDataSet.tbInstituicaoDataTable tabelaInstituicao = tbInstituicaoTableAdapter.GetData();
-
-            //cbxInstituicao.DataSource = tabelaInstituicao;
-            //cbxInstituicao.DisplayMember = "NomeInstituicao";         // Campo que aparece no ComboBox
-            //cbxInstituicao.ValueMember = "IdInstituicao";  // Campo que você usa pra salvar no banco
         }
 
         private void ConfigurarEstrelas()
@@ -128,6 +118,49 @@ namespace Avalia__
         private void label12_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void CarregarDadosAvaliar()
+        {
+            using (var diagnosticoAdapter = new DiagnosticoMedicoTableAdapter())
+            using (var consultaAdapter = new tbConsultaTableAdapter())
+            using (var medicoAdapter = new tbMedicoTableAdapter())
+            using (var usuarioAdapter = new tbUsuarioTableAdapter())
+            {
+                // Busca os dados da consulta
+                var consulta = consultaAdapter.GetData().FirstOrDefault(c => c.IdConsulta == );
+                if (consulta == null)
+                {
+                    MessageBox.Show("Consulta não encontrada.");
+                    return;
+                }
+
+                // Busca o diagnóstico
+                var diagnostico = diagnosticoAdapter.GetData().FirstOrDefault(d => d.Id_Consulta == idCons);
+
+                // Busca médico
+                var medico = medicoAdapter.GetData().FirstOrDefault(m => m.IdMedico == consulta.IdMedico);
+                string nomeMedico = medico != null ? $"{medico.Nome} {medico.Sobrenome}" : "Desconhecido";
+
+                // Busca paciente
+                var paciente = usuarioAdapter.GetData().FirstOrDefault(u => u.Id_usuario == consulta.Id_usuario);
+                string nomePaciente = paciente != null ? $"{paciente.Nome} {paciente.Sobrenome}" : "Desconhecido";
+                string cpf = paciente != null ? paciente.CPF : "Não informado";
+                string dataNascimento = paciente != null ? paciente.Data_Nascimento.ToString("dd/MM/yyyy") : "Não informado";
+                // Preenche os campo
+                txtTratamento.Text = diagnostico.tratamentoRecomendado;
+                lblInfoPaciente.Text = nomePaciente;
+                lblInfoCPF.Text = cpf;
+                lblInfoDataNascimento.Text = dataNascimento;
+                lblInfoDataConsulta.Text = consulta.DataConsulta.ToString("dd/MM/yyyy");
+                txtObservacaoMedico.Text = diagnostico.diagnostico;
+                lblRemedio.Text = diagnostico.Medicamento;
+                lblInfoDuracao.Text = diagnostico.duracao;
+                lblInfoComoUsar.Text = diagnostico.instrucaoReceita;
+                lblInfoFrequencia.Text = diagnostico.Frequencia;
+                lblMedicoResponsavel.Text = $"Dro.(a) {nomeMedico}";
+                lblCRMResponsavel.Text = $"CRM: {medico?.CRM ?? "Não informado"}";
+            }
         }
     }
     

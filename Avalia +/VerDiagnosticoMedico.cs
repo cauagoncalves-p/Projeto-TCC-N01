@@ -73,6 +73,10 @@ namespace Avalia__
             }
         }
 
-        
+        private void btnAvaliar_Click(object sender, EventArgs e)
+        {
+            FormularioAvaliacao avaliacao = new FormularioAvaliacao(_idConsulta);
+            avaliacao.ShowDialog();
+        }
     }
 }

@@ -15,21 +15,10 @@ namespace Avalia__
     public partial class FormularioTrocarSenha : Form
     {
         Mensagem_do_sistema mensagem_Do_Sistema = new Mensagem_do_sistema();
-        private void MudarFonte()
-        {
-            lblAvalia.Font = new Font("Segoe UI", 14, FontStyle.Bold);
-            lblDescritivo.Font = new Font("Inter", 11, FontStyle.Bold);
-            lblEmail.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-            btnProximo.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-            lblTrocarSenha.Font = new Font("Inter", 15, FontStyle.Bold);
-            txtEmail.Font = new Font("Segoe UI", 13, FontStyle.Regular);
-
-        }
 
         public FormularioTrocarSenha()
-        { 
+        {
             InitializeComponent();
-            MudarFonte();
             RadiusButton controlador = new RadiusButton();
             controlador.ConfigInicial(this, panelTrocarSenha, btnSair, 25, Color.White);
         }
