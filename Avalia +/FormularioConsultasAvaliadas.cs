@@ -1,4 +1,5 @@
 ﻿using Avalia__.AureaMaxDataSetTableAdapters;
+using Avalia__.Controles;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace Avalia__
     public partial class FormularioConsultasAvaliadas: Form
     {
         private int _idUsuario;
+        Mensagem_do_sistema mensagem_Do_Sistema = new Mensagem_do_sistema();
         private void ConfigurarDataGridView()
         {
             // Configuração básica
@@ -71,15 +73,11 @@ namespace Avalia__
 
             // Configurar colunas (exemplo)
             if (dgvConsultas.Columns.Count == 0)
-            {
-                dgvConsultas.Columns.Add("colIniciais", "Iniciais");
-                dgvConsultas.Columns.Add("colPaciente", "Paciente");
+            { 
+                dgvConsultas.Columns.Add("colMedico", "Medico");
                 dgvConsultas.Columns.Add("colHorario", "Horário");
                 dgvConsultas.Columns.Add("colTipo", "Tipo");
                 dgvConsultas.Columns.Add("colStatus", "Status");
-
-                // Centralizar coluna de iniciais
-                dgvConsultas.Columns["colIniciais"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             }
         }
         private void AjustarColunasDataGridView()
@@ -89,11 +87,10 @@ namespace Avalia__
             // Defina as larguras desejadas (sua configuração atual)
             var larguras = new Dictionary<string, int>
                 {
-                    { "Data", 200 },      // 200px
-                    { "Médico", 250 },    // 350px
-                    { "Motivo", 200 },    // 250px
-                    { "Status", 150 },    // 150px
-                    { "Observações", 150} // 100px
+                    { "Medico", 200 },      // 200px
+                    { "Local", 250 },    // 350px
+                    { "Status", 200 },    // 250px
+                    { "Data", 150 },    // 150px
                 };
 
             // Calcula o total das larguras definidas
@@ -108,11 +105,6 @@ namespace Avalia__
                 {
                     larguras[item] = (int)(larguras[item] * fatorReducao);
                 }
-            }
-            else if (totalLarguras < dgvConsultas.Width)
-            {
-                // Se sobrar espaço, distribui para a coluna Observações
-                larguras["Observações"] += dgvConsultas.Width - totalLarguras;
             }
 
             // Aplica as larguras
@@ -131,7 +123,7 @@ namespace Avalia__
                     DataGridViewAutoSizeColumnMode.Fill;
             }
         }
-        private void CarregarConsultasDoUsuario(string statusFiltro = "")
+        private void CarregarConsultasDoUsuario()
         {
             try
             {
@@ -142,7 +134,7 @@ namespace Avalia__
 
                     var consultas = consultaAdapter.GetData()
                         .Where(c => c.Id_usuario == _idUsuario)
-                        .Where(c => string.IsNullOrEmpty(statusFiltro) || c.StatusConsulta == statusFiltro)
+                        .Where(c => c.StatusConsulta == "Avaliada")
                         .Select(c =>
                         {
                             var medico = todosMedicos.TryGetValue(c.IdMedico, out var m)
@@ -157,8 +149,7 @@ namespace Avalia__
                                 Data = c.DataConsulta.ToString("dd/MM/yyyy HH:mm"),
                                 Medico = medico,
                                 Motivo = c.Motivo,
-                                Status = c.StatusConsulta,
-                                Observações = observacoes
+                                Status = c.StatusConsulta
                             };
                         })
                         .ToList();
@@ -195,6 +186,40 @@ namespace Avalia__
         {
             //Cor de fundo da tela 
             ConfiguracaoTelas.PintarGradiente(this, e, "#f5e6d3", "#fdf6f0");
+        }
+
+        private void dgvConsultas_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow linha = dgvConsultas.Rows[e.RowIndex];
+            string idConsulta = linha.Cells["IdConsulta"].Value.ToString();
+            int idcons = int.Parse(idConsulta);
+
+            if (e.RowIndex >= 0)
+            {
+                // Busca o diagnóstico
+                DiagnosticoMedicoTableAdapter diagnosticoAdapter = new DiagnosticoMedicoTableAdapter();
+                var diagnostico = diagnosticoAdapter.GetData().FirstOrDefault(d => d.Id_Consulta == idcons);
+
+                if (diagnostico == null)
+                {
+                    mensagem_Do_Sistema.MensagemAtencao("Diagnóstico não encontrado.");
+                    mensagem_Do_Sistema.MensagemAtencao("Essa consulta ainda não foi realizada ou está cancelada!");
+                    return;
+                }
+
+                // Pegando o status da consulta
+                string status = linha.Cells["Status"].Value.ToString();
+
+                if (status == "Realizada" || status == "Avaliada")
+                {
+                    this.Hide();
+                    // Abre o formulário de detalhes
+                    VerDiagnosticoMedico detalhes = new VerDiagnosticoMedico(idConsulta);
+                    detalhes.ShowDialog();
+
+                    this.Show();
+                }
+            }
         }
     }
 }

@@ -34,6 +34,7 @@
             this.btnSair = new System.Windows.Forms.Button();
             this.lbTitulo = new System.Windows.Forms.Label();
             this.lblHistoricoConsulta = new System.Windows.Forms.Label();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.panelConsultaAvaliadas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultas)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +56,7 @@
             this.dgvConsultas.RowHeadersWidth = 51;
             this.dgvConsultas.Size = new System.Drawing.Size(877, 365);
             this.dgvConsultas.TabIndex = 0;
+            this.dgvConsultas.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsultas_CellContentDoubleClick);
             // 
             // btnSair
             // 
@@ -108,6 +110,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormularioConsultasAvaliadas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultas avaliadas";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormularioConsultasAvaliadas_Paint);
             this.panelConsultaAvaliadas.ResumeLayout(false);
@@ -124,5 +127,6 @@
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Label lbTitulo;
         private System.Windows.Forms.Label lblHistoricoConsulta;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }

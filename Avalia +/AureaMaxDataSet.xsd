@@ -4,12 +4,12 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="AureaMaxConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="AureaMaxConnectionString2 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Avalia__.Properties.Settings.GlobalReference.Default.AureaMaxConnectionString2" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="AureaMaxConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="AureaMaxConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Avalia__.Properties.Settings.GlobalReference.Default.AureaMaxConnectionString1" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DiagnosticoMedicoTableAdapter" GeneratorDataComponentClassName="DiagnosticoMedicoTableAdapter" Name="DiagnosticoMedico" UserDataComponentName="DiagnosticoMedicoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="AureaMaxConnectionString2 (Settings)" DbObjectName="AureaMax.dbo.DiagnosticoMedico" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="AureaMaxConnectionString1 (Settings)" DbObjectName="AureaMax.dbo.DiagnosticoMedico" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[DiagnosticoMedico] WHERE (([Id_diagnosticoMedico] = @Original_Id_diagnosticoMedico) AND ((@IsNull_Id_Consulta = 1 AND [Id_Consulta] IS NULL) OR ([Id_Consulta] = @Original_Id_Consulta)) AND ((@IsNull_Medicamento = 1 AND [Medicamento] IS NULL) OR ([Medicamento] = @Original_Medicamento)) AND ((@IsNull_Dosagem = 1 AND [Dosagem] IS NULL) OR ([Dosagem] = @Original_Dosagem)) AND ((@IsNull_Frequencia = 1 AND [Frequencia] IS NULL) OR ([Frequencia] = @Original_Frequencia)) AND ((@IsNull_duracao = 1 AND [duracao] IS NULL) OR ([duracao] = @Original_duracao)))</CommandText>
@@ -92,19 +92,19 @@ SELECT Id_diagnosticoMedico, Id_Consulta, diagnostico, tratamentoRecomendado, Me
               <Mapping SourceColumn="instrucaoReceita" DataSetColumn="instrucaoReceita" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="AureaMaxConnectionString2 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="AtualizarConsulta" Modifier="Public" Name="AtualizarConsulta" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="AtualizarConsulta">
+              <DbSource ConnectionRef="AureaMaxConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="AtualizarConsulta" Modifier="Public" Name="AtualizarConsulta" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="AtualizarConsulta">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>  UPDATE DiagnosticoMedico
-  SET 
-          diagnostico = @diagnostico,
-          tratamentoRecomendado = @tratamentoRecomendado,
-          Medicamento = @medicamento,
-          Dosagem = @dosagem,
-          Frequencia = @frequencia,
-          duracao = @duracao,
-          instrucaoReceita = @instrucaoReceita
-  WHERE Id_diagnosticoMedico = @Id_diagnosticoMedico</CommandText>
+                    <CommandText> UPDATE DiagnosticoMedico
+ SET 
+         diagnostico = @diagnostico,
+         tratamentoRecomendado = @tratamentoRecomendado,
+         Medicamento = @medicamento,
+         Dosagem = @dosagem,
+         Frequencia = @frequencia,
+         duracao = @duracao,
+         instrucaoReceita = @instrucaoReceita
+ WHERE Id_diagnosticoMedico = @Id_diagnosticoMedico</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="diagnostico" ColumnName="diagnostico" DataSourceName="AureaMax.dbo.DiagnosticoMedico" DataTypeServer="text" DbType="AnsiString" Direction="Input" ParameterName="@diagnostico" Precision="0" ProviderType="Text" Scale="0" Size="2147483647" SourceColumn="diagnostico" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="tratamentoRecomendado" ColumnName="tratamentoRecomendado" DataSourceName="AureaMax.dbo.DiagnosticoMedico" DataTypeServer="text" DbType="AnsiString" Direction="Input" ParameterName="@tratamentoRecomendado" Precision="0" ProviderType="Text" Scale="0" Size="2147483647" SourceColumn="tratamentoRecomendado" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -122,7 +122,7 @@ SELECT Id_diagnosticoMedico, Id_Consulta, diagnostico, tratamentoRecomendado, Me
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbAvaliacaoTableAdapter" GeneratorDataComponentClassName="tbAvaliacaoTableAdapter" Name="tbAvaliacao" UserDataComponentName="tbAvaliacaoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="AureaMaxConnectionString2 (Settings)" DbObjectName="AureaMax.dbo.tbAvaliacao" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="AureaMaxConnectionString1 (Settings)" DbObjectName="AureaMax.dbo.tbAvaliacao" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[tbAvaliacao] WHERE (([IdAvaliacao] = @Original_IdAvaliacao) AND ([IdConsulta] = @Original_IdConsulta) AND ([Atendimento_comunicacao] = @Original_Atendimento_comunicacao) AND ([Tempo_de_espera] = @Original_Tempo_de_espera) AND ([Conhecimento_tecnico] = @Original_Conhecimento_tecnico) AND ([Respeito_empatia] = @Original_Respeito_empatia) AND ((@IsNull_Comentario = 1 AND [Comentario] IS NULL) OR ([Comentario] = @Original_Comentario)))</CommandText>
@@ -196,7 +196,7 @@ SELECT IdAvaliacao, IdConsulta, Atendimento_comunicacao, Tempo_de_espera, Conhec
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbConsultaTableAdapter" GeneratorDataComponentClassName="tbConsultaTableAdapter" Name="tbConsulta" UserDataComponentName="tbConsultaTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="AureaMaxConnectionString2 (Settings)" DbObjectName="AureaMax.dbo.tbConsulta" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="AureaMaxConnectionString1 (Settings)" DbObjectName="AureaMax.dbo.tbConsulta" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[tbConsulta] WHERE (([IdConsulta] = @Original_IdConsulta) AND ([Id_usuario] = @Original_Id_usuario) AND ([IdMedico] = @Original_IdMedico) AND ([DataConsulta] = @Original_DataConsulta) AND ((@IsNull_Motivo = 1 AND [Motivo] IS NULL) OR ([Motivo] = @Original_Motivo)) AND ([StatusConsulta] = @Original_StatusConsulta) AND ((@IsNull_Observacoes = 1 AND [Observacoes] IS NULL) OR ([Observacoes] = @Original_Observacoes)))</CommandText>
@@ -269,10 +269,11 @@ SELECT IdConsulta, Id_usuario, IdMedico, DataConsulta, Motivo, StatusConsulta, O
               <Mapping SourceColumn="Observacoes" DataSetColumn="Observacoes" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="AureaMaxConnectionString2 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="AtualizarStatusConsulta" Modifier="Public" Name="AtualizarStatusConsulta" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="AtualizarStatusConsulta">
+              <DbSource ConnectionRef="AureaMaxConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="AtualizarStatusConsulta" Modifier="Public" Name="AtualizarStatusConsulta" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="AtualizarStatusConsulta">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>UPDATE tbConsulta
+                    <CommandText>
+          UPDATE tbConsulta
             SET StatusConsulta = @status
             WHERE IdConsulta = @idConsulta</CommandText>
                     <Parameters>
@@ -286,7 +287,7 @@ SELECT IdConsulta, Id_usuario, IdMedico, DataConsulta, Motivo, StatusConsulta, O
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbInstituicaoTableAdapter" GeneratorDataComponentClassName="tbInstituicaoTableAdapter" Name="tbInstituicao" UserDataComponentName="tbInstituicaoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="AureaMaxConnectionString2 (Settings)" DbObjectName="AureaMax.dbo.tbInstituicao" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="AureaMaxConnectionString1 (Settings)" DbObjectName="AureaMax.dbo.tbInstituicao" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[tbInstituicao] WHERE (([IdInstituicao] = @Original_IdInstituicao) AND ([NomeInstituicao] = @Original_NomeInstituicao) AND ([CNPJ] = @Original_CNPJ) AND ((@IsNull_TipoInstituicao = 1 AND [TipoInstituicao] IS NULL) OR ([TipoInstituicao] = @Original_TipoInstituicao)) AND ((@IsNull_Telefone = 1 AND [Telefone] IS NULL) OR ([Telefone] = @Original_Telefone)) AND ((@IsNull_Email = 1 AND [Email] IS NULL) OR ([Email] = @Original_Email)) AND ((@IsNull_Endereco = 1 AND [Endereco] IS NULL) OR ([Endereco] = @Original_Endereco)) AND ((@IsNull_Cidade = 1 AND [Cidade] IS NULL) OR ([Cidade] = @Original_Cidade)) AND ((@IsNull_Estado = 1 AND [Estado] IS NULL) OR ([Estado] = @Original_Estado)))</CommandText>
@@ -380,7 +381,7 @@ SELECT IdInstituicao, NomeInstituicao, CNPJ, TipoInstituicao, Telefone, Email, E
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbMedicoTableAdapter" GeneratorDataComponentClassName="tbMedicoTableAdapter" Name="tbMedico" UserDataComponentName="tbMedicoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="AureaMaxConnectionString2 (Settings)" DbObjectName="AureaMax.dbo.tbMedico" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="AureaMaxConnectionString1 (Settings)" DbObjectName="AureaMax.dbo.tbMedico" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[tbMedico] WHERE (([IdMedico] = @Original_IdMedico) AND ([Nome] = @Original_Nome) AND ([Sobrenome] = @Original_Sobrenome) AND ([CRM] = @Original_CRM) AND ([Sexo] = @Original_Sexo) AND ([Especialidade] = @Original_Especialidade) AND ((@IsNull_Cidade = 1 AND [Cidade] IS NULL) OR ([Cidade] = @Original_Cidade)) AND ((@IsNull_Estado = 1 AND [Estado] IS NULL) OR ([Estado] = @Original_Estado)) AND ((@IsNull_Endereco = 1 AND [Endereco] IS NULL) OR ([Endereco] = @Original_Endereco)) AND ((@IsNull_Telefone = 1 AND [Telefone] IS NULL) OR ([Telefone] = @Original_Telefone)) AND ([CPF] = @Original_CPF) AND ([Email] = @Original_Email) AND ([Senha] = @Original_Senha) AND ([IdInstituicao] = @Original_IdInstituicao))</CommandText>
@@ -492,7 +493,7 @@ SELECT IdMedico, Nome, Sobrenome, CRM, Sexo, Especialidade, Cidade, Estado, Ende
               <Mapping SourceColumn="IdInstituicao" DataSetColumn="IdInstituicao" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="AureaMaxConnectionString2 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="AtualizarSenhaPorEmail" Modifier="Public" Name="AtualizarSenhaPorEmail" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="AtualizarSenhaPorEmail">
+              <DbSource ConnectionRef="AureaMaxConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="AtualizarSenhaPorEmail" Modifier="Public" Name="AtualizarSenhaPorEmail" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="AtualizarSenhaPorEmail">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE tbMedico
@@ -509,7 +510,7 @@ WHERE Email = @Email</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbUsuarioTableAdapter" GeneratorDataComponentClassName="tbUsuarioTableAdapter" Name="tbUsuario" UserDataComponentName="tbUsuarioTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="AureaMaxConnectionString2 (Settings)" DbObjectName="AureaMax.dbo.tbUsuario" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="AureaMaxConnectionString1 (Settings)" DbObjectName="AureaMax.dbo.tbUsuario" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[tbUsuario] WHERE (([Id_usuario] = @Original_Id_usuario) AND ([Nome] = @Original_Nome) AND ([Sobrenome] = @Original_Sobrenome) AND ([Data_Nascimento] = @Original_Data_Nascimento) AND ([CPF] = @Original_CPF) AND ([Sexo] = @Original_Sexo) AND ([Telefone] = @Original_Telefone) AND ([Genero] = @Original_Genero) AND ([Endereco] = @Original_Endereco) AND ([Email] = @Original_Email) AND ([Cidade] = @Original_Cidade) AND ([Estado] = @Original_Estado) AND ([Data_Cadastro] = @Original_Data_Cadastro) AND ([Senha] = @Original_Senha))</CommandText>
@@ -613,11 +614,11 @@ SELECT Id_usuario, Nome, Sobrenome, Data_Nascimento, CPF, Sexo, Telefone, Genero
               <Mapping SourceColumn="Senha" DataSetColumn="Senha" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="AureaMaxConnectionString2 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="AtualizarSenhaPorEmail" Modifier="Public" Name="AtualizarSenhaPorEmail" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="AtualizarSenhaPorEmail">
+              <DbSource ConnectionRef="AureaMaxConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="AtualizarSenhaPorEmail" Modifier="Public" Name="AtualizarSenhaPorEmail" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="AtualizarSenhaPorEmail">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE tbUsuario
-SET Senha =@Senha
+SET Senha = @Senha 
 WHERE Email = @Email</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="Senha" ColumnName="Senha" DataSourceName="AureaMax.dbo.tbUsuario" DataTypeServer="varchar(100)" DbType="AnsiString" Direction="Input" ParameterName="@Senha" Precision="0" ProviderType="VarChar" Scale="0" Size="100" SourceColumn="Senha" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -1013,7 +1014,7 @@ WHERE Email = @Email</CommandText>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK__Diagnosti__Id_Co__4E88ABD4" msdata:parent="tbConsulta" msdata:child="DiagnosticoMedico" msdata:parentkey="IdConsulta" msdata:childkey="Id_Consulta" msprop:Generator_UserParentTable="tbConsulta" msprop:Generator_UserChildTable="DiagnosticoMedico" msprop:Generator_RelationVarName="relationFK__Diagnosti__Id_Co__4E88ABD4" msprop:Generator_ChildPropName="GetDiagnosticoMedicoRows" msprop:Generator_ParentPropName="tbConsultaRow" msprop:Generator_UserRelationName="FK__Diagnosti__Id_Co__4E88ABD4" />
+      <msdata:Relationship name="FK__Diagnosti__Id_Co__4F7CD00D" msdata:parent="tbConsulta" msdata:child="DiagnosticoMedico" msdata:parentkey="IdConsulta" msdata:childkey="Id_Consulta" msprop:Generator_UserParentTable="tbConsulta" msprop:Generator_UserChildTable="DiagnosticoMedico" msprop:Generator_RelationVarName="relationFK__Diagnosti__Id_Co__4F7CD00D" msprop:Generator_ChildPropName="GetDiagnosticoMedicoRows" msprop:Generator_ParentPropName="tbConsultaRow" msprop:Generator_UserRelationName="FK__Diagnosti__Id_Co__4F7CD00D" />
       <msdata:Relationship name="FK_Avaliacao_Consulta" msdata:parent="tbConsulta" msdata:child="tbAvaliacao" msdata:parentkey="IdConsulta" msdata:childkey="IdConsulta" msprop:Generator_UserParentTable="tbConsulta" msprop:Generator_UserChildTable="tbAvaliacao" msprop:Generator_RelationVarName="relationFK_Avaliacao_Consulta" msprop:Generator_ChildPropName="GettbAvaliacaoRows" msprop:Generator_ParentPropName="tbConsultaRow" msprop:Generator_UserRelationName="FK_Avaliacao_Consulta" />
       <msdata:Relationship name="FK_Consulta_Medico" msdata:parent="tbMedico" msdata:child="tbConsulta" msdata:parentkey="IdMedico" msdata:childkey="IdMedico" msprop:Generator_UserParentTable="tbMedico" msprop:Generator_UserChildTable="tbConsulta" msprop:Generator_RelationVarName="relationFK_Consulta_Medico" msprop:Generator_ChildPropName="GettbConsultaRows" msprop:Generator_ParentPropName="tbMedicoRow" msprop:Generator_UserRelationName="FK_Consulta_Medico" />
       <msdata:Relationship name="FK_Consulta_Usuario" msdata:parent="tbUsuario" msdata:child="tbConsulta" msdata:parentkey="Id_usuario" msdata:childkey="Id_usuario" msprop:Generator_UserParentTable="tbUsuario" msprop:Generator_UserChildTable="tbConsulta" msprop:Generator_RelationVarName="relationFK_Consulta_Usuario" msprop:Generator_ChildPropName="GettbConsultaRows" msprop:Generator_ParentPropName="tbUsuarioRow" msprop:Generator_UserRelationName="FK_Consulta_Usuario" />

@@ -199,7 +199,9 @@ namespace Avalia__
         private void btnEnviarAvaliacao_Click(object sender, EventArgs e)
         {
             using (var avaliacaoAdapter = new tbAvaliacaoTableAdapter())
+            using (var consulta = new tbConsultaTableAdapter())
             {
+                
                 try
                 {
                     // Verifica se já existe uma avaliação para essa consulta
@@ -218,12 +220,15 @@ namespace Avalia__
                         // Atualiza no banco de dados
                         avaliacaoAdapter.Update(avaliacaoExistente);
                         MessageBox.Show("Avaliação atualizada com sucesso!");
+                        consulta.AtualizarStatusConsulta("Avaliada", Idconsulta);
+
                     }
                     else
                     {
                         // Caso não exista avaliação, faz o INSERT (caso nunca tenha avaliado)
                         avaliacaoAdapter.Insert(Idconsulta, notaAtendimento, notaTempo, notaConhecimento, notaRespeito, txtComentario.Text);
                         MessageBox.Show("Avaliação enviada com sucesso!");
+                      
                     }
 
                     // Desabilita o botão de envio após a avaliação
@@ -235,6 +240,7 @@ namespace Avalia__
                     DesabilitarEstrelas(estrelasConhecimento);
                     DesabilitarEstrelas(estrelasRespeito);
                     txtComentario.Enabled = false;
+                    btnAtualizar.Enabled = true;
                 }
                 catch (Exception ex)
                 {
@@ -273,6 +279,7 @@ namespace Avalia__
                     HabilitarEstrelas(estrelasConhecimento);
                     HabilitarEstrelas(estrelasRespeito);
                     txtComentario.Enabled = true;
+                    btnAtualizar.Enabled = false;
                 }
                 else
                 {

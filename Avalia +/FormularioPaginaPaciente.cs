@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Avalia__.AureaMaxDataSetTableAdapters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,8 +31,18 @@ namespace Avalia__
             controlador.ConfigInicial(this, panel2, btnSair, 25, Color.White);
             controlador.ConfigInicial(this, panelConsultas, btnSair, 25, ColorTranslator.FromHtml("#F0E4DC"));
             controlador.ConfigInicial(this, panelHeader, btnSair, 20, ColorTranslator.FromHtml("#c97c63"));
-            UIHelper.ArredondarBotao(btnDetalhes, 25);
-            UIHelper.ArredondarBotao(btnLembrar, 25);
+
+            using (var consultas = new tbConsultaTableAdapter())
+            using (var medicos = new tbMedicoTableAdapter())
+            {
+                var consulta = consultas.GetData().FirstOrDefault(c => c.Id_usuario == idUsuario);
+
+                var medico = medicos.GetData().FirstOrDefault(m => m.IdMedico == consulta.IdMedico);    
+                lblDataConsulta1.Text = consulta.DataConsulta.ToString();
+                lblMedico.Text = $"{medico.Nome} - {medico.Especialidade}";
+            }
+            UIHelper.ArredondarBotao(btnLembrar, 10);
+            UIHelper.ArredondarBotao(btnLembrar2, 10);
 
         }
 
@@ -83,6 +94,14 @@ namespace Avalia__
             FormularioConsultasAvaliadas avaliadas = new FormularioConsultasAvaliadas(idUsuario);
             avaliadas.ShowDialog();
 
+            this.Show();
+        }
+
+        private void lblLinkConsulta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            FormularioConsultasAgendadas formularioConsultasAgendadas = new FormularioConsultasAgendadas(idUsuario);
+            formularioConsultasAgendadas.ShowDialog();
             this.Show();
         }
     }

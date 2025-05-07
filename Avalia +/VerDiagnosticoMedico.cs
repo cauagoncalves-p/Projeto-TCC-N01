@@ -59,6 +59,7 @@ namespace Avalia__
                 string nomePaciente = paciente != null ? $"{paciente.Nome} {paciente.Sobrenome}" : "Desconhecido";
                 string cpf = paciente != null ? paciente.CPF : "Não informado";
                 string dataNascimento = paciente != null ? paciente.Data_Nascimento.ToString("dd/MM/yyyy") : "Não informado";
+                
                 // Preenche os campo
                 txtTratamento.Text = diagnostico.tratamentoRecomendado;
                 lblInfoPaciente.Text = nomePaciente;

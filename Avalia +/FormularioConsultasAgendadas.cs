@@ -276,7 +276,7 @@ namespace Avalia__
                 // Pegando o status da consulta
                 string status = linha.Cells["Status"].Value.ToString();
 
-                if (status == "Realizada")
+                if (status == "Realizada" || status == "Avaliada")
                 {
                     this.Hide();
                     // Abre o formulário de detalhes
