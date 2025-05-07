@@ -138,6 +138,7 @@
             this.btnAvaliarconsulta.Text = "Avaliar consulta";
             this.btnAvaliarconsulta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnAvaliarconsulta.UseVisualStyleBackColor = false;
+            this.btnAvaliarconsulta.Click += new System.EventHandler(this.btnAvaliarconsulta_Click);
             // 
             // btnCancelarConsulta
             // 
@@ -236,6 +237,7 @@
             // 
             // panelbackground
             // 
+            this.panelbackground.AutoScroll = true;
             this.panelbackground.Controls.Add(this.panelConsultas);
             this.panelbackground.Controls.Add(this.btnSair);
             this.panelbackground.Controls.Add(this.lblhistoricobtn);
@@ -250,7 +252,7 @@
             this.panelbackground.Controls.Add(this.lblAvalia);
             this.panelbackground.Location = new System.Drawing.Point(23, 12);
             this.panelbackground.Name = "panelbackground";
-            this.panelbackground.Size = new System.Drawing.Size(947, 879);
+            this.panelbackground.Size = new System.Drawing.Size(938, 500);
             this.panelbackground.TabIndex = 0;
             // 
             // panelConsultas
@@ -408,8 +410,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(984, 857);
+            this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.panelbackground);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;

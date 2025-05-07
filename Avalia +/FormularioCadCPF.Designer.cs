@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioCadCPF));
             this.panelVerificaCPF = new System.Windows.Forms.Panel();
             this.mktCPF = new System.Windows.Forms.MaskedTextBox();
-            this.lblLinkFazerLogin = new System.Windows.Forms.LinkLabel();
-            this.lblVerificaCPF = new System.Windows.Forms.Label();
             this.btnContinuar = new System.Windows.Forms.Button();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblemail = new System.Windows.Forms.Label();
@@ -47,8 +45,6 @@
             // panelVerificaCPF
             // 
             this.panelVerificaCPF.Controls.Add(this.mktCPF);
-            this.panelVerificaCPF.Controls.Add(this.lblLinkFazerLogin);
-            this.panelVerificaCPF.Controls.Add(this.lblVerificaCPF);
             this.panelVerificaCPF.Controls.Add(this.btnContinuar);
             this.panelVerificaCPF.Controls.Add(this.txtEmail);
             this.panelVerificaCPF.Controls.Add(this.lblemail);
@@ -68,33 +64,6 @@
             this.mktCPF.Size = new System.Drawing.Size(257, 20);
             this.mktCPF.TabIndex = 12;
             // 
-            // lblLinkFazerLogin
-            // 
-            this.lblLinkFazerLogin.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.lblLinkFazerLogin.AutoSize = true;
-            this.lblLinkFazerLogin.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.lblLinkFazerLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLinkFazerLogin.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.lblLinkFazerLogin.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.lblLinkFazerLogin.Location = new System.Drawing.Point(216, 343);
-            this.lblLinkFazerLogin.Name = "lblLinkFazerLogin";
-            this.lblLinkFazerLogin.Size = new System.Drawing.Size(81, 18);
-            this.lblLinkFazerLogin.TabIndex = 9;
-            this.lblLinkFazerLogin.TabStop = true;
-            this.lblLinkFazerLogin.Text = "Fazer login";
-            this.lblLinkFazerLogin.Click += new System.EventHandler(this.lblLinkFazerLogin_Click);
-            // 
-            // lblVerificaCPF
-            // 
-            this.lblVerificaCPF.AutoSize = true;
-            this.lblVerificaCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVerificaCPF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.lblVerificaCPF.Location = new System.Drawing.Point(36, 343);
-            this.lblVerificaCPF.Name = "lblVerificaCPF";
-            this.lblVerificaCPF.Size = new System.Drawing.Size(154, 18);
-            this.lblVerificaCPF.TabIndex = 8;
-            this.lblVerificaCPF.Text = "Já possuiu cadastro? ";
-            // 
             // btnContinuar
             // 
             this.btnContinuar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(164)))), ((int)(((byte)(143)))));
@@ -111,7 +80,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtEmail.Location = new System.Drawing.Point(39, 214);
             this.txtEmail.MaxLength = 50;
@@ -211,8 +180,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panelVerificaCPF;
-        private System.Windows.Forms.LinkLabel lblLinkFazerLogin;
-        private System.Windows.Forms.Label lblVerificaCPF;
         private System.Windows.Forms.Button btnContinuar;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblemail;

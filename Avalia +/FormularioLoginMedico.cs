@@ -114,8 +114,12 @@ namespace Avalia__
 
         private void lblLinkCriarConta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            this.Hide();
             FormularioCadastroMedico formularioCadastroMedico = new FormularioCadastroMedico();
-            formularioCadastroMedico.ShowDialog();  
+            formularioCadastroMedico.ShowDialog();
+
+            this.Show();
+            
         }
     }
 }

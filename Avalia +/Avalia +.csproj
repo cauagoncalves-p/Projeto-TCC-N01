@@ -108,6 +108,12 @@
     <Compile Include="FormularioConsultasAgendadas.Designer.cs">
       <DependentUpon>FormularioConsultasAgendadas.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormularioConsultasAvaliadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioConsultasAvaliadas.Designer.cs">
+      <DependentUpon>FormularioConsultasAvaliadas.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormularioDeEnvioCodigo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,6 +208,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioConsultasAgendadas.resx">
       <DependentUpon>FormularioConsultasAgendadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioConsultasAvaliadas.resx">
+      <DependentUpon>FormularioConsultasAvaliadas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioDeEnvioCodigo.resx">
       <DependentUpon>FormularioDeEnvioCodigo.cs</DependentUpon>

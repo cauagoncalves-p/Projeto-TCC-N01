@@ -1,24 +1,18 @@
 ﻿using Avalia__.AureaMaxDataSetTableAdapters;
-using Avalia__.Controles;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static Avalia__.RadiusButton;
-using static System.Windows.Forms.LinkLabel;
 
 namespace Avalia__
 {
-    public partial class FormularioConsultasAgendadas: Form
+    public partial class FormularioConsultasAvaliadas: Form
     {
-        Mensagem_do_sistema mensagem_Do_Sistema = new Mensagem_do_sistema();
-
         private int _idUsuario;
         private void ConfigurarDataGridView()
         {
@@ -159,7 +153,7 @@ namespace Avalia__
 
                             return new
                             {
-                                IdConsulta = c.IdConsulta, 
+                                IdConsulta = c.IdConsulta,
                                 Data = c.DataConsulta.ToString("dd/MM/yyyy HH:mm"),
                                 Medico = medico,
                                 Motivo = c.Motivo,
@@ -180,8 +174,7 @@ namespace Avalia__
                 dgvConsultas.DataSource = new List<object>();
             }
         }
-
-        public FormularioConsultasAgendadas(int idUsuario)
+        public FormularioConsultasAvaliadas(int idUsuario)
         {
             InitializeComponent();
             _idUsuario = idUsuario;
@@ -189,20 +182,7 @@ namespace Avalia__
             ConfigurarDataGridView();
             AjustarColunasDataGridView();
             RadiusButton controlador = new RadiusButton();
-            controlador.ConfigInicial(this, panelCancelarConsulta, btnSair, 25, Color.White);
-
-
-
-
-            UIHelper.ArredondarBotao(btnAgendadas, 25);
-            UIHelper.ArredondarBotao(btnCancelar, 25);
-            UIHelper.ArredondarBotao(btnConsultasTotais, 25);
-            UIHelper.ArredondarBotao(btnRealizadas, 25);
-        }
-        private void FormularioConsultasAgendadas_Paint_1(object sender, PaintEventArgs e)
-        {
-            //Cor de fundo da tela 
-            ConfiguracaoTelas.PintarGradiente(this, e, "#f5e6d3", "#fdf6f0");
+            controlador.ConfigInicial(this,panelConsultaAvaliadas, btnSair, 25, Color.White);
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -211,91 +191,10 @@ namespace Avalia__
             configuracaoTelas.FecharAba(this);
         }
 
-        private void btnAgendadas_Click(object sender, EventArgs e)
+        private void FormularioConsultasAvaliadas_Paint(object sender, PaintEventArgs e)
         {
-            MarcarBotaoSelecionado(btnAgendadas);
-            CarregarConsultasDoUsuario("Agendada");
-        }
-
-        private void btnRealizadas_Click(object sender, EventArgs e)
-        {
-            MarcarBotaoSelecionado(btnRealizadas);
-            CarregarConsultasDoUsuario("Realizada");
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            MarcarBotaoSelecionado(btnCancelar);    
-            CarregarConsultasDoUsuario("Cancelada");
-        }
-
-        private void btnConsultasTotais_Click(object sender, EventArgs e)
-        {
-            MarcarBotaoSelecionado(btnConsultasTotais);
-            CarregarConsultasDoUsuario(); // mostra todas
-        }
-
-        private void MarcarBotaoSelecionado(Button botaoSelecionado)
-        {
-            Button[] botoes = { btnAgendadas, btnRealizadas, btnCancelar, btnConsultasTotais };
-            foreach (var btn in botoes)
-            {
-                btn.BackColor = Color.White;
-                btn.ForeColor = Color.Black;
-            }
-
-            botaoSelecionado.BackColor = Color.SteelBlue;
-            botaoSelecionado.ForeColor = Color.White;
-
-        }
-
-        private void FormularioConsultasAgendadas_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvConsultas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            DataGridViewRow linha = dgvConsultas.Rows[e.RowIndex];
-            string idConsulta = linha.Cells["IdConsulta"].Value.ToString();
-            int idcons = int.Parse(idConsulta);
-
-            if (e.RowIndex >= 0)
-            {
-                // Busca o diagnóstico
-                DiagnosticoMedicoTableAdapter diagnosticoAdapter = new DiagnosticoMedicoTableAdapter(); 
-                var diagnostico = diagnosticoAdapter.GetData().FirstOrDefault(d => d.Id_Consulta == idcons);
-
-                if (diagnostico == null)
-                {
-                    mensagem_Do_Sistema.MensagemAtencao("Diagnóstico não encontrado.");
-                    mensagem_Do_Sistema.MensagemAtencao("Essa consulta ainda não foi realizada ou está cancelada!");
-                    return;
-                }
-
-                // Pegando o status da consulta
-                string status = linha.Cells["Status"].Value.ToString();
-
-                if (status == "Realizada")
-                {
-                    this.Hide();
-                    // Abre o formulário de detalhes
-                    VerDiagnosticoMedico detalhes = new VerDiagnosticoMedico(idConsulta); 
-                    detalhes.ShowDialog();
-
-                    this.Show();
-                }
-            }
-        }
-
-        private void lbTitulo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblHistoricoConsulta_Click(object sender, EventArgs e)
-        {
-
+            //Cor de fundo da tela 
+            ConfiguracaoTelas.PintarGradiente(this, e, "#f5e6d3", "#fdf6f0");
         }
     }
 }

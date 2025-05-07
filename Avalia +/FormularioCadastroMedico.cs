@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.SqlTypes;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -195,7 +196,7 @@ namespace Avalia__
             dtpDataNascimento.Font = new Font("Segoe UI", 12);
             mktTelefone.Font = new Font("Segoe UI", 12); 
             cbxGenero.Font = new Font("Segoe UI", 12); 
-            cbxEstado.Font = new Font("Segoe UI", 14); 
+            cbxEstado.Font = new Font("Segoe UI", 13); 
             cbxEspecialidade.Font = new Font("Segoe UI", 14); 
             cbxInstituicao.Font = new Font("Segoe UI", 14); 
             mktCPF.Font = new Font("Segoe UI", 12);
@@ -226,6 +227,14 @@ namespace Avalia__
             var usuarios = medicoTableAdapter.GetData()
                 .Where(m => m.CPF == cpf)
                 .ToList();
+
+            return usuarios.Any();
+        }
+
+        private bool crmJAExiste(string crm) 
+        {
+            tbMedicoTableAdapter medicoTableAdapter = new tbMedicoTableAdapter();
+            var usuarios = medicoTableAdapter.GetData().Where(m => m.CRM == crm).ToList();
 
             return usuarios.Any();
         }
@@ -291,8 +300,12 @@ namespace Avalia__
 
             string cpf = mktCPF.Text;
             string email = txtEmail.Text.Trim();
+            string CRM = txtCRM.Text.Trim();
 
-            VerificaIdade();
+            if (!VerificaIdade()) 
+            {
+                return;
+            }
 
             if (EmailJaExiste(email))
             {
@@ -306,12 +319,21 @@ namespace Avalia__
                 return;
             }
 
+            if (crmJAExiste(CRM)) 
+            {
+                mensagem_Do_Sistema.MensagemError("Este CRM já está em uso.");
+                return;
+            }
+
             // Verifica se o email informado é valido
             EmailValido();
             EnviarDado();
+        
             mensagem_Do_Sistema.MensagemInformation("Cadastro realizado com sucesso!\nConfirme seu email na próxima tela!");
+            this.Hide();
             FormularioCadCPF formularioCadCPF = new FormularioCadCPF();
             formularioCadCPF.ShowDialog();
+            this.Show();
 
         }
         private void txtCRM_TextChanged(object sender, EventArgs e)

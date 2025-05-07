@@ -75,5 +75,15 @@ namespace Avalia__
             //Cor de fundo da tela 
             ConfiguracaoTelas.PintarGradiente(this, e, "#f5e6d3", "#fdf6f0");
         }
+
+        private void btnAvaliarconsulta_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            FormularioConsultasAvaliadas avaliadas = new FormularioConsultasAvaliadas(idUsuario);
+            avaliadas.ShowDialog();
+
+            this.Show();
+        }
     }
 }

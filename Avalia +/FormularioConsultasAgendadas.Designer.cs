@@ -52,6 +52,7 @@
             this.lblHistoricoConsulta.Size = new System.Drawing.Size(154, 29);
             this.lblHistoricoConsulta.TabIndex = 1;
             this.lblHistoricoConsulta.Text = "Minhas Consultas";
+            this.lblHistoricoConsulta.Click += new System.EventHandler(this.lblHistoricoConsulta_Click);
             // 
             // btnConsultasTotais
             // 
@@ -124,6 +125,7 @@
             this.lbTitulo.Size = new System.Drawing.Size(118, 31);
             this.lbTitulo.TabIndex = 6;
             this.lbTitulo.Text = "Áurea+";
+            this.lbTitulo.Click += new System.EventHandler(this.lbTitulo_Click);
             // 
             // btnSair
             // 

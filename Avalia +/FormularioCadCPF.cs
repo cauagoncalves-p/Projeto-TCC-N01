@@ -16,12 +16,11 @@ namespace Avalia__
     public partial class FormularioCadCPF: Form
     {
         Mensagem_do_sistema mensagem_ = new Mensagem_do_sistema();
+        private string tipoUsuario = ""; 
+
         private void MudarFonte()
         {
-       
-            btnContinuar.Font = new Font("Arial", 10, FontStyle.Bold);
             mktCPF.Font = new Font("Arial", 17, FontStyle.Regular);
-            txtEmail.Font = new Font("Arial", 14, FontStyle.Regular);
         }
 
         public FormularioCadCPF()
@@ -57,6 +56,8 @@ namespace Avalia__
 
         private void btnContinuar_Click(object sender, EventArgs e)
         {
+
+
             string cpfDigitado = mktCPF.Text;
             string emailDigitado = txtEmail.Text.Trim();
 
@@ -65,11 +66,21 @@ namespace Avalia__
                 mensagem_.MensagemError("Por favor, preencha o CPF e o e-mail.");
                 return;
             }
+
             // Consulta no banco
             tbUsuarioTableAdapter tbUsuarioTableAdapter = new tbUsuarioTableAdapter();
             tbMedicoTableAdapter tbMedicoTableAdapter = new tbMedicoTableAdapter();
             var usuario = tbUsuarioTableAdapter.GetData().FirstOrDefault(u => u.CPF == cpfDigitado && u.Email == emailDigitado);
             var medico = tbMedicoTableAdapter.GetData().FirstOrDefault(m => m.CPF == cpfDigitado && m.Email == emailDigitado);
+
+            if (usuario != null)
+            {
+                tipoUsuario = "paciente";
+            }
+            else if (medico != null)
+            {
+                tipoUsuario = "medico";
+            }
 
             var resultado = usuario ?? (object)medico;
 
@@ -77,15 +88,15 @@ namespace Avalia__
             {
                 mensagem_.MensagemInformation("Usuário encontrado! Indo para a próxima tela...");
 
-                // Abre a próxima tela, passando o e-mail se quiser
-                FormularioDeEnvioCodigo envio = new FormularioDeEnvioCodigo(emailDigitado);
-                envio.ShowDialog();
+                FormularioDeEnvioCodigo envio = new FormularioDeEnvioCodigo(emailDigitado,tipoUsuario);
+                this.Hide();
+                envio.ShowDialog(); // Fecha ele depois e mostra outro, se quiser
+                this.Close(); // Depois que envio for fechado 
             }
             else
             {
                 mensagem_.MensagemAtencao("CPF ou E-mail não encontrado no sistema.");
             }
-          
         }
     }
 }

@@ -17,13 +17,15 @@ namespace Avalia__
     public partial class FormularioDeEnvioCodigo : Form
     {
         private string emailUsuario;
+        private string tipoUsuario = "";
         private string codigoGerado;
         Mensagem_do_sistema mensagem_Do_Sistema = new Mensagem_do_sistema();
        
-        public FormularioDeEnvioCodigo(string email)
+        public FormularioDeEnvioCodigo(string email, string usuario)
         {
             InitializeComponent();
             emailUsuario = email; // recebe e guarda o e-mail do usuário
+            tipoUsuario = usuario;
             lblEmailInformado.Text = email; 
 
             // Ex: já gera e envia o código automaticamente ao abrir a tela
@@ -93,22 +95,27 @@ namespace Avalia__
                return;
             }
 
-            // Compara com o código que foi enviado por e-mail
             if (codigoDigitado == codigoGerado)
             {
                 mensagem_Do_Sistema.MensagemInformation("✅ Código confirmado com sucesso!");
-                FormularioLogin formularioLogin = new FormularioLogin();
-                formularioLogin.ShowDialog();
-            }
-            else
-            {
-                mensagem_Do_Sistema.MensagemError("Código incorreto. Verifique e tente novamente.");
+
+                if (tipoUsuario == "paciente")
+                {
+                    FormularioLogin formularioLogin = new FormularioLogin();
+                    this.Hide();
+                    formularioLogin.Show();
+                    this.Close();
+                }
+                else if (tipoUsuario == "medico")
+                {
+                    FormularioLoginMedico formularioLogin = new FormularioLoginMedico();
+                    this.Hide();
+                    formularioLogin.Show();
+                    this.Close();
+                }
             }
         }
 
-
-       
-      
         private void TextBox_KeyUp(object sender, KeyEventArgs e)
         {
             var currentTextBox = (System.Windows.Forms.TextBox)sender;

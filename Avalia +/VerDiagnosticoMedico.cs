@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Avalia__.AureaMaxDataSetTableAdapters;
+using static Avalia__.RadiusButton;
 
 namespace Avalia__
 {
@@ -26,7 +27,8 @@ namespace Avalia__
             controlador.ConfigInicial(this, panel7, btnSair, 25, ColorTranslator.FromHtml("#f0e6dd"));
           
             controlador.ConfigInicial(this, panelPrincipal, btnSair, 25, Color.White);
-         
+            UIHelper.ArredondarBotao(btnAvaliar, 20);
+
         }
 
         private void CarregarDadosDiagnostico()
