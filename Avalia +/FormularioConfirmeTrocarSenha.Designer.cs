@@ -69,12 +69,12 @@
             // 
             // txtConfirmeSenha
             // 
-            this.txtConfirmeSenha.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmeSenha.Font = new System.Drawing.Font("Wingdings", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.txtConfirmeSenha.Location = new System.Drawing.Point(39, 240);
             this.txtConfirmeSenha.MaxLength = 100;
             this.txtConfirmeSenha.Multiline = true;
             this.txtConfirmeSenha.Name = "txtConfirmeSenha";
-            this.txtConfirmeSenha.PasswordChar = '*';
+            this.txtConfirmeSenha.PasswordChar = 'l';
             this.txtConfirmeSenha.Size = new System.Drawing.Size(257, 40);
             this.txtConfirmeSenha.TabIndex = 13;
             // 
@@ -120,12 +120,12 @@
             // 
             // txtNovaSenha
             // 
-            this.txtNovaSenha.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNovaSenha.Font = new System.Drawing.Font("Wingdings", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.txtNovaSenha.Location = new System.Drawing.Point(39, 160);
             this.txtNovaSenha.MaxLength = 100;
             this.txtNovaSenha.Multiline = true;
             this.txtNovaSenha.Name = "txtNovaSenha";
-            this.txtNovaSenha.PasswordChar = '*';
+            this.txtNovaSenha.PasswordChar = 'l';
             this.txtNovaSenha.Size = new System.Drawing.Size(257, 40);
             this.txtNovaSenha.TabIndex = 3;
             // 

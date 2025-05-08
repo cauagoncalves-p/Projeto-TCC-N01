@@ -157,7 +157,7 @@
             // txtSenha
             // 
             this.txtSenha.BackColor = System.Drawing.Color.FloralWhite;
-            this.txtSenha.Font = new System.Drawing.Font("Wingdings", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.txtSenha.Font = new System.Drawing.Font("Wingdings", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.txtSenha.Location = new System.Drawing.Point(30, 360);
             this.txtSenha.Multiline = true;
             this.txtSenha.Name = "txtSenha";
@@ -168,7 +168,7 @@
             // txtconfirmeSenha
             // 
             this.txtconfirmeSenha.BackColor = System.Drawing.Color.FloralWhite;
-            this.txtconfirmeSenha.Font = new System.Drawing.Font("Wingdings", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.txtconfirmeSenha.Font = new System.Drawing.Font("Wingdings", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.txtconfirmeSenha.Location = new System.Drawing.Point(347, 360);
             this.txtconfirmeSenha.Multiline = true;
             this.txtconfirmeSenha.Name = "txtconfirmeSenha";

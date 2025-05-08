@@ -122,9 +122,6 @@ namespace Avalia__
             controlador.ConfigInicial(this, panelUrgente, btnSair, 25, Color.White);
             controlador.ConfigInicial(this, panel5, btnSair, 25, Color.White);
             controlador.ConfigInicial(this, panel6, btnSair, 25, Color.White);
-
-           
-
         }
         private void FormularioPaginaMedico_Paint(object sender, PaintEventArgs e)
         {
