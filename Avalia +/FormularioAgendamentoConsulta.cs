@@ -101,7 +101,6 @@ namespace Avalia__
                     }
                 }
             }
-
             return horariosOcupados;
         }
 
@@ -128,6 +127,7 @@ namespace Avalia__
                 Button btnHorario = new Button();
                 btnHorario.Text = horaInicial.ToString(@"hh\:mm");
                 btnHorario.Font = new Font("Arial Narrow", 10);
+                btnHorario.FlatStyle = FlatStyle.Flat;
                 btnHorario.Tag = horaInicial;
                 btnHorario.Width = larguraBotao;
                 btnHorario.Height = alturaBotao;
@@ -162,7 +162,7 @@ namespace Avalia__
             }
             // Captura o horário do botão clicado
             Button botaoClicado = (Button)sender;
-            botaoClicado.BackColor = Color.Yellow;
+            botaoClicado.BackColor = ColorTranslator.FromHtml("#F5F5DC") ;
 
             horarioSelecionado = Convert.ToDateTime(botaoClicado.Tag.ToString());
         }
@@ -260,8 +260,7 @@ namespace Avalia__
                 novoDado(horarioSelecionado);
 
                 MessageBox.Show("Consulta registrada com sucesso!");
-                ((FormularioPaginaPaciente)this.Owner)?.CarregarConsultas();
-                this.Close();
+              
             }
             catch (Exception)
             {
