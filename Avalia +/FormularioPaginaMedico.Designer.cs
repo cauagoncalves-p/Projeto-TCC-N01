@@ -782,9 +782,9 @@
             this.lblsubtitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
             this.lblsubtitulo.Location = new System.Drawing.Point(113, 84);
             this.lblsubtitulo.Name = "lblsubtitulo";
-            this.lblsubtitulo.Size = new System.Drawing.Size(180, 29);
+            this.lblsubtitulo.Size = new System.Drawing.Size(157, 29);
             this.lblsubtitulo.TabIndex = 14;
-            this.lblsubtitulo.Text = "Agende sua consulta";
+            this.lblsubtitulo.Text = "Agenda do Médico";
             // 
             // lblTitulo
             // 

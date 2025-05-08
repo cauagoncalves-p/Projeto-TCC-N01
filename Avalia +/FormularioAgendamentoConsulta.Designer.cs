@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioAgendamentoConsulta));
             this.panelAgendar = new System.Windows.Forms.Panel();
+            this.gpxHorarios = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtConsultaMotivo = new System.Windows.Forms.TextBox();
             this.lblMotivoConsulta = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -46,11 +48,9 @@
             this.cbxEspecialidade = new System.Windows.Forms.ComboBox();
             this.c = new System.Windows.Forms.Label();
             this.lblinfoConsulta = new System.Windows.Forms.Label();
-            this.lblTitulo = new System.Windows.Forms.Label();
-            this.lblsubtitulo = new System.Windows.Forms.Label();
             this.btnSair = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.gpxHorarios = new System.Windows.Forms.GroupBox();
+            this.lbTitulo = new System.Windows.Forms.Label();
+            this.lblHistoricoConsulta = new System.Windows.Forms.Label();
             this.panelAgendar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,6 +79,27 @@
             this.panelAgendar.Name = "panelAgendar";
             this.panelAgendar.Size = new System.Drawing.Size(855, 414);
             this.panelAgendar.TabIndex = 0;
+            // 
+            // gpxHorarios
+            // 
+            this.gpxHorarios.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpxHorarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
+            this.gpxHorarios.Location = new System.Drawing.Point(33, 237);
+            this.gpxHorarios.Name = "gpxHorarios";
+            this.gpxHorarios.Size = new System.Drawing.Size(766, 161);
+            this.gpxHorarios.TabIndex = 20;
+            this.gpxHorarios.TabStop = false;
+            this.gpxHorarios.Text = "Horarios";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
+            this.label1.Location = new System.Drawing.Point(30, 764);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 20);
+            this.label1.TabIndex = 19;
             // 
             // txtConsultaMotivo
             // 
@@ -262,65 +283,46 @@
             this.lblinfoConsulta.TabIndex = 3;
             this.lblinfoConsulta.Text = "Informações da consulta";
             // 
-            // lblTitulo
-            // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitulo.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblTitulo.Location = new System.Drawing.Point(65, 37);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(62, 25);
-            this.lblTitulo.TabIndex = 1;
-            this.lblTitulo.Text = "Aurea";
-            // 
-            // lblsubtitulo
-            // 
-            this.lblsubtitulo.AutoSize = true;
-            this.lblsubtitulo.BackColor = System.Drawing.Color.Transparent;
-            this.lblsubtitulo.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblsubtitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblsubtitulo.Location = new System.Drawing.Point(66, 85);
-            this.lblsubtitulo.Name = "lblsubtitulo";
-            this.lblsubtitulo.Size = new System.Drawing.Size(157, 22);
-            this.lblsubtitulo.TabIndex = 2;
-            this.lblsubtitulo.Text = "Agendar consulta";
-            // 
             // btnSair
             // 
             this.btnSair.BackColor = System.Drawing.Color.Transparent;
             this.btnSair.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnSair.FlatAppearance.BorderSize = 0;
+            this.btnSair.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSair.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
-            this.btnSair.Location = new System.Drawing.Point(875, 31);
+            this.btnSair.Location = new System.Drawing.Point(865, 37);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(50, 43);
-            this.btnSair.TabIndex = 12;
+            this.btnSair.TabIndex = 13;
             this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
-            // label1
+            // lbTitulo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.label1.Location = new System.Drawing.Point(30, 764);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 20);
-            this.label1.TabIndex = 19;
+            this.lbTitulo.AutoSize = true;
+            this.lbTitulo.BackColor = System.Drawing.Color.Transparent;
+            this.lbTitulo.Font = new System.Drawing.Font("Lucida Calligraphy", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lbTitulo.Location = new System.Drawing.Point(50, 37);
+            this.lbTitulo.Name = "lbTitulo";
+            this.lbTitulo.Size = new System.Drawing.Size(118, 31);
+            this.lbTitulo.TabIndex = 12;
+            this.lbTitulo.Text = "Áurea+";
             // 
-            // gpxHorarios
+            // lblHistoricoConsulta
             // 
-            this.gpxHorarios.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpxHorarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.gpxHorarios.Location = new System.Drawing.Point(33, 237);
-            this.gpxHorarios.Name = "gpxHorarios";
-            this.gpxHorarios.Size = new System.Drawing.Size(766, 161);
-            this.gpxHorarios.TabIndex = 20;
-            this.gpxHorarios.TabStop = false;
-            this.gpxHorarios.Text = "Horarios";
+            this.lblHistoricoConsulta.AutoSize = true;
+            this.lblHistoricoConsulta.BackColor = System.Drawing.Color.Transparent;
+            this.lblHistoricoConsulta.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHistoricoConsulta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
+            this.lblHistoricoConsulta.Location = new System.Drawing.Point(107, 63);
+            this.lblHistoricoConsulta.Name = "lblHistoricoConsulta";
+            this.lblHistoricoConsulta.Size = new System.Drawing.Size(154, 29);
+            this.lblHistoricoConsulta.TabIndex = 11;
+            this.lblHistoricoConsulta.Text = "Minhas Consultas";
             // 
             // FormularioAgendamentoConsulta
             // 
@@ -328,8 +330,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.btnSair);
-            this.Controls.Add(this.lblsubtitulo);
-            this.Controls.Add(this.lblTitulo);
+            this.Controls.Add(this.lbTitulo);
+            this.Controls.Add(this.lblHistoricoConsulta);
             this.Controls.Add(this.panelAgendar);
             this.Name = "FormularioAgendamentoConsulta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -345,9 +347,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panelAgendar;
-        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label lblinfoConsulta;
-        private System.Windows.Forms.Label lblsubtitulo;
         private System.Windows.Forms.Label c;
         private System.Windows.Forms.Label lblObsevacao;
         private System.Windows.Forms.ComboBox cbxAtendimento;
@@ -361,10 +361,12 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnContinuar;
         private System.Windows.Forms.TextBox txtobservacao;
-        private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.TextBox txtConsultaMotivo;
         private System.Windows.Forms.Label lblMotivoConsulta;
         private System.Windows.Forms.GroupBox gpxHorarios;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Label lbTitulo;
+        private System.Windows.Forms.Label lblHistoricoConsulta;
     }
 }

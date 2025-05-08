@@ -58,8 +58,6 @@ namespace Avalia__
 
 
             consulta.Insert(IdUsuario,Id_medico,data,motivo,statusconsulta,observacao,horario);
-            atualizarBanco();
-
         }
         private void carregaEspecialidade() 
         {
@@ -259,6 +257,7 @@ namespace Avalia__
                 novoDado(horarioSelecionado);
 
                 MessageBox.Show("Consulta registrada com sucesso!");
+                GerarBotoesHorarios();
             }     
             catch (Exception)
             {
@@ -287,5 +286,7 @@ namespace Avalia__
         {
             this.Close();   
         }
+
+ 
     }
 }

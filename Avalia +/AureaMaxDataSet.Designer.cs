@@ -36,7 +36,7 @@ namespace Avalia__ {
         
         private tbUsuarioDataTable tabletbUsuario;
         
-        private global::System.Data.DataRelation relationFK__Diagnosti__Id_Co__4F7CD00D;
+        private global::System.Data.DataRelation relationFK__Diagnosti__Id_Co__4E88ABD4;
         
         private global::System.Data.DataRelation relationFK_Avaliacao_Consulta;
         
@@ -324,7 +324,7 @@ namespace Avalia__ {
                     this.tabletbUsuario.InitVars();
                 }
             }
-            this.relationFK__Diagnosti__Id_Co__4F7CD00D = this.Relations["FK__Diagnosti__Id_Co__4F7CD00D"];
+            this.relationFK__Diagnosti__Id_Co__4E88ABD4 = this.Relations["FK__Diagnosti__Id_Co__4E88ABD4"];
             this.relationFK_Avaliacao_Consulta = this.Relations["FK_Avaliacao_Consulta"];
             this.relationFK_Consulta_Medico = this.Relations["FK_Consulta_Medico"];
             this.relationFK_Consulta_Usuario = this.Relations["FK_Consulta_Usuario"];
@@ -351,10 +351,10 @@ namespace Avalia__ {
             base.Tables.Add(this.tabletbMedico);
             this.tabletbUsuario = new tbUsuarioDataTable();
             base.Tables.Add(this.tabletbUsuario);
-            this.relationFK__Diagnosti__Id_Co__4F7CD00D = new global::System.Data.DataRelation("FK__Diagnosti__Id_Co__4F7CD00D", new global::System.Data.DataColumn[] {
+            this.relationFK__Diagnosti__Id_Co__4E88ABD4 = new global::System.Data.DataRelation("FK__Diagnosti__Id_Co__4E88ABD4", new global::System.Data.DataColumn[] {
                         this.tabletbConsulta.IdConsultaColumn}, new global::System.Data.DataColumn[] {
                         this.tableDiagnosticoMedico.Id_ConsultaColumn}, false);
-            this.Relations.Add(this.relationFK__Diagnosti__Id_Co__4F7CD00D);
+            this.Relations.Add(this.relationFK__Diagnosti__Id_Co__4E88ABD4);
             this.relationFK_Avaliacao_Consulta = new global::System.Data.DataRelation("FK_Avaliacao_Consulta", new global::System.Data.DataColumn[] {
                         this.tabletbConsulta.IdConsultaColumn}, new global::System.Data.DataColumn[] {
                         this.tabletbAvaliacao.IdConsultaColumn}, false);
@@ -649,7 +649,7 @@ namespace Avalia__ {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DiagnosticoMedicoRow AddDiagnosticoMedicoRow(tbConsultaRow parenttbConsultaRowByFK__Diagnosti__Id_Co__4F7CD00D, string diagnostico, string tratamentoRecomendado, string Medicamento, string Dosagem, string Frequencia, string duracao, string instrucaoReceita) {
+            public DiagnosticoMedicoRow AddDiagnosticoMedicoRow(tbConsultaRow parenttbConsultaRowByFK__Diagnosti__Id_Co__4E88ABD4, string diagnostico, string tratamentoRecomendado, string Medicamento, string Dosagem, string Frequencia, string duracao, string instrucaoReceita) {
                 DiagnosticoMedicoRow rowDiagnosticoMedicoRow = ((DiagnosticoMedicoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -661,8 +661,8 @@ namespace Avalia__ {
                         Frequencia,
                         duracao,
                         instrucaoReceita};
-                if ((parenttbConsultaRowByFK__Diagnosti__Id_Co__4F7CD00D != null)) {
-                    columnValuesArray[1] = parenttbConsultaRowByFK__Diagnosti__Id_Co__4F7CD00D[0];
+                if ((parenttbConsultaRowByFK__Diagnosti__Id_Co__4E88ABD4 != null)) {
+                    columnValuesArray[1] = parenttbConsultaRowByFK__Diagnosti__Id_Co__4E88ABD4[0];
                 }
                 rowDiagnosticoMedicoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDiagnosticoMedicoRow);
@@ -3060,10 +3060,10 @@ namespace Avalia__ {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public tbConsultaRow tbConsultaRow {
                 get {
-                    return ((tbConsultaRow)(this.GetParentRow(this.Table.ParentRelations["FK__Diagnosti__Id_Co__4F7CD00D"])));
+                    return ((tbConsultaRow)(this.GetParentRow(this.Table.ParentRelations["FK__Diagnosti__Id_Co__4E88ABD4"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Diagnosti__Id_Co__4F7CD00D"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Diagnosti__Id_Co__4E88ABD4"]);
                 }
             }
             
@@ -3409,11 +3409,11 @@ namespace Avalia__ {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public DiagnosticoMedicoRow[] GetDiagnosticoMedicoRows() {
-                if ((this.Table.ChildRelations["FK__Diagnosti__Id_Co__4F7CD00D"] == null)) {
+                if ((this.Table.ChildRelations["FK__Diagnosti__Id_Co__4E88ABD4"] == null)) {
                     return new DiagnosticoMedicoRow[0];
                 }
                 else {
-                    return ((DiagnosticoMedicoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Diagnosti__Id_Co__4F7CD00D"])));
+                    return ((DiagnosticoMedicoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Diagnosti__Id_Co__4E88ABD4"])));
                 }
             }
             
@@ -4493,7 +4493,7 @@ SELECT Id_diagnosticoMedico, Id_Consulta, diagnostico, tratamentoRecomendado, Me
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Avalia__.Properties.Settings.Default.AureaMaxConnectionString1;
+            this._connection.ConnectionString = global::Avalia__.Properties.Settings.Default.AureaMaxConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5077,7 +5077,7 @@ SELECT IdAvaliacao, IdConsulta, Atendimento_comunicacao, Tempo_de_espera, Conhec
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Avalia__.Properties.Settings.Default.AureaMaxConnectionString1;
+            this._connection.ConnectionString = global::Avalia__.Properties.Settings.Default.AureaMaxConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5452,7 +5452,7 @@ SELECT IdConsulta, Id_usuario, IdMedico, DataConsulta, Motivo, StatusConsulta, O
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Avalia__.Properties.Settings.Default.AureaMaxConnectionString1;
+            this._connection.ConnectionString = global::Avalia__.Properties.Settings.Default.AureaMaxConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5941,7 +5941,7 @@ SELECT IdInstituicao, NomeInstituicao, CNPJ, TipoInstituicao, Telefone, Email, E
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Avalia__.Properties.Settings.Default.AureaMaxConnectionString1;
+            this._connection.ConnectionString = global::Avalia__.Properties.Settings.Default.AureaMaxConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6553,7 +6553,7 @@ SELECT IdMedico, Nome, Sobrenome, CRM, Sexo, Especialidade, Cidade, Estado, Ende
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Avalia__.Properties.Settings.Default.AureaMaxConnectionString1;
+            this._connection.ConnectionString = global::Avalia__.Properties.Settings.Default.AureaMaxConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6567,7 +6567,7 @@ SELECT IdMedico, Nome, Sobrenome, CRM, Sexo, Especialidade, Cidade, Estado, Ende
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "UPDATE tbMedico \r\nSET Senha = @Senha\r\nWHERE Email = @Email\r\n";
+            this._commandCollection[1].CommandText = "UPDATE tbMedico\r\nSET Senha = @Senha\r\nWHERE Email = @Email";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Senha", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "Senha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.VarChar, 150, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -7310,7 +7310,7 @@ SELECT Id_usuario, Nome, Sobrenome, Data_Nascimento, CPF, Sexo, Telefone, Genero
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Avalia__.Properties.Settings.Default.AureaMaxConnectionString1;
+            this._connection.ConnectionString = global::Avalia__.Properties.Settings.Default.AureaMaxConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7324,7 +7324,7 @@ SELECT Id_usuario, Nome, Sobrenome, Data_Nascimento, CPF, Sexo, Telefone, Genero
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "UPDATE tbUsuario\r\nSET Senha = @Senha\r\nWHERE Email = @Email\r\n\r\n";
+            this._commandCollection[1].CommandText = "UPDATE tbUsuario \r\nSET Senha = @Senha\r\nWHERE Email = @Email\r\n";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Senha", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "Senha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.VarChar, 200, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));

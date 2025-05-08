@@ -63,7 +63,7 @@ namespace Avalia__
 
                     lblTotalConsultas.Text = todasConsultasMedico.Count.ToString();
                     lblTotalPendentes.Text = todasConsultasMedico.Count(c => c.StatusConsulta == "Agendada").ToString();
-                    lblTotalRealizadas.Text = todasConsultasMedico.Count(c => c.StatusConsulta == "Realizada").ToString();
+                    lblTotalRealizadas.Text = todasConsultasMedico.Count(c => c.StatusConsulta == "Realizada" || c.StatusConsulta == "Avaliada").ToString();
                     lblTotalUrgencia.Text = todasConsultasMedico.Count(c => c.StatusConsulta == "Urgente").ToString();
 
 
@@ -251,7 +251,7 @@ namespace Avalia__
         {
             var row = dgvConsultasMedico.Rows[e.RowIndex];
             var dados = (dynamic)row.DataBoundItem;
-
+            string hora = row.Cells["Hora"].Value.ToString();
             int IdConsulta = dados.Id_Consulta;
             string paciente = row.Cells["Paciente"].Value.ToString();
             string data = row.Cells["Data"].Value.ToString();
@@ -272,7 +272,7 @@ namespace Avalia__
 
                 this.Hide();
                 // Abrir novo formulário com os dados
-                FormularioProntuarioPaciente detalhes = new FormularioProntuarioPaciente(IdConsulta, paciente, data, status, observacoes);
+                FormularioProntuarioPaciente detalhes = new FormularioProntuarioPaciente(IdConsulta, paciente, data,hora, status, observacoes);
                 detalhes.ShowDialog();
 
                 this.Show();
@@ -296,6 +296,7 @@ namespace Avalia__
         private void paelRealizadas_Click(object sender, EventArgs e)
         {
             CarregarConsultasDoMedico("Realizada");
+            CarregarConsultasDoMedico("Avaliada");
         }
 
         private void panelUrgente_Click(object sender, EventArgs e)

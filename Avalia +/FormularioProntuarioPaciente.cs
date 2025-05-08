@@ -70,14 +70,14 @@ namespace Avalia__
         }
 
 
-        public FormularioProntuarioPaciente(int IdConsulta, string paciente, string data, string status, string observacoes)
+        public FormularioProntuarioPaciente(int IdConsulta, string paciente, string data ,string hora, string status, string observacoes)
         {
             InitializeComponent();
             _IdConsulta = IdConsulta;
             lblInfopaciente.Text = paciente;
             lblInfoObservacao.Text = observacoes;
             lblInfoStatus.Text = status;
-            lblInfoHoraData.Text = data;
+            lblInfoHoraData.Text = $"{data} - {hora}";
 
             CarregarDiagnosticoDaConsulta(_IdConsulta);
 

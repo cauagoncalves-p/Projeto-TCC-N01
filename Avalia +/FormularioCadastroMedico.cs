@@ -330,10 +330,11 @@ namespace Avalia__
             EnviarDado();
         
             mensagem_Do_Sistema.MensagemInformation("Cadastro realizado com sucesso!\nConfirme seu email na próxima tela!");
-            this.Hide();
+            
+            
             FormularioCadCPF formularioCadCPF = new FormularioCadCPF();
             formularioCadCPF.ShowDialog();
-            this.Show();
+            this.Close();
 
         }
         private void txtCRM_TextChanged(object sender, EventArgs e)

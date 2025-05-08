@@ -422,9 +422,9 @@
             this.lblsubtitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
             this.lblsubtitulo.Location = new System.Drawing.Point(125, 63);
             this.lblsubtitulo.Name = "lblsubtitulo";
-            this.lblsubtitulo.Size = new System.Drawing.Size(158, 25);
+            this.lblsubtitulo.Size = new System.Drawing.Size(145, 25);
             this.lblsubtitulo.TabIndex = 14;
-            this.lblsubtitulo.Text = "Agende sua consulta";
+            this.lblsubtitulo.Text = "Diagnóstico Médico";
             // 
             // lblTitulo
             // 
@@ -448,6 +448,8 @@
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormularioProntuarioPaciente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prontuário Medico";
