@@ -83,22 +83,22 @@ namespace Avalia__
                 cbxAtendimento.DataSource = instituicoes;
             }
         }
-        private List<TimeSpan> ObterHorariosOcupados(DateTime dataConsulta)
+        private List<TimeSpan> ObterHorariosOcupados(DateTime dataConsulta, int idMedico)
         {
             List<TimeSpan> horariosOcupados = new List<TimeSpan>();
 
             using (var adapter = new tbConsultaTableAdapter())
             {
-                // Obtém as consultas para a data especificada
                 var consultas = adapter.GetData()
-                    .Where(c => c.DataConsulta.Date == dataConsulta.Date)  // Filtra pela data da consulta
-                    .Select(c => c.HorarioConsulta)  // Seleciona apenas os horários
+                    .Where(c => c.DataConsulta.Date == dataConsulta.Date && c.IdMedico == idMedico)
                     .ToList();
 
-                // Se for TimeSpan, adiciona diretamente
-                foreach (var horario in consultas)
+                foreach (var c in consultas)
                 {
-                    horariosOcupados.Add(horario);  // Adiciona diretamente (é TimeSpan, então já podemos adicionar)
+                    if (c.HorarioConsulta != null)
+                    {
+                        horariosOcupados.Add((TimeSpan)c.HorarioConsulta);
+                    }
                 }
             }
 
@@ -107,41 +107,37 @@ namespace Avalia__
 
         private void GerarBotoesHorarios()
         {
-            TimeSpan horaInicial = TimeSpan.FromHours(8);  // 08:00
-            TimeSpan horaFinal = TimeSpan.FromHours(18);   // 18:00
+            if (cbxMedico.SelectedValue == null) return;
 
-            int margem = 10;
-            int espacamentoHorizontal = 10;
-            int espacamentoVertical = 10;
-            int larguraBotao = 80;
-            int alturaBotao = 30;
+            TimeSpan horaInicial = TimeSpan.FromHours(8);
+            TimeSpan horaFinal = TimeSpan.FromHours(18);
 
-            // Margem superior para não sobrepor o título do GroupBox
+            int idMedico = Convert.ToInt32(cbxMedico.SelectedValue);
+            List<TimeSpan> horariosOcupados = ObterHorariosOcupados(dtpData.Value, idMedico);
+
+            gpxHorarios.Controls.Clear(); // Limpa os botões antigos
+
+            int margem = 10, espacamentoHorizontal = 10, espacamentoVertical = 10;
+            int larguraBotao = 80, alturaBotao = 30;
             int posX = margem;
-            int posY = gpxHorarios.Font.Height + 15; // Ajuste a altura do título + algum espaçamento
-
+            int posY = gpxHorarios.Font.Height + 15;
             int larguraMaxima = gpxHorarios.Width;
-
-            // Obtém os horários ocupados para a data selecionada, agora como TimeSpan
-            List<TimeSpan> horariosOcupados = ObterHorariosOcupados(dtpData.Value);
 
             while (horaInicial < horaFinal)
             {
                 Button btnHorario = new Button();
-                btnHorario.Text = horaInicial.ToString(@"hh\:mm");  // Exibe o horário no formato "HH:mm"
+                btnHorario.Text = horaInicial.ToString(@"hh\:mm");
                 btnHorario.Font = new Font("Arial Narrow", 10);
-                btnHorario.Tag = horaInicial.ToString(@"hh\:mm");  // Guarda o horário no formato "HH:mm"
+                btnHorario.Tag = horaInicial;
                 btnHorario.Width = larguraBotao;
                 btnHorario.Height = alturaBotao;
 
-                // Se o horário estiver ocupado, desabilita o botão
                 if (horariosOcupados.Contains(horaInicial))
                 {
                     btnHorario.Enabled = false;
-                    btnHorario.BackColor = Color.Gray; // Muda a cor para indicar que está indisponível
+                    btnHorario.BackColor = Color.Gray;
                 }
 
-                // Se passar da largura do GroupBox, vai para a próxima linha
                 if (posX + larguraBotao + margem > larguraMaxima)
                 {
                     posX = margem;
@@ -150,17 +146,14 @@ namespace Avalia__
 
                 btnHorario.Left = posX;
                 btnHorario.Top = posY;
-
                 btnHorario.Click += BtnHorario_Click;
 
                 gpxHorarios.Controls.Add(btnHorario);
 
                 posX += larguraBotao + espacamentoHorizontal;
-                horaInicial = horaInicial.Add(TimeSpan.FromMinutes(30));  // Incrementa de 30 em 30 minutos
+                horaInicial = horaInicial.Add(TimeSpan.FromMinutes(30));
             }
         }
-
-
         private void BtnHorario_Click(object sender, EventArgs e)
         {
             foreach (var btn in gpxHorarios.Controls.OfType<Button>())
@@ -236,11 +229,13 @@ namespace Avalia__
                         }
                     }
                 }
+                GerarBotoesHorarios();
             }
             else
             {
                 cbxAtendimento.DataSource = null;
             }
+          
         }
 
         private void btnContinuar_Click(object sender, EventArgs e)
