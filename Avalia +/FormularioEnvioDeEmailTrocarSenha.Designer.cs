@@ -77,7 +77,7 @@
             this.linkLblReenviarCodigo.Location = new System.Drawing.Point(112, 401);
             this.linkLblReenviarCodigo.Name = "linkLblReenviarCodigo";
             this.linkLblReenviarCodigo.Size = new System.Drawing.Size(118, 18);
-            this.linkLblReenviarCodigo.TabIndex = 1;
+            this.linkLblReenviarCodigo.TabIndex = 7;
             this.linkLblReenviarCodigo.TabStop = true;
             this.linkLblReenviarCodigo.Text = "Reenviar Código";
             this.linkLblReenviarCodigo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLblReenviarCodigo_LinkClicked);
@@ -192,7 +192,7 @@
             this.btnEntrar.Location = new System.Drawing.Point(19, 341);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(291, 44);
-            this.btnEntrar.TabIndex = 0;
+            this.btnEntrar.TabIndex = 6;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = false;
             this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
@@ -244,6 +244,7 @@
             this.Name = "FormularioEnvioDeEmailTrocarSenha";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Troca de Senha ";
+            this.Load += new System.EventHandler(this.FormularioEnvioDeEmailTrocarSenha_Load);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FormularioEnvioDeEmailTrocarSenha_KeyUp);
             this.panelConfirmeEmail.ResumeLayout(false);
             this.panelConfirmeEmail.PerformLayout();

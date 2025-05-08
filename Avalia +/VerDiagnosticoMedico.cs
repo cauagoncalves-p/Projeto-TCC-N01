@@ -83,5 +83,11 @@ namespace Avalia__
             avaliacao.ShowDialog();
             this.Show();
         }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            ConfiguracaoTelas configuracaoTelas = new ConfiguracaoTelas();
+            configuracaoTelas.FecharAba(this);
+        }
     }
 }

@@ -160,6 +160,11 @@ namespace Avalia__
                 mensagem_Do_Sistema.MensagemError("Código incorreto. Verifique e tente novamente.");
             }
         }
+
+        private void FormularioEnvioDeEmailTrocarSenha_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

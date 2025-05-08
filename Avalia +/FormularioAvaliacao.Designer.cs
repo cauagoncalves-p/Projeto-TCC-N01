@@ -490,7 +490,7 @@
             this.lblEspecialidadeEcrm.AutoSize = true;
             this.lblEspecialidadeEcrm.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEspecialidadeEcrm.ForeColor = System.Drawing.Color.Gray;
-            this.lblEspecialidadeEcrm.Location = new System.Drawing.Point(331, 41);
+            this.lblEspecialidadeEcrm.Location = new System.Drawing.Point(363, 41);
             this.lblEspecialidadeEcrm.Name = "lblEspecialidadeEcrm";
             this.lblEspecialidadeEcrm.Size = new System.Drawing.Size(257, 20);
             this.lblEspecialidadeEcrm.TabIndex = 30;
@@ -526,11 +526,11 @@
             this.lblNomeMedico.BackColor = System.Drawing.Color.Transparent;
             this.lblNomeMedico.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomeMedico.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblNomeMedico.Location = new System.Drawing.Point(351, 18);
+            this.lblNomeMedico.Location = new System.Drawing.Point(379, 18);
             this.lblNomeMedico.Name = "lblNomeMedico";
-            this.lblNomeMedico.Size = new System.Drawing.Size(221, 22);
+            this.lblNomeMedico.Size = new System.Drawing.Size(209, 22);
             this.lblNomeMedico.TabIndex = 22;
-            this.lblNomeMedico.Text = "Dra. Ana Carolina Silva";
+            this.lblNomeMedico.Text = "Dr. Ana Carolina Silva";
             // 
             // txtComentario
             // 

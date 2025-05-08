@@ -57,7 +57,7 @@ namespace Avalia__
                 return sb.ToString();
             }
         }
-
+    
         public void ConfigurarPlaceholder(TextBox campo, string placeholder)
         {
             if (string.IsNullOrWhiteSpace(campo.Text))

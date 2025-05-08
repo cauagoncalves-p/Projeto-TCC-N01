@@ -17,14 +17,71 @@ namespace Avalia__
         private int idUsuario;
         private string emailUsuario;
 
-        
+        public void CarregarConsultas()
+        {
+            using (var consultas = new tbConsultaTableAdapter())
+            using (var medicos = new tbMedicoTableAdapter())
+            {
+                try
+                {
+                    var consultasDoUsuario = consultas.GetData()
+                                                      .Where(c => c.Id_usuario == idUsuario &&
+                                                                  c.StatusConsulta != "Cancelada" &&
+                                                                  c.StatusConsulta != "Realizada" &&
+                                                                  c.StatusConsulta != "Avaliada" &&
+                                                                  c.StatusConsulta != "Urgente")
+                                                      .OrderBy(c => c.DataConsulta)
+                                                      .ToList();
+
+                    var medicosLista = medicos.GetData();
+
+                    // Consulta 1
+                    if (consultasDoUsuario.Count > 0)
+                    {
+                        var consulta1 = consultasDoUsuario[0];
+                        var medico1 = medicosLista.FirstOrDefault(m => m.IdMedico == consulta1.IdMedico);
+
+                        lblDataConsulta1.Text = consulta1.DataConsulta.ToString("dd/MM/yyyy");
+                        lblMedico.Text = medico1 != null ? $"{medico1.Nome} - {medico1.Especialidade}" : "Médico não encontrado";
+                    }
+                    else
+                    {
+                        lblDataConsulta1.Text = "Consulta não encontrada";
+                        lblMedico.Text = "Não disponível";
+                    }
+
+                    // Consulta 2
+                    if (consultasDoUsuario.Count > 1)
+                    {
+                        var consulta2 = consultasDoUsuario[1];
+                        var medico2 = medicosLista.FirstOrDefault(m => m.IdMedico == consulta2.IdMedico);
+
+                        lblDataConsulta2.Text = consulta2.DataConsulta.ToString("dd/MM/yyyy");
+                        lblMedico1.Text = medico2 != null ? $"{medico2.Nome} - {medico2.Especialidade}" : "Médico não encontrado";
+                    }
+                    else
+                    {
+                        lblDataConsulta2.Text = "Consulta não encontrada";
+                        lblMedico1.Text = "Não disponível";
+                    }
+                }
+                catch (Exception)
+                {
+                    lblDataConsulta1.Text = "Erro ao carregar";
+                    lblMedico.Text = "Erro ao carregar";
+                    lblDataConsulta2.Text = "Erro ao carregar";
+                    lblMedico1.Text = "Erro ao carregar";
+                }
+            }
+        }
+
         public FormularioPaginaPaciente(int idUsuario, string emailUsuario)
         {
             InitializeComponent();
          
             this.idUsuario = idUsuario;
             this.emailUsuario = emailUsuario;
-
+            CarregarConsultas();
             RadiusButton controlador = new RadiusButton();
             controlador.ConfigInicial(this, panelbackground, btnSair, 25, Color.White);
             controlador.ConfigInicial(this, panel1, btnSair, 25, Color.White);
@@ -32,15 +89,6 @@ namespace Avalia__
             controlador.ConfigInicial(this, panelConsultas, btnSair, 25, ColorTranslator.FromHtml("#F0E4DC"));
             controlador.ConfigInicial(this, panelHeader, btnSair, 20, ColorTranslator.FromHtml("#c97c63"));
 
-            using (var consultas = new tbConsultaTableAdapter())
-            using (var medicos = new tbMedicoTableAdapter())
-            {
-                var consulta = consultas.GetData().FirstOrDefault(c => c.Id_usuario == idUsuario);
-
-                var medico = medicos.GetData().FirstOrDefault(m => m.IdMedico == consulta.IdMedico);    
-                lblDataConsulta1.Text = consulta.DataConsulta.ToString();
-                lblMedico.Text = $"{medico.Nome} - {medico.Especialidade}";
-            }
             UIHelper.ArredondarBotao(btnLembrar, 10);
             UIHelper.ArredondarBotao(btnLembrar2, 10);
 
@@ -57,9 +105,11 @@ namespace Avalia__
             this.Hide(); // Esconde o formulário atual
 
             FormularioAgendamentoConsulta formularioAgendamento = new FormularioAgendamentoConsulta(idUsuario);
-            formularioAgendamento.ShowDialog(); // Abre o novo formulário
+            formularioAgendamento.Owner = this; // Define o dono
+            formularioAgendamento.ShowDialog(); // Espera o usuário fechar
 
-            this.Show(); // Reexibe o formulário atual depois que o outro for fechado
+            this.Show(); // Só será executado depois que o agendamento for fechado
+
         }
 
         private void btnHistoricomedico_Click(object sender, EventArgs e)

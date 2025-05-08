@@ -169,6 +169,8 @@ namespace Avalia__
             {
                 novoDado();
                 MessageBox.Show("Consulta registrada com sucesso!");
+                ((FormularioPaginaPaciente)this.Owner)?.CarregarConsultas();
+                this.Close();
                 return;
             }
             catch (Exception) 

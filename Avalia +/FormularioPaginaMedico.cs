@@ -20,7 +20,7 @@ namespace Avalia__
         private void CarregarConsultasDoMedico(string statusFiltro = "")
         {
              try
-            {
+             {
                 using (var consultaAdapter = new tbConsultaTableAdapter())
                 using (var usuarioAdapter = new tbUsuarioTableAdapter())
                 using (var avaliacaoAdapter = new tbAvaliacaoTableAdapter())
