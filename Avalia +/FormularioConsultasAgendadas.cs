@@ -75,17 +75,14 @@ namespace Avalia__
             dgvConsultas.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             dgvConsultas.DefaultCellStyle.Padding = new Padding(5, 0, 5, 0);
 
-            // Configurar colunas (exemplo)
             if (dgvConsultas.Columns.Count == 0)
             {
-                dgvConsultas.Columns.Add("colIniciais", "Iniciais");
-                dgvConsultas.Columns.Add("colPaciente", "Paciente");
-                dgvConsultas.Columns.Add("colHorario", "Horário");
-                dgvConsultas.Columns.Add("colTipo", "Tipo");
-                dgvConsultas.Columns.Add("colStatus", "Status");
-
-                // Centralizar coluna de iniciais
-                dgvConsultas.Columns["colIniciais"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                dgvConsultas.Columns.Add("Data", "Data");
+                dgvConsultas.Columns.Add("Hora", "Hora");
+                dgvConsultas.Columns.Add("Médico", "Médico");
+                dgvConsultas.Columns.Add("Motivo", "Motivo");
+                dgvConsultas.Columns.Add("Observações", "Observações");
+                dgvConsultas.Columns.Add("Status", "Status");
             }
         }
         private void AjustarColunasDataGridView()
@@ -95,11 +92,12 @@ namespace Avalia__
             // Defina as larguras desejadas (sua configuração atual)
             var larguras = new Dictionary<string, int>
                 {
-                    { "Data", 200 },      // 200px
-                    { "Médico", 250 },    // 350px
-                    { "Motivo", 200 },    // 250px
-                    { "Status", 150 },    // 150px
-                    { "Observações", 150} // 100px
+                    { "Data", 100},      
+                    { "Hora",80 },
+                    { "Médico", 150},    
+                    { "Motivo", 200 },    
+                    { "Observações", 200}, 
+                    { "Status", 100 },
                 };
 
             // Calcula o total das larguras definidas
@@ -148,7 +146,8 @@ namespace Avalia__
 
                     var consultas = consultaAdapter.GetData()
                         .Where(c => c.Id_usuario == _idUsuario)
-                        .Where(c => string.IsNullOrEmpty(statusFiltro) || c.StatusConsulta == statusFiltro)
+                        .Where(c => string.IsNullOrEmpty(statusFiltro) || c.StatusConsulta == statusFiltro).OrderBy
+                        (c => c.DataConsulta)
                         .Select(c =>
                         {
                             var medico = todosMedicos.TryGetValue(c.IdMedico, out var m)
@@ -159,12 +158,13 @@ namespace Avalia__
 
                             return new
                             {
-                                IdConsulta = c.IdConsulta, 
-                                Data = c.DataConsulta.ToString("dd/MM/yyyy HH:mm"),
+                                IdConsulta = c.IdConsulta,
                                 Medico = medico,
+                                Data = c.DataConsulta.ToString("dd/MM/yyyy"),
+                                Hora = c.HorarioConsulta.ToString(@"hh\:mm"),
                                 Motivo = c.Motivo,
-                                Status = c.StatusConsulta,
-                                Observações = observacoes
+                                Observações = observacoes,
+                                Status = c.StatusConsulta
                             };
                         })
                         .ToList();
@@ -190,9 +190,6 @@ namespace Avalia__
             AjustarColunasDataGridView();
             RadiusButton controlador = new RadiusButton();
             controlador.ConfigInicial(this, panelCancelarConsulta, btnSair, 25, Color.White);
-
-
-
 
             UIHelper.ArredondarBotao(btnAgendadas, 25);
             UIHelper.ArredondarBotao(btnCancelar, 25);
@@ -249,11 +246,6 @@ namespace Avalia__
 
         }
 
-        private void FormularioConsultasAgendadas_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void dgvConsultas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow linha = dgvConsultas.Rows[e.RowIndex];
@@ -286,16 +278,6 @@ namespace Avalia__
                     this.Show();
                 }
             }
-        }
-
-        private void lbTitulo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblHistoricoConsulta_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

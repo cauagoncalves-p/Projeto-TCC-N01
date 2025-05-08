@@ -76,8 +76,11 @@ namespace Avalia__
             { 
                 dgvConsultas.Columns.Add("colMedico", "Medico");
                 dgvConsultas.Columns.Add("colHorario", "Horário");
-                dgvConsultas.Columns.Add("colTipo", "Tipo");
+
+
+                dgvConsultas.Columns.Add("colTipo", "Tipo");  
                 dgvConsultas.Columns.Add("colStatus", "Status");
+                dgvConsultas.Columns.Add("colHora", "Hora");
             }
         }
         private void AjustarColunasDataGridView()
@@ -87,10 +90,11 @@ namespace Avalia__
             // Defina as larguras desejadas (sua configuração atual)
             var larguras = new Dictionary<string, int>
                 {
-                    { "Medico", 200 },      // 200px
-                    { "Local", 250 },    // 350px
-                    { "Status", 200 },    // 250px
-                    { "Data", 150 },    // 150px
+                    { "Medico", 200 },   
+                    { "Local", 250 },
+                    { "Status", 200 },
+                    { "Data", 150 },  
+                    { "Hora", 100 }
                 };
 
             // Calcula o total das larguras definidas
@@ -134,7 +138,7 @@ namespace Avalia__
 
                     var consultas = consultaAdapter.GetData()
                         .Where(c => c.Id_usuario == _idUsuario)
-                        .Where(c => c.StatusConsulta == "Avaliada")
+                        .Where(c => c.StatusConsulta == "Avaliada").OrderBy(c => c.DataConsulta)
                         .Select(c =>
                         {
                             var medico = todosMedicos.TryGetValue(c.IdMedico, out var m)
@@ -146,8 +150,9 @@ namespace Avalia__
                             return new
                             {
                                 IdConsulta = c.IdConsulta,
-                                Data = c.DataConsulta.ToString("dd/MM/yyyy HH:mm"),
                                 Medico = medico,
+                                Data = c.DataConsulta.ToString("dd/MM/yyyy HH:mm"),
+                                Hora = c.HorarioConsulta.ToString(@"hh\:mm"),
                                 Motivo = c.Motivo,
                                 Status = c.StatusConsulta
                             };

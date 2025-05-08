@@ -72,15 +72,13 @@ namespace Avalia__
 
             // Configurar colunas (exemplo)
             if (dgvCancelar.Columns.Count == 0)
-            {
-                dgvCancelar.Columns.Add("colIniciais", "Iniciais");
-                dgvCancelar.Columns.Add("colPaciente", "Paciente");
-                dgvCancelar.Columns.Add("colHorario", "Horário");
-                dgvCancelar.Columns.Add("colTipo", "Tipo");
-                dgvCancelar.Columns.Add("colStatus", "Status");
-
-                // Centralizar coluna de iniciais
-                dgvCancelar.Columns["colIniciais"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            {   
+                dgvCancelar.Columns.Add("Data", "Data");
+                dgvCancelar.Columns.Add("Hora", "Hora");
+                dgvCancelar.Columns.Add("Médico", "Médico");
+                dgvCancelar.Columns.Add("Motivo", "Motivo");
+                dgvCancelar.Columns.Add("Status", "Status");
+                dgvCancelar.Columns.Add("Observações", "Observações");
             }
         }
         private void AjustarColunasDataGridView()
@@ -91,10 +89,10 @@ namespace Avalia__
             var larguras = new Dictionary<string, int>
                 {
                     { "Data", 200 },      // 200px
+                    {"Hora", 200 },
                     { "Médico", 250 },    // 350px
                     { "Motivo", 200 },    // 250px
-                    { "Status", 150 },    // 150px
-                    { "Observações", 150} // 100px
+                    { "Status", 150 }    // 150px
                 };
 
             // Calcula o total das larguras definidas
@@ -109,11 +107,6 @@ namespace Avalia__
                 {
                     larguras[item] = (int)(larguras[item] * fatorReducao);
                 }
-            }
-            else if (totalLarguras < dgvCancelar.Width)
-            {
-                // Se sobrar espaço, distribui para a coluna Observações
-                larguras["Observações"] += dgvCancelar.Width - totalLarguras;
             }
 
             // Aplica as larguras
@@ -144,7 +137,7 @@ namespace Avalia__
 
                     var consultas = consultaAdapter.GetData()
                         .Where(c => c.Id_usuario == _idUsuario)
-                        .Where(c => string.IsNullOrEmpty(statusFiltro) || c.StatusConsulta == statusFiltro)
+                        .Where(c => string.IsNullOrEmpty(statusFiltro) || c.StatusConsulta == statusFiltro).OrderBy(c => c.DataConsulta)
                         .Select(c =>
                         {
                             var medico = todosMedicos.TryGetValue(c.IdMedico, out var m)
@@ -162,20 +155,16 @@ namespace Avalia__
 
                             return new
                             {
-                                IdConsulta = c.IdConsulta, 
-                                Data = c.DataConsulta.ToString("dd/MM/yyyy HH:mm"),
+                                IdConsulta = c.IdConsulta,
                                 Medico = medico,
+                                Data = c.DataConsulta.ToString("dd/MM/yyyy"),
+                                Hora = c.HorarioConsulta.ToString(@"hh\:mm"),
                                 Motivo = c.Motivo,
-                                Status = c.StatusConsulta,
-                                Observações = observacoes,
-                                Local = local
+                                Local = local,
+                                Status = c.StatusConsulta
                             };
                         })
                         .ToList();
-
-
-
-
 
                     dgvCancelar.DataSource = consultas;
 

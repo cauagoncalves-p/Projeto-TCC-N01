@@ -30,7 +30,7 @@ namespace Avalia__
                     // Aplica o filtro por status, se houver
                     var todasConsultas = consultaAdapter.GetData()
                         .Where(c => c.IdMedico == _idMedico)
-                        .Where(c => string.IsNullOrEmpty(statusFiltro) || c.StatusConsulta == statusFiltro)
+                        .Where(c => string.IsNullOrEmpty(statusFiltro) || c.StatusConsulta == statusFiltro).OrderBy(c => c.DataConsulta)
                         .ToList();
 
                     var consultas = todasConsultas
@@ -46,7 +46,8 @@ namespace Avalia__
                             {
                                 Id_Consulta = c.IdConsulta,
                                 Paciente = paciente,
-                                Data = c.DataConsulta.ToString("dd/MM/yyyy HH:mm"),
+                                Data = c.DataConsulta.ToString("dd/MM/yyyy"),
+                                Hora = c.HorarioConsulta.ToString(@"hh\:mm"),
                                 Status = c.StatusConsulta,
                                 Observações = observacoes
                             };
@@ -198,6 +199,7 @@ namespace Avalia__
                 dgvConsultasMedico.Columns.Add("colHorario", "Horário");
                 dgvConsultasMedico.Columns.Add("colTipo", "Tipo");
                 dgvConsultasMedico.Columns.Add("colStatus", "Observações");
+                dgvConsultasMedico.Columns.Add("colHora", "Hora");
             }
         }
             private void AjustarColunasDataGridView()
@@ -209,7 +211,8 @@ namespace Avalia__
                             { "Paciente", 150 },
                             { "Data", 120 },
                             { "Status", 100 },
-                            { "Observações", 200 }
+                            { "Observações", 200 },
+                            { "Hora", 100 }
                         };
 
             int totalLarguras = larguras.Sum(x => x.Value);

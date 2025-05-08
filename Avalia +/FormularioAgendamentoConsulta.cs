@@ -235,7 +235,6 @@ namespace Avalia__
             {
                 cbxAtendimento.DataSource = null;
             }
-          
         }
 
         private void btnContinuar_Click(object sender, EventArgs e)
@@ -260,8 +259,7 @@ namespace Avalia__
                 novoDado(horarioSelecionado);
 
                 MessageBox.Show("Consulta registrada com sucesso!");
-              
-            }
+            }     
             catch (Exception)
             {
                 MessageBox.Show("Houve um erro com o cadastro da consulta!");
@@ -278,6 +276,16 @@ namespace Avalia__
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();  
+        }
+
+        private void dtpData_ValueChanged(object sender, EventArgs e)
+        {
+            GerarBotoesHorarios();  
+        }
+
+        private void btnCancelar_Click_1(object sender, EventArgs e)
+        {
+            this.Close();   
         }
     }
 }

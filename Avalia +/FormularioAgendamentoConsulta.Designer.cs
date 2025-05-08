@@ -84,7 +84,7 @@
             // 
             this.txtConsultaMotivo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(245)))));
             this.txtConsultaMotivo.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConsultaMotivo.Location = new System.Drawing.Point(34, 488);
+            this.txtConsultaMotivo.Location = new System.Drawing.Point(33, 462);
             this.txtConsultaMotivo.Multiline = true;
             this.txtConsultaMotivo.Name = "txtConsultaMotivo";
             this.txtConsultaMotivo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -96,7 +96,7 @@
             this.lblMotivoConsulta.AutoSize = true;
             this.lblMotivoConsulta.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMotivoConsulta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblMotivoConsulta.Location = new System.Drawing.Point(31, 443);
+            this.lblMotivoConsulta.Location = new System.Drawing.Point(30, 417);
             this.lblMotivoConsulta.Name = "lblMotivoConsulta";
             this.lblMotivoConsulta.Size = new System.Drawing.Size(127, 20);
             this.lblMotivoConsulta.TabIndex = 17;
@@ -107,19 +107,20 @@
             this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(164)))), ((int)(((byte)(143)))));
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Location = new System.Drawing.Point(532, 763);
+            this.btnCancelar.Location = new System.Drawing.Point(531, 725);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(129, 45);
             this.btnCancelar.TabIndex = 16;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
             // 
             // btnContinuar
             // 
             this.btnContinuar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(164)))), ((int)(((byte)(143)))));
             this.btnContinuar.FlatAppearance.BorderSize = 0;
             this.btnContinuar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnContinuar.Location = new System.Drawing.Point(680, 763);
+            this.btnContinuar.Location = new System.Drawing.Point(679, 725);
             this.btnContinuar.Name = "btnContinuar";
             this.btnContinuar.Size = new System.Drawing.Size(129, 45);
             this.btnContinuar.TabIndex = 15;
@@ -131,7 +132,7 @@
             // 
             this.txtobservacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(245)))));
             this.txtobservacao.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtobservacao.Location = new System.Drawing.Point(33, 644);
+            this.txtobservacao.Location = new System.Drawing.Point(33, 617);
             this.txtobservacao.Multiline = true;
             this.txtobservacao.Name = "txtobservacao";
             this.txtobservacao.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -143,7 +144,7 @@
             this.lblObservacoes.AutoSize = true;
             this.lblObservacoes.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblObservacoes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblObservacoes.Location = new System.Drawing.Point(30, 599);
+            this.lblObservacoes.Location = new System.Drawing.Point(30, 572);
             this.lblObservacoes.Name = "lblObservacoes";
             this.lblObservacoes.Size = new System.Drawing.Size(150, 20);
             this.lblObservacoes.TabIndex = 13;
@@ -153,7 +154,7 @@
             // 
             this.lblObsevacao.AutoSize = true;
             this.lblObsevacao.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblObsevacao.Location = new System.Drawing.Point(29, 461);
+            this.lblObsevacao.Location = new System.Drawing.Point(28, 435);
             this.lblObsevacao.Name = "lblObsevacao";
             this.lblObsevacao.Size = new System.Drawing.Size(0, 20);
             this.lblObsevacao.TabIndex = 12;
@@ -165,7 +166,7 @@
             this.cbxAtendimento.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cbxAtendimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxAtendimento.FormattingEnabled = true;
-            this.cbxAtendimento.Location = new System.Drawing.Point(455, 375);
+            this.cbxAtendimento.Location = new System.Drawing.Point(457, 170);
             this.cbxAtendimento.Name = "cbxAtendimento";
             this.cbxAtendimento.Size = new System.Drawing.Size(346, 33);
             this.cbxAtendimento.TabIndex = 11;
@@ -175,7 +176,7 @@
             this.lblLocal.AutoSize = true;
             this.lblLocal.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLocal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblLocal.Location = new System.Drawing.Point(451, 343);
+            this.lblLocal.Location = new System.Drawing.Point(453, 138);
             this.lblLocal.Name = "lblLocal";
             this.lblLocal.Size = new System.Drawing.Size(147, 20);
             this.lblLocal.TabIndex = 10;
@@ -185,17 +186,18 @@
             // 
             this.dtpData.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpData.Location = new System.Drawing.Point(33, 377);
+            this.dtpData.Location = new System.Drawing.Point(35, 172);
             this.dtpData.Name = "dtpData";
             this.dtpData.Size = new System.Drawing.Size(346, 31);
             this.dtpData.TabIndex = 9;
+            this.dtpData.ValueChanged += new System.EventHandler(this.dtpData_ValueChanged);
             // 
             // lblData
             // 
             this.lblData.AutoSize = true;
             this.lblData.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblData.Location = new System.Drawing.Point(29, 343);
+            this.lblData.Location = new System.Drawing.Point(31, 138);
             this.lblData.Name = "lblData";
             this.lblData.Size = new System.Drawing.Size(36, 20);
             this.lblData.TabIndex = 8;
@@ -304,7 +306,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.label1.Location = new System.Drawing.Point(34, 814);
+            this.label1.Location = new System.Drawing.Point(30, 764);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 20);
             this.label1.TabIndex = 19;
@@ -313,7 +315,7 @@
             // 
             this.gpxHorarios.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpxHorarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.gpxHorarios.Location = new System.Drawing.Point(33, 157);
+            this.gpxHorarios.Location = new System.Drawing.Point(33, 237);
             this.gpxHorarios.Name = "gpxHorarios";
             this.gpxHorarios.Size = new System.Drawing.Size(766, 161);
             this.gpxHorarios.TabIndex = 20;

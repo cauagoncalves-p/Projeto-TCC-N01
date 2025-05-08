@@ -284,8 +284,8 @@ namespace Avalia__
             mensagem_.MensagemInformation("Cadastro realizado com sucesso!\nConfirme seu email na próxima tela!");
             this.Hide();
             FormularioCadCPF formularioCadCPF = new FormularioCadCPF();
-            formularioCadCPF.ShowDialog();
-            this.Show();
+            formularioCadCPF.Show();
+            this.Close();
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
