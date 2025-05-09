@@ -254,7 +254,13 @@ namespace Avalia__
                 // Passa o horário selecionado para o método novoDado
                 novoDado(horarioSelecionado);
 
-                MessageBox.Show("Consulta registrada com sucesso!");
+                // Verifica se o formulário dono é do tipo que queremos atualizar
+                if (this.Owner is FormularioPaginaPaciente paginaPaciente)
+                {
+                    paginaPaciente.CarregarConsultas(); 
+                }
+
+                this.Close(); // Fecha o formulário atual (opcional se usar ShowDialog)
                 GerarBotoesHorarios();
             }     
             catch (Exception)
