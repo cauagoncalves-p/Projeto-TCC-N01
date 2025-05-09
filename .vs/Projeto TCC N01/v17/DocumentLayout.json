@@ -1,0 +1,300 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Caua.gpereira2\\Desktop\\Projeto-TCC-N01\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B9157DBA-F96A-4F6D-B12C-734BA3F8D537}|Avalia \u002B\\Avalia \u002B.csproj|c:\\users\\caua.gpereira2\\desktop\\projeto-tcc-n01\\avalia \u002B\\formularioconsultasagendadas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B9157DBA-F96A-4F6D-B12C-734BA3F8D537}|Avalia \u002B\\Avalia \u002B.csproj|solutionrelative:avalia \u002B\\formularioconsultasagendadas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9157DBA-F96A-4F6D-B12C-734BA3F8D537}|Avalia \u002B\\Avalia \u002B.csproj|c:\\users\\caua.gpereira2\\desktop\\projeto-tcc-n01\\avalia \u002B\\formularioconsultasavaliadas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B9157DBA-F96A-4F6D-B12C-734BA3F8D537}|Avalia \u002B\\Avalia \u002B.csproj|solutionrelative:avalia \u002B\\formularioconsultasavaliadas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9157DBA-F96A-4F6D-B12C-734BA3F8D537}|Avalia \u002B\\Avalia \u002B.csproj|c:\\users\\caua.gpereira2\\desktop\\projeto-tcc-n01\\avalia \u002B\\formulariodeenviocodigo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B9157DBA-F96A-4F6D-B12C-734BA3F8D537}|Avalia \u002B\\Avalia \u002B.csproj|solutionrelative:avalia \u002B\\formulariodeenviocodigo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9157DBA-F96A-4F6D-B12C-734BA3F8D537}|Avalia \u002B\\Avalia \u002B.csproj|c:\\users\\caua.gpereira2\\desktop\\projeto-tcc-n01\\avalia \u002B\\formularioenviodeemailtrocarsenha.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B9157DBA-F96A-4F6D-B12C-734BA3F8D537}|Avalia \u002B\\Avalia \u002B.csproj|solutionrelative:avalia \u002B\\formularioenviodeemailtrocarsenha.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9157DBA-F96A-4F6D-B12C-734BA3F8D537}|Avalia \u002B\\Avalia \u002B.csproj|c:\\users\\caua.gpereira2\\desktop\\projeto-tcc-n01\\avalia \u002B\\formulariologin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B9157DBA-F96A-4F6D-B12C-734BA3F8D537}|Avalia \u002B\\Avalia \u002B.csproj|solutionrelative:avalia \u002B\\formulariologin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9157DBA-F96A-4F6D-B12C-734BA3F8D537}|Avalia \u002B\\Avalia \u002B.csproj|c:\\users\\caua.gpereira2\\desktop\\projeto-tcc-n01\\avalia \u002B\\formulariologinmedico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B9157DBA-F96A-4F6D-B12C-734BA3F8D537}|Avalia \u002B\\Avalia \u002B.csproj|solutionrelative:avalia \u002B\\formulariologinmedico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9157DBA-F96A-4F6D-B12C-734BA3F8D537}|Avalia \u002B\\Avalia \u002B.csproj|c:\\users\\caua.gpereira2\\desktop\\projeto-tcc-n01\\avalia \u002B\\formulariopaginamedico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B9157DBA-F96A-4F6D-B12C-734BA3F8D537}|Avalia \u002B\\Avalia \u002B.csproj|solutionrelative:avalia \u002B\\formulariopaginamedico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9157DBA-F96A-4F6D-B12C-734BA3F8D537}|Avalia \u002B\\Avalia \u002B.csproj|c:\\users\\caua.gpereira2\\desktop\\projeto-tcc-n01\\avalia \u002B\\formulariopaginapaciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B9157DBA-F96A-4F6D-B12C-734BA3F8D537}|Avalia \u002B\\Avalia \u002B.csproj|solutionrelative:avalia \u002B\\formulariopaginapaciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9157DBA-F96A-4F6D-B12C-734BA3F8D537}|Avalia \u002B\\Avalia \u002B.csproj|c:\\users\\caua.gpereira2\\desktop\\projeto-tcc-n01\\avalia \u002B\\formularioprontuariopaciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B9157DBA-F96A-4F6D-B12C-734BA3F8D537}|Avalia \u002B\\Avalia \u002B.csproj|solutionrelative:avalia \u002B\\formularioprontuariopaciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9157DBA-F96A-4F6D-B12C-734BA3F8D537}|Avalia \u002B\\Avalia \u002B.csproj|c:\\users\\caua.gpereira2\\desktop\\projeto-tcc-n01\\avalia \u002B\\formulariotrocarsenha.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B9157DBA-F96A-4F6D-B12C-734BA3F8D537}|Avalia \u002B\\Avalia \u002B.csproj|solutionrelative:avalia \u002B\\formulariotrocarsenha.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9157DBA-F96A-4F6D-B12C-734BA3F8D537}|Avalia \u002B\\Avalia \u002B.csproj|c:\\users\\caua.gpereira2\\desktop\\projeto-tcc-n01\\avalia \u002B\\frmconfirmarcancelamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B9157DBA-F96A-4F6D-B12C-734BA3F8D537}|Avalia \u002B\\Avalia \u002B.csproj|solutionrelative:avalia \u002B\\frmconfirmarcancelamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9157DBA-F96A-4F6D-B12C-734BA3F8D537}|Avalia \u002B\\Avalia \u002B.csproj|c:\\users\\caua.gpereira2\\desktop\\projeto-tcc-n01\\avalia \u002B\\verdiagnosticomedico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B9157DBA-F96A-4F6D-B12C-734BA3F8D537}|Avalia \u002B\\Avalia \u002B.csproj|solutionrelative:avalia \u002B\\verdiagnosticomedico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9157DBA-F96A-4F6D-B12C-734BA3F8D537}|Avalia \u002B\\Avalia \u002B.csproj|c:\\users\\caua.gpereira2\\desktop\\projeto-tcc-n01\\avalia \u002B\\formularioagendamentoconsulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B9157DBA-F96A-4F6D-B12C-734BA3F8D537}|Avalia \u002B\\Avalia \u002B.csproj|solutionrelative:avalia \u002B\\formularioagendamentoconsulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9157DBA-F96A-4F6D-B12C-734BA3F8D537}|Avalia \u002B\\Avalia \u002B.csproj|c:\\users\\caua.gpereira2\\desktop\\projeto-tcc-n01\\avalia \u002B\\formularioavaliacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B9157DBA-F96A-4F6D-B12C-734BA3F8D537}|Avalia \u002B\\Avalia \u002B.csproj|solutionrelative:avalia \u002B\\formularioavaliacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9157DBA-F96A-4F6D-B12C-734BA3F8D537}|Avalia \u002B\\Avalia \u002B.csproj|c:\\users\\caua.gpereira2\\desktop\\projeto-tcc-n01\\avalia \u002B\\forminicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B9157DBA-F96A-4F6D-B12C-734BA3F8D537}|Avalia \u002B\\Avalia \u002B.csproj|solutionrelative:avalia \u002B\\forminicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9157DBA-F96A-4F6D-B12C-734BA3F8D537}|Avalia \u002B\\Avalia \u002B.csproj|c:\\users\\caua.gpereira2\\desktop\\projeto-tcc-n01\\avalia \u002B\\aureamaxdataset.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
+      "RelativeMoniker": "D:0:0:{B9157DBA-F96A-4F6D-B12C-734BA3F8D537}|Avalia \u002B\\Avalia \u002B.csproj|solutionrelative:avalia \u002B\\aureamaxdataset.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9157DBA-F96A-4F6D-B12C-734BA3F8D537}|Avalia \u002B\\Avalia \u002B.csproj|c:\\users\\caua.gpereira2\\desktop\\projeto-tcc-n01\\avalia \u002B\\formcancelarconsulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B9157DBA-F96A-4F6D-B12C-734BA3F8D537}|Avalia \u002B\\Avalia \u002B.csproj|solutionrelative:avalia \u002B\\formcancelarconsulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormularioConsultasAgendadas.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Caua.gpereira2\\Desktop\\Projeto-TCC-N01\\Avalia \u002B\\FormularioConsultasAgendadas.cs",
+              "RelativeDocumentMoniker": "Avalia \u002B\\FormularioConsultasAgendadas.cs",
+              "ToolTip": "C:\\Users\\Caua.gpereira2\\Desktop\\Projeto-TCC-N01\\Avalia \u002B\\FormularioConsultasAgendadas.cs [Design]",
+              "RelativeToolTip": "Avalia \u002B\\FormularioConsultasAgendadas.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T23:01:15.247Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormularioConsultasAvaliadas.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Caua.gpereira2\\Desktop\\Projeto-TCC-N01\\Avalia \u002B\\FormularioConsultasAvaliadas.cs",
+              "RelativeDocumentMoniker": "Avalia \u002B\\FormularioConsultasAvaliadas.cs",
+              "ToolTip": "C:\\Users\\Caua.gpereira2\\Desktop\\Projeto-TCC-N01\\Avalia \u002B\\FormularioConsultasAvaliadas.cs [Design]",
+              "RelativeToolTip": "Avalia \u002B\\FormularioConsultasAvaliadas.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T23:01:14.71Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormularioDeEnvioCodigo.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Caua.gpereira2\\Desktop\\Projeto-TCC-N01\\Avalia \u002B\\FormularioDeEnvioCodigo.cs",
+              "RelativeDocumentMoniker": "Avalia \u002B\\FormularioDeEnvioCodigo.cs",
+              "ToolTip": "C:\\Users\\Caua.gpereira2\\Desktop\\Projeto-TCC-N01\\Avalia \u002B\\FormularioDeEnvioCodigo.cs [Design]",
+              "RelativeToolTip": "Avalia \u002B\\FormularioDeEnvioCodigo.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T23:01:14.248Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FormularioEnvioDeEmailTrocarSenha.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Caua.gpereira2\\Desktop\\Projeto-TCC-N01\\Avalia \u002B\\FormularioEnvioDeEmailTrocarSenha.cs",
+              "RelativeDocumentMoniker": "Avalia \u002B\\FormularioEnvioDeEmailTrocarSenha.cs",
+              "ToolTip": "C:\\Users\\Caua.gpereira2\\Desktop\\Projeto-TCC-N01\\Avalia \u002B\\FormularioEnvioDeEmailTrocarSenha.cs [Design]",
+              "RelativeToolTip": "Avalia \u002B\\FormularioEnvioDeEmailTrocarSenha.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T23:01:13.801Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FormularioLogin.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Caua.gpereira2\\Desktop\\Projeto-TCC-N01\\Avalia \u002B\\FormularioLogin.cs",
+              "RelativeDocumentMoniker": "Avalia \u002B\\FormularioLogin.cs",
+              "ToolTip": "C:\\Users\\Caua.gpereira2\\Desktop\\Projeto-TCC-N01\\Avalia \u002B\\FormularioLogin.cs [Design]",
+              "RelativeToolTip": "Avalia \u002B\\FormularioLogin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T23:01:13.211Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FormularioLoginMedico.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Caua.gpereira2\\Desktop\\Projeto-TCC-N01\\Avalia \u002B\\FormularioLoginMedico.cs",
+              "RelativeDocumentMoniker": "Avalia \u002B\\FormularioLoginMedico.cs",
+              "ToolTip": "C:\\Users\\Caua.gpereira2\\Desktop\\Projeto-TCC-N01\\Avalia \u002B\\FormularioLoginMedico.cs [Design]",
+              "RelativeToolTip": "Avalia \u002B\\FormularioLoginMedico.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T23:01:12.689Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FormularioPaginaMedico.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Caua.gpereira2\\Desktop\\Projeto-TCC-N01\\Avalia \u002B\\FormularioPaginaMedico.cs",
+              "RelativeDocumentMoniker": "Avalia \u002B\\FormularioPaginaMedico.cs",
+              "ToolTip": "C:\\Users\\Caua.gpereira2\\Desktop\\Projeto-TCC-N01\\Avalia \u002B\\FormularioPaginaMedico.cs [Design]",
+              "RelativeToolTip": "Avalia \u002B\\FormularioPaginaMedico.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T23:01:12.404Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FormularioPaginaPaciente.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Caua.gpereira2\\Desktop\\Projeto-TCC-N01\\Avalia \u002B\\FormularioPaginaPaciente.cs",
+              "RelativeDocumentMoniker": "Avalia \u002B\\FormularioPaginaPaciente.cs",
+              "ToolTip": "C:\\Users\\Caua.gpereira2\\Desktop\\Projeto-TCC-N01\\Avalia \u002B\\FormularioPaginaPaciente.cs [Design]",
+              "RelativeToolTip": "Avalia \u002B\\FormularioPaginaPaciente.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T23:01:11.757Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FormularioProntuarioPaciente.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Caua.gpereira2\\Desktop\\Projeto-TCC-N01\\Avalia \u002B\\FormularioProntuarioPaciente.cs",
+              "RelativeDocumentMoniker": "Avalia \u002B\\FormularioProntuarioPaciente.cs",
+              "ToolTip": "C:\\Users\\Caua.gpereira2\\Desktop\\Projeto-TCC-N01\\Avalia \u002B\\FormularioProntuarioPaciente.cs [Design]",
+              "RelativeToolTip": "Avalia \u002B\\FormularioProntuarioPaciente.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T23:01:11.199Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FormularioTrocarSenha.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Caua.gpereira2\\Desktop\\Projeto-TCC-N01\\Avalia \u002B\\FormularioTrocarSenha.cs",
+              "RelativeDocumentMoniker": "Avalia \u002B\\FormularioTrocarSenha.cs",
+              "ToolTip": "C:\\Users\\Caua.gpereira2\\Desktop\\Projeto-TCC-N01\\Avalia \u002B\\FormularioTrocarSenha.cs [Design]",
+              "RelativeToolTip": "Avalia \u002B\\FormularioTrocarSenha.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T23:01:10.427Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "frmConfirmarCancelamento.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Caua.gpereira2\\Desktop\\Projeto-TCC-N01\\Avalia \u002B\\frmConfirmarCancelamento.cs",
+              "RelativeDocumentMoniker": "Avalia \u002B\\frmConfirmarCancelamento.cs",
+              "ToolTip": "C:\\Users\\Caua.gpereira2\\Desktop\\Projeto-TCC-N01\\Avalia \u002B\\frmConfirmarCancelamento.cs [Design]",
+              "RelativeToolTip": "Avalia \u002B\\frmConfirmarCancelamento.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T23:01:09.858Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "VerDiagnosticoMedico.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Caua.gpereira2\\Desktop\\Projeto-TCC-N01\\Avalia \u002B\\VerDiagnosticoMedico.cs",
+              "RelativeDocumentMoniker": "Avalia \u002B\\VerDiagnosticoMedico.cs",
+              "ToolTip": "C:\\Users\\Caua.gpereira2\\Desktop\\Projeto-TCC-N01\\Avalia \u002B\\VerDiagnosticoMedico.cs [Design]",
+              "RelativeToolTip": "Avalia \u002B\\VerDiagnosticoMedico.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T23:01:04.166Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FormularioAvaliacao.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Caua.gpereira2\\Desktop\\Projeto-TCC-N01\\Avalia \u002B\\FormularioAvaliacao.cs",
+              "RelativeDocumentMoniker": "Avalia \u002B\\FormularioAvaliacao.cs",
+              "ToolTip": "C:\\Users\\Caua.gpereira2\\Desktop\\Projeto-TCC-N01\\Avalia \u002B\\FormularioAvaliacao.cs [Design]",
+              "RelativeToolTip": "Avalia \u002B\\FormularioAvaliacao.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T23:01:00.334Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FormularioAgendamentoConsulta.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Caua.gpereira2\\Desktop\\Projeto-TCC-N01\\Avalia \u002B\\FormularioAgendamentoConsulta.cs",
+              "RelativeDocumentMoniker": "Avalia \u002B\\FormularioAgendamentoConsulta.cs",
+              "ToolTip": "C:\\Users\\Caua.gpereira2\\Desktop\\Projeto-TCC-N01\\Avalia \u002B\\FormularioAgendamentoConsulta.cs [Design]",
+              "RelativeToolTip": "Avalia \u002B\\FormularioAgendamentoConsulta.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T23:00:59.524Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "FormInicial.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Caua.gpereira2\\Desktop\\Projeto-TCC-N01\\Avalia \u002B\\FormInicial.cs",
+              "RelativeDocumentMoniker": "Avalia \u002B\\FormInicial.cs",
+              "ToolTip": "C:\\Users\\Caua.gpereira2\\Desktop\\Projeto-TCC-N01\\Avalia \u002B\\FormInicial.cs [Design]",
+              "RelativeToolTip": "Avalia \u002B\\FormInicial.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T23:00:58.773Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AureaMaxDataSet.xsd",
+              "DocumentMoniker": "C:\\Users\\Caua.gpereira2\\Desktop\\Projeto-TCC-N01\\Avalia \u002B\\AureaMaxDataSet.xsd",
+              "RelativeDocumentMoniker": "Avalia \u002B\\AureaMaxDataSet.xsd",
+              "ToolTip": "C:\\Users\\Caua.gpereira2\\Desktop\\Projeto-TCC-N01\\Avalia \u002B\\AureaMaxDataSet.xsd",
+              "RelativeToolTip": "Avalia \u002B\\AureaMaxDataSet.xsd",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
+              "WhenOpened": "2025-05-09T23:00:56.845Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "FormCancelarConsulta.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Caua.gpereira2\\Desktop\\Projeto-TCC-N01\\Avalia \u002B\\FormCancelarConsulta.cs",
+              "RelativeDocumentMoniker": "Avalia \u002B\\FormCancelarConsulta.cs",
+              "ToolTip": "C:\\Users\\Caua.gpereira2\\Desktop\\Projeto-TCC-N01\\Avalia \u002B\\FormCancelarConsulta.cs [Design]",
+              "RelativeToolTip": "Avalia \u002B\\FormCancelarConsulta.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T23:00:54.052Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
