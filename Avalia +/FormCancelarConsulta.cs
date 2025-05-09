@@ -92,8 +92,9 @@ namespace Avalia__
                     {"Hora", 200 },
                     { "Médico", 250 },    // 350px
                     { "Motivo", 200 },    // 250px
-                    { "Status", 150 }    // 150px
-                };
+                    { "Status", 150 },  // 150px
+                    { "Observações", 100}
+            };
 
             // Calcula o total das larguras definidas
             int totalLarguras = larguras.Sum(x => x.Value);
@@ -161,6 +162,7 @@ namespace Avalia__
                                 Hora = c.HorarioConsulta.ToString(@"hh\:mm"),
                                 Motivo = c.Motivo,
                                 Local = local,
+                                Observacao = c.Observacoes,
                                 Status = c.StatusConsulta
                             };
                         })
@@ -225,17 +227,18 @@ namespace Avalia__
                 var row = dgvCancelar.SelectedRows[0];
 
                 string data = row.Cells["Data"].Value?.ToString() ?? "";
+                string hora = row.Cells["Hora"].Value?.ToString() ?? "";
+                string observacao = row.Cells["Observacao"].Value?.ToString() ?? "";
                 string medico = row.Cells["Medico"].Value?.ToString() ?? "";
                 string motivo = row.Cells["Motivo"].Value?.ToString() ?? "";
                 string status = row.Cells["Status"].Value?.ToString() ?? "";
-                string observacoes = row.Cells["Observações"].Value?.ToString() ?? "";
                 string local = row.Cells["Local"].Value?.ToString() ?? "";
               
                 var consultaSelecionada = (dynamic)row.DataBoundItem;
                 int idConsulta = consultaSelecionada.IdConsulta;
 
                 this.Hide();
-                var formConfirmarCancelamento = new frmConfirmarCancelamento(idConsulta, data, medico, motivo, status, observacoes, local);
+                var formConfirmarCancelamento = new frmConfirmarCancelamento(idConsulta, data,hora, medico, motivo, status,observacao,local);
                 formConfirmarCancelamento.ShowDialog();
                 this.Show();
 

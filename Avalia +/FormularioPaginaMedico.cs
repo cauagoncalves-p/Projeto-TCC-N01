@@ -119,7 +119,7 @@ namespace Avalia__
             RadiusButton controlador = new RadiusButton();
             controlador.ConfigInicial(this, panelConsultasTotais, btnSair, 25, Color.White);
             controlador.ConfigInicial(this, panelPendentes, btnSair, 25, Color.White);
-            controlador.ConfigInicial(this, paelRealizadas, btnSair, 25, Color.White);
+            controlador.ConfigInicial(this, panelRealizadas, btnSair, 25, Color.White);
             controlador.ConfigInicial(this, panelUrgente, btnSair, 25, Color.White);
             controlador.ConfigInicial(this, panel5, btnSair, 25, Color.White);
             controlador.ConfigInicial(this, panel6, btnSair, 25, Color.White);
@@ -293,10 +293,9 @@ namespace Avalia__
             CarregarConsultasDoMedico("Agendada");
         }
 
-        private void paelRealizadas_Click(object sender, EventArgs e)
+        private void panelRealizadas_Click(object sender, EventArgs e)
         {
             CarregarConsultasDoMedico("Realizada");
-            CarregarConsultasDoMedico("Avaliada");
         }
 
         private void panelUrgente_Click(object sender, EventArgs e)

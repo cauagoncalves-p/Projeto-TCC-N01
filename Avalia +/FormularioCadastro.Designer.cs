@@ -106,10 +106,11 @@
             this.panelCadastro.Controls.Add(this.lblDataNascimento);
             this.panelCadastro.Controls.Add(this.lblSobrenome);
             this.panelCadastro.Controls.Add(this.lblNome);
-            this.panelCadastro.Location = new System.Drawing.Point(160, 11);
+            this.panelCadastro.Location = new System.Drawing.Point(213, 14);
+            this.panelCadastro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelCadastro.Name = "panelCadastro";
-            this.panelCadastro.Padding = new System.Windows.Forms.Padding(0, 0, 20, 20);
-            this.panelCadastro.Size = new System.Drawing.Size(707, 550);
+            this.panelCadastro.Padding = new System.Windows.Forms.Padding(0, 0, 27, 25);
+            this.panelCadastro.Size = new System.Drawing.Size(943, 677);
             this.panelCadastro.TabIndex = 0;
             this.panelCadastro.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCadastro_Paint);
             // 
@@ -118,18 +119,20 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.label1.Location = new System.Drawing.Point(30, 761);
+            this.label1.Location = new System.Drawing.Point(40, 937);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 18);
+            this.label1.Size = new System.Drawing.Size(0, 23);
             this.label1.TabIndex = 38;
             // 
             // lblError
             // 
             this.lblError.AutoSize = true;
             this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(33, 396);
+            this.lblError.Location = new System.Drawing.Point(44, 487);
+            this.lblError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(0, 13);
+            this.lblError.Size = new System.Drawing.Size(0, 16);
             this.lblError.TabIndex = 37;
             // 
             // lblConfirmeSenha
@@ -137,9 +140,10 @@
             this.lblConfirmeSenha.AutoSize = true;
             this.lblConfirmeSenha.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConfirmeSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblConfirmeSenha.Location = new System.Drawing.Point(347, 335);
+            this.lblConfirmeSenha.Location = new System.Drawing.Point(463, 412);
+            this.lblConfirmeSenha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblConfirmeSenha.Name = "lblConfirmeSenha";
-            this.lblConfirmeSenha.Size = new System.Drawing.Size(160, 18);
+            this.lblConfirmeSenha.Size = new System.Drawing.Size(201, 23);
             this.lblConfirmeSenha.TabIndex = 36;
             this.lblConfirmeSenha.Text = "Confirme a sua senha";
             // 
@@ -148,9 +152,10 @@
             this.lblSenha.AutoSize = true;
             this.lblSenha.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblSenha.Location = new System.Drawing.Point(31, 335);
+            this.lblSenha.Location = new System.Drawing.Point(41, 412);
+            this.lblSenha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSenha.Name = "lblSenha";
-            this.lblSenha.Size = new System.Drawing.Size(53, 18);
+            this.lblSenha.Size = new System.Drawing.Size(65, 23);
             this.lblSenha.TabIndex = 35;
             this.lblSenha.Text = "Senha";
             // 
@@ -158,22 +163,24 @@
             // 
             this.txtSenha.BackColor = System.Drawing.Color.FloralWhite;
             this.txtSenha.Font = new System.Drawing.Font("Wingdings", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.txtSenha.Location = new System.Drawing.Point(30, 360);
+            this.txtSenha.Location = new System.Drawing.Point(40, 443);
+            this.txtSenha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSenha.Multiline = true;
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = 'l';
-            this.txtSenha.Size = new System.Drawing.Size(302, 32);
+            this.txtSenha.Size = new System.Drawing.Size(401, 38);
             this.txtSenha.TabIndex = 34;
             // 
             // txtconfirmeSenha
             // 
             this.txtconfirmeSenha.BackColor = System.Drawing.Color.FloralWhite;
             this.txtconfirmeSenha.Font = new System.Drawing.Font("Wingdings", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.txtconfirmeSenha.Location = new System.Drawing.Point(347, 360);
+            this.txtconfirmeSenha.Location = new System.Drawing.Point(463, 443);
+            this.txtconfirmeSenha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtconfirmeSenha.Multiline = true;
             this.txtconfirmeSenha.Name = "txtconfirmeSenha";
             this.txtconfirmeSenha.PasswordChar = 'l';
-            this.txtconfirmeSenha.Size = new System.Drawing.Size(319, 32);
+            this.txtconfirmeSenha.Size = new System.Drawing.Size(424, 38);
             this.txtconfirmeSenha.TabIndex = 33;
             // 
             // lblEmail
@@ -181,30 +188,33 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblEmail.Location = new System.Drawing.Point(30, 184);
+            this.lblEmail.Location = new System.Drawing.Point(40, 226);
+            this.lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(45, 17);
+            this.lblEmail.Size = new System.Drawing.Size(57, 22);
             this.lblEmail.TabIndex = 32;
             this.lblEmail.Text = "Email";
             // 
             // txtEmail
             // 
             this.txtEmail.BackColor = System.Drawing.Color.FloralWhite;
-            this.txtEmail.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(30, 209);
+            this.txtEmail.Font = new System.Drawing.Font("Arial", 12F);
+            this.txtEmail.Location = new System.Drawing.Point(40, 257);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(302, 32);
+            this.txtEmail.Size = new System.Drawing.Size(401, 38);
             this.txtEmail.TabIndex = 31;
             // 
             // txtNome
             // 
             this.txtNome.BackColor = System.Drawing.Color.FloralWhite;
-            this.txtNome.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(30, 136);
+            this.txtNome.Font = new System.Drawing.Font("Arial", 12F);
+            this.txtNome.Location = new System.Drawing.Point(40, 167);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNome.Multiline = true;
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(302, 32);
+            this.txtNome.Size = new System.Drawing.Size(401, 38);
             this.txtNome.TabIndex = 5;
             // 
             // btnSair
@@ -214,9 +224,10 @@
             this.btnSair.FlatAppearance.BorderSize = 0;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
-            this.btnSair.Location = new System.Drawing.Point(615, 30);
+            this.btnSair.Location = new System.Drawing.Point(820, 37);
+            this.btnSair.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(50, 43);
+            this.btnSair.Size = new System.Drawing.Size(67, 53);
             this.btnSair.TabIndex = 11;
             this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSair.UseVisualStyleBackColor = false;
@@ -225,21 +236,23 @@
             // lblCPF
             // 
             this.lblCPF.AutoSize = true;
-            this.lblCPF.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCPF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblCPF.Location = new System.Drawing.Point(342, 186);
+            this.lblCPF.Location = new System.Drawing.Point(456, 229);
+            this.lblCPF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCPF.Name = "lblCPF";
-            this.lblCPF.Size = new System.Drawing.Size(34, 20);
+            this.lblCPF.Size = new System.Drawing.Size(47, 24);
             this.lblCPF.TabIndex = 30;
             this.lblCPF.Text = "CPF";
             // 
             // mktCPF
             // 
             this.mktCPF.BackColor = System.Drawing.Color.FloralWhite;
-            this.mktCPF.Location = new System.Drawing.Point(341, 210);
+            this.mktCPF.Location = new System.Drawing.Point(455, 258);
+            this.mktCPF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mktCPF.Mask = "000,000,000-00";
             this.mktCPF.Name = "mktCPF";
-            this.mktCPF.Size = new System.Drawing.Size(319, 20);
+            this.mktCPF.Size = new System.Drawing.Size(424, 22);
             this.mktCPF.TabIndex = 29;
             // 
             // btnFinalizarCadastro
@@ -249,10 +262,10 @@
             this.btnFinalizarCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFinalizarCadastro.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFinalizarCadastro.ForeColor = System.Drawing.Color.White;
-            this.btnFinalizarCadastro.Location = new System.Drawing.Point(362, 708);
-            this.btnFinalizarCadastro.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
+            this.btnFinalizarCadastro.Location = new System.Drawing.Point(483, 871);
+            this.btnFinalizarCadastro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 25);
             this.btnFinalizarCadastro.Name = "btnFinalizarCadastro";
-            this.btnFinalizarCadastro.Size = new System.Drawing.Size(298, 38);
+            this.btnFinalizarCadastro.Size = new System.Drawing.Size(397, 47);
             this.btnFinalizarCadastro.TabIndex = 28;
             this.btnFinalizarCadastro.Text = "Finalizar Cadastro";
             this.btnFinalizarCadastro.UseVisualStyleBackColor = false;
@@ -265,9 +278,10 @@
             this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVoltar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVoltar.ForeColor = System.Drawing.Color.White;
-            this.btnVoltar.Location = new System.Drawing.Point(30, 709);
+            this.btnVoltar.Location = new System.Drawing.Point(40, 873);
+            this.btnVoltar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(298, 39);
+            this.btnVoltar.Size = new System.Drawing.Size(397, 48);
             this.btnVoltar.TabIndex = 27;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = false;
@@ -306,19 +320,21 @@
             "São Paulo  ",
             "Sergipe  ",
             "Tocantins"});
-            this.cbxEstado.Location = new System.Drawing.Point(378, 561);
+            this.cbxEstado.Location = new System.Drawing.Point(504, 690);
+            this.cbxEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbxEstado.Name = "cbxEstado";
-            this.cbxEstado.Size = new System.Drawing.Size(280, 21);
+            this.cbxEstado.Size = new System.Drawing.Size(372, 24);
             this.cbxEstado.TabIndex = 26;
             // 
             // txtCidade
             // 
             this.txtCidade.BackColor = System.Drawing.Color.FloralWhite;
-            this.txtCidade.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCidade.Location = new System.Drawing.Point(30, 561);
+            this.txtCidade.Font = new System.Drawing.Font("Arial", 12F);
+            this.txtCidade.Location = new System.Drawing.Point(40, 690);
+            this.txtCidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCidade.Multiline = true;
             this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(311, 32);
+            this.txtCidade.Size = new System.Drawing.Size(413, 38);
             this.txtCidade.TabIndex = 25;
             // 
             // lblEstado
@@ -326,9 +342,10 @@
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblEstado.Location = new System.Drawing.Point(378, 540);
+            this.lblEstado.Location = new System.Drawing.Point(504, 665);
+            this.lblEstado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(58, 18);
+            this.lblEstado.Size = new System.Drawing.Size(72, 23);
             this.lblEstado.TabIndex = 22;
             this.lblEstado.Text = "Estado";
             // 
@@ -337,20 +354,22 @@
             this.lblCidade.AutoSize = true;
             this.lblCidade.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblCidade.Location = new System.Drawing.Point(31, 538);
+            this.lblCidade.Location = new System.Drawing.Point(41, 662);
+            this.lblCidade.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCidade.Name = "lblCidade";
-            this.lblCidade.Size = new System.Drawing.Size(60, 18);
+            this.lblCidade.Size = new System.Drawing.Size(72, 23);
             this.lblCidade.TabIndex = 21;
             this.lblCidade.Text = "Cidade";
             // 
             // txtEndereco
             // 
             this.txtEndereco.BackColor = System.Drawing.Color.FloralWhite;
-            this.txtEndereco.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEndereco.Location = new System.Drawing.Point(30, 631);
+            this.txtEndereco.Font = new System.Drawing.Font("Arial", 12F);
+            this.txtEndereco.Location = new System.Drawing.Point(40, 777);
+            this.txtEndereco.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEndereco.Multiline = true;
             this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(628, 37);
+            this.txtEndereco.Size = new System.Drawing.Size(836, 45);
             this.txtEndereco.TabIndex = 20;
             // 
             // lblEndereco
@@ -358,9 +377,10 @@
             this.lblEndereco.AutoSize = true;
             this.lblEndereco.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEndereco.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblEndereco.Location = new System.Drawing.Point(31, 610);
+            this.lblEndereco.Location = new System.Drawing.Point(41, 751);
+            this.lblEndereco.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEndereco.Name = "lblEndereco";
-            this.lblEndereco.Size = new System.Drawing.Size(76, 18);
+            this.lblEndereco.Size = new System.Drawing.Size(94, 23);
             this.lblEndereco.TabIndex = 19;
             this.lblEndereco.Text = "Endereço";
             // 
@@ -369,9 +389,10 @@
             this.lblCompletecadastro.AutoSize = true;
             this.lblCompletecadastro.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompletecadastro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblCompletecadastro.Location = new System.Drawing.Point(243, 64);
+            this.lblCompletecadastro.Location = new System.Drawing.Point(324, 79);
+            this.lblCompletecadastro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompletecadastro.Name = "lblCompletecadastro";
-            this.lblCompletecadastro.Size = new System.Drawing.Size(196, 29);
+            this.lblCompletecadastro.Size = new System.Drawing.Size(242, 36);
             this.lblCompletecadastro.TabIndex = 1;
             this.lblCompletecadastro.Text = "Complete seu cadastro";
             // 
@@ -387,19 +408,21 @@
             "Gênero fluido",
             "Outro",
             "Prefiro não dizer"});
-            this.cbxGenero.Location = new System.Drawing.Point(30, 489);
+            this.cbxGenero.Location = new System.Drawing.Point(40, 602);
+            this.cbxGenero.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbxGenero.Name = "cbxGenero";
-            this.cbxGenero.Size = new System.Drawing.Size(628, 21);
+            this.cbxGenero.Size = new System.Drawing.Size(836, 24);
             this.cbxGenero.TabIndex = 18;
             // 
             // lblAvaliaCadastro
             // 
             this.lblAvaliaCadastro.AutoSize = true;
-            this.lblAvaliaCadastro.Font = new System.Drawing.Font("Lucida Calligraphy", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAvaliaCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAvaliaCadastro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblAvaliaCadastro.Location = new System.Drawing.Point(279, 35);
+            this.lblAvaliaCadastro.Location = new System.Drawing.Point(372, 43);
+            this.lblAvaliaCadastro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAvaliaCadastro.Name = "lblAvaliaCadastro";
-            this.lblAvaliaCadastro.Size = new System.Drawing.Size(118, 31);
+            this.lblAvaliaCadastro.Size = new System.Drawing.Size(118, 36);
             this.lblAvaliaCadastro.TabIndex = 0;
             this.lblAvaliaCadastro.Text = "Áurea+";
             // 
@@ -408,19 +431,21 @@
             this.lblGenero.AutoSize = true;
             this.lblGenero.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGenero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblGenero.Location = new System.Drawing.Point(31, 458);
+            this.lblGenero.Location = new System.Drawing.Point(41, 564);
+            this.lblGenero.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGenero.Name = "lblGenero";
-            this.lblGenero.Size = new System.Drawing.Size(159, 18);
+            this.lblGenero.Size = new System.Drawing.Size(202, 23);
             this.lblGenero.TabIndex = 17;
             this.lblGenero.Text = "Identidade de Gênero";
             // 
             // mktTelefone
             // 
             this.mktTelefone.BackColor = System.Drawing.Color.FloralWhite;
-            this.mktTelefone.Location = new System.Drawing.Point(341, 288);
+            this.mktTelefone.Location = new System.Drawing.Point(455, 354);
+            this.mktTelefone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mktTelefone.Mask = "(00)  00000-0000";
             this.mktTelefone.Name = "mktTelefone";
-            this.mktTelefone.Size = new System.Drawing.Size(319, 20);
+            this.mktTelefone.Size = new System.Drawing.Size(424, 22);
             this.mktTelefone.TabIndex = 16;
             // 
             // lblTelefone
@@ -428,20 +453,22 @@
             this.lblTelefone.AutoSize = true;
             this.lblTelefone.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTelefone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblTelefone.Location = new System.Drawing.Point(343, 267);
+            this.lblTelefone.Location = new System.Drawing.Point(457, 329);
+            this.lblTelefone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTelefone.Name = "lblTelefone";
-            this.lblTelefone.Size = new System.Drawing.Size(66, 18);
+            this.lblTelefone.Size = new System.Drawing.Size(84, 23);
             this.lblTelefone.TabIndex = 15;
             this.lblTelefone.Text = "Telefone";
             // 
             // txtSobrenome
             // 
             this.txtSobrenome.BackColor = System.Drawing.Color.FloralWhite;
-            this.txtSobrenome.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSobrenome.Location = new System.Drawing.Point(341, 136);
+            this.txtSobrenome.Font = new System.Drawing.Font("Arial", 12F);
+            this.txtSobrenome.Location = new System.Drawing.Point(455, 167);
+            this.txtSobrenome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSobrenome.Multiline = true;
             this.txtSobrenome.Name = "txtSobrenome";
-            this.txtSobrenome.Size = new System.Drawing.Size(325, 32);
+            this.txtSobrenome.Size = new System.Drawing.Size(432, 38);
             this.txtSobrenome.TabIndex = 13;
             // 
             // lblSexo
@@ -449,9 +476,10 @@
             this.lblSexo.AutoSize = true;
             this.lblSexo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSexo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblSexo.Location = new System.Drawing.Point(31, 421);
+            this.lblSexo.Location = new System.Drawing.Point(41, 518);
+            this.lblSexo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSexo.Name = "lblSexo";
-            this.lblSexo.Size = new System.Drawing.Size(114, 18);
+            this.lblSexo.Size = new System.Drawing.Size(139, 23);
             this.lblSexo.TabIndex = 12;
             this.lblSexo.Text = "Sexo Biológico";
             // 
@@ -460,9 +488,10 @@
             this.rdbFeminino.AutoSize = true;
             this.rdbFeminino.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbFeminino.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.rdbFeminino.Location = new System.Drawing.Point(277, 421);
+            this.rdbFeminino.Location = new System.Drawing.Point(369, 518);
+            this.rdbFeminino.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rdbFeminino.Name = "rdbFeminino";
-            this.rdbFeminino.Size = new System.Drawing.Size(91, 22);
+            this.rdbFeminino.Size = new System.Drawing.Size(109, 27);
             this.rdbFeminino.TabIndex = 11;
             this.rdbFeminino.TabStop = true;
             this.rdbFeminino.Text = "Feminino";
@@ -473,9 +502,10 @@
             this.rdbOutro.AutoSize = true;
             this.rdbOutro.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbOutro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.rdbOutro.Location = new System.Drawing.Point(381, 421);
+            this.rdbOutro.Location = new System.Drawing.Point(508, 518);
+            this.rdbOutro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rdbOutro.Name = "rdbOutro";
-            this.rdbOutro.Size = new System.Drawing.Size(64, 22);
+            this.rdbOutro.Size = new System.Drawing.Size(81, 27);
             this.rdbOutro.TabIndex = 10;
             this.rdbOutro.TabStop = true;
             this.rdbOutro.Text = "Outro";
@@ -486,9 +516,10 @@
             this.rdbMasculino.AutoSize = true;
             this.rdbMasculino.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbMasculino.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.rdbMasculino.Location = new System.Drawing.Point(170, 421);
+            this.rdbMasculino.Location = new System.Drawing.Point(227, 518);
+            this.rdbMasculino.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rdbMasculino.Name = "rdbMasculino";
-            this.rdbMasculino.Size = new System.Drawing.Size(96, 22);
+            this.rdbMasculino.Size = new System.Drawing.Size(118, 27);
             this.rdbMasculino.TabIndex = 9;
             this.rdbMasculino.TabStop = true;
             this.rdbMasculino.Text = "Masculino";
@@ -498,9 +529,10 @@
             // 
             this.dtpDataNascimento.CalendarMonthBackground = System.Drawing.Color.FloralWhite;
             this.dtpDataNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDataNascimento.Location = new System.Drawing.Point(30, 288);
+            this.dtpDataNascimento.Location = new System.Drawing.Point(40, 354);
+            this.dtpDataNascimento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpDataNascimento.Name = "dtpDataNascimento";
-            this.dtpDataNascimento.Size = new System.Drawing.Size(290, 20);
+            this.dtpDataNascimento.Size = new System.Drawing.Size(385, 22);
             this.dtpDataNascimento.TabIndex = 6;
             this.dtpDataNascimento.Value = new System.DateTime(2025, 4, 8, 0, 0, 0, 0);
             // 
@@ -509,9 +541,10 @@
             this.lblDataNascimento.AutoSize = true;
             this.lblDataNascimento.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDataNascimento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblDataNascimento.Location = new System.Drawing.Point(30, 267);
+            this.lblDataNascimento.Location = new System.Drawing.Point(40, 329);
+            this.lblDataNascimento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDataNascimento.Name = "lblDataNascimento";
-            this.lblDataNascimento.Size = new System.Drawing.Size(151, 18);
+            this.lblDataNascimento.Size = new System.Drawing.Size(188, 23);
             this.lblDataNascimento.TabIndex = 4;
             this.lblDataNascimento.Text = "Data de Nascimento";
             // 
@@ -520,9 +553,10 @@
             this.lblSobrenome.AutoSize = true;
             this.lblSobrenome.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSobrenome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblSobrenome.Location = new System.Drawing.Point(343, 115);
+            this.lblSobrenome.Location = new System.Drawing.Point(457, 142);
+            this.lblSobrenome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSobrenome.Name = "lblSobrenome";
-            this.lblSobrenome.Size = new System.Drawing.Size(90, 18);
+            this.lblSobrenome.Size = new System.Drawing.Size(111, 23);
             this.lblSobrenome.TabIndex = 3;
             this.lblSobrenome.Text = "Sobrenome";
             // 
@@ -531,20 +565,21 @@
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
-            this.lblNome.Location = new System.Drawing.Point(31, 114);
+            this.lblNome.Location = new System.Drawing.Point(41, 140);
+            this.lblNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(50, 18);
+            this.lblNome.Size = new System.Drawing.Size(61, 23);
             this.lblNome.TabIndex = 2;
             this.lblNome.Text = "Nome";
             // 
             // FormularioCadastro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(984, 561);
+            this.ClientSize = new System.Drawing.Size(1312, 690);
             this.Controls.Add(this.panelCadastro);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormularioCadastro";

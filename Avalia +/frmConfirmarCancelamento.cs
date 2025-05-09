@@ -15,7 +15,7 @@ namespace Avalia__
 {
     public partial class frmConfirmarCancelamento: Form
     {
-        private string _data, _medico, _motivo, _status, _observacoes, _local;
+        private string _data, _medico, _motivo, _status, _observacoes, _local, _hora;
         Mensagem_do_sistema mensagem_Do_Sistema = new Mensagem_do_sistema();
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -62,7 +62,7 @@ namespace Avalia__
             ConfiguracaoTelas.PintarGradiente(this, e, "#f5e6d3", "#fdf6f0");
         }
 
-        public frmConfirmarCancelamento(int idConsulta,string data, string medico, string motivo, string status, string observacoes, string local)
+        public frmConfirmarCancelamento(int idConsulta,string data, string hora,string medico, string motivo, string status, string observacoes, string local)
         {
             InitializeComponent();
             RadiusButton controlador = new RadiusButton();
@@ -77,6 +77,7 @@ namespace Avalia__
             _status = status;
             _observacoes = observacoes;
             _local = local;
+            _hora = hora;
 
 
             lblInfoMedico.Text = $"Dro.(a) {medico}";

@@ -114,6 +114,11 @@ namespace Avalia__
                     this.Close();
                 }
             }
+            else 
+            {
+                mensagem_Do_Sistema.MensagemError("O código informado está incorreto!");
+                return;
+            }
         }
 
         private void TextBox_KeyUp(object sender, KeyEventArgs e)

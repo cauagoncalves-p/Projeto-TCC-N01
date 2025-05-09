@@ -49,9 +49,10 @@
             this.panelTrocarSenha.Controls.Add(this.lblEmail);
             this.panelTrocarSenha.Controls.Add(this.lblTrocarSenha);
             this.panelTrocarSenha.Controls.Add(this.lblAvalia);
-            this.panelTrocarSenha.Location = new System.Drawing.Point(348, 100);
+            this.panelTrocarSenha.Location = new System.Drawing.Point(464, 123);
+            this.panelTrocarSenha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelTrocarSenha.Name = "panelTrocarSenha";
-            this.panelTrocarSenha.Size = new System.Drawing.Size(324, 357);
+            this.panelTrocarSenha.Size = new System.Drawing.Size(432, 439);
             this.panelTrocarSenha.TabIndex = 1;
             // 
             // lblDescritivo
@@ -59,9 +60,10 @@
             this.lblDescritivo.AutoSize = true;
             this.lblDescritivo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescritivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblDescritivo.Location = new System.Drawing.Point(43, 145);
+            this.lblDescritivo.Location = new System.Drawing.Point(57, 178);
+            this.lblDescritivo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDescritivo.Name = "lblDescritivo";
-            this.lblDescritivo.Size = new System.Drawing.Size(244, 18);
+            this.lblDescritivo.Size = new System.Drawing.Size(310, 23);
             this.lblDescritivo.TabIndex = 11;
             this.lblDescritivo.Text = "Informe seu email para prosseguir";
             // 
@@ -72,9 +74,10 @@
             this.btnSair.FlatAppearance.BorderSize = 0;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
-            this.btnSair.Location = new System.Drawing.Point(259, 14);
+            this.btnSair.Location = new System.Drawing.Point(345, 17);
+            this.btnSair.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(50, 43);
+            this.btnSair.Size = new System.Drawing.Size(67, 53);
             this.btnSair.TabIndex = 10;
             this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSair.UseVisualStyleBackColor = false;
@@ -86,9 +89,10 @@
             this.btnProximo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProximo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProximo.ForeColor = System.Drawing.Color.White;
-            this.btnProximo.Location = new System.Drawing.Point(37, 269);
+            this.btnProximo.Location = new System.Drawing.Point(49, 331);
+            this.btnProximo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnProximo.Name = "btnProximo";
-            this.btnProximo.Size = new System.Drawing.Size(257, 51);
+            this.btnProximo.Size = new System.Drawing.Size(343, 63);
             this.btnProximo.TabIndex = 7;
             this.btnProximo.Text = "Proximo";
             this.btnProximo.UseVisualStyleBackColor = false;
@@ -96,12 +100,13 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Font = new System.Drawing.Font("Arial Narrow", 14F);
-            this.txtEmail.Location = new System.Drawing.Point(37, 204);
+            this.txtEmail.Font = new System.Drawing.Font("Arial", 12F);
+            this.txtEmail.Location = new System.Drawing.Point(49, 251);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEmail.MaxLength = 100;
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(257, 40);
+            this.txtEmail.Size = new System.Drawing.Size(341, 48);
             this.txtEmail.TabIndex = 3;
             // 
             // lblEmail
@@ -109,9 +114,10 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.lblEmail.Location = new System.Drawing.Point(34, 183);
+            this.lblEmail.Location = new System.Drawing.Point(45, 225);
+            this.lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(48, 18);
+            this.lblEmail.Size = new System.Drawing.Size(58, 23);
             this.lblEmail.TabIndex = 2;
             this.lblEmail.Text = "Email";
             // 
@@ -120,30 +126,33 @@
             this.lblTrocarSenha.AutoSize = true;
             this.lblTrocarSenha.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTrocarSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblTrocarSenha.Location = new System.Drawing.Point(105, 99);
+            this.lblTrocarSenha.Location = new System.Drawing.Point(140, 122);
+            this.lblTrocarSenha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTrocarSenha.Name = "lblTrocarSenha";
-            this.lblTrocarSenha.Size = new System.Drawing.Size(105, 25);
+            this.lblTrocarSenha.Size = new System.Drawing.Size(131, 33);
             this.lblTrocarSenha.TabIndex = 1;
             this.lblTrocarSenha.Text = "Trocar Senha";
             // 
             // lblAvalia
             // 
             this.lblAvalia.AutoSize = true;
-            this.lblAvalia.Font = new System.Drawing.Font("Lucida Calligraphy", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAvalia.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAvalia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblAvalia.Location = new System.Drawing.Point(97, 59);
+            this.lblAvalia.Location = new System.Drawing.Point(129, 73);
+            this.lblAvalia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAvalia.Name = "lblAvalia";
-            this.lblAvalia.Size = new System.Drawing.Size(118, 31);
+            this.lblAvalia.Size = new System.Drawing.Size(118, 36);
             this.lblAvalia.TabIndex = 0;
             this.lblAvalia.Text = "Áurea+";
             // 
             // FormularioTrocarSenha
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 561);
+            this.ClientSize = new System.Drawing.Size(1312, 690);
             this.Controls.Add(this.panelTrocarSenha);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormularioTrocarSenha";

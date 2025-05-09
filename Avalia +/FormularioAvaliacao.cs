@@ -220,7 +220,7 @@ namespace Avalia__
                         // Atualiza no banco de dados
                         avaliacaoAdapter.Update(avaliacaoExistente);
                         MessageBox.Show("Avaliação atualizada com sucesso!");
-                        consulta.AtualizarStatusConsulta("Avaliada", Idconsulta);
+                        
 
                     }
                     else
@@ -228,7 +228,8 @@ namespace Avalia__
                         // Caso não exista avaliação, faz o INSERT (caso nunca tenha avaliado)
                         avaliacaoAdapter.Insert(Idconsulta, notaAtendimento, notaTempo, notaConhecimento, notaRespeito, txtComentario.Text);
                         MessageBox.Show("Avaliação enviada com sucesso!");
-                      
+                        consulta.AtualizarStatusConsulta("Avaliada", Idconsulta);
+
                     }
 
                     // Desabilita o botão de envio após a avaliação

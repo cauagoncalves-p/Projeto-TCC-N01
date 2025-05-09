@@ -42,9 +42,10 @@
             // panelConsultaAvaliadas
             // 
             this.panelConsultaAvaliadas.Controls.Add(this.dgvConsultas);
-            this.panelConsultaAvaliadas.Location = new System.Drawing.Point(58, 178);
+            this.panelConsultaAvaliadas.Location = new System.Drawing.Point(77, 219);
+            this.panelConsultaAvaliadas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelConsultaAvaliadas.Name = "panelConsultaAvaliadas";
-            this.panelConsultaAvaliadas.Size = new System.Drawing.Size(868, 361);
+            this.panelConsultaAvaliadas.Size = new System.Drawing.Size(1157, 444);
             this.panelConsultaAvaliadas.TabIndex = 12;
             // 
             // dgvConsultas
@@ -52,9 +53,10 @@
             this.dgvConsultas.BackgroundColor = System.Drawing.Color.White;
             this.dgvConsultas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvConsultas.Location = new System.Drawing.Point(0, 0);
+            this.dgvConsultas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvConsultas.Name = "dgvConsultas";
             this.dgvConsultas.RowHeadersWidth = 51;
-            this.dgvConsultas.Size = new System.Drawing.Size(877, 365);
+            this.dgvConsultas.Size = new System.Drawing.Size(1169, 449);
             this.dgvConsultas.TabIndex = 0;
             this.dgvConsultas.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsultas_CellContentDoubleClick);
             // 
@@ -67,9 +69,10 @@
             this.btnSair.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
-            this.btnSair.Location = new System.Drawing.Point(884, 41);
+            this.btnSair.Location = new System.Drawing.Point(1179, 50);
+            this.btnSair.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(50, 43);
+            this.btnSair.Size = new System.Drawing.Size(67, 53);
             this.btnSair.TabIndex = 15;
             this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSair.UseVisualStyleBackColor = false;
@@ -79,11 +82,12 @@
             // 
             this.lbTitulo.AutoSize = true;
             this.lbTitulo.BackColor = System.Drawing.Color.Transparent;
-            this.lbTitulo.Font = new System.Drawing.Font("Lucida Calligraphy", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lbTitulo.Location = new System.Drawing.Point(69, 41);
+            this.lbTitulo.Location = new System.Drawing.Point(92, 50);
+            this.lbTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbTitulo.Name = "lbTitulo";
-            this.lbTitulo.Size = new System.Drawing.Size(118, 31);
+            this.lbTitulo.Size = new System.Drawing.Size(118, 36);
             this.lbTitulo.TabIndex = 14;
             this.lbTitulo.Text = "Áurea+";
             // 
@@ -92,21 +96,24 @@
             this.lblHistoricoConsulta.AutoSize = true;
             this.lblHistoricoConsulta.BackColor = System.Drawing.Color.Transparent;
             this.lblHistoricoConsulta.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHistoricoConsulta.Location = new System.Drawing.Point(126, 67);
+            this.lblHistoricoConsulta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
+            this.lblHistoricoConsulta.Location = new System.Drawing.Point(168, 82);
+            this.lblHistoricoConsulta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHistoricoConsulta.Name = "lblHistoricoConsulta";
-            this.lblHistoricoConsulta.Size = new System.Drawing.Size(154, 29);
+            this.lblHistoricoConsulta.Size = new System.Drawing.Size(191, 36);
             this.lblHistoricoConsulta.TabIndex = 13;
             this.lblHistoricoConsulta.Text = "Minhas Consultas";
             // 
             // FormularioConsultasAvaliadas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 561);
+            this.ClientSize = new System.Drawing.Size(1312, 690);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.lbTitulo);
             this.Controls.Add(this.lblHistoricoConsulta);
             this.Controls.Add(this.panelConsultaAvaliadas);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormularioConsultasAvaliadas";

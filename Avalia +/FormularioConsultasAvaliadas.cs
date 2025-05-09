@@ -138,7 +138,7 @@ namespace Avalia__
 
                     var consultas = consultaAdapter.GetData()
                         .Where(c => c.Id_usuario == _idUsuario)
-                        .Where(c => c.StatusConsulta == "Avaliada").OrderBy(c => c.DataConsulta)
+                        .Where(c => (c.StatusConsulta == "Avaliada" || c.StatusConsulta == "Realizada" )).OrderBy(c => c.DataConsulta)
                         .Select(c =>
                         {
                             var medico = todosMedicos.TryGetValue(c.IdMedico, out var m)

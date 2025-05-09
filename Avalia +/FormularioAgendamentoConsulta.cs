@@ -259,7 +259,7 @@ namespace Avalia__
                 {
                     paginaPaciente.CarregarConsultas(); 
                 }
-
+                mensagem_Do_Sistema.MensagemInformation("Consulta realizada com sucesso!");
                 this.Close(); // Fecha o formulário atual (opcional se usar ShowDialog)
                 GerarBotoesHorarios();
             }     
