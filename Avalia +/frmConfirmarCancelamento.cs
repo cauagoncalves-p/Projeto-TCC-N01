@@ -82,7 +82,7 @@ namespace Avalia__
 
             lblInfoMedico.Text = $"Dro.(a) {medico}";
             lblInfoLocal.Text = $"{local}";
-            lblInfoHoraData.Text = $"{data}";
+            lblInfoHoraData.Text = $"{data} - {hora}";
             string respostaObservacao = observacoes == "" ? "Sem observação" : observacoes;
             lblInfoObservacao.Text = $"{respostaObservacao}";
 
