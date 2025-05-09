@@ -58,6 +58,7 @@ namespace Avalia__
 
 
             consulta.Insert(IdUsuario,Id_medico,data,motivo,statusconsulta,observacao,horario);
+        
         }
         private void carregaEspecialidade() 
         {
@@ -170,13 +171,11 @@ namespace Avalia__
             //Cor de fundo da tela 
             ConfiguracaoTelas.PintarGradiente(this, e, "#f5e6d3", "#fdf6f0");
         }
-
         private void cbxEspecialidade_SelectedIndexChanged(object sender, EventArgs e)
         {
-
             string especialidadeSelecionada = cbxEspecialidade.SelectedItem?.ToString();
 
-            if (!string.IsNullOrEmpty(especialidadeSelecionada))
+            if (!string.IsNullOrWhiteSpace(especialidadeSelecionada))
             {
                 using (var adapter = new tbMedicoTableAdapter())
                 {
@@ -198,8 +197,7 @@ namespace Avalia__
             {
                 cbxMedico.DataSource = null;
             }
-
-            cbxAtendimento.DataSource = null; // limpa instituição se trocar a especialidade
+            cbxAtendimento.DataSource = null;
         }
 
         private void cbxMedico_SelectedIndexChanged(object sender, EventArgs e)
