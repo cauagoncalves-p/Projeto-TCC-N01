@@ -184,17 +184,37 @@ namespace Avalia__
                 }
             }
 
-            int idConsulta = this._IdConsulta; // Supondo que você tenha salvo isso ao abrir o formulário
+                       /*
+                        comando para atualziar os dados
+                       UPDATE DiagnosticoMedico
+                       SET 
+                               diagnostico = @diagnostico,
+                               tratamentoRecomendado = @tratamentoRecomendado,
+                               Medicamento = @medicamento,
+                               Dosagem = @dosagem,
+                               Frequencia = @frequencia,
+                               duracao = @duracao,
+                               instrucaoReceita = @instrucaoReceita
+                       WHERE Id_diagnosticoMedico = @Id_diagnosticoMedico
+                       */
+
+            int idConsulta = this._IdConsulta;
 
             var adapter = new DiagnosticoMedicoTableAdapter();
             // Verifica se já existe diagnóstico
             var dados = adapter.GetData().FirstOrDefault(d => d.Id_Consulta == idConsulta);
 
-            // Captura e normaliza os textos com Trim()
+            // Se não houver diagnóstico, cancela o processo
+            if (dados == null)
+            {
+                mensagem.MensagemError("Nenhum diagnóstico encontrado para esta consulta. Você precisa registrar primeiro.");
+                return;
+            }
+
+            // Validação dos campos obrigatórios
             string diagnostico = txtDiagnostico.Text.Trim();
             string tratamento = txtTratamentoRecomendado.Text.Trim();
 
-            // Validação dos campos obrigatórios
             if (diagnostico == "Descreva o diagnóstico do paciente..." || string.IsNullOrWhiteSpace(diagnostico) ||
                 tratamento == "Adicione quaisquer observações relevantes..." || string.IsNullOrWhiteSpace(tratamento))
             {
@@ -202,71 +222,47 @@ namespace Avalia__
                 return;
             }
 
-            // Campos opcionais com operador ternário e Trim()
+            // Campos opcionais
             string remedio = txtMedicamento.Text.Trim() == "Nome do medicamento" ? "Não informado" : txtMedicamento.Text.Trim();
             string dosagem = txtDosagem.Text.Trim() == "Dosagem" ? "Não informado" : txtDosagem.Text.Trim();
             string duracao = txtDuracao.Text.Trim() == "Duração" ? "Não informado" : txtDuracao.Text.Trim();
             string frequencia = txtFrequencia.Text.Trim() == "Frequência" ? "Não informado" : txtFrequencia.Text.Trim();
             string instrucaoReceita = txtInstrucaoReceita.Text.Trim() == "Adicione instruções específicas sobre os medicamentos..." ? "Não informado" : txtInstrucaoReceita.Text.Trim();
 
-            if (txtDiagnostico.Text == "Descreva o diagnóstico do paciente..." || txtTratamentoRecomendado.Text == "Adicione quaisquer observações relevantes...")
-                  
+            // Verifica se os dados são iguais ao que já está salvo
+            if (dados.diagnostico == diagnostico &&
+                dados.tratamentoRecomendado == tratamento &&
+                dados.duracao == duracao &&
+                dados.instrucaoReceita == instrucaoReceita &&
+                dados.Dosagem == dosagem &&
+                dados.Medicamento == remedio &&
+                dados.Frequencia == frequencia)
             {
-                mensagem.MensagemAtencao("Preencha o diagnóstico e a observação");
+                mensagem.MensagemAtencao("Os dados ainda permanecem os mesmos!\nTroque as informações ou clique em cancelar.");
                 return;
             }
 
+            // Atualiza os dados no banco
+            adapter.AtualizarConsulta(diagnostico, tratamento, remedio, dosagem, frequencia, duracao, instrucaoReceita, dados.Id_diagnosticoMedico);
 
-            if (dados.diagnostico == txtDiagnostico.Text && dados.tratamentoRecomendado == txtTratamentoRecomendado.Text &&
-            dados.duracao == txtDuracao.Text && dados.instrucaoReceita == txtInstrucaoReceita.Text &&
-            dados.Dosagem == txtDosagem.Text && dados.Medicamento == txtMedicamento.Text && dados.Frequencia == txtFrequencia.Text)
-            {
-                mensagem.MensagemAtencao("Os dados ainda permancem os mesmo!\nTroque as informações ou clique em cancelar");
-                return;
-            }
+            mensagem.MensagemInformation("Diagnóstico atualizado com sucesso!");
 
-            /*
-             comando para atualziar os dados
-            UPDATE DiagnosticoMedico
-            SET 
-                    diagnostico = @diagnostico,
-                    tratamentoRecomendado = @tratamentoRecomendado,
-                    Medicamento = @medicamento,
-                    Dosagem = @dosagem,
-                    Frequencia = @frequencia,
-                    duracao = @duracao,
-                    instrucaoReceita = @instrucaoReceita
-            WHERE Id_diagnosticoMedico = @Id_diagnosticoMedico
-            */
-
-            if (dados != null)
-            {
-                // Se existir, atualiza
-                adapter.AtualizarConsulta(diagnostico,tratamento,remedio,dosagem,frequencia,duracao,instrucaoReceita,dados.Id_diagnosticoMedico);
-                
-                mensagem.MensagemInformation("Diagnóstico atualizado com sucesso!");
-
-                // Desabilita os campos após a consulta ser realizada
-                txtDiagnostico.Enabled = false;
-                txtTratamentoRecomendado.Enabled = false;
-                txtMedicamento.Enabled = false;
-                txtDosagem.Enabled = false;
-                txtFrequencia.Enabled = false;
-                txtDuracao.Enabled = false;
-                txtInstrucaoReceita.Enabled = false;
-            }
-            else
-            {
-                mensagem.MensagemError("Nenhum diagnóstico encontrado para esta consulta. Você precisa registrar primeiro.");
-            }
+            // Desabilita os campos
+            txtDiagnostico.Enabled = false;
+            txtTratamentoRecomendado.Enabled = false;
+            txtMedicamento.Enabled = false;
+            txtDosagem.Enabled = false;
+            txtFrequencia.Enabled = false;
+            txtDuracao.Enabled = false;
+            txtInstrucaoReceita.Enabled = false;
         }
 
-   
+
 
         private void button1_Click(object sender, EventArgs e)
         {
             ConfiguracaoTelas configuracaoTelas = new ConfiguracaoTelas();
             configuracaoTelas.FecharAba(this);
-        }
+        }     
     }
 }
