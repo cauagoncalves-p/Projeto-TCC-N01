@@ -39,7 +39,7 @@ O projeto tem como foco **tornar o processo de avaliação médica mais acessív
 
 ## 🗄️ Banco de Dados
 
-O script de criação do banco de dados está disponível na pasta [`/database`](https://github.com/cauagoncalves-p/Projeto-TCC-N01/blob/daniel/banco%20aurea.sql).
+O script de criação do banco de dados está disponível em [`/banco aurea.sql`](https://github.com/cauagoncalves-p/Projeto-TCC-N01/blob/daniel/banco%20aurea.sql).
 
 ### Como importar:
 
