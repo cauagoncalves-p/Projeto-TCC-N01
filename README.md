@@ -45,6 +45,6 @@ O script de criação do banco de dados está disponível na pasta [`/database`]
 
 1. Abra o SQL Server Management Studio (SSMS)  
 2. Crie um novo banco de dados com o nome desejado  
-3. Execute o script `aurea_database.sql` para criar as tabelas e relacionamentos  
+3. Execute o script `banco aurea.sql` para criar as tabelas e relacionamentos  
 4. Atualize a string de conexão no projeto, se necessário
 
