@@ -107,7 +107,7 @@
             this.panelCadastro.Controls.Add(this.lblSobrenome);
             this.panelCadastro.Controls.Add(this.lblNome);
             this.panelCadastro.Location = new System.Drawing.Point(213, 14);
-            this.panelCadastro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelCadastro.Margin = new System.Windows.Forms.Padding(4);
             this.panelCadastro.Name = "panelCadastro";
             this.panelCadastro.Padding = new System.Windows.Forms.Padding(0, 0, 27, 25);
             this.panelCadastro.Size = new System.Drawing.Size(943, 677);
@@ -164,7 +164,7 @@
             this.txtSenha.BackColor = System.Drawing.Color.FloralWhite;
             this.txtSenha.Font = new System.Drawing.Font("Wingdings", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.txtSenha.Location = new System.Drawing.Point(40, 443);
-            this.txtSenha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSenha.Margin = new System.Windows.Forms.Padding(4);
             this.txtSenha.Multiline = true;
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = 'l';
@@ -176,7 +176,7 @@
             this.txtconfirmeSenha.BackColor = System.Drawing.Color.FloralWhite;
             this.txtconfirmeSenha.Font = new System.Drawing.Font("Wingdings", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.txtconfirmeSenha.Location = new System.Drawing.Point(463, 443);
-            this.txtconfirmeSenha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtconfirmeSenha.Margin = new System.Windows.Forms.Padding(4);
             this.txtconfirmeSenha.Multiline = true;
             this.txtconfirmeSenha.Name = "txtconfirmeSenha";
             this.txtconfirmeSenha.PasswordChar = 'l';
@@ -200,7 +200,7 @@
             this.txtEmail.BackColor = System.Drawing.Color.FloralWhite;
             this.txtEmail.Font = new System.Drawing.Font("Arial", 12F);
             this.txtEmail.Location = new System.Drawing.Point(40, 257);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(401, 38);
@@ -211,7 +211,7 @@
             this.txtNome.BackColor = System.Drawing.Color.FloralWhite;
             this.txtNome.Font = new System.Drawing.Font("Arial", 12F);
             this.txtNome.Location = new System.Drawing.Point(40, 167);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(4);
             this.txtNome.Multiline = true;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(401, 38);
@@ -225,7 +225,7 @@
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
             this.btnSair.Location = new System.Drawing.Point(820, 37);
-            this.btnSair.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSair.Margin = new System.Windows.Forms.Padding(4);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(67, 53);
             this.btnSair.TabIndex = 11;
@@ -249,7 +249,7 @@
             // 
             this.mktCPF.BackColor = System.Drawing.Color.FloralWhite;
             this.mktCPF.Location = new System.Drawing.Point(455, 258);
-            this.mktCPF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mktCPF.Margin = new System.Windows.Forms.Padding(4);
             this.mktCPF.Mask = "000,000,000-00";
             this.mktCPF.Name = "mktCPF";
             this.mktCPF.Size = new System.Drawing.Size(424, 22);
@@ -279,7 +279,7 @@
             this.btnVoltar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVoltar.ForeColor = System.Drawing.Color.White;
             this.btnVoltar.Location = new System.Drawing.Point(40, 873);
-            this.btnVoltar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnVoltar.Margin = new System.Windows.Forms.Padding(4);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(397, 48);
             this.btnVoltar.TabIndex = 27;
@@ -321,7 +321,7 @@
             "Sergipe  ",
             "Tocantins"});
             this.cbxEstado.Location = new System.Drawing.Point(504, 690);
-            this.cbxEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxEstado.Margin = new System.Windows.Forms.Padding(4);
             this.cbxEstado.Name = "cbxEstado";
             this.cbxEstado.Size = new System.Drawing.Size(372, 24);
             this.cbxEstado.TabIndex = 26;
@@ -331,7 +331,7 @@
             this.txtCidade.BackColor = System.Drawing.Color.FloralWhite;
             this.txtCidade.Font = new System.Drawing.Font("Arial", 12F);
             this.txtCidade.Location = new System.Drawing.Point(40, 690);
-            this.txtCidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCidade.Margin = new System.Windows.Forms.Padding(4);
             this.txtCidade.Multiline = true;
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(413, 38);
@@ -366,7 +366,7 @@
             this.txtEndereco.BackColor = System.Drawing.Color.FloralWhite;
             this.txtEndereco.Font = new System.Drawing.Font("Arial", 12F);
             this.txtEndereco.Location = new System.Drawing.Point(40, 777);
-            this.txtEndereco.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEndereco.Margin = new System.Windows.Forms.Padding(4);
             this.txtEndereco.Multiline = true;
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(836, 45);
@@ -409,7 +409,7 @@
             "Outro",
             "Prefiro não dizer"});
             this.cbxGenero.Location = new System.Drawing.Point(40, 602);
-            this.cbxGenero.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxGenero.Margin = new System.Windows.Forms.Padding(4);
             this.cbxGenero.Name = "cbxGenero";
             this.cbxGenero.Size = new System.Drawing.Size(836, 24);
             this.cbxGenero.TabIndex = 18;
@@ -419,7 +419,7 @@
             this.lblAvaliaCadastro.AutoSize = true;
             this.lblAvaliaCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAvaliaCadastro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblAvaliaCadastro.Location = new System.Drawing.Point(372, 43);
+            this.lblAvaliaCadastro.Location = new System.Drawing.Point(385, 39);
             this.lblAvaliaCadastro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAvaliaCadastro.Name = "lblAvaliaCadastro";
             this.lblAvaliaCadastro.Size = new System.Drawing.Size(118, 36);
@@ -442,7 +442,7 @@
             // 
             this.mktTelefone.BackColor = System.Drawing.Color.FloralWhite;
             this.mktTelefone.Location = new System.Drawing.Point(455, 354);
-            this.mktTelefone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mktTelefone.Margin = new System.Windows.Forms.Padding(4);
             this.mktTelefone.Mask = "(00)  00000-0000";
             this.mktTelefone.Name = "mktTelefone";
             this.mktTelefone.Size = new System.Drawing.Size(424, 22);
@@ -465,7 +465,7 @@
             this.txtSobrenome.BackColor = System.Drawing.Color.FloralWhite;
             this.txtSobrenome.Font = new System.Drawing.Font("Arial", 12F);
             this.txtSobrenome.Location = new System.Drawing.Point(455, 167);
-            this.txtSobrenome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSobrenome.Margin = new System.Windows.Forms.Padding(4);
             this.txtSobrenome.Multiline = true;
             this.txtSobrenome.Name = "txtSobrenome";
             this.txtSobrenome.Size = new System.Drawing.Size(432, 38);
@@ -489,7 +489,7 @@
             this.rdbFeminino.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbFeminino.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
             this.rdbFeminino.Location = new System.Drawing.Point(369, 518);
-            this.rdbFeminino.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbFeminino.Margin = new System.Windows.Forms.Padding(4);
             this.rdbFeminino.Name = "rdbFeminino";
             this.rdbFeminino.Size = new System.Drawing.Size(109, 27);
             this.rdbFeminino.TabIndex = 11;
@@ -503,7 +503,7 @@
             this.rdbOutro.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbOutro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
             this.rdbOutro.Location = new System.Drawing.Point(508, 518);
-            this.rdbOutro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbOutro.Margin = new System.Windows.Forms.Padding(4);
             this.rdbOutro.Name = "rdbOutro";
             this.rdbOutro.Size = new System.Drawing.Size(81, 27);
             this.rdbOutro.TabIndex = 10;
@@ -517,7 +517,7 @@
             this.rdbMasculino.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbMasculino.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(74)))), ((int)(((byte)(66)))));
             this.rdbMasculino.Location = new System.Drawing.Point(227, 518);
-            this.rdbMasculino.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbMasculino.Margin = new System.Windows.Forms.Padding(4);
             this.rdbMasculino.Name = "rdbMasculino";
             this.rdbMasculino.Size = new System.Drawing.Size(118, 27);
             this.rdbMasculino.TabIndex = 9;
@@ -530,7 +530,7 @@
             this.dtpDataNascimento.CalendarMonthBackground = System.Drawing.Color.FloralWhite;
             this.dtpDataNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDataNascimento.Location = new System.Drawing.Point(40, 354);
-            this.dtpDataNascimento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpDataNascimento.Margin = new System.Windows.Forms.Padding(4);
             this.dtpDataNascimento.Name = "dtpDataNascimento";
             this.dtpDataNascimento.Size = new System.Drawing.Size(385, 22);
             this.dtpDataNascimento.TabIndex = 6;
@@ -579,7 +579,7 @@
             this.ClientSize = new System.Drawing.Size(1312, 690);
             this.Controls.Add(this.panelCadastro);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormularioCadastro";

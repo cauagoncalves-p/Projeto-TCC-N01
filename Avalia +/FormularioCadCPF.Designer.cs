@@ -52,7 +52,7 @@
             this.panelVerificaCPF.Controls.Add(this.lblVerifica);
             this.panelVerificaCPF.Controls.Add(this.lblAvalia);
             this.panelVerificaCPF.Location = new System.Drawing.Point(444, 97);
-            this.panelVerificaCPF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelVerificaCPF.Margin = new System.Windows.Forms.Padding(4);
             this.panelVerificaCPF.Name = "panelVerificaCPF";
             this.panelVerificaCPF.Size = new System.Drawing.Size(447, 484);
             this.panelVerificaCPF.TabIndex = 1;
@@ -60,7 +60,7 @@
             // mktCPF
             // 
             this.mktCPF.Location = new System.Drawing.Point(52, 181);
-            this.mktCPF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mktCPF.Margin = new System.Windows.Forms.Padding(4);
             this.mktCPF.Mask = "000,000,000-00";
             this.mktCPF.Name = "mktCPF";
             this.mktCPF.Size = new System.Drawing.Size(341, 22);
@@ -73,7 +73,7 @@
             this.btnContinuar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnContinuar.ForeColor = System.Drawing.Color.White;
             this.btnContinuar.Location = new System.Drawing.Point(52, 357);
-            this.btnContinuar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnContinuar.Margin = new System.Windows.Forms.Padding(4);
             this.btnContinuar.Name = "btnContinuar";
             this.btnContinuar.Size = new System.Drawing.Size(343, 54);
             this.btnContinuar.TabIndex = 7;
@@ -86,7 +86,7 @@
             this.txtEmail.Font = new System.Drawing.Font("Arial", 12F);
             this.txtEmail.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtEmail.Location = new System.Drawing.Point(52, 263);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.MaxLength = 50;
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
@@ -134,7 +134,7 @@
             this.lblAvalia.AutoSize = true;
             this.lblAvalia.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAvalia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblAvalia.Location = new System.Drawing.Point(143, 59);
+            this.lblAvalia.Location = new System.Drawing.Point(163, 61);
             this.lblAvalia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAvalia.Name = "lblAvalia";
             this.lblAvalia.Size = new System.Drawing.Size(118, 36);
@@ -158,7 +158,7 @@
             this.btnSair.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSair.ForeColor = System.Drawing.Color.White;
             this.btnSair.Location = new System.Drawing.Point(1289, 671);
-            this.btnSair.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSair.Margin = new System.Windows.Forms.Padding(4);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(13, 12);
             this.btnSair.TabIndex = 13;
@@ -173,7 +173,7 @@
             this.Controls.Add(this.ll);
             this.Controls.Add(this.panelVerificaCPF);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormularioCadCPF";
