@@ -1,4 +1,4 @@
-# 🩺 Áurea – Avaliação de Consultas Médicas
+# 🩺 Áurea+ – Avaliação de Consultas Médicas
 
 Áurea+ é um sistema desenvolvido em **Windows Forms (C#)** com o objetivo de **avaliar médicos e consultas**, ajudando pacientes a compartilharem suas experiências e contribuírem para a melhoria dos atendimentos na área da saúde.
 
